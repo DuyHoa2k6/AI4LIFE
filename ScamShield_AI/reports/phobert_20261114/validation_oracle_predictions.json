@@ -1,0 +1,487 @@
+[
+  {
+    "schema_version": "phobert-structured-1.0",
+    "analysis_status": "complete",
+    "graph": {
+      "spans": [
+        {
+          "id": "p0",
+          "message_id": "m1",
+          "start": 7,
+          "end": 11,
+          "quote": "nhận",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        },
+        {
+          "id": "p1",
+          "message_id": "m1",
+          "start": 28,
+          "end": 32,
+          "quote": "giao",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        }
+      ],
+      "events": [
+        {
+          "id": "e0",
+          "anchor_id": "p0",
+          "attributes": {
+            "action_type": "receive",
+            "object_type": "money",
+            "speech_act": "claim",
+            "polarity": "positive",
+            "temporal_state": "completed",
+            "modality": "assertion"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "speaker:sender",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": "A"
+        },
+        {
+          "id": "e1",
+          "anchor_id": "p1",
+          "attributes": {
+            "action_type": "retain_documents",
+            "object_type": "identity_document",
+            "speech_act": "request",
+            "polarity": "positive",
+            "temporal_state": "requested",
+            "modality": "request"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "recipient:unknown",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": "A"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r0",
+          "source": "e0",
+          "target": "e1",
+          "label": "same_transaction",
+          "evidence_refs": [
+            "p0",
+            "p1"
+          ],
+          "score_uncalibrated": 0.9978359341621399
+        }
+      ],
+      "limitations": [],
+      "discarded": []
+    },
+    "assessment": {
+      "analysis_status": "complete",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "evidence_refs": [
+        "p1"
+      ],
+      "rules": [
+        {
+          "rule_id": "PB-SENSITIVE-REQUEST",
+          "risk": "suspicious",
+          "event_ids": [
+            "e1"
+          ],
+          "relation_ids": [],
+          "evidence_refs": [
+            "p1"
+          ],
+          "mechanism": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+          "conditions": [],
+          "contradictions": [],
+          "limitations": [
+            "Chỉ dựa trên nội dung cung cấp, chưa xác minh danh tính ngoài đời."
+          ],
+          "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+        }
+      ],
+      "questions": [],
+      "missing": []
+    },
+    "classifier_baseline": "clear",
+    "classifier_disagrees": true,
+    "scope": "oracle_spans",
+    "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+    "timings_ms": {
+      "preprocessing": 436.7809000032139,
+      "inference": 38.78259999328293,
+      "verification_reasoning": 0.1112000027205795,
+      "total": 475.6781000032788
+    },
+    "windows": 1
+  },
+  {
+    "schema_version": "phobert-structured-1.0",
+    "analysis_status": "complete",
+    "graph": {
+      "spans": [
+        {
+          "id": "p0",
+          "message_id": "m1",
+          "start": 9,
+          "end": 13,
+          "quote": "nhận",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        },
+        {
+          "id": "p1",
+          "message_id": "m1",
+          "start": 30,
+          "end": 34,
+          "quote": "giao",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        }
+      ],
+      "events": [
+        {
+          "id": "e0",
+          "anchor_id": "p0",
+          "attributes": {
+            "action_type": "receive",
+            "object_type": "money",
+            "speech_act": "claim",
+            "polarity": "positive",
+            "temporal_state": "not_completed",
+            "modality": "assertion"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "speaker:sender",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": "A"
+        },
+        {
+          "id": "e1",
+          "anchor_id": "p1",
+          "attributes": {
+            "action_type": "retain_documents",
+            "object_type": "identity_document",
+            "speech_act": "request",
+            "polarity": "positive",
+            "temporal_state": "requested",
+            "modality": "request"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "recipient:unknown",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": "A"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r0",
+          "source": "e0",
+          "target": "e1",
+          "label": "same_transaction",
+          "evidence_refs": [
+            "p0",
+            "p1"
+          ],
+          "score_uncalibrated": 0.9973878264427185
+        },
+        {
+          "id": "r1",
+          "source": "e1",
+          "target": "e0",
+          "label": "prerequisite_for",
+          "evidence_refs": [
+            "p1",
+            "p0"
+          ],
+          "score_uncalibrated": 0.5299787521362305
+        }
+      ],
+      "limitations": [],
+      "discarded": []
+    },
+    "assessment": {
+      "analysis_status": "complete",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "evidence_refs": [
+        "p1"
+      ],
+      "rules": [
+        {
+          "rule_id": "PB-SENSITIVE-REQUEST",
+          "risk": "suspicious",
+          "event_ids": [
+            "e1"
+          ],
+          "relation_ids": [],
+          "evidence_refs": [
+            "p1"
+          ],
+          "mechanism": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+          "conditions": [],
+          "contradictions": [],
+          "limitations": [
+            "Chỉ dựa trên nội dung cung cấp, chưa xác minh danh tính ngoài đời."
+          ],
+          "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+        }
+      ],
+      "questions": [],
+      "missing": []
+    },
+    "classifier_baseline": "high",
+    "classifier_disagrees": true,
+    "scope": "oracle_spans",
+    "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+    "timings_ms": {
+      "preprocessing": 451.50250000006054,
+      "inference": 37.46140000293963,
+      "verification_reasoning": 0.12439999409252778,
+      "total": 489.09049999929266
+    },
+    "windows": 1
+  },
+  {
+    "schema_version": "phobert-structured-1.0",
+    "analysis_status": "complete",
+    "graph": {
+      "spans": [
+        {
+          "id": "p0",
+          "message_id": "m1",
+          "start": 4,
+          "end": 7,
+          "quote": "gọi",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        },
+        {
+          "id": "p1",
+          "message_id": "m1",
+          "start": 21,
+          "end": 27,
+          "quote": "chuyển",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        }
+      ],
+      "events": [
+        {
+          "id": "e0",
+          "anchor_id": "p0",
+          "attributes": {
+            "action_type": "retain_documents",
+            "object_type": "money",
+            "speech_act": "request",
+            "polarity": "positive",
+            "temporal_state": "requested",
+            "modality": "request"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "recipient:unknown",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": null
+        },
+        {
+          "id": "e1",
+          "anchor_id": "p1",
+          "attributes": {
+            "action_type": "disclose_credentials",
+            "object_type": "money",
+            "speech_act": "request",
+            "polarity": "positive",
+            "temporal_state": "requested",
+            "modality": "request"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "recipient:unknown",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": null
+        }
+      ],
+      "relations": [
+        {
+          "id": "r0",
+          "source": "e0",
+          "target": "e1",
+          "label": "same_transaction",
+          "evidence_refs": [
+            "p0",
+            "p1"
+          ],
+          "score_uncalibrated": 0.9899466633796692
+        }
+      ],
+      "limitations": [],
+      "discarded": []
+    },
+    "assessment": {
+      "analysis_status": "complete",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "evidence_refs": [
+        "p0"
+      ],
+      "rules": [
+        {
+          "rule_id": "PB-SENSITIVE-REQUEST",
+          "risk": "suspicious",
+          "event_ids": [
+            "e0"
+          ],
+          "relation_ids": [],
+          "evidence_refs": [
+            "p0"
+          ],
+          "mechanism": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+          "conditions": [],
+          "contradictions": [],
+          "limitations": [
+            "Chỉ dựa trên nội dung cung cấp, chưa xác minh danh tính ngoài đời."
+          ],
+          "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+        }
+      ],
+      "questions": [],
+      "missing": []
+    },
+    "classifier_baseline": "high",
+    "classifier_disagrees": true,
+    "scope": "oracle_spans",
+    "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+    "timings_ms": {
+      "preprocessing": 438.1594000005862,
+      "inference": 33.61070000391919,
+      "verification_reasoning": 0.11059999815188348,
+      "total": 471.8829999983427
+    },
+    "windows": 1
+  },
+  {
+    "schema_version": "phobert-structured-1.0",
+    "analysis_status": "complete",
+    "graph": {
+      "spans": [
+        {
+          "id": "p0",
+          "message_id": "m1",
+          "start": 4,
+          "end": 10,
+          "quote": "chuyển",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        },
+        {
+          "id": "p1",
+          "message_id": "m1",
+          "start": 28,
+          "end": 31,
+          "quote": "gọi",
+          "label": "action",
+          "score_uncalibrated": 1.0
+        }
+      ],
+      "events": [
+        {
+          "id": "e0",
+          "anchor_id": "p0",
+          "attributes": {
+            "action_type": "disclose_credentials",
+            "object_type": "money",
+            "speech_act": "request",
+            "polarity": "positive",
+            "temporal_state": "requested",
+            "modality": "request"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "speaker:sender",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": null
+        },
+        {
+          "id": "e1",
+          "anchor_id": "p1",
+          "attributes": {
+            "action_type": "retain_documents",
+            "object_type": "money",
+            "speech_act": "request",
+            "polarity": "positive",
+            "temporal_state": "requested",
+            "modality": "request"
+          },
+          "speaker_id": "sender",
+          "roles": {
+            "performer": "speaker:sender",
+            "speaker": "speaker:sender"
+          },
+          "transaction_id": null
+        }
+      ],
+      "relations": [
+        {
+          "id": "r0",
+          "source": "e0",
+          "target": "e1",
+          "label": "same_transaction",
+          "evidence_refs": [
+            "p0",
+            "p1"
+          ],
+          "score_uncalibrated": 0.9910043478012085
+        },
+        {
+          "id": "r1",
+          "source": "e0",
+          "target": "e1",
+          "label": "prerequisite_for",
+          "evidence_refs": [
+            "p0",
+            "p1"
+          ],
+          "score_uncalibrated": 0.528973400592804
+        }
+      ],
+      "limitations": [],
+      "discarded": []
+    },
+    "assessment": {
+      "analysis_status": "complete",
+      "risk_status": "clear",
+      "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+      "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+      "evidence_refs": [],
+      "rules": [],
+      "questions": [],
+      "missing": []
+    },
+    "classifier_baseline": "clear",
+    "classifier_disagrees": false,
+    "scope": "oracle_spans",
+    "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+    "timings_ms": {
+      "preprocessing": 487.4783999985084,
+      "inference": 37.64740000042366,
+      "verification_reasoning": 0.08840000373311341,
+      "total": 525.2164999983506
+    },
+    "windows": 1
+  }
+]

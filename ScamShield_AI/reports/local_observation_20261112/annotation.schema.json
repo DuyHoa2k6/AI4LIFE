@@ -1,0 +1,940 @@
+{
+  "$defs": {
+    "AnalysisField": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/Value"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        }
+      },
+      "title": "AnalysisField",
+      "type": "object"
+    },
+    "AnalyzeRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "anyOf": [
+            {
+              "maxLength": 10000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text"
+        },
+        "messages": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Message"
+              },
+              "maxItems": 100,
+              "minItems": 1,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Messages"
+        },
+        "context": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context"
+        },
+        "question": {
+          "anyOf": [
+            {
+              "maxLength": 1000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Question"
+        },
+        "ocr_sources": {
+          "items": {
+            "$ref": "#/$defs/OcrReference"
+          },
+          "maxItems": 4,
+          "title": "Ocr Sources",
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/LinkInput"
+          },
+          "maxItems": 20,
+          "title": "Links",
+          "type": "array"
+        }
+      },
+      "title": "AnalyzeRequest",
+      "type": "object"
+    },
+    "Annotation": {
+      "additionalProperties": false,
+      "properties": {
+        "participants": {
+          "items": {
+            "$ref": "#/$defs/Participant"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "spans": {
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "title": "Spans",
+          "type": "array"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/Event"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/Relation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "expected_answers_18": {
+          "$ref": "#/$defs/Answers18"
+        }
+      },
+      "required": [
+        "participants",
+        "spans",
+        "events",
+        "relations",
+        "expected_answers_18"
+      ],
+      "title": "Annotation",
+      "type": "object"
+    },
+    "Answers18": {
+      "additionalProperties": false,
+      "properties": {
+        "situation": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "participants": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "sender_identity": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "relationship": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "communication_channel": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "claims": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "requested_actions": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "action_targets": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "stated_purpose": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "assets_and_access": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "benefit_and_mismatch": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "persuasion": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "conditions_and_sequence": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "contradictions_and_alternatives": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "technical_checks": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "evidence_quality": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "missing_information": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "assessment": {
+          "$ref": "#/$defs/AnalysisField"
+        }
+      },
+      "required": [
+        "situation",
+        "participants",
+        "sender_identity",
+        "relationship",
+        "communication_channel",
+        "claims",
+        "requested_actions",
+        "action_targets",
+        "stated_purpose",
+        "assets_and_access",
+        "benefit_and_mismatch",
+        "persuasion",
+        "conditions_and_sequence",
+        "contradictions_and_alternatives",
+        "technical_checks",
+        "evidence_quality",
+        "missing_information",
+        "assessment"
+      ],
+      "title": "Answers18",
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "title": "Action Id",
+          "type": "string"
+        },
+        "action_type": {
+          "enum": [
+            "transfer_funds",
+            "receive_funds",
+            "withdraw_funds",
+            "handover_asset",
+            "provide_code",
+            "provide_credentials",
+            "provide_documents",
+            "open_link",
+            "login",
+            "install_app",
+            "share_screen",
+            "grant_control",
+            "change_channel",
+            "keep_secret",
+            "avoid_verification",
+            "identity_claim",
+            "relationship_claim",
+            "code_identity"
+          ],
+          "title": "Action Type",
+          "type": "string"
+        },
+        "verb_span": {
+          "title": "Verb Span",
+          "type": "string"
+        },
+        "action_span": {
+          "title": "Action Span",
+          "type": "string"
+        },
+        "target_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Span"
+        },
+        "negation_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Negation Span"
+        },
+        "time_span": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Time Span"
+        },
+        "actor": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actor"
+        },
+        "recipient": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipient"
+        },
+        "beneficiary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Beneficiary"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Location"
+        },
+        "polarity": {
+          "enum": [
+            "positive",
+            "negative",
+            "uncertain"
+          ],
+          "title": "Polarity",
+          "type": "string"
+        },
+        "speech_role": {
+          "enum": [
+            "request",
+            "claim",
+            "reported",
+            "quoted_warning",
+            "unknown"
+          ],
+          "title": "Speech Role",
+          "type": "string"
+        },
+        "temporal_state": {
+          "enum": [
+            "requested",
+            "completed",
+            "pending",
+            "hypothetical",
+            "unknown"
+          ],
+          "title": "Temporal State",
+          "type": "string"
+        },
+        "time_expression": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Time Expression"
+        },
+        "transaction_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Id"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "action_id",
+        "action_type",
+        "verb_span",
+        "action_span",
+        "actor",
+        "polarity",
+        "speech_role",
+        "temporal_state",
+        "evidence_refs",
+        "rule_id"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "LinkInput": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "message_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Message Id",
+          "type": "string"
+        },
+        "url": {
+          "maxLength": 2048,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "display_text": {
+          "default": "",
+          "maxLength": 1000,
+          "title": "Display Text",
+          "type": "string"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "origin": {
+          "default": "user_supplied",
+          "enum": [
+            "dom_href",
+            "user_supplied"
+          ],
+          "title": "Origin",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "message_id",
+        "url"
+      ],
+      "title": "LinkInput",
+      "type": "object"
+    },
+    "Message": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "speaker": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Speaker",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 10000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "speaker",
+        "text"
+      ],
+      "title": "Message",
+      "type": "object"
+    },
+    "OcrReference": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Message Id",
+          "type": "string"
+        },
+        "source_id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "source_id"
+      ],
+      "title": "OcrReference",
+      "type": "object"
+    },
+    "Participant": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "speaker",
+            "addressee",
+            "mentioned"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "provenance": {
+          "enum": [
+            "metadata",
+            "text",
+            "user_report"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        },
+        "identity_verified": {
+          "default": false,
+          "title": "Identity Verified",
+          "type": "boolean"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "role",
+        "provenance"
+      ],
+      "title": "Participant",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "source_split": {
+          "enum": [
+            "dev",
+            "new_synthetic"
+          ],
+          "title": "Source Split",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "label_method": {
+          "enum": [
+            "weak_label",
+            "human_annotation"
+          ],
+          "title": "Label Method",
+          "type": "string"
+        },
+        "rules_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rules Version"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "source_split",
+        "source_id",
+        "label_method",
+        "rules_version",
+        "rule_ids"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "relation_id": {
+          "title": "Relation Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prerequisite_for",
+            "before",
+            "after",
+            "reason_given_for",
+            "contradiction",
+            "state_update",
+            "warning_about",
+            "reported_by"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "from_id": {
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "title": "To Id",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "relation_id",
+        "type",
+        "from_id",
+        "to_id",
+        "evidence_refs",
+        "rule_id",
+        "status"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "source": {
+          "default": "message",
+          "enum": [
+            "message",
+            "context"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message Id"
+        },
+        "speaker": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Speaker"
+        },
+        "kind": {
+          "enum": [
+            "verb",
+            "action",
+            "target",
+            "negation",
+            "time",
+            "statement"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "start": {
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "message_id",
+        "speaker",
+        "kind",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "Span",
+      "type": "object"
+    },
+    "Value": {
+      "additionalProperties": false,
+      "properties": {
+        "statements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Statements",
+          "type": "array"
+        },
+        "event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Ids",
+          "type": "array"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "relation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Ids",
+          "type": "array"
+        }
+      },
+      "title": "Value",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "local-annotation-1.0",
+      "default": "local-annotation-1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "input": {
+      "$ref": "#/$defs/AnalyzeRequest"
+    },
+    "annotations": {
+      "$ref": "#/$defs/Annotation"
+    },
+    "risk_label_reference": {
+      "anyOf": [
+        {
+          "enum": [
+            "clear",
+            "need_context",
+            "suspicious",
+            "high"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Risk Label Reference"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    },
+    "review_status": {
+      "enum": [
+        "weak_label",
+        "pending_review",
+        "reviewed"
+      ],
+      "title": "Review Status",
+      "type": "string"
+    },
+    "reviewers": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reviewers",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "input",
+    "annotations",
+    "provenance",
+    "review_status"
+  ],
+  "title": "AnnotatedSample",
+  "type": "object"
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "Public synthetic functional scenarios; authored judgments, not an independent holdout. Includes wording/approach variants without claiming genuinely novel fraud discovery.",
+  "mode": "two_pass",
+  "planned": 4,
+  "executed": 3,
+  "successful": 0,
+  "errors": 3,
+  "not_run": 1,
+  "completion_rate": 0.0,
+  "matrix": {
+    "suspicious": {
+      "error": 1
+    },
+    "scam": {
+      "error": 2
+    },
+    "normal": {
+      "not_run": 1
+    }
+  },
+  "high_binary_successful_only": {},
+  "high_precision_successful_only": null,
+  "high_recall_successful_only": null,
+  "status_matches_successful": 0,
+  "status_match_rate_successful": null,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 3,
+    "p50_ms": 1206.2178999767639,
+    "p95_ms": 1272.1348000341095
+  },
+  "latency_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "first_request_ms": 1184.2986000119708,
+  "warm_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "provider_adapter_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "exact_quotes": 0,
+  "quote_count": 0,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": "Three consecutive API/provider failures; remaining calls not sent"
+}

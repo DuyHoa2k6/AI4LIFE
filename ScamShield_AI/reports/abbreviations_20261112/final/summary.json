@@ -1,0 +1,27 @@
+{
+  "scope": "29 known synthetic development cases, draft references; not independent accuracy or final risk evaluation.",
+  "lexicon_version": "vi-abbreviations-1.0.0",
+  "entries": 29,
+  "distinct_aliases": 23,
+  "cases": 29,
+  "matched": 29,
+  "failed": [],
+  "resolved_occurrences": 29,
+  "abstained_occurrences": 7,
+  "original_offset_checks": 77,
+  "exact_offsets": 77,
+  "provider_calls": 0,
+  "network_calls": 0,
+  "hashes": {
+    "backend\\local_observation\\abbreviations.py": "ae5e07e6bc9888a7f80c42f486a034dbe0be635415c8f35b8afc945830408f2b",
+    "backend\\local_observation\\text.py": "5ef808dc8d6124959f1c5d7b08b265b6ba8dafda7e8940e495339a3fda736be3",
+    "backend\\local_observation\\analyzer.py": "4f567ff36a2f20c425da5a676d8edb6431d4af41e30ad7a6c009099f7a99880a",
+    "backend\\local_observation\\schema.py": "be2200846857858f1795b89a9435116f58de62da64b6537fc1f38bbfadbe242e",
+    "backend\\local_observation\\segmentation.py": "fbd595a578cb46ac30e7bf156ec96a055272c33f0a90f885abf8edd1f3ea6e52",
+    "backend\\local_observation\\rules.json": "73c6abe29f6a7007155736dc3fa67c9e2e152185fa08b9d1896ce7c2796b2a01",
+    "../data\\abbreviations_vi.json": "154a9893a712b77514422cb54a16d9bebecd8e4a1c867fa7f1161b94b4e188b1",
+    "fixtures\\abbreviation_checks\\inputs.json": "c8607827b3bd256e1325df7225f823c31bbb1680f4e380e363a29903e7b98503",
+    "fixtures\\abbreviation_checks\\expected.json": "d9f5e396891d01e6c51154fd68122889c73c9544799ba61dd9a6f2a843171bb6",
+    "abbreviation_check.py": "1d815e847458d805b6fd6598c71c37e813f617cec6f478c324c742d466d01247"
+  }
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "id": "H01",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Giao mã rõ ràng",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 13976.282299990999,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N01",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Lịch họp bình thường",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 5864.372900003218,
+    "manual_review": "pending"
+  },
+  {
+    "id": "C01",
+    "group": "uncertain",
+    "target_status": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chưa nói bước xử lý",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 10833.062799996696,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S01",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Quyền điều khiển chưa rõ mục đích",
+    "prediction": "high",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 15013.34940000379,
+    "manual_review": "pending"
+  },
+  {
+    "id": "H02",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nộp phí trước khi nhận thưởng",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 16798.81919999025,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N02",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đòi khoản vay bằng phương ngữ",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 15949.397899996256,
+    "manual_review": "pending"
+  },
+  {
+    "id": "C02",
+    "group": "uncertain",
+    "target_status": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chuyển tiền chưa rõ mục đích",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7554.459099992528,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S02",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "APK không rõ nhà phát hành",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 20783.34629999881,
+    "manual_review": "pending"
+  },
+  {
+    "id": "H03",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Biến thể tiền đồng bộ",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 17580.85339999525,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N03",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Bài cảnh báo trích lời dụ",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 19187.140299996827,
+    "manual_review": "pending"
+  },
+  {
+    "id": "C03",
+    "group": "uncertain",
+    "target_status": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Đối tượng thao tác chưa xác định",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 13887.432600007742,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S03",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nhãn liên kết khác đích",
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 18593.05460000178,
+    "manual_review": "pending"
+  },
+  {
+    "id": "H04",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Chuỗi hành vi qua nhiều tin",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 9047.855500000878,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N04",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự dùng mã trong ứng dụng",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 20793.422799994005,
+    "manual_review": "pending"
+  },
+  {
+    "id": "C04",
+    "group": "uncertain",
+    "target_status": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Tham chiếu bước kia bị thiếu",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 35958.40489999682,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S04",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Chuyển sang kênh riêng và giữ kín",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 15413.373900009901,
+    "manual_review": "pending"
+  }
+]

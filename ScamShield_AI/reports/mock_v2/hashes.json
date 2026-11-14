@@ -1,0 +1,22 @@
+{
+  "ScamShield_AI\\backend\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "ScamShield_AI\\backend\\engine.py": "29356de608708ffa41adf36661fac50938db36fa29eb7e36f83e8bcb25b1e009",
+  "ScamShield_AI\\backend\\main.py": "123938227222f1420b751f41da7f2d2e2727a06db8e651fa353004e9e869d904",
+  "ScamShield_AI\\backend\\mock_rules.py": "0b8a99df4463b13bc198f072ddce67917ed0e57cd7d7de3d733c10df54e5908e",
+  "ScamShield_AI\\backend\\providers.py": "ceaaf845c0aa9ac88a110e602ab5e21bf81ab47dc6024a6400af2caf5b656128",
+  "ScamShield_AI\\backend\\schemas.py": "49edc7c800686f1242aefe490e21ff6657e5d52d913ab624a321bbfa07fc7641",
+  "ScamShield_AI\\tests\\test_mock_rules.py": "af884a0a019c70116b5a3b9a65fb21ab11a942f9afcb8c89da1cb8ca0d492b8e",
+  "ScamShield_AI\\tests\\test_backend.py": "2a5aca4cf11b5d0fa972386af2bebb26dd2b3bc50aa58c2333f2f7ee35cf5fd6",
+  "ScamShield_AI\\tests\\browser_week2.mjs": "565b4a1a5af551f02cd05a865fb755f591886f768f783cf8493a2b7eff570886",
+  "ScamShield_AI\\MOCK_RULES.md": "9093c56eb2a2bc68daa2b62fd4c7d606dfdb6fefe2aa2b83e455a5db586b199e",
+  "ScamShield_AI\\mock_report.py": "01510a4ba58129e000f3becc80184d4759819dc49ccd813ec2d0f245b1106f50",
+  "data\\dev.jsonl": "efe3281472ae33be41b37c712f59b1456a37c76d829f74ca9ec62ec6b047dcfa",
+  "01_Y_Tuong.md": "7c0dcaae9ab9c06e5f1fcb099c31c31702d02e93778d6a3eda28c3add071096d",
+  "02_Cong_Cu.md": "6215cae2780bb4696aab53fb4348b029d4c4b0da8e115af748d2c5d62ae00b7d",
+  "03_Luong.md": "34c40ee902f3696e9cc5156dbe94e2fd75c15e9b658e1825826070d8f35cf27a",
+  "04_API.md": "e9c03431e5719b2cf8ea03bec86b4a9ccfa47ba7be336e03e590791d55285ecf",
+  "05_Dataset.md": "1e5df5b9b41ba39ba15f5001c47b670a27add8f92bc1ffaef83d839a587c2c6d",
+  "06_Kiem_Thu.md": "dd2e53c233ea22986f33872c536e28140cd058debe80be58034cfe7cea8e8be1",
+  "07_Lo_Trinh.md": "19ea6d812c9e4f85d5785e6fcdbcc9a671e5ad5d73ad6a776427aaa830aa5ccd",
+  "prompts\\01_Tuan_1.md": "59edffe63651ff0770332a499883db10dbe0323d521839239e980ae2b8bf641b"
+}

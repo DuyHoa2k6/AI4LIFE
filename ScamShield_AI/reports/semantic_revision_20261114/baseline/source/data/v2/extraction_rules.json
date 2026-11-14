@@ -1,0 +1,24 @@
+{
+  "version": "safety-extraction-1.0",
+  "review_status": "controlled_project_rules",
+  "rules": [
+    {"id":"EX-TRUST","event_type":"build_trust","pattern":"\\b(?P<verb>cu tin (?:anh|toi|minh)|anh se lo|toi la nguoi quen|minh se cham soc)\\b"},
+    {"id":"EX-TRAVEL","event_type":"invite_travel_or_meeting","pattern":"\\b(?P<verb>moi (?:ban |em )?(?:di|gap)|hay (?:di|den|sang)|phai (?:di|den|sang)|sang ben nay|di cung|gap mat|den gap)\\b"},
+    {"id":"EX-JOB","event_type":"offer_employment","pattern":"\\b(?P<verb>tuyen (?:nhan vien|nguoi)|moi lam viec|moi ban lam|viec lam|nhan vao lam|cong viec duoc moi)\\b"},
+    {"id":"EX-CHANGE","event_type":"change_destination_or_terms","pattern":"\\b(?P<verb>doi (?:dia diem|diem den|cong viec)|cong viec khac thoa thuan|khong phai cong viec da thoa thuan)\\b"},
+    {"id":"EX-DEBT","event_type":"impose_debt","pattern":"\\b(?P<verb>ghi no|tro thanh khoan no|no chi phi|phai tra no|no tien di lai)\\b"},
+    {"id":"EX-SECRET","event_type":"request_secrecy","pattern":"\\b(?P<verb>giau gia dinh|dung bao (?:gia dinh|nguoi nha)|giu bi mat|khong duoc ke)\\b"},
+    {"id":"EX-COMMS","event_type":"restrict_communication","pattern":"\\b(?P<verb>cat lien lac|khong duoc lien lac|khong duoc goi|cam (?:goi|lien lac)|thu dien thoai|giu dien thoai)\\b"},
+    {"id":"EX-DOCS","event_type":"retain_identity_documents","pattern":"\\b(?P<verb>giu (?:ho|lai)?\\s*(?:ho chieu|giay to|can cuoc)|thu (?:ho chieu|giay to|can cuoc))\\b"},
+    {"id":"EX-MOVEMENT","event_type":"restrict_movement","pattern":"\\b(?P<verb>khong (?:duoc|cho) (?:tu do )?roi di|cam roi di|bi giu lai|nhot|khoa cua nhot)\\b"},
+    {"id":"EX-HARM","event_type":"threaten_harm","pattern":"\\b(?P<verb>de doa (?:gay hai|danh|giet)|doa (?:gay hai|danh|giet)|se gay hai|se danh|se giet)\\b"},
+    {"id":"EX-DISCLOSURE","event_type":"threaten_disclosure","pattern":"\\b(?P<verb>doa (?:tung|phat tan)|se (?:tung|phat tan) (?:anh|thong tin)|de doa cong khai)\\b"},
+    {"id":"EX-RELEASE","event_type":"demand_release_payment","pattern":"\\b(?P<verb>(?:chuyen|nop|tra)\\b[^.!?;\\n]{0,75}(?:de|moi)\\b[^.!?;\\n]{0,35}(?:duoc roi di|duoc tha|tha nguoi|tha (?:con|nguoi nha)))\\b"},
+    {"id":"EX-WORK","event_type":"compel_work","pattern":"\\b(?P<verb>(?:bi ep|ep|bat buoc)\\b[^.!?;\\n]{0,45}(?:lam viec|lao dong))\\b"},
+    {"id":"EX-ILLEGAL","event_type":"compel_illegal_activity","pattern":"\\b(?P<verb>(?:bi ep|ep|bat buoc)\\b[^.!?;\\n]{0,45}(?:lua dao|pham phap|hanh vi trai phap luat))\\b"},
+    {"id":"EX-BODY","event_type":"bodily_integrity_threat","pattern":"\\b(?P<verb>(?:bi ep|ep|cuong ep|doa)\\b[^.!?;\\n]{0,45}(?:can thiep co the|quan he tinh duc|lay noi tang|boc lot tinh duc))\\b"},
+    {"id":"EX-RETURN","event_type":"return_documents_available","pattern":"\\b(?P<verb>nhan lai giay to bat cu luc nao|tra lai ho chieu ngay|giay to duoc tra ngay)\\b"},
+    {"id":"EX-FREE","event_type":"free_to_leave","pattern":"\\b(?P<verb>duoc tu do roi di|co the roi di bat cu luc nao|khong bi cam roi di)\\b"},
+    {"id":"EX-CONSENT","event_type":"consent_and_exit_available","pattern":"\\b(?P<verb>tu nguyen\\b[^.!?;\\n]{0,85}(?:co the dung|quyen dung|co the tu choi))\\b"}
+  ]
+}

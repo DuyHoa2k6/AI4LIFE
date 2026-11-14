@@ -1,0 +1,5 @@
+{
+  "attempted": false,
+  "reason": "SCAMSHIELD_PROVIDER_URL and SCAMSHIELD_MODEL not configured",
+  "quality": "not measured; transport tests use simulated HTTP"
+}

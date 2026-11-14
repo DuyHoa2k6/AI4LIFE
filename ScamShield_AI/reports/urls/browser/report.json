@@ -1,0 +1,209 @@
+{
+  "scope": "real Chrome and unpacked extension, offline URL analysis, mock text provider; no real URL visited",
+  "checks": [
+    {
+      "name": "web preview contains actual target without sending",
+      "passed": true
+    },
+    {
+      "name": "web renders domain evidence and untested reputation notice",
+      "passed": true
+    },
+    {
+      "name": "four API states have distinct rendered colors and descriptive labels",
+      "passed": true
+    },
+    {
+      "name": "all four warning labels have at least 4.5 to 1 text contrast",
+      "passed": true
+    },
+    {
+      "name": "pending and failed checks use neutral color rather than clear green",
+      "passed": true
+    },
+    {
+      "name": "redirect chain and final HTTP status render without claiming safety",
+      "passed": true
+    },
+    {
+      "name": "WEB high immediate summary and next action",
+      "passed": true
+    },
+    {
+      "name": "WEB high hides answers, RAG and internal prose",
+      "passed": true
+    },
+    {
+      "name": "WEB quotes retain exact Unicode spans",
+      "passed": true
+    },
+    {
+      "name": "WEB inferred number remains qualified as possible authentication code",
+      "passed": true
+    },
+    {
+      "name": "WEB high fits mobile width",
+      "passed": true
+    },
+    {
+      "name": "WEB need_context immediate summary and next action",
+      "passed": true
+    },
+    {
+      "name": "WEB need_context hides answers, RAG and internal prose",
+      "passed": true
+    },
+    {
+      "name": "WEB long result scrolls to explanation with fixed risk header",
+      "passed": true
+    },
+    {
+      "name": "WEB supplement previews same input and context without early API call",
+      "passed": true
+    },
+    {
+      "name": "WEB old analysis supplement cannot submit again",
+      "passed": true
+    },
+    {
+      "name": "WEB need_context fits mobile width",
+      "passed": true
+    },
+    {
+      "name": "WEB clear immediate summary and next action",
+      "passed": true
+    },
+    {
+      "name": "WEB clear hides answers, RAG and internal prose",
+      "passed": true
+    },
+    {
+      "name": "WEB short result fits content without oversized blank area",
+      "passed": true
+    },
+    {
+      "name": "WEB clear fits mobile width",
+      "passed": true
+    },
+    {
+      "name": "WEB grounded situation summary and cross-speaker quotes render without raw analysis",
+      "passed": true
+    },
+    {
+      "name": "WEB invalid situation indicator quote is never displayed",
+      "passed": true
+    },
+    {
+      "name": "WEB invalid evidence produces missing-evidence notice",
+      "passed": true
+    },
+    {
+      "name": "region selection sends no analysis",
+      "passed": true
+    },
+    {
+      "name": "hidden href collected with exact Unicode label offsets",
+      "passed": true
+    },
+    {
+      "name": "outside and hidden links and input not collected",
+      "passed": true
+    },
+    {
+      "name": "href-only mutation resubmits and drops old result",
+      "passed": true
+    },
+    {
+      "name": "no duplicate analysis for unchanged text/href",
+      "passed": true
+    },
+    {
+      "name": "page never navigated to analyzed link",
+      "passed": true
+    },
+    {
+      "name": "reported student phishing message reaches API and renders result",
+      "passed": true
+    },
+    {
+      "name": "reported message link and label transmitted without OCR",
+      "passed": true
+    },
+    {
+      "name": "EXT high result summary is immediately expanded",
+      "passed": true
+    },
+    {
+      "name": "EXT high hides RAG answers and internal fields",
+      "passed": true
+    },
+    {
+      "name": "EXT high fits narrow result frame",
+      "passed": true
+    },
+    {
+      "name": "EXT need_context result summary is immediately expanded",
+      "passed": true
+    },
+    {
+      "name": "EXT need_context hides RAG answers and internal fields",
+      "passed": true
+    },
+    {
+      "name": "EXT need_context fits narrow result frame",
+      "passed": true
+    },
+    {
+      "name": "EXT long explanation scrolls while header stays visible",
+      "passed": true
+    },
+    {
+      "name": "EXT supplement stays attached to same analyzed text",
+      "passed": true
+    },
+    {
+      "name": "EXT clear result summary is immediately expanded",
+      "passed": true
+    },
+    {
+      "name": "EXT clear hides RAG answers and internal fields",
+      "passed": true
+    },
+    {
+      "name": "EXT clear fits narrow result frame",
+      "passed": true
+    },
+    {
+      "name": "EXT old item form cannot submit after content changes",
+      "passed": true
+    }
+  ],
+  "browser": "Chrome/157.0.8103.50",
+  "warningColors": [
+    {
+      "status": "clear",
+      "color": "rgb(22, 101, 52)",
+      "background": "rgb(240, 253, 244)",
+      "label": "✓ Chưa ghi nhận dấu hiệu đáng ngờ"
+    },
+    {
+      "status": "need_context",
+      "color": "rgb(30, 64, 175)",
+      "background": "rgb(239, 246, 255)",
+      "label": "? Cần xác minh thêm"
+    },
+    {
+      "status": "suspicious",
+      "color": "rgb(154, 52, 18)",
+      "background": "rgb(255, 247, 237)",
+      "label": "! Có dấu hiệu đáng ngờ"
+    },
+    {
+      "status": "high",
+      "color": "rgb(153, 27, 27)",
+      "background": "rgb(254, 242, 242)",
+      "label": "⚠ Rủi ro cao"
+    }
+  ],
+  "resultViewScope": "UI fixtures intentionally seed high/need_context/clear and private fields; no provider/model claims for these checks"
+}

@@ -1,0 +1,259 @@
+{
+  "scope": "synthetic fixtures; live transport simulated; not independent model accuracy",
+  "python": "3.12.5",
+  "tests_run": 49,
+  "passed": true,
+  "cases": [
+    {
+      "case": "test_backend.BackendTests.test_ai01_02_05_06_sequence_variant_injection",
+      "passed": true,
+      "elapsed_ms": 20.52900003036484
+    },
+    {
+      "case": "test_backend.BackendTests.test_api01_three_flows_and_question",
+      "passed": true,
+      "elapsed_ms": 7.372700027190149
+    },
+    {
+      "case": "test_backend.BackendTests.test_api02_chunked_body_limit",
+      "passed": true,
+      "elapsed_ms": 0.8805000106804073
+    },
+    {
+      "case": "test_backend.BackendTests.test_api02_rejected_before_provider",
+      "passed": true,
+      "elapsed_ms": 28.523100016172975
+    },
+    {
+      "case": "test_backend.BackendTests.test_api03_errors_no_raw_leak",
+      "passed": true,
+      "elapsed_ms": 6.946699984837323
+    },
+    {
+      "case": "test_backend.BackendTests.test_api03_real_timeout",
+      "passed": true,
+      "elapsed_ms": 22.228899993933737
+    },
+    {
+      "case": "test_backend.BackendTests.test_api04_05_quotes_offsets_and_speaker",
+      "passed": true,
+      "elapsed_ms": 1.4362999936565757
+    },
+    {
+      "case": "test_backend.BackendTests.test_api05_combining_unicode_redacted_and_surviving_evidence",
+      "passed": true,
+      "elapsed_ms": 1.8248000415042043
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb01_always_calls_live_with_complete_input",
+      "passed": true,
+      "elapsed_ms": 2.9414999880827963
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb01_new_wording_outside_rules_still_reaches_live",
+      "passed": true,
+      "elapsed_ms": 3.0521000153385103
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb02_access_request_without_inducement_is_suspicious",
+      "passed": true,
+      "elapsed_ms": 2.6442999951541424
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb02_related_evidence_and_safe_explanation",
+      "passed": true,
+      "elapsed_ms": 2.7541000163182616
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb03_borrowed_money_needs_context_then_uses_added_context",
+      "passed": true,
+      "elapsed_ms": 4.862000001594424
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb03_live_reclassifies_educational_quote",
+      "passed": true,
+      "elapsed_ms": 2.5505999801680446
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb04_silent_omission_does_not_clear_rule_signal",
+      "passed": true,
+      "elapsed_ms": 2.7274999883957207
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb04_unknown_role_cannot_be_silently_cleared",
+      "passed": true,
+      "elapsed_ms": 2.3804999655112624
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb05_false_context_cannot_silently_clear",
+      "passed": true,
+      "elapsed_ms": 2.5461000041104853
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb05_invalid_quote_speaker_offset_and_duplicates",
+      "passed": true,
+      "elapsed_ms": 8.626899973023683
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb06_different_speakers_cannot_form_high_link",
+      "passed": true,
+      "elapsed_ms": 5.77970000449568
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb06_discarded_support_and_invalid_reference_cannot_raise_high",
+      "passed": true,
+      "elapsed_ms": 5.113599996548146
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb06_known_sender_does_not_make_code_disclosure_safe",
+      "passed": true,
+      "elapsed_ms": 2.3958999663591385
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb07_real_transport_carries_hypotheses_as_data_and_rejects_bad_schema",
+      "passed": true,
+      "elapsed_ms": 49.75530004594475
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb08_global_timeout_no_mock_fallback",
+      "passed": true,
+      "elapsed_ms": 22.64759998070076
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb08_missing_configuration_is_explicit",
+      "passed": true,
+      "elapsed_ms": 3.7683999980799854
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb09_invalid_input_never_calls_live",
+      "passed": true,
+      "elapsed_ms": 8.42879997799173
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb10_unicode_and_rule_limit_still_call_live",
+      "passed": true,
+      "elapsed_ms": 5.884799989871681
+    },
+    {
+      "case": "test_hybrid.HybridTests.test_hyb11_factory_and_processing_notice",
+      "passed": true,
+      "elapsed_ms": 2.6000000070780516
+    },
+    {
+      "case": "test_live_adapter.LiveAdapterTests.test_invalid_json_missing_fields_and_service_error",
+      "passed": true,
+      "elapsed_ms": 9.587499953340739
+    },
+    {
+      "case": "test_live_adapter.LiveAdapterTests.test_transport_schema_and_input_only",
+      "passed": true,
+      "elapsed_ms": 33.72819995274767
+    },
+    {
+      "case": "test_local_settings.PrivateBackendSettingsTests.test_config_is_not_executed_and_errors_do_not_echo_secret",
+      "passed": true,
+      "elapsed_ms": 0.8478999952785671
+    },
+    {
+      "case": "test_local_settings.PrivateBackendSettingsTests.test_local_constants_and_environment_override",
+      "passed": true,
+      "elapsed_ms": 1.0107000125572085
+    },
+    {
+      "case": "test_local_settings.PrivateBackendSettingsTests.test_provider_uses_backend_key_without_user_input",
+      "passed": true,
+      "elapsed_ms": 4.824500007089227
+    },
+    {
+      "case": "test_local_settings.PrivateBackendSettingsTests.test_secret_not_served_or_disclosed",
+      "passed": true,
+      "elapsed_ms": 6.873300008010119
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_api_schema_stays_compatible",
+      "passed": true,
+      "elapsed_ms": 2.8924999642185867
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_every_rule_has_warning_counterexample",
+      "passed": true,
+      "elapsed_ms": 1.4620000147260725
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_invalid_support_cannot_raise_risk_or_keep_links",
+      "passed": true,
+      "elapsed_ms": 0.21199998445808887
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr01_payment_recovery_gift_and_controls",
+      "passed": true,
+      "elapsed_ms": 1.0393999982625246
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr02_credentials_vs_self_service",
+      "passed": true,
+      "elapsed_ms": 1.0730999638326466
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr03_access_and_install_vs_reported",
+      "passed": true,
+      "elapsed_ms": 0.5780999781563878
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr04_reward_without_request_does_not_raise_high",
+      "passed": true,
+      "elapsed_ms": 0.520200002938509
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr05_mixed_roles_and_contrast",
+      "passed": true,
+      "elapsed_ms": 0.847299990709871
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr06_cross_turn_relation_and_evidence_refs",
+      "passed": true,
+      "elapsed_ms": 0.21539995213970542
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr06_different_speaker_topic_and_window",
+      "passed": true,
+      "elapsed_ms": 0.7712999940849841
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr07_unicode_decimals_and_exact_spans",
+      "passed": true,
+      "elapsed_ms": 0.3725000424310565
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr08_missing_questions_do_not_request_secrets",
+      "passed": true,
+      "elapsed_ms": 0.42180001037195325
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_mr09_injection_and_finding_budget",
+      "passed": true,
+      "elapsed_ms": 1.9664000137709081
+    },
+    {
+      "case": "test_mock_rules.MockBehaviorTests.test_registry_all_rules_have_trigger_examples",
+      "passed": true,
+      "elapsed_ms": 0.2932000206783414
+    },
+    {
+      "case": "test_week2_routes.WebsiteRoutesTests.test_config_discloses_provider_without_secrets",
+      "passed": true,
+      "elapsed_ms": 2.819899993482977
+    },
+    {
+      "case": "test_week2_routes.WebsiteRoutesTests.test_web_assets_and_fixture",
+      "passed": true,
+      "elapsed_ms": 40.000899985898286
+    }
+  ],
+  "real_model": "not tested; enter a fresh key locally and run chay_hybrid.py --smoke",
+  "rag": "not integrated; awaiting P0 live and approved sources",
+  "dataset": "dev/validation/holdout not used to tune hybrid",
+  "hypotheses_limit": 12,
+  "hypothesis_quote_limit": 512,
+  "routing": "always_live"
+}

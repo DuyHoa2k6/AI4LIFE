@@ -1,0 +1,29 @@
+{
+  "release": "week2-local-0.2.0",
+  "schema": "04_API 1.0",
+  "live_provider": "not configured; not assessed",
+  "files_sha256": {
+    "web\\app.js": "127f02b26ebe6abcb9c93f1306cc0e57fb1a3ab211c6eb533093826838424f81",
+    "web\\fixture.html": "3ba3e05639808be960c34dfb64734d759b2319d7a6200dba09b2e2296495fb30",
+    "web\\fixture.js": "3dfaffd1ddf76ea28eb77c36a8f4ebe28a677e762914ee9f59ce0902bafbcca8",
+    "web\\index.html": "fdb6a55b14b1e36e74a389a9b4eead72187a4c3dc79b564317b64fc9fdd5e080",
+    "web\\style.css": "13405ff9346e1e6a9ae15b7d8b970414930b63b2f358da8a6c7bae5c7ae6d653",
+    "extension\\content.js": "4b903ebd830ce86011eb1624f52842534538f1597afa9e868db259dff58d54d3",
+    "extension\\manifest.json": "dbb05af0b83c577102a76b22a2edb6e0e22cdb9fea84c81068e960b5dbd39d0c",
+    "extension\\popup.css": "4d9b3370917505a53ea69f3b52662d8bd2d57424b4decd7bfffb67a6ee8a09fa",
+    "extension\\popup.html": "9dbde9e819a3b074eb91e3ddff3f0052d98aeb8091067c57f4dc49f040ced3cf",
+    "extension\\popup.js": "0a6390c99f1e11a99e3eff0a157907e12c5c699adbae35c6167ab5b004e0b665",
+    "extension\\shared.js": "a4b8a0f426fadd1cc9a7d90e43aa3fd08ea506a943f1998bba5ebc8817332b26",
+    "extension\\worker.js": "d44db194b8714d95fad2a14139d01149f8b2459e9ba1cf0456bc4e5cdab744d9",
+    "backend\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "backend\\engine.py": "e58730a08b7e1411c3752f48bd742681dad5561b847ca175444385bda02e24f4",
+    "backend\\main.py": "123938227222f1420b751f41da7f2d2e2727a06db8e651fa353004e9e869d904",
+    "backend\\providers.py": "58cb03b4a691722201351c5014705df81035821cafa41376a31b58756e3c7512",
+    "backend\\schemas.py": "49edc7c800686f1242aefe490e21ff6657e5d52d913ab624a321bbfa07fc7641",
+    "README_TUAN_2.md": "ffb6a6f40c5bb5b5c16b8356a30e4ced783915d24bc0f75e6dcaf748ec52738f",
+    "chay_he_thong.cmd": "17d7ff6264183279c1c8964570865d1af2c4840304b6b69590bea37e6bba2081",
+    "tests\\browser_week2.mjs": "e42d217e6f05ae4f175fe88b54536c2f4d4544b1f2ea005f02df84234c82fc4f",
+    "tests\\worker_security.mjs": "198a45fbd649d82cbe83f87991b16924a408e60388af852293c6477295e5a89a",
+    "tests\\test_week2_routes.py": "91e9cfe08f313aa7c96d3e61d898ebaebb84d34f7ce32c04ce8e59957234b0da"
+  }
+}

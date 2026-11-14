@@ -1,0 +1,114 @@
+[
+  {
+    "id": "SG-21",
+    "group": "scam",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "share_auth_code"
+    ],
+    "manual_focus": "Yêu cầu giao mã trực tiếp; tự xưng hỗ trợ không xác minh danh tính.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 5039.76179996971,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-31",
+    "group": "scam",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "grant_access",
+      "inducement"
+    ],
+    "manual_focus": "",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 6363.298100011889,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-61",
+    "group": "scam",
+    "behavior_group": "other",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "other",
+      "inducement"
+    ],
+    "manual_focus": "Hành động làm mất bảo vệ giao dịch, không giới hạn vào chuyển tiền trực tiếp.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 6365.946600039024,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-13",
+    "group": "normal",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "transfer_funds"
+    ],
+    "manual_focus": "",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 6327.738300024066,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-14",
+    "group": "normal",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "Lời trích cảnh báo/phủ định không phải yêu cầu chuyển tiền.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 6380.685599986464,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-15",
+    "group": "uncertain",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "Hỏi quan hệ và mục đích khoản tiền, không tự kết luận lừa đảo.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 6315.9349000197835,
+    "manual_review": "pending"
+  }
+]

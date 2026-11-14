@@ -1,0 +1,434 @@
+{
+  "version": "three-valued-fact-catalog-1.0",
+  "absence_policy": "UNKNOWN",
+  "sources": [
+    "observed_content",
+    "sender_claim",
+    "user_report",
+    "technical_check",
+    "derived"
+  ],
+  "facts": [
+    {
+      "type": "transfer_requested",
+      "source_event": "transfer_funds",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "payment_confirmed",
+      "source_event": "receive_funds",
+      "TRUE": "Người được gán nguồn báo đã nhận đủ tiền/hoàn tất; không phải xác minh ngân hàng độc lập.",
+      "FALSE": "Có lời báo chưa nhận/chưa xác nhận thanh toán trong phạm vi cụ thể.",
+      "UNKNOWN": "Không có trạng thái thanh toán đủ rõ; không chuyển thành FALSE."
+    },
+    {
+      "type": "withdraw_funds",
+      "source_event": "withdraw_funds",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "handover_requested",
+      "source_event": "handover_asset",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "code_requested",
+      "source_event": "provide_code",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "credentials_requested",
+      "source_event": "provide_credentials",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "documents_requested",
+      "source_event": "provide_documents",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "open_link",
+      "source_event": "open_link",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "login",
+      "source_event": "login",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "install_requested",
+      "source_event": "install_app",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "screen_share_requested",
+      "source_event": "share_screen",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "control_requested",
+      "source_event": "grant_control",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "change_channel",
+      "source_event": "change_channel",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "keep_secret",
+      "source_event": "keep_secret",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "avoid_verification",
+      "source_event": "avoid_verification",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "identity_claim",
+      "source_event": "identity_claim",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "relationship_claim",
+      "source_event": "relationship_claim",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "code_identity",
+      "source_event": "code_identity",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "build_trust",
+      "source_event": "build_trust",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "invite_travel_or_meeting",
+      "source_event": "invite_travel_or_meeting",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "offer_employment",
+      "source_event": "offer_employment",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "change_destination_or_terms",
+      "source_event": "change_destination_or_terms",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "impose_debt",
+      "source_event": "impose_debt",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "request_secrecy",
+      "source_event": "request_secrecy",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "restrict_communication",
+      "source_event": "restrict_communication",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "retain_identity_documents",
+      "source_event": "retain_identity_documents",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "restrict_movement",
+      "source_event": "restrict_movement",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "threaten_harm",
+      "source_event": "threaten_harm",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "threaten_disclosure",
+      "source_event": "threaten_disclosure",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "demand_release_payment",
+      "source_event": "demand_release_payment",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "compel_work",
+      "source_event": "compel_work",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "compel_illegal_activity",
+      "source_event": "compel_illegal_activity",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "bodily_integrity_threat",
+      "source_event": "bodily_integrity_threat",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "return_documents_available",
+      "source_event": "return_documents_available",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "free_to_leave",
+      "source_event": "free_to_leave",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "consent_and_exit_available",
+      "source_event": "consent_and_exit_available",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "other",
+      "source_event": "other",
+      "TRUE": "Có bằng chứng về khẳng định/hành vi dương tính; phải xét direct_request, speech_role, thời gian và nguồn trước khi dùng làm nguy cơ.",
+      "FALSE": "Có bằng chứng phủ định hành vi hoặc trạng thái; không phải do vắng thông tin.",
+      "UNKNOWN": "Chưa bóc tách được, thiếu bằng chứng hoặc ý nghĩa/trạng thái chưa rõ."
+    },
+    {
+      "type": "direct_request",
+      "TRUE": "Có lời yêu cầu trực tiếp.",
+      "FALSE": "Được xác định là vai khác: cảnh báo, phủ định, tự thuật.",
+      "UNKNOWN": "Chưa rõ vai câu nói."
+    },
+    {
+      "type": "quoted_warning",
+      "TRUE": "Lời trích/cảnh báo được nhận diện.",
+      "FALSE": "Được nhận diện là vai khác.",
+      "UNKNOWN": "Vai chưa rõ."
+    },
+    {
+      "type": "denial",
+      "TRUE": "Lời phủ định được nhận diện.",
+      "FALSE": "Vai đã rõ và không phải phủ định.",
+      "UNKNOWN": "Vai chưa rõ."
+    },
+    {
+      "type": "authentication_meaning",
+      "TRUE": "Mật khẩu hoặc mã được nhận diện là mã đăng nhập/xác thực.",
+      "FALSE": "Có loại mã không phải xác thực rõ ràng, như mã đơn hàng.",
+      "UNKNOWN": "Dãy số chưa rõ mục đích."
+    },
+    {
+      "type": "bank_information_requested",
+      "TRUE": "Có nội dung mở thông tin ngân hàng; cần xét vai request để dùng luật.",
+      "FALSE": "Có phủ định mở thông tin ngân hàng.",
+      "UNKNOWN": "Chưa rõ hoặc chưa có nội dung này."
+    },
+    {
+      "type": "payment_resolution",
+      "TRUE": "Không dùng TRUE trong bản hiện tại.",
+      "FALSE": "Không dùng FALSE trong bản hiện tại.",
+      "UNKNOWN": "Các nguồn thanh toán xung đột chưa giải quyết; giữ từng claim."
+    },
+    {
+      "type": "analysis_coverage",
+      "TRUE": "Đã có sự kiện trong phạm vi bộ trích, không thấy tín hiệu chạm giới hạn đã biết; không chứng minh hiểu hết ngữ nghĩa.",
+      "FALSE": "Có giới hạn/phần chưa phân tích được nhận diện.",
+      "UNKNOWN": "Không trích được sự kiện hoặc chưa xác định độ phủ."
+    },
+    {
+      "type": "user_context_provided",
+      "TRUE": "Có bối cảnh do người dùng cung cấp.",
+      "FALSE": "Không suy ra FALSE từ việc thiếu bối cảnh.",
+      "UNKNOWN": "Chưa có bối cảnh."
+    },
+    {
+      "type": "strong_url_signal_detected",
+      "TRUE": "Bộ kiểm tra ghi nhận tín hiệu cấu trúc mạnh.",
+      "FALSE": "Đã chạy kiểm tra cấu trúc và không có tín hiệu mạnh; không có nghĩa URL an toàn.",
+      "UNKNOWN": "URL chưa kiểm tra được."
+    },
+    {
+      "type": "url_supports_requested_action",
+      "TRUE": "Đã ghép yêu cầu có căn cứ với tín hiệu URL hợp lệ.",
+      "FALSE": "Không dùng FALSE từ việc không ghép được.",
+      "UNKNOWN": "Chưa thiết lập được liên hệ."
+    },
+    {
+      "type": "approved_behavior_passage_used",
+      "TRUE": "Đoạn nguồn đã qua cổng duyệt và được dùng.",
+      "FALSE": "Không suy ra FALSE từ no_match.",
+      "UNKNOWN": "Chưa có nguồn dùng được."
+    },
+    {
+      "type": "official_behavior_support",
+      "TRUE": "Đã ghép tài liệu được duyệt với hành vi có căn cứ.",
+      "FALSE": "Không suy ra FALSE từ no_match.",
+      "UNKNOWN": "Chưa xác định được nguồn hỗ trợ."
+    },
+    {
+      "type": "relation:prerequisite_for",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:before",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:after",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:reason_given_for",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:contradiction",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:state_update",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:reported_by",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:warning_about",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:same_transaction",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:travel_conditioned_on_secrecy",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:movement_restricted_by_debt",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:document_retention_limits_exit",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:threat_used_to_compel_action",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:release_conditioned_on_payment",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    },
+    {
+      "type": "relation:work_differs_from_agreement",
+      "TRUE": "Có quan hệ kèm bằng chứng, phạm vi và nguồn suy ra đã kiểm tra.",
+      "FALSE": "Chỉ có thể dùng khi có phủ định quan hệ rõ; bộ trích hiện không tự sinh trường hợp này.",
+      "UNKNOWN": "Thiếu quan hệ hoặc quan hệ chưa rõ; không nối chỉ vì hai sự kiện cùng xuất hiện."
+    }
+  ]
+}

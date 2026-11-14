@@ -1,0 +1,165 @@
+{
+  "scope": "16 new public synthetic functional probes, 4 primary targets per active risk state. References written before execution, not an independent holdout or real-user accuracy estimate. No tuning permitted during this run.",
+  "cases": [
+    {
+      "id": "H01",
+      "group": "scam",
+      "target_status": "high",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Giao mã rõ ràng"
+    },
+    {
+      "id": "N01",
+      "group": "normal",
+      "target_status": "clear",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Lịch họp bình thường"
+    },
+    {
+      "id": "C01",
+      "group": "uncertain",
+      "target_status": "need_context",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true,
+      "manual_focus": "Chưa nói bước xử lý"
+    },
+    {
+      "id": "S01",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "Quyền điều khiển chưa rõ mục đích"
+    },
+    {
+      "id": "H02",
+      "group": "scam",
+      "target_status": "high",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Nộp phí trước khi nhận thưởng"
+    },
+    {
+      "id": "N02",
+      "group": "normal",
+      "target_status": "clear",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Đòi khoản vay bằng phương ngữ"
+    },
+    {
+      "id": "C02",
+      "group": "uncertain",
+      "target_status": "need_context",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true,
+      "manual_focus": "Chuyển tiền chưa rõ mục đích"
+    },
+    {
+      "id": "S02",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "APK không rõ nhà phát hành"
+    },
+    {
+      "id": "H03",
+      "group": "scam",
+      "target_status": "high",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Biến thể tiền đồng bộ"
+    },
+    {
+      "id": "N03",
+      "group": "normal",
+      "target_status": "clear",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Bài cảnh báo trích lời dụ"
+    },
+    {
+      "id": "C03",
+      "group": "uncertain",
+      "target_status": "need_context",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true,
+      "manual_focus": "Đối tượng thao tác chưa xác định"
+    },
+    {
+      "id": "S03",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "Nhãn liên kết khác đích"
+    },
+    {
+      "id": "H04",
+      "group": "scam",
+      "target_status": "high",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Chuỗi hành vi qua nhiều tin"
+    },
+    {
+      "id": "N04",
+      "group": "normal",
+      "target_status": "clear",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Tự dùng mã trong ứng dụng"
+    },
+    {
+      "id": "C04",
+      "group": "uncertain",
+      "target_status": "need_context",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true,
+      "manual_focus": "Tham chiếu bước kia bị thiếu"
+    },
+    {
+      "id": "S04",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "Chuyển sang kênh riêng và giữ kín"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": "semantic-graph-patterns-1.0",
+  "method": "controlled_local_structural_rules_not_trained_model",
+  "rules": [
+    {"id":"SG-PAY","action":"payment","event":"transfer_funds","object":"money","pattern":"\\b(?:chuyen|nop|thanh toan|dong|ung)\\b[^.!?;]{0,65}(?:tien|phi|trieu|nghin|ngan|khoan|bao chung|tai khoan)"},
+    {"id":"SG-DEST","action":"changed_payee","event":"other","object":"account","pattern":"doi sang tai khoan|tai khoan (?:nhan tien )?(?:vua |da )?doi|tai khoan nhan tien moi"},
+    {"id":"SG-THIRD","action":"third_party_payee","event":"other","object":"account","pattern":"tai khoan (?:ca nhan|nguoi quen|nguoi khac)|tai khoan (?:nhan )?khong (?:dung|mang) ten|dung ten nguoi khac"},
+    {"id":"SG-AGREEMENT","action":"agreement_account","event":"other","object":"account","pattern":"hop dong[^.!?;]{0,65}tai khoan[^.!?;]{0,25}cong ty|khong co phu luc thay doi"},
+    {"id":"SG-AVOID","action":"avoid_verification","event":"avoid_verification","object":"verification","pattern":"dung goi|khong can goi|dung hoi|khong can lam viec voi ben nao khac|khong the cung cap danh tinh|chi xu ly truc tuyen"},
+    {"id":"SG-IDENTITY","action":"unverified_identity","event":"identity_claim","object":"identity","pattern":"\\b(?:chi|anh) day\\b|may (?:chi |anh )?hong|dien thoai[^.!?;]{0,25}hong|dung tai khoan nay"},
+    {"id":"SG-RECEIVE","action":"receive_on_behalf","event":"receive_funds","object":"money","pattern":"gui tien vao tai khoan (?:em|ban)|nhan tien ho|nhan ho|nhan duoc[^.!?;]{0,25}chuyen tiep"},
+    {"id":"SG-FORWARD","action":"forward_funds","event":"transfer_funds","object":"money","pattern":"chuyen tiep sang tai khoan|chuyen ho[^.!?;]{0,25}tai khoan"},
+    {"id":"SG-CAMOUFLAGE","action":"misstate_origin","event":"other","object":"money_origin","pattern":"neu ngan hang hoi[^.!?;]{0,100}(?:noi|khai)|khai sai nguon|dung nhac chuyen nhan ho"},
+    {"id":"SG-UNKNOWN","action":"unknown_counterparty","event":"other","object":"identity","pattern":"khong biet nguoi[^.!?;]{0,40}(?:gui|nhan)|chua gap[^.!?;]{0,25}truc tiep|mot nguoi gui tien"},
+    {"id":"SG-SECRET","action":"secrecy","event":"request_secrecy","object":"communication","pattern":"dung (?:ke|noi|nhac)|chi hai dua[^.!?;]{0,15}biet|dung chan[^.!?;]{0,30}ke voi ai"},
+    {"id":"SG-TRAVEL","action":"travel","event":"invite_travel_or_meeting","object":"movement","pattern":"di theo nhom|di gap[^.!?;]{0,30}tuyen dung|khi len xe|toi noi"},
+    {"id":"SG-DOC","action":"document_custody","event":"retain_identity_documents","object":"identity_documents","pattern":"(?:giao|nop|dua)[^.!?;]{0,25}(?:ho chieu|giay to)[^.!?;]{0,45}giu|(?:ho chieu|giay to)[^.!?;]{0,25}(?:giao|dua)[^.!?;]{0,35}giu"},
+    {"id":"SG-RESTRICT","action":"restricted_exit","event":"restrict_movement","object":"freedom","pattern":"khong duoc (?:tu )?roi|khong duoc (?:tu )?ve|khong cho (?:roi|ve)"},
+    {"id":"SG-EXITPAY","action":"exit_payment","event":"impose_debt","object":"freedom","pattern":"muon ve phai[^.!?;]{0,70}(?:chi phi|tien)|tra[^.!?;]{0,35}(?:chi phi|tien)[^.!?;]{0,20}moi duoc ve"},
+    {"id":"SG-BLOCKED","action":"blocked_withdrawal","event":"withdraw_funds","object":"money","pattern":"khong rut duoc|rut[^.!?;]{0,30}cho duyet|so du[^.!?;]{0,40}bi khoa|so du[^.!?;]{0,25}niem phong"},
+    {"id":"SG-BENEFIT","action":"promised_return","event":"receive_funds","object":"money","pattern":"(?:se |moi )(?:tra|hoan)[^.!?;]{0,35}(?:von|tien)|moi (?:duoc )?rut[^.!?;]{0,30}(?:toan bo|so du|tien)|(?:nhan|nha|lay) lai (?:von|tien)"},
+    {"id":"SG-TASK","action":"priced_task","event":"other","object":"task","pattern":"hoan tat nhiem vu[^.!?;]{0,25}\\d+[,.]?\\d*\\s*(?:trieu|nghin|ngan|dong)"},
+    {"id":"SG-REMOTE","action":"remote_control","event":"grant_control","object":"device_access","pattern":"kiem tra tu xa|dieu khien tu xa|cap quyen[^.!?;]{0,25}(?:dong y|dieu khien)"},
+    {"id":"SG-CONNECTION","action":"remote_connection_code","event":"other","object":"connection_code","pattern":"doc ma ket noi|gui ma ket noi"},
+    {"id":"SG-BANK","action":"open_financial_data","event":"other","object":"bank_data","pattern":"mo (?:ung dung )?ngan hang|mo[^.!?;]{0,25}ung dung ngan hang|xem (?:tien con du|so du)"},
+    {"id":"SG-MEDIA","action":"private_content_claim","event":"other","object":"private_media","pattern":"(?:toi|minh) co (?:anh|video)|anh va danh sach ban be"},
+    {"id":"SG-OTHER-CONTENT","action":"other_content_claim","event":"other","object":"document","pattern":"(?:toi|minh) co (?:hop dong|tai lieu)"},
+    {"id":"SG-DISCLOSE","action":"disclosure_threat","event":"threaten_disclosure","object":"unresolved","pattern":"(?:toi|se) gui cho (?:cho lam|ban be)|(?:toi|se) phat tan|(?:toi|se) dang len"},
+    {"id":"SG-CREDENTIAL","action":"surrender_credentials","event":"provide_credentials","object":"credentials","pattern":"(?:gui|cung cap|dua|chuyen)[^.!?;]{0,90}(?:thong tin dang nhap|mat khau)|(?:doc|gui) (?:tai khoan va )?mat khau"},
+    {"id":"SG-RECOVERY","action":"recovery_promise","event":"other","object":"money","pattern":"thu hoi khoan tien|lay lai tien da mat|thu hoi tien"},
+    {"id":"SG-VERIFIED","action":"independent_confirmation","event":"other","object":"verification","pattern":"toi da (?:tu )?goi[^.!?;]{0,65}(?:so cu|hop dong)[^.!?;]{0,60}xac nhan|da xac nhan[^.!?;]{0,60}qua dau moi (?:tren |trong )?hop dong"}
+  ]
+}

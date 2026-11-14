@@ -1,0 +1,41 @@
+{
+  "frozen_utc": "2026-11-14T02:21:43.782925+00:00",
+  "checkpoint": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\artifacts\\phobert\\smoke_heads",
+  "heads_sha256": "72527397e1e914e9c67ef4441f3a2a5d4cab98bb2abc63f13b6519b383d7cff5",
+  "manifest_sha256": "c9c99d3a1ad8d2dd68aa59d01b3b14d4ea792c9dadeb9d59c00f857e592cc7f9",
+  "labels_sha256": "a7e520c93aa605da88d82807627ea4e59e98c0681ddbdfd39ffab8a1e0f8b63f",
+  "trained_tasks": [
+    "spans",
+    "attributes",
+    "roles",
+    "relations",
+    "baseline"
+  ],
+  "training_scope": "frozen_PhoBERT_learned_heads",
+  "checkpoint_status": "research_smoke",
+  "baseline_policy_sha256": "5b0b8278a1c24479265cfc5724df7a3e160671f1770a866a845ad7d3d2254b81",
+  "files": {
+    "ml\\phobert\\__init__.py": "1aa22aa7d5a5da90c094633d00b81d797eb76e03c908faa2cec87ab2a55a6725",
+    "ml\\phobert\\api_smoke.py": "4f1a39c0b4e58a65350cd81dfd2d766bfb90199884bfccf88886d10c5b964828",
+    "ml\\phobert\\audit.py": "c4093a698e3bd2d9cd3e7436362ffbcc11629422773aeefd722ea7d6c27d3207",
+    "ml\\phobert\\build_smoke_data.py": "da3ee1ad3e300e629345e8a1bb2cd98c12f489dca2d1e8cc72cb3838e92c1d35",
+    "ml\\phobert\\data.py": "b8ae0e2e0143214aaad3510dd59c4bfb2dbc40bb700383fdee7851f6e8d12a5a",
+    "ml\\phobert\\decision.py": "5b0b8278a1c24479265cfc5724df7a3e160671f1770a866a845ad7d3d2254b81",
+    "ml\\phobert\\evaluate.py": "eee94a96f840f8c73640835e1e7795a5f33324dd6c0c6bd83a9d25d413c9bc47",
+    "ml\\phobert\\inference.py": "2967fb3821380dc70faadbd08c25eab0f670ffa9c7a1346fbf2f06dcf1b763b9",
+    "ml\\phobert\\minimal_pairs.py": "4da0a61781ebec8163c170545a84c7baca95d48e96768c5f642cef409c90bd2b",
+    "ml\\phobert\\model.py": "b1297f72f91d2126c8c6bf087a9429829cc25bfdf101e6204c1cbb013d1ec115",
+    "ml\\phobert\\overfit_probe.py": "7203348f06a9aea5ac96149955b9b06e37c4ca1e95c70a8ba82dbd4a33db6992",
+    "ml\\phobert\\prepare.py": "4cf124273b500b0fc3b217172a38f833b843bc98554733ccc1920025ed96589e",
+    "ml\\phobert\\preprocess.py": "3f441f4a01f8ef489f68391247f889f8835d41e6f7154a8501f976a0f244c340",
+    "ml\\phobert\\report.py": "18ff8e5c84f38f35128d62e2f14ca40d97a05a499eefa6429eb7becc570c1df6",
+    "ml\\phobert\\run_checks.py": "4d3fac8f4ee64886d4a8e1b77f3083ad67caa154e0c58d33d9b874a010641b27",
+    "ml\\phobert\\schema.py": "f328578fe93f72464151a7d479441952afc26e75e4152d2eabf439abc96c2fcb",
+    "ml\\phobert\\tasks.py": "07bdaba92ab539594f50044b28d9cca7cf0eae7d907d553336a4c7dcaaad6095",
+    "ml\\phobert\\train.py": "8fed5e61fd29a37a6ba2a61ea49a6a6f4b8631c7fd7583cb360de7dceaf6944b",
+    "backend\\local_reasoning\\phobert_adapter.py": "30fd6c4a6bec1d252dbb9c3afdbb499a6e1577384a625c72c3a688858f4e363d",
+    "evaluation\\configs\\acceptance.yaml": "fb926002d158b2f9cb2ae1793c74844aec13dee00d5fa2595e91f566f3eecbb4"
+  },
+  "previous_reports": "reports/phobert_20261114; public and already seen",
+  "training_gate": "No independently reviewed new annotations available; no new training is authorized by the data gate."
+}

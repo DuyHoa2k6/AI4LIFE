@@ -1,0 +1,16 @@
+{
+  "version": "semantic-variants-1.0",
+  "count": 24,
+  "origin": "synthetic",
+  "split": "development_only",
+  "independent": false,
+  "review_status": "authored_development_unreviewed",
+  "train": 0,
+  "validation": 0,
+  "independent_test": 0,
+  "note": "No model training; no existing dev/validation/holdout modified. Near-duplicate families must remain grouped in future independent splits.",
+  "hashes": {
+    "inputs.jsonl": "d96cf303094e5efb2976cee6bc9b4b44b9c7f46412f58c5cae34f04aceedc3b9",
+    "expected.jsonl": "b80970b450c4a26423d6d5cf86ae10278b1663c82bf9ef8ee9129ee29b21e64f"
+  }
+}

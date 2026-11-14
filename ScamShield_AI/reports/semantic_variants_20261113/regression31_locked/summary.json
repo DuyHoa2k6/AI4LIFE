@@ -1,0 +1,174 @@
+{
+  "cases": 31,
+  "matched": 31,
+  "mismatches": [],
+  "confusion_matrix": {
+    "clear": {
+      "clear": 8,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 0,
+      "error": 0
+    },
+    "need_context": {
+      "clear": 0,
+      "need_context": 5,
+      "suspicious": 0,
+      "high": 0,
+      "error": 0
+    },
+    "suspicious": {
+      "clear": 0,
+      "need_context": 0,
+      "suspicious": 8,
+      "high": 0,
+      "error": 0
+    },
+    "high": {
+      "clear": 0,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 10,
+      "error": 0
+    }
+  },
+  "per_class": {
+    "clear": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "need_context": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "suspicious": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "high": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "run_status": {
+    "complete": 29,
+    "unsupported": 2
+  },
+  "http_errors": 0,
+  "external_async_requests": 0,
+  "evidence_exact_quote": {
+    "valid": 275,
+    "total": 275
+  },
+  "labeled_required_extraction": {
+    "event_total": 21,
+    "event_found": 20,
+    "relation_total": 8,
+    "relation_found": 8
+  },
+  "logical_request_direction": {
+    "correct": 20,
+    "total_explicit_context_requests": 20
+  },
+  "timing": {
+    "api_testclient": {
+      "n": 31,
+      "p50_ms": 15.166500001214445,
+      "p95_ms": 64.66379999619676
+    },
+    "local_total": {
+      "n": 31,
+      "p50_ms": 11.295700001937803,
+      "p95_ms": 33.944399998290464
+    },
+    "asset_load": {
+      "n": 31,
+      "p50_ms": 1.872599998023361,
+      "p95_ms": 4.298200001358055
+    },
+    "safety_precheck": {
+      "n": 31,
+      "p50_ms": 1.3539999999920838,
+      "p95_ms": 3.6441999982343987
+    },
+    "local_extraction_interpretation": {
+      "n": 31,
+      "p50_ms": 7.3741000014706515,
+      "p95_ms": 18.40440000523813
+    },
+    "risk_assessment": {
+      "n": 31,
+      "p50_ms": 0.13439999747788534,
+      "p95_ms": 0.2843999973265454
+    },
+    "participants": {
+      "n": 31,
+      "p50_ms": 0.006800000846851617,
+      "p95_ms": 0.025800000003073364
+    },
+    "behaviors": {
+      "n": 31,
+      "p50_ms": 0.031199997465591878,
+      "p95_ms": 0.07030000415397808
+    },
+    "event_linking": {
+      "n": 31,
+      "p50_ms": 0.0030000010156072676,
+      "p95_ms": 0.014199998986441642
+    },
+    "situations": {
+      "n": 31,
+      "p50_ms": 0.0320999970426783,
+      "p95_ms": 0.05359999340726063
+    },
+    "hypotheses": {
+      "n": 31,
+      "p50_ms": 0.0132000059238635,
+      "p95_ms": 0.026299996534362435
+    },
+    "consequences": {
+      "n": 31,
+      "p50_ms": 0.015600002370774746,
+      "p95_ms": 0.03529999958118424
+    },
+    "retrieval": {
+      "n": 31,
+      "p50_ms": 0.6787000020267442,
+      "p95_ms": 1.4540000047418289
+    },
+    "url": {
+      "n": 31,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0
+    },
+    "support_total": {
+      "n": 31,
+      "p50_ms": 0.8632000026409514,
+      "p95_ms": 1.8137000006390736
+    }
+  },
+  "input_characters": {
+    "min": 17,
+    "max": 151
+  },
+  "not_measured": [
+    "independent holdout quality",
+    "semantic quote correctness beyond exact match",
+    "full actor/coreference accuracy",
+    "complete extraction precision (targets annotate required items only)",
+    "public Internet redirect latency",
+    "concurrent load"
+  ]
+}

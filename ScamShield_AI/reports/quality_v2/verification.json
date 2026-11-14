@@ -1,0 +1,9 @@
+{
+  "unit_tests_passed": 87,
+  "worker_security_checks_passed": 10,
+  "product_lock_valid": true,
+  "current_retries": 1,
+  "output_format": "auto: structural json_schema for Gemini; Pydantic validates all bounds",
+  "goal_98_established": false,
+  "browser": "not rerun in this revision; prior two_pass fixture result is historical"
+}

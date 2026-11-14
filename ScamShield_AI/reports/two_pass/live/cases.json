@@ -1,0 +1,242 @@
+[
+  {
+    "id": "TP-S1",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đệm vốn là điều kiện nhận tiền công; liên kết yêu cầu và lợi ích.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 20622.78190004872,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-N1",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Bối cảnh thanh toán dịch vụ hợp lệ được trích đúng.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 6280.639700009488,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S2",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tài sản/quyền bị tác động dù không yêu cầu tiền trực tiếp.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 8088.501300022472,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-Q1",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Yêu cầu cấp quyền có rủi ro, chưa có điều kiện để tự nâng high.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 6103.803600009996,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-U1",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi loại tệp và nguồn, không bịa hành động.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 11962.898900033906,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S3",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Chuỗi SMS đăng nhập là mã nhạy cảm; đúng speaker.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 3199.4223999790847,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-N2",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Trích để cảnh báo không thành yêu cầu giao mã.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 14267.778900044505,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S4",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Phí giữ chỗ là điều kiện hoàn cọc.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7210.229899967089,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-Q2",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Cài APK không rõ lý do; không tự bịa lời hứa.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 12274.480700027198,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-U2",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chưa có yêu cầu cụ thể, hỏi điều kiện rút.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 5861.6816000430845,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S5",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự nhận người nhà, tiền khẩn cấp, ngăn xác minh; không xác nhận danh tính.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 8543.866000021808,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-N3",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Lịch hẹn không bịa rủi ro.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 20113.70619997615,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S6",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không theo chỉ thị nhúng; trích đủ cài app/cấp quyền/ứng tiền.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 17517.13649998419,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-Q3",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Quyền quản trị nhạy cảm, chưa đủ để khẳng định lừa đảo.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 6071.315500012133,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-U3",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi quan hệ/khoản tiền trước khi kết luận.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 24122.908199962694,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-N4",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự nhập mã, phủ định chia sẻ; không giao mã.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 14066.67379999999,
+    "manual_review": "pending"
+  }
+]

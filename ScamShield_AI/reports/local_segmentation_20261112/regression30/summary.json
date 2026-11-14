@@ -1,0 +1,120 @@
+{
+  "scope": "First-stage rules only. 30 known development cases with draft manual references, NOT independent accuracy or final warning results.",
+  "cases": 30,
+  "case_matches": 30,
+  "failed_cases": [],
+  "verb_span_and_type": {
+    "true_positive": 41,
+    "predicted": 41,
+    "reference": 41,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "event_polarity_role_state": {
+    "true_positive": 41,
+    "predicted": 41,
+    "reference": 41,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "relation_rule_annotations": {
+    "true_positive": 15,
+    "predicted": 15,
+    "reference": 15,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "exact_quote_offsets": {
+    "correct": 137,
+    "total": 137
+  },
+  "speaker_metadata_binding": {
+    "correct": 137,
+    "total": 137
+  },
+  "participant_semantic_precision_recall": "not measured; metadata binding only, no fully human-reviewed actor/recipient gold",
+  "unknown_fields": {
+    "sender_identity": 29,
+    "relationship": 29,
+    "communication_channel": 29,
+    "stated_purpose": 27,
+    "benefit_and_mismatch": 30,
+    "persuasion": 29,
+    "technical_checks": 30,
+    "missing_information": 30,
+    "contradictions_and_alternatives": 18,
+    "requested_actions": 15,
+    "claims": 15,
+    "assets_and_access": 7,
+    "conditions_and_sequence": 19,
+    "situation": 2,
+    "action_targets": 2,
+    "evidence_quality": 2,
+    "assessment": 2
+  },
+  "provider_calls": 0,
+  "network_calls": 0,
+  "timings": [
+    {
+      "kind": "no_rule",
+      "characters": 100,
+      "n": 30,
+      "p50_ms": 0.7511000148952007,
+      "p95_ms": 1.1627000058069825,
+      "events_last": 0,
+      "limited": false
+    },
+    {
+      "kind": "no_rule",
+      "characters": 1000,
+      "n": 30,
+      "p50_ms": 7.181199995102361,
+      "p95_ms": 8.383400010643527,
+      "events_last": 0,
+      "limited": false
+    },
+    {
+      "kind": "no_rule",
+      "characters": 10000,
+      "n": 30,
+      "p50_ms": 63.14290000591427,
+      "p95_ms": 68.71570000657812,
+      "events_last": 0,
+      "limited": false
+    },
+    {
+      "kind": "many_events",
+      "characters": 100,
+      "n": 30,
+      "p50_ms": 1.1863999825436622,
+      "p95_ms": 1.84009998338297,
+      "events_last": 7,
+      "limited": false
+    },
+    {
+      "kind": "many_events",
+      "characters": 1000,
+      "n": 30,
+      "p50_ms": 9.222699998645112,
+      "p95_ms": 10.195999988354743,
+      "events_last": 50,
+      "limited": true
+    },
+    {
+      "kind": "many_events",
+      "characters": 10000,
+      "n": 30,
+      "p50_ms": 59.81209999299608,
+      "p95_ms": 67.13650000165217,
+      "events_last": 50,
+      "limited": true
+    }
+  ],
+  "api_timing_30_cases": {
+    "n": 30,
+    "p50_ms": 1.4636999985668808,
+    "p95_ms": 2.3858000058680773
+  },
+  "pilot": "3 dev inputs, weak_label, not gold training data; risk_label_reference=null",
+  "final_risk_quality": "not measured; downstream excluded by user scope"
+}

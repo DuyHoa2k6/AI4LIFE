@@ -1,0 +1,11 @@
+{
+ "note":"Versioned semantic correction, not tuning a verdict: 'Đơn B đã nhận đủ' does not state the received object. Money in transaction A cannot supply it. Original weak target remains unchanged.",
+ "cases":[{
+  "id":"F",
+  "events":[
+   {"action_type":"transfer_funds","verb":"thanh toán","polarity":"negative","speech_role":"claim","temporal_state":"pending","occurrence":0,"message_id":"m1"},
+   {"action_type":"handover_asset","verb":"giao","polarity":"positive","speech_role":"request","temporal_state":"requested","occurrence":0,"message_id":"m1"}
+  ],
+  "relation_rules":[],"questions_required":false
+ }]
+}

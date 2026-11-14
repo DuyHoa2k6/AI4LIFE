@@ -1,0 +1,18 @@
+{
+  "mode": "local_rules",
+  "cases": 12,
+  "matched": 12,
+  "failed": [],
+  "provider_calls": 0,
+  "network_calls": 0,
+  "scope": "Main API with actual local backend; known development targets, not model-quality or independent accuracy.",
+  "hashes": {
+    "backend\\main.py": "213feeddc18c429c2ef2b58dc60e5faaa8174ce431237b787b67480c075858d7",
+    "backend\\schemas.py": "3be846c069b4e918afca641ed507e2ace0cc3ca72ab21abb12b945ef211c8f27",
+    "backend\\providers.py": "e44dee57f43de62b20efac9243d823e9c522f8b750d08565b0b46983dd3736ef",
+    "backend\\local_reasoning\\adapter.py": "647d0a7939e0dd00de6fae4e66bb92eb6dab8c9e88867576eaba7959d28e50d4",
+    "extension\\result_view.js": "7784858a7635755fd9530c47647b825f8c9b9b4f772b01854d7d316e3e2a23b9",
+    "fixtures\\local_switch\\inputs.json": "d23f8b668c41b5f9ec03bbf9e87fc3dd009372e1960972a9649eed0e6bf2f4a3",
+    "fixtures\\local_switch\\expected.json": "ffa3837c688e1b3c1604acc7d873b4c3e0e3b302e3d21c77760c501ca5960caf"
+  }
+}

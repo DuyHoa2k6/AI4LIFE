@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "Truth": {
+      "enum": [
+        "TRUE",
+        "FALSE",
+        "UNKNOWN"
+      ],
+      "title": "Truth",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "fact_id": {
+      "title": "Fact Id",
+      "type": "string"
+    },
+    "fact_type": {
+      "title": "Fact Type",
+      "type": "string"
+    },
+    "value": {
+      "$ref": "#/$defs/Truth"
+    },
+    "participant_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Participant Ids",
+      "type": "array"
+    },
+    "scope_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Scope Id"
+    },
+    "transaction_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Transaction Id"
+    },
+    "source": {
+      "enum": [
+        "observed_content",
+        "sender_claim",
+        "user_report",
+        "technical_check",
+        "derived"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "evidence_refs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Refs",
+      "type": "array"
+    },
+    "event_time": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Event Time"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "title": "Observed At",
+      "type": "string"
+    },
+    "version": {
+      "default": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "dependency_refs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Dependency Refs",
+      "type": "array"
+    },
+    "rule_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rule Id"
+    },
+    "event_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Event Id"
+    },
+    "attributes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Attributes",
+      "type": "object"
+    },
+    "superseded_by": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Superseded By"
+    }
+  },
+  "required": [
+    "fact_id",
+    "fact_type",
+    "value",
+    "scope_id",
+    "source",
+    "observed_at"
+  ],
+  "title": "FactRecord",
+  "type": "object"
+}

@@ -1,0 +1,11 @@
+{
+  "backend\\local_observation\\analyzer.py": "793b3250f2260530488513ade0024af777600ac6dde29a87156cac5cf6f48970",
+  "backend\\local_observation\\schema.py": "bbb22f76f21e5997d13481c429ea1cd205bc12b6c2028ee5d60da07c56d0e5af",
+  "backend\\local_observation\\text.py": "53140f290ac19668593a47bf075cd2e57e8390b5d6f2e0276693363015539938",
+  "backend\\local_observation\\rules.json": "77bfa08db46ed83d60ffbd4641efcacbde8e0b61b1c85926d1cdffcc090e3630",
+  "backend\\local_observation\\dataset.py": "5055925e830c0fbbd013df80940a909801d4c84a8da329ceeade32dbbf3ebe07",
+  "fixtures\\local_observation\\inputs.json": "70522e8fff0f4567aec88277f592bf72998d3d18b15aa324632a4ad7808d79bc",
+  "fixtures\\local_observation\\expected.json": "f25574285e867353e1ebbbdbc227a8b3b57867371f0830d6b0455772d5a55e82",
+  "local_observation_check.py": "a59c9e47987cd179612f6280cd5e03f7f633c822449ddaf7b752890142d29c8a",
+  "backend\\main.py": "c95b7fa18a3f0e8451abef0fec184cc5f24bc8423a58d0300a97240787cba584"
+}

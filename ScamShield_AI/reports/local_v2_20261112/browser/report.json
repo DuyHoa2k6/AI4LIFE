@@ -1,0 +1,46 @@
+{
+  "scope": "Real Chrome and real local API; no model provider. Injected error/stale-response scenarios are labeled.",
+  "checks": [
+    {
+      "name": "renders clear",
+      "passed": true
+    },
+    {
+      "name": "renders need_context",
+      "passed": true
+    },
+    {
+      "name": "renders suspicious",
+      "passed": true
+    },
+    {
+      "name": "renders high",
+      "passed": true
+    },
+    {
+      "name": "current coercion shows urgent help before optional questions",
+      "passed": true
+    },
+    {
+      "name": "user-facing view hides answer and rule/source internals",
+      "passed": true
+    },
+    {
+      "name": "verified quote HTML rendered as text",
+      "passed": true
+    },
+    {
+      "name": "offline error does not leave a green result and retains safety guidance",
+      "passed": true
+    },
+    {
+      "name": "injected 503 with grounded urgent payload retains help",
+      "passed": true
+    },
+    {
+      "name": "old result ignored after input changes",
+      "passed": true
+    }
+  ],
+  "browser": "Chrome/157.0.8103.50"
+}

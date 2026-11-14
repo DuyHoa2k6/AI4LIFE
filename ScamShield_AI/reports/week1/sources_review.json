@@ -1,0 +1,145 @@
+{
+  "approved": 0,
+  "pending": [
+    {
+      "id": "K01",
+      "file": "knowledge_seed.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": null,
+      "scope": "editorial_seed",
+      "checked_at": null,
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "K02",
+      "file": "knowledge_seed.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "editorial_seed",
+      "checked_at": null,
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "K03",
+      "file": "knowledge_seed.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "editorial_seed",
+      "checked_at": null,
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "K04",
+      "file": "knowledge_seed.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": null,
+      "scope": "editorial_seed",
+      "checked_at": null,
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "K05",
+      "file": "knowledge_seed.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": null,
+      "scope": "editorial_seed",
+      "checked_at": null,
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "MPS-01",
+      "file": "knowledge_sources.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "general_behavior_guidance",
+      "checked_at": "2026-11-08",
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "MPS-02",
+      "file": "knowledge_sources.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "general_behavior_guidance",
+      "checked_at": "2026-11-08",
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "MPS-03",
+      "file": "knowledge_sources.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "general_behavior_guidance",
+      "checked_at": "2026-11-08",
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "MPS-04",
+      "file": "knowledge_sources.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "general_behavior_guidance",
+      "checked_at": "2026-11-08",
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    },
+    {
+      "id": "MPS-05",
+      "file": "knowledge_sources.jsonl",
+      "review_status": "candidate",
+      "eligible_for_index": false,
+      "reviewer": null,
+      "url": "https://www.bocongan.gov.vn/bai-viet/nang-cao-canh-giac-truoc-25-kich-ban-lua-dao-tren-khong-gian-mang-nam-2026-1788865614",
+      "scope": "general_behavior_guidance",
+      "checked_at": "2026-11-08",
+      "missing": [
+        "human approval",
+        "validity and reuse review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3136 @@
+{
+  "$defs": {
+    "AnalysisField": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/Value"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "extraction_method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extraction Method"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        }
+      },
+      "title": "AnalysisField",
+      "type": "object"
+    },
+    "Annotations": {
+      "additionalProperties": false,
+      "properties": {
+        "participants": {
+          "items": {
+            "$ref": "#/$defs/Participant"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "spans": {
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "title": "Spans",
+          "type": "array"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/Event"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "personal_relationships": {
+          "items": {
+            "$ref": "#/$defs/PersonalRelationship"
+          },
+          "title": "Personal Relationships",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/Relation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "answers_18": {
+          "$ref": "#/$defs/Answers18"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "graph_trace": {
+          "additionalProperties": true,
+          "title": "Graph Trace",
+          "type": "object"
+        },
+        "mentions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/PersonMention"
+          },
+          "title": "Mentions",
+          "type": "array"
+        },
+        "grounding_trace": {
+          "additionalProperties": true,
+          "title": "Grounding Trace",
+          "type": "object"
+        }
+      },
+      "required": [
+        "participants",
+        "spans",
+        "events",
+        "relations",
+        "answers_18"
+      ],
+      "title": "Annotations",
+      "type": "object"
+    },
+    "Answers18": {
+      "additionalProperties": false,
+      "properties": {
+        "situation": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "participants": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "sender_identity": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "relationship": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "communication_channel": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "claims": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "requested_actions": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "action_targets": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "stated_purpose": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "assets_and_access": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "benefit_and_mismatch": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "persuasion": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "conditions_and_sequence": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "contradictions_and_alternatives": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "technical_checks": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "evidence_quality": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "missing_information": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "assessment": {
+          "$ref": "#/$defs/AnalysisField"
+        }
+      },
+      "required": [
+        "situation",
+        "participants",
+        "sender_identity",
+        "relationship",
+        "communication_channel",
+        "claims",
+        "requested_actions",
+        "action_targets",
+        "stated_purpose",
+        "assets_and_access",
+        "benefit_and_mismatch",
+        "persuasion",
+        "conditions_and_sequence",
+        "contradictions_and_alternatives",
+        "technical_checks",
+        "evidence_quality",
+        "missing_information",
+        "assessment"
+      ],
+      "title": "Answers18",
+      "type": "object"
+    },
+    "Assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "risk_status": {
+          "anyOf": [
+            {
+              "enum": [
+                "clear",
+                "need_context",
+                "suspicious",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Risk Status"
+        },
+        "safety_urgency": {
+          "enum": [
+            "undetermined",
+            "preventive",
+            "urgent"
+          ],
+          "title": "Safety Urgency",
+          "type": "string"
+        },
+        "supported_conclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported Conclusions",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "urgency_evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Urgency Evidence Refs",
+          "type": "array"
+        },
+        "applicable_rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Applicable Rule Ids",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "follow_up_questions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "title": "Follow Up Questions",
+          "type": "array"
+        },
+        "recommended_actions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Recommended Actions",
+          "type": "array"
+        },
+        "explanation_template_id": {
+          "title": "Explanation Template Id",
+          "type": "string"
+        },
+        "prohibited_conclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Prohibited Conclusions",
+          "type": "array"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "risk_status",
+        "safety_urgency",
+        "supported_conclusions",
+        "evidence_refs",
+        "applicable_rule_ids",
+        "missing_information",
+        "follow_up_questions",
+        "recommended_actions",
+        "explanation_template_id",
+        "prohibited_conclusions",
+        "summary"
+      ],
+      "title": "Assessment",
+      "type": "object"
+    },
+    "Attribution": {
+      "additionalProperties": false,
+      "properties": {
+        "speaker_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Speaker Id"
+        },
+        "kind": {
+          "enum": [
+            "sender_claim",
+            "self_report",
+            "reported",
+            "quoted_warning",
+            "hypothetical",
+            "user_report",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "verification_status": {
+          "default": "unverified",
+          "enum": [
+            "unverified",
+            "user_reports_verification"
+          ],
+          "title": "Verification Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "speaker_id",
+        "kind"
+      ],
+      "title": "Attribution",
+      "type": "object"
+    },
+    "Behavior": {
+      "additionalProperties": false,
+      "properties": {
+        "behavior_id": {
+          "title": "Behavior Id",
+          "type": "string"
+        },
+        "behavior_type": {
+          "title": "Behavior Type",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actor Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Affected Party Id"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "information_status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "behavior_id",
+        "behavior_type",
+        "actor_id",
+        "affected_party_id",
+        "event_refs",
+        "description",
+        "information_status",
+        "evidence_refs",
+        "rule_id",
+        "scope_id"
+      ],
+      "title": "Behavior",
+      "type": "object"
+    },
+    "ClauseRole": {
+      "additionalProperties": false,
+      "properties": {
+        "clause_id": {
+          "title": "Clause Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "requester_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requester Id"
+        },
+        "performer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Performer Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Party Id"
+        },
+        "affected_role": {
+          "default": "unknown",
+          "title": "Affected Role",
+          "type": "string"
+        },
+        "affected_status": {
+          "default": "unknown",
+          "enum": [
+            "textual_role",
+            "unknown"
+          ],
+          "title": "Affected Status",
+          "type": "string"
+        },
+        "unresolved_roles": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Unresolved Roles",
+          "type": "array"
+        },
+        "event_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "role_labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {},
+          "title": "Role Labels",
+          "type": "object"
+        }
+      },
+      "required": [
+        "clause_id",
+        "scope_id",
+        "evidence_refs"
+      ],
+      "title": "ClauseRole",
+      "type": "object"
+    },
+    "Consequence": {
+      "additionalProperties": false,
+      "properties": {
+        "consequence_id": {
+          "title": "Consequence Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "money",
+            "assets",
+            "personal_data",
+            "account_access",
+            "device_access",
+            "freedom",
+            "physical_safety"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "action_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Action Refs",
+          "type": "array"
+        },
+        "condition_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "information_status": {
+          "const": "inferred",
+          "default": "inferred",
+          "title": "Information Status",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "consequence_id",
+        "scope_id",
+        "category",
+        "description",
+        "action_refs",
+        "condition_refs",
+        "evidence_refs",
+        "rule_id"
+      ],
+      "title": "Consequence",
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "event_type": {
+          "enum": [
+            "transfer_funds",
+            "receive_funds",
+            "withdraw_funds",
+            "handover_asset",
+            "provide_code",
+            "provide_credentials",
+            "provide_documents",
+            "open_link",
+            "login",
+            "install_app",
+            "share_screen",
+            "grant_control",
+            "change_channel",
+            "keep_secret",
+            "avoid_verification",
+            "identity_claim",
+            "relationship_claim",
+            "code_identity",
+            "build_trust",
+            "invite_travel_or_meeting",
+            "offer_employment",
+            "change_destination_or_terms",
+            "impose_debt",
+            "request_secrecy",
+            "restrict_communication",
+            "retain_identity_documents",
+            "restrict_movement",
+            "threaten_harm",
+            "threaten_disclosure",
+            "demand_release_payment",
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat",
+            "return_documents_available",
+            "free_to_leave",
+            "consent_and_exit_available",
+            "other"
+          ],
+          "title": "Event Type",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actor Id"
+        },
+        "recipient_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipient Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Party Id"
+        },
+        "object": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object"
+        },
+        "polarity": {
+          "enum": [
+            "positive",
+            "negative",
+            "uncertain"
+          ],
+          "title": "Polarity",
+          "type": "string"
+        },
+        "modality": {
+          "enum": [
+            "request",
+            "assertion",
+            "report",
+            "conditional",
+            "threat",
+            "possibility",
+            "unknown"
+          ],
+          "title": "Modality",
+          "type": "string"
+        },
+        "temporal_state": {
+          "enum": [
+            "requested",
+            "completed",
+            "pending",
+            "ongoing",
+            "imminent",
+            "planned",
+            "hypothetical",
+            "past",
+            "unknown"
+          ],
+          "title": "Temporal State",
+          "type": "string"
+        },
+        "speech_role": {
+          "enum": [
+            "request",
+            "claim",
+            "reported",
+            "quoted_warning",
+            "denial",
+            "hypothetical",
+            "unknown"
+          ],
+          "title": "Speech Role",
+          "type": "string"
+        },
+        "attribution": {
+          "$ref": "#/$defs/Attribution"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Id"
+        },
+        "event_time": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Time"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "extractor_rule_id": {
+          "title": "Extractor Rule Id",
+          "type": "string"
+        },
+        "unknown_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unknown Fields",
+          "type": "array"
+        },
+        "stated_purpose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Purpose"
+        },
+        "semantic": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SemanticEvent"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "event_id",
+        "event_type",
+        "description",
+        "actor_id",
+        "polarity",
+        "modality",
+        "temporal_state",
+        "speech_role",
+        "attribution",
+        "status",
+        "scope_id",
+        "evidence_refs",
+        "extractor_rule_id"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "start": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        }
+      },
+      "required": [
+        "message_id",
+        "quote"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "FactRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "fact_type": {
+          "title": "Fact Type",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/Truth"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Id"
+        },
+        "transaction_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Id"
+        },
+        "source": {
+          "enum": [
+            "observed_content",
+            "sender_claim",
+            "user_report",
+            "technical_check",
+            "derived"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "event_time": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Time"
+        },
+        "observed_at": {
+          "format": "date-time",
+          "title": "Observed At",
+          "type": "string"
+        },
+        "version": {
+          "default": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "dependency_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dependency Refs",
+          "type": "array"
+        },
+        "rule_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rule Id"
+        },
+        "event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Id"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Attributes",
+          "type": "object"
+        },
+        "superseded_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Superseded By"
+        }
+      },
+      "required": [
+        "fact_id",
+        "fact_type",
+        "value",
+        "scope_id",
+        "source",
+        "observed_at"
+      ],
+      "title": "FactRecord",
+      "type": "object"
+    },
+    "FactTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "default": "three-valued-facts-1.0",
+          "title": "Version",
+          "type": "string"
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/FactRecord"
+          },
+          "title": "Facts",
+          "type": "array"
+        },
+        "rule_evaluations": {
+          "items": {
+            "$ref": "#/$defs/RuleEvaluation"
+          },
+          "title": "Rule Evaluations",
+          "type": "array"
+        },
+        "conflicts": {
+          "default": [],
+          "items": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Conflicts",
+          "type": "array"
+        },
+        "discarded_event_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Discarded Event Ids",
+          "type": "array"
+        },
+        "stage_timings_ms": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "default": {},
+          "title": "Stage Timings Ms",
+          "type": "object"
+        },
+        "external_evidence": {
+          "additionalProperties": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "default": {},
+          "title": "External Evidence",
+          "type": "object"
+        }
+      },
+      "required": [
+        "facts",
+        "rule_evaluations"
+      ],
+      "title": "FactTrace",
+      "type": "object"
+    },
+    "Hypothesis": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_id": {
+          "title": "Hypothesis Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "supporting_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Refs",
+          "type": "array"
+        },
+        "conflicting_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Conflicting Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "possible",
+            "undetermined",
+            "not_supported"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "scope_id",
+        "description",
+        "supporting_refs",
+        "status",
+        "rule_id"
+      ],
+      "title": "Hypothesis",
+      "type": "object"
+    },
+    "InteractionFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "frame_id": {
+          "title": "Frame Id",
+          "type": "string"
+        },
+        "requester_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Requester Id"
+        },
+        "target_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Target Id"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "speech_role": {
+          "enum": [
+            "request",
+            "claim",
+            "reported",
+            "quoted_warning",
+            "denial",
+            "hypothetical",
+            "unknown"
+          ],
+          "title": "Speech Role",
+          "type": "string"
+        },
+        "action_event_id": {
+          "title": "Action Event Id",
+          "type": "string"
+        },
+        "requested_action": {
+          "title": "Requested Action",
+          "type": "string"
+        },
+        "stated_purpose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Purpose"
+        },
+        "condition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition"
+        },
+        "benefit_event_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Benefit Event Id"
+        },
+        "possible_effect": {
+          "title": "Possible Effect",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "communication_functions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Communication Functions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "frame_id",
+        "requester_id",
+        "target_id",
+        "scope_id",
+        "speech_role",
+        "action_event_id",
+        "requested_action",
+        "possible_effect",
+        "evidence_refs"
+      ],
+      "title": "InteractionFrame",
+      "type": "object"
+    },
+    "Interpretation": {
+      "additionalProperties": false,
+      "properties": {
+        "reasoning_version": {
+          "default": "local-situation-1.0",
+          "title": "Reasoning Version",
+          "type": "string"
+        },
+        "behaviors": {
+          "items": {
+            "$ref": "#/$defs/Behavior"
+          },
+          "title": "Behaviors",
+          "type": "array"
+        },
+        "situations": {
+          "items": {
+            "$ref": "#/$defs/Situation"
+          },
+          "title": "Situations",
+          "type": "array"
+        },
+        "hypotheses": {
+          "items": {
+            "$ref": "#/$defs/Hypothesis"
+          },
+          "title": "Hypotheses",
+          "type": "array"
+        },
+        "consequences": {
+          "items": {
+            "$ref": "#/$defs/Consequence"
+          },
+          "title": "Consequences",
+          "type": "array"
+        },
+        "stage_timings_ms": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "default": {},
+          "title": "Stage Timings Ms",
+          "type": "object"
+        },
+        "limitations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "clause_roles": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ClauseRole"
+          },
+          "title": "Clause Roles",
+          "type": "array"
+        },
+        "salient_actions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/SalientAction"
+          },
+          "title": "Salient Actions",
+          "type": "array"
+        },
+        "mechanisms": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RiskMechanism"
+          },
+          "title": "Mechanisms",
+          "type": "array"
+        }
+      },
+      "required": [
+        "behaviors",
+        "situations",
+        "hypotheses",
+        "consequences"
+      ],
+      "title": "Interpretation",
+      "type": "object"
+    },
+    "Participant": {
+      "additionalProperties": false,
+      "properties": {
+        "participant_id": {
+          "title": "Participant Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "interaction_role": {
+          "enum": [
+            "speaker",
+            "buyer",
+            "seller",
+            "requester",
+            "recipient",
+            "affected_party",
+            "mentioned",
+            "unknown"
+          ],
+          "title": "Interaction Role",
+          "type": "string"
+        },
+        "identity_status": {
+          "default": "unknown",
+          "enum": [
+            "claimed",
+            "user_reported",
+            "unknown"
+          ],
+          "title": "Identity Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "claimed_identity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Claimed Identity"
+        },
+        "relationship_to_user": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relationship To User"
+        },
+        "information_status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "participant_id",
+        "label",
+        "interaction_role"
+      ],
+      "title": "Participant",
+      "type": "object"
+    },
+    "PersonMention": {
+      "additionalProperties": false,
+      "properties": {
+        "mention_id": {
+          "title": "Mention Id",
+          "type": "string"
+        },
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "participant_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Participant Id"
+        },
+        "candidate_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Candidate Ids",
+          "type": "array"
+        },
+        "resolution": {
+          "enum": [
+            "explicit_name",
+            "unique_antecedent",
+            "unresolved"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "mention_id",
+        "message_id",
+        "scope_id",
+        "role",
+        "resolution",
+        "evidence_refs"
+      ],
+      "title": "PersonMention",
+      "type": "object"
+    },
+    "PersonalRelationship": {
+      "additionalProperties": false,
+      "properties": {
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "relationship_type": {
+          "enum": [
+            "family",
+            "friend",
+            "colleague",
+            "online_only",
+            "unknown"
+          ],
+          "title": "Relationship Type",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Id"
+        },
+        "valid_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid At"
+        }
+      },
+      "required": [
+        "participant_ids",
+        "relationship_type",
+        "status",
+        "evidence_refs"
+      ],
+      "title": "PersonalRelationship",
+      "type": "object"
+    },
+    "RedirectHop": {
+      "additionalProperties": false,
+      "properties": {
+        "display_url": {
+          "title": "Display Url",
+          "type": "string"
+        },
+        "http_status": {
+          "title": "Http Status",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "display_url",
+        "http_status"
+      ],
+      "title": "RedirectHop",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "relation_id": {
+          "title": "Relation Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prerequisite_for",
+            "before",
+            "after",
+            "reason_given_for",
+            "contradiction",
+            "state_update",
+            "reported_by",
+            "warning_about",
+            "same_transaction",
+            "travel_conditioned_on_secrecy",
+            "movement_restricted_by_debt",
+            "document_retention_limits_exit",
+            "threat_used_to_compel_action",
+            "release_conditioned_on_payment",
+            "work_differs_from_agreement",
+            "same_object",
+            "obstructs_verification",
+            "transfer_via",
+            "promised_after",
+            "threatens_unless",
+            "controls_during",
+            "supersedes"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "from_id": {
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "title": "To Id",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Id"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "relation_id",
+        "type",
+        "from_id",
+        "to_id",
+        "evidence_refs",
+        "status",
+        "scope_id",
+        "rationale",
+        "rule_id"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "RetrievalBranch": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "disabled",
+            "no_approved_sources",
+            "no_match",
+            "matched",
+            "timeout",
+            "error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "retrieved_count": {
+          "minimum": 0,
+          "title": "Retrieved Count",
+          "type": "integer"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "title": "Elapsed Ms",
+          "type": "number"
+        }
+      },
+      "required": [
+        "status",
+        "retrieved_count",
+        "elapsed_ms"
+      ],
+      "title": "RetrievalBranch",
+      "type": "object"
+    },
+    "RiskIndicator": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "evidence",
+        "explanation"
+      ],
+      "title": "RiskIndicator",
+      "type": "object"
+    },
+    "RiskMechanism": {
+      "additionalProperties": false,
+      "properties": {
+        "mechanism_id": {
+          "title": "Mechanism Id",
+          "type": "string"
+        },
+        "situation_id": {
+          "title": "Situation Id",
+          "type": "string"
+        },
+        "risk_status": {
+          "enum": [
+            "high",
+            "suspicious"
+          ],
+          "title": "Risk Status",
+          "type": "string"
+        },
+        "action_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Action Refs",
+          "type": "array"
+        },
+        "relation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "affected_party_id": {
+          "title": "Affected Party Id",
+          "type": "string"
+        },
+        "asset_or_right": {
+          "title": "Asset Or Right",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "recommended_action": {
+          "title": "Recommended Action",
+          "type": "string"
+        },
+        "limitations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "mechanism_id",
+        "situation_id",
+        "risk_status",
+        "action_refs",
+        "relation_refs",
+        "evidence_refs",
+        "affected_party_id",
+        "asset_or_right",
+        "summary",
+        "recommended_action"
+      ],
+      "title": "RiskMechanism",
+      "type": "object"
+    },
+    "RuleEvaluation": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "MATCHED",
+            "NOT_MATCHED",
+            "UNDETERMINED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "fact_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "exclusion_state": {
+          "$ref": "#/$defs/Truth",
+          "default": "UNKNOWN"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Id"
+        }
+      },
+      "required": [
+        "rule_id",
+        "version",
+        "status"
+      ],
+      "title": "RuleEvaluation",
+      "type": "object"
+    },
+    "SalientAction": {
+      "additionalProperties": false,
+      "properties": {
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "supporting_relation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Relation Refs",
+          "type": "array"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Affected Party Id"
+        },
+        "consequence": {
+          "title": "Consequence",
+          "type": "string"
+        },
+        "selection_reason": {
+          "title": "Selection Reason",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "is_primary": {
+          "default": false,
+          "title": "Is Primary",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scope_id",
+        "event_refs",
+        "supporting_relation_refs",
+        "affected_party_id",
+        "consequence",
+        "selection_reason",
+        "rule_id"
+      ],
+      "title": "SalientAction",
+      "type": "object"
+    },
+    "SemanticEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message Id"
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Id"
+        },
+        "situation_id": {
+          "title": "Situation Id",
+          "type": "string"
+        },
+        "speaker_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Id"
+        },
+        "requester_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requester Id"
+        },
+        "performer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Performer Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Party Id"
+        },
+        "normalized_action": {
+          "title": "Normalized Action",
+          "type": "string"
+        },
+        "object_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object Type"
+        },
+        "transfer_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transfer Source"
+        },
+        "transfer_destination": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transfer Destination"
+        },
+        "negation_scope_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Negation Scope Refs",
+          "type": "array"
+        },
+        "stated_condition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Condition"
+        },
+        "stated_time": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Time"
+        },
+        "information_status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        },
+        "is_reported_request": {
+          "default": false,
+          "title": "Is Reported Request",
+          "type": "boolean"
+        },
+        "extraction_method": {
+          "default": "local_structural_patterns_v1",
+          "title": "Extraction Method",
+          "type": "string"
+        },
+        "speech_act": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speech Act"
+        },
+        "condition": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition"
+        },
+        "consequence_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Consequence Refs",
+          "type": "array"
+        },
+        "mention_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Mention Refs",
+          "type": "array"
+        },
+        "transaction_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Reference"
+        },
+        "transaction_binding": {
+          "default": "unresolved",
+          "enum": [
+            "explicit_code",
+            "direct_reference",
+            "unresolved"
+          ],
+          "title": "Transaction Binding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "situation_id",
+        "normalized_action"
+      ],
+      "title": "SemanticEvent",
+      "type": "object"
+    },
+    "Situation": {
+      "additionalProperties": false,
+      "properties": {
+        "situation_id": {
+          "title": "Situation Id",
+          "type": "string"
+        },
+        "version": {
+          "default": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Message Ids",
+          "type": "array"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "relation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Refs",
+          "type": "array"
+        },
+        "active_request_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Active Request Refs",
+          "type": "array"
+        },
+        "conflicting_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Conflicting Refs",
+          "type": "array"
+        },
+        "unknown_information": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Unknown Information",
+          "type": "array"
+        },
+        "object_types": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Object Types",
+          "type": "array"
+        },
+        "condition_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "reported_state_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Reported State Refs",
+          "type": "array"
+        },
+        "verification_report_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Verification Report Refs",
+          "type": "array"
+        },
+        "mechanism_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Mechanism Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "situation_id",
+        "participant_ids",
+        "message_ids",
+        "event_refs",
+        "relation_refs",
+        "active_request_refs"
+      ],
+      "title": "Situation",
+      "type": "object"
+    },
+    "SourceSupport": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "relation": {
+          "default": "background_only",
+          "enum": [
+            "background_only",
+            "behavior_support"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "reviewed_at": {
+          "title": "Reviewed At",
+          "type": "string"
+        },
+        "valid_until": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Valid Until"
+        },
+        "entity_verified": {
+          "const": false,
+          "default": false,
+          "title": "Entity Verified",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "source_id",
+        "url",
+        "quote",
+        "reviewed_at",
+        "valid_until"
+      ],
+      "title": "SourceSupport",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "span_id": {
+          "title": "Span Id",
+          "type": "string"
+        },
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message Id"
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Id"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "label": {
+          "enum": [
+            "verb",
+            "action",
+            "object",
+            "negation",
+            "state",
+            "time",
+            "condition",
+            "purpose",
+            "participant",
+            "organization",
+            "url",
+            "account",
+            "application",
+            "quotation",
+            "reported_speech",
+            "persuasion",
+            "statement"
+          ],
+          "title": "Label",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "weak_label",
+          "enum": [
+            "weak_label",
+            "draft",
+            "pending_review",
+            "reviewed"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "span_id",
+        "message_id",
+        "start",
+        "end",
+        "quote",
+        "label"
+      ],
+      "title": "Span",
+      "type": "object"
+    },
+    "SupportContact": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "region": {
+          "title": "Region",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "channel": {
+          "enum": [
+            "phone",
+            "url"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        },
+        "reviewer": {
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "checked_at": {
+          "title": "Checked At",
+          "type": "string"
+        },
+        "valid_until": {
+          "title": "Valid Until",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "region",
+        "label",
+        "channel",
+        "value",
+        "source_url",
+        "reviewer",
+        "checked_at",
+        "valid_until"
+      ],
+      "title": "SupportContact",
+      "type": "object"
+    },
+    "Truth": {
+      "enum": [
+        "TRUE",
+        "FALSE",
+        "UNKNOWN"
+      ],
+      "title": "Truth",
+      "type": "string"
+    },
+    "UrlAnalysis": {
+      "additionalProperties": false,
+      "properties": {
+        "link_id": {
+          "title": "Link Id",
+          "type": "string"
+        },
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "dom_href",
+            "user_supplied",
+            "text",
+            "ocr"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "parsed",
+            "invalid"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "display_url": {
+          "title": "Display Url",
+          "type": "string"
+        },
+        "hostname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hostname"
+        },
+        "unicode_hostname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unicode Hostname"
+        },
+        "registered_domain": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Registered Domain"
+        },
+        "reference_domain": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Domain"
+        },
+        "label_status": {
+          "enum": [
+            "grounded",
+            "ambiguous",
+            "none"
+          ],
+          "title": "Label Status",
+          "type": "string"
+        },
+        "signals": {
+          "items": {
+            "$ref": "#/$defs/UrlSignal"
+          },
+          "title": "Signals",
+          "type": "array"
+        },
+        "reputation_status": {
+          "const": "not_checked",
+          "default": "not_checked",
+          "title": "Reputation Status",
+          "type": "string"
+        },
+        "network": {
+          "$ref": "#/$defs/UrlNetworkCheck"
+        }
+      },
+      "required": [
+        "link_id",
+        "message_id",
+        "origin",
+        "status",
+        "display_url",
+        "label_status",
+        "signals"
+      ],
+      "title": "UrlAnalysis",
+      "type": "object"
+    },
+    "UrlNetworkCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "not_checked",
+          "enum": [
+            "not_checked",
+            "disabled",
+            "checked",
+            "blocked",
+            "timeout",
+            "error",
+            "redirect_limit",
+            "redirect_loop",
+            "unsupported",
+            "deferred"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "hops": {
+          "items": {
+            "$ref": "#/$defs/RedirectHop"
+          },
+          "maxItems": 4,
+          "title": "Hops",
+          "type": "array"
+        },
+        "final_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Final Url"
+        },
+        "final_hostname": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Final Hostname"
+        },
+        "final_registered_domain": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Final Registered Domain"
+        },
+        "final_http_status": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Final Http Status"
+        },
+        "reachable": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reachable"
+        },
+        "elapsed_ms": {
+          "default": 0,
+          "title": "Elapsed Ms",
+          "type": "number"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        }
+      },
+      "title": "UrlNetworkCheck",
+      "type": "object"
+    },
+    "UrlSignal": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "enum": [
+            "userinfo_present",
+            "http_transport",
+            "ip_literal",
+            "nonstandard_port",
+            "display_target_mismatch",
+            "brand_in_subdomain",
+            "lookalike_reference_domain",
+            "unicode_confusable_reference",
+            "mixed_script_hostname",
+            "punycode_hostname",
+            "invalid_url",
+            "unknown_public_suffix",
+            "redirect_domain_change",
+            "https_downgrade"
+          ],
+          "title": "Code",
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "info",
+            "review"
+          ],
+          "title": "Level",
+          "type": "string"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "level",
+        "detail"
+      ],
+      "title": "UrlSignal",
+      "type": "object"
+    },
+    "UrlUse": {
+      "additionalProperties": false,
+      "properties": {
+        "link_id": {
+          "title": "Link Id",
+          "type": "string"
+        },
+        "signal_codes": {
+          "items": {
+            "enum": [
+              "userinfo_present",
+              "http_transport",
+              "ip_literal",
+              "nonstandard_port",
+              "display_target_mismatch",
+              "brand_in_subdomain",
+              "lookalike_reference_domain",
+              "unicode_confusable_reference",
+              "mixed_script_hostname",
+              "punycode_hostname",
+              "invalid_url",
+              "unknown_public_suffix",
+              "redirect_domain_change",
+              "https_downgrade"
+            ],
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Signal Codes",
+          "type": "array"
+        },
+        "finding_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Finding Refs",
+          "type": "array"
+        },
+        "relation": {
+          "enum": [
+            "supports_request_risk",
+            "background",
+            "quoted_warning"
+          ],
+          "title": "Relation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "link_id",
+        "signal_codes",
+        "finding_refs",
+        "relation"
+      ],
+      "title": "UrlUse",
+      "type": "object"
+    },
+    "Value": {
+      "additionalProperties": false,
+      "properties": {
+        "statements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Statements",
+          "type": "array"
+        },
+        "event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Ids",
+          "type": "array"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "relation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Ids",
+          "type": "array"
+        }
+      },
+      "title": "Value",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "local-reasoning-2.0",
+      "default": "local-reasoning-2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "mode": {
+      "const": "local_rules",
+      "default": "local_rules",
+      "title": "Mode",
+      "type": "string"
+    },
+    "analysis_status": {
+      "enum": [
+        "complete",
+        "partial",
+        "unsupported",
+        "error"
+      ],
+      "title": "Analysis Status",
+      "type": "string"
+    },
+    "input_sha256": {
+      "title": "Input Sha256",
+      "type": "string"
+    },
+    "annotations": {
+      "$ref": "#/$defs/Annotations"
+    },
+    "assessment": {
+      "$ref": "#/$defs/Assessment"
+    },
+    "knowledge_status": {
+      "title": "Knowledge Status",
+      "type": "string"
+    },
+    "source_matches": {
+      "items": {
+        "$ref": "#/$defs/SourceSupport"
+      },
+      "maxItems": 3,
+      "title": "Source Matches",
+      "type": "array"
+    },
+    "support_contacts": {
+      "items": {
+        "$ref": "#/$defs/SupportContact"
+      },
+      "title": "Support Contacts",
+      "type": "array"
+    },
+    "versions": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Versions",
+      "type": "object"
+    },
+    "elapsed_ms": {
+      "title": "Elapsed Ms",
+      "type": "number"
+    },
+    "url_analysis": {
+      "items": {
+        "$ref": "#/$defs/UrlAnalysis"
+      },
+      "title": "Url Analysis",
+      "type": "array"
+    },
+    "url_uses": {
+      "items": {
+        "$ref": "#/$defs/UrlUse"
+      },
+      "title": "Url Uses",
+      "type": "array"
+    },
+    "support_indicators": {
+      "items": {
+        "$ref": "#/$defs/RiskIndicator"
+      },
+      "title": "Support Indicators",
+      "type": "array"
+    },
+    "official_retrieval": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/RetrievalBranch"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "support_timings_ms": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Support Timings Ms",
+      "type": "object"
+    },
+    "support_warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Support Warnings",
+      "type": "array"
+    },
+    "fact_trace": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/FactTrace"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "core_timings_ms": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Core Timings Ms",
+      "type": "object"
+    },
+    "interaction_frames": {
+      "items": {
+        "$ref": "#/$defs/InteractionFrame"
+      },
+      "title": "Interaction Frames",
+      "type": "array"
+    },
+    "interpretation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Interpretation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "analysis_status",
+    "input_sha256",
+    "annotations",
+    "assessment",
+    "knowledge_status",
+    "versions",
+    "elapsed_ms"
+  ],
+  "title": "LocalResult",
+  "type": "object"
+}

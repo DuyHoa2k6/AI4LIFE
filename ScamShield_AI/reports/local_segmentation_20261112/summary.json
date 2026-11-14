@@ -1,0 +1,21 @@
+{
+  "scope": "16 known draft development boundary references; not general NLP accuracy",
+  "cases": 16,
+  "matched": 16,
+  "unit_spans_correct": 28,
+  "predicted_units": 28,
+  "reference_units": 28,
+  "precision": 1.0,
+  "recall": 1.0,
+  "provider_calls": 0,
+  "network_calls": 0,
+  "hashes": {
+    "backend\\local_observation\\segmentation.py": "fbd595a578cb46ac30e7bf156ec96a055272c33f0a90f885abf8edd1f3ea6e52",
+    "backend\\local_observation\\analyzer.py": "a6b7775f5db44e740eb41655abb8b59046fdb9f4285dc2b996f57dc13df8792c",
+    "backend\\local_observation\\schema.py": "a48cd3bab75bda86877d5903404cce618a84009e95e0a8f5463dad6acc607233",
+    "backend\\local_observation\\rules.json": "2cb536e16e7de1d87a2690e9223e9415c032e986f0debdc3450a0975aaf1e3fe",
+    "backend\\local_observation\\text.py": "0bc5c8694af29260994cca759fd9b291b1d465d9fd1df070b58cf1505e0697e6",
+    "fixtures\\local_segmentation\\inputs.json": "d5d0054228b0b98f4612d6322ce6480328febbe8e47b5ff52fe458ee91184e91",
+    "fixtures\\local_segmentation\\expected.json": "50827390de4be184e3008ead53d5c47215a91ad5b8281b78732b8f36a416cb80"
+  }
+}

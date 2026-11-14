@@ -1,0 +1,8 @@
+{"prepared": "train", "count": 12}
+{"prepared": "validation", "count": 4}
+{"stage": "spans", "epochs": 13, "train_first": 0.9425533811251322, "train_last": 0.04354546731337905, "seconds": 0.17509710000013}
+{"stage": "attributes", "epochs": 10, "train_first": 1.8813625623782475, "train_last": 0.008878511803535124, "seconds": 0.1596642000004067}
+{"stage": "roles", "epochs": 40, "train_first": 0.8320843378702799, "train_last": 0.0003143535473100201, "seconds": 5.287909200000286}
+{"stage": "relations", "epochs": 10, "train_first": 0.6044346690177917, "train_last": 0.00010091208181014129, "seconds": 0.09489530000428203}
+{"stage": "baseline", "epochs": 9, "train_first": 1.3373338679472606, "train_last": 0.13390905627359947, "seconds": 0.05066790000273613}
+{"saved": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\artifacts\\phobert\\smoke_heads", "total_seconds": 13.949011500000779}

@@ -1,0 +1,61 @@
+{
+  "mode": "isolated worker unit test with simulated chrome APIs",
+  "checks": [
+    {
+      "name": "reject different extension",
+      "passed": true
+    },
+    {
+      "name": "reject iframe sender",
+      "passed": true
+    },
+    {
+      "name": "reject popup as analysis sender",
+      "passed": true
+    },
+    {
+      "name": "reject wrong document",
+      "passed": true
+    },
+    {
+      "name": "reject wrong session",
+      "passed": true
+    },
+    {
+      "name": "reject changed page URL",
+      "passed": true
+    },
+    {
+      "name": "API destination fixed",
+      "passed": true
+    },
+    {
+      "name": "wire payload only text",
+      "passed": true
+    },
+    {
+      "name": "configuration announces payload protocol",
+      "passed": true
+    },
+    {
+      "name": "linked payload accepted and preserved",
+      "passed": true
+    },
+    {
+      "name": "422 shows safe field path instead of generic invalid input",
+      "passed": true
+    },
+    {
+      "name": "navigation revokes session",
+      "passed": true
+    },
+    {
+      "name": "tab close revokes session",
+      "passed": true
+    },
+    {
+      "name": "late response from replaced session rejected",
+      "passed": true
+    }
+  ]
+}

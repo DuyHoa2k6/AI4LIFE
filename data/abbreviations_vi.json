@@ -1,0 +1,456 @@
+{
+  "schema_version": "vi-abbreviations-1.0",
+  "version": "vi-abbreviations-1.0.0",
+  "review_status": "controlled_project_rules",
+  "provenance": "Project-authored lexical rules; not learned from validation or holdout; interpretations require independent language review.",
+  "entries": [
+    {
+      "id": "AB-NOT",
+      "aliases": [
+        "ko",
+        "k0",
+        "hok"
+      ],
+      "canonical": "không",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Only configured aliases; no expansion of Hong/personal names or full words."
+    },
+    {
+      "id": "AB-NOT-K",
+      "aliases": [
+        "k"
+      ],
+      "canonical": "không",
+      "context_any": [],
+      "right_any": [
+        "cần",
+        "nên",
+        "được",
+        "chuyển",
+        "ck",
+        "gửi",
+        "gui",
+        "giao",
+        "nhận",
+        "cài",
+        "cai",
+        "phải",
+        "có"
+      ],
+      "exclude_any": [],
+      "note": "Không đổi k thành không khi là đơn vị tiền, mã hoặc nhãn."
+    },
+    {
+      "id": "AB-CK-TRANSFER",
+      "aliases": [
+        "ck"
+      ],
+      "canonical": "chuyển khoản",
+      "context_any": [
+        "tiền",
+        "phí",
+        "stk",
+        "tk",
+        "ngân hàng",
+        "nh",
+        "$amount"
+      ],
+      "exclude_any": [],
+      "note": "Chỉ gợi cách hiểu tài chính khi có ngữ cảnh; nếu nhiều nghĩa cùng phù hợp thì giữ mơ hồ."
+    },
+    {
+      "id": "AB-CK-SPOUSE",
+      "aliases": [
+        "ck"
+      ],
+      "canonical": "chồng",
+      "context_any": [
+        "vợ",
+        "gia đình",
+        "con",
+        "về nhà",
+        "đi làm",
+        "cưới"
+      ],
+      "exclude_any": [],
+      "note": "Mở rộng từ không xác minh quan hệ gia đình thật."
+    },
+    {
+      "id": "AB-CK-STOCK",
+      "aliases": [
+        "ck"
+      ],
+      "canonical": "chứng khoán",
+      "context_any": [
+        "cổ phiếu",
+        "thị trường",
+        "sàn",
+        "đầu tư"
+      ],
+      "exclude_any": [],
+      "note": "Không đồng nhất chứng khoán với yêu cầu chuyển tiền."
+    },
+    {
+      "id": "AB-TK-ACCOUNT",
+      "aliases": [
+        "tk"
+      ],
+      "canonical": "tài khoản",
+      "context_any": [
+        "mk",
+        "mật khẩu",
+        "otp",
+        "stk",
+        "ngân hàng",
+        "nh",
+        "ck",
+        "chuyển",
+        "rút",
+        "khóa",
+        "đăng nhập"
+      ],
+      "exclude_any": [],
+      "note": "Không tự coi là tài khoản ngân hàng nếu loại tài khoản chưa rõ."
+    },
+    {
+      "id": "AB-TK-DESIGN",
+      "aliases": [
+        "tk"
+      ],
+      "canonical": "thiết kế",
+      "context_any": [
+        "bản vẽ",
+        "đồ họa",
+        "logo",
+        "kiến trúc"
+      ],
+      "exclude_any": [],
+      "note": "Nghĩa đối chứng ngoài tài chính."
+    },
+    {
+      "id": "AB-TK-TIKTOK",
+      "aliases": [
+        "tk"
+      ],
+      "canonical": "TikTok",
+      "context_any": [
+        "video",
+        "clip",
+        "TikTok",
+        "livestream"
+      ],
+      "exclude_any": [],
+      "note": "Giữ nhiều khả năng nếu có cả ngữ cảnh tài khoản."
+    },
+    {
+      "id": "AB-DC-ABLE",
+      "aliases": [
+        "dc",
+        "đc"
+      ],
+      "canonical": "được",
+      "context_any": [],
+      "left_any": [
+        "nhận",
+        "rút",
+        "chuyển",
+        "ck",
+        "chưa",
+        "không",
+        "ko",
+        "k",
+        "cài",
+        "gửi"
+      ],
+      "exclude_any": [],
+      "note": "Xét từ ngay trước, không mở rộng toàn cục."
+    },
+    {
+      "id": "AB-DC-ADDRESS",
+      "aliases": [
+        "dc",
+        "đc"
+      ],
+      "canonical": "địa chỉ",
+      "context_any": [
+        "giao hàng",
+        "nhận hàng",
+        "nhà",
+        "đường",
+        "phường",
+        "giao máy"
+      ],
+      "exclude_any": [],
+      "note": "Dùng ngữ cảnh giao nhận; xung đột với nghĩa được thì hỏi lại."
+    },
+    {
+      "id": "AB-KH-CUSTOMER",
+      "aliases": [
+        "kh"
+      ],
+      "canonical": "khách hàng",
+      "context_any": [
+        "chăm sóc",
+        "cskh",
+        "tổng đài",
+        "hỗ trợ",
+        "dịch vụ"
+      ],
+      "exclude_any": [],
+      "note": "Không đổi kh thành không mặc định."
+    },
+    {
+      "id": "AB-KH-PLAN",
+      "aliases": [
+        "kh"
+      ],
+      "canonical": "kế hoạch",
+      "context_any": [
+        "lập",
+        "triển khai",
+        "dự án",
+        "tiến độ"
+      ],
+      "exclude_any": [],
+      "note": "Đối chứng đa nghĩa."
+    },
+    {
+      "id": "AB-CS-SHARE",
+      "aliases": [
+        "cs"
+      ],
+      "canonical": "chia sẻ",
+      "context_any": [
+        "mh",
+        "màn hình",
+        "otp",
+        "mã"
+      ],
+      "exclude_any": [],
+      "note": "Chia sẻ nội dung chưa tự là cấp quyền."
+    },
+    {
+      "id": "AB-CS-POLICY",
+      "aliases": [
+        "cs"
+      ],
+      "canonical": "chính sách",
+      "context_any": [
+        "bảo hành",
+        "đổi trả",
+        "quy định",
+        "công ty"
+      ],
+      "exclude_any": [],
+      "note": "Không nhầm chính sách với chia sẻ màn hình."
+    },
+    {
+      "id": "AB-MH-SCREEN",
+      "aliases": [
+        "mh"
+      ],
+      "canonical": "màn hình",
+      "context_any": [
+        "cs",
+        "chia sẻ",
+        "bật",
+        "hiển thị",
+        "điện thoại"
+      ],
+      "exclude_any": [],
+      "note": "Chỉ dùng ngữ cảnh hiển thị."
+    },
+    {
+      "id": "AB-MH-MODEL",
+      "aliases": [
+        "mh"
+      ],
+      "canonical": "mô hình",
+      "context_any": [
+        "huấn luyện",
+        "học máy",
+        "dự đoán",
+        "AI"
+      ],
+      "exclude_any": [],
+      "note": "Đối chứng kỹ thuật."
+    },
+    {
+      "id": "AB-MK",
+      "aliases": [
+        "mk"
+      ],
+      "canonical": "mật khẩu",
+      "context_any": [
+        "gửi",
+        "đọc",
+        "nhập",
+        "tk",
+        "tài khoản",
+        "đăng nhập",
+        "đổi",
+        "quên"
+      ],
+      "exclude_any": [],
+      "note": "Không tự mở rộng trong mã định danh."
+    },
+    {
+      "id": "AB-STK",
+      "aliases": [
+        "stk"
+      ],
+      "canonical": "số tài khoản",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Tên loại dữ liệu, không xác minh chủ tài khoản."
+    },
+    {
+      "id": "AB-CCCD",
+      "aliases": [
+        "cccd"
+      ],
+      "canonical": "căn cước công dân",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Không sửa số căn cước thật."
+    },
+    {
+      "id": "AB-CMND",
+      "aliases": [
+        "cmnd"
+      ],
+      "canonical": "chứng minh nhân dân",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Không tự đổi loại giấy tờ thành CCCD."
+    },
+    {
+      "id": "AB-SDT",
+      "aliases": [
+        "sdt",
+        "sđt"
+      ],
+      "canonical": "số điện thoại",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Không thay số điện thoại thực."
+    },
+    {
+      "id": "AB-CSKH",
+      "aliases": [
+        "cskh"
+      ],
+      "canonical": "chăm sóc khách hàng",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Tên vai trò tự nhận, không chứng nhận người gửi."
+    },
+    {
+      "id": "AB-NH",
+      "aliases": [
+        "nh"
+      ],
+      "canonical": "ngân hàng",
+      "context_any": [
+        "tk",
+        "stk",
+        "chuyển",
+        "ck",
+        "tiền",
+        "số dư",
+        "giao dịch",
+        "otp"
+      ],
+      "exclude_any": [],
+      "note": "Không đổi mọi nh thành ngân hàng."
+    },
+    {
+      "id": "AB-APP",
+      "aliases": [
+        "app"
+      ],
+      "canonical": "ứng dụng",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Không tự xác nhận ứng dụng chính thức."
+    },
+    {
+      "id": "AB-IB",
+      "aliases": [
+        "ib",
+        "inbox"
+      ],
+      "canonical": "nhắn tin riêng",
+      "context_any": [],
+      "exclude_any": [],
+      "note": "Không tự coi việc nhắn riêng là gian lận."
+    },
+    {
+      "id": "AB-BH-WARRANTY",
+      "aliases": [
+        "bh"
+      ],
+      "canonical": "bảo hành",
+      "context_any": [
+        "sản phẩm",
+        "đổi trả",
+        "thiết bị",
+        "máy",
+        "laptop"
+      ],
+      "exclude_any": [],
+      "note": "Đa nghĩa với bây giờ/bảo hiểm, cần ngữ cảnh."
+    },
+    {
+      "id": "AB-BH-INSURANCE",
+      "aliases": [
+        "bh"
+      ],
+      "canonical": "bảo hiểm",
+      "context_any": [
+        "y tế",
+        "xã hội",
+        "hợp đồng bảo hiểm",
+        "quyền lợi"
+      ],
+      "exclude_any": [],
+      "note": "Không tự suy từ phí hay tiền."
+    },
+    {
+      "id": "AB-BH-NOW",
+      "aliases": [
+        "bh"
+      ],
+      "canonical": "bây giờ",
+      "context_any": [],
+      "right_any": [
+        "làm gì",
+        "phải làm",
+        "gửi mã",
+        "chuyển tiền",
+        "ck"
+      ],
+      "exclude_any": [],
+      "note": "Ưu tiên không đoán khi không có dấu hiệu thời điểm."
+    },
+    {
+      "id": "AB-MK-SELF",
+      "aliases": [
+        "mk"
+      ],
+      "canonical": "mình",
+      "context_any": [],
+      "right_any": [
+        "nhận",
+        "chuyển",
+        "ck",
+        "vừa",
+        "đang",
+        "đã"
+      ],
+      "exclude_any": [],
+      "note": "Personal-pronoun use; keep ambiguous when password context also fits."
+    }
+  ]
+}

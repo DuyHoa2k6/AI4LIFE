@@ -1,0 +1,307 @@
+{
+  "input": {
+    "text": "Khoản hoa hồng của bạn đã được ghi nhận. Tuy nhiên, số dư đang chờ mở quyền rút. Bạn cần nộp thêm tiền bảo chứng trước thì mới nhận lại cả vốn lẫn hoa hồng."
+  },
+  "http_status": 200,
+  "elapsed_ms": 61.96,
+  "response": {
+    "case_context": {
+      "case_id": "54158efe-a72c-42b4-bebb-0fbc614975a3",
+      "situation_id": "analysis",
+      "revision": 1,
+      "content_version": "3e27f5f4c5521ec972cd85578dbbb3e1941f824c78aebba9f6d88e4df5a0f54c",
+      "question_ids": [
+        "clarify:0"
+      ],
+      "clarification_status": "initial"
+    },
+    "schema_version": "2.0",
+    "mode": "local_rules",
+    "risk_status": "high",
+    "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+    "answers": {
+      "claim": {
+        "status": "inferred",
+        "text": "số dư đang chờ mở quyền rút.",
+        "evidence_refs": [
+          "old:a1"
+        ]
+      },
+      "claimed_identity": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "requested_action": {
+        "status": "observed",
+        "text": "nộp  Bạn cần nộp thêm tiền bảo chứng trước thì mới nhận lại cả vốn lẫn hoa hồng.",
+        "evidence_refs": [
+          "old:a2",
+          "ctx:e3"
+        ]
+      },
+      "persuasion": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "assets_at_risk": {
+        "status": "inferred",
+        "text": "số dư đang chờ mở quyền rút. Bạn cần nộp thêm tiền bảo chứng trước",
+        "evidence_refs": [
+          "old:a1",
+          "old:a2"
+        ]
+      },
+      "impersonation": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "sequence": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "evidence_sufficiency": {
+        "status": "observed",
+        "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+        "evidence_refs": [
+          "old:a1",
+          "old:a2"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "id": "old:a1",
+        "action": "other",
+        "description": "withdraw_funds",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "rút",
+            "start": 76,
+            "end": 79
+          },
+          {
+            "message_id": "m1",
+            "quote": "số dư đang chờ mở quyền rút.",
+            "start": 52,
+            "end": 80
+          },
+          {
+            "message_id": "m1",
+            "quote": "chờ",
+            "start": 63,
+            "end": 66
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "old:a2",
+        "action": "transfer_funds",
+        "description": "transfer_funds",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "nộp",
+            "start": 89,
+            "end": 92
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bạn cần nộp thêm tiền bảo chứng trước",
+            "start": 81,
+            "end": 118
+          },
+          {
+            "message_id": "m1",
+            "quote": "thêm tiền bảo chứng trước",
+            "start": 93,
+            "end": 118
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "ctx:e3",
+        "action": "transfer_funds",
+        "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Bạn cần nộp thêm tiền bảo chứng trước thì mới nhận lại cả vốn lẫn hoa hồng.",
+            "start": 80,
+            "end": 156
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "ctx:e4",
+        "action": "other",
+        "description": "Quyền lợi nhận/rút lại tiền được nêu như điều kiện, chưa xác minh khả năng nhận",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "nhận lại cả vốn",
+            "start": 127,
+            "end": 142
+          },
+          {
+            "message_id": "m1",
+            "quote": " Bạn cần nộp thêm tiền bảo chứng trước thì mới nhận lại cả vốn lẫn hoa hồng.",
+            "start": 80,
+            "end": 156
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "suspected_scam_types": [],
+    "missing_information": [
+      "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+    ],
+    "follow_up_questions": [],
+    "recommended_actions": [
+      "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập."
+    ],
+    "answer_to_user": null,
+    "source_matches": [],
+    "analysis": {
+      "pipeline": "local_rules",
+      "routing": "local_backend",
+      "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+      "preliminary_status": "completed",
+      "preliminary_risk": "high",
+      "preliminary_findings": 4,
+      "rule_conflicts": 0,
+      "rule_hints_reviewed": 0,
+      "rule_hints_reclassified": 0,
+      "rule_hints_uncertain": 0,
+      "observation_repairs": 0,
+      "situation_facts": 4,
+      "situation_links": 2,
+      "information_gaps": 0,
+      "discarded_live_findings": 0,
+      "live_status": "not_used",
+      "initial_findings": 0,
+      "initial_hypotheses": 0,
+      "discarded_source_uses": 0,
+      "scenario_matches": [],
+      "stage_timings_ms": {
+        "local_total": 22.553499999048654,
+        "asset_load": 1.7972999994526617,
+        "safety_precheck": 6.888100004289299,
+        "local_extraction_interpretation": 13.569800001278054,
+        "risk_assessment": 0.09760000102687627,
+        "participants": 0.01679999695625156,
+        "behaviors": 0.03740000101970509,
+        "event_linking": 0.0024000037228688598,
+        "situations": 0.026599998818710446,
+        "hypotheses": 0.011800002539530396,
+        "consequences": 0.016400001186411828,
+        "retrieval": 0.6190000058268197,
+        "url": 0.0,
+        "support_total": 0.8394000033149496
+      },
+      "decision_version": "local-situation-1.0-support",
+      "information_needed": false,
+      "consistency_repairs": 0,
+      "consistency_issues": [],
+      "grounded_relation_count": 0,
+      "relation_review_candidates": 0,
+      "unresolved_relation_candidates": 0,
+      "discarded_url_uses": 0,
+      "used_url_evidence": 0
+    },
+    "retrieval": {
+      "scenarios": {
+        "status": "disabled",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.0
+      },
+      "official_sources": {
+        "status": "no_approved_sources",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.6190000058268197
+      }
+    },
+    "input_sources": [],
+    "input_warnings": [
+      "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+      "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+    ],
+    "url_analysis": [],
+    "url_uses": [],
+    "display_summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+    "display_action": "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập.",
+    "risk_indicators": [
+      {
+        "kind": "local_rule_basis",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Bạn cần nộp thêm tiền bảo chứng trước thì mới nhận lại cả vốn lẫn hoa hồng.",
+            "start": 80,
+            "end": 156
+          },
+          {
+            "message_id": "m1",
+            "quote": "nhận lại cả vốn",
+            "start": 127,
+            "end": 142
+          }
+        ],
+        "explanation": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền."
+      },
+      {
+        "kind": "interaction_context",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Bạn cần nộp thêm tiền bảo chứng trước thì mới nhận lại cả vốn lẫn hoa hồng.",
+            "start": 80,
+            "end": 156
+          },
+          {
+            "message_id": "m1",
+            "quote": "nhận lại cả vốn",
+            "start": 127,
+            "end": 142
+          }
+        ],
+        "explanation": "Người gửi đặt yêu cầu với người nhận: Nộp/chuyển tiền trước là điều kiện để nhận/rút lại khoản được nêu. Có thể mất thêm tiền nếu thực hiện mà chưa xác minh quyền lợi."
+      }
+    ],
+    "safety_urgency": "preventive",
+    "analysis_status": "complete"
+  },
+  "scope": "Actual local API via ASGI TestClient; one known development case, not browser latency or independent accuracy."
+}

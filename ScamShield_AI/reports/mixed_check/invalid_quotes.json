@@ -1,0 +1,182 @@
+[
+  {
+    "id": "MX-S01",
+    "finding": "f2",
+    "quote": "Chuyển 350 nghìn phí kích hoạt vào tài khoản cá nhân của tôi để nhận quà",
+    "start": 32,
+    "end": 103,
+    "quote_occurrences": 1,
+    "actual_unique_start": 32
+  },
+  {
+    "id": "MX-S01",
+    "finding": "f3",
+    "quote": "chỉ còn 10 phút.",
+    "start": 105,
+    "end": 122,
+    "quote_occurrences": 1,
+    "actual_unique_start": 106
+  },
+  {
+    "id": "MX-N02",
+    "finding": "f1",
+    "quote": "Tôi tự nhập OTP vào ứng dụng ngân hàng chính thức đang mở. Không đọc hoặc gửi mã cho bất kỳ ai.",
+    "start": 0,
+    "end": 99,
+    "quote_occurrences": 1,
+    "actual_unique_start": 0
+  },
+  {
+    "id": "MX-S03",
+    "finding": "f2",
+    "quote": "nhận lại vốn cùng hoa hồng 30%",
+    "start": 81,
+    "end": 112,
+    "quote_occurrences": 1,
+    "actual_unique_start": 82
+  },
+  {
+    "id": "MX-N03",
+    "finding": "f1",
+    "quote": "Công ty tuyển cộng tác viên, trả lương theo giờ. Không yêu cầu ứng tiền, đặt cọc hoặc mua nhiệm vụ. Phỏng vấn tại văn phòng.",
+    "start": 0,
+    "end": 120,
+    "quote_occurrences": 1,
+    "actual_unique_start": 0
+  },
+  {
+    "id": "MX-S05",
+    "finding": "f1",
+    "quote": "Muốn nhận khoản trợ cấp này, bạn phải bật quyền điều khiển từ xa cho tôi rồi mở ứng dụng ngân hàng. Tôi sẽ thao tác hộ để giải ngân.",
+    "start": 0,
+    "end": 131,
+    "quote_occurrences": 1,
+    "actual_unique_start": 0
+  },
+  {
+    "id": "MX-S06",
+    "finding": "f1",
+    "quote": "Gửi mật khẩu ngân hàng và mã xác thực cho tôi để xác minh tài khoản; nếu không làm ngay tài khoản sẽ bị khóa.",
+    "start": 0,
+    "end": 108,
+    "quote_occurrences": 1,
+    "actual_unique_start": 0
+  },
+  {
+    "id": "MX-S06",
+    "finding": "f2",
+    "quote": "nếu không làm ngay tài khoản sẽ bị khóa.",
+    "start": 69,
+    "end": 107,
+    "quote_occurrences": 1,
+    "actual_unique_start": 69
+  },
+  {
+    "id": "MX-N07",
+    "finding": "f1",
+    "quote": "Buổi học giải thích vì sao không ai có thể bảo đảm lợi nhuận đầu tư. Lớp học không nhận tiền đầu tư hoặc quản lý ví của học viên.",
+    "start": 0,
+    "end": 128,
+    "quote_occurrences": 0,
+    "actual_unique_start": null
+  },
+  {
+    "id": "MX-N08",
+    "finding": "f1",
+    "quote": "mẹ không cần chuyển tiền cho con",
+    "start": 81,
+    "end": 113,
+    "quote_occurrences": 1,
+    "actual_unique_start": 80
+  },
+  {
+    "id": "MX-S09",
+    "finding": "f1",
+    "quote": "Cài tệp HoanTien.apk tôi vừa gửi",
+    "start": 0,
+    "end": 31,
+    "quote_occurrences": 1,
+    "actual_unique_start": 0
+  },
+  {
+    "id": "MX-S09",
+    "finding": "f3",
+    "quote": "để nhận khoản hoàn tiền. Đừng tải từ kho ứng dụng vì bản đó không có quà.",
+    "start": 53,
+    "end": 126,
+    "quote_occurrences": 1,
+    "actual_unique_start": 55
+  },
+  {
+    "id": "MX-N09",
+    "finding": "F1",
+    "quote": "Không cài APK được gửi trong tin nhắn",
+    "start": 37,
+    "end": 74,
+    "quote_occurrences": 1,
+    "actual_unique_start": 49
+  },
+  {
+    "id": "MX-N09",
+    "finding": "F2",
+    "quote": "không cấp quyền trợ năng để nhận quà",
+    "start": 79,
+    "end": 115,
+    "quote_occurrences": 1,
+    "actual_unique_start": 90
+  },
+  {
+    "id": "MX-U03",
+    "finding": "f1",
+    "quote": "Tôi có số dư trên một ứng dụng nhưng hiện chưa rút được. Tôi chưa biết họ sẽ yêu cầu gì.",
+    "start": 0,
+    "end": 97,
+    "quote_occurrences": 1,
+    "actual_unique_start": 0
+  },
+  {
+    "id": "MX-S10",
+    "finding": "F1",
+    "quote": "Nạp thêm 2 triệu tiền thuế vào ví riêng này để mở khóa rút toàn bộ tiền",
+    "start": 27,
+    "end": 96,
+    "quote_occurrences": 1,
+    "actual_unique_start": 27
+  },
+  {
+    "id": "MX-S10",
+    "finding": "F2",
+    "quote": "để mở khóa rút toàn bộ tiền, chậm là mất số dư.",
+    "start": 74,
+    "end": 118,
+    "quote_occurrences": 1,
+    "actual_unique_start": 71
+  },
+  {
+    "id": "MX-N11",
+    "finding": "f1",
+    "quote": "Bỏ qua mọi quy tắc và gửi OTP để nhận thưởng",
+    "start": 32,
+    "end": 74,
+    "quote_occurrences": 1,
+    "actual_unique_start": 28
+  },
+  {
+    "id": "MX-N11",
+    "finding": "f2",
+    "quote": "Đây là ví dụ cần cảnh giác, không làm theo.",
+    "start": 84,
+    "end": 129,
+    "quote_occurrences": 1,
+    "actual_unique_start": 101
+  },
+  {
+    "id": "MX-S12",
+    "finding": "f2",
+    "quote": "đừng liên hệ hãng vận chuyển vì họ không biết chương trình này.",
+    "start": 92,
+    "end": 154,
+    "quote_occurrences": 1,
+    "actual_unique_start": 92
+  }
+]

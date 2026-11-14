@@ -1,0 +1,429 @@
+{
+  "summary": {
+    "cases": 24,
+    "risk_correct": 20,
+    "layer_correct": 10,
+    "risk_correct_but_semantic_wrong": [
+      "receive_document",
+      "conditional_loss",
+      "verify_first",
+      "review_only",
+      "missing_purpose",
+      "known_purpose",
+      "unknown_people",
+      "named_pronoun",
+      "ambiguous_pronoun",
+      "passport_debt"
+    ],
+    "semantic_failures": {
+      "receive_document": [
+        "object:no_false_money_receipt",
+        "object:document_receipt_present",
+        "speech:not_yet_document_report"
+      ],
+      "receive_money": [
+        "object:one_receipt"
+      ],
+      "send_guide": [
+        "object:guide_not_credentials_or_login",
+        "object:send_document_present"
+      ],
+      "conditional_loss": [
+        "speech:loss_consequence_present",
+        "speech:no_blanket_denial",
+        "relation:conditional_loss_link"
+      ],
+      "reported_pressure": [
+        "people:reporter_not_threatener"
+      ],
+      "paid_a_hold_b": [
+        "transaction:correct_handover_link",
+        "question:no_redundant_payment_question"
+      ],
+      "verify_first": [
+        "speech:no_immediate_payment",
+        "relation:verify_is_prerequisite"
+      ],
+      "review_only": [
+        "object:no_false_money_receipt",
+        "object:document_receipt_present",
+        "object:verify_action_present"
+      ],
+      "missing_purpose": [
+        "question:neutral_purpose_question"
+      ],
+      "known_purpose": [
+        "question:known_purpose_not_asked"
+      ],
+      "unknown_people": [
+        "people:distinct_mentions"
+      ],
+      "named_pronoun": [
+        "people:unique_pronoun"
+      ],
+      "ambiguous_pronoun": [
+        "people:ambiguous_pronoun_not_merged"
+      ],
+      "passport_debt": [
+        "relation:exit_payment_link"
+      ]
+    },
+    "layers": {
+      "object": {
+        "passed": 2,
+        "total": 10
+      },
+      "speech": {
+        "passed": 6,
+        "total": 10
+      },
+      "relation": {
+        "passed": 2,
+        "total": 5
+      },
+      "people": {
+        "passed": 0,
+        "total": 4
+      },
+      "transaction": {
+        "passed": 3,
+        "total": 4
+      },
+      "question": {
+        "passed": 0,
+        "total": 3
+      }
+    },
+    "scope": "Sparse authored semantic acceptance checks; not exhaustive or independent accuracy."
+  },
+  "cases": [
+    {
+      "id": "receive_document",
+      "risk": "clear",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "object:no_false_money_receipt": false,
+        "object:document_receipt_present": false,
+        "speech:not_yet_document_report": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "receive_money",
+      "risk": "need_context",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": false,
+      "checks": {
+        "object:no_false_payment": true,
+        "object:one_receipt": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "send_guide",
+      "risk": "need_context",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": false,
+      "checks": {
+        "object:guide_not_credentials_or_login": false,
+        "object:send_document_present": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "send_credentials",
+      "risk": "high",
+      "allowed_risk": [
+        "high"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "object:credentials_present": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "prohibition",
+      "risk": "clear",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:no_active_request": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "not_yet",
+      "risk": "clear",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:no_active_request": true,
+        "speech:not_yet_report": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "conditional_loss",
+      "risk": "high",
+      "allowed_risk": [
+        "high"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:loss_consequence_present": false,
+        "speech:no_blanket_denial": false,
+        "relation:conditional_loss_link": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "no_requirement",
+      "risk": "clear",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:no_active_request": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "deny_request",
+      "risk": "clear",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:no_active_request": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "exit_alone",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context",
+        "suspicious"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "relation:no_invented_current_confinement": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "reported_pressure",
+      "risk": "clear",
+      "allowed_risk": [
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "risk_correct": false,
+      "checks": {
+        "people:reporter_not_threatener": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "paid_a_hold_b",
+      "risk": "need_context",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": false,
+      "checks": {
+        "transaction:paid_order_receipt": true,
+        "transaction:correct_handover_link": false,
+        "question:no_redundant_payment_question": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "unpaid_a",
+      "risk": "suspicious",
+      "allowed_risk": [
+        "suspicious"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "transaction:unpaid_handover_correct_order": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "ambiguous_transaction",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "transaction:no_guessed_transaction_link": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "verify_first",
+      "risk": "need_context",
+      "allowed_risk": [
+        "clear",
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:no_immediate_payment": false,
+        "relation:verify_is_prerequisite": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "pay_first",
+      "risk": "suspicious",
+      "allowed_risk": [
+        "suspicious"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "relation:payment_before_verification": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    },
+    {
+      "id": "review_only",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "object:no_false_money_receipt": false,
+        "object:document_receipt_present": false,
+        "object:verify_action_present": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "missing_purpose",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "question:neutral_purpose_question": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "known_purpose",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "question:known_purpose_not_asked": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "unknown_people",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "people:distinct_mentions": false
+      },
+      "layer_correct": false,
+      "processing_status": "unsupported"
+    },
+    {
+      "id": "named_pronoun",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "people:unique_pronoun": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "ambiguous_pronoun",
+      "risk": "need_context",
+      "allowed_risk": [
+        "need_context"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "people:ambiguous_pronoun_not_merged": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "passport_debt",
+      "risk": "high",
+      "allowed_risk": [
+        "high"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "relation:exit_payment_link": false
+      },
+      "layer_correct": false,
+      "processing_status": "complete"
+    },
+    {
+      "id": "quoted_warning",
+      "risk": "clear",
+      "allowed_risk": [
+        "clear"
+      ],
+      "risk_correct": true,
+      "checks": {
+        "speech:no_active_quoted_request": true
+      },
+      "layer_correct": true,
+      "processing_status": "complete"
+    }
+  ]
+}

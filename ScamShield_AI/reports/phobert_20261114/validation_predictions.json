@@ -1,0 +1,258 @@
+[
+  {
+    "id": "smoke-07",
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 7,
+            "end": 32,
+            "quote": "nhận tiền đơn A. Bạn giao",
+            "label": "action",
+            "score_uncalibrated": 0.9297671318054199
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "retain_documents",
+              "object_type": "money",
+              "speech_act": "claim",
+              "polarity": "positive",
+              "temporal_state": "requested",
+              "modality": "request"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "recipient:unknown",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": "A"
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "clear",
+        "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+        "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+        "evidence_refs": [],
+        "rules": [],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "clear",
+      "classifier_disagrees": false,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 446.18199999968056,
+        "inference": 34.31329999875743,
+        "verification_reasoning": 0.10089999705087394,
+        "total": 480.5989000014961
+      },
+      "windows": 1
+    }
+  },
+  {
+    "id": "smoke-08",
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 9,
+            "end": 34,
+            "quote": "nhận tiền đơn A. Bạn giao",
+            "label": "action",
+            "score_uncalibrated": 0.9772501587867737
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "receive",
+              "object_type": "money",
+              "speech_act": "claim",
+              "polarity": "positive",
+              "temporal_state": "requested",
+              "modality": "assertion"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "speaker:sender",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": "A"
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "clear",
+        "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+        "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+        "evidence_refs": [],
+        "rules": [],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "high",
+      "classifier_disagrees": true,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 474.1906999988714,
+        "inference": 35.245699997176416,
+        "verification_reasoning": 0.08689999958733097,
+        "total": 509.52590000088094
+      },
+      "windows": 1
+    }
+  },
+  {
+    "id": "smoke-05",
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 21,
+            "end": 27,
+            "quote": "chuyển",
+            "label": "action",
+            "score_uncalibrated": 0.976780116558075
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "disclose_credentials",
+              "object_type": "money",
+              "speech_act": "request",
+              "polarity": "positive",
+              "temporal_state": "requested",
+              "modality": "request"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "recipient:unknown",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "clear",
+        "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+        "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+        "evidence_refs": [],
+        "rules": [],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "high",
+      "classifier_disagrees": true,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 435.86189999768976,
+        "inference": 35.52070000296226,
+        "verification_reasoning": 0.17420000222045928,
+        "total": 471.55889999703504
+      },
+      "windows": 1
+    }
+  },
+  {
+    "id": "smoke-06",
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 4,
+            "end": 10,
+            "quote": "chuyển",
+            "label": "action",
+            "score_uncalibrated": 0.9632135033607483
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "disclose_credentials",
+              "object_type": "money",
+              "speech_act": "request",
+              "polarity": "positive",
+              "temporal_state": "requested",
+              "modality": "request"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "speaker:sender",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "clear",
+        "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+        "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+        "evidence_refs": [],
+        "rules": [],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "clear",
+      "classifier_disagrees": false,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 450.72259999869857,
+        "inference": 34.425699996063486,
+        "verification_reasoning": 0.08830000297166407,
+        "total": 485.23840000416385
+      },
+      "windows": 1
+    }
+  }
+]

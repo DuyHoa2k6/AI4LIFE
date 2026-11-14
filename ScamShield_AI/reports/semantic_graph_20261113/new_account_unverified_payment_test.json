@@ -1,0 +1,336 @@
+{
+  "input": {
+    "text": "Chị dùng tài khoản mới này nhé. Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác. Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì."
+  },
+  "http_status": 200,
+  "elapsed_ms": 95.74,
+  "response": {
+    "case_context": {
+      "case_id": "973eea3a-5321-4772-998b-4d5082c508e4",
+      "situation_id": "analysis",
+      "revision": 1,
+      "content_version": "c7afba12b54ebd8f222ed97d633e7f89a65e1b5abd304ba97f9befae3e6d3fbd",
+      "question_ids": [
+        "clarify:0"
+      ],
+      "clarification_status": "initial"
+    },
+    "schema_version": "2.0",
+    "mode": "local_rules",
+    "risk_status": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "answers": {
+      "claim": {
+        "status": "inferred",
+        "text": "Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì. Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì.",
+        "evidence_refs": [
+          "old:a3",
+          "old:a2"
+        ]
+      },
+      "claimed_identity": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "requested_action": {
+        "status": "observed",
+        "text": "thanh toán  Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác.",
+        "evidence_refs": [
+          "old:a1",
+          "ctx:e4",
+          "graph:e5"
+        ]
+      },
+      "persuasion": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "assets_at_risk": {
+        "status": "inferred",
+        "text": "Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác. Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì. Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì.",
+        "evidence_refs": [
+          "old:a1",
+          "old:a3",
+          "old:a2"
+        ]
+      },
+      "impersonation": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "sequence": {
+        "status": "inferred",
+        "text": "Quan hệ có điều kiện ngôn ngữ và đối tượng/nguồn cùng phạm vi; không dựa vào khoảng cách đơn thuần.",
+        "evidence_refs": [
+          "graph:e5",
+          "graph:e6"
+        ]
+      },
+      "evidence_sufficiency": {
+        "status": "observed",
+        "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+        "evidence_refs": [
+          "old:a1",
+          "old:a3",
+          "old:a2"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "id": "old:a1",
+        "action": "transfer_funds",
+        "description": "transfer_funds",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "thanh toán",
+            "start": 48,
+            "end": 58
+          },
+          {
+            "message_id": "m1",
+            "quote": "Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác.",
+            "start": 32,
+            "end": 97
+          },
+          {
+            "message_id": "m1",
+            "quote": "hộ một khoản vào tài khoản người khác",
+            "start": 59,
+            "end": 96
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "old:a3",
+        "action": "other",
+        "description": "receive_funds",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "nhận",
+            "start": 115,
+            "end": 119
+          },
+          {
+            "message_id": "m1",
+            "quote": "Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì.",
+            "start": 98,
+            "end": 189
+          },
+          {
+            "message_id": "m1",
+            "quote": "được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì",
+            "start": 120,
+            "end": 188
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa",
+            "start": 106,
+            "end": 110
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "old:a2",
+        "action": "transfer_funds",
+        "description": "transfer_funds",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "thanh toán",
+            "start": 172,
+            "end": 182
+          },
+          {
+            "message_id": "m1",
+            "quote": "Hiện em chưa xác nhận được đây có đúng là chị không và cũng chưa rõ khoản thanh toán là gì.",
+            "start": 98,
+            "end": 189
+          },
+          {
+            "message_id": "m1",
+            "quote": "là gì",
+            "start": 183,
+            "end": 188
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa",
+            "start": 158,
+            "end": 162
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "ctx:e4",
+        "action": "transfer_funds",
+        "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác.",
+            "start": 31,
+            "end": 97
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "graph:e5",
+        "action": "transfer_funds",
+        "description": "payment",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác.",
+            "start": 31,
+            "end": 97
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "graph:e6",
+        "action": "other",
+        "description": "third_party_payee",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Chị muốn nhờ em thanh toán hộ một khoản vào tài khoản người khác.",
+            "start": 31,
+            "end": 97
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "suspected_scam_types": [],
+    "missing_information": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "follow_up_questions": [
+      "Bạn đã tự xác nhận người nhận và tài khoản mới qua đầu mối hoặc số liên lạc quen dùng chưa?"
+    ],
+    "recommended_actions": [
+      "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+    ],
+    "answer_to_user": null,
+    "source_matches": [],
+    "analysis": {
+      "pipeline": "local_rules",
+      "routing": "local_backend",
+      "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+      "preliminary_status": "completed",
+      "preliminary_risk": "need_context",
+      "preliminary_findings": 6,
+      "rule_conflicts": 0,
+      "rule_hints_reviewed": 0,
+      "rule_hints_reclassified": 0,
+      "rule_hints_uncertain": 0,
+      "observation_repairs": 0,
+      "situation_facts": 6,
+      "situation_links": 1,
+      "information_gaps": 0,
+      "discarded_live_findings": 0,
+      "live_status": "not_used",
+      "initial_findings": 0,
+      "initial_hypotheses": 0,
+      "discarded_source_uses": 0,
+      "scenario_matches": [],
+      "stage_timings_ms": {
+        "local_total": 58.29929999890737,
+        "asset_load": 3.1887999939499423,
+        "safety_precheck": 12.332600002991967,
+        "local_extraction_interpretation": 42.21650000545196,
+        "risk_assessment": 0.15900000289548188,
+        "participants": 0.026399997295811772,
+        "behaviors": 0.06439999560825527,
+        "event_linking": 0.0047000066842883825,
+        "situations": 0.21550001110881567,
+        "hypotheses": 0.00650000583846122,
+        "consequences": 0.037699996028095484,
+        "retrieval": 0.9943000040948391,
+        "url": 0.0,
+        "support_total": 1.3659999967785552
+      },
+      "decision_version": "local-situation-1.0-support",
+      "information_needed": true,
+      "consistency_repairs": 0,
+      "consistency_issues": [],
+      "grounded_relation_count": 0,
+      "relation_review_candidates": 0,
+      "unresolved_relation_candidates": 0,
+      "discarded_url_uses": 0,
+      "used_url_evidence": 0
+    },
+    "retrieval": {
+      "scenarios": {
+        "status": "disabled",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.0
+      },
+      "official_sources": {
+        "status": "no_approved_sources",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.9943000040948391
+      }
+    },
+    "input_sources": [],
+    "input_warnings": [
+      "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+      "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+    ],
+    "url_analysis": [],
+    "url_uses": [],
+    "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+    "safety_urgency": "undetermined",
+    "analysis_status": "complete"
+  },
+  "scope": "Actual local API via ASGI TestClient; one known development case, not browser latency or independent accuracy."
+}

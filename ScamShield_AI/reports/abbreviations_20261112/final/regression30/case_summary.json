@@ -1,0 +1,242 @@
+[
+  {
+    "id": "A",
+    "passed_draft_reference": true,
+    "events": 2,
+    "relations": 1,
+    "unknown_fields": 8,
+    "api_ms": 8.857499982696027
+  },
+  {
+    "id": "B",
+    "passed_draft_reference": true,
+    "events": 2,
+    "relations": 1,
+    "unknown_fields": 9,
+    "api_ms": 2.2995000181254
+  },
+  {
+    "id": "C",
+    "passed_draft_reference": true,
+    "events": 2,
+    "relations": 1,
+    "unknown_fields": 9,
+    "api_ms": 2.289800002472475
+  },
+  {
+    "id": "D",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 1,
+    "unknown_fields": 10,
+    "api_ms": 1.9287999894004315
+  },
+  {
+    "id": "E",
+    "passed_draft_reference": true,
+    "events": 2,
+    "relations": 1,
+    "unknown_fields": 9,
+    "api_ms": 2.082000020891428
+  },
+  {
+    "id": "F",
+    "passed_draft_reference": true,
+    "events": 3,
+    "relations": 1,
+    "unknown_fields": 8,
+    "api_ms": 2.1280999935697764
+  },
+  {
+    "id": "G",
+    "passed_draft_reference": true,
+    "events": 2,
+    "relations": 2,
+    "unknown_fields": 8,
+    "api_ms": 2.5409999943803996
+  },
+  {
+    "id": "H",
+    "passed_draft_reference": true,
+    "events": 3,
+    "relations": 3,
+    "unknown_fields": 7,
+    "api_ms": 2.3401999787893146
+  },
+  {
+    "id": "I",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.5079999866429716
+  },
+  {
+    "id": "J",
+    "passed_draft_reference": true,
+    "events": 4,
+    "relations": 1,
+    "unknown_fields": 9,
+    "api_ms": 3.056799992918968
+  },
+  {
+    "id": "K",
+    "passed_draft_reference": true,
+    "events": 0,
+    "relations": 0,
+    "unknown_fields": 17,
+    "api_ms": 1.5125999925658107
+  },
+  {
+    "id": "L",
+    "passed_draft_reference": true,
+    "events": 0,
+    "relations": 0,
+    "unknown_fields": 17,
+    "api_ms": 1.5232999867293984
+  },
+  {
+    "id": "NEGATION",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.5607000095769763
+  },
+  {
+    "id": "COMPLETED",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.4912000042386353
+  },
+  {
+    "id": "NOT_YET",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 10,
+    "api_ms": 1.5423999866470695
+  },
+  {
+    "id": "NO_NEED",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.4749999972991645
+  },
+  {
+    "id": "PENDING",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 10,
+    "api_ms": 1.3754000246990472
+  },
+  {
+    "id": "MONEY",
+    "passed_draft_reference": true,
+    "events": 2,
+    "relations": 2,
+    "unknown_fields": 8,
+    "api_ms": 1.6891999985091388
+  },
+  {
+    "id": "PASSWORD",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.4657999854534864
+  },
+  {
+    "id": "DOCUMENTS",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.5369000029750168
+  },
+  {
+    "id": "INSTALL",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.3969999854452908
+  },
+  {
+    "id": "SCREEN",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.3713999942410737
+  },
+  {
+    "id": "CONTROL",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.5315999917220324
+  },
+  {
+    "id": "CHANNEL",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.468900009058416
+  },
+  {
+    "id": "SECRET",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.5313000185415149
+  },
+  {
+    "id": "VERIFY",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 12,
+    "api_ms": 1.7869999865069985
+  },
+  {
+    "id": "IDENTITY",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.582800003234297
+  },
+  {
+    "id": "LOGIN",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 11,
+    "api_ms": 1.901599986013025
+  },
+  {
+    "id": "REPORTED",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 1,
+    "unknown_fields": 9,
+    "api_ms": 2.0327999955043197
+  },
+  {
+    "id": "DOUBLE_NEGATION",
+    "passed_draft_reference": true,
+    "events": 1,
+    "relations": 0,
+    "unknown_fields": 12,
+    "api_ms": 2.0315000147093087
+  }
+]

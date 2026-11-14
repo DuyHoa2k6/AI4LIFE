@@ -1,0 +1,17 @@
+﻿id,name,group,expected,prediction,status_match,http_status,error,api_ms,provider_http_responses,sources_status,scenario_status,sources_returned,questions_present
+TP-S1,Đệm vốn thay nạp tiền,scam,high,high,True,200,,10352.225700044073,2,no_approved_sources,matched,0,True
+TP-N1,Thanh toán dịch vụ đã nghiệm thu,normal,clear,clear,True,200,,23151.59699996002,2,no_approved_sources,matched,0,False
+TP-S2,Quyền quan sát thay yêu cầu tiền,scam,high,high,True,200,,23541.247199987993,2,no_approved_sources,matched,0,True
+TP-Q1,Yêu cầu cấp quyền chưa có lời hứa,suspicious,suspicious,need_context,False,200,,6068.988699989859,2,no_approved_sources,matched,0,True
+TP-U1,Tệp chưa rõ nguồn,uncertain,need_context,need_context,True,200,,13698.376199987251,2,no_approved_sources,matched,0,True
+TP-S3,Lấy chuỗi sáu ký tự,scam,high,high,True,200,,20234.818099997938,2,no_approved_sources,matched,0,False
+TP-N2,Bài cảnh báo cùng câu chữ,normal,clear,clear,True,200,,7074.422400037292,2,no_approved_sources,matched,0,False
+TP-S4,Phí giữ chỗ nhận tiền cọc,scam,high,need_context,False,200,,17901.073400047608,2,no_approved_sources,matched,0,True
+TP-Q2,Cài tệp APK không rõ lý do,suspicious,suspicious,need_context,False,200,,11153.549999988172,2,no_approved_sources,matched,0,True
+TP-U2,Rút tiền chưa biết điều kiện,uncertain,need_context,need_context,True,200,,14305.956700001843,2,no_approved_sources,matched,0,True
+TP-S5,Tự xưng người quen ngăn xác minh,scam,high,error,False,502,PROVIDER_INVALID_OUTPUT,12805.48420001287,1,,,0,False
+TP-N3,Cuộc hẹn không đòi tài sản,normal,clear,error,False,502,PROVIDER_INVALID_OUTPUT,4096.150899946224,1,,,0,False
+TP-S6,Chỉ thị nhúng kèm phí nhận tài trợ,scam,high,high,True,200,,12936.09520001337,2,no_approved_sources,matched,0,False
+TP-Q3,Cấp quyền tài khoản chưa rõ mục đích,suspicious,suspicious,need_context,False,200,,20834.759599994868,2,no_approved_sources,matched,0,True
+TP-U3,Đòi tiền chưa rõ quan hệ,uncertain,need_context,error,False,504,PROVIDER_TIMEOUT,23482.331099978182,1,,,0,False
+TP-N4,Tự nhập mã chính thức,normal,clear,error,False,504,PROVIDER_TIMEOUT,20759.77939995937,0,,,0,False

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-08",
+  "mode": "two_pass with local synthetic provider fixture (not model quality)",
+  "browser": "installed Chrome headless",
+  "checks": [
+    {
+      "id": "WEB-01 preview does not send",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB-01 real API rendering",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "TP-10 web identifies two_pass",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB Unicode codepoint highlight",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB masked payload only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB stale response ignored",
+      "passed": false,
+      "detail": ""
+    }
+  ],
+  "test_origin": "127.0.0.1:18762; worker copy changes API port only to avoid existing user server",
+  "browser_version": "Chrome/156.0.8078.81",
+  "error": "Error: WEB stale response ignored: \n    at check (file:///C:/AI4Life/AI4LIFE/ScamShield_AI/ScamShield_AI/tests/browser_week2.mjs:14:111)\n    at file:///C:/AI4Life/AI4LIFE/ScamShield_AI/ScamShield_AI/tests/browser_week2.mjs:66:3"
+}

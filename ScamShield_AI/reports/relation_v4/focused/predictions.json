@@ -1,0 +1,567 @@
+[
+  {
+    "id": "RF-01",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 8260.11990000552,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503,
+      503
+    ],
+    "provider_adapter_ms": 8030.3761000031955,
+    "extraction_ms": 8256.052500000806,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "5678e640-ff72-43b1-bb4d-93d30a2be03c",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "RF-05",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 20921.747100001085,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 915,
+      "prompt_tokens": 4780,
+      "total_tokens": 5695
+    },
+    "usage_totals": {
+      "completion_tokens": 1949,
+      "prompt_tokens": 5585,
+      "total_tokens": 7534
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Văn bản đưa ra cảnh báo phòng tránh lừa đảo liên quan đến lời dụ chuyển tiền bảo chứng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không có thông tin về danh tính người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Nội dung mang tính chất cảnh báo, khuyên người đọc không chuyển tiền theo lời dụ.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Trích dẫn lời dụ về việc chuyển tiền bảo chứng trước mới rút được hoa hồng để minh họa cảnh báo.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Không có tài sản nào đang bị đe dọa trực tiếp do đây là bài viết tuyên truyền phòng tránh.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Không phát hiện hành vi mạo danh.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Không có chuỗi hành vi lừa đảo thực tế nào được thực hiện.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ chứng cứ để xác định đây là đoạn văn bản cảnh báo, phòng tránh rủi ro.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Lời dụ được trích dẫn trong văn bản cảnh báo",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chuyển tiền bảo chứng trước thì mới rút được hoa hồng",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Được đưa ra như một ví dụ cần cảnh giác.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Lời khuyên phòng tránh, không thực hiện theo lời dụ",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "đừng chuyển theo lời dụ",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Khuyên người đọc từ chối thực hiện hành động chuyển tiền.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Bản tin cảnh giác với lời dụ chuyển tiền bảo chứng trước thì mới rút được hoa hồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không xác định danh tính cụ thể của người đưa ra lời dụ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người đọc được yêu cầu không chuyển tiền theo lời dụ.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có thông tin về áp lực hay thuyết phục bổ sung.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tiền bảo chứng hoặc tài sản cá nhân có thể gặp rủi ro nếu làm theo lời dụ được nhắc đến.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có biểu hiện mạo danh tổ chức hoặc cá nhân cụ thể trong văn bản.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Văn bản đưa ra cảnh báo phòng tránh, sau đó khẳng định người đọc không phải chuyển khoản và nhắc nhở không làm theo.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Dữ liệu chỉ là một đoạn văn bản cảnh báo mang tính thông tin phòng ngừa, không chứa thông tin chi tiết về một vụ việc cụ thể.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Văn bản trích dẫn một hình thức dụ dỗ chuyển tiền bảo chứng để rút hoa hồng.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "chuyển tiền bảo chứng trước thì mới rút được hoa hồng",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là câu trích dẫn mang tính minh họa cho một thủ đoạn lừa đảo phổ biến.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Khuyến cáo người đọc không thực hiện hành vi chuyển tiền theo lời dụ.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "đừng chuyển theo lời dụ",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là lời khuyên phòng ngừa an toàn cho người đọc.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Văn bản này hoàn toàn là một thông báo tuyên truyền phòng chống tội phạm lừa đảo trực tuyến.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đoạn văn có thể được trích từ một bài viết hướng dẫn nhận diện rủi ro tài chính trên mạng xã hội."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ bối cảnh cụ thể hoặc nguồn gốc của bản tin.",
+            "Không biết liệu người đọc có từng tiếp cận với bên mời gọi chuyển tiền bảo chứng ngoài đời thực hay không."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Văn bản đưa ra cảnh báo phòng tránh lừa đảo liên quan đến lời dụ chuyển tiền bảo chứng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không có thông tin về danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Nội dung mang tính chất cảnh báo, khuyên người đọc không chuyển tiền theo lời dụ.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Trích dẫn lời dụ về việc chuyển tiền bảo chứng trước mới rút được hoa hồng để minh họa cảnh báo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không có tài sản nào đang bị đe dọa trực tiếp do đây là bài viết tuyên truyền phòng tránh.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không phát hiện hành vi mạo danh.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có chuỗi hành vi lừa đảo thực tế nào được thực hiện.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ chứng cứ để xác định đây là đoạn văn bản cảnh báo, phòng tránh rủi ro.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Lời dụ được trích dẫn trong văn bản cảnh báo",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "chuyển tiền bảo chứng trước thì mới rút được hoa hồng",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Được đưa ra như một ví dụ cần cảnh giác.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Lời khuyên phòng tránh, không thực hiện theo lời dụ",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "đừng chuyển theo lời dụ",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Khuyên người đọc từ chối thực hiện hành động chuyển tiền.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 20371.99550000514,
+    "extraction_ms": 20916.646999998193,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chuyển tiền bảo chứng trước thì mới rút được hoa hồng",
+              "start": 22,
+              "end": 75
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "đừng chuyển theo lời dụ",
+              "start": 167,
+              "end": 190
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 5,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "first_provider": 10044.167499996547,
+          "retrieval_parallel": 8.031200006371364,
+          "second_provider": 10328.427199994621,
+          "pipeline_total": 20381.313500001852,
+          "verification_render": 0.9038999996846542
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.983799997717142
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.8488000025390647
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 544.6514999930514,
+    "validation_adjudication_serialization_ms": 5.10010000289185
+  }
+]

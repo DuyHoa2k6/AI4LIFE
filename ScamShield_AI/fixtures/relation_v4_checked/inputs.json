@@ -1,0 +1,87 @@
+[
+  {
+    "id": "RF-01",
+    "name": "NW-02 hồi quy",
+    "input": {
+      "text": "Không gọi là phí đâu anh, đây là dấu xác nhận bằng tiền. Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về."
+    }
+  },
+  {
+    "id": "RF-02",
+    "name": "Neo đối soát thay tên phí",
+    "input": {
+      "text": "Khoản công 11 triệu chỉ được thả sau khi chị chuyển 720 nghìn sang ví em làm neo đối soát. Neo đó chưa đủ thì bên em không cho lấy lại tiền công."
+    }
+  },
+  {
+    "id": "RF-03",
+    "name": "Tham chiếu qua hai tin cùng người nói",
+    "input": {
+      "messages": [
+        {
+          "id": "q1",
+          "speaker": "quanly",
+          "text": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng."
+        },
+        {
+          "id": "q2",
+          "speaker": "khach",
+          "text": "Tại sao phải có bảo chứng?"
+        },
+        {
+          "id": "q3",
+          "speaker": "quanly",
+          "text": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh."
+        }
+      ]
+    }
+  },
+  {
+    "id": "RF-04",
+    "name": "Mua sách trả trước có đối chiếu",
+    "input": {
+      "text": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+      "context": "Tôi chủ động đặt sách trên cửa hàng chính thức. Đã kiểm tra đơn hàng, hóa đơn và đúng tài khoản cửa hàng. Đây là giá sách đã thỏa thuận, không phải tiền để mở khoản hoàn hay rút."
+    }
+  },
+  {
+    "id": "RF-05",
+    "name": "Lời dụ trong bài cảnh báo",
+    "input": {
+      "text": "Cảnh giác với lời dụ “chuyển tiền bảo chứng trước thì mới rút được hoa hồng”. Đây là ví dụ phòng tránh trong bản tin. Người đọc không được yêu cầu gửi khoản tiền nào; đừng chuyển theo lời dụ."
+    }
+  },
+  {
+    "id": "RF-06",
+    "name": "Tiền thuê và quà miễn phí khác người nói",
+    "input": {
+      "messages": [
+        {
+          "id": "u1",
+          "speaker": "chunha",
+          "text": "Gửi tiền thuê phòng tháng này như hợp đồng nhé."
+        },
+        {
+          "id": "u2",
+          "speaker": "thuvien",
+          "text": "Chỉ khi tới dự buổi giới thiệu thì mới nhận sách tặng miễn phí, không nộp phí."
+        }
+      ],
+      "context": "Tôi đã kiểm tra hợp đồng thuê và tài khoản chủ nhà qua kênh đã biết. Thông báo thư viện do người khác gửi, không liên quan việc trả tiền thuê."
+    }
+  },
+  {
+    "id": "RF-07",
+    "name": "Bước nọ và khoản kia chưa xác định",
+    "input": {
+      "text": "Chuyển lại khoản kia trước nhé. Sau bước nọ tôi mới xử lý phần còn lại. Chưa có tin nào giải thích khoản kia hay bước nọ."
+    }
+  },
+  {
+    "id": "RF-08",
+    "name": "Quyền nào chưa biết",
+    "input": {
+      "text": "Một người nhắn bảo tôi bấm đồng ý cấp quyền, nhưng tôi chưa biết đó là quyền thông báo hay quyền điều khiển máy."
+    }
+  }
+]

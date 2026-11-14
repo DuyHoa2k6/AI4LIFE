@@ -1,0 +1,2177 @@
+[
+  {
+    "id": "url_request",
+    "input": {
+      "text": "Đăng nhập tại https://youtubee.com/"
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 69.52610000007553,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu thực hiện qua liên kết có dấu hiệu tên miền đáng ngờ; cần xác minh trước khi làm theo.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Đăng nhập",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Đăng nhập tại https://youtubee.com/",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "login",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập tại https://youtubee.com/",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "tại https://youtubee.com/",
+              "start": 10,
+              "end": 35
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "recommended_actions": [
+        "Không làm theo liên kết chưa xác minh; tự mở ứng dụng hoặc địa chỉ chính thức đã biết để kiểm tra.",
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 9.059299998625647,
+          "retrieval": 1.3603999996121274,
+          "url": 36.12019999854965,
+          "support_total": 36.61900000042806
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.3603999996121274
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "disabled",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "old:a1"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ],
+      "display_summary": "Có yêu cầu thực hiện qua liên kết có dấu hiệu tên miền đáng ngờ; cần xác minh trước khi làm theo.",
+      "display_action": "Không làm theo liên kết chưa xác minh; tự mở ứng dụng hoặc địa chỉ chính thức đã biết để kiểm tra.",
+      "risk_indicators": [
+        {
+          "kind": "url_support",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "message_id": "m1",
+              "quote": "https://youtubee.com/",
+              "start": 14,
+              "end": 35
+            }
+          ],
+          "explanation": "Yêu cầu trong nội dung gắn với liên kết có dấu hiệu tên miền cần xác minh: Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "url_warning",
+    "input": {
+      "text": "Cảnh báo: đừng đăng nhập tại https://youtubee.com/"
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 7.164500000726548,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Cảnh báo: đừng đăng nhập tại https://youtubee.com/",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "observed",
+          "text": "Cảnh báo: đừng đăng nhập tại https://youtubee.com/",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "login",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "đăng nhập",
+              "start": 15,
+              "end": 24
+            },
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: đừng đăng nhập tại https://youtubee.com/",
+              "start": 0,
+              "end": 50
+            },
+            {
+              "message_id": "m1",
+              "quote": "tại https://youtubee.com/",
+              "start": 25,
+              "end": 50
+            },
+            {
+              "message_id": "m1",
+              "quote": "đừng",
+              "start": 10,
+              "end": 14
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 1,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 3.3583000004000496,
+          "retrieval": 0.0,
+          "url": 0.35879999995813705,
+          "support_total": 0.4411000008985866
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "disabled",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "đăng nhập",
+              "start": 15,
+              "end": 24
+            },
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: đừng đăng nhập tại https://youtubee.com/",
+              "start": 0,
+              "end": 50
+            },
+            {
+              "message_id": "m1",
+              "quote": "tại https://youtubee.com/",
+              "start": 25,
+              "end": 50
+            },
+            {
+              "message_id": "m1",
+              "quote": "đừng",
+              "start": 10,
+              "end": 14
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "url_only",
+    "input": {
+      "text": "https://youtubee.com/"
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 6.638000000748434,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 0,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 0,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 2.379399998972076,
+          "retrieval": 0.0,
+          "url": 0.6726000010530697,
+          "support_total": 0.8240000006480841
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "disabled",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "ordinary_domain",
+    "input": {
+      "text": "Đăng nhập tại https://youtube.com/"
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 7.227799998872797,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Đăng nhập",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Đăng nhập tại https://youtube.com/",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "login",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập tại https://youtube.com/",
+              "start": 0,
+              "end": 34
+            },
+            {
+              "message_id": "m1",
+              "quote": "tại https://youtube.com/",
+              "start": 10,
+              "end": 34
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 2.841699999407865,
+          "retrieval": 0.6494000008387957,
+          "url": 0.45000000136496965,
+          "support_total": 0.7506999991164776
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6494000008387957
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtube.com/",
+          "hostname": "youtube.com",
+          "unicode_hostname": "youtube.com",
+          "registered_domain": "youtube.com",
+          "reference_domain": "youtube.com",
+          "label_status": "grounded",
+          "signals": [],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "disabled",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "high_text",
+    "input": {
+      "text": "Gửi mã OTP cho tôi tại https://youtubee.com/"
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 9.744499999214895,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Gửi",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Gửi mã OTP cho tôi tại https://youtubee.com/",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "provide_code",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi tại https://youtubee.com/",
+              "start": 0,
+              "end": 44
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi tại https://youtubee.com/",
+              "start": 4,
+              "end": 44
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Không làm theo liên kết chưa xác minh; tự mở ứng dụng hoặc địa chỉ chính thức đã biết để kiểm tra.",
+        "Không gửi mã hoặc mật khẩu; tự kiểm tra yêu cầu bằng kênh chính thức quen dùng."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 3.490600000077393,
+          "retrieval": 1.4590999999199994,
+          "url": 1.0126999986823648,
+          "support_total": 2.098900000419235
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.4590999999199994
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "disabled",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "old:a1"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ],
+      "display_summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "display_action": "Không làm theo liên kết chưa xác minh; tự mở ứng dụng hoặc địa chỉ chính thức đã biết để kiểm tra.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi tại https://youtubee.com/",
+              "start": 0,
+              "end": 44
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi tại https://youtubee.com/",
+              "start": 4,
+              "end": 44
+            }
+          ],
+          "explanation": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản."
+        },
+        {
+          "kind": "url_support",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "https://youtubee.com/",
+              "start": 23,
+              "end": 44
+            }
+          ],
+          "explanation": "Yêu cầu trong nội dung gắn với liên kết có dấu hiệu tên miền cần xác minh: Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "separate_context",
+    "input": {
+      "text": "Đăng nhập tại đây. Ví dụ tên miền: https://youtubee.com/"
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 8.537100000467035,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Đăng nhập",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Đăng nhập tại đây.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "login",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập tại đây.",
+              "start": 0,
+              "end": 18
+            },
+            {
+              "message_id": "m1",
+              "quote": "tại đây",
+              "start": 10,
+              "end": 17
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 3.3385999995516613,
+          "retrieval": 0.7023999987723073,
+          "url": 0.459999999293359,
+          "support_total": 1.5146000005188398
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.7023999987723073
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "disabled",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "urgent",
+    "input": {
+      "text": "Hiện tại tôi bị giữ lại và không được rời đi."
+    },
+    "support_fixture": "none; actual production index; URL network disabled",
+    "http_status": 200,
+    "testclient_ms": 6.848600000012084,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Người dùng cho biết đang bị hạn chế tự do hoặc bị cưỡng ép. Cần ưu tiên an toàn trước khi thu thập thêm thông tin.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "Hiện tại tôi bị giữ lại và không được rời đi.",
+          "evidence_refs": [
+            "safe:e1",
+            "safe:e2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Hiện tại tôi bị giữ lại và không được rời đi.",
+          "evidence_refs": [
+            "safe:e1",
+            "safe:e2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "safe:e1",
+          "action": "other",
+          "description": "restrict_movement",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hiện tại tôi bị giữ lại và không được rời đi.",
+              "start": 0,
+              "end": 45
+            },
+            {
+              "message_id": "m1",
+              "quote": "bị giữ lại",
+              "start": 13,
+              "end": 23
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "safe:e2",
+          "action": "other",
+          "description": "restrict_movement",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hiện tại tôi bị giữ lại và không được rời đi.",
+              "start": 0,
+              "end": 45
+            },
+            {
+              "message_id": "m1",
+              "quote": "không được rời đi",
+              "start": 27,
+              "end": 44
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [
+        "Bạn có thể đọc và trả lời ở đây một cách an toàn không? Bạn có thể bỏ qua câu hỏi này."
+      ],
+      "recommended_actions": [
+        "Nếu có thể làm an toàn, liên hệ người tin cậy hoặc hỗ trợ khẩn cấp phù hợp tại nơi bạn đang ở; tránh đối đầu."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 2.261499999804073
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Ưu tiên tín hiệu an toàn; chưa đối chiếu nguồn và URL."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Người dùng cho biết đang bị hạn chế tự do hoặc bị cưỡng ép. Cần ưu tiên an toàn trước khi thu thập thêm thông tin.",
+      "display_action": "Nếu có thể làm an toàn, liên hệ người tin cậy hoặc hỗ trợ khẩn cấp phù hợp tại nơi bạn đang ở; tránh đối đầu.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hiện tại tôi bị giữ lại và không được rời đi.",
+              "start": 0,
+              "end": 45
+            },
+            {
+              "message_id": "m1",
+              "quote": "bị giữ lại",
+              "start": 13,
+              "end": 23
+            },
+            {
+              "message_id": "m1",
+              "quote": "không được rời đi",
+              "start": 27,
+              "end": 44
+            }
+          ],
+          "explanation": "Người dùng cho biết đang bị hạn chế tự do hoặc bị cưỡng ép. Cần ưu tiên an toàn trước khi thu thập thêm thông tin."
+        }
+      ],
+      "safety_urgency": "urgent",
+      "urgency_evidence": [
+        {
+          "message_id": "m1",
+          "quote": "Hiện tại tôi bị giữ lại và không được rời đi.",
+          "start": 0,
+          "end": 45
+        },
+        {
+          "message_id": "m1",
+          "quote": "bị giữ lại",
+          "start": 13,
+          "end": 23
+        },
+        {
+          "message_id": "m1",
+          "quote": "không được rời đi",
+          "start": 27,
+          "end": 44
+        }
+      ],
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "approved_fixture",
+    "input": {
+      "text": "Gửi mã OTP cho tôi."
+    },
+    "support_fixture": "synthetic approved record; NOT a real approved source",
+    "http_status": 200,
+    "testclient_ms": 7.143100001485436,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Gửi",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Gửi mã OTP cho tôi.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "provide_code",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi.",
+              "start": 0,
+              "end": 19
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi",
+              "start": 4,
+              "end": 18
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Không gửi mã hoặc mật khẩu; tự kiểm tra yêu cầu bằng kênh chính thức quen dùng.",
+        "Đối chiếu yêu cầu qua đầu mối chính thức độc lập; không dùng thông tin liên hệ do người gửi tự cung cấp."
+      ],
+      "answer_to_user": null,
+      "source_matches": [
+        {
+          "source_id": "TEST-ONLY",
+          "url": "https://test.gov.vn/fixture",
+          "quote": "Không gửi mã OTP hoặc mật khẩu cho người khác.",
+          "match_level": "behavior_support",
+          "reviewed_at": "2020-01-01",
+          "valid_until": "2099-01-01"
+        }
+      ],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 2.891599999202299,
+          "retrieval": 0.3973000002588378,
+          "url": 0.0,
+          "support_total": 0.5535000000236323
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "matched",
+          "retrieved_count": 1,
+          "elapsed_ms": 0.3973000002588378
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "display_action": "Không gửi mã hoặc mật khẩu; tự kiểm tra yêu cầu bằng kênh chính thức quen dùng.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi.",
+              "start": 0,
+              "end": 19
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi",
+              "start": 4,
+              "end": 18
+            }
+          ],
+          "explanation": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản."
+        },
+        {
+          "kind": "official_behavior_support",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi.",
+              "start": 0,
+              "end": 19
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi",
+              "start": 4,
+              "end": 18
+            }
+          ],
+          "explanation": "Yêu cầu đã trích có hành vi tương ứng với tài liệu chính thống đã duyệt; điều này không xác minh danh tính hoặc chứng minh vụ việc."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "candidate_fixture",
+    "input": {
+      "text": "Gửi mã OTP cho tôi."
+    },
+    "support_fixture": "synthetic candidate record",
+    "http_status": 200,
+    "testclient_ms": 5.972900000415393,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Gửi",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Gửi mã OTP cho tôi.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "provide_code",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi.",
+              "start": 0,
+              "end": 19
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi",
+              "start": 4,
+              "end": 18
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Không gửi mã hoặc mật khẩu; tự kiểm tra yêu cầu bằng kênh chính thức quen dùng."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 2.639800000906689,
+          "retrieval": 0.13860000035492703,
+          "url": 0.0,
+          "support_total": 0.22330000138026662
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.13860000035492703
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "display_action": "Không gửi mã hoặc mật khẩu; tự kiểm tra yêu cầu bằng kênh chính thức quen dùng.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi",
+              "start": 0,
+              "end": 3
+            },
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP cho tôi.",
+              "start": 0,
+              "end": 19
+            },
+            {
+              "message_id": "m1",
+              "quote": "mã OTP cho tôi",
+              "start": 4,
+              "end": 18
+            }
+          ],
+          "explanation": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "redirect_fixture",
+    "input": {
+      "text": "Đăng nhập tại https://example.com/"
+    },
+    "support_fixture": "synthetic redirect observation; no website contacted",
+    "http_status": 200,
+    "testclient_ms": 8.863400000336696,
+    "response": {
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu thực hiện qua liên kết có dấu hiệu tên miền đáng ngờ; cần xác minh trước khi làm theo.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Đăng nhập",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Đăng nhập tại https://example.com/",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "login",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập tại https://example.com/",
+              "start": 0,
+              "end": 34
+            },
+            {
+              "message_id": "m1",
+              "quote": "tại https://example.com/",
+              "start": 10,
+              "end": 34
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "recommended_actions": [
+        "Không làm theo liên kết chưa xác minh; tự mở ứng dụng hoặc địa chỉ chính thức đã biết để kiểm tra.",
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 2.9482999998435844,
+          "retrieval": 0.7439000000886153,
+          "url": 0.9285999985877424,
+          "support_total": 1.4493999988189898
+        },
+        "decision_version": "local-rules-2.1-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.7439000000886153
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://example.com/",
+          "hostname": "example.com",
+          "unicode_hostname": "example.com",
+          "registered_domain": "example.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "redirect_domain_change",
+              "level": "info",
+              "detail": "Liên kết chuyển sang miền youtubee.com; chuyển miền không tự chứng minh lừa đảo."
+            },
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Đích sau chuyển hướng: Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "checked",
+            "hops": [
+              {
+                "display_url": "https://example.com/",
+                "http_status": 302
+              },
+              {
+                "display_url": "https://youtubee.com/",
+                "http_status": 200
+              }
+            ],
+            "final_url": "https://youtubee.com/",
+            "final_hostname": "youtubee.com",
+            "final_registered_domain": "youtubee.com",
+            "final_http_status": 200,
+            "reachable": true,
+            "elapsed_ms": 0.0,
+            "reason": null
+          }
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "old:a1"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ],
+      "display_summary": "Có yêu cầu thực hiện qua liên kết có dấu hiệu tên miền đáng ngờ; cần xác minh trước khi làm theo.",
+      "display_action": "Không làm theo liên kết chưa xác minh; tự mở ứng dụng hoặc địa chỉ chính thức đã biết để kiểm tra.",
+      "risk_indicators": [
+        {
+          "kind": "url_support",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "message_id": "m1",
+              "quote": "https://example.com/",
+              "start": 14,
+              "end": 34
+            }
+          ],
+          "explanation": "Yêu cầu trong nội dung gắn với liên kết có dấu hiệu tên miền cần xác minh: Đích sau chuyển hướng: Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  }
+]

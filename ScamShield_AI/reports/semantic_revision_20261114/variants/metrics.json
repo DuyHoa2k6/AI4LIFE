@@ -1,0 +1,7 @@
+{
+  "cases": 20,
+  "label_constraints_passed": 19,
+  "false_active_cases": 0,
+  "public_development_only": true,
+  "independent_holdout": false
+}

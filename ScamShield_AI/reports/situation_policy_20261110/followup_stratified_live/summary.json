@@ -1,0 +1,61 @@
+{
+  "scope": "14 new synthetic follow-up cases sealed after regression changes. Internal functional evaluation, not independently collected real-world accuracy. Labels excluded from provider payloads.",
+  "mode": "two_pass",
+  "planned": 3,
+  "batch_wall_ms": 129380.11339999503,
+  "provider_attempts": 11,
+  "provider_http_responses": 11,
+  "executed": 3,
+  "successful": 3,
+  "errors": 0,
+  "not_run": 0,
+  "completion_rate": 1.0,
+  "matrix": {
+    "need_context": {
+      "need_context": 1
+    },
+    "suspicious": {
+      "suspicious": 1
+    },
+    "high": {
+      "high": 1
+    }
+  },
+  "high_binary_successful_only": {},
+  "high_precision_successful_only": null,
+  "high_recall_successful_only": null,
+  "status_matches_successful": 3,
+  "status_match_rate_successful": 1.0,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 3,
+    "p50_ms": 33060.76469999971,
+    "p95_ms": 41035.7001000084
+  },
+  "latency_successful": {
+    "n": 3,
+    "p50_ms": 33060.76469999971,
+    "p95_ms": 41035.7001000084
+  },
+  "first_request_ms": 25243.57210000744,
+  "warm_successful": {
+    "n": 2,
+    "p50_ms": 33060.76469999971,
+    "p95_ms": 41035.7001000084
+  },
+  "provider_adapter_successful": {
+    "n": 3,
+    "p50_ms": 32863.20720001822,
+    "p95_ms": 40828.856200008886
+  },
+  "exact_quotes": 7,
+  "quote_count": 7,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

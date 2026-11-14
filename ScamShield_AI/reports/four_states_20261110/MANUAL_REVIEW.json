@@ -1,0 +1,162 @@
+[
+  {
+    "id": "H01",
+    "target": "high",
+    "final_status": "high",
+    "target_match": true,
+    "interpretation": "Yêu cầu giao OTP cho người khác để họ đăng nhập là hành vi trực tiếp đe dọa tài khoản; không phải người dùng tự nhập mã trong ứng dụng của mình.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "N01",
+    "target": "clear",
+    "final_status": "clear",
+    "target_match": true,
+    "interpretation": "Chỉ thông báo lịch và đề nghị mang sổ; không có yêu cầu tiền, mã, quyền truy cập hoặc lợi ích đáng ngờ. Nếu lỗi provider, chưa thể coi đó là clear.",
+    "first_http_status": 503,
+    "final_http_status": 200,
+    "retried": true
+  },
+  {
+    "id": "C01",
+    "target": "need_context",
+    "final_status": "need_context",
+    "target_match": true,
+    "interpretation": "Chưa biết “một bước” là gì. Không được tự đoán đó là chuyển phí hoặc cung cấp mã; cần hỏi thao tác và kênh thực hiện.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "S01",
+    "target": "suspicious",
+    "final_status": "high",
+    "target_match": false,
+    "interpretation": "Yêu cầu giao quyền điều khiển đã rõ và đáng lo, nhưng câu “chưa giải thích dùng quyền này để làm gì” không nêu lợi ích hay điều kiện nhận lợi ích. Mục tiêu chốt trước là suspicious; high do ghép câu thiếu mục đích thành inducement là nâng mức thiếu căn cứ theo chính sách hiện hành.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "H02",
+    "target": "high",
+    "final_status": "high",
+    "target_match": true,
+    "interpretation": "Có số tiền phí cụ thể và điều kiện trả phí trước khi nhận thưởng. Mức high cần dựa trên liên hệ giữa khoản chuyển và phần thưởng, không chỉ từ “chuyển”.",
+    "first_http_status": 503,
+    "final_http_status": 200,
+    "retried": true
+  },
+  {
+    "id": "N02",
+    "target": "clear",
+    "final_status": "clear",
+    "target_match": true,
+    "interpretation": "Câu phương ngữ là nhắc trả khoản vay. Bối cảnh khai báo xác nhận mục đích và khoản 50 nghìn đã có, không phải nộp phí để được nhận lợi ích mới. Biết người gửi không miễn trừ mọi rủi ro, nhưng mục đích khoản trả phải được xét.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "C02",
+    "target": "need_context",
+    "final_status": "need_context",
+    "target_match": true,
+    "interpretation": "Chỉ có yêu cầu chuyển khoản, thiếu người nhận, mục đích và giao dịch liên quan. Chưa đủ để khẳng định lừa đảo hoặc coi là giao dịch bình thường.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "S02",
+    "target": "suspicious",
+    "final_status": "need_context",
+    "target_match": false,
+    "interpretation": "Yêu cầu cài APK qua tin riêng đã rõ, nguồn và mục đích chưa rõ. Mục tiêu là suspicious và hỏi thêm nguồn cài; không tự kết luận ứng dụng độc hại, không tự tạo quan hệ “cài để nhận thưởng”.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "H03",
+    "target": "high",
+    "final_status": "high",
+    "target_match": true,
+    "interpretation": "Đổi tên phí thành “tiền đồng bộ” và mở đầu bằng “không thu phí” không xóa yêu cầu đưa 900 nghìn sang ví người gửi trước khi nhận 18 triệu.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "N03",
+    "target": "clear",
+    "final_status": "clear",
+    "target_match": true,
+    "interpretation": "Câu yêu cầu mật khẩu/OTP nằm trong bài cảnh báo và có phủ định rõ. Gán nó thành yêu cầu trực tiếp sẽ là cảnh báo nhầm.",
+    "first_http_status": 503,
+    "final_http_status": 200,
+    "retried": true
+  },
+  {
+    "id": "C03",
+    "target": "need_context",
+    "final_status": "need_context",
+    "target_match": true,
+    "interpretation": "Chưa xác định “cái đó” là tài liệu, tiền, OTP hay thứ khác; việc “hoàn tất” cũng không có đối tượng. Cần hỏi rõ, không mặc định đó là mã bí mật.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "S03",
+    "target": "suspicious",
+    "final_status": "suspicious",
+    "target_match": true,
+    "interpretation": "Nhãn youtube.com dẫn tới một hostname khác. Đây là dấu hiệu kỹ thuật đi cùng yêu cầu đăng nhập, đủ cần xác minh; đích .invalid bị chặn mạng, chưa chứng minh một trang phishing đang hoạt động.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "H04",
+    "target": "high",
+    "final_status": "error",
+    "target_match": false,
+    "interpretation": "Cùng một người tự nhận cán bộ trợ cấp yêu cầu cài ứng dụng và giao quyền điều khiển làm điều kiện nhận 8 triệu. Phải nối đúng các tin của nguoi_la, không gán câu hỏi của nguoi_dung thành lời dụ.",
+    "first_http_status": 502,
+    "final_http_status": 502,
+    "retried": true
+  },
+  {
+    "id": "N04",
+    "target": "clear",
+    "final_status": "need_context",
+    "target_match": false,
+    "interpretation": "Người dùng mô tả tự nhập OTP trong ứng dụng đã biết, không giao mã cho người khác. Phải phân biệt thao tác tự xác nhận với yêu cầu tiết lộ mã.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "C04",
+    "target": "need_context",
+    "final_status": "need_context",
+    "target_match": true,
+    "interpretation": "Có cấu trúc điều kiện nhưng hành động “bước kia” chưa được định danh. Cấu trúc điều kiện đơn thuần không đủ để nâng high.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  },
+  {
+    "id": "S04",
+    "target": "suspicious",
+    "final_status": "need_context",
+    "target_match": false,
+    "interpretation": "Có yêu cầu chuyển kênh và giữ kín, chưa có tiền/mã/quyền. Mục tiêu suspicious là thận trọng với hành vi cô lập; need_context có thể phản ánh chưa nhận ra mục đích, nhưng khác nhãn mục tiêu đã khóa và phải báo riêng, không sửa nhãn sau chạy.",
+    "first_http_status": 200,
+    "final_http_status": 200,
+    "retried": false
+  }
+]

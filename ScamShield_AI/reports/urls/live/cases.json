@@ -1,0 +1,92 @@
+[
+  {
+    "id": "URL-01",
+    "name": "Yêu cầu OTP và miền gần giống",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 23960.54279999953,
+    "manual_review": "pending"
+  },
+  {
+    "id": "URL-02",
+    "name": "Bài cảnh báo nhắc tên gần giống",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 13087.055900003179,
+    "manual_review": "pending"
+  },
+  {
+    "id": "URL-03",
+    "name": "Tự đọc nội dung tại miền tham chiếu",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 10431.57130000327,
+    "manual_review": "pending"
+  },
+  {
+    "id": "URL-04",
+    "name": "Đích ẩn khác nhãn và yêu cầu đăng nhập",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 12418.886199993722,
+    "manual_review": "pending"
+  },
+  {
+    "id": "URL-05",
+    "name": "Tên miền tiếng Việt không tự thành độc hại",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 11276.236300000164,
+    "manual_review": "pending"
+  },
+  {
+    "id": "URL-06",
+    "name": "Bài cảnh báo có nhãn và đích không khớp",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 14035.921199996665,
+    "manual_review": "pending"
+  }
+]

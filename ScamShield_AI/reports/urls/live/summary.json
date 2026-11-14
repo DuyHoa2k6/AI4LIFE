@@ -1,0 +1,65 @@
+{
+  "scope": "6 public synthetic functional checks, authored labels; not independent URL reputation or overall accuracy. No destinations opened.",
+  "mode": "two_pass",
+  "planned": 6,
+  "batch_wall_ms": 103281.6004999986,
+  "provider_attempts": 15,
+  "provider_http_responses": 15,
+  "executed": 6,
+  "successful": 4,
+  "errors": 2,
+  "not_run": 0,
+  "completion_rate": 0.6666666666666666,
+  "matrix": {
+    "scam": {
+      "high": 1
+    },
+    "normal": {
+      "clear": 2,
+      "error": 2
+    },
+    "suspicious": {
+      "suspicious": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 1,
+    "TN": 2
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 1.0,
+  "status_matches_successful": 4,
+  "status_match_rate_successful": 1.0,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 6,
+    "p50_ms": 12418.886199993722,
+    "p95_ms": 23960.54279999953
+  },
+  "latency_successful": {
+    "n": 4,
+    "p50_ms": 12418.886199993722,
+    "p95_ms": 23960.54279999953
+  },
+  "first_request_ms": 23960.54279999953,
+  "warm_successful": {
+    "n": 3,
+    "p50_ms": 12418.886199993722,
+    "p95_ms": 13087.055900003179
+  },
+  "provider_adapter_successful": {
+    "n": 4,
+    "p50_ms": 12243.559700000333,
+    "p95_ms": 23699.761700001545
+  },
+  "exact_quotes": 7,
+  "quote_count": 7,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

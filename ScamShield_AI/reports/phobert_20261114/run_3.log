@@ -1,0 +1,4 @@
+{"prepared": "train", "count": 2}
+{"prepared": "validation", "count": 4}
+{"stage": "spans", "epochs": 1, "train_first": 1.7509227991104126, "train_last": 1.7509227991104126, "seconds": 1.4366320000044652}
+{"saved": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\artifacts\\phobert\\finetune_step", "total_seconds": 5.292597399995429}

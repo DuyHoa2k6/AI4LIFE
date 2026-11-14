@@ -1,0 +1,12 @@
+{
+  "simulation": true,
+  "request": {
+    "text": "Ví dụ tiếng Việt cho lỗi provider."
+  },
+  "status_code": 504,
+  "response": {
+    "code": "PROVIDER_TIMEOUT",
+    "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+    "request_id": "2f169b89-c774-4a4e-b317-34a34747955c"
+  }
+}

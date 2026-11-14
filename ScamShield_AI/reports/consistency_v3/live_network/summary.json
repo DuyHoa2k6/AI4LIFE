@@ -1,0 +1,64 @@
+{
+  "scope": "30 public synthetic functional checks, 5 per user-selected behavior family; not independent or real-user accuracy. Reference judgments authored by implementer; no tuning in test run.",
+  "mode": "two_pass",
+  "planned": 6,
+  "batch_wall_ms": 55770.42189997155,
+  "provider_attempts": 12,
+  "provider_http_responses": 12,
+  "executed": 6,
+  "successful": 6,
+  "errors": 0,
+  "not_run": 0,
+  "completion_rate": 1.0,
+  "matrix": {
+    "scam": {
+      "high": 3
+    },
+    "normal": {
+      "clear": 2
+    },
+    "uncertain": {
+      "need_context": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 3,
+    "TN": 2
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 1.0,
+  "status_matches_successful": 6,
+  "status_match_rate_successful": 1.0,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 6,
+    "p50_ms": 6281.1900999513455,
+    "p95_ms": 6632.4316000100225
+  },
+  "latency_successful": {
+    "n": 6,
+    "p50_ms": 6281.1900999513455,
+    "p95_ms": 6632.4316000100225
+  },
+  "first_request_ms": 6281.1900999513455,
+  "warm_successful": {
+    "n": 5,
+    "p50_ms": 6514.619100023992,
+    "p95_ms": 6632.4316000100225
+  },
+  "provider_adapter_successful": {
+    "n": 6,
+    "p50_ms": 6004.29010001244,
+    "p95_ms": 6099.917899991851
+  },
+  "exact_quotes": 11,
+  "quote_count": 11,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "H01",
+    "name": "Giao mã rõ ràng",
+    "input": {
+      "text": "Gửi mã OTP vừa nhận trên điện thoại cho tôi. Tôi cần mã đó để đăng nhập tài khoản của bạn."
+    }
+  },
+  {
+    "id": "N01",
+    "name": "Lịch họp bình thường",
+    "input": {
+      "text": "Mai nhóm họp lúc 15 giờ tại phòng B203. Bạn mang theo sổ ghi chép nhé."
+    }
+  },
+  {
+    "id": "C01",
+    "name": "Chưa nói bước xử lý",
+    "input": {
+      "text": "Lệnh rút tiền của tôi đang bị treo. Người bên kia bảo phải làm thêm một bước nhưng chưa nói bước gì."
+    }
+  },
+  {
+    "id": "S01",
+    "name": "Quyền điều khiển chưa rõ mục đích",
+    "input": {
+      "text": "Tôi tự nhận là nhân viên hỗ trợ. Bạn hãy bật quyền điều khiển máy từ xa cho tôi. Tôi chưa giải thích dùng quyền này để làm gì."
+    }
+  },
+  {
+    "id": "H02",
+    "name": "Nộp phí trước khi nhận thưởng",
+    "input": {
+      "text": "Bạn trúng phần quà 20 triệu. Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước, có tiền phí thì tôi mới giải ngân phần thưởng."
+    }
+  },
+  {
+    "id": "N02",
+    "name": "Đòi khoản vay bằng phương ngữ",
+    "input": {
+      "text": "Chuyển tiền cho ta lại đi mi, hồi sáng mi ăn mượn của ta.",
+      "context": "Người nhắn là bạn cùng lớp đã được tôi xác nhận qua số quen dùng. Sáng nay tôi mượn bạn 50 nghìn, nay bạn nhắc trả đúng khoản đó; không có phí mới hoặc đường dẫn."
+    }
+  },
+  {
+    "id": "C02",
+    "name": "Chuyển tiền chưa rõ mục đích",
+    "input": {
+      "text": "Chuyển khoản cho tôi."
+    }
+  },
+  {
+    "id": "S02",
+    "name": "APK không rõ nhà phát hành",
+    "input": {
+      "text": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng. Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này."
+    }
+  },
+  {
+    "id": "H03",
+    "name": "Biến thể tiền đồng bộ",
+    "input": {
+      "text": "Không thu phí gì cả. Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này."
+    }
+  },
+  {
+    "id": "N03",
+    "name": "Bài cảnh báo trích lời dụ",
+    "input": {
+      "text": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”. Đây là lời dụ được trích để cảnh báo. Nhà trường không yêu cầu bạn làm như vậy."
+    }
+  },
+  {
+    "id": "C03",
+    "name": "Đối tượng thao tác chưa xác định",
+    "input": {
+      "text": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+      "context": "Tôi chỉ nhận được đúng câu này; không có tin nhắn trước để biết “cái đó” là gì hoặc hoàn tất việc nào."
+    }
+  },
+  {
+    "id": "S03",
+    "name": "Nhãn liên kết khác đích",
+    "input": {
+      "text": "Hãy mở https://youtube.com để đăng nhập. Chưa có thông tin ai gửi yêu cầu hoặc lý do phải đăng nhập.",
+      "links": [
+        {
+          "id": "url-1",
+          "message_id": "m1",
+          "url": "https://youtube.com.xac-minh.invalid/login",
+          "display_text": "https://youtube.com",
+          "origin": "dom_href"
+        }
+      ]
+    }
+  },
+  {
+    "id": "H04",
+    "name": "Chuỗi hành vi qua nhiều tin",
+    "input": {
+      "messages": [
+        {
+          "id": "a",
+          "speaker": "nguoi_la",
+          "text": "Tôi bên tổ xét trợ cấp. Hồ sơ của bạn có khoản hỗ trợ 8 triệu."
+        },
+        {
+          "id": "b",
+          "speaker": "nguoi_dung",
+          "text": "Tôi phải làm gì để nhận?"
+        },
+        {
+          "id": "c",
+          "speaker": "nguoi_la",
+          "text": "Bạn cài ứng dụng tôi gửi rồi bật quyền điều khiển máy cho tôi. Đây là điều kiện bắt buộc, không làm thì không nhận được 8 triệu."
+        }
+      ]
+    }
+  },
+  {
+    "id": "N04",
+    "name": "Tự dùng mã trong ứng dụng",
+    "input": {
+      "text": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình. Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình."
+    }
+  },
+  {
+    "id": "C04",
+    "name": "Tham chiếu bước kia bị thiếu",
+    "input": {
+      "text": "Bạn làm bước kia trước thì bên tôi mới xử lý tiếp được.",
+      "context": "Tôi không có hướng dẫn trước đó; chưa biết “bước kia” là thao tác gì và đang xử lý việc gì."
+    }
+  },
+  {
+    "id": "S04",
+    "name": "Chuyển sang kênh riêng và giữ kín",
+    "input": {
+      "text": "Một người chưa xác minh yêu cầu tôi chuyển toàn bộ cuộc trao đổi sang tài khoản chat riêng của họ và giữ kín với nhóm chung. Họ chưa yêu cầu tiền, mật khẩu hoặc mã."
+    }
+  }
+]

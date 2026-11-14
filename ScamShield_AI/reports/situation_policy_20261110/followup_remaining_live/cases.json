@@ -1,0 +1,107 @@
+[
+  {
+    "id": "F06",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chưa có yêu cầu chuyển tiền hay giao thông tin; hỏi bước tiếp theo.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 16487.970300004235,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F07",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi thao tác cụ thể trong thủ tục, không tự thêm phí hay mã.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 4481.4017999888165,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F08",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chưa rõ là khoản nợ, mua bán hay tiền để nhận lợi ích.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 5578.344200010179,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F10",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Thay người nhận tiền và yêu cầu thanh toán trước, xác minh sau.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 37877.09259999974,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F11",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Thu giấy tờ nhạy cảm qua chat; không mặc định high chỉ vì có lợi ích.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F13",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Hai yêu cầu của cùng người gửi tạo chuỗi lộ dữ liệu tài chính.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F14",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đổi cách gọi phí nhưng vẫn phải nộp thêm tiền để rút số dư.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  }
+]

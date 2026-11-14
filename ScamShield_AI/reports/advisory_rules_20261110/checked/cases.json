@@ -1,0 +1,130 @@
+[
+  {
+    "id": "H01",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Giao mã rõ ràng",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 11199.499599999399,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S01",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Quyền điều khiển chưa rõ mục đích",
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7313.195800001267,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S02",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "APK không rõ nhà phát hành",
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 33212.47179999773,
+    "manual_review": "pending"
+  },
+  {
+    "id": "H03",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Biến thể tiền đồng bộ",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 13583.579700003611,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N03",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Bài cảnh báo trích lời dụ",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 12115.438300010283,
+    "manual_review": "pending"
+  },
+  {
+    "id": "C03",
+    "group": "uncertain",
+    "target_status": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Đối tượng thao tác chưa xác định",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 20447.517299995525,
+    "manual_review": "pending"
+  },
+  {
+    "id": "S03",
+    "group": "review",
+    "target_status": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nhãn liên kết khác đích",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 17645.070500002475,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N04",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự dùng mã trong ứng dụng",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 14221.458200001507,
+    "manual_review": "pending"
+  }
+]

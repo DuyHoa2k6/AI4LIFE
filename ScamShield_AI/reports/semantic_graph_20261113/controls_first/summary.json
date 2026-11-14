@@ -1,0 +1,18 @@
+{
+  "cases": 42,
+  "matched": 40,
+  "failed": [
+    {
+      "id": "E-two",
+      "expected": "not_high",
+      "actual": "high"
+    },
+    {
+      "id": "F-two",
+      "expected": "not_high",
+      "actual": "high"
+    }
+  ],
+  "external_requests": 0,
+  "scope": "authored development contrast suite; not independent accuracy"
+}

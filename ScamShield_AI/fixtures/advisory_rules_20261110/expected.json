@@ -1,0 +1,85 @@
+{
+  "scope": "Known public regression probes after advisory-rule change, not independent evaluation. No tuning during this run.",
+  "cases": [
+    {
+      "id": "H01",
+      "group": "scam",
+      "target_status": "high",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Giao mã rõ ràng"
+    },
+    {
+      "id": "S01",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "Quyền điều khiển chưa rõ mục đích"
+    },
+    {
+      "id": "S02",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "APK không rõ nhà phát hành"
+    },
+    {
+      "id": "H03",
+      "group": "scam",
+      "target_status": "high",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Biến thể tiền đồng bộ"
+    },
+    {
+      "id": "N03",
+      "group": "normal",
+      "target_status": "clear",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Bài cảnh báo trích lời dụ"
+    },
+    {
+      "id": "C03",
+      "group": "uncertain",
+      "target_status": "need_context",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true,
+      "manual_focus": "Đối tượng thao tác chưa xác định"
+    },
+    {
+      "id": "S03",
+      "group": "review",
+      "target_status": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "Nhãn liên kết khác đích"
+    },
+    {
+      "id": "N04",
+      "group": "normal",
+      "target_status": "clear",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Tự dùng mã trong ứng dụng"
+    }
+  ]
+}

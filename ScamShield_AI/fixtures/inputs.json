@@ -1,0 +1,48 @@
+[
+  {
+    "id": "SS-001",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Chị tuyển người đánh giá sản phẩm, làm thử miễn phí."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn sau em ứng 500.000 đồng, xong sẽ hoàn gốc và hoa hồng."
+        },
+        {
+          "id": "m3",
+          "speaker": "sender",
+          "text": "Muốn rút số dư em chuyển thêm 2 triệu để mở khóa, trong 15 phút nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "SS-002",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh giác với tin nhắn “ứng tiền làm nhiệm vụ để nhận hoa hồng”. Nếu gặp hãy báo quản trị viên."
+        }
+      ]
+    }
+  },
+  {
+    "id": "SS-003",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Lệnh rút bị treo. Em đợi chị kiểm tra nhé."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "run_id": "baseline",
+  "utc": "2026-11-14T02:29:00.918876+00:00",
+  "policy": "baseline",
+  "checkpoint": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\artifacts\\phobert\\smoke_heads",
+  "model_version": "72527397e1e914e9c67ef4441f3a2a5d4cab98bb2abc63f13b6519b383d7cff5",
+  "dataset_version": "evaluation-case-1.0",
+  "datasets": {
+    "evaluation\\data\\novel_cases.jsonl": "a7c858a932555ff6ea1c8980756e980e7281de81ea0ca1d8297982016fbfed9a",
+    "evaluation\\data\\regression_cases.jsonl": "d22f66127df9cbb65dd43a0244ee5ba826e711a22cfb970e19a02112e980c071"
+  },
+  "acceptance_sha256": "fb926002d158b2f9cb2ae1793c74844aec13dee00d5fa2595e91f566f3eecbb4",
+  "baseline_policy_sha256": "5b0b8278a1c24479265cfc5724df7a3e160671f1770a866a845ad7d3d2254b81",
+  "policy_file_sha256": "5b0b8278a1c24479265cfc5724df7a3e160671f1770a866a845ad7d3d2254b81",
+  "label_mapping": "a7e520c93aa605da88d82807627ea4e59e98c0681ddbdfd39ffab8a1e0f8b63f",
+  "preprocessing": "3f441f4a01f8ef489f68391247f889f8835d41e6f7154a8501f976a0f244c340",
+  "seed": 31,
+  "n": 51,
+  "planned_inference_calls": 102,
+  "max_wall_seconds": 1200,
+  "scope": "public_draft; no independent holdout",
+  "reviewed_count": 0,
+  "runtime_expected_fields": "none; messages whitelist only"
+}

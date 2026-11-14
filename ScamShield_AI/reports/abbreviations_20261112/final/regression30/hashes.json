@@ -1,0 +1,14 @@
+{
+  "backend\\local_observation\\analyzer.py": "4f567ff36a2f20c425da5a676d8edb6431d4af41e30ad7a6c009099f7a99880a",
+  "backend\\local_observation\\schema.py": "be2200846857858f1795b89a9435116f58de62da64b6537fc1f38bbfadbe242e",
+  "backend\\local_observation\\text.py": "5ef808dc8d6124959f1c5d7b08b265b6ba8dafda7e8940e495339a3fda736be3",
+  "backend\\local_observation\\segmentation.py": "fbd595a578cb46ac30e7bf156ec96a055272c33f0a90f885abf8edd1f3ea6e52",
+  "backend\\local_observation\\rules.json": "73c6abe29f6a7007155736dc3fa67c9e2e152185fa08b9d1896ce7c2796b2a01",
+  "backend\\local_observation\\dataset.py": "5055925e830c0fbbd013df80940a909801d4c84a8da329ceeade32dbbf3ebe07",
+  "backend\\local_observation\\abbreviations.py": "ae5e07e6bc9888a7f80c42f486a034dbe0be635415c8f35b8afc945830408f2b",
+  "../data\\abbreviations_vi.json": "154a9893a712b77514422cb54a16d9bebecd8e4a1c867fa7f1161b94b4e188b1",
+  "fixtures\\local_observation\\inputs.json": "70522e8fff0f4567aec88277f592bf72998d3d18b15aa324632a4ad7808d79bc",
+  "fixtures\\local_observation\\expected.json": "f25574285e867353e1ebbbdbc227a8b3b57867371f0830d6b0455772d5a55e82",
+  "local_observation_check.py": "34f52fae2b43a1c778a6bb8b66fa8c2a79b09c1477c7c81408ac71670784e711",
+  "backend\\main.py": "c95b7fa18a3f0e8451abef0fec184cc5f24bc8423a58d0300a97240787cba584"
+}

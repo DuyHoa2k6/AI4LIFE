@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "RC-01",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 3.63290001405403,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại trong nội dung đã cung cấp.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "MR-RECOVER:2",
+            "MR-SECRECY:3",
+            "MR-URGENCY:4"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển hoặc ứng tiền",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Có lời hứa hoặc điều kiện do người gửi nêu; chưa được xác minh.",
+          "evidence_refs": [
+            "MR-RECOVER:2",
+            "MR-SECRECY:3",
+            "MR-URGENCY:4"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Trong phạm vi cửa sổ quy tắc, yêu cầu và lời hứa/điều kiện liên quan xuất phát từ cùng người nói; quan hệ này chưa được AI live xác minh.",
+          "evidence_refs": [
+            "MR-MONEY:1",
+            "MR-RECOVER:2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại trong nội dung đã cung cấp.",
+          "evidence_refs": [
+            "MR-MONEY:1",
+            "MR-RECOVER:2",
+            "MR-SECRECY:3",
+            "MR-URGENCY:4"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-MONEY:1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn chuyển phí mở hồ sơ vào ví cá nhân này để nhận lại khoản tiền đã bị mất.",
+              "start": 0,
+              "end": 76
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu có thể liên quan tới điều kiện nhận/rút tiền hoặc lời hứa trong các bằng chứng này.",
+            "evidence_refs": [
+              "MR-MONEY:1",
+              "MR-RECOVER:2"
+            ]
+          }
+        },
+        {
+          "id": "MR-RECOVER:2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn chuyển phí mở hồ sơ vào ví cá nhân này để nhận lại khoản tiền đã bị mất.",
+              "start": 0,
+              "end": 76
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-SECRECY:3",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Phải xong trong 15 phút, đừng hỏi người ngoài.",
+              "start": 77,
+              "end": 123
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-URGENCY:4",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Phải xong trong 15 phút, đừng hỏi người ngoài.",
+              "start": 77,
+              "end": 123
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-02",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.332300016656518,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển hoặc ứng tiền",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-MONEY:1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chuyển tiền cho ta lại đi mi hồi sáng mi ăn mượn của ta",
+              "start": 0,
+              "end": 55
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-03",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.1325000086799264,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển hoặc ứng tiền",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-MONEY:1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chuyển tiền cho ta lại đi mi hồi sáng mi ăn mượn của ta",
+              "start": 0,
+              "end": 55
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-04",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.5076000127010047,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+          "evidence_refs": [
+            "MR-MONEY:1",
+            "MR-RECOVER:2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-MONEY:1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh giác với lời dụ “chuyển phí vào ví cá nhân để nhận lại tiền đã mất”.",
+              "start": 0,
+              "end": 73
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-RECOVER:2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh giác với lời dụ “chuyển phí vào ví cá nhân để nhận lại tiền đã mất”.",
+              "start": 0,
+              "end": 73
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-05",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.327300036791712,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "MR-UNLOCK:1",
+            "MR-REWARD:2",
+            "MR-UNLOCK:3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Có lời hứa hoặc điều kiện do người gửi nêu; chưa được xác minh.",
+          "evidence_refs": [
+            "MR-UNLOCK:1",
+            "MR-REWARD:2",
+            "MR-UNLOCK:3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+          "evidence_refs": [
+            "MR-UNLOCK:1",
+            "MR-REWARD:2",
+            "MR-UNLOCK:3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-UNLOCK:1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "recipient",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m2",
+              "quote": "Em muốn rút số dư và dừng tham gia.",
+              "start": 0,
+              "end": 35
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-REWARD:2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "recruiter",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m3",
+              "quote": "Ứng thêm 2 triệu để mở khóa khoản rút, rồi sẽ hoàn gốc và hoa hồng.",
+              "start": 0,
+              "end": 67
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-UNLOCK:3",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "recruiter",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m3",
+              "quote": "Ứng thêm 2 triệu để mở khóa khoản rút, rồi sẽ hoàn gốc và hoa hồng.",
+              "start": 0,
+              "end": 67
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": "Chưa đủ bằng chứng để trả lời câu hỏi cụ thể. Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-06",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.9967000116594136,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "MR-REWARD:2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển hoặc ứng tiền",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Có lời hứa hoặc điều kiện do người gửi nêu; chưa được xác minh.",
+          "evidence_refs": [
+            "MR-REWARD:2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "MR-MONEY:1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "MR-MONEY:1",
+            "MR-REWARD:2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-MONEY:1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "landlord",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Thanh toán tiền thuê nhà tháng này theo hợp đồng nhé.",
+              "start": 0,
+              "end": 53
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-REWARD:2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "advertiser",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m2",
+              "quote": "Tôi hứa hoàn gốc và hoa hồng cho nhiệm vụ của tôi.",
+              "start": 0,
+              "end": 50
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-07",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.053699990734458,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh để đánh giá.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Cần thêm bối cảnh để đánh giá.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa rõ mục đích, vai trò hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Họ có yêu cầu trả thêm phí hoặc chuyển tiền để nhận lại hay rút khoản tiền không?"
+      ],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-08",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.2934000114910305,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại trong nội dung đã cung cấp.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "MR-REWARD:2",
+            "MR-RECOVER:3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+          "evidence_refs": [
+            "MR-CODE:1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Có lời hứa hoặc điều kiện do người gửi nêu; chưa được xác minh.",
+          "evidence_refs": [
+            "MR-REWARD:2",
+            "MR-RECOVER:3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "MR-CODE:1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Trong phạm vi cửa sổ quy tắc, yêu cầu và lời hứa/điều kiện liên quan xuất phát từ cùng người nói; quan hệ này chưa được AI live xác minh.",
+          "evidence_refs": [
+            "MR-CODE:1",
+            "MR-REWARD:2",
+            "MR-RECOVER:3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại trong nội dung đã cung cấp.",
+          "evidence_refs": [
+            "MR-CODE:1",
+            "MR-REWARD:2",
+            "MR-RECOVER:3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-CODE:1",
+          "action": "share_auth_code",
+          "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Sau đó gửi tôi mã đăng nhập vừa đến điện thoại để nhận quà.",
+              "start": 67,
+              "end": 126
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu có thể liên quan tới điều kiện nhận/rút tiền hoặc lời hứa trong các bằng chứng này.",
+            "evidence_refs": [
+              "MR-CODE:1",
+              "MR-RECOVER:3",
+              "MR-REWARD:2"
+            ]
+          }
+        },
+        {
+          "id": "MR-REWARD:2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Sau đó gửi tôi mã đăng nhập vừa đến điện thoại để nhận quà.",
+              "start": 67,
+              "end": 126
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-RECOVER:3",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Sau đó gửi tôi mã đăng nhập vừa đến điện thoại để nhận quà.",
+              "start": 67,
+              "end": 126
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-09",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.212199975270778,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  },
+  {
+    "id": "RC-10",
+    "executed": true,
+    "http_status": 200,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "elapsed_ms": 1.2987999944016337,
+    "response": {
+      "schema_version": "1.0",
+      "mode": "mock",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null
+    }
+  }
+]

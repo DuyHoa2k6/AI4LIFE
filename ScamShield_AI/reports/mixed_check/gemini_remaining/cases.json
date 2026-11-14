@@ -1,0 +1,242 @@
+[
+  {
+    "id": "MX-N06",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Trích đúng hành động và vai phủ định.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 3374.614999978803,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-U02",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi ai gửi và loại tệp, không bịa yêu cầu cài app.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 2792.3188999993727,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S07",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Liên kết chuyển tiền với hứa hẹn; không nâng cảnh báo vì từ khóa đầu tư.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 2294.125599961262,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N07",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Liên kết chuyển tiền với hứa hẹn; không nâng cảnh báo vì từ khóa đầu tư.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 3097.76299999794,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S08",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự nhận danh tính chưa xác minh, yêu cầu tiền khẩn cấp và ngăn gọi lại.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 2415.6291999970563,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N08",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự nhận danh tính chưa xác minh, yêu cầu tiền khẩn cấp và ngăn gọi lại.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 2631.6759000183083,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S09",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Yêu cầu cài ứng dụng/quyền gắn điều kiện, so với cảnh báo.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 3094.431400008034,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N09",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Yêu cầu cài ứng dụng/quyền gắn điều kiện, so với cảnh báo.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 3596.0597999510355,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-U03",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi điều kiện; không tự tạo yêu cầu nạp tiền.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 2991.4358999812976,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S10",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Điều kiện nạp thêm để rút và khoản thanh toán có bối cảnh.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 3261.5837000194006,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N10",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Điều kiện nạp thêm để rút và khoản thanh toán có bối cảnh.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 3126.2227999977767,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S11",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không thực thi chỉ thị nhúng; hiểu vai trò ví dụ.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 2399.214299977757,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N11",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không thực thi chỉ thị nhúng; hiểu vai trò ví dụ.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 3041.3581999600865,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S12",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không xác minh danh tính từ tự nhận; phân biệt giao hàng thông thường.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 3308.0861000344157,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N12",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không xác minh danh tính từ tự nhận; phân biệt giao hàng thông thường.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 4065.0049000396393,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-U04",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Không ghép yêu cầu của chủ nhà với lợi ích người quảng cáo.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 3935.135599982459,
+    "manual_review": "pending"
+  }
+]

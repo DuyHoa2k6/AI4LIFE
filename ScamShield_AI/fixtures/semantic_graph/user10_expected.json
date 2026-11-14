@@ -1,0 +1,15 @@
+{
+  "review_status":"user_supplied_high_targets_development_not_independent",
+  "cases":[
+    {"id":"01","risk":"high","actions":["payment","third_party_payee","agreement_account","avoid_verification"],"relations":["SG-LINK-PAYEE","SG-LINK-AGREEMENT","SG-LINK-OBSTRUCTS"]},
+    {"id":"02","risk":"high","actions":["receive_on_behalf","forward_funds","misstate_origin"],"relations":["SG-LINK-INTERMEDIARY","SG-LINK-CONCEAL-ROUTING"]},
+    {"id":"03","risk":"high","actions":["document_custody","restricted_exit","exit_payment"],"relations":["SG-LINK-DOCUMENT-EXIT","SG-LINK-EXIT-COST"]},
+    {"id":"04","risk":"high","actions":["payment","promised_return"],"relations":["SG-LINK-PAYMENT-BENEFIT"]},
+    {"id":"05","risk":"high","actions":["remote_control","remote_connection_code","open_financial_data"],"relations":["SG-LINK-CONTROL-BANK"]},
+    {"id":"06","risk":"high","actions":["private_content_claim","payment","disclosure_threat"],"relations":["SG-LINK-MEDIA-COREFERENCE","SG-LINK-PAYMENT-THREAT"]},
+    {"id":"07","risk":"high","actions":["provide_code","code_identity"],"relations":["REL-EXPLICIT-CODE-REPLY"]},
+    {"id":"08","risk":"high","actions":["priced_task","blocked_withdrawal","promised_return"],"relations":["SG-LINK-PAYMENT-BENEFIT"]},
+    {"id":"09","risk":"high","actions":["unverified_identity","third_party_payee","avoid_verification","payment"],"relations":["SG-LINK-PAYEE","SG-LINK-IDENTITY","SG-LINK-OBSTRUCTS"]},
+    {"id":"10","risk":"high","actions":["surrender_credentials","recovery_promise","payment"],"relations":[]}
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "O1",
+    "name": "Yêu cầu chuyển phí",
+    "dom": "",
+    "expected_text": "Chuyển trước 500 nghìn cho tôi.\nĐó là điều kiện nhận lại 5 triệu tiền cọc.",
+    "expected_status": "high"
+  },
+  {
+    "id": "O2",
+    "name": "Ảnh lời dụ được bài viết cảnh báo",
+    "dom": "Bài viết cảnh báo: ảnh dưới đây trích lời dụ của kẻ gian để phòng tránh. Đừng làm theo, tôi không yêu cầu người đọc chuyển tiền.",
+    "expected_text": "Nạp tiền để nhận hoa hồng.",
+    "expected_status": "clear"
+  },
+  {
+    "id": "O3",
+    "name": "Nội dung bình thường",
+    "dom": "",
+    "expected_text": "Tôi tự nhập mã trong ứng dụng ngân hàng.\nTôi không gửi mã cho người khác.",
+    "expected_status": "clear"
+  },
+  {
+    "id": "O4",
+    "name": "Ảnh không có chữ",
+    "dom": "",
+    "expected_text": "",
+    "expected_status": "no_text"
+  }
+]

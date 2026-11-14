@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "H01",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 10766.07719999447,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 788,
+      "prompt_tokens": 1066,
+      "total_tokens": 1854
+    },
+    "usage_totals": {
+      "completion_tokens": 788,
+      "prompt_tokens": 1066,
+      "total_tokens": 1854
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nguoi noi can ma OTP de dang nhap tai khoan",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chua ro danh tinh cua nguoi noi",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yeu cau gui ma OTP vua nhan tren dien thoại",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Ly do can ma de dang nhap tai khoan",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tai khoan va tai san lien quan co the bi xam nhap neu chia se ma OTP",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chua co du thong tin xac dinh gia mao",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Nhan ma OTP tren dien thoai sau do gui cho nguoi yeu cau",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Co yeu cau chia se ma xac thuc ro rang tu van ban",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Nguoi noi yeu cau cung cap ma OTP de dang nhap tai khoan",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi. Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Yeu cau nay co the dan toi viec lo thong tin xac thuc tai khoan",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Ke xau co the dang co gang chiem doat tai khoan bang cach yeu cau ma OTP",
+          "finding_refs": [
+            "f1"
+          ],
+          "alternative_explanations": [
+            "Nguoi quen hoac ky thuat vien ho tro dang nhap hop phap",
+            "He thong tu dong nhac nhở xac thuc"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chua xac dinh duoc danh tinh va muc dich thuc su cua nguoi yeu cau",
+        "Chua ro nguoi yeu cau co quyen hop phap truy cap tai khoan hay khong"
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nguoi noi can ma OTP de dang nhap tai khoan",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chua ro danh tinh cua nguoi noi",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yeu cau gui ma OTP vua nhan tren dien thoại",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Ly do can ma de dang nhap tai khoan",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tai khoan va tai san lien quan co the bi xam nhap neu chia se ma OTP",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chua co du thong tin xac dinh gia mao",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhan ma OTP tren dien thoai sau do gui cho nguoi yeu cau",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Co yeu cau chia se ma xac thuc ro rang tu van ban",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "share_auth_code",
+              "description": "Nguoi noi yeu cau cung cap ma OTP de dang nhap tai khoan",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi. Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Yeu cau nay co the dan toi viec lo thong tin xac thuc tai khoan",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Ke xau co the dang co gang chiem doat tai khoan bang cach yeu cau ma OTP",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Nguoi quen hoac ky thuat vien ho tro dang nhap hop phap",
+                "He thong tu dong nhac nhở xac thuc"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chua xac dinh duoc danh tinh va muc dich thuc su cua nguoi yeu cau",
+            "Chua ro nguoi yeu cau co quyen hop phap truy cap tai khoan hay khong"
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10540.449099993566,
+    "extraction_ms": 10762.214000002132,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "6d7c5a2b-755d-4296-b5a3-9c1e218c883d",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "S01",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 11987.61199999717,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 1094,
+      "prompt_tokens": 1074,
+      "total_tokens": 2168
+    },
+    "usage_totals": {
+      "completion_tokens": 1094,
+      "prompt_tokens": 1074,
+      "total_tokens": 2168
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Tôi tự nhận là nhân viên hỗ trợ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Nhân viên hỗ trợ",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bật quyền điều khiển máy từ xa",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Tôi chưa giải thích dùng quyền này để làm gì.",
+          "evidence_refs": [
+            "f3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thiết bị và dữ liệu cá nhân trên máy",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "inferred",
+          "text": "Có thể giả mạo nhân viên hỗ trợ",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Tự nhận danh tính sau đó yêu cầu bật quyền điều khiển máy mà không giải thích mục đích",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Có đủ thông tin về yêu cầu cấp quyền và tuyên bố danh tính nhưng chưa rõ mục đích",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Người nói tự nhận là nhân viên hỗ trợ",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự nhận là nhân viên hỗ trợ.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đưa ra tuyên bố về danh tính",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "grant_access",
+          "description": "Yêu cầu bật quyền điều khiển máy từ xa",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn hãy bật quyền điều khiển máy từ xa cho tôi.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đưa ra yêu cầu cấp quyền truy cập thiết bị",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f3",
+          "action": "other",
+          "description": "Thông báo chưa giải thích mục đích sử dụng quyền",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa giải thích dùng quyền này để làm gì.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Thừa nhận chưa giải thích lý do yêu cầu quyền",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Yêu cầu cấp quyền điều khiển từ xa có thể dẫn đến rủi ro chiếm đoạt thiết bị nếu danh tính không có thật",
+          "finding_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "alternative_explanations": [
+            "Nhân viên hỗ trợ kỹ thuật thực hiện thao tác khắc phục sự cố hợp pháp theo yêu cầu trước đó của người dùng",
+            "Tình huống giả định trong bài tập kiểm tra hoặc hướng dẫn sử dụng"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa rõ danh tính thực tế của người gửi",
+        "Chưa rõ bối cảnh yêu cầu hỗ trợ có được khởi tạo từ phía người dùng hay không",
+        "Chưa rõ mục đích cụ thể sau khi cấp quyền điều khiển"
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Tôi tự nhận là nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Nhân viên hỗ trợ",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Bật quyền điều khiển máy từ xa",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Tôi chưa giải thích dùng quyền này để làm gì.",
+              "evidence_refs": [
+                "f3"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân trên máy",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Có thể giả mạo nhân viên hỗ trợ",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tự nhận danh tính sau đó yêu cầu bật quyền điều khiển máy mà không giải thích mục đích",
+              "evidence_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Có đủ thông tin về yêu cầu cấp quyền và tuyên bố danh tính nhưng chưa rõ mục đích",
+              "evidence_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người nói tự nhận là nhân viên hỗ trợ",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự nhận là nhân viên hỗ trợ.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra tuyên bố về danh tính",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "grant_access",
+              "description": "Yêu cầu bật quyền điều khiển máy từ xa",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn hãy bật quyền điều khiển máy từ xa cho tôi.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra yêu cầu cấp quyền truy cập thiết bị",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f3",
+              "action": "other",
+              "description": "Thông báo chưa giải thích mục đích sử dụng quyền",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa giải thích dùng quyền này để làm gì.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Thừa nhận chưa giải thích lý do yêu cầu quyền",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu cấp quyền điều khiển từ xa có thể dẫn đến rủi ro chiếm đoạt thiết bị nếu danh tính không có thật",
+              "finding_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ],
+              "alternative_explanations": [
+                "Nhân viên hỗ trợ kỹ thuật thực hiện thao tác khắc phục sự cố hợp pháp theo yêu cầu trước đó của người dùng",
+                "Tình huống giả định trong bài tập kiểm tra hoặc hướng dẫn sử dụng"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực tế của người gửi",
+            "Chưa rõ bối cảnh yêu cầu hỗ trợ có được khởi tạo từ phía người dùng hay không",
+            "Chưa rõ mục đích cụ thể sau khi cấp quyền điều khiển"
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 11788.269500000752,
+    "extraction_ms": 11983.52700000396,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "8429a88b-b86a-4abd-8c91-f983cc38ec0e",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "S02",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 26982.635199994547,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      503,
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1110,
+      "prompt_tokens": 7142,
+      "total_tokens": 8252
+    },
+    "usage_totals": {
+      "completion_tokens": 2892,
+      "prompt_tokens": 14416,
+      "total_tokens": 17308
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi thông báo chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính của người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu cài đặt tệp APK.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa có lời hứa hẹn hoặc thuyết phục cụ thể ngoài yêu cầu cài tệp.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thiết bị và dữ liệu cá nhân có nguy cơ bị xâm phạm khi cài tệp APK không rõ nguồn gốc.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa phát hiện dấu hiệu giả mạo danh tính cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu cài tệp APK được gửi kèm lời tự nhận chưa cung cấp nhà phát hành hay lý do.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đã ghi nhận yêu cầu cài tệp APK nhưng cần thêm bối cảnh về nguồn gốc tệp và mục đích.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "install_app",
+          "description": "Yêu cầu cài tệp APK không rõ nguồn gốc",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng. Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người gửi đưa ra yêu cầu cài tệp APK nhưng tự thừa nhận chưa cung cấp tên nhà phát hành hoặc lý do.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "file_origin",
+          "source_of_request"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-09"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "identity"
+        },
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": [
+        {
+          "hint_id": "hint-1",
+          "interpretation": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "missing_information": null
+        },
+        {
+          "hint_id": "hint-2",
+          "interpretation": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu cài đặt tệp APK được gửi trong tin nhắn riêng nhưng chưa nêu rõ nhà phát hành hoặc lý do.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính của người gửi yêu cầu.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Cài tệp APK được gửi trong tin nhắn riêng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Không có thông tin lý do hoặc tên nhà phát hành đi kèm.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân có thể gặp rủi ro khi cài tệp APK không rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có thông tin về việc giả mạo danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhận yêu cầu qua tin nhắn riêng và được yêu cầu cài tệp APK không rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu cài tệp APK và việc thiếu thông tin nhà phát hành, nhưng cần thêm ngữ cảnh kỹ thuật.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "install_app",
+              "description": "Yêu cầu cài tệp APK không rõ nguồn gốc qua tin nhắn riêng.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng. Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Việc yêu cầu cài tệp APK từ nguồn không rõ ràng tiềm ẩn rủi ro bảo mật.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu cài tệp APK không rõ nguồn gốc có thể liên quan đến phần mềm độc hại.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Tệp APK do một bên quen biết gửi nhưng chưa kịp giải thích rõ ngữ cảnh.",
+                "Đây có thể là một thử nghiệm hoặc ứng dụng nội bộ chưa được công bố."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính và mục đích thực sự của người gửi tệp APK.",
+            "Chưa rõ nội dung bên trong tệp APK được đề cập."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK được gửi trong tin nhắn riêng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK chưa rõ nhà phát hành hoặc lý do.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu cài tệp APK từ nội dung tin nhắn nhưng thiếu bối cảnh và danh tính.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "install_app",
+              "description": "Yêu cầu cài tệp APK không rõ nguồn gốc",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng. Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Người gửi yêu cầu cài tệp APK nhưng không nêu rõ lý do hoặc nhà phát hành.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "file_origin",
+              "source_of_request"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            },
+            {
+              "hint_id": "hint-2",
+              "interpretation": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi thông báo chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu cài đặt tệp APK.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa có lời hứa hẹn hoặc thuyết phục cụ thể ngoài yêu cầu cài tệp.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân có nguy cơ bị xâm phạm khi cài tệp APK không rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa phát hiện dấu hiệu giả mạo danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK được gửi kèm lời tự nhận chưa cung cấp nhà phát hành hay lý do.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu cài tệp APK nhưng cần thêm bối cảnh về nguồn gốc tệp và mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "install_app",
+              "description": "Yêu cầu cài tệp APK không rõ nguồn gốc",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng. Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi đưa ra yêu cầu cài tệp APK nhưng tự thừa nhận chưa cung cấp tên nhà phát hành hoặc lý do.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "file_origin",
+              "source_of_request"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            },
+            {
+              "hint_id": "hint-2",
+              "interpretation": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 26803.848199997446,
+    "extraction_ms": 26980.493199997,
+    "response": {
+      "code": "PROVIDER_INCONSISTENT_OUTPUT",
+      "message": "Chưa kiểm tra được: kết quả mô hình còn mâu thuẫn sau khi rà lại. Vui lòng thử lại.",
+      "request_id": "c5aca925-b023-4c03-b9b3-ec6a8a63b009",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "consistency",
+        "repairs": 1,
+        "issues": [
+          "hint_role_disagrees_with_finding"
+        ]
+      }
+    }
+  },
+  {
+    "id": "H03",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "N03",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "C03",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "S03",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "N04",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "final_distribution": {
+    "high": 4,
+    "clear": 3,
+    "need_context": 7,
+    "suspicious": 1
+  },
+  "final_successful": 15,
+  "matches": 11,
+  "mismatches": [
+    "S01",
+    "S02",
+    "H04",
+    "N04",
+    "S04"
+  ],
+  "first_attempt_successful": 12,
+  "retried_cases": [
+    "N01",
+    "H02",
+    "N03",
+    "H04"
+  ],
+  "all_first_and_retry_executions": 20
+}

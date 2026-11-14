@@ -1,0 +1,11 @@
+{
+  "data\\dev.jsonl": "efe3281472ae33be41b37c712f59b1456a37c76d829f74ca9ec62ec6b047dcfa",
+  "data\\validation.jsonl": "afa0127930b7fa0fb01de2719f812a3d20e1683e6f8cda24e204d9f896a4a0dd",
+  "data\\holdout.jsonl": "f0fc4ed1d0efb9f918966e6b7c3288d94287ee7e91176ba29d714968cb0c3700",
+  "ScamShield_AI\\backend\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "ScamShield_AI\\backend\\engine.py": "e58730a08b7e1411c3752f48bd742681dad5561b847ca175444385bda02e24f4",
+  "ScamShield_AI\\backend\\main.py": "83860ea0a8b0b55fdd7ec8575f82f65106683093d74cd5b4183c43cc2ce4a63e",
+  "ScamShield_AI\\backend\\providers.py": "58cb03b4a691722201351c5014705df81035821cafa41376a31b58756e3c7512",
+  "ScamShield_AI\\backend\\schemas.py": "49edc7c800686f1242aefe490e21ff6657e5d52d913ab624a321bbfa07fc7641",
+  "ScamShield_AI\\backend\\extraction_prompt.txt": "ab5272cf23033ad2d250376a6706ca001457ba915de3435cc800c5eedcf33ef0"
+}

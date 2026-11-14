@@ -1,0 +1,10 @@
+{
+  "vie": {
+    "url": "https://raw.githubusercontent.com/naptha/tessdata/gh-pages/4.0.0/vie.traineddata.gz",
+    "sha256": "a2732b8e9f701e727dc7ad131581dad23b99c116465d2b5748416de26bde4c5e"
+  },
+  "eng": {
+    "url": "https://raw.githubusercontent.com/naptha/tessdata/gh-pages/4.0.0/eng.traineddata.gz",
+    "sha256": "ed350f3752f81ee8f38769edc14d92d997dababe23b565c59879372cc46a2468"
+  }
+}

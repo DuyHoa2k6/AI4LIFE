@@ -1,0 +1,135 @@
+[
+  {
+    "id": "01",
+    "title": "Đổi tài khoản nhận tiền trong email thanh toán",
+    "speaker_labels": {
+      "Email mới, người gửi tự xưng là kế toán của nhà cung cấp": "speaker_1",
+      "Người dùng": "speaker_2"
+    },
+    "source_roles": [
+      "Email mới, người gửi tự xưng là kế toán của nhà cung cấp",
+      "Người dùng bổ sung"
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Dùng quan hệ tình cảm để nhờ nhận và chuyển hộ tiền",
+    "speaker_labels": {
+      "Người quen qua mạng": "speaker_1",
+      "Người dùng": "speaker_2"
+    },
+    "source_roles": [
+      "Người quen qua mạng",
+      "Người dùng bổ sung"
+    ]
+  },
+  {
+    "id": "03",
+    "title": "Tuyển dụng nhưng nhận quyền kiểm soát giấy tờ và di chuyển",
+    "speaker_labels": {
+      "Người tuyển dụng": "speaker_1",
+      "Ứng viên": "speaker_2"
+    },
+    "source_roles": [
+      "Người tuyển dụng",
+      "Ứng viên",
+      "Người tuyển dụng"
+    ]
+  },
+  {
+    "id": "04",
+    "title": "Trả khoản rút tiền bằng cách bắt nộp thêm phí",
+    "speaker_labels": {
+      "Người dùng": "speaker_1",
+      "Người tự nhận hỗ trợ": "speaker_2"
+    },
+    "source_roles": [
+      "Người dùng",
+      "Người tự nhận hỗ trợ",
+      "Người dùng",
+      "Người tự nhận hỗ trợ"
+    ]
+  },
+  {
+    "id": "05",
+    "title": "Mạo danh bộ phận kỹ thuật để lấy quyền điều khiển thiết bị",
+    "speaker_labels": {
+      "Người gọi tự nhận là kỹ thuật viên": "speaker_1",
+      "Người dùng": "speaker_2"
+    },
+    "source_roles": [
+      "Người gọi tự nhận là kỹ thuật viên",
+      "Người dùng bổ sung"
+    ]
+  },
+  {
+    "id": "06",
+    "title": "Đòi tiền qua lời đe dọa phát tán nội dung riêng tư",
+    "speaker_labels": {
+      "Tài khoản lạ": "speaker_1",
+      "Người dùng": "speaker_2"
+    },
+    "source_roles": [
+      "Tài khoản lạ",
+      "Người dùng",
+      "Tài khoản lạ"
+    ]
+  },
+  {
+    "id": "07",
+    "title": "Mời hoàn tiền đơn hàng nhưng yêu cầu nhập mã đăng nhập",
+    "speaker_labels": {
+      "Người tự nhận nhân viên": "speaker_1",
+      "Người dùng": "speaker_2"
+    },
+    "source_roles": [
+      "Người tự nhận nhân viên sàn mua sắm",
+      "Người dùng",
+      "Người tự nhận nhân viên"
+    ]
+  },
+  {
+    "id": "08",
+    "title": "Tạo nhóm nhiều người cùng xác nhận lợi nhuận rồi chặn rút",
+    "speaker_labels": {
+      "Quản trị viên nhóm": "speaker_1",
+      "Người dùng": "speaker_2",
+      "Một thành viên khác": "speaker_3"
+    },
+    "source_roles": [
+      "Quản trị viên nhóm",
+      "Người dùng bổ sung",
+      "Quản trị viên nhóm",
+      "Một thành viên khác"
+    ]
+  },
+  {
+    "id": "09",
+    "title": "Giọng nói giống người quen nhưng yêu cầu thanh toán thay đổi",
+    "speaker_labels": {
+      "Tài khoản mới": "speaker_1",
+      "Người dùng": "speaker_2"
+    },
+    "source_roles": [
+      "Tài khoản mới nhắn",
+      "Người dùng bổ sung",
+      "Người dùng",
+      "Tài khoản mới"
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Thu phí giả để giúp lấy lại tiền đã bị mất",
+    "speaker_labels": {
+      "Người dùng": "speaker_1",
+      "Người nhắn tự nhận chuyên viên hỗ trợ": "speaker_2",
+      "Người nhắn": "speaker_3"
+    },
+    "source_roles": [
+      "Người dùng",
+      "Người nhắn tự nhận chuyên viên hỗ trợ",
+      "Người dùng",
+      "Người nhắn"
+    ]
+  }
+]

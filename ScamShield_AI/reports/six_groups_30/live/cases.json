@@ -1,0 +1,544 @@
+[
+  {
+    "id": "SG-11",
+    "group": "scam",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "transfer_funds",
+      "inducement"
+    ],
+    "manual_focus": "Phải trả thêm là điều kiện hoàn cọc; chưa xác minh danh tính không phủ nhận quan hệ đã nêu.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 16817.543899989687,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-21",
+    "group": "scam",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "share_auth_code"
+    ],
+    "manual_focus": "Yêu cầu giao mã trực tiếp; tự xưng hỗ trợ không xác minh danh tính.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 12978.514999966137,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-31",
+    "group": "scam",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "grant_access",
+      "inducement"
+    ],
+    "manual_focus": "",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 10298.45750000095,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-41",
+    "group": "scam",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "install_app",
+      "grant_access",
+      "inducement"
+    ],
+    "manual_focus": "",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 11211.144000000786,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-51",
+    "group": "scam",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "transfer_funds",
+      "inducement"
+    ],
+    "manual_focus": "Nối đúng chuỗi người tuyển dụng, không ghép lời người nhận.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 13150.891099998262,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-61",
+    "group": "scam",
+    "behavior_group": "other",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "other",
+      "inducement"
+    ],
+    "manual_focus": "Hành động làm mất bảo vệ giao dịch, không giới hạn vào chuyển tiền trực tiếp.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 13810.735600010958,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-12",
+    "group": "scam",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "transfer_funds",
+      "inducement"
+    ],
+    "manual_focus": "Biến thể đổi cách diễn đạt nhưng giữ cơ chế trả trước mới nhận tiền.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 31848.66769996006,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-22",
+    "group": "scam",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "share_auth_code"
+    ],
+    "manual_focus": "Biến thể không dùng từ OTP nhưng đòi mã đăng nhập.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 22047.383500030264,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-32",
+    "group": "suspicious",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "grant_access"
+    ],
+    "manual_focus": "Đã rõ yêu cầu quyền nhạy cảm; có thể cảnh báo và hỏi thêm, chưa khẳng định tội phạm.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 18199.92889999412,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-42",
+    "group": "suspicious",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "install_app"
+    ],
+    "manual_focus": "Cảnh báo trước thao tác cài đặt; không bịa thêm điều kiện tiền hay mã.",
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 15621.104700025171,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-52",
+    "group": "scam",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "transfer_funds",
+      "inducement"
+    ],
+    "manual_focus": "",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 6845.72099999059,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-62",
+    "group": "suspicious",
+    "behavior_group": "other",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "Hành vi mới có thể được mô tả other hoặc grant_access; chấm mức cảnh báo, không ép taxonomy.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 23668.536900018808,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-13",
+    "group": "normal",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [
+      "transfer_funds"
+    ],
+    "manual_focus": "",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 25113.795499957632,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-23",
+    "group": "normal",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "Tự nhập khác với giao mã cho người khác.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 31410.155699995812,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-33",
+    "group": "normal",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 21888.460499991197,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-43",
+    "group": "normal",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 12675.376200000755,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-53",
+    "group": "normal",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 17479.686499980744,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-63",
+    "group": "normal",
+    "behavior_group": "other",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 12670.654799963813,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-14",
+    "group": "normal",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "Lời trích cảnh báo/phủ định không phải yêu cầu chuyển tiền.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 7194.035599997733,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-24",
+    "group": "normal",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "Đúng vai lời trích và phủ định.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6149.949399987236,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-34",
+    "group": "normal",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 5959.358100022655,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-44",
+    "group": "normal",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 16166.221599967685,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-54",
+    "group": "normal",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 5443.968300009146,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-64",
+    "group": "normal",
+    "behavior_group": "other",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 13749.018299975432,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-15",
+    "group": "uncertain",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "Hỏi quan hệ và mục đích khoản tiền, không tự kết luận lừa đảo.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 14291.446199989878,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-25",
+    "group": "uncertain",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "Không tự coi mọi mã là OTP; hỏi loại mã và nguồn yêu cầu.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 13347.677399986424,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-35",
+    "group": "uncertain",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "Hỏi quyền gì/mục đích; không bịa quyền điều khiển đã xuất hiện.",
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 6635.1773999631405,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-45",
+    "group": "uncertain",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 16092.744999972638,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-55",
+    "group": "uncertain",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "Hỏi nguồn/điều kiện, không tự thêm yêu cầu ứng tiền.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 5569.59149998147,
+    "manual_review": "pending"
+  },
+  {
+    "id": "SG-65",
+    "group": "uncertain",
+    "behavior_group": "other",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "expected_actions": [],
+    "manual_focus": "",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 18388.0309999804,
+    "manual_review": "pending"
+  }
+]

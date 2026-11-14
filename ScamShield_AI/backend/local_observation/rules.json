@@ -1,0 +1,27 @@
+{
+  "version": "vi-observer-rules-1.2",
+  "review_status": "controlled_project_rules",
+  "segmentation": {
+    "restart_action_types": ["transfer_funds","handover_asset","provide_code","provide_credentials","provide_documents","open_link","login","install_app","share_screen","grant_control","change_channel","keep_secret","avoid_verification"]
+  },
+  "rules": [
+    {"id":"ACT-MONEY","type":"transfer_funds","pattern":"\\b(?P<verb>chuyen(?: khoan)?|nop|ung(?!\\s+dung\\b)|dong|nap|thanh toan)\\b","context":"tien|phi|coc|von|so du|hoa hong|khoan|thanh toan|\\d|^(?:da |chua )?chuyen[.! ]*$","description":"Chuyển/nộp/ứng tiền, chưa kết luận rủi ro","tests":["MONEY","NEGATION"]},
+    {"id":"ACT-RECEIVE","type":"receive_funds","pattern":"\\b(?P<verb>nhan|thay)\\s+(?:(?:duoc|du|du so|tien|khoan|so du|ve)\\b)","context":"tien|nhan du","description":"Nhận tiền hoặc trạng thái chưa nhận","tests":["A","B","C","E","F"]},
+    {"id":"ACT-WITHDRAW","type":"withdraw_funds","pattern":"\\b(?P<verb>rut)\\b","context":"tien|so du|lenh|duoc","description":"Rút tiền hoặc lệnh chờ","tests":["PENDING"]},
+    {"id":"ACT-HANDOVER","type":"handover_asset","pattern":"\\b(?P<verb>(?:ban )?giao)\\b","context":"may|hang|tai san|don|loa|xe|do|kien|thiet bi","description":"Giao tài sản, không riêng một sản phẩm","tests":["A","B","C","D","F"]},
+    {"id":"ACT-CODE","type":"provide_code","pattern":"\\b(?P<verb>doc|gui|cung cap|chia se)\\b(?=[^.!?;]{0,65}\\b(?:otp|ma|sau so|day so|chuoi|ky tu)\\b)","context":null,"description":"Yêu cầu đọc/gửi mã hoặc dãy ký tự, chưa chắc OTP","tests":["G","H"]},
+    {"id":"ACT-PASSWORD","type":"provide_credentials","pattern":"\\b(?P<verb>gui|doc|cung cap)\\b(?=[^.!?;]{0,60}mat khau)","context":null,"description":"Giao mật khẩu","tests":["PASSWORD"]},
+    {"id":"ACT-DOCUMENTS","type":"provide_documents","pattern":"\\b(?P<verb>gui|cung cap)\\b(?=[^.!?;]{0,70}(?:can cuoc|chung minh nhan dan|giay to|chan dung))","context":null,"description":"Gửi giấy tờ, chân dung","tests":["DOCUMENTS"]},
+    {"id":"ACT-LINK","type":"open_link","pattern":"\\b(?P<verb>mo|bam|truy cap)\\b(?=[^\\n]{0,70}(?:https?://|lien ket|link|trang))","context":null,"description":"Mở đường dẫn, không kiểm tra mạng","tests":["J"]},
+    {"id":"ACT-LOGIN","type":"login","pattern":"\\b(?P<verb>dang nhap|nhap ma|tu nhap)\\b","context":null,"description":"Thao tác đăng nhập, khác giao mã cho người khác","tests":["LOGIN"]},
+    {"id":"ACT-INSTALL","type":"install_app","pattern":"\\b(?P<verb>cai(?: dat)?)\\b(?=[^.!?;]{0,60}(?:ung dung|phan mem|apk|tep))","context":null,"description":"Cài phần mềm","tests":["INSTALL"]},
+    {"id":"ACT-SCREEN","type":"share_screen","pattern":"\\b(?P<verb>(?:bat )?chia se man hinh)\\b","context":null,"description":"Chia sẻ màn hình","tests":["SCREEN"]},
+    {"id":"ACT-CONTROL","type":"grant_control","pattern":"\\b(?P<verb>cap quyen|cho phep dieu khien)\\b","context":null,"description":"Cấp quyền truy cập/điều khiển","tests":["CONTROL"]},
+    {"id":"ACT-CHANNEL","type":"change_channel","pattern":"\\b(?P<verb>chuyen sang|nhan qua|lien he qua)\\b(?=[^.!?;]{0,50}(?:zalo|telegram|chat|so moi|kenh))","context":null,"description":"Chuyển kênh liên hệ","tests":["CHANNEL"]},
+    {"id":"ACT-SECRET","type":"keep_secret","pattern":"\\b(?P<verb>giu bi mat|dung ke|khong duoc noi)\\b","context":null,"description":"Giữ bí mật","tests":["SECRET"]},
+    {"id":"ACT-VERIFY","type":"avoid_verification","pattern":"\\b(?P<verb>dung goi|khong duoc goi|tranh xac minh)\\b","context":null,"description":"Ngăn kiểm tra độc lập","tests":["VERIFY"]},
+    {"id":"CLAIM-IDENTITY","type":"identity_claim","pattern":"\\b(?P<verb>toi la|minh la|toi phu trach|minh phu trach)\\b","context":null,"description":"Danh tính tự nhận, không xác minh","tests":["IDENTITY"]},
+    {"id":"CLAIM-RELATIONSHIP","type":"relationship_claim","pattern":"\\b(?P<verb>la nguoi quen|la nguoi nha|la ban cua)\\b","context":null,"description":"Quan hệ được tự nhận","tests":["I"]},
+    {"id":"CLAIM-CODE-TYPE","type":"code_identity","pattern":"\\b(?P<verb>(?:do |day )?la ma dang nhap|ghi (?:day |do )?la ma dang nhap)\\b","context":null,"description":"Tin xác định ý nghĩa mã","tests":["H"]}
+  ]
+}

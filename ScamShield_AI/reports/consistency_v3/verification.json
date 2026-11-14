@@ -1,0 +1,10 @@
+{
+  "frozen_code_data_prompt_hashes_unchanged": true,
+  "files_checked": 19,
+  "mismatches": [],
+  "unit_tests_passed": 100,
+  "worker_security_checks_passed": 10,
+  "live_cases": 6,
+  "live_consistency_repairs_observed": 0,
+  "scope": "public synthetic regression; no independent accuracy claim"
+}

@@ -1,0 +1,630 @@
+[
+  {
+    "case_id": "trust-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 13.014099997235462
+  },
+  {
+    "case_id": "trust-U",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 5.340800009435043
+  },
+  {
+    "case_id": "trust-P",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-TRAVEL-SECRET"
+    ],
+    "unknown_answers": 9,
+    "api_ms": 4.75439999718219
+  },
+  {
+    "case_id": "travel-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 5.159699998330325
+  },
+  {
+    "case_id": "travel-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 12,
+    "api_ms": 3.749499999685213
+  },
+  {
+    "case_id": "travel-P",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-TRAVEL-SECRET"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 3.5942000104114413
+  },
+  {
+    "case_id": "employment-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 5.879900010768324
+  },
+  {
+    "case_id": "employment-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 12,
+    "api_ms": 4.28919997648336
+  },
+  {
+    "case_id": "employment-P",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-CHANGE-WORK"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 4.458300012629479
+  },
+  {
+    "case_id": "debt-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 5.414500017650425
+  },
+  {
+    "case_id": "debt-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.4658000115305185
+  },
+  {
+    "case_id": "debt-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-DEBT-EXIT"
+    ],
+    "unknown_answers": 9,
+    "api_ms": 2.5297000247519463
+  },
+  {
+    "case_id": "secrecy-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 5.937899986747652
+  },
+  {
+    "case_id": "secrecy-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 6.1129000096116215
+  },
+  {
+    "case_id": "secrecy-P",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-TRAVEL-SECRET"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 5.063799995696172
+  },
+  {
+    "case_id": "communication-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 5.209399998420849
+  },
+  {
+    "case_id": "communication-U",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-CONTROL"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 5.0620000110939145
+  },
+  {
+    "case_id": "communication-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-CONTROL"
+    ],
+    "unknown_answers": 9,
+    "api_ms": 3.0718999914824963
+  },
+  {
+    "case_id": "documents-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 5.875900009414181
+  },
+  {
+    "case_id": "documents-U",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-CONTROL"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 4.523500014329329
+  },
+  {
+    "case_id": "documents-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-DOC-EXIT",
+      "R-CONTROL"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 3.0647999956272542
+  },
+  {
+    "case_id": "movement-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 5.108899989863858
+  },
+  {
+    "case_id": "movement-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.954600008204579
+  },
+  {
+    "case_id": "movement-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 2.6310999819543213
+  },
+  {
+    "case_id": "harm-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 5.256499978713691
+  },
+  {
+    "case_id": "harm-U",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-COERCION"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 4.907299997285008
+  },
+  {
+    "case_id": "harm-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-THREAT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 2.462799981003627
+  },
+  {
+    "case_id": "disclosure-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.043900000397116
+  },
+  {
+    "case_id": "disclosure-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 16,
+    "api_ms": 4.197500005830079
+  },
+  {
+    "case_id": "disclosure-P",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-COERCION"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 4.93080000160262
+  },
+  {
+    "case_id": "release-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 12,
+    "api_ms": 4.195199988316745
+  },
+  {
+    "case_id": "release-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 15,
+    "api_ms": 4.0825000032782555
+  },
+  {
+    "case_id": "release-P",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-RELEASE"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 4.830099991522729
+  },
+  {
+    "case_id": "forced_work-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.6101000043563545
+  },
+  {
+    "case_id": "forced_work-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 16,
+    "api_ms": 4.31150000076741
+  },
+  {
+    "case_id": "forced_work-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 2.5496000016573817
+  },
+  {
+    "case_id": "illegal-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.896099999314174
+  },
+  {
+    "case_id": "illegal-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 16,
+    "api_ms": 3.9615000132471323
+  },
+  {
+    "case_id": "illegal-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 2.355200005695224
+  },
+  {
+    "case_id": "bodily-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.4559000234585255
+  },
+  {
+    "case_id": "bodily-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 16,
+    "api_ms": 4.773600026965141
+  },
+  {
+    "case_id": "bodily-P",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 2.401499979896471
+  },
+  {
+    "case_id": "change-N",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 12,
+    "api_ms": 4.105300002265722
+  },
+  {
+    "case_id": "change-U",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 12,
+    "api_ms": 4.365500004496425
+  },
+  {
+    "case_id": "change-P",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-CHANGE-WORK"
+    ],
+    "unknown_answers": 10,
+    "api_ms": 4.6657000202685595
+  },
+  {
+    "case_id": "finance-handover",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-HANDOVER"
+    ],
+    "unknown_answers": 8,
+    "api_ms": 4.873300000326708
+  },
+  {
+    "case_id": "finance-paid",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 9,
+    "api_ms": 4.782500007422641
+  },
+  {
+    "case_id": "finance-code",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 8,
+    "api_ms": 4.7664000012446195
+  },
+  {
+    "case_id": "finance-otp",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-CREDENTIAL"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 3.805100015597418
+  },
+  {
+    "case_id": "finance-warning",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 3.7650000012945384
+  },
+  {
+    "case_id": "finance-withdraw",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-PAY-TO-WITHDRAW"
+    ],
+    "unknown_answers": 8,
+    "api_ms": 20.06840001558885
+  },
+  {
+    "case_id": "finance-docs",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-DATA"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 4.277900006854907
+  },
+  {
+    "case_id": "finance-app",
+    "risk": "suspicious",
+    "urgency": "preventive",
+    "rules": [
+      "R-ACCESS"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 4.092499992111698
+  },
+  {
+    "case_id": "finance-outside",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 16,
+    "api_ms": 3.2561000261921436
+  },
+  {
+    "case_id": "finance-login-linked",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-CODE-IDENTITY"
+    ],
+    "unknown_answers": 7,
+    "api_ms": 4.813099978491664
+  },
+  {
+    "case_id": "safety-past",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 4.295499995350838
+  },
+  {
+    "case_id": "threat-compels",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-URGENT-THREAT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 9,
+    "api_ms": 2.7685000095516443
+  },
+  {
+    "case_id": "bodily-sexual",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 2.3489000159315765
+  },
+  {
+    "case_id": "bodily-explicit",
+    "risk": "high",
+    "urgency": "urgent",
+    "rules": [
+      "R-URGENT-CURRENT",
+      "R-COERCION"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 2.1630999981425703
+  },
+  {
+    "case_id": "no-organ-inference",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 16,
+    "api_ms": 3.4826000046450645
+  },
+  {
+    "case_id": "payment-update",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 8,
+    "api_ms": 5.104699986986816
+  },
+  {
+    "case_id": "payment-conflict",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 9,
+    "api_ms": 4.542099981335923
+  },
+  {
+    "case_id": "two-transactions",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 9,
+    "api_ms": 4.114799987291917
+  },
+  {
+    "case_id": "url-unverified",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 10,
+    "api_ms": 3.9806999848224223
+  },
+  {
+    "case_id": "family-user-report",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 9,
+    "api_ms": 4.417799995280802
+  },
+  {
+    "case_id": "warning-child-ocr",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 12,
+    "api_ms": 4.559499997412786
+  },
+  {
+    "case_id": "warning-child-comment",
+    "risk": "high",
+    "urgency": "preventive",
+    "rules": [
+      "R-CREDENTIAL"
+    ],
+    "unknown_answers": 11,
+    "api_ms": 4.2935999808833
+  },
+  {
+    "case_id": "legacy-SS-001",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 8,
+    "api_ms": 7.931200001621619
+  },
+  {
+    "case_id": "legacy-SS-002",
+    "risk": "clear",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 9,
+    "api_ms": 5.095499975141138
+  },
+  {
+    "case_id": "legacy-SS-003",
+    "risk": "need_context",
+    "urgency": "undetermined",
+    "rules": [],
+    "unknown_answers": 11,
+    "api_ms": 3.828299988526851
+  }
+]

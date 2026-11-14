@@ -1,0 +1,596 @@
+[
+  {
+    "id": "A-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn chuyển tiền vào tài khoản cá nhân mới, đừng gọi đầu mối cũ."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Hợp đồng tôi giữ ghi tài khoản công ty, không có phụ lục thay đổi."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Tài khoản nhận tiền vừa đổi. Bạn chuyển tiền vào tài khoản mới nhé."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Tôi đã tự gọi đầu mối trên hợp đồng và xác nhận tài khoản nhận tiền mới."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Tài khoản nhận tiền vừa đổi. Bạn chuyển tiền vào tài khoản mới nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh báo: tài khoản nhận tiền vừa đổi. Bạn chuyển tiền vào tài khoản cá nhân, đừng gọi số cũ. Hợp đồng ghi tài khoản công ty."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Bạn chuyển tiền vào tài khoản cá nhân mới."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: đừng gọi số cũ. Hợp đồng ghi tài khoản công ty."
+        }
+      ]
+    }
+  },
+  {
+    "id": "A-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Tài khoản nhận tiền vừa đổi. Bạn chuyển tiền vào tài khoản cá nhân, đừng gọi số cũ."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Hợp đồng tôi giữ ghi tài khoản công ty."
+        },
+        {
+          "id": "m3",
+          "speaker": "user",
+          "text": "Tôi đã tự gọi đầu mối trên hợp đồng và xác nhận tài khoản nhận tiền mới."
+        }
+      ]
+    }
+  },
+  {
+    "id": "B-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Anh nhờ nhận tiền hộ, một người gửi tiền vào tài khoản em. Em chuyển tiếp sang tài khoản khác. Nếu ngân hàng hỏi thì cứ nói tiền người nhà trả nợ, đừng nhắc chuyện nhận hộ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "B-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Em nhận tiền hộ mẹ rồi chuyển hộ vào tài khoản của bố. Nếu ngân hàng hỏi thì nói đúng là tiền gia đình."
+        }
+      ]
+    }
+  },
+  {
+    "id": "B-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Em nhận tiền hộ rồi chuyển tiếp sang tài khoản khác nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "B-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh báo: nhờ nhận tiền hộ rồi chuyển tiếp sang tài khoản khác, nếu ngân hàng hỏi thì cứ nói là tiền trả nợ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "B-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Anh nhờ một người gửi tiền vào tài khoản em."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: Em chuyển tiếp sang tài khoản khác. Nếu ngân hàng hỏi thì cứ nói tiền người nhà trả nợ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "B-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Anh nhờ nhận tiền hộ rồi chuyển tiếp sang tài khoản khác. Chuyện này chỉ hai đứa mình biết."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Tôi không biết người sẽ gửi tiền là ai."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn giao giấy tờ cho trưởng nhóm giữ. Không được tự rời chỗ ở. Muốn về phải thanh toán chi phí đã ứng."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn giao hộ chiếu cho nhân viên giữ hộ khi làm thủ tục, có thể lấy lại bất cứ lúc nào. Bạn được tự do rời đi."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn giao hộ chiếu cho trưởng nhóm giữ để làm thủ tục nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh báo: giao hộ chiếu cho trưởng nhóm giữ, không được tự rời chỗ ở, muốn về phải thanh toán chi phí."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Bạn giao hộ chiếu cho trưởng nhóm giữ."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: Không được tự rời chỗ ở, muốn về phải thanh toán chi phí."
+        }
+      ]
+    }
+  },
+  {
+    "id": "C-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn giao hộ chiếu cho trưởng nhóm giữ."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Không được tự rời chỗ ở. Muốn về phải thanh toán chi phí."
+        }
+      ]
+    }
+  },
+  {
+    "id": "D-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn nộp thêm khoản bảo chứng, hệ thống sẽ hoàn lại tiền vốn."
+        }
+      ]
+    }
+  },
+  {
+    "id": "D-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn thanh toán tiền chiếc bàn trước để nhận hàng nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "D-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn cần hoàn tất nhiệm vụ 3 triệu mới được rút toàn bộ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "D-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh báo: bạn nộp thêm tiền bảo chứng, hệ thống sẽ trả cả vốn lẫn tiền bảo chứng."
+        }
+      ]
+    }
+  },
+  {
+    "id": "D-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Tôi đã nộp 1 triệu, nhưng không rút được."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: Bạn hoàn tất nhiệm vụ 3 triệu mới được rút toàn bộ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "D-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn hoàn tất nhiệm vụ 3 triệu mới được rút toàn bộ."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Tôi đã nộp 1 triệu nhưng không rút được."
+        }
+      ]
+    }
+  },
+  {
+    "id": "E-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn cho tôi kiểm tra từ xa. Trong khi tôi thao tác, bạn mở ngân hàng xem số dư."
+        }
+      ]
+    }
+  },
+  {
+    "id": "E-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn cài ứng dụng hỗ trợ và đọc mã kết nối để tôi kiểm tra từ xa. Không mở ngân hàng trong lúc hỗ trợ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "E-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn mở ứng dụng ngân hàng xem số dư nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "E-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh báo: kiểm tra từ xa rồi yêu cầu mở ngân hàng trong lúc tôi thao tác."
+        }
+      ]
+    }
+  },
+  {
+    "id": "E-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Bạn cho tôi kiểm tra từ xa."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: Trong lúc tôi thao tác, bạn mở ngân hàng."
+        }
+      ]
+    }
+  },
+  {
+    "id": "E-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bạn cho tôi kiểm tra từ xa."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Trong lúc tôi thao tác, bạn mở ứng dụng ngân hàng."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Tôi có video của bạn. Nếu không chuyển tiền, tôi sẽ gửi cho bạn bè."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đừng gửi thông tin đăng nhập. Hãy tự kiểm tra thông báo."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Tôi có ảnh của bạn."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Bài tuyên truyền: Tôi có ảnh của bạn. Chuyển tiền thì tôi xóa, còn không tôi gửi cho chỗ làm."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Tôi có ảnh của bạn."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: Chuyển tiền thì tôi xóa, còn không tôi gửi cho chỗ làm."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Tôi có ảnh của bạn."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Chuyển tiền thì tôi xóa, còn không tôi gửi cho chỗ làm."
+        }
+      ]
+    }
+  },
+  {
+    "id": "G-new",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Anh đây, máy anh hỏng. Em chuyển tiền vào tài khoản người khác nhé. Đừng gọi số cũ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "G-valid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Anh đây, máy anh hỏng. Em chuyển tiền vào tài khoản người khác nhé. Đừng gọi số cũ."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Tôi đã tự gọi số cũ và xác nhận người quen cùng tài khoản nhận tiền."
+        }
+      ]
+    }
+  },
+  {
+    "id": "G-missing",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Anh đây, em chuyển tiền giúp anh nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "G-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Cảnh báo: Anh đây, máy anh hỏng. Em chuyển tiền vào tài khoản người khác nhé. Đừng gọi số cũ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "G-two",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Đơn A: Anh đây, máy anh hỏng, em chuyển tiền nhé."
+        },
+        {
+          "id": "m2",
+          "speaker": "sender",
+          "text": "Đơn B: Tài khoản người khác, đừng gọi số cũ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "G-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "sender",
+          "text": "Anh đây, máy anh hỏng. Em chuyển tiền vào tài khoản người khác nhé. Đừng gọi số cũ."
+        },
+        {
+          "id": "m2",
+          "speaker": "user",
+          "text": "Tôi đã tự gọi số cũ và xác nhận người quen cùng tài khoản nhận tiền."
+        }
+      ]
+    }
+  }
+]

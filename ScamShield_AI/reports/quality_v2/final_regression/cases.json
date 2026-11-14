@@ -1,0 +1,62 @@
+[
+  {
+    "id": "TP-Q1",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Yêu cầu cấp quyền có rủi ro, chưa có điều kiện để tự nâng high.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 889.38850001432,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S4",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Phí giữ chỗ là điều kiện hoàn cọc.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-S5",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự nhận người nhà, tiền khẩn cấp, ngăn xác minh; không xác nhận danh tính.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "TP-N3",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Lịch hẹn không bịa rủi ro.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  }
+]

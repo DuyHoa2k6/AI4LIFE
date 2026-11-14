@@ -1,0 +1,54 @@
+test_ai01_02_05_06_sequence_variant_injection (test_backend.BackendTests.test_ai01_02_05_06_sequence_variant_injection) ... ok
+test_api01_three_flows_and_question (test_backend.BackendTests.test_api01_three_flows_and_question) ... ok
+test_api02_chunked_body_limit (test_backend.BackendTests.test_api02_chunked_body_limit) ... ok
+test_api02_rejected_before_provider (test_backend.BackendTests.test_api02_rejected_before_provider) ... ok
+test_api03_errors_no_raw_leak (test_backend.BackendTests.test_api03_errors_no_raw_leak) ... ok
+test_api03_real_timeout (test_backend.BackendTests.test_api03_real_timeout) ... ok
+test_api04_05_quotes_offsets_and_speaker (test_backend.BackendTests.test_api04_05_quotes_offsets_and_speaker) ... ok
+test_api05_combining_unicode_redacted_and_surviving_evidence (test_backend.BackendTests.test_api05_combining_unicode_redacted_and_surviving_evidence) ... ok
+test_hyb01_always_calls_live_with_complete_input (test_hybrid.HybridTests.test_hyb01_always_calls_live_with_complete_input) ... ok
+test_hyb01_new_wording_outside_rules_still_reaches_live (test_hybrid.HybridTests.test_hyb01_new_wording_outside_rules_still_reaches_live) ... ok
+test_hyb02_access_request_without_inducement_is_suspicious (test_hybrid.HybridTests.test_hyb02_access_request_without_inducement_is_suspicious) ... ok
+test_hyb02_related_evidence_and_safe_explanation (test_hybrid.HybridTests.test_hyb02_related_evidence_and_safe_explanation) ... ok
+test_hyb03_borrowed_money_needs_context_then_uses_added_context (test_hybrid.HybridTests.test_hyb03_borrowed_money_needs_context_then_uses_added_context) ... ok
+test_hyb03_live_reclassifies_educational_quote (test_hybrid.HybridTests.test_hyb03_live_reclassifies_educational_quote) ... ok
+test_hyb04_silent_omission_does_not_clear_rule_signal (test_hybrid.HybridTests.test_hyb04_silent_omission_does_not_clear_rule_signal) ... ok
+test_hyb04_unknown_role_cannot_be_silently_cleared (test_hybrid.HybridTests.test_hyb04_unknown_role_cannot_be_silently_cleared) ... ok
+test_hyb05_false_context_cannot_silently_clear (test_hybrid.HybridTests.test_hyb05_false_context_cannot_silently_clear) ... ok
+test_hyb05_invalid_quote_speaker_offset_and_duplicates (test_hybrid.HybridTests.test_hyb05_invalid_quote_speaker_offset_and_duplicates) ... ok
+test_hyb06_different_speakers_cannot_form_high_link (test_hybrid.HybridTests.test_hyb06_different_speakers_cannot_form_high_link) ... ok
+test_hyb06_discarded_support_and_invalid_reference_cannot_raise_high (test_hybrid.HybridTests.test_hyb06_discarded_support_and_invalid_reference_cannot_raise_high) ... ok
+test_hyb06_known_sender_does_not_make_code_disclosure_safe (test_hybrid.HybridTests.test_hyb06_known_sender_does_not_make_code_disclosure_safe) ... ok
+test_hyb07_real_transport_carries_hypotheses_as_data_and_rejects_bad_schema (test_hybrid.HybridTests.test_hyb07_real_transport_carries_hypotheses_as_data_and_rejects_bad_schema) ... ok
+test_hyb08_global_timeout_no_mock_fallback (test_hybrid.HybridTests.test_hyb08_global_timeout_no_mock_fallback) ... ok
+test_hyb08_missing_configuration_is_explicit (test_hybrid.HybridTests.test_hyb08_missing_configuration_is_explicit) ... ok
+test_hyb09_invalid_input_never_calls_live (test_hybrid.HybridTests.test_hyb09_invalid_input_never_calls_live) ... ok
+test_hyb10_unicode_and_rule_limit_still_call_live (test_hybrid.HybridTests.test_hyb10_unicode_and_rule_limit_still_call_live) ... ok
+test_hyb11_factory_and_processing_notice (test_hybrid.HybridTests.test_hyb11_factory_and_processing_notice) ... ok
+test_invalid_json_missing_fields_and_service_error (test_live_adapter.LiveAdapterTests.test_invalid_json_missing_fields_and_service_error) ... ok
+test_transport_schema_and_input_only (test_live_adapter.LiveAdapterTests.test_transport_schema_and_input_only) ... ok
+test_config_is_not_executed_and_errors_do_not_echo_secret (test_local_settings.PrivateBackendSettingsTests.test_config_is_not_executed_and_errors_do_not_echo_secret) ... ok
+test_local_constants_and_environment_override (test_local_settings.PrivateBackendSettingsTests.test_local_constants_and_environment_override) ... ok
+test_provider_uses_backend_key_without_user_input (test_local_settings.PrivateBackendSettingsTests.test_provider_uses_backend_key_without_user_input) ... ok
+test_secret_not_served_or_disclosed (test_local_settings.PrivateBackendSettingsTests.test_secret_not_served_or_disclosed) ... ok
+test_api_schema_stays_compatible (test_mock_rules.MockBehaviorTests.test_api_schema_stays_compatible) ... ok
+test_every_rule_has_warning_counterexample (test_mock_rules.MockBehaviorTests.test_every_rule_has_warning_counterexample) ... ok
+test_invalid_support_cannot_raise_risk_or_keep_links (test_mock_rules.MockBehaviorTests.test_invalid_support_cannot_raise_risk_or_keep_links) ... ok
+test_mr01_payment_recovery_gift_and_controls (test_mock_rules.MockBehaviorTests.test_mr01_payment_recovery_gift_and_controls) ... ok
+test_mr02_credentials_vs_self_service (test_mock_rules.MockBehaviorTests.test_mr02_credentials_vs_self_service) ... ok
+test_mr03_access_and_install_vs_reported (test_mock_rules.MockBehaviorTests.test_mr03_access_and_install_vs_reported) ... ok
+test_mr04_reward_without_request_does_not_raise_high (test_mock_rules.MockBehaviorTests.test_mr04_reward_without_request_does_not_raise_high) ... ok
+test_mr05_mixed_roles_and_contrast (test_mock_rules.MockBehaviorTests.test_mr05_mixed_roles_and_contrast) ... ok
+test_mr06_cross_turn_relation_and_evidence_refs (test_mock_rules.MockBehaviorTests.test_mr06_cross_turn_relation_and_evidence_refs) ... ok
+test_mr06_different_speaker_topic_and_window (test_mock_rules.MockBehaviorTests.test_mr06_different_speaker_topic_and_window) ... ok
+test_mr07_unicode_decimals_and_exact_spans (test_mock_rules.MockBehaviorTests.test_mr07_unicode_decimals_and_exact_spans) ... ok
+test_mr08_missing_questions_do_not_request_secrets (test_mock_rules.MockBehaviorTests.test_mr08_missing_questions_do_not_request_secrets) ... ok
+test_mr09_injection_and_finding_budget (test_mock_rules.MockBehaviorTests.test_mr09_injection_and_finding_budget) ... ok
+test_registry_all_rules_have_trigger_examples (test_mock_rules.MockBehaviorTests.test_registry_all_rules_have_trigger_examples) ... ok
+test_config_discloses_provider_without_secrets (test_week2_routes.WebsiteRoutesTests.test_config_discloses_provider_without_secrets) ... ok
+test_web_assets_and_fixture (test_week2_routes.WebsiteRoutesTests.test_web_assets_and_fixture) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 0.345s
+
+OK

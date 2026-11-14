@@ -1,0 +1,622 @@
+{
+  "mode": "mock",
+  "measurement": "ASGI TestClient, sequential, no real provider or browser",
+  "python": "3.12.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "n": 101,
+  "first_request_ms": 3.34100000327453,
+  "warm": {
+    "n": 100,
+    "p50_ms": 1.0369999799877405,
+    "p95_ms": 1.4364999951794744
+  },
+  "errors": 0,
+  "records": [
+    {
+      "iteration": 0,
+      "id": "MX-S01",
+      "http_status": 200,
+      "elapsed_ms": 3.34100000327453
+    },
+    {
+      "iteration": 1,
+      "id": "MX-N01",
+      "http_status": 200,
+      "elapsed_ms": 1.2937000137753785
+    },
+    {
+      "iteration": 2,
+      "id": "MX-S02",
+      "http_status": 200,
+      "elapsed_ms": 1.06969999615103
+    },
+    {
+      "iteration": 3,
+      "id": "MX-N02",
+      "http_status": 200,
+      "elapsed_ms": 1.0121999657712877
+    },
+    {
+      "iteration": 4,
+      "id": "MX-S03",
+      "http_status": 200,
+      "elapsed_ms": 1.9335999968461692
+    },
+    {
+      "iteration": 5,
+      "id": "MX-N03",
+      "http_status": 200,
+      "elapsed_ms": 1.3544000103138387
+    },
+    {
+      "iteration": 6,
+      "id": "MX-U01",
+      "http_status": 200,
+      "elapsed_ms": 1.0787000064738095
+    },
+    {
+      "iteration": 7,
+      "id": "MX-S04",
+      "http_status": 200,
+      "elapsed_ms": 1.1410000151954591
+    },
+    {
+      "iteration": 8,
+      "id": "MX-N04",
+      "http_status": 200,
+      "elapsed_ms": 0.8956000092439353
+    },
+    {
+      "iteration": 9,
+      "id": "MX-S05",
+      "http_status": 200,
+      "elapsed_ms": 0.9386999881826341
+    },
+    {
+      "iteration": 10,
+      "id": "MX-N05",
+      "http_status": 200,
+      "elapsed_ms": 1.0408000089228153
+    },
+    {
+      "iteration": 11,
+      "id": "MX-S06",
+      "http_status": 200,
+      "elapsed_ms": 1.0130999726243317
+    },
+    {
+      "iteration": 12,
+      "id": "MX-N06",
+      "http_status": 200,
+      "elapsed_ms": 1.0059999767690897
+    },
+    {
+      "iteration": 13,
+      "id": "MX-U02",
+      "http_status": 200,
+      "elapsed_ms": 0.8634999976493418
+    },
+    {
+      "iteration": 14,
+      "id": "MX-S07",
+      "http_status": 200,
+      "elapsed_ms": 0.9318999946117401
+    },
+    {
+      "iteration": 15,
+      "id": "MX-N07",
+      "http_status": 200,
+      "elapsed_ms": 0.9714000043459237
+    },
+    {
+      "iteration": 16,
+      "id": "MX-S08",
+      "http_status": 200,
+      "elapsed_ms": 1.0369999799877405
+    },
+    {
+      "iteration": 17,
+      "id": "MX-N08",
+      "http_status": 200,
+      "elapsed_ms": 1.0344000183977187
+    },
+    {
+      "iteration": 18,
+      "id": "MX-S09",
+      "http_status": 200,
+      "elapsed_ms": 1.6851999680511653
+    },
+    {
+      "iteration": 19,
+      "id": "MX-N09",
+      "http_status": 200,
+      "elapsed_ms": 1.6175000346265733
+    },
+    {
+      "iteration": 20,
+      "id": "MX-U03",
+      "http_status": 200,
+      "elapsed_ms": 1.0806000209413469
+    },
+    {
+      "iteration": 21,
+      "id": "MX-S10",
+      "http_status": 200,
+      "elapsed_ms": 1.1149999918416142
+    },
+    {
+      "iteration": 22,
+      "id": "MX-N10",
+      "http_status": 200,
+      "elapsed_ms": 0.9900999721139669
+    },
+    {
+      "iteration": 23,
+      "id": "MX-S11",
+      "http_status": 200,
+      "elapsed_ms": 1.025900011882186
+    },
+    {
+      "iteration": 24,
+      "id": "MX-N11",
+      "http_status": 200,
+      "elapsed_ms": 0.9943000040948391
+    },
+    {
+      "iteration": 25,
+      "id": "MX-S12",
+      "http_status": 200,
+      "elapsed_ms": 0.9465999901294708
+    },
+    {
+      "iteration": 26,
+      "id": "MX-N12",
+      "http_status": 200,
+      "elapsed_ms": 0.9735999628901482
+    },
+    {
+      "iteration": 27,
+      "id": "MX-U04",
+      "http_status": 200,
+      "elapsed_ms": 0.9608000400476158
+    },
+    {
+      "iteration": 28,
+      "id": "MX-S01",
+      "http_status": 200,
+      "elapsed_ms": 1.083299983292818
+    },
+    {
+      "iteration": 29,
+      "id": "MX-N01",
+      "http_status": 200,
+      "elapsed_ms": 0.9694999898783863
+    },
+    {
+      "iteration": 30,
+      "id": "MX-S02",
+      "http_status": 200,
+      "elapsed_ms": 0.9071999811567366
+    },
+    {
+      "iteration": 31,
+      "id": "MX-N02",
+      "http_status": 200,
+      "elapsed_ms": 0.8692999836057425
+    },
+    {
+      "iteration": 32,
+      "id": "MX-S03",
+      "http_status": 200,
+      "elapsed_ms": 1.0186000145040452
+    },
+    {
+      "iteration": 33,
+      "id": "MX-N03",
+      "http_status": 200,
+      "elapsed_ms": 1.6070000128820539
+    },
+    {
+      "iteration": 34,
+      "id": "MX-U01",
+      "http_status": 200,
+      "elapsed_ms": 1.2701000086963177
+    },
+    {
+      "iteration": 35,
+      "id": "MX-S04",
+      "http_status": 200,
+      "elapsed_ms": 1.2072999961674213
+    },
+    {
+      "iteration": 36,
+      "id": "MX-N04",
+      "http_status": 200,
+      "elapsed_ms": 0.9769999887794256
+    },
+    {
+      "iteration": 37,
+      "id": "MX-S05",
+      "http_status": 200,
+      "elapsed_ms": 1.0235999943688512
+    },
+    {
+      "iteration": 38,
+      "id": "MX-N05",
+      "http_status": 200,
+      "elapsed_ms": 1.0325000039301813
+    },
+    {
+      "iteration": 39,
+      "id": "MX-S06",
+      "http_status": 200,
+      "elapsed_ms": 1.048700010869652
+    },
+    {
+      "iteration": 40,
+      "id": "MX-N06",
+      "http_status": 200,
+      "elapsed_ms": 0.9763999842107296
+    },
+    {
+      "iteration": 41,
+      "id": "MX-U02",
+      "http_status": 200,
+      "elapsed_ms": 0.9051999659277499
+    },
+    {
+      "iteration": 42,
+      "id": "MX-S07",
+      "http_status": 200,
+      "elapsed_ms": 1.069399993866682
+    },
+    {
+      "iteration": 43,
+      "id": "MX-N07",
+      "http_status": 200,
+      "elapsed_ms": 0.984799989964813
+    },
+    {
+      "iteration": 44,
+      "id": "MX-S08",
+      "http_status": 200,
+      "elapsed_ms": 1.1233999975956976
+    },
+    {
+      "iteration": 45,
+      "id": "MX-N08",
+      "http_status": 200,
+      "elapsed_ms": 0.9763000416569412
+    },
+    {
+      "iteration": 46,
+      "id": "MX-S09",
+      "http_status": 200,
+      "elapsed_ms": 1.1156999971717596
+    },
+    {
+      "iteration": 47,
+      "id": "MX-N09",
+      "http_status": 200,
+      "elapsed_ms": 1.3501000357791781
+    },
+    {
+      "iteration": 48,
+      "id": "MX-U03",
+      "http_status": 200,
+      "elapsed_ms": 2.444199984893203
+    },
+    {
+      "iteration": 49,
+      "id": "MX-S10",
+      "http_status": 200,
+      "elapsed_ms": 1.4364999951794744
+    },
+    {
+      "iteration": 50,
+      "id": "MX-N10",
+      "http_status": 200,
+      "elapsed_ms": 1.0744999744929373
+    },
+    {
+      "iteration": 51,
+      "id": "MX-S11",
+      "http_status": 200,
+      "elapsed_ms": 1.0500000207684934
+    },
+    {
+      "iteration": 52,
+      "id": "MX-N11",
+      "http_status": 200,
+      "elapsed_ms": 1.0661000269465148
+    },
+    {
+      "iteration": 53,
+      "id": "MX-S12",
+      "http_status": 200,
+      "elapsed_ms": 1.0879000183194876
+    },
+    {
+      "iteration": 54,
+      "id": "MX-N12",
+      "http_status": 200,
+      "elapsed_ms": 1.1128000332973897
+    },
+    {
+      "iteration": 55,
+      "id": "MX-U04",
+      "http_status": 200,
+      "elapsed_ms": 0.9885999606922269
+    },
+    {
+      "iteration": 56,
+      "id": "MX-S01",
+      "http_status": 200,
+      "elapsed_ms": 1.1109000188298523
+    },
+    {
+      "iteration": 57,
+      "id": "MX-N01",
+      "http_status": 200,
+      "elapsed_ms": 1.018500013742596
+    },
+    {
+      "iteration": 58,
+      "id": "MX-S02",
+      "http_status": 200,
+      "elapsed_ms": 0.9227999835275114
+    },
+    {
+      "iteration": 59,
+      "id": "MX-N02",
+      "http_status": 200,
+      "elapsed_ms": 0.9735999628901482
+    },
+    {
+      "iteration": 60,
+      "id": "MX-S03",
+      "http_status": 200,
+      "elapsed_ms": 1.1009000008925796
+    },
+    {
+      "iteration": 61,
+      "id": "MX-N03",
+      "http_status": 200,
+      "elapsed_ms": 1.060499984305352
+    },
+    {
+      "iteration": 62,
+      "id": "MX-U01",
+      "http_status": 200,
+      "elapsed_ms": 1.0711000068113208
+    },
+    {
+      "iteration": 63,
+      "id": "MX-S04",
+      "http_status": 200,
+      "elapsed_ms": 1.3984999968670309
+    },
+    {
+      "iteration": 64,
+      "id": "MX-N04",
+      "http_status": 200,
+      "elapsed_ms": 1.3048999826423824
+    },
+    {
+      "iteration": 65,
+      "id": "MX-S05",
+      "http_status": 200,
+      "elapsed_ms": 1.1632000096142292
+    },
+    {
+      "iteration": 66,
+      "id": "MX-N05",
+      "http_status": 200,
+      "elapsed_ms": 1.094800012651831
+    },
+    {
+      "iteration": 67,
+      "id": "MX-S06",
+      "http_status": 200,
+      "elapsed_ms": 0.9949999512173235
+    },
+    {
+      "iteration": 68,
+      "id": "MX-N06",
+      "http_status": 200,
+      "elapsed_ms": 0.9971000254154205
+    },
+    {
+      "iteration": 69,
+      "id": "MX-U02",
+      "http_status": 200,
+      "elapsed_ms": 0.8693999843671918
+    },
+    {
+      "iteration": 70,
+      "id": "MX-S07",
+      "http_status": 200,
+      "elapsed_ms": 1.0038000182248652
+    },
+    {
+      "iteration": 71,
+      "id": "MX-N07",
+      "http_status": 200,
+      "elapsed_ms": 0.9554000571370125
+    },
+    {
+      "iteration": 72,
+      "id": "MX-S08",
+      "http_status": 200,
+      "elapsed_ms": 1.0232000495307148
+    },
+    {
+      "iteration": 73,
+      "id": "MX-N08",
+      "http_status": 200,
+      "elapsed_ms": 1.1505000293254852
+    },
+    {
+      "iteration": 74,
+      "id": "MX-S09",
+      "http_status": 200,
+      "elapsed_ms": 1.0757999843917787
+    },
+    {
+      "iteration": 75,
+      "id": "MX-N09",
+      "http_status": 200,
+      "elapsed_ms": 1.0781000019051135
+    },
+    {
+      "iteration": 76,
+      "id": "MX-U03",
+      "http_status": 200,
+      "elapsed_ms": 0.9913999820128083
+    },
+    {
+      "iteration": 77,
+      "id": "MX-S10",
+      "http_status": 200,
+      "elapsed_ms": 1.1052999761886895
+    },
+    {
+      "iteration": 78,
+      "id": "MX-N10",
+      "http_status": 200,
+      "elapsed_ms": 1.0610000463202596
+    },
+    {
+      "iteration": 79,
+      "id": "MX-S11",
+      "http_status": 200,
+      "elapsed_ms": 1.1218000436201692
+    },
+    {
+      "iteration": 80,
+      "id": "MX-N11",
+      "http_status": 200,
+      "elapsed_ms": 1.2826999882236123
+    },
+    {
+      "iteration": 81,
+      "id": "MX-S12",
+      "http_status": 200,
+      "elapsed_ms": 1.3269999762997031
+    },
+    {
+      "iteration": 82,
+      "id": "MX-N12",
+      "http_status": 200,
+      "elapsed_ms": 1.1232999968342483
+    },
+    {
+      "iteration": 83,
+      "id": "MX-U04",
+      "http_status": 200,
+      "elapsed_ms": 0.996899965684861
+    },
+    {
+      "iteration": 84,
+      "id": "MX-S01",
+      "http_status": 200,
+      "elapsed_ms": 1.0916999890469015
+    },
+    {
+      "iteration": 85,
+      "id": "MX-N01",
+      "http_status": 200,
+      "elapsed_ms": 1.0463999933563173
+    },
+    {
+      "iteration": 86,
+      "id": "MX-S02",
+      "http_status": 200,
+      "elapsed_ms": 0.9536000434309244
+    },
+    {
+      "iteration": 87,
+      "id": "MX-N02",
+      "http_status": 200,
+      "elapsed_ms": 0.9423000155948102
+    },
+    {
+      "iteration": 88,
+      "id": "MX-S03",
+      "http_status": 200,
+      "elapsed_ms": 1.0759999859146774
+    },
+    {
+      "iteration": 89,
+      "id": "MX-N03",
+      "http_status": 200,
+      "elapsed_ms": 1.0134000331163406
+    },
+    {
+      "iteration": 90,
+      "id": "MX-U01",
+      "http_status": 200,
+      "elapsed_ms": 0.9390999912284315
+    },
+    {
+      "iteration": 91,
+      "id": "MX-S04",
+      "http_status": 200,
+      "elapsed_ms": 1.0712999501265585
+    },
+    {
+      "iteration": 92,
+      "id": "MX-N04",
+      "http_status": 200,
+      "elapsed_ms": 0.8650000090710819
+    },
+    {
+      "iteration": 93,
+      "id": "MX-S05",
+      "http_status": 200,
+      "elapsed_ms": 1.0489000123925507
+    },
+    {
+      "iteration": 94,
+      "id": "MX-N05",
+      "http_status": 200,
+      "elapsed_ms": 1.032400003168732
+    },
+    {
+      "iteration": 95,
+      "id": "MX-S06",
+      "http_status": 200,
+      "elapsed_ms": 1.1827999842353165
+    },
+    {
+      "iteration": 96,
+      "id": "MX-N06",
+      "http_status": 200,
+      "elapsed_ms": 1.0325000039301813
+    },
+    {
+      "iteration": 97,
+      "id": "MX-U02",
+      "http_status": 200,
+      "elapsed_ms": 0.9220000356435776
+    },
+    {
+      "iteration": 98,
+      "id": "MX-S07",
+      "http_status": 200,
+      "elapsed_ms": 1.0118999634869397
+    },
+    {
+      "iteration": 99,
+      "id": "MX-N07",
+      "http_status": 200,
+      "elapsed_ms": 0.9083999902941287
+    },
+    {
+      "iteration": 100,
+      "id": "MX-S08",
+      "http_status": 200,
+      "elapsed_ms": 0.9405000018887222
+    }
+  ]
+}

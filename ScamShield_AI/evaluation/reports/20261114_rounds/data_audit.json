@@ -1,0 +1,163 @@
+{
+  "n": 51,
+  "hashes": {
+    "evaluation\\data\\novel_cases.jsonl": "a7c858a932555ff6ea1c8980756e980e7281de81ea0ca1d8297982016fbfed9a",
+    "evaluation\\data\\regression_cases.jsonl": "d22f66127df9cbb65dd43a0244ee5ba826e711a22cfb970e19a02112e980c071"
+  },
+  "review": {
+    "draft": 51
+  },
+  "seen": {
+    "seen_development": 21,
+    "new_public_draft": 30
+  },
+  "domain_risk": {
+    "contributions": {
+      "clear": 1,
+      "need_context": 1,
+      "suspicious": 1,
+      "high": 2
+    },
+    "data_access": {
+      "clear": 3,
+      "need_context": 2,
+      "suspicious": 2,
+      "high": 4
+    },
+    "education": {
+      "clear": 2,
+      "need_context": 1,
+      "suspicious": 1,
+      "high": 1
+    },
+    "employment": {
+      "clear": 2,
+      "need_context": 1,
+      "suspicious": 1,
+      "high": 3
+    },
+    "finance": {
+      "clear": 5,
+      "need_context": 2,
+      "suspicious": 3,
+      "high": 3
+    },
+    "relationships": {
+      "clear": 1,
+      "need_context": 1,
+      "suspicious": 1,
+      "high": 2
+    },
+    "services": {
+      "clear": 2,
+      "need_context": 1,
+      "suspicious": 1,
+      "high": 1
+    }
+  },
+  "phenomena_by_domain": {
+    "contributions": [
+      "excessive_access",
+      "legitimate_same_domain",
+      "missing_context",
+      "multiple_transactions",
+      "payee_mismatch",
+      "self_claim",
+      "unknown_participants",
+      "verification_before_action",
+      "verification_blocked",
+      "verification_not_global"
+    ],
+    "data_access": [
+      "conditional_negation",
+      "conflicting_sources",
+      "decisive_evidence_removed",
+      "document_vs_speaker",
+      "missing_fields",
+      "negation",
+      "purpose_proportionality",
+      "safe_instructions",
+      "seen_training_or_validation"
+    ],
+    "education": [
+      "conditional_terms",
+      "harmful_combination",
+      "legitimate_same_domain",
+      "missing_conditions",
+      "negation",
+      "quoted_warning",
+      "secrecy",
+      "self_claim",
+      "unverified_guarantee",
+      "verification_before_action"
+    ],
+    "employment": [
+      "changed_terms",
+      "conditional_exit",
+      "control_chain",
+      "legitimate_same_domain",
+      "missing_employer",
+      "reordered_statements",
+      "reported_claim",
+      "seen_training_or_validation"
+    ],
+    "finance": [
+      "legitimate_same_domain",
+      "missing_history",
+      "negation",
+      "prompt_injection_as_data",
+      "scope_mismatch",
+      "seen_training_or_validation",
+      "self_claim",
+      "terms_after_commitment",
+      "verification_delayed"
+    ],
+    "relationships": [
+      "conditional_negation",
+      "irrelevant_interleaving",
+      "legitimate_same_domain",
+      "liability_not_explained",
+      "missing_document",
+      "multiple_speakers",
+      "pressure",
+      "prohibition_scope"
+    ],
+    "services": [
+      "ambiguous_reference",
+      "conditional_release",
+      "contradictory_user_update",
+      "legitimate_alternative_uncertain",
+      "missing_middle_message",
+      "multiple_speakers",
+      "multiple_transactions",
+      "not_completed",
+      "scope_binding",
+      "state_update",
+      "user_reported_confirmation"
+    ]
+  },
+  "near_duplicate_pairs": [
+    [
+      "R:smoke-08",
+      "R:smoke-07"
+    ]
+  ],
+  "ambiguities": [
+    "N33"
+  ],
+  "independent_holdout": false,
+  "accepted_error_types": [
+    "ACTION_OBJECT",
+    "PARTICIPANT_ROLE",
+    "NEGATION_SCOPE",
+    "CONDITION_RELATION",
+    "TRANSACTION_SCOPE",
+    "COREFERENCE",
+    "EVIDENCE_INVALID",
+    "RISK_DECISION",
+    "EXPLANATION_UNSUPPORTED",
+    "REDUNDANT_QUESTION",
+    "UNSUPPORTED_INPUT",
+    "LABEL_AMBIGUOUS"
+  ]
+}

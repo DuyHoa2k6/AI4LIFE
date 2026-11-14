@@ -1,0 +1,121 @@
+{
+  "public_draft_only": true,
+  "n": 16,
+  "level_matches": 15,
+  "cases": [
+    {
+      "case_id": "TH01",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "complete",
+      "ms": 112.81659999804106
+    },
+    {
+      "case_id": "TH02",
+      "expected_draft": "suspicious",
+      "actual": "suspicious",
+      "analysis_status": "complete",
+      "ms": 53.50519999774406
+    },
+    {
+      "case_id": "TH03",
+      "expected_draft": "high",
+      "actual": "need_context",
+      "analysis_status": "complete",
+      "ms": 47.18190000130562
+    },
+    {
+      "case_id": "TH04",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "partial",
+      "ms": 46.92780000186758
+    },
+    {
+      "case_id": "TH05",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "complete",
+      "ms": 53.696700000728015
+    },
+    {
+      "case_id": "TH06",
+      "expected_draft": "suspicious",
+      "actual": "suspicious",
+      "analysis_status": "complete",
+      "ms": 55.716800001391675
+    },
+    {
+      "case_id": "TH07",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "partial",
+      "ms": 68.21019999915734
+    },
+    {
+      "case_id": "TH08",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "complete",
+      "ms": 54.182799998670816
+    },
+    {
+      "case_id": "TH09",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "partial",
+      "ms": 44.320900000457186
+    },
+    {
+      "case_id": "TH10",
+      "expected_draft": "suspicious",
+      "actual": "suspicious",
+      "analysis_status": "partial",
+      "ms": 45.43520000152057
+    },
+    {
+      "case_id": "TH11",
+      "expected_draft": "high",
+      "actual": "high",
+      "analysis_status": "complete",
+      "ms": 56.28729999443749
+    },
+    {
+      "case_id": "TH12",
+      "expected_draft": "suspicious",
+      "actual": "suspicious",
+      "analysis_status": "partial",
+      "ms": 44.67330000625225
+    },
+    {
+      "case_id": "TH13",
+      "expected_draft": "clear",
+      "actual": "clear",
+      "analysis_status": "complete",
+      "ms": 58.95479999890085
+    },
+    {
+      "case_id": "TH14",
+      "expected_draft": "need_context",
+      "actual": "need_context",
+      "analysis_status": "partial",
+      "ms": 48.78389999794308
+    },
+    {
+      "case_id": "TH15",
+      "expected_draft": "clear",
+      "actual": "clear",
+      "analysis_status": "complete",
+      "ms": 86.45640000031563
+    },
+    {
+      "case_id": "TH16",
+      "expected_draft": "need_context",
+      "actual": "need_context",
+      "analysis_status": "complete",
+      "ms": 43.88219999964349
+    }
+  ],
+  "p50_ms": 53.50519999774406,
+  "p95_ms": 112.81659999804106
+}

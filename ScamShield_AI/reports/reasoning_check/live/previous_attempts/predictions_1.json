@@ -1,0 +1,59 @@
+[
+  {
+    "id": "RC-01",
+    "executed": true,
+    "http_status": 503,
+    "provider_http_status": 429,
+    "elapsed_ms": 1571.5175999794155,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "ebd90925-9820-4af9-9b1d-9c86a3c3c2cf"
+    }
+  },
+  {
+    "id": "RC-02",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-03",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-04",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-05",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-06",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-07",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-08",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-09",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-10",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  }
+]

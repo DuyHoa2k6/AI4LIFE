@@ -1,0 +1,71 @@
+{
+  "scope": "Public synthetic functional scenarios; authored judgments, not an independent holdout. Includes wording/approach variants without claiming genuinely novel fraud discovery.",
+  "mode": "two_pass",
+  "planned": 16,
+  "executed": 16,
+  "successful": 12,
+  "errors": 4,
+  "not_run": 0,
+  "completion_rate": 0.75,
+  "matrix": {
+    "scam": {
+      "high": 4,
+      "need_context": 1,
+      "error": 1
+    },
+    "normal": {
+      "clear": 2,
+      "error": 2
+    },
+    "suspicious": {
+      "need_context": 3
+    },
+    "uncertain": {
+      "need_context": 2,
+      "error": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 4,
+    "TN": 2,
+    "FN": 1
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 0.8,
+  "status_matches_successful": 8,
+  "status_match_rate_successful": 0.6666666666666666,
+  "high_scam_missed": [
+    "TP-S4"
+  ],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 16,
+    "p50_ms": 13698.376199987251,
+    "p95_ms": 23541.247199987993
+  },
+  "latency_successful": {
+    "n": 12,
+    "p50_ms": 13698.376199987251,
+    "p95_ms": 23541.247199987993
+  },
+  "first_request_ms": 10352.225700044073,
+  "warm_successful": {
+    "n": 11,
+    "p50_ms": 14305.956700001843,
+    "p95_ms": 23541.247199987993
+  },
+  "provider_adapter_successful": {
+    "n": 12,
+    "p50_ms": 13685.167899995577,
+    "p95_ms": 23532.513400015887
+  },
+  "exact_quotes": 21,
+  "quote_count": 21,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

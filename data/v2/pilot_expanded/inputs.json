@@ -1,0 +1,994 @@
+[
+  {
+    "case_id": "trust-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cứ tin tôi, anh sẽ lo.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "trust-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Anh là người quen của em.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "trust-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cứ tin tôi, hãy đi cùng và giấu gia đình.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "travel-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Mời bạn đi gặp mặt, địa điểm và điều kiện đã gửi rõ.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": [
+        {
+          "id": "c1",
+          "text": "Tôi đã gọi đầu mối độc lập để đối chiếu điều kiện và địa điểm; tôi có quyền từ chối và tự do rời đi.",
+          "verification_status": "user_reports_verification",
+          "applies_to_message_ids": [
+            "m1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "travel-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Sang bên này anh lo hết.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "travel-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hãy đi cùng và giấu gia đình.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "employment-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tuyển nhân viên, có hợp đồng và địa điểm để kiểm tra.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": [
+        {
+          "id": "c1",
+          "text": "Tôi đã gọi đầu mối độc lập để đối chiếu điều kiện và địa điểm; tôi có quyền từ chối và tự do rời đi.",
+          "verification_status": "user_reports_verification",
+          "applies_to_message_ids": [
+            "m1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "employment-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Có việc làm nhưng chưa mô tả công việc.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "employment-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Mời làm việc nhưng công việc khác thỏa thuận.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "debt-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Chi phí đi lại được hỗ trợ, không ghi nợ và có thể rời đi bất cứ lúc nào.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "debt-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Có ghi nợ chi phí, chưa nêu điều kiện trả.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "debt-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi đang nợ chi phí và không được rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "secrecy-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cảnh báo: đừng nghe yêu cầu “giấu gia đình để đi cùng”.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "secrecy-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nhắc giữ bí mật, chưa rõ nội dung nào.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "secrecy-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hãy đi cùng và đừng báo người nhà.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "communication-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cảnh báo “cắt liên lạc với gia đình” là dấu hiệu cần xác minh.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "communication-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nói sẽ giữ điện thoại, chưa rõ thời hạn.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "communication-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi đang bị giữ điện thoại và không được rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "documents-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ giữ hộ chiếu để đăng ký và trả lại hộ chiếu ngay; có thể rời đi bất cứ lúc nào.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "documents-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nói sẽ giữ hộ chiếu, chưa rõ lúc nhận lại.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "documents-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ đang giữ hộ chiếu của tôi và tôi không được rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "movement-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi không bị cấm rời đi và được tự do rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "movement-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nói về việc không được rời đi, chưa rõ ai và thời điểm.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "movement-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hiện tại tôi bị giữ lại và không được rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "harm-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Bài tuyên truyền cảnh báo lời “sẽ gây hại” để ép người khác.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "harm-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Một lời đe dọa gây hại được kể lại, chưa rõ thời điểm.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "harm-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ đe dọa gây hại tôi ngay bây giờ.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "disclosure-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cảnh báo tin nhắn “sẽ phát tán ảnh” là lời đe dọa.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "disclosure-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nhắc dữ liệu riêng tư, chưa rõ yêu cầu.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "disclosure-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Người gửi nói sẽ phát tán ảnh riêng tư.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "release-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Bài cảnh báo trích “trả tiền để được thả”.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "release-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Có nhắc khoản tiền nhưng chưa rõ điều kiện rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "release-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Bên đòi tiền yêu cầu chuyển tiền để thả người nhà.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "forced_work-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi không bị ép làm việc; có thể dừng theo thỏa thuận.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "forced_work-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nhắc giờ làm việc, chưa rõ quyền từ chối.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "forced_work-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hiện tại tôi bị ép làm việc và không được rời đi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "illegal-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cảnh báo: có người bị ép tham gia lừa đảo.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "illegal-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Chưa mô tả công việc yêu cầu thực hiện.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "illegal-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi đang bị ép tham gia lừa đảo.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "bodily-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi tự nguyện can thiệp cơ thể và có quyền dừng, có thể từ chối.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "bodily-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Có nhắc can thiệp cơ thể, chưa rõ thủ tục hoặc sự tự nguyện.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "bodily-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hiện tại tôi bị ép can thiệp cơ thể.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "change-N",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cảnh báo về việc “đổi điểm đến” khác thỏa thuận.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "change-U",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ nói đổi địa điểm, chưa rõ đã đồng ý hay chưa.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "change-P",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Mời làm việc và công việc khác thỏa thuận.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-handover",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Chưa thấy tiền về, nhưng cứ giao máy trước.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-paid",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi đã kiểm tra và nhận đủ tiền. Anh giao máy cho tài xế nhé.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-code",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Đọc sáu số vừa hiện để nhận tiền.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-otp",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Gửi mã OTP cho tôi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-warning",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cảnh báo “gửi OTP cho tôi”.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-withdraw",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Chuyển thêm tiền để rút số dư.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-docs",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Gửi ảnh CCCD qua chat.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-app",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Cài app này.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-outside",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Mây bay trên đỉnh núi.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "finance-login-linked",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "scope_id": "sale",
+          "text": "Đọc sáu số vừa hiện để nhận tiền."
+        },
+        {
+          "id": "m2",
+          "speaker_id": "receiver",
+          "scope_id": "sale",
+          "text": "Đó là mã đăng nhập."
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "safety-past",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Năm ngoái tôi từng bị giữ lại, hiện sự việc đã kết thúc.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "threat-compels",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Họ đang đe dọa gây hại tôi và tôi bị ép làm việc.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "bodily-sexual",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hiện tại tôi bị ép quan hệ tình dục.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "bodily-explicit",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hiện tại tôi bị dọa lấy nội tạng.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "no-organ-inference",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Một người đi nước ngoài rồi mất liên lạc.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "payment-update",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Hôm qua chưa nhận tiền. Hôm nay tôi đã kiểm tra và nhận đủ. Anh giao máy nhé.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "payment-conflict",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Tôi đã nhận đủ tiền nhưng tôi chưa nhận tiền.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "two-transactions",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Đơn A chưa nhận tiền. Đơn B giao máy nhé.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "url-unverified",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Mở liên kết https://example.invalid để kiểm tra.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": []
+    }
+  },
+  {
+    "case_id": "family-user-report",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "user",
+          "text": "Anh là người quen của em.",
+          "scope_id": "case"
+        }
+      ],
+      "context_facts": [
+        {
+          "id": "family-user",
+          "text": "Người gửi là anh trai tôi, đây là thông tin tôi cung cấp.",
+          "applies_to_message_ids": [
+            "m1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "legacy-SS-001",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Chị tuyển người đánh giá sản phẩm, làm thử miễn phí.",
+          "scope_id": "SS-001"
+        },
+        {
+          "id": "m2",
+          "speaker_id": "sender",
+          "text": "Đơn sau em ứng 500.000 đồng, xong sẽ hoàn gốc và hoa hồng.",
+          "scope_id": "SS-001"
+        },
+        {
+          "id": "m3",
+          "speaker_id": "sender",
+          "text": "Muốn rút số dư em chuyển thêm 2 triệu để mở khóa, trong 15 phút nhé.",
+          "scope_id": "SS-001"
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "legacy-SS-002",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Cảnh giác với tin nhắn “ứng tiền làm nhiệm vụ để nhận hoa hồng”. Nếu gặp hãy báo quản trị viên.",
+          "scope_id": "SS-002"
+        }
+      ]
+    }
+  },
+  {
+    "case_id": "legacy-SS-003",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Lệnh rút bị treo. Em đợi chị kiểm tra nhé.",
+          "scope_id": "SS-003"
+        }
+      ]
+    }
+  }
+]

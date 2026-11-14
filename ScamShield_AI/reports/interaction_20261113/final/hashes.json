@@ -1,0 +1,21 @@
+{
+  "backend\\local_reasoning\\adapter.py": "2cbfb28cd796288600cfeeae02da76f8fa868702f7589c24ff8c704af367f7fb",
+  "backend\\local_reasoning\\engine.py": "d962f4beda8dd54303f7ca1cbb7a81654f61cc83efd7864dd13fc0d8f9e1d139",
+  "backend\\local_reasoning\\extract.py": "7782dbd40c7d56b53cff79138bac473920bafe96c338a5688ed2c7a145124f1a",
+  "backend\\local_reasoning\\facts.py": "4314f52e2c7eada67f2797837dc7f723ced881ca16a83a74f6f274f97f3cfca5",
+  "backend\\local_reasoning\\fact_decision.py": "7050f18a1c9e0db4d17e388d8c1ff78747d00820fb6742516253d3ea0f2d0ad6",
+  "backend\\local_reasoning\\fact_schema.py": "4781aa8185289b046ad331cfc8dcc99c32bebb315218036588c0de61450acf09",
+  "backend\\local_reasoning\\fact_validation.py": "4bf040e832568ca8e1020144944a6b306bcffd7c6403a591cac9e8c6b58961b9",
+  "backend\\local_reasoning\\interaction.py": "c2f205848c6818a7de3b753ddb23b9985841be98607c40d58356a36327ab89bd",
+  "backend\\local_reasoning\\legacy_engine.py": "33bd6bea47f9fb8486515b1da593d1ebd5d9e061926e1f87b31a22f698a3c82d",
+  "backend\\local_reasoning\\rule_schema.py": "63731e18da54ca5be1b7f3ceca6c26b987ba6d4827349ea94a79bce0313d421e",
+  "backend\\local_reasoning\\schema.py": "c13bdbda7edd588c72b7eedef077a0655291228206addf9a02362ca6502cb391",
+  "backend\\local_reasoning\\semantic_events.py": "f6835ff3582a3a66d1f2b1ba4cb48511815873ac145517c779b4a4ad19afc893",
+  "backend\\local_reasoning\\splits.py": "7a3e0c4a2fcff3dcf732e3b28b299f65766a9bd3188c9b054d588c5e2506557e",
+  "backend\\local_reasoning\\support.py": "ef41fbbf4e75e25b776b008b8c4a79971fa495a04a7c42c6c65f9d404a2200ee",
+  "backend\\local_reasoning\\support_facts.py": "36b963f239d960c8ea146a024b0b22a96c204004b57d74f66f52bc6892d84920",
+  "backend\\local_reasoning\\validation.py": "254efd74401d486361fb98d59ef198ae683e4f7648eb74b138251507215625d8",
+  "backend\\local_reasoning\\__init__.py": "47d0be1d86b5145f919a7863e3836e1ce31cbaa33a32993f0ad1451deb0c07da",
+  "fixtures\\interaction_20261113\\inputs.json": "c0ddc96c0ce7a2c101d01430810dccca2fec1ce1ad3ed63b9f77acdd1d69bd08",
+  "fixtures\\interaction_20261113\\expected.json": "a48af58fd8de576d8112bab37b1de521ee6cad67ebc2f1bf5c0833610b474090"
+}

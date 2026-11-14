@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "ExtractionRule": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "event_type": {
+          "enum": [
+            "transfer_funds",
+            "receive_funds",
+            "withdraw_funds",
+            "handover_asset",
+            "provide_code",
+            "provide_credentials",
+            "provide_documents",
+            "open_link",
+            "login",
+            "install_app",
+            "share_screen",
+            "grant_control",
+            "change_channel",
+            "keep_secret",
+            "avoid_verification",
+            "identity_claim",
+            "relationship_claim",
+            "code_identity",
+            "build_trust",
+            "invite_travel_or_meeting",
+            "offer_employment",
+            "change_destination_or_terms",
+            "impose_debt",
+            "request_secrecy",
+            "restrict_communication",
+            "retain_identity_documents",
+            "restrict_movement",
+            "threaten_harm",
+            "threaten_disclosure",
+            "demand_release_payment",
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat",
+            "return_documents_available",
+            "free_to_leave",
+            "consent_and_exit_available",
+            "other"
+          ],
+          "title": "Event Type",
+          "type": "string"
+        },
+        "pattern": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Pattern",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "event_type",
+        "pattern"
+      ],
+      "title": "ExtractionRule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "review_status": {
+      "const": "controlled_project_rules",
+      "title": "Review Status",
+      "type": "string"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/ExtractionRule"
+      },
+      "maxItems": 40,
+      "title": "Rules",
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "review_status",
+    "rules"
+  ],
+  "title": "ExtractionRules",
+  "type": "object"
+}

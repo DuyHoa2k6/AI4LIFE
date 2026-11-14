@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.6-terra",
+  "purpose": "Read-only model access preflight; no inference tokens requested",
+  "http_status": 403,
+  "accessible": false,
+  "content_type": "application/json",
+  "has_provider_request_id": true,
+  "error_code": "access_denied_unclassified",
+  "diagnostic_flags": {
+    "region": false,
+    "permission": true,
+    "key": false,
+    "network_policy": false
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "train": {
+    "sha256": "496808383304c401d4b6a122cf5b92a9d78b559c90597813a7970cd22c4c7478",
+    "ids": [
+      "smoke-01",
+      "smoke-02",
+      "smoke-11",
+      "smoke-12",
+      "smoke-03",
+      "smoke-04",
+      "smoke-09",
+      "smoke-10",
+      "smoke-13",
+      "smoke-14",
+      "smoke-17",
+      "smoke-18"
+    ],
+    "stats": {
+      "samples": 12,
+      "families": {
+        "receive_object": 2,
+        "auth_warning": 2,
+        "send_credentials": 2,
+        "conditional_payment": 2,
+        "remote_access": 2,
+        "travel_custody": 2
+      },
+      "risk": {
+        "clear": 5,
+        "need_context": 1,
+        "high": 5,
+        "suspicious": 1
+      },
+      "relations": {
+        "prerequisite_for": 2,
+        "same_transaction": 3,
+        "controls_during": 1
+      },
+      "review": {
+        "draft": 12
+      },
+      "tasks": {
+        "spans": {
+          "partial": 12
+        },
+        "attributes": {
+          "complete": 12
+        },
+        "roles": {
+          "complete": 12
+        },
+        "relations": {
+          "complete": 12
+        },
+        "risk": {
+          "complete": 12
+        }
+      }
+    }
+  },
+  "validation": {
+    "sha256": "27dddefe3737326ed24117a1d4f6896c0b8ff94aad791ad69050654c769bff7d",
+    "ids": [
+      "smoke-07",
+      "smoke-08",
+      "smoke-05",
+      "smoke-06"
+    ],
+    "stats": {
+      "samples": 4,
+      "families": {
+        "payment_status": 2,
+        "verification_order": 2
+      },
+      "risk": {
+        "clear": 2,
+        "suspicious": 2
+      },
+      "relations": {
+        "same_transaction": 4,
+        "before": 1,
+        "obstructs_verification": 1
+      },
+      "review": {
+        "draft": 4
+      },
+      "tasks": {
+        "spans": {
+          "partial": 4
+        },
+        "attributes": {
+          "complete": 4
+        },
+        "roles": {
+          "complete": 4
+        },
+        "relations": {
+          "complete": 4
+        },
+        "risk": {
+          "complete": 4
+        }
+      }
+    }
+  },
+  "test_locked": {
+    "sha256": "d142be9faeb41ea0f51ff9a7081a410ae6e65aed38d30684ba97fae0c8053dd0",
+    "ids": [
+      "smoke-15",
+      "smoke-16",
+      "smoke-19",
+      "smoke-20"
+    ],
+    "stats": {
+      "samples": 4,
+      "families": {
+        "extortion": 2,
+        "loan_coercion": 2
+      },
+      "risk": {
+        "high": 1,
+        "need_context": 2,
+        "suspicious": 1
+      },
+      "relations": {
+        "threatens_unless": 1,
+        "same_transaction": 1
+      },
+      "review": {
+        "draft": 4
+      },
+      "tasks": {
+        "spans": {
+          "partial": 4
+        },
+        "attributes": {
+          "complete": 4
+        },
+        "roles": {
+          "complete": 4
+        },
+        "relations": {
+          "complete": 4
+        },
+        "risk": {
+          "complete": 4
+        }
+      }
+    }
+  }
+}

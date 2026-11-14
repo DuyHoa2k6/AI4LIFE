@@ -1,0 +1,212 @@
+[
+  {
+    "id": "F01",
+    "group": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự thao tác, phủ định việc giao mã cho người khác.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 11202.73360000283,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F02",
+    "group": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Người nhận tiền tự báo đã kiểm tra; không phải lời khẳng định của người mua.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 11039.759300008882,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F03",
+    "group": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Lời dụ nằm trong bài cảnh báo, không phải yêu cầu trực tiếp.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 5549.6665999962715,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F04",
+    "group": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Bối cảnh trong messages giải thích riêng khoản thanh toán này.",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 33462.154299995746,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F05",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi “cái đó” là loại thông tin hoặc đối tượng gì, không tự đoán là OTP.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F06",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chưa có yêu cầu chuyển tiền hay giao thông tin; hỏi bước tiếp theo.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F07",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi thao tác cụ thể trong thủ tục, không tự thêm phí hay mã.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F08",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Chưa rõ là khoản nợ, mua bán hay tiền để nhận lợi ích.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F09",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đối chứng F02: ảnh chuyển tiền không thay việc người nhận tự kiểm tra.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F10",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Thay người nhận tiền và yêu cầu thanh toán trước, xác minh sau.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F11",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Thu giấy tờ nhạy cảm qua chat; không mặc định high chỉ vì có lợi ích.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F12",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nối ý nghĩa mã từ câu người nhận; không cần chữ OTP trong lời yêu cầu.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F13",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Hai yêu cầu của cùng người gửi tạo chuỗi lộ dữ liệu tài chính.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F14",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đổi cách gọi phí nhưng vẫn phải nộp thêm tiền để rút số dư.",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  }
+]

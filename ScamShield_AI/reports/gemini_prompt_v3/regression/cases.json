@@ -1,0 +1,122 @@
+[
+  {
+    "id": "MX-S01",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nhận diện điều kiện trả phí; lời trích trong bài cảnh báo không phải yêu cầu.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 3234.0153999975882,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N01",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nhận diện điều kiện trả phí; lời trích trong bài cảnh báo không phải yêu cầu.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 3864.660599967465,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N04",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không coi mọi yêu cầu chuyển tiền là lừa đảo.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 3299.7161999810487,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S06",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Trích đúng hành động và vai phủ định.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 3687.0277000125498,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N06",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Trích đúng hành động và vai phủ định.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 3436.0657000215724,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-S09",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Yêu cầu cài ứng dụng/quyền gắn điều kiện, so với cảnh báo.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 17241.721400001552,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N10",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Điều kiện nạp thêm để rút và khoản thanh toán có bối cảnh.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 2950.1398999709636,
+    "manual_review": "pending"
+  },
+  {
+    "id": "MX-N11",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Không thực thi chỉ thị nhúng; hiểu vai trò ví dụ.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 3190.80770004075,
+    "manual_review": "pending"
+  }
+]

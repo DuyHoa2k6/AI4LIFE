@@ -1,0 +1,136 @@
+{
+  "mode": "deterministic mock only",
+  "model": null,
+  "scope": "Public synthetic functional checks; not holdout; no independent model-quality claim",
+  "cases": [
+    {
+      "id": "RC-01",
+      "executed": true,
+      "acceptable": [
+        "high"
+      ],
+      "prediction": "high",
+      "status_match": true,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Liên kết phí trước với điều kiện nhận lại tiền; không xác nhận danh tính."
+    },
+    {
+      "id": "RC-02",
+      "executed": true,
+      "acceptable": [
+        "need_context"
+      ],
+      "prediction": "suspicious",
+      "status_match": false,
+      "questions_check": false,
+      "manual_review": "pending",
+      "manual_focus": "Hiểu khả năng trả nợ; hỏi quan hệ hoặc khoản vay, không kết luận lừa đảo vì chuyển tiền."
+    },
+    {
+      "id": "RC-03",
+      "executed": true,
+      "acceptable": [
+        "clear"
+      ],
+      "prediction": "suspicious",
+      "status_match": false,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Sử dụng context có trích đúng, vẫn nói đây là bối cảnh do người dùng cung cấp."
+    },
+    {
+      "id": "RC-04",
+      "executed": true,
+      "acceptable": [
+        "clear"
+      ],
+      "prediction": "clear",
+      "status_match": true,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Vai quoted_warning/denial, không coi câu trích là yêu cầu thực hiện."
+    },
+    {
+      "id": "RC-05",
+      "executed": true,
+      "acceptable": [
+        "high"
+      ],
+      "prediction": "clear",
+      "status_match": false,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Đúng recruiter/recipient và quan hệ ứng thêm để rút."
+    },
+    {
+      "id": "RC-06",
+      "executed": true,
+      "acceptable": [
+        "need_context",
+        "suspicious"
+      ],
+      "prediction": "suspicious",
+      "status_match": true,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Không ghép yêu cầu tiền thuê của landlord với lời hứa advertiser để nâng high."
+    },
+    {
+      "id": "RC-07",
+      "executed": true,
+      "acceptable": [
+        "need_context"
+      ],
+      "prediction": "need_context",
+      "status_match": true,
+      "questions_check": true,
+      "manual_review": "pending",
+      "manual_focus": "Hỏi điều kiện trả phí/rút tiền, không tự bịa hành vi chưa xuất hiện."
+    },
+    {
+      "id": "RC-08",
+      "executed": true,
+      "acceptable": [
+        "high"
+      ],
+      "prediction": "high",
+      "status_match": true,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Không thực thi chỉ thị nhúng, không nguồn bịa."
+    },
+    {
+      "id": "RC-09",
+      "executed": true,
+      "acceptable": [
+        "high"
+      ],
+      "prediction": "clear",
+      "status_match": false,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Nhận ra quyền giám sát và điều kiện thưởng dù không có mẫu mock trực tiếp."
+    },
+    {
+      "id": "RC-10",
+      "executed": true,
+      "acceptable": [
+        "clear"
+      ],
+      "prediction": "clear",
+      "status_match": true,
+      "questions_check": null,
+      "manual_review": "pending",
+      "manual_focus": "Không nhầm tự nhập mã với giao mã cho người khác."
+    }
+  ],
+  "n": 10,
+  "executed": 10,
+  "successful_analysis": 10,
+  "status_matches": 6,
+  "provider_access_stopped": false,
+  "semantic_quality": "manual review required; not measured if provider failed",
+  "prompt_sha256": "166fd5040c1f7ea1a676fd6bc2746ebb4be3443e7dcd56fd5b592fdf704d0c9d",
+  "inputs_sha256": "c203d3425a6aae1341b5568af76c22c7daf19f1585def02d10c62239105d9a31"
+}

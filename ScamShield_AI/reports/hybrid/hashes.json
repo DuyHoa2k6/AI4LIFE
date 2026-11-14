@@ -1,0 +1,20 @@
+{
+  "backend\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "backend\\engine.py": "29356de608708ffa41adf36661fac50938db36fa29eb7e36f83e8bcb25b1e009",
+  "backend\\hybrid.py": "5993aa014945c07a39cf6637a05de4dd39922a55979047dac9bdbe3a18316a52",
+  "backend\\local_settings.example.py": "46ee1baa0cecf2251d333cc7d4593f2e9f25ae7efdbdd6888a13d5af6aa13040",
+  "backend\\main.py": "228b6d55ab297cbeec446c80b9f677c2cfcf05754003a5625b1c17584b561eb6",
+  "backend\\mock_rules.py": "0b8a99df4463b13bc198f072ddce67917ed0e57cd7d7de3d733c10df54e5908e",
+  "backend\\providers.py": "dbfb11e46edaa34220611d345bbfede48b517efb15468b39be39309af2804643",
+  "backend\\schemas.py": "7aff3a3b024ccf09b2a48ff87c4dc815dd94eb5630347d616c21d049d008ed50",
+  "backend\\settings.py": "587a9911f954a26a0b42c8cfe5577b9eca4071ffb0a35f6d4ba744f9a6ee7597",
+  "backend\\hybrid_prompt.txt": "166fd5040c1f7ea1a676fd6bc2746ebb4be3443e7dcd56fd5b592fdf704d0c9d",
+  "tests\\test_hybrid.py": "a32ac13bc5b9b8d26807480f268e4180491c0c4ef5a9c44027400a7a506f1dd3",
+  "tests\\test_local_settings.py": "ced4674a6d1f955d7821f8e7a5ad98ee9688deda430c0f49c84433a445d0e537",
+  "tests\\hybrid_fixture_provider.py": "81540196c48c19fb6d97dc2c05b22eceaf46d92a3b4e0bcf67b922f8228ef222",
+  "tests\\browser_week2.mjs": "0a3a8d5c4fe0a164e5cd70ff9b87af4284799a547abdf2241872576c300785bd",
+  "extension\\shared.js": "cd09e876d6ea6fe737af5f3bb1ab8a3b674946ab335f9b2e8e41a0d30008f264",
+  "chay_hybrid.py": "2d45064eb0df5f9b308e0dd7154136944df9548096db53947d2ca9cb3af4e1ae",
+  "hybrid_report.py": "1fe9d9a61d456cb0631a06aae1ceb085d267d65478e2c09931919c291ce1e858",
+  "HYBRID.md": "79b173ea0c309d1f777116302689d13c28ea489f1df2d8eb4e0ef417caed583b"
+}

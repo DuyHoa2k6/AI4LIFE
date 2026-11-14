@@ -1,0 +1,42 @@
+{
+  "mode": "two_pass",
+  "scope": "four public rendered synthetic images; not independent accuracy; OCR real in both modes",
+  "cases": [
+    {
+      "id": "O1",
+      "expected": "high",
+      "actual": "high",
+      "match": true,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 565.411600000516,
+      "analysis_ms": 14034.02030000143
+    },
+    {
+      "id": "O2",
+      "expected": "clear",
+      "actual": "clear",
+      "match": true,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 529.6355000027688,
+      "analysis_ms": 10891.532400004508
+    },
+    {
+      "id": "O3",
+      "expected": "clear",
+      "actual": "clear",
+      "match": true,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 571.4721999975154,
+      "analysis_ms": 12932.042499996896
+    },
+    {
+      "id": "O4",
+      "expected": "no_text",
+      "actual": "no_text",
+      "match": true,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 517.6940000019385,
+      "analysis_ms": null
+    }
+  ]
+}

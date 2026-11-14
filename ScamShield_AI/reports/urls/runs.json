@@ -1,0 +1,192 @@
+[
+  {
+    "run": "live",
+    "n": 6,
+    "api_success": 4,
+    "matches": 4,
+    "errors": 2,
+    "latency": {
+      "n": 6,
+      "p50_ms": 12418.886199993722,
+      "p95_ms": 23960.54279999953
+    },
+    "provider_attempts": 15,
+    "exact_quotes": 7,
+    "quotes": 7,
+    "cases": [
+      {
+        "id": "URL-01",
+        "expected": [
+          "high"
+        ],
+        "actual": "high",
+        "match": true,
+        "http": 200,
+        "api_ms": 23960.54279999953,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-02",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "match": true,
+        "http": 200,
+        "api_ms": 13087.055900003179,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-03",
+        "expected": [
+          "clear"
+        ],
+        "actual": "error",
+        "match": false,
+        "http": 502,
+        "api_ms": 10431.57130000327,
+        "error": "PROVIDER_INVALID_OUTPUT",
+        "used_url_evidence": null,
+        "discarded_url_uses": null
+      },
+      {
+        "id": "URL-04",
+        "expected": [
+          "suspicious"
+        ],
+        "actual": "suspicious",
+        "match": true,
+        "http": 200,
+        "api_ms": 12418.886199993722,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-05",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "match": true,
+        "http": 200,
+        "api_ms": 11276.236300000164,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-06",
+        "expected": [
+          "clear"
+        ],
+        "actual": "error",
+        "match": false,
+        "http": 502,
+        "api_ms": 14035.921199996665,
+        "error": "EVIDENCE_INVALID",
+        "used_url_evidence": null,
+        "discarded_url_uses": null
+      }
+    ]
+  },
+  {
+    "run": "checked",
+    "n": 6,
+    "api_success": 6,
+    "matches": 6,
+    "errors": 0,
+    "latency": {
+      "n": 6,
+      "p50_ms": 13859.945200005313,
+      "p95_ms": 15141.93140000134
+    },
+    "provider_attempts": 15,
+    "exact_quotes": 9,
+    "quotes": 9,
+    "cases": [
+      {
+        "id": "URL-01",
+        "expected": [
+          "high"
+        ],
+        "actual": "high",
+        "match": true,
+        "http": 200,
+        "api_ms": 13859.945200005313,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-02",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "match": true,
+        "http": 200,
+        "api_ms": 14719.034100002318,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-03",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "match": true,
+        "http": 200,
+        "api_ms": 14352.442299998074,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-04",
+        "expected": [
+          "suspicious"
+        ],
+        "actual": "suspicious",
+        "match": true,
+        "http": 200,
+        "api_ms": 10847.316100000171,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-05",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "match": true,
+        "http": 200,
+        "api_ms": 9681.051500003377,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      },
+      {
+        "id": "URL-06",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "match": true,
+        "http": 200,
+        "api_ms": 15141.93140000134,
+        "error": null,
+        "used_url_evidence": 1,
+        "discarded_url_uses": 0
+      }
+    ]
+  }
+]

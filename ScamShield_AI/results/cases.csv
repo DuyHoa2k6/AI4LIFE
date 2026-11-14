@@ -1,0 +1,13 @@
+﻿id,family_id,expected,predicted,passed,latency_ms,speaker_role_review,question_review
+SS-013,recovery,high,clear,False,11.690500017721206,pending,pending
+SS-014,recovery,clear,clear,True,0.01610000617802143,pending,pending
+SS-015,recovery,need_context,clear,False,0.009699957445263863,pending,pending
+SS-016,invoice,suspicious,clear,False,0.019599974621087313,pending,pending
+SS-017,invoice,clear,clear,True,0.00990001717582345,pending,pending
+SS-018,invoice,need_context,clear,False,0.007499998901039362,pending,pending
+SS-019,family,high,clear,False,0.011899974197149277,pending,pending
+SS-020,family,clear,clear,True,0.006099988240748644,pending,pending
+SS-021,device,high,high,True,0.015099998563528061,pending,pending
+SS-022,device,clear,high,False,0.007800001185387373,pending,pending
+SS-023,device,high,clear,False,0.01109996810555458,pending,pending
+SS-024,device,need_context,clear,False,0.004999979864805937,pending,pending

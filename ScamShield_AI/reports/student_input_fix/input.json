@@ -1,0 +1,14 @@
+{
+  "text": "Chào bạn,\n\nTài khoản sinh viên của bạn đang chờ xác minh. Nếu chưa hoàn tất trước 18 giờ hôm nay, quyền truy cập cổng sinh viên sẽ tạm thời bị khóa.\n\nBạn mở https://xacthuc-sinhvien.invalid/kiem-tra, nhập mật khẩu tài khoản trường, sau đó điền dãy sáu số vừa hiện trên điện thoại để hoàn tất xác minh.\n\nBộ phận hỗ trợ sinh viên",
+  "links": [
+    {
+      "id": "link-0",
+      "message_id": "m1",
+      "url": "https://xacthuc-sinhvien.invalid/kiem-tra",
+      "display_text": "https://xacthuc-sinhvien.invalid/kiem-tra",
+      "start": 157,
+      "end": 198,
+      "origin": "dom_href"
+    }
+  ]
+}

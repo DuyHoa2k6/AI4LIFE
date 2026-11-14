@@ -1,0 +1,62 @@
+[
+  {
+    "input": "https://httpbin.org/redirect/2",
+    "network": {
+      "status": "checked",
+      "hops": [
+        {
+          "display_url": "https://httpbin.org/",
+          "http_status": 302
+        },
+        {
+          "display_url": "https://httpbin.org/",
+          "http_status": 302
+        },
+        {
+          "display_url": "https://httpbin.org/",
+          "http_status": 200
+        }
+      ],
+      "final_url": "https://httpbin.org/",
+      "final_hostname": "httpbin.org",
+      "final_registered_domain": null,
+      "final_http_status": 200,
+      "reachable": true,
+      "elapsed_ms": 3671.9999999913853,
+      "reason": null
+    }
+  },
+  {
+    "input": "https://httpbin.org/status/404",
+    "network": {
+      "status": "checked",
+      "hops": [
+        {
+          "display_url": "https://httpbin.org/",
+          "http_status": 404
+        }
+      ],
+      "final_url": "https://httpbin.org/",
+      "final_hostname": "httpbin.org",
+      "final_registered_domain": null,
+      "final_http_status": 404,
+      "reachable": true,
+      "elapsed_ms": 1156.0000000026776,
+      "reason": null
+    }
+  },
+  {
+    "input": "http://127.0.0.1/private",
+    "network": {
+      "status": "blocked",
+      "hops": [],
+      "final_url": null,
+      "final_hostname": null,
+      "final_registered_domain": null,
+      "final_http_status": null,
+      "reachable": null,
+      "elapsed_ms": 0.0,
+      "reason": "non_public_address"
+    }
+  }
+]

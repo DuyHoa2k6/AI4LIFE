@@ -1,0 +1,8 @@
+{
+  "verification": "byte hashes only",
+  "unchanged": {
+    "data/dev.jsonl": true,
+    "data/validation.jsonl": true,
+    "data/holdout.jsonl": true
+  }
+}

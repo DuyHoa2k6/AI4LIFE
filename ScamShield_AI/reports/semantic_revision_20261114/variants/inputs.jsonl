@@ -1,0 +1,20 @@
+{"case_id": "V01", "request": {"text": "Hợp đồng đã được gửi."}}
+{"case_id": "V02", "request": {"text": "Hop dong da duoc gui."}}
+{"case_id": "V03", "request": {"text": "Hop đồng đã duoc gửi."}}
+{"case_id": "V04", "request": {"text": "Tôi đã gọi đầu mối để đối chiếu."}}
+{"case_id": "V05", "request": {"text": "Toi da goi dau moi de doi chieu."}}
+{"case_id": "V06", "request": {"text": "Đừng đợi giao dịch vào."}}
+{"case_id": "V07", "request": {"text": "Tôi chưa xác minh được người đăng ký."}}
+{"case_id": "V08", "request": {"text": "Toi chưa xac minh được người đăng ký."}}
+{"case_id": "V09", "request": {"text": "Chưa có yêu cầu chuyển tiền hay gửi mã."}}
+{"case_id": "V10", "request": {"text": "Chua co yeu cau chuyen tien hay gui ma."}}
+{"case_id": "V11", "request": {"text": "Bạn đừng cung cấp mật khẩu cho tôi hoặc người khác."}}
+{"case_id": "V12", "request": {"text": "Tôi chủ động mua xe bằng tiền của tôi và chuyển quyền sở hữu sang tên người bạn. Hai bên đã lập thỏa thuận bảo vệ quyền lợi, không có yêu cầu giữ bí mật."}}
+{"case_id": "V13", "request": {"text": "Bạn cấp quyền không giới hạn cho ứng dụng đã kiểm tra. Không có lời hứa nhận thưởng nào."}}
+{"case_id": "V14", "request": {"text": "Bạn phải ký giấy nhận nợ. Chưa ký thì chưa được nhận lương."}}
+{"case_id": "V15", "request": {"text": "Cảnh báo: người khác có thể nói “Bạn phải ký giấy nhận nợ. Chưa ký thì chưa được nhận lương.” Đừng làm theo."}}
+{"case_id": "V16", "request": {"text": "Giao dịch A yêu cầu bạn ký giấy nhận nợ. Giao dịch B chưa ký thì chưa được nhận lương."}}
+{"case_id": "V17", "request": {"text": "Tôi chưa mở được văn bản cần ký. Tôi cũng chưa biết mình nhận tiền cho việc gì."}}
+{"case_id": "V18", "request": {"text": "Không biết thứ cần gửi là hồ sơ hay chuyển tiền. Người yêu cầu chưa nói rõ."}}
+{"case_id": "V19", "request": {"text": "Bạn có thể đọc trước và hỏi tư vấn độc lập, chưa đồng ý thì chưa đóng tiền."}}
+{"case_id": "V20", "request": {"text": "Mình cần bạn ký bảo lãnh khoản vay. Tôi thấy hợp đồng ghi khi bạn không trả thì bên cho vay có thể yêu cầu tôi thanh toán."}}

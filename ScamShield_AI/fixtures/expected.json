@@ -1,0 +1,40 @@
+[
+  {
+    "id": "SS-001",
+    "expected": {
+      "risk_status": "high",
+      "scenario_reference": "Ứng tiền làm nhiệm vụ",
+      "findings": [
+        {
+          "action": "transfer_funds",
+          "message_id": "m2",
+          "quote": "Đơn sau em ứng 500.000 đồng, xong sẽ hoàn gốc và hoa hồng."
+        },
+        {
+          "action": "transfer_funds",
+          "message_id": "m3",
+          "quote": "Muốn rút số dư em chuyển thêm 2 triệu để mở khóa, trong 15 phút nhé."
+        }
+      ],
+      "follow_up_example": null
+    }
+  },
+  {
+    "id": "SS-002",
+    "expected": {
+      "risk_status": "clear",
+      "scenario_reference": "Bài cảnh báo tuyển cộng tác viên",
+      "findings": [],
+      "follow_up_example": null
+    }
+  },
+  {
+    "id": "SS-003",
+    "expected": {
+      "risk_status": "need_context",
+      "scenario_reference": "Chuyển tiền chưa rõ lý do",
+      "findings": [],
+      "follow_up_example": "Họ có yêu cầu chuyển tiền để mở khóa khoản rút không?"
+    }
+  }
+]

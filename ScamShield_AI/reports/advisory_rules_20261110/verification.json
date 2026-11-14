@@ -1,0 +1,20 @@
+{
+  "current_focused_hashes_match": true,
+  "backend_unittests": 170,
+  "worker_checks": 13,
+  "popup_checks": 4,
+  "checked_planned": 8,
+  "checked_http_200": 7,
+  "checked_target_matches": 6,
+  "focused_statuses": {
+    "H03": "high",
+    "C03": "need_context"
+  },
+  "focused_questions": {
+    "H03": [],
+    "C03": [
+      "Trong lời nhắn, “cái đó” hoặc thông tin được yêu cầu gửi là gì? Chỉ mô tả loại thông tin, không gửi mã hoặc mật khẩu thật."
+    ]
+  },
+  "scope": "Known regression probes; versions kept separate; not an independent quality estimate"
+}

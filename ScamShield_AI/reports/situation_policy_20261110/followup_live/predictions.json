@@ -1,0 +1,1197 @@
+[
+  {
+    "id": "F01",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 11202.73360000283,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 857,
+      "prompt_tokens": 7744,
+      "total_tokens": 8601
+    },
+    "usage_totals": {
+      "completion_tokens": 1747,
+      "prompt_tokens": 8874,
+      "total_tokens": 10621
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người dùng tường thuật việc tự mở ứng dụng chính thức và tự nhập mã trên điện thoại.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Hành động tự nhập mã xác thực và phủ nhận việc gửi mã cho người khác.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin để xác định đây là lời tự thuật và phủ định.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Người dùng tự thực hiện thao tác nhập mã trên thiết bị của mình",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự mở ứng dụng chính thức và nhập mã xác thực trên điện thoại của mình.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Tự thuật việc tự thao tác trên ứng dụng chính thức.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Phủ định việc gửi mã cho người khác",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi không gửi mã cho ai.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Lời phủ định việc chia sẻ thông tin xác thực.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-07"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": [],
+      "situation_facts": [],
+      "situation_links": [],
+      "information_gaps": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nguoi noi tu mo ung dung chinh thuc va nhap ma xac thuc tren dien thoai cua minh, khong gui ma cho ai.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Khong co thong tin ve danh tinh hay nguoi gui.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "unknown",
+              "text": "Khong co yeu cau nao tu phia nguoi khac duoc neu.",
+              "evidence_refs": []
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Khong co yeu to thuyet thuc hay ap luc.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Khong co tai san nao duoc xac dinh la dang gap rui ro.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Khong co dau hieu mao danh.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tu thao tac tren ung dung va xac nhan khong chia se ma cho ai.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Du du lieu de ghi nhan hanh vi tu xu ly cua nguoi noi nhung thieu ngu cảnh ban dau.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Nguoi noi tu mo ung dung va nhap ma tren thiet bi cua minh.",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự mở ứng dụng chính thức và nhập mã xác thực trên điện thoại của mình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Thao tac duoc thuc hien doc lap boi nguoi noi.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Nguoi noi khong gui ma xac thuc cho bat kỳ ai.",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi không gửi mã cho ai.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Xac nhan khong chia se thong tin xac thuc.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [],
+          "uncertainties": [
+            "Thieu ngu cảnh ve viec vi sao co hanh dong nhap ma xac thuc.",
+            "Khong ro co su ton tai cua mot yeu cau truoc do tu ben thu ba hay khong."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người dùng tường thuật việc tự mở ứng dụng chính thức và tự nhập mã trên điện thoại.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Hành động tự nhập mã xác thực và phủ nhận việc gửi mã cho người khác.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin để xác định đây là lời tự thuật và phủ định.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người dùng tự thực hiện thao tác nhập mã trên thiết bị của mình",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự mở ứng dụng chính thức và nhập mã xác thực trên điện thoại của mình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Tự thuật việc tự thao tác trên ứng dụng chính thức.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Phủ định việc gửi mã cho người khác",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi không gửi mã cho ai.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Lời phủ định việc chia sẻ thông tin xác thực.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-07"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [],
+          "situation_facts": [],
+          "situation_links": [],
+          "information_gaps": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 10741.5433999995,
+    "extraction_ms": 11198.285399994347,
+    "response": {
+      "schema_version": "1.9",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong phần nội dung đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Tôi tự mở ứng dụng chính thức và nhập mã xác thực trên điện thoại của mình.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong phần nội dung đã kiểm tra.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự mở ứng dụng chính thức và nhập mã xác thực trên điện thoại của mình.",
+              "start": 0,
+              "end": 75
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi không gửi mã cho ai.",
+              "start": 76,
+              "end": 100
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh yêu cầu qua kênh quen dùng hoặc đầu mối chính thức trước khi thực hiện."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 0,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-07"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3840.304400000605,
+          "retrieval_parallel": 4.005399998277426,
+          "second_provider": 6903.836400000728,
+          "pipeline_total": 10748.267600007239,
+          "verification_render": 1.6095000028144568
+        },
+        "decision_version": "two-pass-6",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 2.365100008319132
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 3.7375999963842332
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong phần nội dung đã kiểm tra.",
+      "display_action": "Xác minh yêu cầu qua kênh quen dùng hoặc đầu mối chính thức trước khi thực hiện."
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 456.741999994847,
+    "validation_adjudication_serialization_ms": 4.448200008482672
+  },
+  {
+    "id": "F02",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 11039.759300008882,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 870,
+      "prompt_tokens": 1180,
+      "total_tokens": 2050
+    },
+    "usage_totals": {
+      "completion_tokens": 870,
+      "prompt_tokens": 1180,
+      "total_tokens": 2050
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người mua thông báo vận chuyển đã đến và chủ hàng xác nhận tiền đã vào tài khoản.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không có thông tin về danh tính cụ thể.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Đề nghị bàn giao bộ loa.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Không có yếu tố thuyết phục hoặc áp lực bất thường.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Không rõ tài sản nào gặp rủi ro.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có dấu hiệu mạo danh.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Khách thông báo người vận chuyển đến và yêu cầu bàn giao hàng, sau đó chủ hàng kiểm tra tài khoản và xác nhận tiền đã vào.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin trao đổi giao dịch thông thường.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Yêu cầu bàn giao hàng cho người vận chuyển.",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Người vận chuyển đã đến, bạn bàn giao bộ loa giúp tôi.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người mua đề nghị giao bộ loa cho người vận chuyển.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Chủ hàng xác nhận đã nhận được tiền trong tài khoản.",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m2",
+              "quote": "Tôi vừa tự xem ứng dụng ngân hàng: tiền mua bộ loa đã vào đúng tài khoản, đủ số tiền.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Chủ hàng kiểm tra ứng dụng ngân hàng và xác nhận tiền thanh toán đã vào tài khoản đủ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Giao dịch mua bán thông thường giữa người mua và chủ hàng.",
+          "finding_refs": [
+            "f1",
+            "f2"
+          ],
+          "alternative_explanations": [
+            "Các bên đang tiến hành giao dịch thương mại điện tử bình thường."
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa rõ danh tính thực tế của người vận chuyển.",
+        "Chưa rõ bối cảnh nền tảng giao dịch."
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người mua thông báo vận chuyển đã đến và chủ hàng xác nhận tiền đã vào tài khoản.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không có thông tin về danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Đề nghị bàn giao bộ loa.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có yếu tố thuyết phục hoặc áp lực bất thường.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không rõ tài sản nào gặp rủi ro.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có dấu hiệu mạo danh.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Khách thông báo người vận chuyển đến và yêu cầu bàn giao hàng, sau đó chủ hàng kiểm tra tài khoản và xác nhận tiền đã vào.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin trao đổi giao dịch thông thường.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Yêu cầu bàn giao hàng cho người vận chuyển.",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Người vận chuyển đã đến, bạn bàn giao bộ loa giúp tôi.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người mua đề nghị giao bộ loa cho người vận chuyển.",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Chủ hàng xác nhận đã nhận được tiền trong tài khoản.",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m2",
+                  "quote": "Tôi vừa tự xem ứng dụng ngân hàng: tiền mua bộ loa đã vào đúng tài khoản, đủ số tiền.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Chủ hàng kiểm tra ứng dụng ngân hàng và xác nhận tiền thanh toán đã vào tài khoản đủ.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Giao dịch mua bán thông thường giữa người mua và chủ hàng.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Các bên đang tiến hành giao dịch thương mại điện tử bình thường."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực tế của người vận chuyển.",
+            "Chưa rõ bối cảnh nền tảng giao dịch."
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10842.27659998578,
+    "extraction_ms": 11037.296700000297,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "2641a7b7-2609-4040-85c7-d7e646c8685b",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "F03",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 5549.6665999962715,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503,
+      503
+    ],
+    "provider_adapter_ms": 5042.538200010313,
+    "extraction_ms": 5546.846299999743,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "b3fa1da3-acdc-485c-a9fc-94914df4f7f8",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "F04",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 33462.154299995746,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503,
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 869,
+      "prompt_tokens": 1182,
+      "total_tokens": 2051
+    },
+    "usage_totals": {
+      "completion_tokens": 869,
+      "prompt_tokens": 1182,
+      "total_tokens": 2051
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển trả khoản vay tuần trước.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Chủ nợ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Chuyển trả khoản vay.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tiền trong tài khoản dùng để chuyển trả khoản vay.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Chủ nợ nhắc trả tiền, người vay xác nhận đúng thỏa thuận và đã gọi đối chiếu.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin để ghi nhận yêu cầu trả khoản vay và phản hồi đối chiếu của người vay.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển trả khoản vay",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn chuyển trả khoản vay tuần trước giúp tôi nhé.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người nói yêu cầu người nghe thực hiện việc chuyển tiền trả nợ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Người vay xác nhận đã đối chiếu thông tin và số tiền",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m2",
+              "quote": "Đúng khoản tôi đã vay. Tôi vừa gọi số quen của bạn để đối chiếu số tiền và tài khoản, đều đúng thỏa thuận.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người vay xác nhận khoản nợ và việc đã gọi điện kiểm tra lại thông tin.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Giao dịch trả nợ thông thường giữa hai bên quen biết.",
+          "finding_refs": [
+            "f1",
+            "f2"
+          ],
+          "alternative_explanations": [
+            "Đây là yêu cầu đòi nợ chính đáng dựa trên khoản vay có thật.",
+            "Giao dịch tài chính hợp pháp không có dấu hiệu lừa đảo."
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa rõ danh tính thực tế của các bên qua không gian mạng.",
+        "Chưa có thêm dữ liệu kỹ thuật về các tài khoản ngân hàng liên quan."
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển trả khoản vay tuần trước.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Chủ nợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển trả khoản vay.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tiền trong tài khoản dùng để chuyển trả khoản vay.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Chủ nợ nhắc trả tiền, người vay xác nhận đúng thỏa thuận và đã gọi đối chiếu.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin để ghi nhận yêu cầu trả khoản vay và phản hồi đối chiếu của người vay.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển trả khoản vay",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn chuyển trả khoản vay tuần trước giúp tôi nhé.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói yêu cầu người nghe thực hiện việc chuyển tiền trả nợ.",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Người vay xác nhận đã đối chiếu thông tin và số tiền",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m2",
+                  "quote": "Đúng khoản tôi đã vay. Tôi vừa gọi số quen của bạn để đối chiếu số tiền và tài khoản, đều đúng thỏa thuận.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người vay xác nhận khoản nợ và việc đã gọi điện kiểm tra lại thông tin.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Giao dịch trả nợ thông thường giữa hai bên quen biết.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đây là yêu cầu đòi nợ chính đáng dựa trên khoản vay có thật.",
+                "Giao dịch tài chính hợp pháp không có dấu hiệu lừa đảo."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực tế của các bên qua không gian mạng.",
+            "Chưa có thêm dữ liệu kỹ thuật về các tài khoản ngân hàng liên quan."
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 32839.34030000819,
+    "extraction_ms": 33457.86299998872,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "fe74af32-676b-42f8-beed-de0c7a537172",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "F05",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F06",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F07",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F08",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F09",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F10",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F11",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F12",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F13",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "F14",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  }
+]

@@ -1,0 +1,3066 @@
+[
+  {
+    "id": "URL-01",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 23960.54279999953,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      503,
+      200,
+      503,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1365,
+      "prompt_tokens": 6484,
+      "total_tokens": 7849
+    },
+    "usage_totals": {
+      "completion_tokens": 3590,
+      "prompt_tokens": 12657,
+      "total_tokens": 16247
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi tự nhận là bộ phận hỗ trợ YouTube.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Tự xưng là hỗ trợ YouTube.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu người dùng gửi mã OTP đăng nhập.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra lý do ngăn khóa tài khoản để thúc đẩy việc gửi mã OTP.",
+          "evidence_refs": [
+            "f3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tài khoản YouTube hoặc tài khoản Google.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        },
+        "impersonation": {
+          "status": "inferred",
+          "text": "Giả mạo nhân viên hỗ trợ nền tảng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu gửi mã OTP nhằm đạt mục đích ngăn khóa tài khoản.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đã có đủ văn bản yêu cầu cung cấp mã xác thực và đường dẫn kèm theo.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Tự nhận là hỗ trợ YouTube",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi là hỗ trợ YouTube.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Người gửi tự xưng danh tính bộ phận hỗ trợ dịch vụ.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "share_auth_code",
+          "description": "Yêu cầu gửi mã OTP đăng nhập",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP đăng nhập của bạn tại đây",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu cung cấp mã xác thực bảo mật tài khoản.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f3",
+          "action": "inducement",
+          "description": "Đưa ra lý do ngăn khóa tài khoản",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "để tôi ngăn khóa tài khoản.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Sử dụng lý do bảo vệ tài khoản để thuyết phục người dùng thực hiện yêu cầu.",
+            "evidence_refs": [
+              "f3"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f2",
+            "support_id": "f3"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-02"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f2",
+          "support_id": "f3",
+          "status": "supported",
+          "relation_type": "other_prerequisite",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP đăng nhập của bạn tại đây để tôi ngăn khóa tài khoản.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu cung cấp mã OTP gắn liền với lý do ngăn khóa tài khoản.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "u1",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "f2"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nói là hỗ trợ YouTube và yêu cầu gửi mã OTP để ngăn khóa tài khoản.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Hỗ trợ YouTube",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Gửi mã OTP đăng nhập",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Ngăn khóa tài khoản",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản YouTube hoặc dịch vụ liên kết",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Giả mạo nhân viên hỗ trợ YouTube",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tự nhận hỗ trợ YouTube, nêu lý do ngăn khóa tài khoản và yêu cầu gửi mã OTP.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Có đủ văn bản tin nhắn thể hiện rõ yêu cầu cung cấp mã OTP.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Tự nhận là hỗ trợ YouTube",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi là hỗ trợ YouTube.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Người gửi tự xưng là bộ phận hỗ trợ nền tảng.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "share_auth_code",
+              "description": "Yêu cầu gửi mã OTP đăng nhập với lý do ngăn khóa tài khoản",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP đăng nhập của bạn tại đây để tôi ngăn khóa tài khoản.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu cung cấp mã xác thực có nguy cơ mất quyền kiểm soát tài khoản.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Kẻ gian giả mạo hỗ trợ YouTube để lừa người dùng cung cấp mã OTP nhằm chiếm đoạt tài khoản.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Hệ thống tự động nhắc nhở từ nền tảng chính thức.",
+                "Mô phỏng tình huống kiểm tra bảo mật thông thường."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa xác minh được danh tính thực tế của người gửi tin nhắn.",
+            "Chưa rõ liệu liên kết kèm theo có dẫn đến trang web độc hại hay không."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi tự nhận là hỗ trợ YouTube.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Tự xưng là hỗ trợ YouTube để ngăn khóa tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu gửi mã OTP đăng nhập.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra lý do ngăn khóa tài khoản để thúc đẩy việc gửi mã.",
+              "evidence_refs": [
+                "f3"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản YouTube hoặc tài khoản Google liên kết.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Giả mạo nhân viên hỗ trợ YouTube.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu gửi mã OTP ngay để được hỗ trợ ngăn khóa tài khoản.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã có đủ văn bản yêu cầu chia sẻ mã xác thực và đường dẫn giả mạo.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Tự nhận là hỗ trợ YouTube",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi là hỗ trợ YouTube.",
+                  "start": 0,
+                  "end": 22
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Người gửi tự xưng danh tính bộ phận hỗ trợ.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "share_auth_code",
+              "description": "Yêu cầu gửi mã OTP đăng nhập",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP đăng nhập của bạn tại đây",
+                  "start": 23,
+                  "end": 60
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu người dùng cung cấp mã xác thực bảo mật.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "inducement",
+              "description": "Đưa ra lý do ngăn khóa tài khoản",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "để tôi ngăn khóa tài khoản.",
+                  "start": 61,
+                  "end": 87
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Dùng lý do bảo vệ tài khoản để thúc giục người dùng thực hiện yêu cầu.",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f2",
+                "support_id": "f3"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-02"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f2",
+              "support_id": "f3",
+              "status": "supported",
+              "relation_type": "other_prerequisite",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP đăng nhập của bạn tại đây để tôi ngăn khóa tài khoản.",
+                  "start": 23,
+                  "end": 87
+                }
+              ],
+              "assessment_note": "Yêu cầu gửi mã OTP đi kèm với lý do ngăn khóa tài khoản.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ],
+          "url_uses": [
+            {
+              "link_id": "u1",
+              "signal_codes": [
+                "lookalike_reference_domain"
+              ],
+              "finding_refs": [
+                "f2"
+              ],
+              "relation": "supports_request_risk"
+            }
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi tự nhận là bộ phận hỗ trợ YouTube.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Tự xưng là hỗ trợ YouTube.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu người dùng gửi mã OTP đăng nhập.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra lý do ngăn khóa tài khoản để thúc đẩy việc gửi mã OTP.",
+              "evidence_refs": [
+                "f3"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản YouTube hoặc tài khoản Google.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Giả mạo nhân viên hỗ trợ nền tảng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu gửi mã OTP nhằm đạt mục đích ngăn khóa tài khoản.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã có đủ văn bản yêu cầu cung cấp mã xác thực và đường dẫn kèm theo.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Tự nhận là hỗ trợ YouTube",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi là hỗ trợ YouTube.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Người gửi tự xưng danh tính bộ phận hỗ trợ dịch vụ.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "share_auth_code",
+              "description": "Yêu cầu gửi mã OTP đăng nhập",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP đăng nhập của bạn tại đây",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu cung cấp mã xác thực bảo mật tài khoản.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "inducement",
+              "description": "Đưa ra lý do ngăn khóa tài khoản",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "để tôi ngăn khóa tài khoản.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Sử dụng lý do bảo vệ tài khoản để thuyết phục người dùng thực hiện yêu cầu.",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f2",
+                "support_id": "f3"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-02"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f2",
+              "support_id": "f3",
+              "status": "supported",
+              "relation_type": "other_prerequisite",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP đăng nhập của bạn tại đây để tôi ngăn khóa tài khoản.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu cung cấp mã OTP gắn liền với lý do ngăn khóa tài khoản.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ],
+          "url_uses": [
+            {
+              "link_id": "u1",
+              "signal_codes": [
+                "lookalike_reference_domain"
+              ],
+              "finding_refs": [
+                "f2"
+              ],
+              "relation": "supports_request_risk"
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 23699.761700001545,
+    "extraction_ms": 23954.861099999107,
+    "response": {
+      "schema_version": "1.7",
+      "mode": "two_pass",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Tôi là hỗ trợ YouTube.” “để tôi ngăn khóa tài khoản.”",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Danh tính tự nhận, chưa được xác minh: “Tôi là hỗ trợ YouTube.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Gửi mã OTP đăng nhập của bạn tại đây”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “để tôi ngăn khóa tài khoản.”",
+          "evidence_refs": [
+            "f3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "inferred",
+          "text": "Có tự nhận vai trò; chưa đủ căn cứ xác nhận hoặc loại trừ mạo danh: “Tôi là hỗ trợ YouTube.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi là hỗ trợ YouTube.",
+              "start": 0,
+              "end": 22
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "share_auth_code",
+          "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP đăng nhập của bạn tại đây",
+              "start": 23,
+              "end": 59
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+            "evidence_refs": [
+              "f2",
+              "f3"
+            ]
+          }
+        },
+        {
+          "id": "f3",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "để tôi ngăn khóa tài khoản.",
+              "start": 60,
+              "end": 87
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Không đăng nhập hoặc giao mã qua liên kết chưa xác minh; tự mở kênh chính thức đã biết."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-02"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 5605.1881999956095,
+          "retrieval_parallel": 16.429199997219257,
+          "second_provider": 18118.24340000021,
+          "pipeline_total": 23740.167399999336,
+          "verification_render": 2.3310999968089163
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 1,
+        "consistency_issues": [
+          "relation_endpoint_unverified"
+        ],
+        "grounded_relation_count": 1,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.9210000027669594
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.885900001274422
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [
+        {
+          "link_id": "u1",
+          "message_id": "m1",
+          "origin": "user_supplied",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked"
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "u1",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "f2"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ]
+    },
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 255.0993999975617,
+    "validation_adjudication_serialization_ms": 5.681700000423007
+  },
+  {
+    "id": "URL-02",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 13087.055900003179,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 968,
+      "prompt_tokens": 5021,
+      "total_tokens": 5989
+    },
+    "usage_totals": {
+      "completion_tokens": 1855,
+      "prompt_tokens": 6002,
+      "total_tokens": 7857
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Văn bản đưa ra lời cảnh báo về link giả mạo và hành vi lừa đảo.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không có thông tin về danh tính người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Khuyên không đăng nhập hoặc gửi mã qua đường link được nhắc tới.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Không có nội dung thuyết phục hay dụ dỗ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Không xác định tài sản cụ thể đang gặp rủi ro.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Không có dấu hiệu giả mạo danh tính.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Không có chuỗi hành động lừa đảo.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ bằng chứng để nhận diện đây là một thông điệp cảnh báo phòng tránh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Cảnh báo về tên miền giả mạo",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: link https://youtubee.com là ví dụ tên gần giống.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đây là nội dung cảnh báo phòng tránh rủi ro.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Khuyên người đọc không thực hiện hành động rủi ro",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đừng đăng nhập hoặc gửi mã qua đó.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Lời khuyên bảo vệ tài khoản, ngăn chặn việc cung cấp thông tin.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-06"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "quoted_warning"
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Link https://youtubee.com là ví dụ tên gần giống.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không có thông tin về danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Đừng đăng nhập hoặc gửi mã qua đó.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có áp lực hay thuyết phục.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không xác định tài sản rủi ro cụ thể.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có giả mạo danh tính được nêu.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có chuỗi hành động tấn công.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ ngữ cảnh để nhận diện đây là bài viết cảnh báo phòng ngừa.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Cảnh báo về một tên miền ví dụ gần giống.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh báo: link https://youtubee.com là ví dụ tên gần giống.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đoạn văn đưa ra thông tin mang tính phòng ngừa.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Lời dặn không thực hiện hành động đăng nhập hoặc gửi mã.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Đừng đăng nhập hoặc gửi mã qua đó.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là lời cảnh báo phòng tránh, không phải yêu cầu thực hiện hành vi có hại.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Đây là thông tin cảnh báo an toàn từ bên thứ ba nhằm nâng cao nhận thức.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đoạn văn trích dẫn từ một tài liệu hướng dẫn an toàn mạng.",
+                "Đây có thể là văn bản mẫu phục vụ việc giáo dục người dùng."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ nguồn gốc chính xác của văn bản cảnh báo.",
+            "Không có ngữ cảnh rộng hơn về việc văn bản này xuất hiện ở đâu."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Văn bản đưa ra lời cảnh báo về link giả mạo và hành vi lừa đảo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không có thông tin về danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Khuyên không đăng nhập hoặc gửi mã qua đường link được nhắc tới.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có nội dung thuyết phục hay dụ dỗ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không xác định tài sản cụ thể đang gặp rủi ro.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dấu hiệu giả mạo danh tính.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có chuỗi hành động lừa đảo.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng để nhận diện đây là một thông điệp cảnh báo phòng tránh.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Cảnh báo về tên miền giả mạo",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh báo: link https://youtubee.com là ví dụ tên gần giống.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là nội dung cảnh báo phòng tránh rủi ro.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Khuyên người đọc không thực hiện hành động rủi ro",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Đừng đăng nhập hoặc gửi mã qua đó.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Lời khuyên bảo vệ tài khoản, ngăn chặn việc cung cấp thông tin.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-06"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [
+            {
+              "link_id": "auto-url-0-0",
+              "signal_codes": [
+                "lookalike_reference_domain"
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "relation": "quoted_warning"
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 12905.259500003012,
+    "extraction_ms": 13083.566599998449,
+    "response": {
+      "schema_version": "1.7",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: link https://youtubee.com là ví dụ tên gần giống.",
+              "start": 0,
+              "end": 59
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đừng đăng nhập hoặc gửi mã qua đó.",
+              "start": 60,
+              "end": 94
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-06"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 6714.5696000006865,
+          "retrieval_parallel": 4.892600001767278,
+          "second_provider": 6191.140099996119,
+          "pipeline_total": 12911.25479999755,
+          "verification_render": 1.039199996739626
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 3.568000000086613
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 3.196000005118549
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://youtubee.com/",
+          "hostname": "youtubee.com",
+          "unicode_hostname": "youtubee.com",
+          "registered_domain": "youtubee.com",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "lookalike_reference_domain",
+              "level": "review",
+              "detail": "Tên miền gần giống youtube.com theo khoảng cách ký tự, không phải xác suất lừa đảo."
+            }
+          ],
+          "reputation_status": "not_checked"
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "lookalike_reference_domain"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "quoted_warning"
+        }
+      ]
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 178.30709999543615,
+    "validation_adjudication_serialization_ms": 3.4893000047304668
+  },
+  {
+    "id": "URL-03",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 10431.57130000327,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 771,
+      "prompt_tokens": 4743,
+      "total_tokens": 5514
+    },
+    "usage_totals": {
+      "completion_tokens": 1331,
+      "prompt_tokens": 5710,
+      "total_tokens": 7041
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "User states they opened YouTube voluntarily to watch learning videos and no one requested login or codes.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "None requested",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "User performed self-initiated action to open a standard platform.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Sufficient for a self-initiated normal user activity without external coercion.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "User describes self-initiated activity on a standard website with no requests or coercion.",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự mở https://www.youtube.com để xem video học. Không ai yêu cầu tôi đăng nhập hay cung cấp mã.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "The message describes a benign, self-directed action with explicit denial of external requests.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "hypotheses": [],
+      "uncertainties": [
+        "No external risk or suspicious interaction is present in the provided text."
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "User states they opened YouTube voluntarily to watch learning videos and no one requested login or codes.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "None requested",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "User performed self-initiated action to open a standard platform.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Sufficient for a self-initiated normal user activity without external coercion.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "User describes self-initiated activity on a standard website with no requests or coercion.",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự mở https://www.youtube.com để xem video học. Không ai yêu cầu tôi đăng nhập hay cung cấp mã.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "The message describes a benign, self-directed action with explicit denial of external requests.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [],
+          "uncertainties": [
+            "No external risk or suspicious interaction is present in the provided text."
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10255.79330000619,
+    "extraction_ms": 10429.697200001101,
+    "response": {
+      "code": "PROVIDER_INVALID_OUTPUT",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "73f23e17-9a64-47a5-8e85-e92159b76bb0",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "validation",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "issues": [
+          {
+            "path": "url_uses.0.signal_codes",
+            "type": "too_short"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "URL-04",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 12418.886199993722,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 906,
+      "prompt_tokens": 4982,
+      "total_tokens": 5888
+    },
+    "usage_totals": {
+      "completion_tokens": 1605,
+      "prompt_tokens": 5993,
+      "total_tokens": 7598
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Yêu cầu đăng nhập tài khoản để xác minh.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Đăng nhập tài khoản qua liên kết được cung cấp.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Yêu cầu thực hiện xác minh tài khoản.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thông tin tài khoản đăng nhập có nguy cơ bị chiếm đoạt do liên kết giả mạo.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa rõ người gửi có giả mạo dịch vụ chính thức hay không.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Đưa ra yêu cầu đăng nhập tài khoản ngay lập tức qua liên kết.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ văn bản thông điệp và dấu hiệu lệch đích liên kết.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu đăng nhập tài khoản để xác minh tại liên kết có tên miền hiển thị khác đích thực tế.",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập tài khoản để xác minh tại https://youtube.com.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Liên kết dẫn tới trang giả mạo nhằm thu thập thông tin đăng nhập của người dùng.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "channel"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "identity"
+        },
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [
+        {
+          "link_id": "u4",
+          "signal_codes": [
+            "display_target_mismatch",
+            "brand_in_subdomain"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu đăng nhập tài khoản để xác minh.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Đăng nhập tài khoản tại liên kết được cung cấp.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "inferred",
+              "text": "Tạo nhu cầu xác minh tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thông tin đăng nhập tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ dữ liệu xác định giả mạo.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhận yêu cầu và thực hiện đăng nhập qua liên kết.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ văn bản yêu cầu và liên kết kèm theo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Yêu cầu đăng nhập tài khoản để xác minh qua liên kết.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Đăng nhập tài khoản để xác minh tại https://youtube.com.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Có thể dẫn tới trang thu thập thông tin đăng nhập.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Nội dung có thể là một liên kết lừa đảo thu thập thông tin tài khoản nếu đích thực tế khác với hiển thị.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là thông báo xác minh tài khoản chính thức từ dịch vụ."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ đích thực tế của liên kết hiển thị trong văn bản.",
+            "Chưa rõ ngữ cảnh và danh tính người gửi."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu đăng nhập tài khoản để xác minh.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Đăng nhập tài khoản qua liên kết được cung cấp.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Yêu cầu thực hiện xác minh tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thông tin tài khoản đăng nhập có nguy cơ bị chiếm đoạt do liên kết giả mạo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa rõ người gửi có giả mạo dịch vụ chính thức hay không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Đưa ra yêu cầu đăng nhập tài khoản ngay lập tức qua liên kết.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ văn bản thông điệp và dấu hiệu lệch đích liên kết.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu đăng nhập tài khoản để xác minh tại liên kết có tên miền hiển thị khác đích thực tế.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Đăng nhập tài khoản để xác minh tại https://youtube.com.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Liên kết dẫn tới trang giả mạo nhằm thu thập thông tin đăng nhập của người dùng.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "channel"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [
+            {
+              "link_id": "u4",
+              "signal_codes": [
+                "display_target_mismatch",
+                "brand_in_subdomain"
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "relation": "supports_request_risk"
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 12243.559700000333,
+    "extraction_ms": 12416.90550000203,
+    "response": {
+      "schema_version": "1.7",
+      "mode": "two_pass",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Đăng nhập tài khoản để xác minh tại https://youtube.com.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đăng nhập tài khoản để xác minh tại https://youtube.com.",
+              "start": 0,
+              "end": 56
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+        "Thao tác được yêu cầu qua ứng dụng chính thức hay đường dẫn/kênh do người gửi cung cấp?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Xác minh đơn vị hỗ trợ qua kênh độc lập trước khi cài phần mềm hoặc cấp quyền điều khiển.",
+        "Không đăng nhập hoặc giao mã qua liên kết chưa xác minh; tự mở kênh chính thức đã biết."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "first_provider": 4700.523399995291,
+          "retrieval_parallel": 2.972800000861753,
+          "second_provider": 7543.343299999833,
+          "pipeline_total": 12247.066999996605,
+          "verification_render": 0.36890000046696514
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.5409000043291599
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.8650999991223216
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [
+        {
+          "link_id": "u4",
+          "message_id": "m1",
+          "origin": "user_supplied",
+          "status": "parsed",
+          "display_url": "https://youtube.com.account-check.net/",
+          "hostname": "youtube.com.account-check.net",
+          "unicode_hostname": "youtube.com.account-check.net",
+          "registered_domain": "account-check.net",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "display_target_mismatch",
+              "level": "review",
+              "detail": "Tên miền hiển thị youtube.com khác tên miền đích youtube.com.account-check.net"
+            },
+            {
+              "code": "brand_in_subdomain",
+              "level": "review",
+              "detail": "Tên tham chiếu youtube.com chỉ xuất hiện ở phần miền phụ của youtube.com.account-check.net"
+            }
+          ],
+          "reputation_status": "not_checked"
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "u4",
+          "signal_codes": [
+            "display_target_mismatch",
+            "brand_in_subdomain"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "supports_request_risk"
+        }
+      ]
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 173.34580000169808,
+    "validation_adjudication_serialization_ms": 1.9806999916909263
+  },
+  {
+    "id": "URL-05",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 11276.236300000164,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 787,
+      "prompt_tokens": 4927,
+      "total_tokens": 5714
+    },
+    "usage_totals": {
+      "completion_tokens": 1378,
+      "prompt_tokens": 5894,
+      "total_tokens": 7272
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người dùng tự thuật đang đọc bài hướng dẫn ngôn ngữ và không thực hiện thao tác đăng nhập hay thanh toán.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa có thông tin về danh tính người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Không có yêu cầu hành động nào được đặt ra đối với người dùng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Không có yếu tố dụ dỗ hay thuyết phục.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Không có tài sản nào đang gặp rủi ro.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Không có dấu hiệu giả mạo danh tính.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Không có trình tự các bước thực hiện.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Thông tin rõ ràng, là lời tự thuật mang tính phủ định hành động rủi ro.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Người dùng tự thuật đang đọc bài hướng dẫn và phủ định việc thực hiện thao tác đăng nhập hoặc thanh toán.",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi đang đọc bài hướng dẫn ngôn ngữ tại https://vídụ.vn, không làm thao tác đăng nhập hay thanh toán.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đây là thông tin phủ định hành động đăng nhập/thanh toán, không phải yêu cầu rủi ro.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "punycode_hostname"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "quoted_warning"
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nguoi dung dang doc bai huong dan ngon ngu va khong thao tac dang nhập hay thanh toán.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Chua ghi nhan yeu cau rui ro hay dau hieu lua dao trong noi dung nay.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Nguoi dung tu thuong thuc noi dung huong dan doc lap va tu xac nhan khong thao tac",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi đang đọc bài hướng dẫn ngôn ngữ tại https://vídụ.vn, không làm thao tác đăng nhập hay thanh toán.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Noi dung ghi nhan hoat dong doc thong tin binh thuong.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [],
+          "uncertainties": [
+            "Khong co thong tin ve nguoi gui hay boi canh giao tiep day du ngoai tru cau mo ta ngan cua nguoi dung."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người dùng tự thuật đang đọc bài hướng dẫn ngôn ngữ và không thực hiện thao tác đăng nhập hay thanh toán.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa có thông tin về danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Không có yêu cầu hành động nào được đặt ra đối với người dùng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có yếu tố dụ dỗ hay thuyết phục.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không có tài sản nào đang gặp rủi ro.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dấu hiệu giả mạo danh tính.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có trình tự các bước thực hiện.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Thông tin rõ ràng, là lời tự thuật mang tính phủ định hành động rủi ro.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người dùng tự thuật đang đọc bài hướng dẫn và phủ định việc thực hiện thao tác đăng nhập hoặc thanh toán.",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi đang đọc bài hướng dẫn ngôn ngữ tại https://vídụ.vn, không làm thao tác đăng nhập hay thanh toán.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là thông tin phủ định hành động đăng nhập/thanh toán, không phải yêu cầu rủi ro.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [
+            {
+              "link_id": "auto-url-0-0",
+              "signal_codes": [
+                "punycode_hostname"
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "relation": "quoted_warning"
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 11062.543700005335,
+    "extraction_ms": 11270.91289999953,
+    "response": {
+      "schema_version": "1.7",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi đang đọc bài hướng dẫn ngôn ngữ tại https://vídụ.vn, không làm thao tác đăng nhập hay thanh toán.",
+              "start": 0,
+              "end": 101
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "first_provider": 4482.343399999081,
+          "retrieval_parallel": 23.087100002157968,
+          "second_provider": 6581.382500000473,
+          "pipeline_total": 11087.461900002381,
+          "verification_render": 1.4964000001782551
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 21.8451000037021
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.7245999988517724
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [
+        {
+          "link_id": "auto-url-0-0",
+          "message_id": "m1",
+          "origin": "text",
+          "status": "parsed",
+          "display_url": "https://xn--vd-nja3081a.vn/",
+          "hostname": "xn--vd-nja3081a.vn",
+          "unicode_hostname": "vídụ.vn",
+          "registered_domain": "xn--vd-nja3081a.vn",
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "punycode_hostname",
+              "level": "info",
+              "detail": "Tên miền có dạng Punycode; không tự chứng minh độc hại."
+            }
+          ],
+          "reputation_status": "not_checked"
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "auto-url-0-0",
+          "signal_codes": [
+            "punycode_hostname"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "quoted_warning"
+        }
+      ]
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 208.3691999941948,
+    "validation_adjudication_serialization_ms": 5.3234000006341375
+  },
+  {
+    "id": "URL-06",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 14035.921199996665,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      503,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 833,
+      "prompt_tokens": 1022,
+      "total_tokens": 1855
+    },
+    "usage_totals": {
+      "completion_tokens": 833,
+      "prompt_tokens": 1022,
+      "total_tokens": 1855
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Canh bao ve lien ket co dich that khac voi hien thi",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Dung bam dang nhap",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Dua vi du va canh bao nguoi dung khong dang nhap",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Du thong tin de xac dinh day la noi dung canh bao",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Nguoi noi dua vi du va thong tin ve lien ket",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bai canh bao dua vi du: https://youtube.com. Dich that cua lien ket mau la mot mien khac;",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Cung cap thong tin canh bao ve su khac biet cua lien ket",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Nguoi noi dua ra loi khuyen khong dang nhap",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "dung bam dang nhap.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Khuyen nguoi dung phong tranh rui ro",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Day la mot bai viet canh bao an toan thong tin cho nguoi dung",
+          "finding_refs": [
+            "f1",
+            "f2"
+          ],
+          "alternative_explanations": [
+            "Day la huong dan trong mot khoa hoc ky thuat",
+            "Day la vi du gia lap trong kiem thu"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Khong ro nguoi dang bai la ai va co nguon goc tu dau"
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Canh bao ve lien ket co dich that khac voi hien thi",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Dung bam dang nhap",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Dua vi du va canh bao nguoi dung khong dang nhap",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Du thong tin de xac dinh day la noi dung canh bao",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Nguoi noi dua vi du va thong tin ve lien ket",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bai canh bao dua vi du: https://youtube.com. Dich that cua lien ket mau la mot mien khac;",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Cung cap thong tin canh bao ve su khac biet cua lien ket",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Nguoi noi dua ra loi khuyen khong dang nhap",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "dung bam dang nhap.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Khuyen nguoi dung phong tranh rui ro",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Day la mot bai viet canh bao an toan thong tin cho nguoi dung",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Day la huong dan trong mot khoa hoc ky thuat",
+                "Day la vi du gia lap trong kiem thu"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Khong ro nguoi dang bai la ai va co nguon goc tu dau"
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 13532.042400001956,
+    "extraction_ms": 14031.255399997463,
+    "response": {
+      "code": "EVIDENCE_INVALID",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "7432a0c8-457f-4025-8958-35c6e2d41a22"
+    }
+  }
+]

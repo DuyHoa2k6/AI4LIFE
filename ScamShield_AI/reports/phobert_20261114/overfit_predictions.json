@@ -1,0 +1,395 @@
+[
+  {
+    "id": "smoke-01",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Tôi đã nhận tiền."
+        }
+      ]
+    },
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 7,
+            "end": 11,
+            "quote": "nhận",
+            "label": "action",
+            "score_uncalibrated": 0.9976112842559814
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "receive",
+              "object_type": "money",
+              "speech_act": "claim",
+              "polarity": "positive",
+              "temporal_state": "completed",
+              "modality": "assertion"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "speaker:sender",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "clear",
+        "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+        "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+        "evidence_refs": [],
+        "rules": [],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "clear",
+      "classifier_disagrees": false,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 454.2576000021654,
+        "inference": 30.98889999819221,
+        "verification_reasoning": 0.0940000027185306,
+        "total": 485.34339999605436
+      },
+      "windows": 1
+    }
+  },
+  {
+    "id": "smoke-02",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Tôi chưa nhận tài liệu."
+        }
+      ]
+    },
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 9,
+            "end": 13,
+            "quote": "nhận",
+            "label": "action",
+            "score_uncalibrated": 0.9991117119789124
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "receive",
+              "object_type": "document",
+              "speech_act": "claim",
+              "polarity": "negative",
+              "temporal_state": "not_completed",
+              "modality": "assertion"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "speaker:sender",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "clear",
+        "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+        "action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+        "evidence_refs": [],
+        "rules": [],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "need_context",
+      "classifier_disagrees": true,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 423.1325000000652,
+        "inference": 29.235200003313366,
+        "verification_reasoning": 0.07729999924777076,
+        "total": 452.44769999408163
+      },
+      "windows": 1
+    }
+  },
+  {
+    "id": "smoke-10",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Bạn nộp thêm để được rút tiền."
+        }
+      ]
+    },
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 4,
+            "end": 7,
+            "quote": "nộp",
+            "label": "action",
+            "score_uncalibrated": 0.9972332119941711
+          },
+          {
+            "id": "p1",
+            "message_id": "m1",
+            "start": 21,
+            "end": 29,
+            "quote": "rút tiền",
+            "label": "action",
+            "score_uncalibrated": 0.9961483478546143
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "transfer",
+              "object_type": "money",
+              "speech_act": "request",
+              "polarity": "positive",
+              "temporal_state": "requested",
+              "modality": "request"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "recipient:unknown",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          },
+          {
+            "id": "e1",
+            "anchor_id": "p1",
+            "attributes": {
+              "action_type": "withdraw",
+              "object_type": "money",
+              "speech_act": "claim",
+              "polarity": "positive",
+              "temporal_state": "pending",
+              "modality": "assertion"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "speaker:sender",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          }
+        ],
+        "relations": [
+          {
+            "id": "r0",
+            "source": "e0",
+            "target": "e1",
+            "label": "same_transaction",
+            "evidence_refs": [
+              "p0",
+              "p1"
+            ],
+            "score_uncalibrated": 1.0
+          },
+          {
+            "id": "r1",
+            "source": "e0",
+            "target": "e1",
+            "label": "prerequisite_for",
+            "evidence_refs": [
+              "p0",
+              "p1"
+            ],
+            "score_uncalibrated": 1.0
+          }
+        ],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "high",
+        "summary": "Người gửi đặt việc nộp thêm tiền làm điều kiện để được rút; bạn có thể tiếp tục mất tiền.",
+        "action": "Dừng nộp thêm và xác minh quyền rút qua đầu mối độc lập.",
+        "evidence_refs": [
+          "p0",
+          "p1"
+        ],
+        "rules": [
+          {
+            "rule_id": "PB-PAY-TO-WITHDRAW",
+            "risk": "high",
+            "event_ids": [
+              "e0",
+              "e1"
+            ],
+            "relation_ids": [
+              "r0",
+              "r1"
+            ],
+            "evidence_refs": [
+              "p0",
+              "p1"
+            ],
+            "mechanism": "Người gửi đặt việc nộp thêm tiền làm điều kiện để được rút; bạn có thể tiếp tục mất tiền.",
+            "conditions": [
+              "same_transaction",
+              "prerequisite_for"
+            ],
+            "contradictions": [],
+            "limitations": [
+              "Chỉ dựa trên nội dung cung cấp, chưa xác minh danh tính ngoài đời."
+            ],
+            "action": "Dừng nộp thêm và xác minh quyền rút qua đầu mối độc lập."
+          }
+        ],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "high",
+      "classifier_disagrees": false,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 429.2790000035893,
+        "inference": 32.21379999740748,
+        "verification_reasoning": 0.1016000023810193,
+        "total": 461.59630000329344
+      },
+      "windows": 1
+    }
+  },
+  {
+    "id": "smoke-14",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker_id": "sender",
+          "text": "Bạn cài ứng dụng chưa rõ nhà phát hành."
+        }
+      ]
+    },
+    "prediction": {
+      "schema_version": "phobert-structured-1.0",
+      "analysis_status": "complete",
+      "graph": {
+        "spans": [
+          {
+            "id": "p0",
+            "message_id": "m1",
+            "start": 4,
+            "end": 7,
+            "quote": "cài",
+            "label": "action",
+            "score_uncalibrated": 0.997222900390625
+          }
+        ],
+        "events": [
+          {
+            "id": "e0",
+            "anchor_id": "p0",
+            "attributes": {
+              "action_type": "install",
+              "object_type": "device",
+              "speech_act": "request",
+              "polarity": "positive",
+              "temporal_state": "requested",
+              "modality": "request"
+            },
+            "speaker_id": "sender",
+            "roles": {
+              "performer": "recipient:unknown",
+              "speaker": "speaker:sender"
+            },
+            "transaction_id": null
+          }
+        ],
+        "relations": [],
+        "limitations": [],
+        "discarded": []
+      },
+      "assessment": {
+        "analysis_status": "complete",
+        "risk_status": "suspicious",
+        "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+        "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+        "evidence_refs": [
+          "p0"
+        ],
+        "rules": [
+          {
+            "rule_id": "PB-SENSITIVE-REQUEST",
+            "risk": "suspicious",
+            "event_ids": [
+              "e0"
+            ],
+            "relation_ids": [],
+            "evidence_refs": [
+              "p0"
+            ],
+            "mechanism": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+            "conditions": [],
+            "contradictions": [],
+            "limitations": [
+              "Chỉ dựa trên nội dung cung cấp, chưa xác minh danh tính ngoài đời."
+            ],
+            "action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+          }
+        ],
+        "questions": [],
+        "missing": []
+      },
+      "classifier_baseline": "suspicious",
+      "classifier_disagrees": false,
+      "scope": "predicted_spans",
+      "scores_notice": "Scores are uncalibrated, not real-world probabilities.",
+      "timings_ms": {
+        "preprocessing": 445.5745000013849,
+        "inference": 30.8800999991945,
+        "verification_reasoning": 0.0810999990790151,
+        "total": 476.5373999980511
+      },
+      "windows": 1
+    }
+  }
+]

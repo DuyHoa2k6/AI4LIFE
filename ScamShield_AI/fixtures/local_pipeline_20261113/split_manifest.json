@@ -1,0 +1,42 @@
+{
+  "group_keys": [
+    "family",
+    "source_group"
+  ],
+  "dev": [
+    "VAR-N01",
+    "VAR-N02",
+    "VAR-N03",
+    "VAR-N04",
+    "VAR-N05",
+    "VAR-N06",
+    "VAR-N07",
+    "VAR-N08",
+    "VAR-N09",
+    "VAR-N10",
+    "VAR-N11",
+    "VAR-N12",
+    "VAR-X01",
+    "VAR-X02",
+    "VAR-X03",
+    "VAR-X04",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "Q",
+    "NOVEL-ASSET"
+  ],
+  "validation": [],
+  "holdout": [],
+  "reason": "One authored development source; independent evaluation must be supplied and kept outside configuration tuning."
+}

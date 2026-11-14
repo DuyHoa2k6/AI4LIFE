@@ -1,0 +1,32 @@
+[
+  {
+    "id": "RF-01",
+    "name": "NW-02 hồi quy",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 8260.11990000552,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-05",
+    "name": "Lời dụ trong bài cảnh báo",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 20921.747100001085,
+    "manual_review": "pending"
+  }
+]

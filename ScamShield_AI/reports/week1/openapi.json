@@ -1,0 +1,557 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ScamShield AI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/analyze": {
+      "post": {
+        "summary": "Analyze",
+        "operationId": "analyze_api_analyze_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalyzeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalyzeResponse"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Request Entity Too Large",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "Bad Gateway",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AnalyzeRequest": {
+        "properties": {
+          "text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 10000,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "messages": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/Message"
+                },
+                "type": "array",
+                "maxItems": 100,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Messages"
+          },
+          "context": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context"
+          },
+          "question": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "AnalyzeRequest"
+      },
+      "AnalyzeResponse": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version",
+            "default": "1.0"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "mock",
+              "live"
+            ],
+            "title": "Mode"
+          },
+          "risk_status": {
+            "type": "string",
+            "enum": [
+              "clear",
+              "need_context",
+              "suspicious",
+              "high",
+              "verified_match"
+            ],
+            "title": "Risk Status"
+          },
+          "summary": {
+            "type": "string",
+            "title": "Summary"
+          },
+          "answers": {
+            "$ref": "#/components/schemas/Answers"
+          },
+          "findings": {
+            "items": {
+              "$ref": "#/components/schemas/Finding"
+            },
+            "type": "array",
+            "title": "Findings"
+          },
+          "suspected_scam_types": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Suspected Scam Types",
+            "default": []
+          },
+          "missing_information": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Information"
+          },
+          "follow_up_questions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Follow Up Questions"
+          },
+          "recommended_actions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Recommended Actions"
+          },
+          "answer_to_user": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Answer To User"
+          },
+          "source_matches": {
+            "items": {
+              "$ref": "#/components/schemas/SourceMatch"
+            },
+            "type": "array",
+            "title": "Source Matches",
+            "default": []
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "mode",
+          "risk_status",
+          "summary",
+          "answers",
+          "findings",
+          "missing_information",
+          "follow_up_questions",
+          "recommended_actions",
+          "answer_to_user"
+        ],
+        "title": "AnalyzeResponse"
+      },
+      "Answer": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "inferred",
+              "unknown"
+            ],
+            "title": "Status"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "evidence_refs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Refs"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status",
+          "text",
+          "evidence_refs"
+        ],
+        "title": "Answer"
+      },
+      "Answers": {
+        "properties": {
+          "claim": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "claimed_identity": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "requested_action": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "persuasion": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "assets_at_risk": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "impersonation": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "sequence": {
+            "$ref": "#/components/schemas/Answer"
+          },
+          "evidence_sufficiency": {
+            "$ref": "#/components/schemas/Answer"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "claim",
+          "claimed_identity",
+          "requested_action",
+          "persuasion",
+          "assets_at_risk",
+          "impersonation",
+          "sequence",
+          "evidence_sufficiency"
+        ],
+        "title": "Answers"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "request_id"
+        ],
+        "title": "ErrorResponse"
+      },
+      "Evidence": {
+        "properties": {
+          "message_id": {
+            "type": "string",
+            "title": "Message Id"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1,
+            "title": "Quote"
+          },
+          "start": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start"
+          },
+          "end": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "message_id",
+          "quote"
+        ],
+        "title": "Evidence"
+      },
+      "Finding": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "transfer_funds",
+              "share_auth_code",
+              "grant_access",
+              "install_app",
+              "other",
+              "inducement"
+            ],
+            "title": "Action"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "speaker": {
+            "type": "string",
+            "title": "Speaker"
+          },
+          "speech_role": {
+            "type": "string",
+            "enum": [
+              "request",
+              "quoted_warning",
+              "denial",
+              "claim",
+              "unknown"
+            ],
+            "title": "Speech Role"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "minItems": 1,
+            "title": "Evidence"
+          },
+          "inference": {
+            "$ref": "#/components/schemas/Answer"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "action",
+          "description",
+          "speaker",
+          "speech_role",
+          "evidence",
+          "inference"
+        ],
+        "title": "Finding"
+      },
+      "Message": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Id"
+          },
+          "speaker": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Speaker"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 10000,
+            "minLength": 1,
+            "title": "Text"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "speaker",
+          "text"
+        ],
+        "title": "Message"
+      },
+      "SourceMatch": {
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "title": "Source Id"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "quote": {
+            "type": "string",
+            "title": "Quote"
+          },
+          "match_level": {
+            "type": "string",
+            "enum": [
+              "background",
+              "behavior_support",
+              "exact_entity"
+            ],
+            "title": "Match Level"
+          },
+          "reviewed_at": {
+            "type": "string",
+            "title": "Reviewed At"
+          },
+          "valid_until": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Valid Until"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source_id",
+          "url",
+          "quote",
+          "match_level",
+          "reviewed_at",
+          "valid_until"
+        ],
+        "title": "SourceMatch"
+      }
+    }
+  }
+}

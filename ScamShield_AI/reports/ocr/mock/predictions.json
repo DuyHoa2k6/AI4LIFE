@@ -1,0 +1,572 @@
+[
+  {
+    "id": "O1",
+    "ocr_http": 200,
+    "ocr_api_ms": 567.1285999997053,
+    "image_sha256": "8b671ec4ff457b62531bd0c37e0ad4878a4882603023591ccdbc18cb85290c4f",
+    "ocr": {
+      "source_id": "6136c3f6a9434390a6c94681664b2949",
+      "image_sha256": "8b671ec4ff457b62531bd0c37e0ad4878a4882603023591ccdbc18cb85290c4f",
+      "text": "Chuyển trước 500 nghìn cho tôi.\nĐó là điều kiện nhận lại 5 triệu tiền cọc.",
+      "status": "ready",
+      "confidence": 95.0,
+      "engine": "tesseract.js-7.0.0-vie+eng",
+      "width": 1300,
+      "height": 300,
+      "blocks": [
+        {
+          "text": "Chuyển trước 500 nghìn cho tôi.",
+          "confidence": 94,
+          "bbox": {
+            "x0": 37,
+            "y0": 46,
+            "x1": 579,
+            "y1": 88
+          }
+        },
+        {
+          "text": "Đó là điều kiện nhận lại 5 triệu tiền cọc.",
+          "confidence": 96,
+          "bbox": {
+            "x0": 35,
+            "y0": 121,
+            "x1": 694,
+            "y1": 160
+          }
+        }
+      ],
+      "ocr_ms": 547.424399999727,
+      "notice": "Văn bản do OCR nhận diện, có thể sai; hãy đối chiếu ảnh trước khi phân tích."
+    },
+    "payload": {
+      "messages": [
+        {
+          "id": "image",
+          "speaker": "unknown",
+          "text": "Chuyển trước 500 nghìn cho tôi.\nĐó là điều kiện nhận lại 5 triệu tiền cọc."
+        }
+      ],
+      "ocr_sources": [
+        {
+          "message_id": "image",
+          "source_id": "6136c3f6a9434390a6c94681664b2949"
+        }
+      ]
+    },
+    "analyze_http": 200,
+    "analysis": {
+      "schema_version": "1.6",
+      "mode": "mock",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh để đánh giá.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "MR-RECOVER:1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Có lời hứa hoặc điều kiện do người gửi nêu; chưa được xác minh.",
+          "evidence_refs": [
+            "MR-RECOVER:1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Cần thêm bối cảnh để đánh giá.",
+          "evidence_refs": [
+            "MR-RECOVER:1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-RECOVER:1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "image",
+              "quote": "Đó là điều kiện nhận lại 5 triệu tiền cọc.",
+              "start": 32,
+              "end": 74
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa rõ mục đích, vai trò hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Dịch vụ có yêu cầu trả phí trước hoặc cung cấp dữ liệu nhạy cảm không?"
+      ],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null,
+      "retrieval": null,
+      "input_sources": [
+        {
+          "message_id": "image",
+          "image_id": "6136c3f6a9434390a6c94681664b2949",
+          "origin": "image_ocr",
+          "image_sha256": "8b671ec4ff457b62531bd0c37e0ad4878a4882603023591ccdbc18cb85290c4f",
+          "confidence": 95.0,
+          "width": 1300,
+          "height": 300,
+          "blocks": [
+            {
+              "text": "Chuyển trước 500 nghìn cho tôi.",
+              "confidence": 94,
+              "bbox": {
+                "x0": 37,
+                "y0": 46,
+                "x1": 579,
+                "y1": 88
+              }
+            },
+            {
+              "text": "Đó là điều kiện nhận lại 5 triệu tiền cọc.",
+              "confidence": 96,
+              "bbox": {
+                "x0": 35,
+                "y0": 121,
+                "x1": 694,
+                "y1": 160
+              }
+            }
+          ],
+          "verification": "matches_ocr_output_not_verified_pixels"
+        }
+      ],
+      "input_warnings": [
+        "Quote khớp văn bản OCR chưa chứng minh OCR đọc đúng ảnh. Hãy đối chiếu ảnh gốc."
+      ]
+    },
+    "analysis_ms": 2.812499995343387
+  },
+  {
+    "id": "O2",
+    "ocr_http": 200,
+    "ocr_api_ms": 527.9387999980827,
+    "image_sha256": "ed52db843c994703a7fdc3baab89030b57d256a778ea42b0f58466f042182da6",
+    "ocr": {
+      "source_id": "e099976029c840008e906701e1c5fc04",
+      "image_sha256": "ed52db843c994703a7fdc3baab89030b57d256a778ea42b0f58466f042182da6",
+      "text": "Nạp tiền để nhận hoa hồng.",
+      "status": "ready",
+      "confidence": 94.0,
+      "engine": "tesseract.js-7.0.0-vie+eng",
+      "width": 1300,
+      "height": 300,
+      "blocks": [
+        {
+          "text": "Nạp tiền để nhận hoa hồng.",
+          "confidence": 95,
+          "bbox": {
+            "x0": 38,
+            "y0": 46,
+            "x1": 500,
+            "y1": 88
+          }
+        }
+      ],
+      "ocr_ms": 518.8591999976779,
+      "notice": "Văn bản do OCR nhận diện, có thể sai; hãy đối chiếu ảnh trước khi phân tích."
+    },
+    "payload": {
+      "messages": [
+        {
+          "id": "dom",
+          "speaker": "unknown",
+          "text": "Bài viết cảnh báo: ảnh dưới đây trích lời dụ của kẻ gian để phòng tránh. Đừng làm theo, tôi không yêu cầu người đọc chuyển tiền."
+        },
+        {
+          "id": "image",
+          "speaker": "unknown",
+          "text": "Nạp tiền để nhận hoa hồng."
+        }
+      ],
+      "ocr_sources": [
+        {
+          "message_id": "image",
+          "source_id": "e099976029c840008e906701e1c5fc04"
+        }
+      ]
+    },
+    "analyze_http": 200,
+    "analysis": {
+      "schema_version": "1.6",
+      "mode": "mock",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại trong nội dung đã cung cấp.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "MR-REWARD:3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển hoặc ứng tiền",
+          "evidence_refs": [
+            "MR-MONEY:2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Có lời hứa hoặc điều kiện do người gửi nêu; chưa được xác minh.",
+          "evidence_refs": [
+            "MR-REWARD:3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "MR-MONEY:2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Trong phạm vi cửa sổ quy tắc, yêu cầu và lời hứa/điều kiện liên quan xuất phát từ cùng người nói; quan hệ này chưa được AI live xác minh.",
+          "evidence_refs": [
+            "MR-MONEY:2",
+            "MR-REWARD:3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại trong nội dung đã cung cấp.",
+          "evidence_refs": [
+            "MR-MONEY:1",
+            "MR-MONEY:2",
+            "MR-REWARD:3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "MR-MONEY:1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "dom",
+              "quote": "Đừng làm theo, tôi không yêu cầu người đọc chuyển tiền.",
+              "start": 73,
+              "end": 128
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "MR-MONEY:2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "image",
+              "quote": "Nạp tiền để nhận hoa hồng.",
+              "start": 0,
+              "end": 26
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu có thể liên quan tới điều kiện nhận/rút tiền hoặc lời hứa trong các bằng chứng này.",
+            "evidence_refs": [
+              "MR-MONEY:2",
+              "MR-REWARD:3"
+            ]
+          }
+        },
+        {
+          "id": "MR-REWARD:3",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "image",
+              "quote": "Nạp tiền để nhận hoa hồng.",
+              "start": 0,
+              "end": 26
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null,
+      "retrieval": null,
+      "input_sources": [
+        {
+          "message_id": "image",
+          "image_id": "e099976029c840008e906701e1c5fc04",
+          "origin": "image_ocr",
+          "image_sha256": "ed52db843c994703a7fdc3baab89030b57d256a778ea42b0f58466f042182da6",
+          "confidence": 94.0,
+          "width": 1300,
+          "height": 300,
+          "blocks": [
+            {
+              "text": "Nạp tiền để nhận hoa hồng.",
+              "confidence": 95,
+              "bbox": {
+                "x0": 38,
+                "y0": 46,
+                "x1": 500,
+                "y1": 88
+              }
+            }
+          ],
+          "verification": "matches_ocr_output_not_verified_pixels"
+        }
+      ],
+      "input_warnings": [
+        "Quote khớp văn bản OCR chưa chứng minh OCR đọc đúng ảnh. Hãy đối chiếu ảnh gốc."
+      ]
+    },
+    "analysis_ms": 2.144500002032146
+  },
+  {
+    "id": "O3",
+    "ocr_http": 200,
+    "ocr_api_ms": 579.416399996262,
+    "image_sha256": "74aaff3840287cae270076364944c8f8eb951a351bcf6587ee3cbec270a1b88f",
+    "ocr": {
+      "source_id": "d1490c0301474969a1cbec0657079d9a",
+      "image_sha256": "74aaff3840287cae270076364944c8f8eb951a351bcf6587ee3cbec270a1b88f",
+      "text": "Tôi tự nhập mã trong ứng dụng ngân hàng.\nTôi không gửi mã cho người khác.",
+      "status": "ready",
+      "confidence": 96.0,
+      "engine": "tesseract.js-7.0.0-vie+eng",
+      "width": 1300,
+      "height": 300,
+      "blocks": [
+        {
+          "text": "Tôi tự nhập mã trong ứng dụng ngân hàng.",
+          "confidence": 96,
+          "bbox": {
+            "x0": 36,
+            "y0": 53,
+            "x1": 761,
+            "y1": 88
+          }
+        },
+        {
+          "text": "Tôi không gửi mã cho người khác.",
+          "confidence": 96,
+          "bbox": {
+            "x0": 36,
+            "y0": 126,
+            "x1": 611,
+            "y1": 163
+          }
+        }
+      ],
+      "ocr_ms": 570.9675000034622,
+      "notice": "Văn bản do OCR nhận diện, có thể sai; hãy đối chiếu ảnh trước khi phân tích."
+    },
+    "payload": {
+      "messages": [
+        {
+          "id": "image",
+          "speaker": "unknown",
+          "text": "Tôi tự nhập mã trong ứng dụng ngân hàng.\nTôi không gửi mã cho người khác."
+        }
+      ],
+      "ocr_sources": [
+        {
+          "message_id": "image",
+          "source_id": "d1490c0301474969a1cbec0657079d9a"
+        }
+      ]
+    },
+    "analyze_http": 200,
+    "analysis": {
+      "schema_version": "1.6",
+      "mode": "mock",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa ghi nhận yêu cầu đáng ngờ trong phần đã kiểm tra.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": null,
+      "retrieval": null,
+      "input_sources": [
+        {
+          "message_id": "image",
+          "image_id": "d1490c0301474969a1cbec0657079d9a",
+          "origin": "image_ocr",
+          "image_sha256": "74aaff3840287cae270076364944c8f8eb951a351bcf6587ee3cbec270a1b88f",
+          "confidence": 96.0,
+          "width": 1300,
+          "height": 300,
+          "blocks": [
+            {
+              "text": "Tôi tự nhập mã trong ứng dụng ngân hàng.",
+              "confidence": 96,
+              "bbox": {
+                "x0": 36,
+                "y0": 53,
+                "x1": 761,
+                "y1": 88
+              }
+            },
+            {
+              "text": "Tôi không gửi mã cho người khác.",
+              "confidence": 96,
+              "bbox": {
+                "x0": 36,
+                "y0": 126,
+                "x1": 611,
+                "y1": 163
+              }
+            }
+          ],
+          "verification": "matches_ocr_output_not_verified_pixels"
+        }
+      ],
+      "input_warnings": [
+        "Quote khớp văn bản OCR chưa chứng minh OCR đọc đúng ảnh. Hãy đối chiếu ảnh gốc."
+      ]
+    },
+    "analysis_ms": 1.3880999977118336
+  },
+  {
+    "id": "O4",
+    "ocr_http": 200,
+    "ocr_api_ms": 461.3991000005626,
+    "image_sha256": "1908bf708f3f53793161f065b8925f0e645833275608d677f0ead9c0f661a61d",
+    "ocr": {
+      "source_id": null,
+      "image_sha256": "1908bf708f3f53793161f065b8925f0e645833275608d677f0ead9c0f661a61d",
+      "text": "",
+      "status": "no_text",
+      "confidence": 0.0,
+      "engine": "tesseract.js-7.0.0-vie+eng",
+      "width": 1300,
+      "height": 300,
+      "blocks": [],
+      "ocr_ms": 453.5516000032658,
+      "notice": "Văn bản do OCR nhận diện, có thể sai; hãy đối chiếu ảnh trước khi phân tích."
+    }
+  }
+]

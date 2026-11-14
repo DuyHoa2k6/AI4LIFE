@@ -1,0 +1,26 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>ScamShield · Trang thử thu thập hội thoại</title>
+<style>body{font:16px/1.5 system-ui;margin:24px;color:#213e39;background:#f3f7f4}main{max-width:720px}#scroll{height:390px;overflow:auto;border:2px solid #62a68b;border-radius:12px;background:white}#chat{padding:18px;min-height:160px}article{margin:8px 0;padding:10px 14px;border-radius:12px;background:#edf4f1;min-height:45px}article[data-sender-role=self]{margin-left:80px;background:#d8ece5}time{display:block;font-size:12px;color:#62746b}blockquote{border-left:3px solid #93b9a7;padding:6px;background:#fff}button{padding:8px;margin:3px}textarea{width:95%;height:55px}aside{padding:12px;background:#fff4df}</style>
+<main><h1>Hội thoại giả lập · dữ liệu tổng hợp</h1><p>Mở extension → <b>Thu thập hội thoại đang hiển thị</b> → chọn nền trắng trong khung xanh → Bắt đầu. Tự cuộn, xem trước, chốt và tải JSON/TXT. Không cần backend.</p>
+<div><button onclick="demo()">Nạp hội thoại mẫu</button><button onclick="older()">Tải tin cũ phía trên</button><button onclick="changeConversation()">Đổi cuộc trò chuyện</button></div>
+<div id="scroll"><section id="chat" data-ss-conversation data-conversation-id="demo-A" data-conversation-title="Nhóm thử nghiệm"></section></div>
+<label>Ô soạn tin — không được thu thập<textarea>PRIVATE_UNSENT_DRAFT</textarea></label>
+<aside>Danh sách cuộc trò chuyện ngoài vùng: OUTSIDE_CONVERSATION_PRIVATE</aside></main>
+<script>
+const chat=document.querySelector('#chat'),scrollBox=document.querySelector('#scroll');
+function message(id,text,sender='a',name='Người A',extra=''){
+ const node=document.createElement('article');if(id)node.dataset.messageId=id;else node.dataset.chatMessage='true';
+ if(sender){node.dataset.senderId=sender;node.dataset.senderName=name;node.dataset.senderRole=sender==='self'?'self':'other';}
+ const body=document.createElement('div');body.dataset.chatText='';body.textContent=text;node.append(body);if(extra)node.insertAdjacentHTML('beforeend',extra);return node;
+}
+function render(rows){chat.replaceChildren(...rows);scrollBox.scrollTop=0;}
+function demo(){chat.dataset.conversationId='demo-A';render([
+ message('d1','Chào mọi người, chiều nay họp lúc mấy giờ?','a','An','<time>09:10</time>'),
+ message('d2','Mình đề xuất 14 giờ nhé.','self','Bạn','<time>09:11</time>'),
+ message('d3','Mình đồng ý.\nNhớ mang tài liệu 😊','b','Bình','<time>09:12</time>'),
+ message('d4','Tôi không đồng ý với yêu cầu được trích bên dưới.','self','Bạn','<blockquote data-chat-quote>Chuyển tiền cho tôi.</blockquote>'),
+ message('d5','Ảnh minh họa và đường dẫn:','a','An','<img alt="Ảnh tổng hợp" width="30" height="24" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22/%3E"><div data-chat-text><a href="https://example.invalid/tai-lieu">Tài liệu thử</a></div>'),
+ message('d6','Tin chưa rõ người gửi',null),message('d7','OK','a','An'),message('d8','OK','a','An')]);}
+function older(){const rows=[message('old1','Tin cũ đã được tải bằng thao tác của người dùng.','b','Bình','<time>08:00</time>'),...chat.children];render(rows);}
+function changeConversation(){chat.dataset.conversationId='demo-B';render([message('other1','OTHER_CONVERSATION_PRIVATE','c','Người C')]);}
+demo();
+</script></html>

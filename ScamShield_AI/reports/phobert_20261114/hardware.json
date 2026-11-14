@@ -1,0 +1,39 @@
+{
+  "python": "3.12.5",
+  "os": "Windows-11-10.0.26200-SP0",
+  "logical_cpus": 16,
+  "ram_total_bytes": 16858644480,
+  "ram_available_bytes": 7404351488,
+  "disk": {
+    "total": 510324445184,
+    "used": 313607839744,
+    "free": 196716605440
+  },
+  "torch": "2.6.0+cpu",
+  "cuda_available": false,
+  "cuda_device_count": 0,
+  "cuda_version": null,
+  "gpu_vram_bytes": null,
+  "windows_cim": {
+    "cpu": [
+      {
+        "Name": "12th Gen Intel(R) Core(TM) i5-12500H",
+        "NumberOfCores": 12,
+        "NumberOfLogicalProcessors": 16
+      }
+    ],
+    "gpu": [
+      {
+        "Name": "Intel(R) Iris(R) Xe Graphics",
+        "AdapterRAM": 1073741824
+      }
+    ]
+  },
+  "versions": {
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "psutil": "7.0.0",
+    "torch": "2.6.0+cpu"
+  }
+}

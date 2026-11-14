@@ -1,0 +1,113 @@
+{
+  "scope": "Draft development references for 16 unpunctuated/boundary contrast cases, not independent general accuracy.",
+  "cases": [
+    {
+      "id": "S01",
+      "units": [
+        "Chiều nay giao hàng nhé",
+        "gửi mã OTP cho tôi"
+      ]
+    },
+    {
+      "id": "S02",
+      "units": [
+        "Đừng gửi OTP cho người lạ",
+        "gửi mã đăng nhập cho tôi",
+        "để hoàn tiền"
+      ]
+    },
+    {
+      "id": "S03",
+      "units": [
+        "Chưa thấy tiền về,",
+        "nhưng cứ giao máy trước."
+      ]
+    },
+    {
+      "id": "S04",
+      "units": [
+        "Nếu chưa nhận tiền",
+        "thì đừng giao máy"
+      ]
+    },
+    {
+      "id": "S05",
+      "units": [
+        "Đừng chuyển tiền và gửi OTP"
+      ]
+    },
+    {
+      "id": "S06",
+      "units": [
+        "Gửi mã đăng nhập cho tôi"
+      ]
+    },
+    {
+      "id": "S07",
+      "units": [
+        "Mở liên kết",
+        "để đăng nhập"
+      ]
+    },
+    {
+      "id": "S08",
+      "units": [
+        "Tôi đã chuyển tiền rồi"
+      ]
+    },
+    {
+      "id": "S09",
+      "units": [
+        "Công việc đã xong"
+      ]
+    },
+    {
+      "id": "S10",
+      "units": [
+        "Tôi đi trên đê rồi về nhà"
+      ]
+    },
+    {
+      "id": "S11",
+      "units": [
+        "😀 Chuyển 500.000,50 đồng",
+        "mở https://example.invalid/a?x=1&y=2"
+      ]
+    },
+    {
+      "id": "S12",
+      "units": [
+        "Cảnh báo “gửi OTP rồi chuyển tiền”",
+        "gửi OTP cho tôi"
+      ]
+    },
+    {
+      "id": "S13",
+      "units": [
+        "Tài xế đang chờ",
+        "bạn giao hàng nhé"
+      ]
+    },
+    {
+      "id": "S14",
+      "units": [
+        "Đơn A chưa thanh toán",
+        "đơn B đã nhận đủ",
+        "giao đơn B nhé"
+      ]
+    },
+    {
+      "id": "S15",
+      "units": [
+        "Cài ứng dụng và cấp quyền điều khiển"
+      ]
+    },
+    {
+      "id": "S16",
+      "units": [
+        "Đọc sáu số",
+        "để nhận tiền"
+      ]
+    }
+  ]
+}

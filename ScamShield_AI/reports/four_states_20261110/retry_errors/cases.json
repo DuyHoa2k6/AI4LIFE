@@ -1,0 +1,66 @@
+[
+  {
+    "id": "N01",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Lịch họp bình thường",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 15954.783899986069,
+    "manual_review": "pending"
+  },
+  {
+    "id": "H02",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nộp phí trước khi nhận thưởng",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 24011.114299995825,
+    "manual_review": "pending"
+  },
+  {
+    "id": "N03",
+    "group": "normal",
+    "target_status": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Bài cảnh báo trích lời dụ",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 16917.58339999069,
+    "manual_review": "pending"
+  },
+  {
+    "id": "H04",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Chuỗi hành vi qua nhiều tin",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 13824.148700005026,
+    "manual_review": "pending"
+  }
+]

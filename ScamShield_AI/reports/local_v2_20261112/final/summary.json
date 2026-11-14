@@ -1,0 +1,106 @@
+{
+  "scope": "Known synthetic development acceptance, not independent accuracy; detailed event annotations are automatic weak labels.",
+  "executed": 70,
+  "authored_targets": 67,
+  "matching_authored_targets": 67,
+  "unscored_legacy_inputs": 3,
+  "errors": [],
+  "mismatches": [],
+  "risk_matrix": {
+    "clear": {
+      "clear": 22
+    },
+    "suspicious": {
+      "suspicious": 10
+    },
+    "need_context": {
+      "need_context": 17
+    },
+    "high": {
+      "high": 18
+    }
+  },
+  "urgency_matrix": {
+    "undetermined": {
+      "undetermined": 39
+    },
+    "preventive": {
+      "preventive": 17
+    },
+    "urgent": {
+      "urgent": 11
+    }
+  },
+  "high_counts": {
+    "tn": 49,
+    "tp": 18
+  },
+  "high_precision_on_authored_targets": 1.0,
+  "high_recall_on_authored_targets": 1.0,
+  "urgent_missed": [],
+  "urgent_false_alarms": [],
+  "quotes": 356,
+  "exact_offsets": 356,
+  "unknown_answers": {
+    "situation": 7,
+    "participants": 0,
+    "sender_identity": 69,
+    "relationship": 68,
+    "communication_channel": 67,
+    "claims": 28,
+    "requested_actions": 49,
+    "action_targets": 7,
+    "stated_purpose": 64,
+    "assets_and_access": 29,
+    "benefit_and_mismatch": 68,
+    "persuasion": 51,
+    "conditions_and_sequence": 52,
+    "contradictions_and_alternatives": 51,
+    "technical_checks": 70,
+    "evidence_quality": 7,
+    "missing_information": 70,
+    "assessment": 0
+  },
+  "applied_rules": {
+    "R-TRAVEL-SECRET": 3,
+    "R-CHANGE-WORK": 2,
+    "R-URGENT-CURRENT": 10,
+    "R-DEBT-EXIT": 1,
+    "R-CONTROL": 4,
+    "R-DOC-EXIT": 1,
+    "R-COERCION": 9,
+    "R-URGENT-THREAT": 2,
+    "R-RELEASE": 1,
+    "R-HANDOVER": 1,
+    "R-CREDENTIAL": 2,
+    "R-PAY-TO-WITHDRAW": 1,
+    "R-DATA": 1,
+    "R-ACCESS": 1,
+    "R-CODE-IDENTITY": 1
+  },
+  "execution_paths": {
+    "full_local": 59,
+    "urgent_precheck": 11
+  },
+  "api_latency": {
+    "n": 70,
+    "p50_ms": 4.2461999983061105,
+    "p95_ms": 6.970599992200732
+  },
+  "first_request_ms": 12.537100003100932,
+  "later_requests": {
+    "n": 69,
+    "p50_ms": 4.2461999983061105,
+    "p95_ms": 5.976400017971173
+  },
+  "provider_calls": 0,
+  "network_calls": 0,
+  "not_measured": [
+    "semantic_span_event_relation_F1_requires_human_gold",
+    "semantic_actor_recipient_precision_recall",
+    "independent_real_world_accuracy",
+    "trained_model_quality",
+    "real_approved_RAG_quality",
+    "controlled_load_or_cold_start"
+  ]
+}

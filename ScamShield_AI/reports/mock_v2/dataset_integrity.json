@@ -1,0 +1,8 @@
+{
+  "verification": "byte hashes only; no validation/holdout predictions or label inspection",
+  "unchanged_since_week1": {
+    "data/dev.jsonl": true,
+    "data/validation.jsonl": true,
+    "data/holdout.jsonl": true
+  }
+}

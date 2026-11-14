@@ -1,0 +1,410 @@
+[
+  {
+    "id": "NW-01",
+    "name": "Tiền công bị giữ",
+    "group": "scam",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7897.254900002736,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-02",
+    "name": "Đổi phí thành dấu xác nhận",
+    "group": "scam",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 9591.833099999349,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-03",
+    "name": "Đòi thêm vốn qua hội thoại",
+    "group": "scam",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6542.723900005512,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-04",
+    "name": "Trả tiền ăn có bối cảnh",
+    "group": "normal",
+    "behavior_group": "transfer_funds",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 5991.614999999001,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-05",
+    "name": "Mã sáu số tránh chữ OTP",
+    "group": "scam",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6851.004700001795,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-06",
+    "name": "Mật khẩu để chống khóa",
+    "group": "scam",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7551.941400000942,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-07",
+    "name": "Chuỗi khôi phục ví",
+    "group": "scam",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 7041.396199994779,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-08",
+    "name": "Tự nhập mã trong ứng dụng",
+    "group": "normal",
+    "behavior_group": "share_auth_code",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6976.089099996898,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-09",
+    "name": "Điều khiển máy để mở trợ cấp",
+    "group": "scam",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7069.350400000985,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-10",
+    "name": "Thêm quản trị viên trang",
+    "group": "scam",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7289.2517000000225,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-11",
+    "name": "Chia sẻ ngân hàng để hoàn phí",
+    "group": "scam",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 6821.166800000356,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-12",
+    "name": "Quyền thông báo lịch có bối cảnh",
+    "group": "normal",
+    "behavior_group": "grant_access",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6032.267299997329,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-13",
+    "name": "Tệp ngoài cửa hàng để nhận hỗ trợ",
+    "group": "scam",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7320.932599999651,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-14",
+    "name": "Phần mềm máy tính để lấy tiền",
+    "group": "scam",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 6730.180599995947,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-15",
+    "name": "Đổi tên app thành công cụ đối soát",
+    "group": "scam",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7430.936199998541,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-16",
+    "name": "Bài cảnh báo tệp APK",
+    "group": "normal",
+    "behavior_group": "install_app",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6507.830700000341,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-17",
+    "name": "Nhiệm vụ nhỏ dẫn sang ứng vốn",
+    "group": "scam",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 7854.346799998893,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-18",
+    "name": "Gây áp lực giả cơ quan",
+    "group": "scam",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 6504.209099999571,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-19",
+    "name": "Nạp tiền giải phóng lợi nhuận",
+    "group": "scam",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 7584.0760999999475,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-20",
+    "name": "Phần thưởng không yêu cầu tài sản",
+    "group": "normal",
+    "behavior_group": "inducement",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 5392.342400002235,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-21",
+    "name": "Xác nhận nhận hàng để được hoàn",
+    "group": "scam",
+    "behavior_group": "other",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 6423.225500002445,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-22",
+    "name": "Ký quyền ví để nhận thưởng",
+    "group": "scam",
+    "behavior_group": "other",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6889.866900004563,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-23",
+    "name": "Gửi ảnh giấy tờ và video",
+    "group": "scam",
+    "behavior_group": "other",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 9811.484200006817,
+    "manual_review": "pending"
+  },
+  {
+    "id": "NW-24",
+    "name": "Nhận hàng sau khi kiểm tra",
+    "group": "normal",
+    "behavior_group": "other",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Rà người nói, vai lời trích và quan hệ yêu cầu/lợi ích; không xác minh tội phạm thực tế.",
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6645.073899999261,
+    "manual_review": "pending"
+  }
+]

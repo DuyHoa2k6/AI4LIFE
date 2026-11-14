@@ -1,0 +1,70 @@
+{
+  "$defs": {
+    "ExplanationTemplate": {
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "recommended_actions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Recommended Actions",
+          "type": "array"
+        },
+        "required_slots": {
+          "items": {
+            "const": "verified_quotes",
+            "type": "string"
+          },
+          "title": "Required Slots",
+          "type": "array"
+        },
+        "fallback_template_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Fallback Template Id"
+        }
+      },
+      "required": [
+        "summary",
+        "recommended_actions",
+        "required_slots",
+        "fallback_template_id"
+      ],
+      "title": "ExplanationTemplate",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "templates": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ExplanationTemplate"
+      },
+      "title": "Templates",
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "templates"
+  ],
+  "title": "Templates",
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+﻿[
+    {
+        "file":  "dev.jsonl",
+        "Hash":  "EFE3281472AE33BE41B37C712F59B1456A37C76D829F74CA9EC62EC6B047DCFA"
+    },
+    {
+        "file":  "holdout.jsonl",
+        "Hash":  "F0FC4ED1D0EFB9F918966E6B7C3288D94287EE7E91176BA29D714968CB0C3700"
+    },
+    {
+        "file":  "knowledge_seed.jsonl",
+        "Hash":  "B9C3F7DD32271AA78EEE4C3FE40E1A421B45A910B492A2EC96AD02BF6F1B8CAB"
+    },
+    {
+        "file":  "validation.jsonl",
+        "Hash":  "AFA0127930B7FA0FB01DE2719F812A3D20E1683E6F8CDA24E204D9F896A4A0DD"
+    }
+]

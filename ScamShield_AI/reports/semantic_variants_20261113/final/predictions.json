@@ -1,0 +1,5159 @@
+[
+  {
+    "id": "P01",
+    "family": "payment_condition",
+    "variant_group": "payment_condition",
+    "input": {
+      "text": "Số dư đã được niêm phong. Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 66.949,
+    "response": {
+      "case_context": {
+        "case_id": "c23f4042-cf1d-4c0a-b3e6-1cec3412d0eb",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "27a7fded4ca5a1743fc95c9f5edb335ad1f940c910dad0381854297f4e776137",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": " Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn.",
+              "start": 25,
+              "end": 85
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Quyền lợi nhận/rút lại tiền được nêu như điều kiện, chưa xác minh khả năng nhận",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhả lại vốn",
+              "start": 73,
+              "end": 84
+            },
+            {
+              "message_id": "m1",
+              "quote": " Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn.",
+              "start": 25,
+              "end": 85
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 31.702899999800138,
+          "asset_load": 2.1990999957779422,
+          "safety_precheck": 9.562799998093396,
+          "local_extraction_interpretation": 19.201500006602146,
+          "risk_assessment": 0.13770000077784061,
+          "participants": 0.03569999535102397,
+          "behaviors": 0.07109999569365755,
+          "event_linking": 0.0023999964469112456,
+          "situations": 0.04359999729786068,
+          "hypotheses": 0.019999999494757503,
+          "consequences": 0.018999999156221747,
+          "retrieval": 0.934900002903305,
+          "url": 0.0,
+          "support_total": 1.1903999984497204
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.934900002903305
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "display_action": "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn.",
+              "start": 25,
+              "end": 85
+            },
+            {
+              "message_id": "m1",
+              "quote": "nhả lại vốn",
+              "start": 73,
+              "end": 84
+            }
+          ],
+          "explanation": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn.",
+              "start": 25,
+              "end": 85
+            },
+            {
+              "message_id": "m1",
+              "quote": "nhả lại vốn",
+              "start": 73,
+              "end": 84
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Nộp/chuyển tiền trước là điều kiện để nhận/rút lại khoản được nêu. Có thể mất thêm tiền nếu thực hiện mà chưa xác minh quyền lợi."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P02",
+    "family": "payment_condition",
+    "variant_group": "payment_condition",
+    "input": {
+      "text": "Bạn mua gói mở quyền rút trước để nhận lại số dư."
+    },
+    "http_status": 200,
+    "elapsed_ms": 14.462,
+    "response": {
+      "case_context": {
+        "case_id": "afe39f95-6b99-4b0a-9d74-bedbab799e90",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "99462bf28e7c2311389311efdfa8b2c64fd48c961e5374913f89d3efe31243e4",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bạn mua gói mở quyền rút trước để nhận lại số dư. Bạn mua gói mở quyền rút trước để nhận lại số dư.",
+          "evidence_refs": [
+            "ctx:e1",
+            "bank:e3"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói mở quyền rút trước để nhận lại số dư.",
+              "start": 0,
+              "end": 49
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Quyền lợi nhận/rút lại tiền được nêu như điều kiện, chưa xác minh khả năng nhận",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận lại số dư",
+              "start": 34,
+              "end": 48
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói mở quyền rút trước để nhận lại số dư.",
+              "start": 0,
+              "end": 49
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "bank:e3",
+          "action": "other",
+          "description": "bank_information_open_requested",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói mở quyền rút trước để nhận lại số dư.",
+              "start": 0,
+              "end": 49
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 3,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 10.034899998572655,
+          "asset_load": 2.6357000024290755,
+          "safety_precheck": 1.0371000025770627,
+          "local_extraction_interpretation": 6.024000002071261,
+          "risk_assessment": 0.11310000263620168,
+          "participants": 0.006600006599910557,
+          "behaviors": 0.029800001357216388,
+          "event_linking": 0.0025000044843181968,
+          "situations": 0.032800002372823656,
+          "hypotheses": 0.016099998902063817,
+          "consequences": 0.015500001609325409,
+          "retrieval": 0.6627000038861297,
+          "url": 0.0,
+          "support_total": 0.854600002639927
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6627000038861297
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "display_action": "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói mở quyền rút trước để nhận lại số dư.",
+              "start": 0,
+              "end": 49
+            },
+            {
+              "message_id": "m1",
+              "quote": "nhận lại số dư",
+              "start": 34,
+              "end": 48
+            }
+          ],
+          "explanation": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói mở quyền rút trước để nhận lại số dư.",
+              "start": 0,
+              "end": 49
+            },
+            {
+              "message_id": "m1",
+              "quote": "nhận lại số dư",
+              "start": 34,
+              "end": 48
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Nộp/chuyển tiền trước là điều kiện để nhận/rút lại khoản được nêu. Có thể mất thêm tiền nếu thực hiện mà chưa xác minh quyền lợi."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P03",
+    "family": "payment_condition",
+    "variant_group": "payment_condition",
+    "input": {
+      "text": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 15.52,
+    "response": {
+      "case_context": {
+        "case_id": "0383cc6e-3e61-4f38-9d6e-623c800d0eb9",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "5d9f24a2543dbc9a070335e6bd13ce54d14d97a173996decaad69d0d3d17f52b",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "nộp Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+          "evidence_refs": [
+            "old:a1",
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "transfer_funds",
+          "description": "transfer_funds",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nộp",
+              "start": 4,
+              "end": 7
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+              "start": 0,
+              "end": 58
+            },
+            {
+              "message_id": "m1",
+              "quote": "thêm khoản đảm bảo trước thì mới được trả lại vốn",
+              "start": 8,
+              "end": 57
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+              "start": 0,
+              "end": 58
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e3",
+          "action": "other",
+          "description": "Quyền lợi nhận/rút lại tiền được nêu như điều kiện, chưa xác minh khả năng nhận",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "trả lại vốn",
+              "start": 46,
+              "end": 57
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+              "start": 0,
+              "end": 58
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 3,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 11.595999996643513,
+          "asset_load": 1.7657999997027218,
+          "safety_precheck": 1.6735000026528724,
+          "local_extraction_interpretation": 7.84439999551978,
+          "risk_assessment": 0.1255999959539622,
+          "participants": 0.005800000508315861,
+          "behaviors": 0.028299997211433947,
+          "event_linking": 0.0023000029614195228,
+          "situations": 0.02849999873433262,
+          "hypotheses": 0.012700002116616815,
+          "consequences": 0.019500002963468432,
+          "retrieval": 0.6673000025330111,
+          "url": 0.0,
+          "support_total": 0.8404000036534853
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6673000025330111
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "display_action": "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+              "start": 0,
+              "end": 58
+            },
+            {
+              "message_id": "m1",
+              "quote": "trả lại vốn",
+              "start": 46,
+              "end": 57
+            }
+          ],
+          "explanation": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn.",
+              "start": 0,
+              "end": 58
+            },
+            {
+              "message_id": "m1",
+              "quote": "trả lại vốn",
+              "start": 46,
+              "end": 57
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Nộp/chuyển tiền trước là điều kiện để nhận/rút lại khoản được nêu. Có thể mất thêm tiền nếu thực hiện mà chưa xác minh quyền lợi."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P04",
+    "family": "optional",
+    "variant_group": "optional",
+    "input": {
+      "text": "Bạn có thể mua thêm một gói xác thực, không ảnh hưởng việc nhận lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 12.869,
+    "response": {
+      "case_context": {
+        "case_id": "17b66c63-cd92-4fed-8d57-c4d70de509aa",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "40af83db16ae0bf93f3c6225632b5e7c48068077db0741b374690b79d1c15bf4",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Lời nhắn nêu việc mua gói là tùy chọn hoặc không phải điều kiện nhận lại tiền; chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bạn có thể mua thêm một gói xác thực, không ảnh hưởng việc nhận lại vốn.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn có thể mua thêm một gói xác thực, không ảnh hưởng việc nhận lại vốn.",
+              "start": 0,
+              "end": 72
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 9.310599998570979,
+          "asset_load": 1.7737000016495585,
+          "safety_precheck": 1.1068999956478365,
+          "local_extraction_interpretation": 6.093500000133645,
+          "risk_assessment": 0.11600000289035961,
+          "participants": 0.005199995939619839,
+          "behaviors": 0.017400001524947584,
+          "event_linking": 0.0014999968698248267,
+          "situations": 0.023299995518755168,
+          "hypotheses": 0.0018999999156221747,
+          "consequences": 0.012700002116616815,
+          "retrieval": 0.6826000026194379,
+          "url": 0.0,
+          "support_total": 0.8242999974754639
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6826000026194379
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Lời nhắn nêu việc mua gói là tùy chọn hoặc không phải điều kiện nhận lại tiền; chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần đã kiểm tra.",
+      "display_action": "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn có thể mua thêm một gói xác thực, không ảnh hưởng việc nhận lại vốn.",
+              "start": 0,
+              "end": 72
+            }
+          ],
+          "explanation": "Lời nhắn nêu việc mua gói là tùy chọn hoặc không phải điều kiện nhận lại tiền; chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần đã kiểm tra."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P05",
+    "family": "warning",
+    "variant_group": "warning",
+    "input": {
+      "text": "Cảnh báo: đừng mua gói xác thực để được nhả lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 10.295,
+    "response": {
+      "case_context": {
+        "case_id": "2c275546-9124-492c-aa94-58daca46f9ed",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "e4486f4ae272f53706bddcc744e56a8964f5f206d151217ea247d9f6febda691",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: đừng mua gói xác thực để được nhả lại vốn.",
+              "start": 0,
+              "end": 52
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 7.662399999389891,
+          "asset_load": 1.6238999960478395,
+          "safety_precheck": 0.9369999970658682,
+          "local_extraction_interpretation": 4.863099995418452,
+          "risk_assessment": 0.06849999772384763,
+          "participants": 0.005200003215577453,
+          "behaviors": 0.01599999814061448,
+          "event_linking": 0.0014999968698248267,
+          "situations": 0.025499997718725353,
+          "hypotheses": 0.001900007191579789,
+          "consequences": 0.0020000006770715117,
+          "retrieval": 0.0,
+          "url": 0.0,
+          "support_total": 0.10430000111227855
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: đừng mua gói xác thực để được nhả lại vốn.",
+              "start": 0,
+              "end": 52
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P06",
+    "family": "denial",
+    "variant_group": "denial",
+    "input": {
+      "text": "Bạn đừng mua thêm gói xác thực để nhận lại tiền."
+    },
+    "http_status": 200,
+    "elapsed_ms": 10.415,
+    "response": {
+      "case_context": {
+        "case_id": "a3fdbc78-4fe6-4a6f-ae1b-e714c59b6423",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "eb1cb459ec21a60da9e44d4ede5d126ac7f982992915a91201ca15cc39456b7d",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn đừng mua thêm gói xác thực để nhận lại tiền.",
+              "start": 0,
+              "end": 48
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 7.681000002776273,
+          "asset_load": 1.6090999997686595,
+          "safety_precheck": 1.002899996819906,
+          "local_extraction_interpretation": 4.808900004718453,
+          "risk_assessment": 0.07259999983943999,
+          "participants": 0.019099999917671084,
+          "behaviors": 0.01610000617802143,
+          "event_linking": 0.0020000006770715117,
+          "situations": 0.025800000003073364,
+          "hypotheses": 0.0020999941625632346,
+          "consequences": 0.0018999999156221747,
+          "retrieval": 0.0,
+          "url": 0.0,
+          "support_total": 0.1047000041580759
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn đừng mua thêm gói xác thực để nhận lại tiền.",
+              "start": 0,
+              "end": 48
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P07",
+    "family": "insufficient",
+    "variant_group": "insufficient",
+    "input": {
+      "text": "Bạn mua gói xác thực nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 9.392,
+    "response": {
+      "case_context": {
+        "case_id": "06c75b68-e73e-4063-be26-71b9a8b54f25",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "fcc895b65ab0198689fd973ec8b922829d0cfa0443850581cfe637766ce98e6e",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bạn mua gói xác thực nhé.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói xác thực nhé.",
+              "start": 0,
+              "end": 25
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Khoản phải nộp dùng để làm gì, và họ có đặt nó làm điều kiện để bạn nhận hoặc rút lại tiền không?"
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 5.995499996060971,
+          "asset_load": 1.6545000034966506,
+          "safety_precheck": 0.72340000042459,
+          "local_extraction_interpretation": 3.3533999958308414,
+          "risk_assessment": 0.06960000609979033,
+          "participants": 0.004800000169780105,
+          "behaviors": 0.016099998902063817,
+          "event_linking": 0.001600004907231778,
+          "situations": 0.02370000584051013,
+          "hypotheses": 0.0024000037228688598,
+          "consequences": 0.013500000932253897,
+          "retrieval": 0.5671999970218167,
+          "url": 0.0,
+          "support_total": 0.7098000060068443
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5671999970218167
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "P08",
+    "family": "ordinary_purchase",
+    "variant_group": "ordinary_purchase",
+    "input": {
+      "text": "Bạn thanh toán tiền chiếc ghế trước để nhận hàng nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 12.386,
+    "response": {
+      "case_context": {
+        "case_id": "a0ef21cb-39e8-42c8-8567-e77388edf3c5",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "f2a63187b1f7d98515d015c5cdcf0e0e475367cabde7fac9d2a78c44eecdbba6",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Trong yêu cầu thanh toán để nhận hàng được mô tả, chưa ghi nhận dấu hiệu đáng ngờ thuộc phạm vi kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "thanh toán Bạn thanh toán tiền chiếc ghế trước để nhận hàng nhé.",
+          "evidence_refs": [
+            "old:a1",
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Bạn thanh toán tiền chiếc ghế trước",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "transfer_funds",
+          "description": "transfer_funds",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "thanh toán",
+              "start": 4,
+              "end": 14
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc ghế trước",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền chiếc ghế trước",
+              "start": 15,
+              "end": 35
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc ghế trước để nhận hàng nhé.",
+              "start": 0,
+              "end": 53
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 8.831700004520826,
+          "asset_load": 1.8621999988681637,
+          "safety_precheck": 1.0183999984292313,
+          "local_extraction_interpretation": 5.6611999971210025,
+          "risk_assessment": 0.08210000669350848,
+          "participants": 0.00549999822396785,
+          "behaviors": 0.02439999661874026,
+          "event_linking": 0.0022999956854619086,
+          "situations": 0.0261999957729131,
+          "hypotheses": 0.018399994587525725,
+          "consequences": 0.018399994587525725,
+          "retrieval": 0.5521000057342462,
+          "url": 0.0,
+          "support_total": 0.7017999960226007
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5521000057342462
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Trong yêu cầu thanh toán để nhận hàng được mô tả, chưa ghi nhận dấu hiệu đáng ngờ thuộc phạm vi kiểm tra.",
+      "display_action": "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "thanh toán",
+              "start": 4,
+              "end": 14
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc ghế trước",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền chiếc ghế trước",
+              "start": 15,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc ghế trước để nhận hàng nhé.",
+              "start": 0,
+              "end": 53
+            }
+          ],
+          "explanation": "Trong yêu cầu thanh toán để nhận hàng được mô tả, chưa ghi nhận dấu hiệu đáng ngờ thuộc phạm vi kiểm tra."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H01",
+    "family": "unpaid_handover",
+    "variant_group": "unpaid_handover",
+    "input": {
+      "text": "Ngân hàng vẫn chưa báo có tiền. Anh cho người tới mang chiếc đàn đi luôn trước nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 13.61,
+    "response": {
+      "case_context": {
+        "case_id": "eb85cf20-b04e-4e9b-a42b-c5b3fb51792e",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "d99e016b9d5b1cb34301af3580497036cf366892231fa0c71b25d943e81c5fa1",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": " Anh cho người tới mang chiếc đàn đi luôn trước nhé.",
+          "evidence_refs": [
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "other",
+          "description": "Người viết báo chưa nhận hoặc chưa xác nhận khoản thanh toán",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Ngân hàng vẫn chưa báo có tiền.",
+              "start": 0,
+              "end": 31
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Anh cho người tới mang chiếc đàn đi luôn trước nhé.",
+              "start": 31,
+              "end": 83
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 10.078700004669372,
+          "asset_load": 1.786000000720378,
+          "safety_precheck": 1.266700004634913,
+          "local_extraction_interpretation": 6.723699996655341,
+          "risk_assessment": 0.11110000195913017,
+          "participants": 0.00670000008540228,
+          "behaviors": 0.02220000169472769,
+          "event_linking": 0.002700006007216871,
+          "situations": 0.027399997634347528,
+          "hypotheses": 0.013899996702093631,
+          "consequences": 0.013799995940644294,
+          "retrieval": 0.6505999990622513,
+          "url": 0.0,
+          "support_total": 0.8153000017045997
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6505999990622513
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "display_action": "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Anh cho người tới mang chiếc đàn đi luôn trước nhé.",
+              "start": 31,
+              "end": 83
+            },
+            {
+              "message_id": "m1",
+              "quote": "Ngân hàng vẫn chưa báo có tiền.",
+              "start": 0,
+              "end": 31
+            }
+          ],
+          "explanation": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Anh cho người tới mang chiếc đàn đi luôn trước nhé.",
+              "start": 31,
+              "end": 83
+            },
+            {
+              "message_id": "m1",
+              "quote": "Ngân hàng vẫn chưa báo có tiền.",
+              "start": 0,
+              "end": 31
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Giao tài sản trước khi người nhận xác nhận thanh toán. Có thể mất tài sản nếu giao trước khi xác nhận thanh toán."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H02",
+    "family": "unpaid_handover",
+    "variant_group": "unpaid_handover",
+    "input": {
+      "text": "Chưa ghi nhận thanh toán. Bạn cho tài xế mang chiếc tủ đi trước nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 16.068,
+    "response": {
+      "case_context": {
+        "case_id": "a97e57c4-f5b6-49b3-bb99-36c206fce35c",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "2f3324d3af6593f968136ac970124be4bb0d68ec5062dfbea43b3f41d70093ed",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận thanh toán.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": " Bạn cho tài xế mang chiếc tủ đi trước nhé.",
+          "evidence_refs": [
+            "ctx:e3"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận thanh toán.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "transfer_funds",
+          "description": "transfer_funds",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "thanh toán",
+              "start": 14,
+              "end": 24
+            },
+            {
+              "message_id": "m1",
+              "quote": "Chưa ghi nhận thanh toán.",
+              "start": 0,
+              "end": 25
+            },
+            {
+              "message_id": "m1",
+              "quote": "Chưa",
+              "start": 0,
+              "end": 4
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Người viết báo chưa nhận hoặc chưa xác nhận khoản thanh toán",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chưa ghi nhận thanh toán.",
+              "start": 0,
+              "end": 25
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e3",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn cho tài xế mang chiếc tủ đi trước nhé.",
+              "start": 25,
+              "end": 68
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 3,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 11.915200004295912,
+          "asset_load": 1.7473000043537468,
+          "safety_precheck": 1.1433999970904551,
+          "local_extraction_interpretation": 8.67640000069514,
+          "risk_assessment": 0.1323000033153221,
+          "participants": 0.007100003131199628,
+          "behaviors": 0.03420000575715676,
+          "event_linking": 0.0024999972083605826,
+          "situations": 0.04219999391352758,
+          "hypotheses": 0.01599999814061448,
+          "consequences": 0.01569999585626647,
+          "retrieval": 0.7812999974703416,
+          "url": 0.0,
+          "support_total": 0.9451999940210953
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.7812999974703416
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "display_action": "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn cho tài xế mang chiếc tủ đi trước nhé.",
+              "start": 25,
+              "end": 68
+            },
+            {
+              "message_id": "m1",
+              "quote": "Chưa ghi nhận thanh toán.",
+              "start": 0,
+              "end": 25
+            }
+          ],
+          "explanation": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn cho tài xế mang chiếc tủ đi trước nhé.",
+              "start": 25,
+              "end": 68
+            },
+            {
+              "message_id": "m1",
+              "quote": "Chưa ghi nhận thanh toán.",
+              "start": 0,
+              "end": 25
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Giao tài sản trước khi người nhận xác nhận thanh toán. Có thể mất tài sản nếu giao trước khi xác nhận thanh toán."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H03",
+    "family": "unpaid_handover",
+    "variant_group": "unpaid_handover",
+    "input": {
+      "text": "Tôi chưa thấy tiền vào. Bạn để tài xế lấy chiếc tủ trước nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 16.076,
+    "response": {
+      "case_context": {
+        "case_id": "7e06a490-47d1-49d3-965e-9f3d519a5108",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "826bff96569e017d2f5d1397e1d08c8fdb669dc36b0621699cb5ccd486d9eb83",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "Tôi chưa thấy tiền vào.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": " Bạn để tài xế lấy chiếc tủ trước nhé.",
+          "evidence_refs": [
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tôi chưa thấy tiền vào.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "receive_funds",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "thấy",
+              "start": 9,
+              "end": 13
+            },
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa thấy tiền vào.",
+              "start": 0,
+              "end": 23
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền vào",
+              "start": 14,
+              "end": 22
+            },
+            {
+              "message_id": "m1",
+              "quote": "chưa",
+              "start": 4,
+              "end": 8
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn để tài xế lấy chiếc tủ trước nhé.",
+              "start": 23,
+              "end": 61
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 11.781200002587866,
+          "asset_load": 2.098099997965619,
+          "safety_precheck": 1.189499998872634,
+          "local_extraction_interpretation": 8.121499995468184,
+          "risk_assessment": 0.13179999950807542,
+          "participants": 0.006900001608300954,
+          "behaviors": 0.028700000257231295,
+          "event_linking": 0.0026000052457675338,
+          "situations": 0.03309999738121405,
+          "hypotheses": 0.014499993994832039,
+          "consequences": 0.016699996194802225,
+          "retrieval": 0.6779999966965988,
+          "url": 0.0,
+          "support_total": 0.8516000016243197
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6779999966965988
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "display_action": "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn để tài xế lấy chiếc tủ trước nhé.",
+              "start": 23,
+              "end": 61
+            },
+            {
+              "message_id": "m1",
+              "quote": "thấy",
+              "start": 9,
+              "end": 13
+            },
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa thấy tiền vào.",
+              "start": 0,
+              "end": 23
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền vào",
+              "start": 14,
+              "end": 22
+            },
+            {
+              "message_id": "m1",
+              "quote": "chưa",
+              "start": 4,
+              "end": 8
+            }
+          ],
+          "explanation": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn để tài xế lấy chiếc tủ trước nhé.",
+              "start": 23,
+              "end": 61
+            },
+            {
+              "message_id": "m1",
+              "quote": "thấy",
+              "start": 9,
+              "end": 13
+            },
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa thấy tiền vào.",
+              "start": 0,
+              "end": 23
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền vào",
+              "start": 14,
+              "end": 22
+            },
+            {
+              "message_id": "m1",
+              "quote": "chưa",
+              "start": 4,
+              "end": 8
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Giao tài sản trước khi người nhận xác nhận thanh toán. Có thể mất tài sản nếu giao trước khi xác nhận thanh toán."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H04",
+    "family": "paid_handover",
+    "variant_group": "paid_handover",
+    "input": {
+      "text": "Tôi đã tự kiểm tra và nhận đủ tiền. Bạn cho người tới mang chiếc đàn đi nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 18.91,
+    "response": {
+      "case_context": {
+        "case_id": "8cb174e5-da95-448f-b662-e8cd384efadd",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "f587a0f43331d4e3e8ff19751884c59a28d0620f03b386c7457461c514a4d56f",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "Tôi đã tự kiểm tra và nhận đủ tiền.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": " Bạn cho người tới mang chiếc đàn đi nhé.",
+          "evidence_refs": [
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tôi đã tự kiểm tra và nhận đủ tiền.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "receive_funds",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận",
+              "start": 22,
+              "end": 26
+            },
+            {
+              "message_id": "m1",
+              "quote": "Tôi đã tự kiểm tra và nhận đủ tiền.",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "đủ tiền",
+              "start": 27,
+              "end": 34
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Bạn cho người tới mang chiếc đàn đi nhé.",
+              "start": 35,
+              "end": 76
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 14.541600001393817,
+          "asset_load": 2.007199997024145,
+          "safety_precheck": 1.3557000056607649,
+          "local_extraction_interpretation": 10.820700001204386,
+          "risk_assessment": 0.112900001113303,
+          "participants": 0.006999995093792677,
+          "behaviors": 0.02800000220304355,
+          "event_linking": 0.0027999994927085936,
+          "situations": 0.03210000431863591,
+          "hypotheses": 0.01630000042496249,
+          "consequences": 0.016000005416572094,
+          "retrieval": 0.8472999979858287,
+          "url": 0.0,
+          "support_total": 1.033699998515658
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.8472999979858287
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận",
+              "start": 22,
+              "end": 26
+            },
+            {
+              "message_id": "m1",
+              "quote": "Tôi đã tự kiểm tra và nhận đủ tiền.",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "đủ tiền",
+              "start": 27,
+              "end": 34
+            },
+            {
+              "message_id": "m1",
+              "quote": " Bạn cho người tới mang chiếc đàn đi nhé.",
+              "start": 35,
+              "end": 76
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H05",
+    "family": "warning",
+    "variant_group": "warning",
+    "input": {
+      "text": "Cảnh báo: chưa báo có tiền thì đừng cho người tới mang chiếc đàn đi trước."
+    },
+    "http_status": 200,
+    "elapsed_ms": 16.134,
+    "response": {
+      "case_context": {
+        "case_id": "941026fa-21a3-45a8-954b-3fe99aeb8ceb",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "eb9e023d4ab7996f35279a7f3c67e7fa46cf6214b99656dec7c99740131d0839",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "other",
+          "description": "Người viết báo chưa nhận hoặc chưa xác nhận khoản thanh toán",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: chưa báo có tiền thì đừng cho người tới mang chiếc đàn đi trước.",
+              "start": 0,
+              "end": 74
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: chưa báo có tiền thì đừng cho người tới mang chiếc đàn đi trước.",
+              "start": 0,
+              "end": 74
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 12.92210000246996,
+          "asset_load": 2.8550999995786697,
+          "safety_precheck": 2.2959999987506308,
+          "local_extraction_interpretation": 7.45650000317255,
+          "risk_assessment": 0.09329999738838524,
+          "participants": 0.006100002792663872,
+          "behaviors": 0.022099993657320738,
+          "event_linking": 0.0023999964469112456,
+          "situations": 0.03489999653538689,
+          "hypotheses": 0.002700006007216871,
+          "consequences": 0.0023999964469112456,
+          "retrieval": 0.0,
+          "url": 0.0,
+          "support_total": 0.11709999671438709
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo: chưa báo có tiền thì đừng cho người tới mang chiếc đàn đi trước.",
+              "start": 0,
+              "end": 74
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H06",
+    "family": "denial",
+    "variant_group": "denial",
+    "input": {
+      "text": "Bạn đừng cho người tới mang chiếc đàn đi trước khi nhận tiền."
+    },
+    "http_status": 200,
+    "elapsed_ms": 15.321,
+    "response": {
+      "case_context": {
+        "case_id": "950f0b05-5ac1-4fa6-b945-b91b6305c13f",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "e0e85d557b400201b2ca82f4c16016fc7b8b3b70cb16e3cf30c4c612b0b28eb3",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "trước khi nhận tiền.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "trước khi nhận tiền.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "other",
+          "description": "receive_funds",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận",
+              "start": 51,
+              "end": 55
+            },
+            {
+              "message_id": "m1",
+              "quote": "trước khi nhận tiền.",
+              "start": 41,
+              "end": 61
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền",
+              "start": 56,
+              "end": 60
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn đừng cho người tới mang chiếc đàn đi trước khi nhận tiền.",
+              "start": 0,
+              "end": 61
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 11.715599997842219,
+          "asset_load": 2.139999996870756,
+          "safety_precheck": 2.282599998579826,
+          "local_extraction_interpretation": 6.9924999988870695,
+          "risk_assessment": 0.0900999948498793,
+          "participants": 0.006800000846851617,
+          "behaviors": 0.02510000194888562,
+          "event_linking": 0.0022999956854619086,
+          "situations": 0.042100000428035855,
+          "hypotheses": 0.0026000052457675338,
+          "consequences": 0.0024999972083605826,
+          "retrieval": 0.0,
+          "url": 0.0,
+          "support_total": 0.15070000517880544
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận",
+              "start": 51,
+              "end": 55
+            },
+            {
+              "message_id": "m1",
+              "quote": "trước khi nhận tiền.",
+              "start": 41,
+              "end": 61
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền",
+              "start": 56,
+              "end": 60
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn đừng cho người tới mang chiếc đàn đi trước khi nhận tiền.",
+              "start": 0,
+              "end": 61
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H07",
+    "family": "insufficient",
+    "variant_group": "insufficient",
+    "input": {
+      "text": "Bạn cho tài xế mang chiếc tủ đi nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 11.585,
+    "response": {
+      "case_context": {
+        "case_id": "9012fbd6-7be7-4d32-a058-78f99e9a74bb",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "0bf94701c6d64968a740b9516cd7c6f70a2e464401039325a1fe50b9526dd49c",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bạn cho tài xế mang chiếc tủ đi nhé.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn cho tài xế mang chiếc tủ đi nhé.",
+              "start": 0,
+              "end": 36
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Bạn đã tự kiểm tra và xác nhận khoản tiền vào tài khoản cho giao dịch này chưa?"
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 7.480000000214204,
+          "asset_load": 1.673899998422712,
+          "safety_precheck": 0.818300002720207,
+          "local_extraction_interpretation": 4.679899997427128,
+          "risk_assessment": 0.0900999948498793,
+          "participants": 0.005599998985417187,
+          "behaviors": 0.01670000347075984,
+          "event_linking": 0.0021000014385208488,
+          "situations": 0.02600000152597204,
+          "hypotheses": 0.0023999964469112456,
+          "consequences": 0.013999997463542968,
+          "retrieval": 0.7462999928975478,
+          "url": 0.0,
+          "support_total": 0.9672999949543737
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.7462999928975478
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "H08",
+    "family": "separate_transactions",
+    "variant_group": "separate_transactions",
+    "input": {
+      "text": "Đơn A chưa báo có tiền. Đơn B bạn cho người tới mang chiếc đàn đi trước nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 13.889,
+    "response": {
+      "case_context": {
+        "case_id": "6224219b-2f6b-4f12-b8df-68a8e88db430",
+        "situation_id": "analysis/transaction:don a",
+        "revision": 1,
+        "content_version": "40706cb61fd01f38bf075dae0060f97ab040165067e4c34fb69fb608094cd2b5",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": " Đơn B bạn cho người tới mang chiếc đàn đi trước nhé.",
+          "evidence_refs": [
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "other",
+          "description": "Người viết báo chưa nhận hoặc chưa xác nhận khoản thanh toán",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đơn A chưa báo có tiền.",
+              "start": 0,
+              "end": 23
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": " Đơn B bạn cho người tới mang chiếc đàn đi trước nhé.",
+              "start": 23,
+              "end": 76
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Bạn đã tự kiểm tra và xác nhận khoản tiền vào tài khoản cho giao dịch này chưa?"
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 10.11389999621315,
+          "asset_load": 1.9593000033637509,
+          "safety_precheck": 1.3031000053160824,
+          "local_extraction_interpretation": 6.4944000041577965,
+          "risk_assessment": 0.10860000475076959,
+          "participants": 0.007299997378140688,
+          "behaviors": 0.02649999805726111,
+          "event_linking": 0.0026999987312592566,
+          "situations": 0.041799998143687844,
+          "hypotheses": 0.0040000013541430235,
+          "consequences": 0.013699995179194957,
+          "retrieval": 0.6673999960185029,
+          "url": 0.0,
+          "support_total": 0.8219000010285527
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6673999960185029
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C01",
+    "family": "ordinary_purchase",
+    "variant_group": "ordinary_purchase",
+    "input": {
+      "text": "Bạn thanh toán tiền chiếc bàn trước để nhận hàng."
+    },
+    "http_status": 200,
+    "elapsed_ms": 12.176,
+    "response": {
+      "case_context": {
+        "case_id": "96057832-151a-45d9-bcb9-a50f8d997ac1",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "d8ed1ab1f694f96cca6c5fbadc2866fd13a093ad6ff84a5110d3a9c3fb16ba12",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Trong yêu cầu thanh toán để nhận hàng được mô tả, chưa ghi nhận dấu hiệu đáng ngờ thuộc phạm vi kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "thanh toán Bạn thanh toán tiền chiếc bàn trước để nhận hàng.",
+          "evidence_refs": [
+            "old:a1",
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Bạn thanh toán tiền chiếc bàn trước",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "transfer_funds",
+          "description": "transfer_funds",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "thanh toán",
+              "start": 4,
+              "end": 14
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc bàn trước",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền chiếc bàn trước",
+              "start": 15,
+              "end": 35
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc bàn trước để nhận hàng.",
+              "start": 0,
+              "end": 49
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 8.531600004062057,
+          "asset_load": 1.79049999860581,
+          "safety_precheck": 1.0096999976667576,
+          "local_extraction_interpretation": 5.447299998195376,
+          "risk_assessment": 0.08520000119460747,
+          "participants": 0.006000002031214535,
+          "behaviors": 0.023099993995856494,
+          "event_linking": 0.0023999964469112456,
+          "situations": 0.026699999580159783,
+          "hypotheses": 0.01809999957913533,
+          "consequences": 0.018800004909280688,
+          "retrieval": 0.6015999970259145,
+          "url": 0.0,
+          "support_total": 0.7757999992463738
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6015999970259145
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Trong yêu cầu thanh toán để nhận hàng được mô tả, chưa ghi nhận dấu hiệu đáng ngờ thuộc phạm vi kiểm tra.",
+      "display_action": "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "thanh toán",
+              "start": 4,
+              "end": 14
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc bàn trước",
+              "start": 0,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền chiếc bàn trước",
+              "start": 15,
+              "end": 35
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn thanh toán tiền chiếc bàn trước để nhận hàng.",
+              "start": 0,
+              "end": 49
+            }
+          ],
+          "explanation": "Trong yêu cầu thanh toán để nhận hàng được mô tả, chưa ghi nhận dấu hiệu đáng ngờ thuộc phạm vi kiểm tra."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C02",
+    "family": "self_report",
+    "variant_group": "self_report",
+    "input": {
+      "text": "Tôi mua gói xác thực trước để nhận lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 12.285,
+    "response": {
+      "case_context": {
+        "case_id": "458e6397-fe7b-4edc-bb34-f2d86bde29b0",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "a5ae1a3e12111b4815a76db6df2325b028065c1bebba84e53652f4399a4597e5",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi mua gói xác thực trước để nhận lại vốn.",
+              "start": 0,
+              "end": 43
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "clause:e2",
+          "action": "other",
+          "description": "verification_delay",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi mua gói xác thực trước để nhận lại vốn.",
+              "start": 0,
+              "end": 43
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 8.159900004102383,
+          "asset_load": 1.9410000022617169,
+          "safety_precheck": 1.0151999958907254,
+          "local_extraction_interpretation": 4.920100000163075,
+          "risk_assessment": 0.08110000635497272,
+          "participants": 0.006200003554113209,
+          "behaviors": 0.022599997464567423,
+          "event_linking": 0.0020000006770715117,
+          "situations": 0.031600000511389226,
+          "hypotheses": 0.0027999994927085936,
+          "consequences": 0.0026999987312592566,
+          "retrieval": 0.6869999997434206,
+          "url": 0.0,
+          "support_total": 0.8276000007754192
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6869999997434206
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C03",
+    "family": "optional",
+    "variant_group": "optional",
+    "input": {
+      "text": "Bạn mua gói xác thực tùy chọn, không phải điều kiện để nhận lại tiền."
+    },
+    "http_status": 200,
+    "elapsed_ms": 12.543,
+    "response": {
+      "case_context": {
+        "case_id": "1750b386-461e-4b1f-a1fd-e83884ab7a88",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "1e67aea11bfa19ca24b4578ef7d0848df7f8b1ff4720c04e06c1e89191185111",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Lời nhắn nêu việc mua gói là tùy chọn hoặc không phải điều kiện nhận lại tiền; chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần đã kiểm tra.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bạn mua gói xác thực tùy chọn, không phải điều kiện để nhận lại tiền.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói xác thực tùy chọn, không phải điều kiện để nhận lại tiền.",
+              "start": 0,
+              "end": 69
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 9.070899999642279,
+          "asset_load": 1.6953999947872944,
+          "safety_precheck": 1.128600000811275,
+          "local_extraction_interpretation": 5.983299997751601,
+          "risk_assessment": 0.0748999955249019,
+          "participants": 0.005800000508315861,
+          "behaviors": 0.017099999240599573,
+          "event_linking": 0.001700005668681115,
+          "situations": 0.024599998141638935,
+          "hypotheses": 0.0021999949240125716,
+          "consequences": 0.012600001355167478,
+          "retrieval": 0.586200003453996,
+          "url": 0.0,
+          "support_total": 0.7318999996641651
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.586200003453996
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Lời nhắn nêu việc mua gói là tùy chọn hoặc không phải điều kiện nhận lại tiền; chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần đã kiểm tra.",
+      "display_action": "Xác minh người bán và điều kiện giao nhận trước khi thanh toán; kết quả này không xác nhận người bán đáng tin cậy.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn mua gói xác thực tùy chọn, không phải điều kiện để nhận lại tiền.",
+              "start": 0,
+              "end": 69
+            }
+          ],
+          "explanation": "Lời nhắn nêu việc mua gói là tùy chọn hoặc không phải điều kiện nhận lại tiền; chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần đã kiểm tra."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C04",
+    "family": "quotation",
+    "variant_group": "quotation",
+    "input": {
+      "text": "Nếu có ai nói “mua gói xác thực thì mới nhả lại vốn”, đừng làm theo."
+    },
+    "http_status": 200,
+    "elapsed_ms": 11.834,
+    "response": {
+      "case_context": {
+        "case_id": "57862e9d-7b3e-4560-95d6-35edfcba08a5",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "30f0e746cd69ec07e02697b7603ea94d0363c821a0e1d39dc3c28a5223e41543",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Nếu có ai nói “mua gói xác thực thì mới nhả lại vốn”, đừng làm theo.",
+              "start": 0,
+              "end": 68
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 8.952399999543559,
+          "asset_load": 1.8227000036858954,
+          "safety_precheck": 1.1431999955675565,
+          "local_extraction_interpretation": 5.737100000260398,
+          "risk_assessment": 0.07300000288523734,
+          "participants": 0.007399998139590025,
+          "behaviors": 0.023200002033263445,
+          "event_linking": 0.0020000006770715117,
+          "situations": 0.030499999411404133,
+          "hypotheses": 0.0023999964469112456,
+          "consequences": 0.0024000037228688598,
+          "retrieval": 0.0,
+          "url": 0.0,
+          "support_total": 0.11339999764459208
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Nếu có ai nói “mua gói xác thực thì mới nhả lại vốn”, đừng làm theo.",
+              "start": 0,
+              "end": 68
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C05",
+    "family": "unicode",
+    "variant_group": "unicode",
+    "input": {
+      "text": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 11.519,
+    "response": {
+      "case_context": {
+        "case_id": "dd325f10-37b8-43a7-98a0-7e13d0c6e35e",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "8208f18589292efc0a084a6a985aa9f681581d998005ed4aca796e7975e93edd",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn.",
+              "start": 0,
+              "end": 53
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "other",
+          "description": "Quyền lợi nhận/rút lại tiền được nêu như điều kiện, chưa xác minh khả năng nhận",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận lại vốn",
+              "start": 40,
+              "end": 52
+            },
+            {
+              "message_id": "m1",
+              "quote": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn.",
+              "start": 0,
+              "end": 53
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+      ],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 2,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 8.014300001377705,
+          "asset_load": 1.6457999954582192,
+          "safety_precheck": 0.981999997748062,
+          "local_extraction_interpretation": 5.100300004414748,
+          "risk_assessment": 0.09680000221123919,
+          "participants": 0.004699999408330768,
+          "behaviors": 0.02059999678749591,
+          "event_linking": 0.0018999999156221747,
+          "situations": 0.025399996957276016,
+          "hypotheses": 0.013299999409355223,
+          "consequences": 0.013500000932253897,
+          "retrieval": 0.5677000008290634,
+          "url": 0.0,
+          "support_total": 0.7141000023693778
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5677000008290634
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "display_action": "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn.",
+              "start": 0,
+              "end": 53
+            },
+            {
+              "message_id": "m1",
+              "quote": "nhận lại vốn",
+              "start": 40,
+              "end": 52
+            }
+          ],
+          "explanation": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền."
+        },
+        {
+          "kind": "interaction_context",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn.",
+              "start": 0,
+              "end": 53
+            },
+            {
+              "message_id": "m1",
+              "quote": "nhận lại vốn",
+              "start": 40,
+              "end": 52
+            }
+          ],
+          "explanation": "Người gửi đặt yêu cầu với người nhận: Nộp/chuyển tiền trước là điều kiện để nhận/rút lại khoản được nêu. Có thể mất thêm tiền nếu thực hiện mà chưa xác minh quyền lợi."
+        }
+      ],
+      "safety_urgency": "preventive",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C06",
+    "family": "conditional_denial",
+    "variant_group": "conditional_denial",
+    "input": {
+      "text": "Bạn không cần mua gói xác thực để nhận lại tiền."
+    },
+    "http_status": 200,
+    "elapsed_ms": 10.154,
+    "response": {
+      "case_context": {
+        "case_id": "a0de6735-9b20-4a80-857f-347ccbc5b7da",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "112f06098b412c79494c694d2cb9075be44bf95e79b8436a430d87929d7548f5",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn không cần mua gói xác thực để nhận lại tiền.",
+              "start": 0,
+              "end": 48
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 7.285699997737538,
+          "asset_load": 1.650799997150898,
+          "safety_precheck": 0.946300002397038,
+          "local_extraction_interpretation": 4.44699999934528,
+          "risk_assessment": 0.06470000516856089,
+          "participants": 0.005800000508315861,
+          "behaviors": 0.016000005416572094,
+          "event_linking": 0.0020000006770715117,
+          "situations": 0.02720000338740647,
+          "hypotheses": 0.0021000014385208488,
+          "consequences": 0.0017999991541728377,
+          "retrieval": 0.0,
+          "url": 0.0,
+          "support_total": 0.1114999977289699
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_match",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn không cần mua gói xác thực để nhận lại tiền.",
+              "start": 0,
+              "end": 48
+            }
+          ],
+          "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C07",
+    "family": "no_payment_purpose",
+    "variant_group": "no_payment_purpose",
+    "input": {
+      "text": "Bạn bổ sung khoản đảm bảo nhé."
+    },
+    "http_status": 200,
+    "elapsed_ms": 10.009,
+    "response": {
+      "case_context": {
+        "case_id": "21563ce4-a0b4-4347-9efc-6c0287e5db62",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "311256ba30c2d17dab71f71d74284734207abc442cf7e34c1385f44ce320dfd4",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bạn bổ sung khoản đảm bảo nhé.",
+          "evidence_refs": [
+            "ctx:e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "ctx:e1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn bổ sung khoản đảm bảo nhé.",
+              "start": 0,
+              "end": 30
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Khoản phải nộp dùng để làm gì, và họ có đặt nó làm điều kiện để bạn nhận hoặc rút lại tiền không?"
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 6.265500000154134,
+          "asset_load": 1.7363000006298535,
+          "safety_precheck": 0.8331999997608364,
+          "local_extraction_interpretation": 3.4569000054034404,
+          "risk_assessment": 0.06350000330712646,
+          "participants": 0.005399997462518513,
+          "behaviors": 0.015300000086426735,
+          "event_linking": 0.0019999934011138976,
+          "situations": 0.023699998564552516,
+          "hypotheses": 0.0019999934011138976,
+          "consequences": 0.012800002878066152,
+          "retrieval": 0.7642999989911914,
+          "url": 0.0,
+          "support_total": 0.9037999989232048
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.7642999989911914
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "C08",
+    "family": "separate_beneficiary",
+    "variant_group": "separate_beneficiary",
+    "input": {
+      "text": "Bạn nộp tiền trước để công ty nhận lại vốn."
+    },
+    "http_status": 200,
+    "elapsed_ms": 11.885,
+    "response": {
+      "case_context": {
+        "case_id": "ed1103c7-955d-4ec6-9625-1393663f7e8e",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "941a55d27fb413a325f1ab73121434f4032ae4340b055352fd19482e441882ef",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "need_context",
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "nộp Bạn nộp tiền trước để công ty nhận lại vốn.",
+          "evidence_refs": [
+            "old:a1",
+            "ctx:e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Bạn nộp tiền trước",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "old:a1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "old:a1",
+          "action": "transfer_funds",
+          "description": "transfer_funds",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nộp",
+              "start": 4,
+              "end": 7
+            },
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp tiền trước",
+              "start": 0,
+              "end": 18
+            },
+            {
+              "message_id": "m1",
+              "quote": "tiền trước",
+              "start": 8,
+              "end": 18
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "ctx:e2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn nộp tiền trước để công ty nhận lại vốn.",
+              "start": 0,
+              "end": 43
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+      ],
+      "follow_up_questions": [
+        "Khoản phải nộp dùng để làm gì, và họ có đặt nó làm điều kiện để bạn nhận hoặc rút lại tiền không?"
+      ],
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "need_context",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 8.232000000134576,
+          "asset_load": 1.7800999994506128,
+          "safety_precheck": 0.9839000049396418,
+          "local_extraction_interpretation": 5.202699998335447,
+          "risk_assessment": 0.08290000550914556,
+          "participants": 0.00530000397702679,
+          "behaviors": 0.02319999475730583,
+          "event_linking": 0.0023000029614195228,
+          "situations": 0.026699999580159783,
+          "hypotheses": 0.0024000037228688598,
+          "consequences": 0.017899998056236655,
+          "retrieval": 0.6359000035445206,
+          "url": 0.0,
+          "support_total": 0.8043999987421557
+        },
+        "decision_version": "local-situation-1.0-support",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6359000035445206
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "display_action": "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "RG-01",
+    "name": "NW-02 hồi quy dấu xác nhận",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 10442.976300000737,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-02",
+    "name": "Tên gọi thay thế cho tiền ứng trước",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 7085.021899998537,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-03",
+    "name": "Đặt mua hàng hợp pháp có hóa đơn",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 5741.10340000334,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-04",
+    "name": "Bản tin trích lời dụ",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 3513.2091999985278,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-05",
+    "name": "Hai người nói về hai sự việc",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 10681.292500004929,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-06",
+    "name": "Chưa rõ đại từ chỉ thao tác nào",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7860.206400000607,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-07",
+    "name": "Đại từ nối điều kiện qua hội thoại",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 8270.00159999443,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RG-08",
+    "name": "Một câu nhờ chuyển tiền thiếu bối cảnh",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 5279.6687000009115,
+    "manual_review": "pending"
+  }
+]

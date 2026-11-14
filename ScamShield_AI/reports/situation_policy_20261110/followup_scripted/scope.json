@@ -1,0 +1,21 @@
+{
+  "scope": "14 API policy integration cases; both Gemini outputs are scripted. Not a live model accuracy score.",
+  "inputs_sha256": "8d2c9fbcde660c5a7c6653a012f1acb18d25e34ca176a5ffce48a5088c9a7692",
+  "cases": 14,
+  "statuses": {
+    "F01": "clear",
+    "F02": "clear",
+    "F03": "clear",
+    "F04": "clear",
+    "F05": "need_context",
+    "F06": "need_context",
+    "F07": "need_context",
+    "F08": "need_context",
+    "F09": "suspicious",
+    "F10": "suspicious",
+    "F11": "suspicious",
+    "F12": "high",
+    "F13": "high",
+    "F14": "high"
+  }
+}

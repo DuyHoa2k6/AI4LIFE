@@ -1,0 +1,7 @@
+{
+  "scope": "Documented domain references, not a safe-site allowlist or an approved government RAG source. Documentation checked 2026-11-10; no human approval is claimed.",
+  "references": [
+    {"brand":"YouTube","domain":"youtube.com","source":"https://support.google.com/youtube/answer/1646861?hl=en","checked_at":"2026-11-10","status":"documented_reference"},
+    {"brand":"Google","domain":"google.com","source":"https://support.google.com/accounts/answer/32050?hl=en","checked_at":"2026-11-10","status":"documented_reference"}
+  ]
+}

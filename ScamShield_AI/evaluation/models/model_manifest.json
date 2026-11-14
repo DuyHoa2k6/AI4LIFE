@@ -1,0 +1,13 @@
+{
+  "version": "research-selection-20261114",
+  "selected_checkpoint": "evaluation\\models\\rollback_baseline",
+  "heads_sha256": "72527397e1e914e9c67ef4441f3a2a5d4cab98bb2abc63f13b6519b383d7cff5",
+  "selected_policy": "baseline",
+  "status": "research_only_not_product_approved",
+  "candidate_policy": "graph-policy-2.0-experimental",
+  "candidate_selected": false,
+  "comparison": "evaluation\\reports\\20261114_rounds\\comparison.json",
+  "production_default": "legacy reasoner unchanged",
+  "rollback_policy_source": "evaluation\\reports\\20261114_rounds\\baseline_policy.py",
+  "why": "Main metric did not improve; coverage regressed; reviewed validation and independent holdout unavailable."
+}

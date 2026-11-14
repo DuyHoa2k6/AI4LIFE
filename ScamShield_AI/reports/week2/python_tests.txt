@@ -1,0 +1,17 @@
+test_ai01_02_05_06_sequence_variant_injection (test_backend.BackendTests.test_ai01_02_05_06_sequence_variant_injection) ... ok
+test_api01_three_flows_and_question (test_backend.BackendTests.test_api01_three_flows_and_question) ... ok
+test_api02_chunked_body_limit (test_backend.BackendTests.test_api02_chunked_body_limit) ... ok
+test_api02_rejected_before_provider (test_backend.BackendTests.test_api02_rejected_before_provider) ... ok
+test_api03_errors_no_raw_leak (test_backend.BackendTests.test_api03_errors_no_raw_leak) ... ok
+test_api03_real_timeout (test_backend.BackendTests.test_api03_real_timeout) ... ok
+test_api04_05_quotes_offsets_and_speaker (test_backend.BackendTests.test_api04_05_quotes_offsets_and_speaker) ... ok
+test_api05_combining_unicode_redacted_and_surviving_evidence (test_backend.BackendTests.test_api05_combining_unicode_redacted_and_surviving_evidence) ... ok
+test_invalid_json_missing_fields_and_service_error (test_live_adapter.LiveAdapterTests.test_invalid_json_missing_fields_and_service_error) ... ok
+test_transport_schema_and_input_only (test_live_adapter.LiveAdapterTests.test_transport_schema_and_input_only) ... ok
+test_config_discloses_provider_without_secrets (test_week2_routes.WebsiteRoutesTests.test_config_discloses_provider_without_secrets) ... ok
+test_web_assets_and_fixture (test_week2_routes.WebsiteRoutesTests.test_web_assets_and_fixture) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.162s
+
+OK

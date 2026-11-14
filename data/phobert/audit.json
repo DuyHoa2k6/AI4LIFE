@@ -1,0 +1,49 @@
+{
+  "samples": 20,
+  "families": {
+    "receive_object": 2,
+    "send_credentials": 2,
+    "verification_order": 2,
+    "payment_status": 2,
+    "conditional_payment": 2,
+    "auth_warning": 2,
+    "remote_access": 2,
+    "extortion": 2,
+    "travel_custody": 2,
+    "loan_coercion": 2
+  },
+  "risk": {
+    "clear": 7,
+    "need_context": 3,
+    "high": 6,
+    "suspicious": 4
+  },
+  "relations": {
+    "before": 1,
+    "same_transaction": 8,
+    "obstructs_verification": 1,
+    "prerequisite_for": 2,
+    "controls_during": 1,
+    "threatens_unless": 1
+  },
+  "review": {
+    "draft": 20
+  },
+  "tasks": {
+    "spans": {
+      "partial": 20
+    },
+    "attributes": {
+      "complete": 20
+    },
+    "roles": {
+      "complete": 20
+    },
+    "relations": {
+      "complete": 20
+    },
+    "risk": {
+      "complete": 20
+    }
+  }
+}

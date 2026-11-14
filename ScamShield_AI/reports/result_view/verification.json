@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-10",
+  "frontend_sha256": {
+    "extension/result_view.js": "5e6943d7e5babf1648251b7898f7affb2391098ae726ccbfe2dc801adc8117f6",
+    "extension/shared.js": "d6042bdb9388bcf67b7b307a4021ec513f4b4c8cf473fe64631fadc42bcec705",
+    "extension/content.js": "f5dd1c86673effeb52775c40cd9e16356f66f9f76de23e3f33ae5b2bfde702bc",
+    "extension/popup.js": "af2db63fa11a13fa8dcda31e0616af7fc9a3224e31eb0070c153b71405c296f1",
+    "web/app.js": "9edc32f8f21f974f4ff030dd1aa01e0b9eee0952658ddcac2b410b913f6aa8e4",
+    "web/index.html": "f6d8c110b697a795442045b9eaf1c958d08d570514cb3e40a4a46550fd605078"
+  },
+  "backend_unittests_passed": 157,
+  "scope": "UI fixture and mock integration; OCR regression uses real local OCR; no Gemini quality evaluation"
+}

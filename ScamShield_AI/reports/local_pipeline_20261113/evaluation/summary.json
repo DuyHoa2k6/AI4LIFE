@@ -1,0 +1,167 @@
+{
+  "cases": 31,
+  "matched": 29,
+  "mismatches": [
+    "M",
+    "NOVEL-ASSET"
+  ],
+  "confusion_matrix": {
+    "clear": {
+      "clear": 8,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 0,
+      "error": 0
+    },
+    "need_context": {
+      "clear": 0,
+      "need_context": 5,
+      "suspicious": 0,
+      "high": 0,
+      "error": 0
+    },
+    "suspicious": {
+      "clear": 0,
+      "need_context": 1,
+      "suspicious": 7,
+      "high": 0,
+      "error": 0
+    },
+    "high": {
+      "clear": 0,
+      "need_context": 1,
+      "suspicious": 0,
+      "high": 9,
+      "error": 0
+    }
+  },
+  "per_class": {
+    "clear": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "need_context": {
+      "tp": 5,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.7142857142857143,
+      "recall": 1.0
+    },
+    "suspicious": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.875
+    },
+    "high": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9
+    }
+  },
+  "run_status": {
+    "complete": 27,
+    "unsupported": 4
+  },
+  "http_errors": 0,
+  "external_async_requests": 0,
+  "evidence_exact_quote": {
+    "valid": 269,
+    "total": 269
+  },
+  "labeled_required_extraction": {
+    "event_total": 21,
+    "event_found": 20,
+    "relation_total": 8,
+    "relation_found": 8
+  },
+  "logical_request_direction": {
+    "correct": 18,
+    "total_explicit_context_requests": 18
+  },
+  "timing": {
+    "api_testclient": {
+      "n": 31,
+      "p50_ms": 7.107900000846712,
+      "p95_ms": 10.165399999095825
+    },
+    "local_total": {
+      "n": 31,
+      "p50_ms": 4.839299999730429,
+      "p95_ms": 7.825299999240087
+    },
+    "local_extraction_interpretation": {
+      "n": 31,
+      "p50_ms": 2.9257999995024875,
+      "p95_ms": 5.031299999245675
+    },
+    "risk_assessment": {
+      "n": 31,
+      "p50_ms": 0.06310000026132911,
+      "p95_ms": 0.13840000247000717
+    },
+    "participants": {
+      "n": 31,
+      "p50_ms": 0.0032000025385059416,
+      "p95_ms": 0.01680000059423037
+    },
+    "behaviors": {
+      "n": 31,
+      "p50_ms": 0.013500000932253897,
+      "p95_ms": 0.02179999864893034
+    },
+    "event_linking": {
+      "n": 31,
+      "p50_ms": 0.0015000005078036338,
+      "p95_ms": 0.006100002792663872
+    },
+    "situations": {
+      "n": 31,
+      "p50_ms": 0.01669999983278103,
+      "p95_ms": 0.03130000186502002
+    },
+    "hypotheses": {
+      "n": 31,
+      "p50_ms": 0.0024000000848900527,
+      "p95_ms": 0.010300002031726763
+    },
+    "consequences": {
+      "n": 31,
+      "p50_ms": 0.008800001523923129,
+      "p95_ms": 0.01920000067912042
+    },
+    "retrieval": {
+      "n": 31,
+      "p50_ms": 0.3383999974175822,
+      "p95_ms": 0.4766000020026695
+    },
+    "url": {
+      "n": 31,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0
+    },
+    "support_total": {
+      "n": 31,
+      "p50_ms": 0.43369999912101775,
+      "p95_ms": 0.5790999966848176
+    }
+  },
+  "input_characters": {
+    "min": 17,
+    "max": 151
+  },
+  "not_measured": [
+    "independent holdout quality",
+    "semantic quote correctness beyond exact match",
+    "full actor/coreference accuracy",
+    "complete extraction precision (targets annotate required items only)",
+    "public Internet redirect latency",
+    "concurrent load"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "hashes_match": true,
+  "unique_cases": 10,
+  "api_executions": 15,
+  "successful_final_responses": 7,
+  "quote_count": 13,
+  "exact_quotes": 13,
+  "speaker_errors_in_successful_responses": 0,
+  "interpretation": "No accuracy score; errors have no risk_status; no real images or external payment verification."
+}

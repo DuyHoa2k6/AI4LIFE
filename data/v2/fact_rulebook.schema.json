@@ -1,0 +1,243 @@
+{
+  "$defs": {
+    "Condition": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_types": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Types",
+          "type": "array"
+        },
+        "value": {
+          "$ref": "#/$defs/Truth",
+          "default": "TRUE"
+        },
+        "speech_roles": {
+          "default": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Speech Roles",
+          "type": "array"
+        },
+        "temporal_states": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Temporal States",
+          "type": "array"
+        },
+        "attribution_kinds": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Attribution Kinds",
+          "type": "array"
+        },
+        "authentication_meaning": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Truth"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "fact_types"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "FactRule": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "same_event",
+            "same_scope_same_affected_party"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "required_conditions": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Condition"
+          },
+          "title": "Required Conditions",
+          "type": "object"
+        },
+        "required_relations": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/RelationRequirement"
+          },
+          "title": "Required Relations",
+          "type": "array"
+        },
+        "exclusion_conditions": {
+          "default": [],
+          "items": {
+            "enum": [
+              "later_payment_confirmed",
+              "documents_returnable",
+              "consent_without_coercion"
+            ],
+            "type": "string"
+          },
+          "title": "Exclusion Conditions",
+          "type": "array"
+        },
+        "conclusion": {
+          "enum": [
+            "high",
+            "suspicious",
+            "need_context",
+            "clear"
+          ],
+          "title": "Conclusion",
+          "type": "string"
+        },
+        "safety_urgency": {
+          "default": "preventive",
+          "enum": [
+            "urgent",
+            "preventive",
+            "undetermined"
+          ],
+          "title": "Safety Urgency",
+          "type": "string"
+        },
+        "evidence_requirements": {
+          "const": "all_required_facts_and_relations",
+          "title": "Evidence Requirements",
+          "type": "string"
+        },
+        "missing_information": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "follow_up_template": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Follow Up Template"
+        },
+        "explanation_template": {
+          "title": "Explanation Template",
+          "type": "string"
+        },
+        "supported_conclusion": {
+          "title": "Supported Conclusion",
+          "type": "string"
+        },
+        "unknown_exclusion_policy": {
+          "default": "limit_claim",
+          "enum": [
+            "limit_claim",
+            "undetermined"
+          ],
+          "title": "Unknown Exclusion Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "version",
+        "scope",
+        "required_conditions",
+        "conclusion",
+        "evidence_requirements",
+        "explanation_template",
+        "supported_conclusion"
+      ],
+      "title": "FactRule",
+      "type": "object"
+    },
+    "RelationRequirement": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "from_fact": {
+          "title": "From Fact",
+          "type": "string"
+        },
+        "to_fact": {
+          "title": "To Fact",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "from_fact",
+        "to_fact"
+      ],
+      "title": "RelationRequirement",
+      "type": "object"
+    },
+    "Truth": {
+      "enum": [
+        "TRUE",
+        "FALSE",
+        "UNKNOWN"
+      ],
+      "title": "Truth",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/FactRule"
+      },
+      "maxItems": 50,
+      "minItems": 1,
+      "title": "Rules",
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "rules"
+  ],
+  "title": "FactRulebook",
+  "type": "object"
+}

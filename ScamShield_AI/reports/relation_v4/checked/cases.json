@@ -1,0 +1,122 @@
+[
+  {
+    "id": "RF-01",
+    "name": "NW-02 hồi quy",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 11037.401599998702,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-02",
+    "name": "Neo đối soát thay tên phí",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 7511.153799998283,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-03",
+    "name": "Tham chiếu qua hai tin cùng người nói",
+    "group": "scam",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 7532.46339999896,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-04",
+    "name": "Mua sách trả trước có đối chiếu",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6818.559200000891,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-05",
+    "name": "Lời dụ trong bài cảnh báo",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "clear",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 6878.671200000099,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-06",
+    "name": "Tiền thuê và quà miễn phí khác người nói",
+    "group": "normal",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 22614.940799998294,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-07",
+    "name": "Bước nọ và khoản kia chưa xác định",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 44820.424899997306,
+    "manual_review": "pending"
+  },
+  {
+    "id": "RF-08",
+    "name": "Quyền nào chưa biết",
+    "group": "uncertain",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": false,
+    "questions_present": true,
+    "api_ms": 25738.216600002488,
+    "manual_review": "pending"
+  }
+]

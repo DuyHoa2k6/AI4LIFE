@@ -1,0 +1,4270 @@
+[
+  {
+    "id": "H01",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 11199.499599999399,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1203,
+      "prompt_tokens": 6178,
+      "total_tokens": 7381
+    },
+    "usage_totals": {
+      "completion_tokens": 1965,
+      "prompt_tokens": 7244,
+      "total_tokens": 9209
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi yêu cầu cung cấp mã OTP vừa nhận để đăng nhập tài khoản.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính thực sự của người gửi yêu cầu.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu gửi mã OTP cho người khác.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Nêu lý do cần mã để đăng nhập tài khoản.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tài khoản cá nhân có nguy cơ bị chiếm đoạt nếu cung cấp mã OTP.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có thông tin xác định người gửi giả mạo tổ chức cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Nhận mã OTP trên điện thoại sau đó gửi cho người yêu cầu.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đã có đủ văn bản thể hiện hành vi yêu cầu cung cấp mã xác thực.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Yêu cầu gửi mã OTP cho người khác.",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Yêu cầu trực tiếp giao mã xác thực cho người khác.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Nêu lý do cần mã để đăng nhập tài khoản.",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đưa ra mục đích đăng nhập để thúc đẩy người nhận cung cấp mã.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f1",
+            "support_id": "f2"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-02"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f1",
+          "support_id": "f2",
+          "status": "supported",
+          "relation_type": "other_prerequisite",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi. Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu cung cấp mã OTP gắn liền với lý do cần mã để đăng nhập tài khoản.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ],
+      "url_uses": [],
+      "rule_hint_reviews": [
+        {
+          "hint_id": "hint-1",
+          "interpretation": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người nói cần mã OTP để đăng nhập tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính của người nói.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu gửi mã OTP vừa nhận trên điện thoại.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Lý do cần mã để đăng nhập tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản cá nhân có nguy cơ bị truy cập trái phép nếu chia sẻ mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có thông tin khẳng định giả mạo danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhận mã OTP trên điện thoại sau đó gửi cho người yêu cầu.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng về yêu cầu cung cấp mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "share_auth_code",
+              "description": "Yêu cầu cung cấp mã OTP để đăng nhập.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi. Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Việc chia sẻ mã OTP có thể dẫn đến việc mất quyền kiểm soát tài khoản.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu lấy mã OTP nhằm chiếm đoạt tài khoản của người nhận tin.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Người thân hoặc cơ quan hợp pháp hỗ trợ xử lý sự cố tài khoản theo yêu cầu chính đáng."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực sự và động cơ của người gửi yêu cầu."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu cung cấp mã OTP vừa nhận để đăng nhập tài khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực sự của người gửi yêu cầu.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu gửi mã OTP cho người khác.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Nêu lý do cần mã để đăng nhập tài khoản.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản cá nhân có nguy cơ bị chiếm đoạt nếu cung cấp mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có thông tin xác định người gửi giả mạo tổ chức cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhận mã OTP trên điện thoại sau đó gửi cho người yêu cầu.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã có đủ văn bản thể hiện hành vi yêu cầu cung cấp mã xác thực.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "share_auth_code",
+              "description": "Yêu cầu gửi mã OTP cho người khác.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Yêu cầu trực tiếp giao mã xác thực cho người khác.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Nêu lý do cần mã để đăng nhập tài khoản.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra mục đích đăng nhập để thúc đẩy người nhận cung cấp mã.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f1",
+                "support_id": "f2"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-02"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "supported",
+              "relation_type": "other_prerequisite",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi. Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu cung cấp mã OTP gắn liền với lý do cần mã để đăng nhập tài khoản.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10950.16539999051,
+    "extraction_ms": 11194.065200004843,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói nêu lời hứa hoặc điều kiện trong các đoạn trích; nội dung tuyên bố chưa được xác minh.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Gửi mã OTP vừa nhận trên điện thoại cho tôi.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Tôi cần mã đó để đăng nhập tài khoản của bạn.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Gửi mã OTP vừa nhận trên điện thoại cho tôi.",
+              "start": 0,
+              "end": 44
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+            "evidence_refs": [
+              "f1",
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi cần mã đó để đăng nhập tài khoản của bạn.",
+              "start": 45,
+              "end": 90
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 1,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-02"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 6181.883500001277,
+          "retrieval_parallel": 7.575199997518212,
+          "second_provider": 4769.67130000412,
+          "pipeline_total": 10959.748199995374,
+          "verification_render": 2.4015000090003014
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 1,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.917500002193265
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 4.243699993821792
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 243.89980001433287,
+    "validation_adjudication_serialization_ms": 5.434399994555861
+  },
+  {
+    "id": "S01",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 7313.195800001267,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 826,
+      "prompt_tokens": 6186,
+      "total_tokens": 7012
+    },
+    "usage_totals": {
+      "completion_tokens": 1687,
+      "prompt_tokens": 7260,
+      "total_tokens": 8947
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói tự xưng là nhân viên hỗ trợ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Nhân viên hỗ trợ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu bật quyền điều khiển máy từ xa.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Người nói chưa giải thích dùng quyền này để làm gì.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thiết bị và dữ liệu cá nhân trên máy.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "inferred",
+          "text": "Có thể giả mạo nhân viên hỗ trợ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Tự nhận là hỗ trợ, yêu cầu bật quyền điều khiển và chưa giải thích mục đích.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đã có đủ nội dung yêu cầu cấp quyền và tự nhận nhân viên hỗ trợ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu bật quyền điều khiển máy từ xa khi tự xưng là nhân viên hỗ trợ nhưng chưa giải thích mục đích",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự nhận là nhân viên hỗ trợ. Bạn hãy bật quyền điều khiển máy từ xa cho tôi. Tôi chưa giải thích dùng quyền này để làm gì.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu cấp quyền điều khiển thiết bị từ người tự xưng là nhân viên hỗ trợ nhưng thiếu mục đích rõ ràng.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "permission_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-03"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "identity"
+        },
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người nói tự nhận là nhân viên hỗ trợ và yêu cầu bật quyền điều khiển máy từ xa nhưng chưa giải thích mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Bật quyền điều khiển máy từ xa.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa ghi nhận yếu tố thuyết phục cụ thể ngoài việc xưng danh nhân viên hỗ trợ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị cá nhân và dữ liệu trên máy có nguy cơ bị kiểm soát.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Có thể có hành vi giả mạo nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tự nhận danh tính sau đó đưa ra yêu cầu cấp quyền điều khiển không giải thích mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng ghi nhận yêu cầu cấp quyền từ xa và việc chưa giải thích mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu bật quyền điều khiển máy từ xa khi chưa giải thích mục đích.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn hãy bật quyền điều khiển máy từ xa cho tôi. Tôi chưa giải thích dùng quyền này để làm gì.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Việc yêu cầu cấp quyền kiểm soát thiết bị mà không rõ mục đích có thể dẫn đến rủi ro lộ dữ liệu hoặc chiếm đoạt quyền điều khiển.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Đối tượng có thể đang cố chiếm quyền điều khiển thiết bị để thực hiện hành vi trái phép.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là tình huống kiểm tra kỹ thuật hợp lệ nhưng diễn đạt thiếu thông tin.",
+                "Đây có thể là một tình huống giả định trong ngữ cảnh học tập hoặc thử nghiệm."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực sự và đơn vị của người đưa ra yêu cầu.",
+            "Chưa rõ bối cảnh cụ thể dẫn đến yêu cầu hỗ trợ này."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người nói tự xưng là nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu bật quyền điều khiển máy từ xa.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Người nói chưa giải thích dùng quyền này để làm gì.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân trên máy.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Có thể giả mạo nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tự nhận là hỗ trợ, yêu cầu bật quyền điều khiển và chưa giải thích mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã có đủ nội dung yêu cầu cấp quyền và tự nhận nhân viên hỗ trợ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu bật quyền điều khiển máy từ xa khi tự xưng là nhân viên hỗ trợ nhưng chưa giải thích mục đích",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự nhận là nhân viên hỗ trợ. Bạn hãy bật quyền điều khiển máy từ xa cho tôi. Tôi chưa giải thích dùng quyền này để làm gì.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu cấp quyền điều khiển thiết bị từ người tự xưng là nhân viên hỗ trợ nhưng thiếu mục đích rõ ràng.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "permission_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-03"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 7129.989399996703,
+    "extraction_ms": 7307.423000005656,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Tôi tự nhận là nhân viên hỗ trợ. Bạn hãy bật quyền điều khiển máy từ xa cho tôi. Tôi chưa giải thích dùng quyền này để làm gì.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự nhận là nhân viên hỗ trợ. Bạn hãy bật quyền điều khiển máy từ xa cho tôi. Tôi chưa giải thích dùng quyền này để làm gì.",
+              "start": 0,
+              "end": 126
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+        "Vì sao họ cần chia sẻ màn hình hoặc quyền điều khiển, và bạn đã xác minh đầu mối hỗ trợ chưa?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Xác minh đơn vị hỗ trợ qua kênh độc lập trước khi cài phần mềm hoặc cấp quyền điều khiển."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-03"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3824.7938999993494,
+          "retrieval_parallel": 2.458300004946068,
+          "second_provider": 3305.6477999925846,
+          "pipeline_total": 7133.23649999802,
+          "verification_render": 0.6744000129401684
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.296100002946332
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.3670000043930486
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 177.43360000895336,
+    "validation_adjudication_serialization_ms": 5.772799995611422
+  },
+  {
+    "id": "S02",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 33212.47179999773,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      503,
+      200,
+      503,
+      200,
+      503,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1158,
+      "prompt_tokens": 7531,
+      "total_tokens": 8689
+    },
+    "usage_totals": {
+      "completion_tokens": 3185,
+      "prompt_tokens": 14921,
+      "total_tokens": 18106
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người nói tự thừa nhận chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính của người gửi yêu cầu.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu cài tệp APK từ tin nhắn riêng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Không có thông tin về lời hứa lợi ích hoặc áp lực được nêu trong văn bản.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thiết bị và dữ liệu cá nhân có nguy cơ rủi ro khi cài tệp APK chưa rõ nguồn gốc.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa phát hiện dấu hiệu mạo danh cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu cài tệp APK mà chưa rõ nguồn gốc hay mục đích.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đã ghi nhận yêu cầu cài tệp APK nhưng cần làm rõ nguồn gốc và mục đích của tệp.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "install_app",
+          "description": "Yêu cầu cài tệp APK",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu cài đặt ứng dụng từ nguồn không rõ ràng.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Tự thuật chưa cung cấp tên nhà phát hành hoặc lý do",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người nói thừa nhận chưa nêu nhà phát hành và mục đích cài đặt.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "file_origin",
+          "permission_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-09"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": [
+        {
+          "hint_id": "hint-1",
+          "interpretation": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "missing_information": null
+        },
+        {
+          "hint_id": "hint-2",
+          "interpretation": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f2"
+          ],
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK được gửi trong tin nhắn riêng nhưng chưa nêu tên nhà phát hành hay lý do.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Cài tệp APK được gửi trong tin nhắn riêng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa có thông tin về lý do hoặc áp lực thuyết phục cụ thể.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân có thể gặp rủi ro khi cài tệp APK không rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có tuyên bố giả mạo tổ chức cụ thể nào trong văn bản.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhận yêu cầu cài tệp APK qua tin nhắn riêng tư mà không rõ mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu cài tệp APK nhưng thiếu thông tin về nhà phát hành và mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "install_app",
+              "description": "Yêu cầu cài tệp APK từ tin nhắn riêng mà không rõ nhà phát hành hay lý do.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng. Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Việc yêu cầu cài tệp APK không rõ nguồn gốc có thể dẫn đến rủi ro bảo mật thiết bị.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Người gửi có thể đang phát tán phần mềm độc hại qua tệp APK chưa rõ nguồn gốc.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Tệp APK có thể là ứng dụng thử nghiệm nội bộ hợp pháp.",
+                "Người gửi có thể nhầm lẫn về tệp được chia sẻ."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực sự của người gửi yêu cầu.",
+            "Chưa rõ nội dung và mã nguồn bên trong tệp APK được đề cập.",
+            "Chưa rõ mục đích thực tế của việc yêu cầu cài đặt."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi tự thừa nhận chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính của người gửi yêu cầu.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu cài đặt tệp APK từ tin nhắn riêng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có thông tin về lời hứa lợi ích hoặc áp lực được nêu trong văn bản.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân có nguy cơ rủi ro khi cài tệp APK chưa rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa phát hiện dấu hiệu mạo danh cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK không rõ nhà phát hành hay lý do.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu cài tệp APK nhưng thiếu thông tin về nguồn gốc và mục đích.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "install_app",
+              "description": "Yêu cầu cài tệp APK",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu cài đặt ứng dụng từ nguồn không rõ ràng.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Tự thuật chưa cung cấp tên nhà phát hành hoặc lý do",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi thừa nhận chưa nêu nhà phát hành và mục đích cài đặt.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "file_origin",
+              "permission_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": "Chưa rõ nguồn gốc và mục đích của tệp APK."
+            },
+            {
+              "hint_id": "hint-2",
+              "interpretation": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f2"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người nói tự thừa nhận chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính của người gửi yêu cầu.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK từ tin nhắn riêng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có thông tin về lời hứa lợi ích hoặc áp lực được nêu trong văn bản.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và dữ liệu cá nhân có nguy cơ rủi ro khi cài tệp APK chưa rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa phát hiện dấu hiệu mạo danh cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu cài tệp APK mà chưa rõ nguồn gốc hay mục đích.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu cài tệp APK nhưng cần làm rõ nguồn gốc và mục đích của tệp.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "install_app",
+              "description": "Yêu cầu cài tệp APK",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu cài đặt ứng dụng từ nguồn không rõ ràng.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Tự thuật chưa cung cấp tên nhà phát hành hoặc lý do",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói thừa nhận chưa nêu nhà phát hành và mục đích cài đặt.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "file_origin",
+              "permission_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            },
+            {
+              "hint_id": "hint-2",
+              "interpretation": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f2"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 33022.95330000925,
+    "extraction_ms": 33208.4329000063,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Hãy cài tệp APK tôi gửi trong tin nhắn riêng.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "install_app",
+          "description": "Yêu cầu cài phần mềm",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy cài tệp APK tôi gửi trong tin nhắn riêng.",
+              "start": 0,
+              "end": 45
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi chưa cung cấp tên nhà phát hành hoặc lý do cần cài tệp này.",
+              "start": 46,
+              "end": 109
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Ai gửi tệp và họ yêu cầu bạn mở hoặc cài đặt gì?",
+        "Vì sao họ cần chia sẻ màn hình hoặc quyền điều khiển, và bạn đã xác minh đầu mối hỗ trợ chưa?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Xác minh đơn vị hỗ trợ qua kênh độc lập trước khi cài phần mềm hoặc cấp quyền điều khiển."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 2,
+        "rule_hints_reclassified": 1,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-09"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 11556.845500002964,
+          "retrieval_parallel": 3.9720999920973554,
+          "second_provider": 21468.179600007716,
+          "pipeline_total": 33029.557499990915,
+          "verification_render": 1.605899989954196
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": true,
+        "consistency_repairs": 1,
+        "consistency_issues": [
+          "settled_hint_has_missing_information"
+        ],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 2.16760000330396
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.803899988066405
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 185.479599997052,
+    "validation_adjudication_serialization_ms": 4.0388999914284796
+  },
+  {
+    "id": "H03",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 13583.579700003611,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503,
+      503
+    ],
+    "provider_adapter_ms": 13398.111600006814,
+    "extraction_ms": 13579.711699989275,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "d9bc0d9e-dd26-4a7e-8995-83e2d1782d4b",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "N03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 12115.438300010283,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1104,
+      "prompt_tokens": 6362,
+      "total_tokens": 7466
+    },
+    "usage_totals": {
+      "completion_tokens": 2027,
+      "prompt_tokens": 7453,
+      "total_tokens": 9480
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Văn bản phát ra thông báo cảnh báo sinh viên về thủ đoạn giả mạo.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Nhà trường đưa ra cảnh báo phòng ngừa.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Không có yêu cầu thực tế nào được đưa ra đối với người đọc.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra lời cảnh báo mang tính phòng ngừa cho sinh viên.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa ghi nhận tài sản cụ thể gặp rủi ro trực tiếp trong văn bản.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "observed",
+          "text": "Đề cập đến kẻ giả mạo thủ đoạn yêu cầu mật khẩu và mã OTP.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Không có chuỗi hành vi lừa đảo hay giao dịch nào diễn ra.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Thông tin là một thông báo cảnh báo rõ ràng, không có yêu cầu rủi ro.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Trích dẫn lời kẻ giả mạo yêu cầu mật khẩu và mã OTP nhằm mục đích cảnh báo.",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đây là câu trích dẫn mang tính cảnh báo, không phải yêu cầu thực tế từ người gửi.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Phủ định việc nhà trường yêu cầu sinh viên thực hiện các hành động trên.",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Nhà trường không yêu cầu bạn làm như vậy",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Lời khẳng định phủ định yêu cầu độc hại để phòng ngừa cho sinh viên.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-06"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": [
+        {
+          "hint_id": "hint-1",
+          "interpretation": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nội dung cảnh báo về việc kẻ giả mạo yêu cầu nhập mật khẩu và gửi mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Nhà trường",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Không có yêu cầu thực tế nào được đưa ra đối với người đọc ngoài nội dung được trích dẫn để cảnh báo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản trường và mã OTP",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Kẻ giả mạo giả danh để lừa sinh viên cung cấp mật khẩu và OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ văn bản cảnh báo nhưng thiếu thông tin chi tiết về các nguồn phát tán hoặc hành vi cụ thể bên ngoài.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "share_auth_code",
+              "description": "Lời dụ được trích dẫn trong văn bản cảnh báo về việc nhập mật khẩu và gửi mã OTP.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là lời cảnh báo nhắc lại thủ đoạn của kẻ xấu chứ không phải yêu cầu thực tế từ nguồn đăng.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Nhà trường phủ nhận việc đưa ra các yêu cầu trên.",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Nhà trường không yêu cầu bạn làm như vậy",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Xác nhận nhà trường không liên quan đến hành vi yêu cầu mật khẩu hay OTP.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Văn bản này hoàn toàn là một thông báo cảnh báo an toàn mang tính phòng ngừa từ cơ quan quản lý hoặc nhà trường.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là một phần của chương trình tuyên truyền chống lừa đảo định kỳ."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ văn bản này được phát hành chính thức bởi phòng ban nào của nhà trường.",
+            "Không rõ đã có sinh viên nào thực sự nhận được tin nhắn giả mạo tương tự chưa."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Văn bản phát ra thông báo cảnh báo sinh viên về thủ đoạn giả mạo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Nhà trường đưa ra cảnh báo phòng ngừa.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "requested_action": {
+              "status": "unknown",
+              "text": "Không có yêu cầu thực tế nào được đưa ra đối với người đọc.",
+              "evidence_refs": []
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra lời cảnh báo mang tính phòng ngừa cho sinh viên.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa ghi nhận tài sản cụ thể gặp rủi ro trực tiếp trong văn bản.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "observed",
+              "text": "Đề cập đến kẻ giả mạo thủ đoạn yêu cầu mật khẩu và mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có chuỗi hành vi lừa đảo hay giao dịch nào diễn ra.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Thông tin là một thông báo cảnh báo rõ ràng, không có yêu cầu rủi ro.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "share_auth_code",
+              "description": "Trích dẫn lời kẻ giả mạo yêu cầu mật khẩu và mã OTP nhằm mục đích cảnh báo.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là câu trích dẫn mang tính cảnh báo, không phải yêu cầu thực tế từ người gửi.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Phủ định việc nhà trường yêu cầu sinh viên thực hiện các hành động trên.",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Nhà trường không yêu cầu bạn làm như vậy",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Lời khẳng định phủ định yêu cầu độc hại để phòng ngừa cho sinh viên.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-06"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 11929.530900000827,
+    "extraction_ms": 12111.046100006206,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi",
+              "start": 44,
+              "end": 102
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Nhà trường không yêu cầu bạn làm như vậy",
+              "start": 143,
+              "end": 183
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 1,
+        "rule_hints_reclassified": 1,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-06"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 8008.106199995382,
+          "retrieval_parallel": 5.908700011787005,
+          "second_provider": 3922.5178999913624,
+          "pipeline_total": 11937.232800002676,
+          "verification_render": 1.5342999977292493
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.217099995003082
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 3.339799994137138
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 181.51520000537857,
+    "validation_adjudication_serialization_ms": 4.392200004076585
+  },
+  {
+    "id": "C03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 20447.517299995525,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      503,
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 915,
+      "prompt_tokens": 6222,
+      "total_tokens": 7137
+    },
+    "usage_totals": {
+      "completion_tokens": 1728,
+      "prompt_tokens": 7308,
+      "total_tokens": 9036
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa rõ tuyên bố hoặc cam kết cụ thể từ người gửi ngoài lời hứa hoàn tất công việc.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa xác định được danh tính của người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người gửi yêu cầu gửi một đối tượng không xác định (\"cái đó\") qua kênh chat.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Người gửi đưa ra lời hứa hẹn sẽ hoàn tất công việc sau khi nhận được đối tượng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa rõ loại tài sản hoặc thông tin nào gặp rủi ro do thiếu bối cảnh.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa phát hiện dấu hiệu giả mạo danh tính.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu gửi đối tượng được đặt ra trước, sau đó người gửi mới tiến hành hoàn tất.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Thiếu thông tin ngữ cảnh nghiêm trọng, chưa thể xác định bản chất của \"cái đó\" hoặc thủ tục đang đề cập.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Yêu cầu gửi một đối tượng chưa rõ (\"cái đó\") để thực hiện việc hoàn tất.",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa rõ bản chất của hành động yêu cầu do thiếu thông tin về đối tượng và mục đích.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "requested_object",
+          "payment_purpose"
+        ],
+        "context_evidence": [
+          {
+            "quote": "Tôi chỉ nhận được đúng câu này; không có tin nhắn trước để biết “cái đó” là gì hoặc hoàn tất việc nào.",
+            "start": 0,
+            "end": 102
+          }
+        ]
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-09"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        },
+        {
+          "finding_id": "f1",
+          "kind": "action"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "inferred",
+              "text": "Người nói đề nghị gửi một vật phẩm hoặc thông tin không rõ ràng để hoàn tất việc gì đó.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính người nói.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu gửi 'cái đó' qua đây.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Hứa hẹn hoàn tất sau khi đối phương gửi thứ được yêu cầu.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa xác định tài sản rủi ro vì chưa rõ 'cái đó' là gì.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dấu hiệu giả mạo danh tính cụ thể trong câu.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu gửi đồ trước rồi sẽ hoàn tất sau.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "inferred",
+              "text": "Thông tin quá ít, không rõ ngữ cảnh hoặc định nghĩa của 'cái đó'.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người nói yêu cầu gửi 'cái đó' qua đây để hoàn tất việc gì đó.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Có thể là một giao dịch hoặc trao đổi thông tin chưa rõ bản chất.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu gửi tài liệu hoặc mã xác thực trong một ngữ cảnh giao dịch trực tuyến.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Trao đổi thông tin cá nhân thông thường",
+                "Gửi tệp công việc giữa các đồng nghiệp",
+                "Đùa cợt hoặc nhầm đoạn chat"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ 'cái đó' là gì",
+            "Không rõ việc 'hoàn tất' đề cập đến thủ tục nào",
+            "Thiếu ngữ cảnh của các tin nhắn trước",
+            "Không rõ danh tính và ý định thực sự của người gửi"
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa rõ tuyên bố hoặc cam kết cụ thể từ người gửi ngoài lời hứa hoàn tất công việc.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa xác định được danh tính của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu gửi một đối tượng không xác định (\"cái đó\") qua kênh chat.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Người gửi đưa ra lời hứa hẹn sẽ hoàn tất công việc sau khi nhận được đối tượng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa rõ loại tài sản hoặc thông tin nào gặp rủi ro do thiếu bối cảnh.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa phát hiện dấu hiệu giả mạo danh tính.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu gửi đối tượng được đặt ra trước, sau đó người gửi mới tiến hành hoàn tất.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "inferred",
+              "text": "Thiếu thông tin ngữ cảnh nghiêm trọng, chưa thể xác định bản chất của \"cái đó\" hoặc thủ tục đang đề cập.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Yêu cầu gửi một đối tượng chưa rõ (\"cái đó\") để thực hiện việc hoàn tất.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "unknown",
+                "text": "Chưa rõ bản chất của hành động yêu cầu do thiếu thông tin về đối tượng và mục đích.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "requested_object",
+              "payment_purpose"
+            ],
+            "context_evidence": [
+              {
+                "quote": "Tôi chỉ nhận được đúng câu này; không có tin nhắn trước để biết “cái đó” là gì hoặc hoàn tất việc nào.",
+                "start": 0,
+                "end": 102
+              }
+            ]
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "action"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 20268.218199998955,
+    "extraction_ms": 20444.006199992145,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+              "start": 0,
+              "end": 44
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Trong lời nhắn, “cái đó” hoặc thông tin được yêu cầu gửi là gì? Chỉ mô tả loại thông tin, không gửi mã hoặc mật khẩu thật.",
+        "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-09"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 11502.117900003213,
+          "retrieval_parallel": 3.126299998257309,
+          "second_provider": 8766.449799994007,
+          "pipeline_total": 20271.913999997196,
+          "verification_render": 0.9797999955480918
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 2.214400010416284
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.41050000092946
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 175.78799999319017,
+    "validation_adjudication_serialization_ms": 3.511100003379397
+  },
+  {
+    "id": "S03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 17645.070500002475,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 844,
+      "prompt_tokens": 6534,
+      "total_tokens": 7378
+    },
+    "usage_totals": {
+      "completion_tokens": 1605,
+      "prompt_tokens": 7661,
+      "total_tokens": 9266
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa có thông tin ai gửi yêu cầu hoặc lý do phải đăng nhập.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa xác định danh tính của người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu mở liên kết để đăng nhập.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa có lý do thuyết phục hoặc điều kiện cụ thể.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa xác định tài sản hoặc thông tin cụ thể gặp rủi ro.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có dấu hiệu giả mạo danh tính cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa rõ chuỗi sự kiện hoặc điều kiện ràng buộc.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Cần thêm thông tin về mục đích và nguồn gốc yêu cầu.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Yêu cầu mở liên kết để đăng nhập nhưng chưa rõ mục đích và danh tính người gửi.",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy mở https://youtube.com để đăng nhập.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ xác định mức độ rủi ro do thiếu thông tin mục đích.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "source_of_request",
+          "payment_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-09"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "identity"
+        },
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [
+        {
+          "link_id": "url-1",
+          "signal_codes": [
+            "display_target_mismatch",
+            "brand_in_subdomain"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "background"
+        }
+      ],
+      "rule_hint_reviews": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu mở trang web để đăng nhập.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa có thông tin danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Mở liên kết được cung cấp để đăng nhập.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có thông tin về lý do hoặc áp lực.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa rõ tài sản hoặc thông tin tài khoản nào gặp rủi ro.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa phát hiện dấu hiệu giả mạo danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Đưa ra yêu cầu mở liên kết trang web.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Thông tin ngắn gọn, có yêu cầu mở link nhưng thiếu ngữ cảnh và danh tính.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Yêu cầu mở liên kết trang web để đăng nhập.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy mở https://youtube.com để đăng nhập.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Có thể dẫn tới trang web giả mạo hoặc yêu cầu thu thập thông tin đăng nhập.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu mở link có thể liên quan đến việc điều hướng người dùng tới trang web độc hại.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là một hướng dẫn thông thường để truy cập dịch vụ hợp pháp."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính của người gửi yêu cầu.",
+            "Chưa rõ mục đích chính xác của việc yêu cầu đăng nhập qua liên kết.",
+            "Chưa rõ đích thực tế của liên kết hiển thị so với tên miền gốc."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa có thông tin ai gửi yêu cầu hoặc lý do phải đăng nhập.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa xác định danh tính của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu mở liên kết để đăng nhập.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa có lý do thuyết phục hoặc điều kiện cụ thể.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa xác định tài sản hoặc thông tin cụ thể gặp rủi ro.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có dấu hiệu giả mạo danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Chưa rõ chuỗi sự kiện hoặc điều kiện ràng buộc.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "unknown",
+              "text": "Cần thêm thông tin về mục đích và nguồn gốc yêu cầu.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Yêu cầu mở liên kết để đăng nhập nhưng chưa rõ mục đích và danh tính người gửi.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy mở https://youtube.com để đăng nhập.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "unknown",
+                "text": "Chưa đủ căn cứ xác định mức độ rủi ro do thiếu thông tin mục đích.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "source_of_request",
+              "payment_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [
+            {
+              "link_id": "url-1",
+              "signal_codes": [
+                "display_target_mismatch",
+                "brand_in_subdomain"
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "relation": "background"
+            }
+          ],
+          "rule_hint_reviews": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 17417.75010000856,
+    "extraction_ms": 17639.11960000405,
+    "response": {
+      "schema_version": "1.8",
+      "mode": "two_pass",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Hãy mở https://youtube.com để đăng nhập.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy mở https://youtube.com để đăng nhập.",
+              "start": 0,
+              "end": 40
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?",
+        "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-09"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 8527.028900003643,
+          "retrieval_parallel": 8.33839998813346,
+          "second_provider": 8913.970200010226,
+          "pipeline_total": 17449.847099996987,
+          "verification_render": 1.0554999898886308
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 1
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.362699997727759
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 3.999300010036677
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [
+        {
+          "link_id": "url-1",
+          "message_id": "m1",
+          "origin": "dom_href",
+          "status": "parsed",
+          "display_url": "https://youtube.com.xac-minh.invalid/",
+          "hostname": "youtube.com.xac-minh.invalid",
+          "unicode_hostname": "youtube.com.xac-minh.invalid",
+          "registered_domain": null,
+          "reference_domain": null,
+          "label_status": "grounded",
+          "signals": [
+            {
+              "code": "unknown_public_suffix",
+              "level": "info",
+              "detail": "Chưa xác định miền đăng ký trong PSL đã đóng gói."
+            },
+            {
+              "code": "display_target_mismatch",
+              "level": "review",
+              "detail": "Tên miền hiển thị youtube.com khác tên miền đích youtube.com.xac-minh.invalid"
+            },
+            {
+              "code": "brand_in_subdomain",
+              "level": "review",
+              "detail": "Tên tham chiếu youtube.com chỉ xuất hiện ở phần miền phụ của youtube.com.xac-minh.invalid"
+            }
+          ],
+          "reputation_status": "not_checked",
+          "network": {
+            "status": "blocked",
+            "hops": [],
+            "final_url": null,
+            "final_hostname": null,
+            "final_registered_domain": null,
+            "final_http_status": null,
+            "reachable": null,
+            "elapsed_ms": 16.00000000325963,
+            "reason": "non_public_hostname"
+          }
+        }
+      ],
+      "url_uses": [
+        {
+          "link_id": "url-1",
+          "signal_codes": [
+            "display_target_mismatch",
+            "brand_in_subdomain"
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "relation": "background"
+        }
+      ]
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 221.3694999954896,
+    "validation_adjudication_serialization_ms": 5.950899998424575
+  },
+  {
+    "id": "N04",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 14221.458200001507,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1141,
+      "prompt_tokens": 6424,
+      "total_tokens": 7565
+    },
+    "usage_totals": {
+      "completion_tokens": 2142,
+      "prompt_tokens": 7508,
+      "total_tokens": 9650
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người dùng tự thuật lại việc tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Không có yêu cầu đáng ngờ nào từ bên ngoài được ghi nhận.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Người dùng chủ động thao tác trên ứng dụng chính thức và tự nhập mã xác nhận.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Nội dung cung cấp là thông tin tường thuật và phủ định hành vi độc hại từ bên ngoài.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Người dùng tự thuật việc tự mở ứng dụng và tự nhập mã OTP giao dịch",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Hành động tự nguyện thực hiện giao dịch trên thiết bị của chính chủ tài khoản.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Phủ định việc có người yêu cầu gửi mã hoặc chia sẻ màn hình",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Xác nhận không có sự can thiệp hoặc yêu cầu độc hại từ bên thứ ba.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-07"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": [
+        {
+          "hint_id": "hint-1",
+          "interpretation": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f1"
+          ],
+          "missing_information": null
+        },
+        {
+          "hint_id": "hint-2",
+          "interpretation": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "finding_refs": [
+            "f2"
+          ],
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nguoi dung tu mo ung dung ngan hang chinh thuc va tu nhap ma OTP vao ung dung.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Khong co thong tin ve danh tinh nguoi nao khac.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Khong co ai yeu cau gui ma hay chia se man hinh.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Khong ghi nhan yeu to thuyet phuc hay ap luc nao.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Khong co tai san nao duoc neu la dang bi de doa.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Khong co dau hieu mao danh.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tu mo ung dung va tu nhap ma OTP de xac nhan giao dich.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Du thong tin de xac nhan day la hanh dong tu chu cua nguoi dung.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Nguoi dung tu mo ung dung ngan hang va tu nhap ma OTP de xac nhan giao dich.",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Giao dich duoc thuc hien chu dong boi chinh nguoi dung.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Nguoi dung khang dinh khong co ai yeu cau gui ma hay chia se man hinh.",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Khong co hanh vi yeu cau tu ben thu ba trong ngu cảnh nay.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Day la mot giao dich thong thuong, hop phap duoc thuc hien hoan toan chu dong.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Giao dich co the lien quan den mot hoat dong truc tuyen binh thuong cua chinh chu tai khoan."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Khong ro chi tiet ve loai giao dich va gia tri giao dich."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người dùng tự thuật lại việc tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Không có yêu cầu đáng ngờ nào từ bên ngoài được ghi nhận.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Người dùng chủ động thao tác trên ứng dụng chính thức và tự nhập mã xác nhận.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Nội dung cung cấp là thông tin tường thuật và phủ định hành vi độc hại từ bên ngoài.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người dùng tự thuật việc tự mở ứng dụng và tự nhập mã OTP giao dịch",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Hành động tự nguyện thực hiện giao dịch trên thiết bị của chính chủ tài khoản.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Phủ định việc có người yêu cầu gửi mã hoặc chia sẻ màn hình",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Xác nhận không có sự can thiệp hoặc yêu cầu độc hại từ bên thứ ba.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-07"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": [
+            {
+              "hint_id": "hint-1",
+              "interpretation": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f1"
+              ],
+              "missing_information": null
+            },
+            {
+              "hint_id": "hint-2",
+              "interpretation": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "finding_refs": [
+                "f2"
+              ],
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 14032.863900007214,
+    "extraction_ms": 14213.31160000409,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Tôi tự mở ứng dụng ngân hàng chính thức đã cài từ trước và tự nhập mã OTP vào ứng dụng để xác nhận giao dịch của mình.",
+              "start": 0,
+              "end": 118
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Không ai yêu cầu tôi gửi mã hay chia sẻ màn hình.",
+              "start": 119,
+              "end": 168
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 2,
+        "rule_hints_reclassified": 2,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-07"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 8627.501299997675,
+          "retrieval_parallel": 4.770399988046847,
+          "second_provider": 5406.702000007499,
+          "pipeline_total": 14039.726300004986,
+          "verification_render": 2.067599998554215
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 2.6882999954978004
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.5510999985272065
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 180.4476999968756,
+    "validation_adjudication_serialization_ms": 8.14659999741707
+  }
+]

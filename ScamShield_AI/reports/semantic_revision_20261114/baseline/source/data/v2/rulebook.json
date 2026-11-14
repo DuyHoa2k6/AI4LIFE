@@ -1,0 +1,736 @@
+{
+  "version": "local-rulebook-1.0",
+  "rules": [
+    {
+      "rule_id": "R-HANDOVER",
+      "version": "1.0",
+      "description": "Giao tài sản trước khi xác nhận tiền",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "request": {
+          "event_types": [
+            "handover_asset"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "state": {
+          "event_types": [
+            "receive_funds"
+          ],
+          "polarities": [
+            "negative"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "before",
+          "from_fact": "request",
+          "to_fact": "state"
+        }
+      ],
+      "exclusions": [
+        "later_payment_confirmed"
+      ],
+      "missing_fact_policy": "ask",
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-HANDOVER",
+      "supported_conclusion": "r-handover",
+      "test_case_ids": [
+        "finance-handover"
+      ]
+    },
+    {
+      "rule_id": "R-CREDENTIAL",
+      "version": "1.0",
+      "description": "Giao mật khẩu hoặc mã xác thực rõ loại",
+      "scope": "same_event",
+      "required_facts": {
+        "request": {
+          "event_types": [
+            "provide_credentials",
+            "provide_code"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": true
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-CREDENTIAL",
+      "supported_conclusion": "r-credential",
+      "test_case_ids": [
+        "finance-otp",
+        "warning-child-comment"
+      ]
+    },
+    {
+      "rule_id": "R-CODE-IDENTITY",
+      "version": "1.0",
+      "description": "Dãy số được tin liên quan xác định là mã đăng nhập",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "request": {
+          "event_types": [
+            "provide_code"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "meaning": {
+          "event_types": [
+            "code_identity"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "state_update",
+          "from_fact": "request",
+          "to_fact": "meaning"
+        }
+      ],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-CODE-IDENTITY",
+      "supported_conclusion": "r-code-identity",
+      "test_case_ids": [
+        "finance-login-linked"
+      ]
+    },
+    {
+      "rule_id": "R-PAY-TO-WITHDRAW",
+      "version": "1.0",
+      "description": "Trả thêm tiền là điều kiện để rút",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "request": {
+          "event_types": [
+            "transfer_funds"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "benefit": {
+          "event_types": [
+            "withdraw_funds",
+            "receive_funds"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "prerequisite_for",
+          "from_fact": "request",
+          "to_fact": "benefit"
+        }
+      ],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-PAY-TO-WITHDRAW",
+      "supported_conclusion": "r-pay-to-withdraw",
+      "test_case_ids": [
+        "finance-withdraw"
+      ]
+    },
+    {
+      "rule_id": "R-DATA",
+      "version": "1.0",
+      "description": "Giấy tờ nhạy cảm qua cuộc trò chuyện",
+      "scope": "same_event",
+      "required_facts": {
+        "request": {
+          "event_types": [
+            "provide_documents"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-DATA",
+      "supported_conclusion": "r-data",
+      "test_case_ids": [
+        "finance-docs"
+      ]
+    },
+    {
+      "rule_id": "R-ACCESS",
+      "version": "1.0",
+      "description": "Cài ứng dụng hoặc giao quyền chưa được xác minh",
+      "scope": "same_event",
+      "required_facts": {
+        "request": {
+          "event_types": [
+            "install_app",
+            "share_screen",
+            "grant_control"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-ACCESS",
+      "supported_conclusion": "r-access",
+      "test_case_ids": [
+        "finance-app"
+      ]
+    },
+    {
+      "rule_id": "R-TRAVEL-SECRET",
+      "version": "1.0",
+      "description": "Di chuyển gắn với giấu gia đình",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "travel": {
+          "event_types": [
+            "invite_travel_or_meeting"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "secret": {
+          "event_types": [
+            "request_secrecy"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "travel_conditioned_on_secrecy",
+          "from_fact": "travel",
+          "to_fact": "secret"
+        }
+      ],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-TRAVEL-SECRET",
+      "supported_conclusion": "r-travel-secret",
+      "test_case_ids": [
+        "trust-P",
+        "travel-P",
+        "secrecy-P"
+      ]
+    },
+    {
+      "rule_id": "R-DEBT-EXIT",
+      "version": "1.0",
+      "description": "Nội dung gắn khoản nợ với việc không được rời đi.",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "control": {
+          "event_types": [
+            "impose_debt"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "exit": {
+          "event_types": [
+            "restrict_movement"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "movement_restricted_by_debt",
+          "from_fact": "control",
+          "to_fact": "exit"
+        }
+      ],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-DEBT-EXIT",
+      "supported_conclusion": "r-debt-exit",
+      "test_case_ids": [
+        "debt-P"
+      ]
+    },
+    {
+      "rule_id": "R-DOC-EXIT",
+      "version": "1.0",
+      "description": "Nội dung nêu việc giữ giấy tờ cùng hạn chế quyền rời đi.",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "control": {
+          "event_types": [
+            "retain_identity_documents"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "exit": {
+          "event_types": [
+            "restrict_movement"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "document_retention_limits_exit",
+          "from_fact": "control",
+          "to_fact": "exit"
+        }
+      ],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-DOC-EXIT",
+      "supported_conclusion": "r-doc-exit",
+      "test_case_ids": [
+        "documents-P"
+      ]
+    },
+    {
+      "rule_id": "R-CONTROL",
+      "version": "1.0",
+      "description": "Hạn chế liên lạc hoặc giữ giấy tờ chưa rõ mục đích",
+      "scope": "same_event",
+      "required_facts": {
+        "control": {
+          "event_types": [
+            "restrict_communication",
+            "retain_identity_documents"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [
+        "documents_returnable"
+      ],
+      "missing_fact_policy": "ask",
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-CONTROL",
+      "supported_conclusion": "r-control",
+      "test_case_ids": [
+        "communication-U",
+        "communication-P",
+        "documents-U",
+        "documents-P"
+      ]
+    },
+    {
+      "rule_id": "R-CHANGE-WORK",
+      "version": "1.0",
+      "description": "Điều kiện công việc khác lời mời",
+      "scope": "same_scope_same_affected_party",
+      "required_facts": {
+        "offer": {
+          "event_types": [
+            "offer_employment"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        },
+        "change": {
+          "event_types": [
+            "change_destination_or_terms"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [
+        {
+          "type": "work_differs_from_agreement",
+          "from_fact": "offer",
+          "to_fact": "change"
+        }
+      ],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-CHANGE-WORK",
+      "supported_conclusion": "r-change-work",
+      "test_case_ids": [
+        "employment-P",
+        "change-P"
+      ]
+    },
+    {
+      "rule_id": "R-RELEASE",
+      "version": "1.0",
+      "description": "Đòi tiền để được rời đi hoặc thả người",
+      "scope": "same_event",
+      "required_facts": {
+        "payment": {
+          "event_types": [
+            "demand_release_payment"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-RELEASE",
+      "supported_conclusion": "r-release",
+      "test_case_ids": [
+        "release-P"
+      ]
+    },
+    {
+      "rule_id": "R-COERCION",
+      "version": "1.0",
+      "description": "Thông tin về cưỡng ép hoặc đe dọa",
+      "scope": "same_event",
+      "required_facts": {
+        "coercion": {
+          "event_types": [
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat",
+            "threaten_harm",
+            "threaten_disclosure"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": null,
+      "explanation_template_id": "TPL-R-COERCION",
+      "supported_conclusion": "r-coercion",
+      "test_case_ids": [
+        "harm-U",
+        "harm-P",
+        "disclosure-P",
+        "forced_work-P",
+        "illegal-P",
+        "bodily-P",
+        "threat-compels",
+        "bodily-sexual",
+        "bodily-explicit"
+      ]
+    },
+    {
+      "rule_id": "R-URGENT-CURRENT",
+      "version": "1.0",
+      "description": "Người dùng báo đang bị kiểm soát hoặc cưỡng ép",
+      "scope": "same_event",
+      "required_facts": {
+        "danger": {
+          "event_types": [
+            "restrict_movement",
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [
+            "ongoing",
+            "imminent"
+          ],
+          "attribution_kinds": [
+            "self_report",
+            "user_report"
+          ],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "urgent",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": "Bạn có thể đọc và trả lời ở đây một cách an toàn không? Bạn có thể bỏ qua câu hỏi này.",
+      "explanation_template_id": "TPL-R-URGENT-CURRENT",
+      "supported_conclusion": "r-urgent-current",
+      "test_case_ids": [
+        "debt-P",
+        "communication-P",
+        "documents-P",
+        "movement-P",
+        "forced_work-P",
+        "illegal-P",
+        "bodily-P",
+        "threat-compels",
+        "bodily-sexual",
+        "bodily-explicit"
+      ]
+    },
+    {
+      "rule_id": "R-URGENT-THREAT",
+      "version": "1.0",
+      "description": "Lời đe dọa gây hại trực tiếp sắp xảy ra",
+      "scope": "same_event",
+      "required_facts": {
+        "danger": {
+          "event_types": [
+            "threaten_harm"
+          ],
+          "polarities": [
+            "positive"
+          ],
+          "speech_roles": [
+            "request",
+            "claim"
+          ],
+          "temporal_states": [
+            "ongoing",
+            "imminent"
+          ],
+          "attribution_kinds": [],
+          "requires_authentication_meaning": false
+        }
+      },
+      "required_relations": [],
+      "exclusions": [],
+      "missing_fact_policy": "ask",
+      "conclusion": "high",
+      "safety_urgency": "urgent",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "follow_up_question_template": "Bạn có thể tiếp tục trao đổi ở đây một cách an toàn không? Có thể bỏ qua.",
+      "explanation_template_id": "TPL-R-URGENT-THREAT",
+      "supported_conclusion": "r-urgent-threat",
+      "test_case_ids": [
+        "harm-P",
+        "threat-compels"
+      ]
+    }
+  ]
+}

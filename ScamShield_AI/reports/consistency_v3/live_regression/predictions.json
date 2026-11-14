@@ -1,0 +1,170 @@
+[
+  {
+    "id": "SG-21",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 5039.76179996971,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_adapter_ms": 4316.58540002536,
+    "extraction_ms": 5036.253299971577,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "e703bbb3-da12-47fe-bcd0-53b3ffaea536",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "network",
+        "attempts": 2,
+        "output_format": "json_schema"
+      }
+    }
+  },
+  {
+    "id": "SG-31",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 6363.298100011889,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_adapter_ms": 4335.373599955346,
+    "extraction_ms": 6358.878400002141,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "d13f357e-772e-428b-bc8a-f6ffbe48001e",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "network",
+        "attempts": 2,
+        "output_format": "json_schema"
+      }
+    }
+  },
+  {
+    "id": "SG-61",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 6365.946600039024,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_adapter_ms": 4340.369599987753,
+    "extraction_ms": 6363.742500019725,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "79bea014-3abe-4cef-b118-d741dbd26118",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "network",
+        "attempts": 2,
+        "output_format": "json_schema"
+      }
+    }
+  },
+  {
+    "id": "SG-13",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 6327.738300024066,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_adapter_ms": 4330.916799954139,
+    "extraction_ms": 6312.576399999671,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "0403ab9e-0c9b-4f69-a5b4-742eb2c80eaa",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "network",
+        "attempts": 2,
+        "output_format": "json_schema"
+      }
+    }
+  },
+  {
+    "id": "SG-14",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 6380.685599986464,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_adapter_ms": 4354.090199980419,
+    "extraction_ms": 6377.975799958222,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "cd27cdb4-76d3-4f02-a297-26ecccffdf8d",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "network",
+        "attempts": 2,
+        "output_format": "json_schema"
+      }
+    }
+  },
+  {
+    "id": "SG-15",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 6315.9349000197835,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_adapter_ms": 4307.8956999816,
+    "extraction_ms": 6312.447600008454,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "ca446380-2b4e-4130-81c5-fcbaabe83848",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "network",
+        "attempts": 2,
+        "output_format": "json_schema"
+      }
+    }
+  }
+]

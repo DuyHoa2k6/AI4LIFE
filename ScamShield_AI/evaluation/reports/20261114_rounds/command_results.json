@@ -1,0 +1,52 @@
+[
+    {
+        "step":  "baseline real inference",
+        "exit_code":  0,
+        "cases":  51,
+        "model_calls":  102
+    },
+    {
+        "step":  "candidate real inference",
+        "exit_code":  0,
+        "cases":  51,
+        "model_calls":  102
+    },
+    {
+        "step":  "schema and leakage validation",
+        "exit_code":  0
+    },
+    {
+        "step":  "training review gate",
+        "exit_code":  3,
+        "expected_stop":  true,
+        "new_reviewed":  0,
+        "new_training":  false
+    },
+    {
+        "step":  "quality comparison",
+        "exit_code":  2,
+        "expected_stop":  true,
+        "candidate_promoted":  false
+    },
+    {
+        "step":  "pytest full suite",
+        "exit_code":  0,
+        "passed":  332,
+        "log":  "tests.log"
+    },
+    {
+        "step":  "node popup version",
+        "exit_code":  0,
+        "passed":  4
+    },
+    {
+        "step":  "node worker security",
+        "exit_code":  0,
+        "passed":  14
+    },
+    {
+        "step":  "node OCR worker",
+        "exit_code":  0,
+        "passed":  7
+    }
+]

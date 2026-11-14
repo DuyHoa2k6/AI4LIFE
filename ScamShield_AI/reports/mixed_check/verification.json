@@ -1,0 +1,7 @@
+{
+  "unit_tests": 49,
+  "unit_tests_passed": 49,
+  "worker_security_checks": 10,
+  "worker_security_passed": 10,
+  "live_model_quality_claim": false
+}

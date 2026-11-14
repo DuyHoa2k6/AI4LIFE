@@ -1,0 +1,115 @@
+[
+  {
+    "id": "U01",
+    "name": "Biên lai và yêu cầu giao laptop trước khi thấy tiền",
+    "input": {
+      "text": "Mình đã gửi ảnh biên lai mua laptop. Bạn nói vẫn chưa thấy tiền vào tài khoản, nhưng tài xế đang chờ. Bạn giao máy cho tài xế trước nhé, lát nữa kiểm tra lại."
+    }
+  },
+  {
+    "id": "U02",
+    "name": "Nhắc mọi người cảnh giác lời dụ giao OTP",
+    "input": {
+      "text": "Nhắc mọi người: nếu có ai nhắn “gửi mã OTP để nhận hoàn tiền”, đừng làm theo. Hãy tự mở ứng dụng chính thức để kiểm tra giao dịch."
+    }
+  },
+  {
+    "id": "U03",
+    "name": "Hoàn cọc sau một bước chưa có hướng dẫn",
+    "input": {
+      "text": "Bên mình sẽ trả lại tiền cọc sau khi hoàn tất một bước xác nhận. Chiều nay mình gửi hướng dẫn cụ thể."
+    }
+  },
+  {
+    "id": "U04",
+    "name": "Chia sẻ màn hình ngân hàng để duyệt hoàn cọc",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Người gửi",
+          "text": "Bấm chia sẻ màn hình để bên mình duyệt hoàn cọc nhé."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người nhận",
+          "text": "Sau khi chia sẻ thì mình cần làm gì?"
+        },
+        {
+          "id": "m3",
+          "speaker": "Người gửi",
+          "text": "Mở ứng dụng ngân hàng và vào phần số dư để bên mình xem."
+        }
+      ]
+    }
+  },
+  {
+    "id": "U05",
+    "name": "Đổi tài khoản nhận hóa đơn và trì hoãn xác minh",
+    "input": {
+      "text": "Hóa đơn tháng này vẫn như cũ, nhưng bên mình đổi tài khoản nhận tiền. Bạn chuyển theo thông tin gửi riêng trong chat trước, ngày mai hãy gọi đầu mối trong hợp đồng để đối chiếu."
+    }
+  },
+  {
+    "id": "U06",
+    "name": "Giao laptop khi người bán đã tự kiểm tra đủ tiền",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Người mua",
+          "text": "Tài xế mình đặt đã tới. Bạn giao laptop cho anh ấy nhé."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người bán",
+          "text": "Mình vừa kiểm tra ứng dụng ngân hàng, khoản tiền mua laptop đã vào đúng tài khoản và đủ số tiền rồi."
+        }
+      ]
+    }
+  },
+  {
+    "id": "U07",
+    "name": "Sáu số được xác nhận là mã đăng nhập",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Người gửi",
+          "text": "Đọc giúp mình sáu số vừa hiện trên máy để khoản tiền bán hàng được giải ngân."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người nhận",
+          "text": "Thông báo ghi đây là mã dùng để đăng nhập tài khoản của tôi."
+        },
+        {
+          "id": "m3",
+          "speaker": "Người gửi",
+          "text": "Đúng dãy đó, đọc cho mình để xử lý tiếp nhé."
+        }
+      ]
+    }
+  },
+  {
+    "id": "U08",
+    "name": "Lệnh rút chờ kiểm tra, chưa có bước tiếp theo",
+    "input": {
+      "text": "Lệnh rút tiền của bạn đang chờ kiểm tra bổ sung. Hiện chưa có thông báo về bước tiếp theo."
+    }
+  },
+  {
+    "id": "U09",
+    "name": "Tự nhận hỗ trợ phường, xin căn cước và chân dung",
+    "input": {
+      "text": "Mình phụ trách đợt hỗ trợ của phường. Để giữ suất, bạn gửi ảnh hai mặt căn cước và ảnh chân dung vào cuộc trò chuyện này nhé."
+    }
+  },
+  {
+    "id": "U10",
+    "name": "Hoa hồng mồi rồi nộp thêm tiền mở khóa",
+    "input": {
+      "text": "Đơn thử đầu tiên bạn đã nhận được hoa hồng. Đơn tiếp theo cần bạn ứng 500.000 đồng. Nếu muốn rút cả tiền gốc và hoa hồng, bạn chuyển thêm 2 triệu để mở khóa số dư."
+    }
+  }
+]

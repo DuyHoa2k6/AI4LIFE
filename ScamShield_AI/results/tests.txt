@@ -1,0 +1,7 @@
+test_prediction_ignores_expected_and_unicode_quotes_survive (test_tools.EvaluationIntegrityTests.test_prediction_ignores_expected_and_unicode_quotes_survive) ... ok
+test_undefined_metrics_and_nearest_rank_percentile (test_tools.EvaluationIntegrityTests.test_undefined_metrics_and_nearest_rank_percentile) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.006s
+
+OK

@@ -1,0 +1,66 @@
+{
+  "scope": "User-supplied ten-case acceptance table, known regression after implementation. Not independent or proof of 98% accuracy.",
+  "mode": "two_pass",
+  "planned": 7,
+  "batch_wall_ms": 103135.49359999888,
+  "provider_attempts": 13,
+  "provider_http_responses": 13,
+  "executed": 5,
+  "successful": 0,
+  "errors": 5,
+  "not_run": 2,
+  "completion_rate": 0.0,
+  "matrix": {
+    "suspicious": {
+      "error": 2,
+      "not_run": 1
+    },
+    "need_context": {
+      "error": 1
+    },
+    "high": {
+      "error": 1,
+      "not_run": 1
+    },
+    "clear": {
+      "error": 1
+    }
+  },
+  "high_binary_successful_only": {},
+  "high_precision_successful_only": null,
+  "high_recall_successful_only": null,
+  "status_matches_successful": 0,
+  "status_match_rate_successful": null,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 5,
+    "p50_ms": 15452.876800001832,
+    "p95_ms": 18096.310699998867
+  },
+  "latency_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "first_request_ms": 18096.310699998867,
+  "warm_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "provider_adapter_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "exact_quotes": 0,
+  "quote_count": 0,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": "Configured consecutive service failure limit reached; remaining calls not sent"
+}

@@ -1,0 +1,60 @@
+{
+  "cases": 10,
+  "requests": 30,
+  "rounds_per_case": 3,
+  "risk_counts": {
+    "need_context": 6,
+    "suspicious": 3,
+    "high": 1
+  },
+  "http_errors": 0,
+  "external_http_calls": 0,
+  "exact_quotes": {
+    "valid": 405,
+    "total": 405
+  },
+  "risk_stable": true,
+  "p50_ms": 49.6795,
+  "p95_ms": 103.553,
+  "scope": "Sequential ASGI TestClient, local Python, actual public API; no browser/concurrency/controlled cold-start/model/URL network measurement.",
+  "configuration": {
+    "mode": "local_rules",
+    "reasoner": "legacy",
+    "context_enabled": true,
+    "semantic_graph_enabled": false,
+    "url_network": false
+  },
+  "source_sha256": "ff48351d9db749d62e63c0b994f493ab5e02c9dc35c9fd5bd455bd488f12250b",
+  "hashes": {
+    "ScamShield_AI\\backend\\local_reasoning\\adapter.py": "dc6b56b0604c61df7c4a5d9e286aab05eddbc78e2f2446ef8eebe3bdd807a32c",
+    "ScamShield_AI\\backend\\local_reasoning\\clarification_filter.py": "2dad6510b95e31fef7373211a8e83c41d2cfec116cceddf4cef0bda235425412",
+    "ScamShield_AI\\backend\\local_reasoning\\clause_context.py": "9992efd896decd60b330bb220aba9fc68e861ed9344e0efa7fcfb5688a330e3e",
+    "ScamShield_AI\\backend\\local_reasoning\\context_updates.py": "44f487fe6c0fc2e990592b4824d429ad0ac4aa2eb49b236a65e2523963d69b2a",
+    "ScamShield_AI\\backend\\local_reasoning\\engine.py": "d962f4beda8dd54303f7ca1cbb7a81654f61cc83efd7864dd13fc0d8f9e1d139",
+    "ScamShield_AI\\backend\\local_reasoning\\extract.py": "1cdeeacd257776386d261164b9e10e4ff6d7b81b3db8a9bafc22ff5dd2b3902a",
+    "ScamShield_AI\\backend\\local_reasoning\\facts.py": "4314f52e2c7eada67f2797837dc7f723ced881ca16a83a74f6f274f97f3cfca5",
+    "ScamShield_AI\\backend\\local_reasoning\\fact_decision.py": "7050f18a1c9e0db4d17e388d8c1ff78747d00820fb6742516253d3ea0f2d0ad6",
+    "ScamShield_AI\\backend\\local_reasoning\\fact_schema.py": "4781aa8185289b046ad331cfc8dcc99c32bebb315218036588c0de61450acf09",
+    "ScamShield_AI\\backend\\local_reasoning\\fact_validation.py": "4bf040e832568ca8e1020144944a6b306bcffd7c6403a591cac9e8c6b58961b9",
+    "ScamShield_AI\\backend\\local_reasoning\\interaction.py": "784a1ac20864fe6bc46827833a710c07ff2a649a848f1b669947c1ddc3babe5e",
+    "ScamShield_AI\\backend\\local_reasoning\\interpretation_schema.py": "0b98d06412befd577ffc078ce1fdea712bb63b97330e1e23aa787b896c01f285",
+    "ScamShield_AI\\backend\\local_reasoning\\legacy_engine.py": "a4d7fe0d2387a4bbeec45b8d82279080f4f8f1f6fc7c9c1da21dee6d573b21e5",
+    "ScamShield_AI\\backend\\local_reasoning\\rule_schema.py": "b00f8fbf1541cd7f84d65eea7399f1763bd28085da713967494f96064335eab6",
+    "ScamShield_AI\\backend\\local_reasoning\\schema.py": "a33bf46f8f02c0fcb39fcb9b91eb3736b53303fa2838cbb5911becc66724e619",
+    "ScamShield_AI\\backend\\local_reasoning\\semantic_events.py": "f6835ff3582a3a66d1f2b1ba4cb48511815873ac145517c779b4a4ad19afc893",
+    "ScamShield_AI\\backend\\local_reasoning\\semantic_graph.py": "fcbe69a2a39b5e98f88bd110f55a304c6900e01523f737baf1e4c6c2849b7401",
+    "ScamShield_AI\\backend\\local_reasoning\\semantic_phrases.py": "377d8c4c31b3bca06f3191bc9c4bc25c759337c6af512799262215c8302c84c9",
+    "ScamShield_AI\\backend\\local_reasoning\\situation.py": "ac7108db4821b143022cbb2be21983c1eb724f1f84f1bb7a3e34a6304d5a0232",
+    "ScamShield_AI\\backend\\local_reasoning\\splits.py": "7a3e0c4a2fcff3dcf732e3b28b299f65766a9bd3188c9b054d588c5e2506557e",
+    "ScamShield_AI\\backend\\local_reasoning\\support.py": "f860493b7f887a19f5d15135194b00b3b960cd3fed2787bb0e53e4659a845c4e",
+    "ScamShield_AI\\backend\\local_reasoning\\support_facts.py": "36b963f239d960c8ea146a024b0b22a96c204004b57d74f66f52bc6892d84920",
+    "ScamShield_AI\\backend\\local_reasoning\\validation.py": "3f82ae8766fd3a939e5872c1d267d6a7b16a2e366aa3772979ee8de33c7526c4",
+    "ScamShield_AI\\backend\\local_reasoning\\__init__.py": "47d0be1d86b5145f919a7863e3836e1ce31cbaa33a32993f0ad1451deb0c07da",
+    "data\\v2\\semantic_phrases.json": "a782ad0a80b616394a86c75e59013e7806b3be20051485ca27c7ccca02b87334",
+    "data\\v2\\semantic_graph_patterns.json": "9fc1a37a6fa0531c069a2f8cf607f0d313fd156951604806be99bbdad837592b",
+    "data\\v2\\context_rules.json": "20f5b7a2328e1e76c5689a2c53ba9c3936e03332bfc03d504406d03ef78f974a",
+    "data\\v2\\context_templates.json": "0f1253c82e30543e85525c126ca087facd29c8e3165782bea808f42377dcf6c2",
+    "data\\v2\\rulebook.json": "ce94bff924394ace1f3c4c58a0cfb6f5b40e4eca5e81da7a397764689ec8c181",
+    "data\\v2\\extraction_rules.json": "39d601f3eeb12ccf23feab28fcec8c6e6d6cbc950683d4f8042bf6cb3e971dfb"
+  }
+}

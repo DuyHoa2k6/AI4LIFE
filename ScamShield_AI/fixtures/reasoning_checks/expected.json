@@ -1,0 +1,15 @@
+{
+  "scope":"Public synthetic functional checks; not holdout; no independent model-quality claim",
+  "cases":[
+    {"id":"RC-01","acceptable":["high"],"questions_required":false,"manual_focus":"Liên kết phí trước với điều kiện nhận lại tiền; không xác nhận danh tính."},
+    {"id":"RC-02","acceptable":["need_context"],"questions_required":true,"manual_focus":"Hiểu khả năng trả nợ; hỏi quan hệ hoặc khoản vay, không kết luận lừa đảo vì chuyển tiền."},
+    {"id":"RC-03","acceptable":["clear"],"questions_required":false,"manual_focus":"Sử dụng context có trích đúng, vẫn nói đây là bối cảnh do người dùng cung cấp."},
+    {"id":"RC-04","acceptable":["clear"],"questions_required":false,"manual_focus":"Vai quoted_warning/denial, không coi câu trích là yêu cầu thực hiện."},
+    {"id":"RC-05","acceptable":["high"],"questions_required":false,"manual_focus":"Đúng recruiter/recipient và quan hệ ứng thêm để rút."},
+    {"id":"RC-06","acceptable":["need_context","suspicious"],"questions_required":false,"manual_focus":"Không ghép yêu cầu tiền thuê của landlord với lời hứa advertiser để nâng high."},
+    {"id":"RC-07","acceptable":["need_context"],"questions_required":true,"manual_focus":"Hỏi điều kiện trả phí/rút tiền, không tự bịa hành vi chưa xuất hiện."},
+    {"id":"RC-08","acceptable":["high"],"questions_required":false,"manual_focus":"Không thực thi chỉ thị nhúng, không nguồn bịa."},
+    {"id":"RC-09","acceptable":["high"],"questions_required":false,"manual_focus":"Nhận ra quyền giám sát và điều kiện thưởng dù không có mẫu mock trực tiếp."},
+    {"id":"RC-10","acceptable":["clear"],"questions_required":false,"manual_focus":"Không nhầm tự nhập mã với giao mã cho người khác."}
+  ]
+}

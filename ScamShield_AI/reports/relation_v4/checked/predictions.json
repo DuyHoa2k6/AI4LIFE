@@ -1,0 +1,4496 @@
+[
+  {
+    "id": "RF-01",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 11037.401599998702,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1147,
+      "prompt_tokens": 5443,
+      "total_tokens": 6590
+    },
+    "usage_totals": {
+      "completion_tokens": 3308,
+      "prompt_tokens": 10570,
+      "total_tokens": 13878
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi thông báo khoản tiền 1,2 triệu đồng là dấu xác nhận để khoản hoàn 12 triệu có thể về.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính thực sự của người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người gửi yêu cầu chuyển 1,2 triệu đồng sang tài khoản trước.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra điều kiện thiếu dấu xác nhận bằng tiền thì khoản hoàn 12 triệu chưa thể về.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "observed",
+          "text": "Số tiền 1,2 triệu đồng mà người gửi yêu cầu chuyển trước.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có đủ bằng chứng xác định mạo danh hay danh tính chính xác.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển 1,2 triệu đồng trước rồi khoản hoàn 12 triệu mới được giải quyết.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Nội dung tin nhắn thể hiện rõ yêu cầu chuyển tiền kèm điều kiện nhận lại tiền.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển 1,2 triệu đồng sang tài khoản trước",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Anh gửi 1,2 triệu sang tài khoản em trước;",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người nói yêu cầu người nghe thực hiện việc chuyển tiền.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Nêu điều kiện khoản hoàn 12 triệu chưa thể về nếu thiếu dấu xác nhận",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Không gọi là phí đâu anh, đây là dấu xác nhận bằng tiền. [...] thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đưa ra điều kiện để thúc đẩy việc chuyển tiền.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f1",
+            "support_id": "f2"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "payment_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f1",
+          "support_id": "f2",
+          "status": "supported",
+          "relation_type": "payment_required_before_benefit",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu chuyển tiền được gắn liền rõ ràng với điều kiện để nhận khoản hoàn lớn hơn.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Khoản hoàn 12 triệu chưa thể về nếu thiếu dấu xác nhận bằng tiền 1,2 triệu.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính cụ thể của người nói ngoài việc yêu cầu gửi tiền vào tài khoản.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Gửi 1,2 triệu sang tài khoản trước để làm dấu xác nhận.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Lập luận đây là dấu xác nhận bằng tiền chứ không phải phí, điều kiện để nhận khoản hoàn 12 triệu.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 1,2 triệu đồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có thông tin về việc giả mạo tổ chức cụ thể nào trong văn bản.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền trước (1,2 triệu) rồi khoản tiền hoàn lớn hơn (12 triệu) mới về sau.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin để ghi nhận yêu cầu chuyển tiền và điều kiện nhận tiền hoàn, nhưng chưa đủ để xác minh bản chất sự việc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu gửi 1,2 triệu sang tài khoản để làm dấu xác nhận nhận khoản hoàn 12 triệu.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói đưa ra chỉ thị chuyển tiền với điều kiện đi kèm là nhận lại khoản tiền lớn hơn.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu chuyển tiền trước để nhận khoản hoàn có thể liên quan đến mô hình lừa đảo chiếm đoạt tài sản.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là giao dịch hoàn tiền hoặc đóng cọc có thật trong một dịch vụ thương mại.",
+                "Đây là sự hiểu lầm về quy trình thanh toán giữa hai cá nhân."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ mối quan hệ thực tế giữa người gửi và người nhận tin nhắn.",
+            "Chưa rõ bối cảnh phát sinh khoản hoàn 12 triệu đồng.",
+            "Chưa rõ danh tính thực sự của chủ tài khoản nhận tiền."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi thông báo khoản tiền 1,2 triệu đồng là dấu xác nhận để khoản hoàn 12 triệu có thể về.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực sự của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu chuyển 1,2 triệu đồng sang tài khoản trước.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện thiếu dấu xác nhận bằng tiền thì khoản hoàn 12 triệu chưa thể về.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 1,2 triệu đồng mà người gửi yêu cầu chuyển trước.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ bằng chứng xác định mạo danh hay danh tính chính xác.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển 1,2 triệu đồng trước rồi khoản hoàn 12 triệu mới được giải quyết.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Nội dung tin nhắn thể hiện rõ yêu cầu chuyển tiền kèm điều kiện nhận lại tiền.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển 1,2 triệu đồng sang tài khoản trước",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Anh gửi 1,2 triệu sang tài khoản em trước;",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói yêu cầu người nghe thực hiện việc chuyển tiền.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Nêu điều kiện khoản hoàn 12 triệu chưa thể về nếu thiếu dấu xác nhận",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Không gọi là phí đâu anh, đây là dấu xác nhận bằng tiền. [...] thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra điều kiện để thúc đẩy việc chuyển tiền.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f1",
+                "support_id": "f2"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "payment_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f2",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu chuyển tiền được gắn liền với điều kiện nhận lại khoản hoàn lớn hơn.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi thông báo khoản tiền 1,2 triệu đồng là dấu xác nhận để khoản hoàn 12 triệu có thể về.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực sự của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu chuyển 1,2 triệu đồng sang tài khoản trước.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện thiếu dấu xác nhận bằng tiền thì khoản hoàn 12 triệu chưa thể về.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 1,2 triệu đồng mà người gửi yêu cầu chuyển trước.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ bằng chứng xác định mạo danh hay danh tính chính xác.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển 1,2 triệu đồng trước rồi khoản hoàn 12 triệu mới được giải quyết.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Nội dung tin nhắn thể hiện rõ yêu cầu chuyển tiền kèm điều kiện nhận lại tiền.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển 1,2 triệu đồng sang tài khoản trước",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Anh gửi 1,2 triệu sang tài khoản em trước;",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói yêu cầu người nghe thực hiện việc chuyển tiền.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Nêu điều kiện khoản hoàn 12 triệu chưa thể về nếu thiếu dấu xác nhận",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Không gọi là phí đâu anh, đây là dấu xác nhận bằng tiền. [...] thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra điều kiện để thúc đẩy việc chuyển tiền.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f1",
+                "support_id": "f2"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "payment_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu chuyển tiền được gắn liền rõ ràng với điều kiện để nhận khoản hoàn lớn hơn.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10799.10710000695,
+    "extraction_ms": 11033.60000000248,
+    "response": {
+      "code": "PROVIDER_INCONSISTENT_OUTPUT",
+      "message": "Chưa kiểm tra được: kết quả mô hình còn mâu thuẫn sau khi rà lại. Vui lòng thử lại.",
+      "request_id": "680d6982-56d5-4d14-ac51-188e44a2e5a0",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "consistency",
+        "repairs": 1,
+        "issues": [
+          "relation_endpoint_unverified"
+        ]
+      }
+    }
+  },
+  {
+    "id": "RF-02",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 7511.153799998283,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1206,
+      "prompt_tokens": 4539,
+      "total_tokens": 5745
+    },
+    "usage_totals": {
+      "completion_tokens": 2193,
+      "prompt_tokens": 5338,
+      "total_tokens": 7531
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Khoản tiền công 11 triệu được hứa sẽ giải phóng sau khi người nhận thực hiện việc chuyển tiền.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính thực sự của người gửi yêu cầu.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển 720 nghìn đồng vào ví để làm neo đối soát.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra điều kiện nếu neo không đủ thì không cho lấy lại tiền công.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "observed",
+          "text": "Số tiền 720 nghìn đồng cần chuyển đi và khoản tiền công 11 triệu đồng đang bị giam giữ.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa xác định có sự giả mạo danh tính cụ thể nào không.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển tiền trước để được giải phóng khoản tiền công sau.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Nội dung tin nhắn thể hiện rõ yêu cầu chuyển tiền kèm theo điều kiện giam giữ tài sản.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền vào ví làm neo đối soát",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chị chuyển 720 nghìn sang ví em làm neo đối soát",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người nói yêu cầu đối tượng chuyển một khoản tiền cụ thể.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Điều kiện ràng buộc việc trả lại tiền công dựa trên số tiền neo",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Neo đó chưa đủ thì bên em không cho lấy lại tiền công.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đưa ra điều kiện hạn chế rút tiền để thúc đẩy việc chuyển tiền.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f1",
+            "support_id": "f2"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "payment_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-01"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f1",
+          "support_id": "f2",
+          "status": "supported",
+          "relation_type": "payment_required_before_benefit",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chị chuyển 720 nghìn sang ví em làm neo đối soát. Neo đó chưa đủ thì bên em không cho lấy lại tiền công.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu chuyển tiền được gắn liền với điều kiện phải hoàn thành để được lấy lại khoản tiền công.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Khoản công 11 triệu chỉ được thả sau khi chị chuyển 720 nghìn sang ví em làm neo đối soát.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không xác định rõ danh tính cụ thể.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển 720 nghìn sang ví để làm neo đối soát.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Nếu không đủ neo thì bên em không cho lấy lại tiền công.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Tiền chuyển 720 nghìn và khoản công 11 triệu.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa rõ có giả mạo tổ chức hay cá nhân cụ thể nào không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền trước rồi mới được thả tiền công sau.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "inferred",
+              "text": "Dữ liệu chỉ gồm một đoạn thông tin về yêu cầu chuyển tiền và điều kiện nhận tiền.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển 720 nghìn sang ví làm neo đối soát để nhận lại khoản tiền công",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "chị chuyển 720 nghìn sang ví em làm neo đối soát",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói đưa ra yêu cầu chuyển tiền trực tiếp.",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Đưa ra điều kiện và áp lực về việc không cho lấy lại tiền công nếu không làm neo",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Neo đó chưa đủ thì bên em không cho lấy lại tiền công",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói dùng việc giữ lại tiền công để gây áp lực thực hiện yêu cầu.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Đây có thể là hành vi yêu cầu chuyển tiền chiếm đoạt tài sản bằng thủ đoạn tạo điều kiện rút tiền giả mạo.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là quy trình xử lý giao dịch hoặc phí dịch vụ có thật trong một hệ thống nào đó.",
+                "Đây có thể là sự nhầm lẫn trong giao dịch tài chính cá nhân."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ bản chất của 'khoản công 11 triệu' và 'ví em làm neo đối soát'.",
+            "Chưa rõ bối cảnh giao dịch giữa hai bên."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Khoản tiền công 11 triệu được hứa sẽ giải phóng sau khi người nhận thực hiện việc chuyển tiền.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực sự của người gửi yêu cầu.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển 720 nghìn đồng vào ví để làm neo đối soát.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện nếu neo không đủ thì không cho lấy lại tiền công.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 720 nghìn đồng cần chuyển đi và khoản tiền công 11 triệu đồng đang bị giam giữ.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa xác định có sự giả mạo danh tính cụ thể nào không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền trước để được giải phóng khoản tiền công sau.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Nội dung tin nhắn thể hiện rõ yêu cầu chuyển tiền kèm theo điều kiện giam giữ tài sản.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào ví làm neo đối soát",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "chị chuyển 720 nghìn sang ví em làm neo đối soát",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói yêu cầu đối tượng chuyển một khoản tiền cụ thể.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Điều kiện ràng buộc việc trả lại tiền công dựa trên số tiền neo",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Neo đó chưa đủ thì bên em không cho lấy lại tiền công.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra điều kiện hạn chế rút tiền để thúc đẩy việc chuyển tiền.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f1",
+                "support_id": "f2"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "payment_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-01"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "chị chuyển 720 nghìn sang ví em làm neo đối soát. Neo đó chưa đủ thì bên em không cho lấy lại tiền công.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu chuyển tiền được gắn liền với điều kiện phải hoàn thành để được lấy lại khoản tiền công.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 6970.709099994565,
+    "extraction_ms": 7501.187599998957,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Neo đó chưa đủ thì bên em không cho lấy lại tiền công.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “chị chuyển 720 nghìn sang ví em làm neo đối soát”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Neo đó chưa đủ thì bên em không cho lấy lại tiền công.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chị chuyển 720 nghìn sang ví em làm neo đối soát",
+              "start": 41,
+              "end": 89
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+            "evidence_refs": [
+              "f1",
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Neo đó chưa đủ thì bên em không cho lấy lại tiền công.",
+              "start": 91,
+              "end": 145
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+        "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-01"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3322.2790000072564,
+          "retrieval_parallel": 2.1928999994997866,
+          "second_provider": 3650.088299997151,
+          "pipeline_total": 6974.821900003008,
+          "verification_render": 4.135299997869879
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 1,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.181499996164348
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.210700000228826
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 530.4785000043921,
+    "validation_adjudication_serialization_ms": 9.966199999325909
+  },
+  {
+    "id": "RF-03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 7532.46339999896,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1184,
+      "prompt_tokens": 4597,
+      "total_tokens": 5781
+    },
+    "usage_totals": {
+      "completion_tokens": 2223,
+      "prompt_tokens": 5457,
+      "total_tokens": 7680
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người quản lý yêu cầu chuyển khoản tiền bảo chứng và hứa sẽ cho rút tiền hoa hồng sau khi hoàn thành.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Người gửi tự xưng là quản lý.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu gửi 380 nghìn vào tài khoản cá nhân làm bảo chứng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra điều kiện phải nộp khoản tiền bảo chứng thì mới được mở rút tiền hoa hồng.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "observed",
+          "text": "Số tiền 380 nghìn đồng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa xác minh được danh tính thực tế của người quản lý.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển tiền trước để làm điều kiện rút tiền hoa hồng sau.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ bằng chứng từ tin nhắn về yêu cầu chuyển tiền và điều kiện đi kèm.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền vào tài khoản cá nhân làm bảo chứng",
+          "speaker": "quanly",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "q1",
+              "quote": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu chuyển tiền có rủi ro mất tài sản nếu đây là thủ đoạn yêu cầu nộp phí trước.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Điều kiện phải nộp tiền mới được rút hoa hồng",
+          "speaker": "quanly",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "q3",
+              "quote": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Sử dụng lợi ích tài chính làm điều kiện để thúc đẩy việc chuyển tiền.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f1",
+            "support_id": "f2"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-01"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f1",
+          "support_id": "f2",
+          "status": "supported",
+          "relation_type": "payment_required_before_benefit",
+          "relation_evidence": [
+            {
+              "message_id": "q1",
+              "quote": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.",
+              "start": null,
+              "end": null
+            },
+            {
+              "message_id": "q3",
+              "quote": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu chuyển tiền bảo chứng được gắn liền với điều kiện rút hoa hồng.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu gửi 380 nghìn làm khoản bảo chứng để được mở rút 5 triệu tiền hoa hồng",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Người quản lý",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Gửi 380 nghìn vào tài khoản cá nhân",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Điều kiện cần thiết để mở rút tiền hoa hồng",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "380 nghìn đồng",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Có thể mạo danh quản lý nền tảng hoặc dịch vụ",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Đưa yêu cầu chuyển tiền bảo chứng, khách thắc mắc, đưa điều kiện mở rút hoa hồng",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ đoạn hội thoại trao đổi về khoản chuyển tiền và điều kiện rút tiền",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào tài khoản cá nhân làm bảo chứng",
+              "speaker": "quanly",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "q1",
+                  "quote": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói yêu cầu chuyển một khoản tiền cụ thể vào tài khoản cá nhân",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Nêu điều kiện phải nộp tiền để được nhận tiền hoa hồng",
+              "speaker": "quanly",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "q3",
+                  "quote": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói đưa ra điều kiện thúc đẩy hành động chuyển tiền",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu chuyển tiền bảo chứng có dấu hiệu lừa đảo chiếm đoạt tài sản",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Giao dịch thu phí hoặc đặt cọc chính đáng cho một dịch vụ thực tế",
+                "Thủ tục nội bộ yêu cầu xác thực tài khoản"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực tế và tư cách pháp lý của tài khoản nhận tiền",
+            "Chưa rõ bản chất của hệ thống hoa hồng được nhắc tới"
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người quản lý yêu cầu chuyển khoản tiền bảo chứng và hứa sẽ cho rút tiền hoa hồng sau khi hoàn thành.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Người gửi tự xưng là quản lý.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu gửi 380 nghìn vào tài khoản cá nhân làm bảo chứng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện phải nộp khoản tiền bảo chứng thì mới được mở rút tiền hoa hồng.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 380 nghìn đồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa xác minh được danh tính thực tế của người quản lý.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền trước để làm điều kiện rút tiền hoa hồng sau.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng từ tin nhắn về yêu cầu chuyển tiền và điều kiện đi kèm.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào tài khoản cá nhân làm bảo chứng",
+              "speaker": "quanly",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "q1",
+                  "quote": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu chuyển tiền có rủi ro mất tài sản nếu đây là thủ đoạn yêu cầu nộp phí trước.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Điều kiện phải nộp tiền mới được rút hoa hồng",
+              "speaker": "quanly",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "q3",
+                  "quote": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Sử dụng lợi ích tài chính làm điều kiện để thúc đẩy việc chuyển tiền.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f1",
+                "support_id": "f2"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-01"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "q1",
+                  "quote": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.",
+                  "start": null,
+                  "end": null
+                },
+                {
+                  "message_id": "q3",
+                  "quote": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu chuyển tiền bảo chứng được gắn liền với điều kiện rút hoa hồng.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 6985.456599999452,
+    "extraction_ms": 7527.167699998245,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "quanly",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "q1",
+              "quote": "Anh gửi 380 nghìn vào tài khoản cá nhân của tôi làm khoản bảo chứng.",
+              "start": 0,
+              "end": 68
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+            "evidence_refs": [
+              "f1",
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "quanly",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "q3",
+              "quote": "Chỉ khi có khoản vừa nói thì tôi mới mở rút 5 triệu tiền hoa hồng cho anh.",
+              "start": 0,
+              "end": 74
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-01"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3450.4375999968033,
+          "retrieval_parallel": 7.460900000296533,
+          "second_provider": 3535.7386999967275,
+          "pipeline_total": 6994.488500000443,
+          "verification_render": 1.2123999986215495
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 1,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 5.019800002628472
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 4.172100001596846
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 541.7110999987926,
+    "validation_adjudication_serialization_ms": 5.295700000715442
+  },
+  {
+    "id": "RF-04",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 6818.559200000891,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1157,
+      "prompt_tokens": 4504,
+      "total_tokens": 5661
+    },
+    "usage_totals": {
+      "completion_tokens": 1873,
+      "prompt_tokens": 5335,
+      "total_tokens": 7208
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Thông báo về việc chuyển tiền thanh toán đơn sách đã đặt để cửa hàng giao sách.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Cửa hàng bán sách.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Chuyển tiền thanh toán giá đơn sách đã đặt.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Cửa hàng sẽ giao sách sau khi nhận đủ thanh toán.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Số tiền thanh toán đơn hàng 185 nghìn đồng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có bằng chứng giả mạo danh tính trong bối cảnh giao dịch đã được người dùng đối chiếu.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Chuyển tiền thanh toán trước, sau đó cửa hàng giao sách.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin về giao dịch mua bán sách thông thường và có ngữ cảnh đối chiếu rõ ràng.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền thanh toán đơn sách",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Yêu cầu thanh toán tiền mua sách theo đơn hàng đã đặt.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Điều kiện giao sách sau khi nhận thanh toán",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận đủ thanh toán thì cửa hàng giao sách.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Cam kết giao hàng sau khi hoàn tất thanh toán đơn sách.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [
+          "f1",
+          "f2"
+        ],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": [
+          {
+            "quote": "Tôi chủ động đặt sách trên cửa hàng chính thức. Đã kiểm tra đơn hàng, hóa đơn và đúng tài khoản cửa hàng. Đây là giá sách đã thỏa thuận, không phải tiền để mở khoản hoàn hay rút.",
+            "start": 0,
+            "end": 178
+          }
+        ]
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-05"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f1",
+          "support_id": "f2",
+          "status": "not_supporting_risk",
+          "relation_type": "ordinary_transaction",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Đây là giao dịch thương mại điện tử thông thường theo đơn hàng người dùng chủ động đặt, không phải yêu cầu nộp tiền rủi ro.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "inferred",
+              "text": "Cửa hàng sách chính thức.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển 185 nghìn.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Nhận đủ thanh toán thì cửa hàng giao sách.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "185 nghìn đồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dấu hiệu mạo danh rõ ràng theo ngữ cảnh.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Chuyển tiền mua sách sau đó cửa hàng giao sách.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin về giao dịch mua bán sách thông thường.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền thanh toán đơn sách đã đặt",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đề nghị thanh toán tiền mua sách đúng giá thỏa thuận.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Đây là giao dịch mua bán sách trực tuyến thông thường giữa người mua và cửa hàng.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Giao dịch thương mại điện tử hợp pháp.",
+                "Trao đổi thanh toán đơn hàng theo đúng thỏa thuận."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa thể xác định tuyệt đối danh tính thực tế của bên nhận tiền nếu chỉ dựa vào văn bản ngắn."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Thông báo về việc chuyển tiền thanh toán đơn sách đã đặt để cửa hàng giao sách.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Cửa hàng bán sách.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển tiền thanh toán giá đơn sách đã đặt.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Cửa hàng sẽ giao sách sau khi nhận đủ thanh toán.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Số tiền thanh toán đơn hàng 185 nghìn đồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có bằng chứng giả mạo danh tính trong bối cảnh giao dịch đã được người dùng đối chiếu.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Chuyển tiền thanh toán trước, sau đó cửa hàng giao sách.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin về giao dịch mua bán sách thông thường và có ngữ cảnh đối chiếu rõ ràng.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền thanh toán đơn sách",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Yêu cầu thanh toán tiền mua sách theo đơn hàng đã đặt.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Điều kiện giao sách sau khi nhận thanh toán",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "nhận đủ thanh toán thì cửa hàng giao sách.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Cam kết giao hàng sau khi hoàn tất thanh toán đơn sách.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [
+              "f1",
+              "f2"
+            ],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": [
+              {
+                "quote": "Tôi chủ động đặt sách trên cửa hàng chính thức. Đã kiểm tra đơn hàng, hóa đơn và đúng tài khoản cửa hàng. Đây là giá sách đã thỏa thuận, không phải tiền để mở khoản hoàn hay rút.",
+                "start": 0,
+                "end": 178
+              }
+            ]
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-05"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "not_supporting_risk",
+              "relation_type": "ordinary_transaction",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Đây là giao dịch thương mại điện tử thông thường theo đơn hàng người dùng chủ động đặt, không phải yêu cầu nộp tiền rủi ro.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 6223.139599991555,
+    "extraction_ms": 6812.142899994797,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “nhận đủ thanh toán thì cửa hàng giao sách.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “nhận đủ thanh toán thì cửa hàng giao sách.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển 185 nghìn giá đơn sách đã đặt, nhận đủ thanh toán thì cửa hàng giao sách.",
+              "start": 0,
+              "end": 80
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận đủ thanh toán thì cửa hàng giao sách.",
+              "start": 38,
+              "end": 80
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Bối cảnh là thông tin bạn cung cấp; đối chiếu lại người nhận qua đầu mối đã biết nếu có thay đổi."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-05"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 2640.860999999859,
+          "retrieval_parallel": 4.743800003780052,
+          "second_provider": 3583.116499998141,
+          "pipeline_total": 6228.977600003418,
+          "verification_render": 1.1769999982789159
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.034899997350294
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.708900002995506
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 589.0033000032417,
+    "validation_adjudication_serialization_ms": 6.416300006094389
+  },
+  {
+    "id": "RF-05",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 6878.671200000099,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 932,
+      "prompt_tokens": 4766,
+      "total_tokens": 5698
+    },
+    "usage_totals": {
+      "completion_tokens": 1950,
+      "prompt_tokens": 5571,
+      "total_tokens": 7521
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Văn bản đề cập đến một lời dụ lừa đảo phổ biến về việc chuyển tiền bảo chứng trước để rút hoa hồng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không có thông tin về danh tính người gửi cụ thể.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người đọc được khuyến cáo không chuyển tiền theo lời dụ.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời dụ được trích dẫn như một ví dụ phòng tránh lừa đảo.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Không có tài sản nào đang gặp rủi ro trực tiếp vì đây là văn bản cảnh báo.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Không có dấu hiệu mạo danh.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Không có trình tự hành động lừa đảo thực tế nào được yêu cầu thực hiện.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ văn bản để xác định đây là một bản tin cảnh báo phòng chống lừa đảo.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Trích dẫn lời dụ lừa đảo mang tính cảnh báo",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh giác với lời dụ “chuyển tiền bảo chứng trước thì mới rút được hoa hồng”.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đây là nội dung được trích dẫn để minh họa thủ đoạn lừa đảo.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Lời khuyên ngăn, không yêu cầu thực hiện hành vi rủi ro",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Người đọc không được yêu cầu gửi khoản tiền nào; đừng chuyển theo lời dụ.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Khuyến cáo người đọc không làm theo lời dụ phòng tránh rủi ro.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Bản tin cảnh giác với lời dụ chuyển tiền bảo chứng để rút hoa hồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không xác định danh tính cụ thể của người đưa ra lời dụ trong bản tin.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người đọc được yêu cầu không chuyển tiền theo lời dụ.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra lời dụ chuyển tiền bảo chứng trước mới rút được hoa hồng như một ví dụ phòng tránh.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tiền của người đọc nếu họ tin theo lời dụ chuyển tiền bảo chứng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không rõ có sự giả mạo danh tính nào hay không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Đưa ra cảnh báo, trích dẫn lời dụ phòng tránh và nhắc nhở người đọc không làm theo.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Văn bản là một bản tin cảnh báo mang tính phòng ngừa, không phải là thông tin liên lạc trực tiếp từ kẻ lừa đảo.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Bản tin nhắc lại lời dụ chuyển tiền bảo chứng trước thì mới rút được hoa hồng nhằm mục đích phòng tránh.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh giác với lời dụ “chuyển tiền bảo chứng trước thì mới rút được hoa hồng”.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là nội dung được trích dẫn để cảnh báo người đọc.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Bản tin nhắc nhở người đọc không chuyển tiền theo lời dụ.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Người đọc không được yêu cầu gửi khoản tiền nào; đừng chuyển theo lời dụ.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là khuyến cáo an toàn hướng dẫn người đọc tránh rủi ro.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Văn bản hoàn toàn là bản tin cảnh báo mang tính giáo dục cộng đồng về một thủ đoạn lừa đảo phổ biến.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là đoạn trích từ tài liệu tập huấn phòng chống tội phạm."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ nguồn gốc đầy đủ hoặc ngữ cảnh rộng hơn của bản tin cảnh báo."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Văn bản đề cập đến một lời dụ lừa đảo phổ biến về việc chuyển tiền bảo chứng trước để rút hoa hồng.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không có thông tin về danh tính người gửi cụ thể.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người đọc được khuyến cáo không chuyển tiền theo lời dụ.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Lời dụ được trích dẫn như một ví dụ phòng tránh lừa đảo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không có tài sản nào đang gặp rủi ro trực tiếp vì đây là văn bản cảnh báo.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dấu hiệu mạo danh.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có trình tự hành động lừa đảo thực tế nào được yêu cầu thực hiện.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ văn bản để xác định đây là một bản tin cảnh báo phòng chống lừa đảo.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Trích dẫn lời dụ lừa đảo mang tính cảnh báo",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh giác với lời dụ “chuyển tiền bảo chứng trước thì mới rút được hoa hồng”.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là nội dung được trích dẫn để minh họa thủ đoạn lừa đảo.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Lời khuyên ngăn, không yêu cầu thực hiện hành vi rủi ro",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Người đọc không được yêu cầu gửi khoản tiền nào; đừng chuyển theo lời dụ.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Khuyến cáo người đọc không làm theo lời dụ phòng tránh rủi ro.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 6283.472800001618,
+    "extraction_ms": 6873.310599999968,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh giác với lời dụ “chuyển tiền bảo chứng trước thì mới rút được hoa hồng”.",
+              "start": 0,
+              "end": 77
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Người đọc không được yêu cầu gửi khoản tiền nào; đừng chuyển theo lời dụ.",
+              "start": 118,
+              "end": 191
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 5,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "first_provider": 3134.4734000012977,
+          "retrieval_parallel": 6.0731000048690476,
+          "second_provider": 3149.8185000018566,
+          "pipeline_total": 6291.267300002801,
+          "verification_render": 2.0255999988876283
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.17149999702815
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.809300000080839
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 589.8377999983495,
+    "validation_adjudication_serialization_ms": 5.360600000130944
+  },
+  {
+    "id": "RF-06",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 22614.940799998294,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 1074,
+      "prompt_tokens": 865,
+      "total_tokens": 1939
+    },
+    "usage_totals": {
+      "completion_tokens": 1074,
+      "prompt_tokens": 865,
+      "total_tokens": 1939
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Yêu cầu gửi tiền thuê phòng tháng này theo hợp đồng và thông báo nhận sách tặng miễn phí khi dự buổi giới thiệu không nộp phí.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không rõ danh tính người gửi qua metadata ngoài tên chunha và thuvien.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Gửi tiền thuê phòng và tham dự buổi giới thiệu.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Nhắc nhở theo hợp đồng và tặng sách miễn phí không nộp phí.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tiền thuê nhà.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có đủ bằng chứng xác định giả mạo.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Tin nhắn yêu cầu tiền thuê phòng xuất hiện trước, sau đó là thông báo điều kiện nhận sách từ thư viện.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin để ghi nhận các yêu cầu giao dịch thông thường và thông báo sự kiện, tuy nhiên cần kiểm chứng bối cảnh thực tế.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu gửi tiền thuê phòng theo hợp đồng.",
+          "speaker": "chunha",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "u1",
+              "quote": "Gửi tiền thuê phòng tháng này như hợp đồng nhé.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người gửi nhắc nhở việc thanh toán tiền thuê nhà định kỳ.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Đưa điều kiện nhận sách miễn phí khi tham gia sự kiện.",
+          "speaker": "thuvien",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "u2",
+              "quote": "Chỉ khi tới dự buổi giới thiệu thì mới nhận sách tặng miễn phí, không nộp phí.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Thông báo chương trình tặng sách đi kèm điều kiện tham dự.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Các thông điệp đến từ hai nguồn độc lập gồm chủ nhà và thư viện với các nội dung giao dịch và thông tin thông thường.",
+          "finding_refs": [
+            "f1",
+            "f2"
+          ],
+          "alternative_explanations": [
+            "Các tin nhắn có thể liên quan đến một bên duy nhất đang phối hợp các thông báo.",
+            "Thông điệp có thể là nhầm lẫn kênh liên lạc."
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa xác thực được liệu yêu cầu tiền thuê nhà có đúng từ chủ nhà hợp pháp hay không nếu chỉ dựa vào văn bản.",
+        "Mối liên hệ giữa tài khoản chunha và thuvien chưa được làm rõ ngoài ngữ cảnh người dùng tự kiểm tra."
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu gửi tiền thuê phòng tháng này theo hợp đồng và thông báo nhận sách tặng miễn phí khi dự buổi giới thiệu không nộp phí.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính người gửi qua metadata ngoài tên chunha và thuvien.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Gửi tiền thuê phòng và tham dự buổi giới thiệu.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Nhắc nhở theo hợp đồng và tặng sách miễn phí không nộp phí.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tiền thuê nhà.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ bằng chứng xác định giả mạo.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Tin nhắn yêu cầu tiền thuê phòng xuất hiện trước, sau đó là thông báo điều kiện nhận sách từ thư viện.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin để ghi nhận các yêu cầu giao dịch thông thường và thông báo sự kiện, tuy nhiên cần kiểm chứng bối cảnh thực tế.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu gửi tiền thuê phòng theo hợp đồng.",
+              "speaker": "chunha",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "u1",
+                  "quote": "Gửi tiền thuê phòng tháng này như hợp đồng nhé.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi nhắc nhở việc thanh toán tiền thuê nhà định kỳ.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Đưa điều kiện nhận sách miễn phí khi tham gia sự kiện.",
+              "speaker": "thuvien",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "u2",
+                  "quote": "Chỉ khi tới dự buổi giới thiệu thì mới nhận sách tặng miễn phí, không nộp phí.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Thông báo chương trình tặng sách đi kèm điều kiện tham dự.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Các thông điệp đến từ hai nguồn độc lập gồm chủ nhà và thư viện với các nội dung giao dịch và thông tin thông thường.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Các tin nhắn có thể liên quan đến một bên duy nhất đang phối hợp các thông báo.",
+                "Thông điệp có thể là nhầm lẫn kênh liên lạc."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa xác thực được liệu yêu cầu tiền thuê nhà có đúng từ chủ nhà hợp pháp hay không nếu chỉ dựa vào văn bản.",
+            "Mối liên hệ giữa tài khoản chunha và thuvien chưa được làm rõ ngoài ngữ cảnh người dùng tự kiểm tra."
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 21999.953400001687,
+    "extraction_ms": 22611.767199996393,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "08de0f6d-e069-4ac0-889d-2193859c0e55",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "RF-07",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 44820.424899997306,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      503,
+      200,
+      503,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1341,
+      "prompt_tokens": 4513,
+      "total_tokens": 5854
+    },
+    "usage_totals": {
+      "completion_tokens": 2454,
+      "prompt_tokens": 5304,
+      "total_tokens": 7758
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi thông báo điều kiện xử lý phần còn lại sau khi hoàn thành khoản chuyển tiền.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính thực sự của người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người gửi yêu cầu chuyển lại khoản tiền trước.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra điều kiện thực hiện bước tiếp theo để thúc đẩy yêu cầu.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tài sản có thể gặp rủi ro nếu thực hiện việc chuyển tiền theo yêu cầu chưa rõ ngữ cảnh.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có đủ thông tin để xác định có giả mạo hay không.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu thực hiện khoản chuyển tiền trước rồi mới xử lý tiếp các bước sau.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Thiếu thông tin ngữ cảnh để làm rõ bản chất khoản tiền và các bước được đề cập.",
+          "evidence_refs": [
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng khoản tiền trước",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển lại khoản kia trước nhé.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu chuyển tiền nhưng chưa rõ bản chất và mục đích.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Điều kiện xử lý phần còn lại sau bước tiếp theo",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Sau bước nọ tôi mới xử lý phần còn lại.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đặt điều kiện tiến hành công việc sau khi hoàn tất yêu cầu trước.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f3",
+          "action": "other",
+          "description": "Thông tin ghi nhận thiếu ngữ cảnh giải thích",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chưa có tin nào giải thích khoản kia hay bước nọ.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Văn bản thừa nhận thiếu giải thích về các khoản và bước được nhắc đến.",
+            "evidence_refs": [
+              "f3"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1",
+          "f2"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "payment_purpose",
+          "relationship"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        },
+        {
+          "finding_id": "f2",
+          "kind": "relation"
+        }
+      ],
+      "uncertain_relations": [
+        {
+          "request_id": "f1",
+          "support_id": "f2"
+        }
+      ],
+      "relation_assessments": [
+        {
+          "request_id": "f1",
+          "support_id": "f2",
+          "status": "uncertain",
+          "relation_type": "unknown",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển lại khoản kia trước nhé. Sau bước nọ tôi mới xử lý phần còn lại.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Mối quan hệ giữa khoản tiền cần chuyển và bước xử lý phía sau chưa được làm rõ do thiếu ngữ cảnh cụ thể.",
+          "unresolved_reference": "khoản kia hay bước nọ",
+          "missing_information": "Thiếu thông tin giải thích bản chất của khoản tiền và nội dung của bước xử lý."
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển lại một khoản tiền và điều kiện xử lý phần còn lại sau một bước khác",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không xác định danh tính người gửi",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển lại khoản tiền",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện xử lý phần còn lại sau một bước tiếp theo",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài sản tiền mặt liên quan đến khoản tiền được yêu cầu chuyển",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dữ liệu thể hiện giả mạo danh tính",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển khoản trước, sau đó mới thực hiện bước xử lý phần còn lại",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Nội dung ngắn gọn, thiếu thông tin ngữ cảnh giải thích bản chất khoản tiền hay các bước liên quan",
+              "evidence_refs": [
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển lại một khoản tiền",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển lại khoản kia trước nhé.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói đề nghị thực hiện việc chuyển tiền trước",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Đặt điều kiện xử lý phần còn lại sau một bước khác",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Sau bước nọ tôi mới xử lý phần còn lại.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói trì hoãn việc xử lý phần còn lại phụ thuộc vào việc hoàn thành bước trước",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "other",
+              "description": "Phản ánh việc chưa có thông tin giải thích",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chưa có tin nào giải thích khoản kia hay bước nọ.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Ghi nhận sự thiếu vắng thông tin giải thích chi tiết về khoản tiền và các bước",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu chuyển tiền có thể liên quan đến giao dịch tài chính thông thường trong công việc hoặc cuộc sống hàng ngày",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Trao đổi về một khoản hoàn tiền hoặc thanh toán nợ cá nhân",
+                "Thảo luận nội bộ về một quy trình công việc chưa rõ ngữ cảnh"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Thiếu thông tin ngữ cảnh về bản chất của khoản tiền và các bước xử lý",
+            "Không rõ mối quan hệ giữa người gửi và người nhận",
+            "Chưa rõ mục đích cụ thể của các bước được đề cập"
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi thông báo điều kiện xử lý phần còn lại sau khi hoàn thành khoản chuyển tiền.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực sự của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu chuyển lại khoản tiền trước.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện thực hiện bước tiếp theo để thúc đẩy yêu cầu.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài sản có thể gặp rủi ro nếu thực hiện việc chuyển tiền theo yêu cầu chưa rõ ngữ cảnh.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ thông tin để xác định có giả mạo hay không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu thực hiện khoản chuyển tiền trước rồi mới xử lý tiếp các bước sau.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Thiếu thông tin ngữ cảnh để làm rõ bản chất khoản tiền và các bước được đề cập.",
+              "evidence_refs": [
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển hoặc ứng khoản tiền trước",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển lại khoản kia trước nhé.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu chuyển tiền nhưng chưa rõ bản chất và mục đích.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Điều kiện xử lý phần còn lại sau bước tiếp theo",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Sau bước nọ tôi mới xử lý phần còn lại.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đặt điều kiện tiến hành công việc sau khi hoàn tất yêu cầu trước.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "other",
+              "description": "Thông tin ghi nhận thiếu ngữ cảnh giải thích",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chưa có tin nào giải thích khoản kia hay bước nọ.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Văn bản thừa nhận thiếu giải thích về các khoản và bước được nhắc đến.",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1",
+              "f2"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "payment_purpose",
+              "relationship"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            },
+            {
+              "finding_id": "f2",
+              "kind": "relation"
+            }
+          ],
+          "uncertain_relations": [
+            {
+              "request_id": "f1",
+              "support_id": "f2"
+            }
+          ],
+          "relation_assessments": [
+            {
+              "request_id": "f1",
+              "support_id": "f2",
+              "status": "uncertain",
+              "relation_type": "unknown",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển lại khoản kia trước nhé. Sau bước nọ tôi mới xử lý phần còn lại.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Mối quan hệ giữa khoản tiền cần chuyển và bước xử lý phía sau chưa được làm rõ do thiếu ngữ cảnh cụ thể.",
+              "unresolved_reference": "khoản kia hay bước nọ",
+              "missing_information": "Thiếu thông tin giải thích bản chất của khoản tiền và nội dung của bước xử lý."
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 44259.41839999723,
+    "extraction_ms": 44814.838899997994,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Sau bước nọ tôi mới xử lý phần còn lại.” “Chưa có tin nào giải thích khoản kia hay bước nọ.”",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Chuyển lại khoản kia trước nhé.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Sau bước nọ tôi mới xử lý phần còn lại.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển lại khoản kia trước nhé.",
+              "start": 0,
+              "end": 31
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Sau bước nọ tôi mới xử lý phần còn lại.",
+              "start": 32,
+              "end": 71
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f3",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chưa có tin nào giải thích khoản kia hay bước nọ.",
+              "start": 72,
+              "end": 121
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?",
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 3,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "first_provider": 22665.127400003257,
+          "retrieval_parallel": 1.7645999978412874,
+          "second_provider": 21595.24760000204,
+          "pipeline_total": 44262.44009999937,
+          "verification_render": 1.730600000882987
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.2821999989682809
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.8156999974744394
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 555.4205000007642,
+    "validation_adjudication_serialization_ms": 5.585999999311753
+  },
+  {
+    "id": "RF-08",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 25738.216600002488,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 781,
+      "prompt_tokens": 4287,
+      "total_tokens": 5068
+    },
+    "usage_totals": {
+      "completion_tokens": 1493,
+      "prompt_tokens": 5070,
+      "total_tokens": 6563
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa rõ nội dung khẳng định cụ thể từ phía người nhắn ngoài yêu cầu thao tác.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính của người nhắn trong văn bản.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người nhắn yêu cầu bấm đồng ý cấp quyền trên thiết bị.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Không có thông tin về lý do hoặc lời hứa thúc đẩy cụ thể được trích dẫn.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Quyền kiểm soát thiết bị hoặc thông tin cá nhân trên máy có thể gặp rủi ro nếu cấp quyền không rõ nguồn gốc.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có dấu hiệu mạo danh cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Có yêu cầu cấp quyền nhưng chưa xác định rõ mục đích hoặc hậu quả kèm theo.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Nội dung phản ánh một yêu cầu cấp quyền cụ thể nhưng còn thiếu bối cảnh về loại quyền và mục đích.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu cấp quyền trên thiết bị",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "bấm đồng ý cấp quyền",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa rõ loại quyền được yêu cầu là thông báo hay quyền điều khiển thiết bị.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "permission_purpose",
+          "source_of_request"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-03"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Bấm đồng ý cấp quyền",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị di động hoặc thông tin cá nhân có thể bị kiểm soát",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Người khác nhắn tin yêu cầu cấp quyền nhưng người dùng chưa xác định rõ loại quyền",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Thông tin ngắn gọn, chưa rõ bối cảnh và mục đích của yêu cầu cấp quyền",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Người nhắn yêu cầu bấm đồng ý cấp quyền",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "bấm đồng ý cấp quyền",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu cấp quyền có thể liên quan đến quyền kiểm soát thiết bị hoặc quyền thông báo",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu cấp quyền từ ứng dụng hoặc người lạ có thể dẫn đến việc mất kiểm soát thiết bị",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Đó có thể là yêu cầu cấp quyền thông báo cho một ứng dụng thông thường",
+                "Đó có thể là thao tác cấu hình thiết bị bình thường"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính và mục đích thực sự của người nhắn yêu cầu",
+            "Chưa rõ loại quyền cụ thể được yêu cầu cấp",
+            "Thiếu bối cảnh về ứng dụng hoặc dịch vụ đang được nhắc đến"
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa rõ nội dung khẳng định cụ thể từ phía người nhắn ngoài yêu cầu thao tác.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính của người nhắn trong văn bản.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người nhắn yêu cầu bấm đồng ý cấp quyền trên thiết bị.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có thông tin về lý do hoặc lời hứa thúc đẩy cụ thể được trích dẫn.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Quyền kiểm soát thiết bị hoặc thông tin cá nhân trên máy có thể gặp rủi ro nếu cấp quyền không rõ nguồn gốc.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có dấu hiệu mạo danh cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Có yêu cầu cấp quyền nhưng chưa xác định rõ mục đích hoặc hậu quả kèm theo.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Nội dung phản ánh một yêu cầu cấp quyền cụ thể nhưng còn thiếu bối cảnh về loại quyền và mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu cấp quyền trên thiết bị",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "bấm đồng ý cấp quyền",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "unknown",
+                "text": "Chưa rõ loại quyền được yêu cầu là thông báo hay quyền điều khiển thiết bị.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "permission_purpose",
+              "source_of_request"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-03"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 25145.803300001717,
+    "extraction_ms": 25732.53749999276,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “bấm đồng ý cấp quyền”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "bấm đồng ý cấp quyền",
+              "start": 23,
+              "end": 43
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Vì sao họ cần chia sẻ màn hình hoặc quyền điều khiển, và bạn đã xác minh đầu mối hỗ trợ chưa?",
+        "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Xác minh đơn vị hỗ trợ qua kênh độc lập trước khi cài phần mềm hoặc cấp quyền điều khiển."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-03"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 14919.120499995188,
+          "retrieval_parallel": 6.591199999093078,
+          "second_provider": 10227.119099996344,
+          "pipeline_total": 25153.238099999726,
+          "verification_render": 0.9198999978252687
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 5.157599996891804
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 6.046700000297278
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 586.7341999910423,
+    "validation_adjudication_serialization_ms": 5.679100009729154
+  }
+]

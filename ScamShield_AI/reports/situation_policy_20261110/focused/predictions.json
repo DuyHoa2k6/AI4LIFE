@@ -1,0 +1,969 @@
+[
+  {
+    "id": "U01",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 18096.310699998867,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 965,
+      "prompt_tokens": 1147,
+      "total_tokens": 2112
+    },
+    "usage_totals": {
+      "completion_tokens": 965,
+      "prompt_tokens": 1147,
+      "total_tokens": 2112
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Đã gửi ảnh biên lai mua laptop nhưng tiền chưa vào tài khoản",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không rõ danh tính",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Giao máy cho tài xế trước",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Tài xế đang chờ giao hàng",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Laptop",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa rõ có giả mạo hay không",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Gửi ảnh biên lai, thông báo tiền chưa vào, yêu cầu giao máy trước khi kiểm tra tiền",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin để quan sát yêu cầu giao hàng dựa trên biên lai chưa xác thực tiền",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Người gửi thông báo đã gửi ảnh biên lai nhưng người nhận phản hồi chưa thấy tiền vào tài khoản",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Mình đã gửi ảnh biên lai mua laptop. Bạn nói vẫn chưa thấy tiền vào tài khoản",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Giao dịch thanh toán chưa hoàn tất hoặc tiền chưa hiển thị trên tài khoản người nhận",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Yêu cầu giao máy cho tài xế trước khi hệ thống xác nhận nhận được tiền",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhưng tài xế đang chờ. Bạn giao máy cho tài xế trước nhé, lát nữa kiểm tra lại.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Rủi ro mất tài sản (laptop) nếu biên lai giả mạo và tiền không thực sự được chuyển",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Giao dịch có thể là lừa đảo sử dụng biên lai chuyển khoản giả để chiếm đoạt tài sản trước khi chủ tài sản phát hiện",
+          "finding_refs": [
+            "f1",
+            "f2"
+          ],
+          "alternative_explanations": [
+            "Giao dịch hợp pháp nhưng ngân hàng đang chậm xử lý (lỗi nghẽn mạng)",
+            "Người mua chuyển khoản nhầm hoặc sai nội dung dẫn đến chưa khớp tiền"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Biên lai chuyển khoản có phải là giả hay thật?",
+        "Tài xế đến nhận hàng có phải là người của bên mua hay đơn vị vận chuyển độc lập?",
+        "Thực tế tài khoản đã nhận được tiền hay chưa sau thời điểm nhắn tin?"
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Đã gửi ảnh biên lai mua laptop nhưng tiền chưa vào tài khoản",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Giao máy cho tài xế trước",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Tài xế đang chờ giao hàng",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Laptop",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa rõ có giả mạo hay không",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Gửi ảnh biên lai, thông báo tiền chưa vào, yêu cầu giao máy trước khi kiểm tra tiền",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin để quan sát yêu cầu giao hàng dựa trên biên lai chưa xác thực tiền",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người gửi thông báo đã gửi ảnh biên lai nhưng người nhận phản hồi chưa thấy tiền vào tài khoản",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Mình đã gửi ảnh biên lai mua laptop. Bạn nói vẫn chưa thấy tiền vào tài khoản",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Giao dịch thanh toán chưa hoàn tất hoặc tiền chưa hiển thị trên tài khoản người nhận",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Yêu cầu giao máy cho tài xế trước khi hệ thống xác nhận nhận được tiền",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "nhưng tài xế đang chờ. Bạn giao máy cho tài xế trước nhé, lát nữa kiểm tra lại.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Rủi ro mất tài sản (laptop) nếu biên lai giả mạo và tiền không thực sự được chuyển",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Giao dịch có thể là lừa đảo sử dụng biên lai chuyển khoản giả để chiếm đoạt tài sản trước khi chủ tài sản phát hiện",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Giao dịch hợp pháp nhưng ngân hàng đang chậm xử lý (lỗi nghẽn mạng)",
+                "Người mua chuyển khoản nhầm hoặc sai nội dung dẫn đến chưa khớp tiền"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Biên lai chuyển khoản có phải là giả hay thật?",
+            "Tài xế đến nhận hàng có phải là người của bên mua hay đơn vị vận chuyển độc lập?",
+            "Thực tế tài khoản đã nhận được tiền hay chưa sau thời điểm nhắn tin?"
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 17853.904499992495,
+    "extraction_ms": 18093.851400000858,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "b02c8d8c-fa58-48e5-85f8-acf22ee4e83a",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "U03",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 15917.694699994172,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503,
+      503
+    ],
+    "provider_adapter_ms": 15710.911400004989,
+    "extraction_ms": 15915.841299996828,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "3a79bcb4-b691-45b7-a2fa-8845faf92bc4",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "U04",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 10786.254399994505,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 938,
+      "prompt_tokens": 1201,
+      "total_tokens": 2139
+    },
+    "usage_totals": {
+      "completion_tokens": 938,
+      "prompt_tokens": 1201,
+      "total_tokens": 2139
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Yêu cầu thực hiện thao tác để duyệt hoàn cọc",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Không rõ danh tính cụ thể của người gửi",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Bấm chia sẻ màn hình và mở ứng dụng ngân hàng xem số dư",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra điều kiện duyệt hoàn cọc",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thông tin tài khoản ngân hàng hoặc số dư tài sản",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ dữ liệu xác định giả mạo",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Người gửi yêu cầu chia sẻ màn hình, người nhận hỏi tiếp theo làm gì, người gửi hướng dẫn mở ứng dụng ngân hàng xem số dư",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ nội dung trao đổi qua lại giữa hai bên",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu chia sẻ màn hình để duyệt hoàn cọc",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bấm chia sẻ màn hình để bên mình duyệt hoàn cọc nhé.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người gửi đưa ra yêu cầu cấp quyền xem màn hình kèm lý do duyệt tiền",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Yêu cầu mở ứng dụng ngân hàng và vào phần số dư",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m3",
+              "quote": "Mở ứng dụng ngân hàng và vào phần số dư để bên mình xem.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người gửi hướng dẫn thao tác mở ứng dụng tài chính cá nhân",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Có thể là hành vi lừa đảo chiếm đoạt quyền kiểm soát thiết bị và tài sản",
+          "finding_refs": [
+            "f1",
+            "f2"
+          ],
+          "alternative_explanations": [
+            "Hỗ trợ kỹ thuật hoặc hướng dẫn sử dụng ứng dụng thông thường",
+            "Quy trình xác minh giao dịch nội bộ của một tổ chức"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa rõ mục đích thực sự đằng sau yêu cầu chia sẻ màn hình",
+        "Chưa rõ danh tính và tổ chức của người gửi",
+        "Chưa rõ liệu có rủi ro mất tiền thực tế xảy ra hay không"
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Yêu cầu thực hiện thao tác để duyệt hoàn cọc",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính cụ thể của người gửi",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Bấm chia sẻ màn hình và mở ứng dụng ngân hàng xem số dư",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện duyệt hoàn cọc",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thông tin tài khoản ngân hàng hoặc số dư tài sản",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ dữ liệu xác định giả mạo",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu chia sẻ màn hình, người nhận hỏi tiếp theo làm gì, người gửi hướng dẫn mở ứng dụng ngân hàng xem số dư",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ nội dung trao đổi qua lại giữa hai bên",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu chia sẻ màn hình để duyệt hoàn cọc",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bấm chia sẻ màn hình để bên mình duyệt hoàn cọc nhé.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi đưa ra yêu cầu cấp quyền xem màn hình kèm lý do duyệt tiền",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Yêu cầu mở ứng dụng ngân hàng và vào phần số dư",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m3",
+                  "quote": "Mở ứng dụng ngân hàng và vào phần số dư để bên mình xem.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi hướng dẫn thao tác mở ứng dụng tài chính cá nhân",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Có thể là hành vi lừa đảo chiếm đoạt quyền kiểm soát thiết bị và tài sản",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Hỗ trợ kỹ thuật hoặc hướng dẫn sử dụng ứng dụng thông thường",
+                "Quy trình xác minh giao dịch nội bộ của một tổ chức"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ mục đích thực sự đằng sau yêu cầu chia sẻ màn hình",
+            "Chưa rõ danh tính và tổ chức của người gửi",
+            "Chưa rõ liệu có rủi ro mất tiền thực tế xảy ra hay không"
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10574.252399994293,
+    "extraction_ms": 10784.289199989871,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "f0c04070-28a1-42fe-beb5-00f1aba5576e",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "U05",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 10859.773899996071,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      200,
+      503,
+      503
+    ],
+    "usage": {
+      "completion_tokens": 958,
+      "prompt_tokens": 1147,
+      "total_tokens": 2105
+    },
+    "usage_totals": {
+      "completion_tokens": 958,
+      "prompt_tokens": 1147,
+      "total_tokens": 2105
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Bên gửi thông báo thay đổi tài khoản nhận tiền cho hóa đơn tháng này.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính cụ thể của bên gửi thông qua văn bản này.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển tiền theo thông tin tài khoản mới và gọi đối chiếu vào ngày mai.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Dùng lý do hóa đơn vẫn như cũ nhưng đổi tài khoản và hướng dẫn gọi điện đối chiếu để tạo lòng tin.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Tiền thanh toán hóa đơn của người nhận.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có đủ dữ liệu để khẳng định có sự giả mạo danh tính hay không.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Nhận thông báo đổi tài khoản, thực hiện chuyển tiền theo thông tin mới và gọi đối chiếu vào ngày mai.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ thông tin để ghi nhận yêu cầu thay đổi tài khoản và chuyển tiền, nhưng thiếu xác thực về tính hợp pháp.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền vào tài khoản mới.",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "bên mình đổi tài khoản nhận tiền. Bạn chuyển theo thông tin gửi riêng trong chat trước",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Nội dung yêu cầu chuyển khoản sang một tài khoản khác với thường lệ.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Yêu cầu gọi đầu mối trong hợp đồng để đối chiếu vào ngày mai.",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "ngày mai hãy gọi đầu mối trong hợp đồng để đối chiếu.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đề xuất liên hệ xác thực qua số đầu mối có sẵn.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Yêu cầu thay đổi tài khoản nhận tiền có thể là một hình thức gian lận chiếm đoạt tiền thanh toán.",
+          "finding_refs": [
+            "f1"
+          ],
+          "alternative_explanations": [
+            "Đối tác thực sự thay đổi tài khoản doanh nghiệp hợp pháp.",
+            "Nhầm lẫn nội bộ của bên gửi."
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa rõ danh tính thực sự của người gửi tin nhắn.",
+        "Chưa xác thực được thông tin tài khoản mới có thuộc về đối tác chính thức hay không."
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Bên gửi thông báo thay đổi tài khoản nhận tiền cho hóa đơn tháng này.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính cụ thể của bên gửi thông qua văn bản này.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền theo thông tin tài khoản mới và gọi đối chiếu vào ngày mai.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Dùng lý do hóa đơn vẫn như cũ nhưng đổi tài khoản và hướng dẫn gọi điện đối chiếu để tạo lòng tin.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tiền thanh toán hóa đơn của người nhận.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ dữ liệu để khẳng định có sự giả mạo danh tính hay không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhận thông báo đổi tài khoản, thực hiện chuyển tiền theo thông tin mới và gọi đối chiếu vào ngày mai.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ thông tin để ghi nhận yêu cầu thay đổi tài khoản và chuyển tiền, nhưng thiếu xác thực về tính hợp pháp.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào tài khoản mới.",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "bên mình đổi tài khoản nhận tiền. Bạn chuyển theo thông tin gửi riêng trong chat trước",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Nội dung yêu cầu chuyển khoản sang một tài khoản khác với thường lệ.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Yêu cầu gọi đầu mối trong hợp đồng để đối chiếu vào ngày mai.",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "ngày mai hãy gọi đầu mối trong hợp đồng để đối chiếu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đề xuất liên hệ xác thực qua số đầu mối có sẵn.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu thay đổi tài khoản nhận tiền có thể là một hình thức gian lận chiếm đoạt tiền thanh toán.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Đối tác thực sự thay đổi tài khoản doanh nghiệp hợp pháp.",
+                "Nhầm lẫn nội bộ của bên gửi."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ danh tính thực sự của người gửi tin nhắn.",
+            "Chưa xác thực được thông tin tài khoản mới có thuộc về đối tác chính thức hay không."
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 10668.80400001537,
+    "extraction_ms": 10856.454799999483,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "c7fbbeb8-be4f-41f5-af33-57eabc503fc0",
+      "diagnostic": {
+        "stage": "review",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "U06",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 15452.876800001832,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503,
+      503
+    ],
+    "provider_adapter_ms": 15218.839599998319,
+    "extraction_ms": 15451.246299999184,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "ea54c33e-243b-4702-b449-94a35d31da73",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 2,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "U09",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  },
+  {
+    "id": "U10",
+    "executed": false,
+    "reason": "Configured consecutive service failure limit reached; remaining calls not sent"
+  }
+]

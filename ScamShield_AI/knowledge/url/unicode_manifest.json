@@ -1,0 +1,6 @@
+{
+  "version": "17.0.0",
+  "url": "https://unicode.org/Public/17.0.0/security/confusables.txt",
+  "sha256": "091c7f82fc39ef208faf8f94d29c244de99254675e09de163160c810d13ef22a",
+  "license": "https://www.unicode.org/terms_of_use.html"
+}

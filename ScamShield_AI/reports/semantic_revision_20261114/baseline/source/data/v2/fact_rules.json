@@ -1,0 +1,709 @@
+{
+  "version": "three-valued-rulebook-1.0",
+  "rules": [
+    {
+      "rule_id": "R-HANDOVER",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "request": {
+          "fact_types": [
+            "handover_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "state": {
+          "fact_types": [
+            "payment_confirmed"
+          ],
+          "value": "FALSE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "before",
+          "from_fact": "request",
+          "to_fact": "state"
+        },
+        {
+          "type": "same_transaction",
+          "from_fact": "request",
+          "to_fact": "state"
+        }
+      ],
+      "exclusion_conditions": [
+        "later_payment_confirmed"
+      ],
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "request",
+        "state"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-HANDOVER",
+      "supported_conclusion": "r-handover",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-CREDENTIAL",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "request": {
+          "fact_types": [
+            "credentials_requested",
+            "code_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": "TRUE"
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "request"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-CREDENTIAL",
+      "supported_conclusion": "r-credential",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-CODE-IDENTITY",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "request": {
+          "fact_types": [
+            "code_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "meaning": {
+          "fact_types": [
+            "code_identity"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "state_update",
+          "from_fact": "request",
+          "to_fact": "meaning"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "request",
+        "meaning"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-CODE-IDENTITY",
+      "supported_conclusion": "r-code-identity",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-PAY-TO-WITHDRAW",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "request": {
+          "fact_types": [
+            "transfer_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "benefit": {
+          "fact_types": [
+            "withdraw_funds",
+            "payment_confirmed"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "prerequisite_for",
+          "from_fact": "request",
+          "to_fact": "benefit"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "request",
+        "benefit"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-PAY-TO-WITHDRAW",
+      "supported_conclusion": "r-pay-to-withdraw",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-DATA",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "request": {
+          "fact_types": [
+            "documents_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "request"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-DATA",
+      "supported_conclusion": "r-data",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-ACCESS",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "request": {
+          "fact_types": [
+            "install_requested",
+            "screen_share_requested",
+            "control_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "request"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-ACCESS",
+      "supported_conclusion": "r-access",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-TRAVEL-SECRET",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "travel": {
+          "fact_types": [
+            "invite_travel_or_meeting"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "secret": {
+          "fact_types": [
+            "request_secrecy"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "travel_conditioned_on_secrecy",
+          "from_fact": "travel",
+          "to_fact": "secret"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "travel",
+        "secret"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-TRAVEL-SECRET",
+      "supported_conclusion": "r-travel-secret",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-DEBT-EXIT",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "control": {
+          "fact_types": [
+            "impose_debt"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "exit": {
+          "fact_types": [
+            "restrict_movement"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "movement_restricted_by_debt",
+          "from_fact": "control",
+          "to_fact": "exit"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "control",
+        "exit"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-DEBT-EXIT",
+      "supported_conclusion": "r-debt-exit",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-DOC-EXIT",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "control": {
+          "fact_types": [
+            "retain_identity_documents"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "exit": {
+          "fact_types": [
+            "restrict_movement"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "document_retention_limits_exit",
+          "from_fact": "control",
+          "to_fact": "exit"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "control",
+        "exit"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-DOC-EXIT",
+      "supported_conclusion": "r-doc-exit",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-CONTROL",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "control": {
+          "fact_types": [
+            "restrict_communication",
+            "retain_identity_documents"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [
+        "documents_returnable"
+      ],
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "control"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-CONTROL",
+      "supported_conclusion": "r-control",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-CHANGE-WORK",
+      "version": "2.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "offer": {
+          "fact_types": [
+            "offer_employment"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        },
+        "change": {
+          "fact_types": [
+            "change_destination_or_terms"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [
+        {
+          "type": "work_differs_from_agreement",
+          "from_fact": "offer",
+          "to_fact": "change"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "suspicious",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "offer",
+        "change"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-CHANGE-WORK",
+      "supported_conclusion": "r-change-work",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-RELEASE",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "payment": {
+          "fact_types": [
+            "demand_release_payment"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "payment"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-RELEASE",
+      "supported_conclusion": "r-release",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-COERCION",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "coercion": {
+          "fact_types": [
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat",
+            "threaten_harm",
+            "threaten_disclosure"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "coercion"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-R-COERCION",
+      "supported_conclusion": "r-coercion",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-URGENT-CURRENT",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "danger": {
+          "fact_types": [
+            "restrict_movement",
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "temporal_states": [
+            "ongoing",
+            "imminent"
+          ],
+          "attribution_kinds": [
+            "self_report",
+            "user_report"
+          ],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "urgent",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "danger"
+      ],
+      "follow_up_template": "Bạn có thể đọc và trả lời ở đây một cách an toàn không? Bạn có thể bỏ qua câu hỏi này.",
+      "explanation_template": "TPL-R-URGENT-CURRENT",
+      "supported_conclusion": "r-urgent-current",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-URGENT-THREAT",
+      "version": "2.0",
+      "scope": "same_event",
+      "required_conditions": {
+        "danger": {
+          "fact_types": [
+            "threaten_harm"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request",
+            "claim"
+          ],
+          "temporal_states": [
+            "ongoing",
+            "imminent"
+          ],
+          "attribution_kinds": [],
+          "authentication_meaning": null
+        }
+      },
+      "required_relations": [],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "urgent",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "danger"
+      ],
+      "follow_up_template": "Bạn có thể tiếp tục trao đổi ở đây một cách an toàn không? Có thể bỏ qua.",
+      "explanation_template": "TPL-R-URGENT-THREAT",
+      "supported_conclusion": "r-urgent-threat",
+      "unknown_exclusion_policy": "limit_claim"
+    },
+    {
+      "rule_id": "R-SCREEN-BANK",
+      "version": "1.0",
+      "scope": "same_scope_same_affected_party",
+      "required_conditions": {
+        "screen": {
+          "fact_types": [
+            "screen_share_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ]
+        },
+        "bank": {
+          "fact_types": [
+            "bank_information_requested"
+          ],
+          "value": "TRUE",
+          "speech_roles": [
+            "request"
+          ]
+        }
+      },
+      "required_relations": [
+        {
+          "type": "after",
+          "from_fact": "bank",
+          "to_fact": "screen"
+        }
+      ],
+      "exclusion_conditions": [],
+      "conclusion": "high",
+      "safety_urgency": "preventive",
+      "evidence_requirements": "all_required_facts_and_relations",
+      "missing_information": [
+        "screen",
+        "bank",
+        "after"
+      ],
+      "follow_up_template": null,
+      "explanation_template": "TPL-SCREEN-BANK",
+      "supported_conclusion": "screen_share_exposes_banking",
+      "unknown_exclusion_policy": "undetermined"
+    }
+  ]
+}

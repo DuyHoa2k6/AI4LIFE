@@ -1,0 +1,306 @@
+{
+  "version": "labels-2.0",
+  "events": [
+    {
+      "id": "transfer_funds",
+      "definition": "transfer funds",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "receive_funds",
+      "definition": "receive funds",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "withdraw_funds",
+      "definition": "withdraw funds",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "handover_asset",
+      "definition": "handover asset",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "provide_code",
+      "definition": "provide code",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "provide_credentials",
+      "definition": "provide credentials",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "provide_documents",
+      "definition": "provide documents",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "open_link",
+      "definition": "open link",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "login",
+      "definition": "login",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "install_app",
+      "definition": "install app",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "share_screen",
+      "definition": "share screen",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "grant_control",
+      "definition": "grant control",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "change_channel",
+      "definition": "change channel",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "keep_secret",
+      "definition": "keep secret",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "avoid_verification",
+      "definition": "avoid verification",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "identity_claim",
+      "definition": "identity claim",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "relationship_claim",
+      "definition": "relationship claim",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "code_identity",
+      "definition": "code identity",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "build_trust",
+      "definition": "Tạo lòng tin/tự nhận thân quen; riêng lẻ không chứng minh gian lận.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "invite_travel_or_meeting",
+      "definition": "Lời mời di chuyển/gặp; không dùng quốc gia/giới tính làm dấu hiệu.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "offer_employment",
+      "definition": "Lời mời việc làm; chưa xác minh người tuyển.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "change_destination_or_terms",
+      "definition": "Đổi nơi đến hoặc điều kiện đã nêu.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "impose_debt",
+      "definition": "Áp khoản nợ hoặc ràng buộc trả chi phí.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "request_secrecy",
+      "definition": "Yêu cầu giấu thông tin với người thân/đầu mối khác.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "restrict_communication",
+      "definition": "Hạn chế liên lạc/giữ điện thoại.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "retain_identity_documents",
+      "definition": "Giữ giấy tờ, phải phân biệt trả lại tự do với kiểm soát.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "restrict_movement",
+      "definition": "Ngăn tự do rời đi; không suy từ mất liên lạc.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "threaten_harm",
+      "definition": "Đe dọa gây hại có căn cứ lời nói; không chứng minh đã gây hại.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "threaten_disclosure",
+      "definition": "Đe dọa phát tán riêng tư; không yêu cầu mô tả/ảnh chi tiết.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "demand_release_payment",
+      "definition": "Đòi tiền để rời đi/thả người; lời đòi không chứng minh bắt giữ thật.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "compel_work",
+      "definition": "Ép làm việc, phân biệt thỏa thuận tự nguyện.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "compel_illegal_activity",
+      "definition": "Ép làm hoạt động trái pháp luật có lời gốc.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "bodily_integrity_threat",
+      "definition": "Cưỡng ép/đe dọa thân thể có căn cứ trực tiếp; không suy lấy nội tạng từ đi xa.",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "return_documents_available",
+      "definition": "return documents available",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "free_to_leave",
+      "definition": "free to leave",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "consent_and_exit_available",
+      "definition": "consent and exit available",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    },
+    {
+      "id": "other",
+      "definition": "other",
+      "counterexample": "Phủ định, trích để cảnh báo, tự nguyện có quyền từ chối hoặc chưa nêu hành vi không phải hành vi đang xảy ra."
+    }
+  ],
+  "relations": [
+    {
+      "id": "prerequisite_for",
+      "definition": "Quan hệ prerequisite_for phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "before",
+      "definition": "Quan hệ before phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "after",
+      "definition": "Quan hệ after phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "reason_given_for",
+      "definition": "Quan hệ reason_given_for phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "contradiction",
+      "definition": "Quan hệ contradiction phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "state_update",
+      "definition": "Quan hệ state_update phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "reported_by",
+      "definition": "Quan hệ reported_by phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "warning_about",
+      "definition": "Quan hệ warning_about phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "same_transaction",
+      "definition": "Quan hệ same_transaction phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "travel_conditioned_on_secrecy",
+      "definition": "Quan hệ travel_conditioned_on_secrecy phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "movement_restricted_by_debt",
+      "definition": "Quan hệ movement_restricted_by_debt phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "document_retention_limits_exit",
+      "definition": "Quan hệ document_retention_limits_exit phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "threat_used_to_compel_action",
+      "definition": "Quan hệ threat_used_to_compel_action phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "release_conditioned_on_payment",
+      "definition": "Quan hệ release_conditioned_on_payment phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    },
+    {
+      "id": "work_differs_from_agreement",
+      "definition": "Quan hệ work_differs_from_agreement phải có hai đầu mút hợp lệ, cùng phạm vi/người và quote hỗ trợ."
+    }
+  ],
+  "span_labels": [
+    "verb",
+    "action",
+    "object",
+    "negation",
+    "state",
+    "time",
+    "condition",
+    "purpose",
+    "participant",
+    "organization",
+    "url",
+    "account",
+    "application",
+    "quotation",
+    "reported_speech",
+    "persuasion",
+    "statement"
+  ],
+  "risk_status": [
+    "clear",
+    "need_context",
+    "suspicious",
+    "high"
+  ],
+  "safety_urgency": [
+    "undetermined",
+    "preventive",
+    "urgent"
+  ],
+  "disallowed_shortcuts": [
+    "nationality_as_risk",
+    "gender_as_risk",
+    "travel_alone_as_trafficking",
+    "uncontactable_as_organ_removal",
+    "absence_as_negative_fact"
+  ],
+  "participant_roles": [
+    "speaker",
+    "buyer",
+    "seller",
+    "requester",
+    "recipient",
+    "affected_party",
+    "mentioned",
+    "unknown"
+  ],
+  "personal_relationship_types": [
+    "family",
+    "friend",
+    "colleague",
+    "online_only",
+    "unknown"
+  ]
+}

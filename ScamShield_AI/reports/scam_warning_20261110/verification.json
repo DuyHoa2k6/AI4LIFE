@@ -1,0 +1,14 @@
+{
+  "hashes_unchanged": true,
+  "files_checked": 19,
+  "n_unique": 24,
+  "all_24_executed_once": true,
+  "api_success": 24,
+  "status_matches": 23,
+  "quote_exact": 51,
+  "quote_total": 51,
+  "manual_primary_role_review": "MANUAL_REVIEW.md",
+  "independent_labels": false,
+  "production_analysis_changes": false,
+  "new_flexible_questions_implemented": false
+}

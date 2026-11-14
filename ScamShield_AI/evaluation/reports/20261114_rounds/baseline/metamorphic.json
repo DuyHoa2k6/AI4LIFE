@@ -1,0 +1,121 @@
+{
+  "n": 7,
+  "cases": [
+    {
+      "parent": "N04",
+      "child": "N29",
+      "transformation": "quotation_role_changes_risk",
+      "phenomena": [
+        "quoted_warning",
+        "negation"
+      ],
+      "expected_parent": "high",
+      "expected_child": "clear",
+      "predicted_parent": null,
+      "predicted_child": "suspicious",
+      "risk_invariant": null,
+      "both_match_draft": false,
+      "independent": false,
+      "ambiguous": false
+    },
+    {
+      "parent": "N08",
+      "child": "N30",
+      "transformation": "same_meaning",
+      "phenomena": [
+        "irrelevant_interleaving"
+      ],
+      "expected_parent": "high",
+      "expected_child": "high",
+      "predicted_parent": "clear",
+      "predicted_child": "suspicious",
+      "risk_invariant": false,
+      "both_match_draft": false,
+      "independent": false,
+      "ambiguous": false
+    },
+    {
+      "parent": "N12",
+      "child": "N31",
+      "transformation": "same_meaning",
+      "phenomena": [
+        "prompt_injection_as_data"
+      ],
+      "expected_parent": "high",
+      "expected_child": "high",
+      "predicted_parent": "high",
+      "predicted_child": "high",
+      "risk_invariant": true,
+      "both_match_draft": true,
+      "independent": false,
+      "ambiguous": false
+    },
+    {
+      "parent": "N16",
+      "child": "N32",
+      "transformation": "same_meaning",
+      "phenomena": [
+        "reordered_statements"
+      ],
+      "expected_parent": "high",
+      "expected_child": "high",
+      "predicted_parent": "suspicious",
+      "predicted_child": "suspicious",
+      "risk_invariant": true,
+      "both_match_draft": false,
+      "independent": false,
+      "ambiguous": false
+    },
+    {
+      "parent": "N20",
+      "child": "N33",
+      "transformation": "new_evidence_changes_state",
+      "phenomena": [
+        "state_update",
+        "contradictory_user_update"
+      ],
+      "expected_parent": "high",
+      "expected_child": "clear",
+      "predicted_parent": "need_context",
+      "predicted_child": "high",
+      "risk_invariant": null,
+      "both_match_draft": false,
+      "independent": false,
+      "ambiguous": true
+    },
+    {
+      "parent": "N24",
+      "child": "N34",
+      "transformation": "deleted_evidence_requires_context",
+      "phenomena": [
+        "decisive_evidence_removed"
+      ],
+      "expected_parent": "high",
+      "expected_child": "need_context",
+      "predicted_parent": "suspicious",
+      "predicted_child": null,
+      "risk_invariant": null,
+      "both_match_draft": false,
+      "independent": false,
+      "ambiguous": false
+    },
+    {
+      "parent": "N28",
+      "child": "N35",
+      "transformation": "same_meaning",
+      "phenomena": [
+        "multiple_transactions",
+        "verification_not_global"
+      ],
+      "expected_parent": "high",
+      "expected_child": "high",
+      "predicted_parent": "suspicious",
+      "predicted_child": "suspicious",
+      "risk_invariant": true,
+      "both_match_draft": false,
+      "independent": false,
+      "ambiguous": false
+    }
+  ],
+  "note": "Invariance is separate from correctness; same wrong label on both is not semantic success."
+}

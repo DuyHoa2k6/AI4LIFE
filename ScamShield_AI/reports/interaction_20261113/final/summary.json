@@ -1,0 +1,10 @@
+{
+  "cases": 16,
+  "mismatches": [
+    "X01",
+    "X02"
+  ],
+  "new_core_matched": 12,
+  "all_http_200": true,
+  "scope": "Known authored development examples, not independent accuracy; single TestClient timing is not a latency benchmark."
+}

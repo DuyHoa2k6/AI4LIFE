@@ -1,0 +1,212 @@
+[
+  {
+    "id": "A-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "A-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "A-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "A-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "A-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "A-update",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "B-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "B-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "B-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "B-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "B-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "B-update",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "C-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "C-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "C-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "C-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "C-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "C-update",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "D-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "D-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "D-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "D-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "D-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "D-update",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "E-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "E-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "E-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "E-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "E-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "E-update",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "F-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "F-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "F-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "F-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "F-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "F-update",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "G-new",
+    "risk": "high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "G-valid",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "G-missing",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "G-warning",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "G-two",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  },
+  {
+    "id": "G-update",
+    "risk": "not_high",
+    "review_status": "authored_development_unreviewed"
+  }
+]

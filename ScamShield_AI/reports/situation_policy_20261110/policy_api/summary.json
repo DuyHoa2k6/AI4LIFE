@@ -1,0 +1,39 @@
+{
+  "scope": "24 synthetic policy/API cases with scripted Gemini outputs; NOT live model accuracy or independent evaluation.",
+  "cases": 24,
+  "status_matches": 24,
+  "matrix": {
+    "suspicious": {
+      "suspicious": 6
+    },
+    "clear": {
+      "clear": 6
+    },
+    "need_context": {
+      "need_context": 6
+    },
+    "high": {
+      "high": 6
+    }
+  },
+  "quote_count": 40,
+  "exact_quotes": 40,
+  "speaker_reference_errors": 0,
+  "missing_required_questions": [],
+  "regression_assertions_passed": true,
+  "hashes": {
+    "backend\\schemas.py": "c02cd6dfad652d5e7f86c3118a5e1d023ec9990338448c473961aa5072e8d088",
+    "backend\\two_pass.py": "1117f5fb8613c173f0df557cd8bca1e28a6ebbce87d0f3f44dda51b09cabefc1",
+    "backend\\situations.py": "19e6b1477c352fbcf87d991b9f6aea22996ea166b625f1d7b5ecf18d61bcc842",
+    "backend\\evidence_binding.py": "20cd3ddf1f956ea902771160e419db712156d25601f5d330e12567dde41e1274",
+    "backend\\observation_prompt.txt": "94ae92c580f0a15e09c577d074e7afc5654b25308db094259a4b47269304bf00",
+    "backend\\review_prompt.txt": "ff8ee9781ab2067b514134cbdeac0423a1381bbe454ded6f1fce258d04e347cf",
+    "tests\\test_situation_policy.py": "0637fc704aa483bfa1df6d6b3b3fdcc4776e13964f63d4cb3d356dd4404d4bbe",
+    "tests\\test_situation_followup.py": "84d871912ce425e083ad856ad3395e44924bab3e6ef4505e2321e5126cc4bb76",
+    "run_situation_checks.py": "856ae8c06d06112c76b8ecd27630342ec24aa87fd93a148c3afa4b5bf7ebc3ac",
+    "fixtures\\situation_regression_20261110\\inputs.json": "a12ac486ce80b7b8fbe02568ed8d576569b126eb28a0cd530d9318e0a741457c",
+    "fixtures\\situation_regression_20261110\\expected.json": "6c32021c7b2f647f5d49bbce6ae9444cf27f1f4ca6ba0f5b3f741d7b99ce3aed",
+    "fixtures\\situation_followup_20261110\\inputs.json": "8d2c9fbcde660c5a7c6653a012f1acb18d25e34ca176a5ffce48a5088c9a7692",
+    "fixtures\\situation_followup_20261110\\expected.json": "97059d42d36fb40f63dea8643b34badc6af18d66817d7f0969e98be762246f11"
+  }
+}

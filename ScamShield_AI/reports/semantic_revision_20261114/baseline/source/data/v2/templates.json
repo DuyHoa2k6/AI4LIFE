@@ -1,0 +1,179 @@
+{
+  "version": "controlled-templates-1.0",
+  "templates": {
+    "TPL-R-HANDOVER": {
+      "summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "recommended_actions": [
+        "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-CREDENTIAL": {
+      "summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "recommended_actions": [
+        "Không gửi mã hoặc mật khẩu; tự kiểm tra yêu cầu bằng kênh chính thức quen dùng."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-CODE-IDENTITY": {
+      "summary": "Dãy số được xác định trong hội thoại là mã đăng nhập, trong khi người gửi yêu cầu bạn cung cấp.",
+      "recommended_actions": [
+        "Không đọc mã cho người khác; tự kiểm tra bằng ứng dụng chính thức."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-PAY-TO-WITHDRAW": {
+      "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "recommended_actions": [
+        "Tạm dừng nộp thêm và đối chiếu giao dịch qua đầu mối độc lập."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-DATA": {
+      "summary": "Có yêu cầu cung cấp giấy tờ cá nhân; cần xác minh đơn vị tiếp nhận và kênh gửi.",
+      "recommended_actions": [
+        "Chưa gửi ảnh giấy tờ cho đến khi đã xác minh mục đích và kênh tiếp nhận."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-ACCESS": {
+      "summary": "Có yêu cầu cài ứng dụng hoặc chia sẻ quyền truy cập cần xác minh.",
+      "recommended_actions": [
+        "Kiểm tra nguồn ứng dụng và đầu mối hỗ trợ độc lập trước khi cấp quyền."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-TRAVEL-SECRET": {
+      "summary": "Lời mời di chuyển đi cùng yêu cầu giấu người thân; cần xác minh điều kiện và đầu mối.",
+      "recommended_actions": [
+        "Nếu an toàn, trao đổi với người tin cậy và xác minh độc lập trước khi di chuyển."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-DEBT-EXIT": {
+      "summary": "Nội dung gắn khoản nợ với việc không được rời đi.",
+      "recommended_actions": [
+        "Nếu an toàn, tìm cách liên hệ người tin cậy hoặc đơn vị hỗ trợ phù hợp; không đối đầu với người kiểm soát."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-DOC-EXIT": {
+      "summary": "Nội dung nêu việc giữ giấy tờ cùng hạn chế quyền rời đi.",
+      "recommended_actions": [
+        "Nếu an toàn, tìm cách liên hệ người tin cậy hoặc đơn vị hỗ trợ phù hợp; không đối đầu với người kiểm soát."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-CONTROL": {
+      "summary": "Có thông tin về kiểm soát liên lạc hoặc giữ giấy tờ; cần làm rõ khả năng tự quyết và nhận lại.",
+      "recommended_actions": [
+        "Nếu an toàn, kiểm tra bạn có thể nhận lại giấy tờ, liên lạc và tự do rời đi không."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-CHANGE-WORK": {
+      "summary": "Nội dung nêu thay đổi công việc hoặc điều kiện so với lời mời ban đầu.",
+      "recommended_actions": [
+        "Chưa chấp nhận điều kiện mới trước khi đối chiếu thỏa thuận và quyền từ chối."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-RELEASE": {
+      "summary": "Có lời đòi tiền để được rời đi hoặc để thả người. Lời đòi tiền chưa chứng minh việc bắt giữ đã xảy ra.",
+      "recommended_actions": [
+        "Nếu an toàn, xác minh qua đầu mối độc lập và tìm hỗ trợ phù hợp; không tự đối đầu."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-COERCION": {
+      "summary": "Nội dung có thông tin về đe dọa hoặc cưỡng ép; chưa xác minh độc lập người gây ra hay toàn bộ sự việc.",
+      "recommended_actions": [
+        "Không gửi thêm thông tin riêng tư. Nếu an toàn, tìm sự hỗ trợ từ người tin cậy hoặc đơn vị phù hợp."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-URGENT-CURRENT": {
+      "summary": "Người dùng cho biết đang bị hạn chế tự do hoặc bị cưỡng ép. Cần ưu tiên an toàn trước khi thu thập thêm thông tin.",
+      "recommended_actions": [
+        "Nếu có thể làm an toàn, liên hệ người tin cậy hoặc hỗ trợ khẩn cấp phù hợp tại nơi bạn đang ở; tránh đối đầu."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-R-URGENT-THREAT": {
+      "summary": "Nội dung có lời đe dọa gây hại ở thời điểm hiện tại hoặc sắp tới; cần ưu tiên an toàn.",
+      "recommended_actions": [
+        "Nếu an toàn, tìm người tin cậy hoặc hỗ trợ khẩn cấp phù hợp; không tự điều tra hay đối đầu."
+      ],
+      "required_slots": [
+        "verified_quotes"
+      ],
+      "fallback_template_id": "TPL-UNKNOWN"
+    },
+    "TPL-UNKNOWN": {
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "recommended_actions": [
+        "Xác minh hành động và điều kiện cụ thể qua đầu mối độc lập."
+      ],
+      "required_slots": [],
+      "fallback_template_id": null
+    },
+    "TPL-CLEAR": {
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "recommended_actions": [
+        "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+      ],
+      "required_slots": [],
+      "fallback_template_id": null
+    },
+    "TPL-ERROR": {
+      "summary": "Chưa kiểm tra được nội dung; không có kết luận ít rủi ro.",
+      "recommended_actions": [
+        "Nếu đang gặp nguy hiểm và có thể làm an toàn, tìm người tin cậy hoặc hỗ trợ khẩn cấp phù hợp; tránh đối đầu."
+      ],
+      "required_slots": [],
+      "fallback_template_id": null
+    }
+  }
+}

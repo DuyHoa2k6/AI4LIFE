@@ -1,0 +1,619 @@
+{
+  "$defs": {
+    "Argument": {
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "participant_id": {
+          "title": "Participant Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "role",
+        "participant_id"
+      ],
+      "title": "Argument",
+      "type": "object"
+    },
+    "Expected": {
+      "additionalProperties": false,
+      "properties": {
+        "participants": {
+          "items": {
+            "$ref": "#/$defs/Participant"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "spans": {
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "title": "Spans",
+          "type": "array"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/ExpectedEvent"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "event_arguments": {
+          "items": {
+            "$ref": "#/$defs/Argument"
+          },
+          "title": "Event Arguments",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/ExpectedRelation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "cases": {
+          "items": {
+            "$ref": "#/$defs/Situation"
+          },
+          "title": "Cases",
+          "type": "array"
+        },
+        "risk_status": {
+          "enum": [
+            "clear",
+            "need_context",
+            "suspicious",
+            "high"
+          ],
+          "title": "Risk Status",
+          "type": "string"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "decisive_event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Decisive Event Refs",
+          "type": "array"
+        },
+        "mechanism_tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Mechanism Tags",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "acceptable_question_targets": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Acceptable Question Targets",
+          "type": "array"
+        },
+        "acceptable_questions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Acceptable Questions",
+          "type": "array"
+        },
+        "contradictions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Contradictions",
+          "type": "array"
+        },
+        "forbidden_inferences": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Forbidden Inferences",
+          "type": "array"
+        }
+      },
+      "required": [
+        "participants",
+        "spans",
+        "events",
+        "event_arguments",
+        "relations",
+        "cases",
+        "risk_status",
+        "rationale",
+        "decisive_event_refs",
+        "mechanism_tags",
+        "missing_information",
+        "acceptable_question_targets",
+        "acceptable_questions",
+        "contradictions",
+        "forbidden_inferences"
+      ],
+      "title": "Expected",
+      "type": "object"
+    },
+    "ExpectedEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "anchor_id": {
+          "title": "Anchor Id",
+          "type": "string"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Attributes",
+          "type": "object"
+        },
+        "transaction_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Id"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "information_status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        },
+        "argument_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Argument Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "anchor_id",
+        "attributes",
+        "description",
+        "information_status"
+      ],
+      "title": "ExpectedEvent",
+      "type": "object"
+    },
+    "ExpectedRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "target_id": {
+          "title": "Target Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Id"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "source_id",
+        "target_id",
+        "scope_id",
+        "evidence_refs"
+      ],
+      "title": "ExpectedRelation",
+      "type": "object"
+    },
+    "Input": {
+      "additionalProperties": false,
+      "properties": {
+        "messages": {
+          "items": {
+            "$ref": "#/$defs/Message"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "title": "Messages",
+          "type": "array"
+        },
+        "context": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context"
+        }
+      },
+      "required": [
+        "messages"
+      ],
+      "title": "Input",
+      "type": "object"
+    },
+    "Message": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "speaker_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Id"
+        },
+        "text": {
+          "maxLength": 10000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "Message",
+      "type": "object"
+    },
+    "Participant": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "metadata",
+            "mention",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "speaker_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Id"
+        },
+        "span_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Span Id"
+        }
+      },
+      "required": [
+        "id",
+        "kind"
+      ],
+      "title": "Participant",
+      "type": "object"
+    },
+    "Situation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "participant_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "event_refs",
+        "participant_refs"
+      ],
+      "title": "Situation",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "title": "Quote",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "message_id",
+        "start",
+        "end",
+        "quote",
+        "label"
+      ],
+      "title": "Span",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "evaluation-case-1.0",
+      "default": "evaluation-case-1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "case_id": {
+      "title": "Case Id",
+      "type": "string"
+    },
+    "family_id": {
+      "title": "Family Id",
+      "type": "string"
+    },
+    "template_id": {
+      "title": "Template Id",
+      "type": "string"
+    },
+    "source_group": {
+      "title": "Source Group",
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "diagnostic",
+        "validation",
+        "regression",
+        "locked"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "education",
+        "relationships",
+        "finance",
+        "employment",
+        "services",
+        "data_access",
+        "contributions"
+      ],
+      "title": "Domain",
+      "type": "string"
+    },
+    "provenance": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Provenance",
+      "type": "object"
+    },
+    "novelty": {
+      "enum": [
+        "seen_development",
+        "new_public_draft"
+      ],
+      "title": "Novelty",
+      "type": "string"
+    },
+    "review_status": {
+      "enum": [
+        "draft",
+        "human_verified",
+        "adjudicated"
+      ],
+      "title": "Review Status",
+      "type": "string"
+    },
+    "reviewer_reference": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Reviewer Reference",
+      "type": "array"
+    },
+    "annotation_ambiguity": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Annotation Ambiguity",
+      "type": "array"
+    },
+    "input": {
+      "$ref": "#/$defs/Input"
+    },
+    "expected": {
+      "$ref": "#/$defs/Expected"
+    },
+    "annotation_completeness": {
+      "additionalProperties": {
+        "enum": [
+          "complete",
+          "partial",
+          "unannotated"
+        ],
+        "type": "string"
+      },
+      "title": "Annotation Completeness",
+      "type": "object"
+    },
+    "phenomena": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Phenomena",
+      "type": "array"
+    },
+    "metamorphic_parent": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Metamorphic Parent"
+    },
+    "metamorphic_relation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Metamorphic Relation"
+    }
+  },
+  "required": [
+    "case_id",
+    "family_id",
+    "template_id",
+    "source_group",
+    "split",
+    "domain",
+    "provenance",
+    "novelty",
+    "review_status",
+    "input",
+    "expected",
+    "annotation_completeness",
+    "phenomena"
+  ],
+  "title": "Case",
+  "type": "object"
+}

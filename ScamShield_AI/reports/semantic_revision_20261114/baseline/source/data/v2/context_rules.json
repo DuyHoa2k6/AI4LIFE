@@ -1,0 +1,11 @@
+{
+  "version":"local-context-rules-1.0",
+  "rules":[
+    {"rule_id":"R-CONTEXT-SCREEN-BANK","version":"1.0","description":"Chia sẻ màn hình gắn với mở thông tin ngân hàng","scope":"same_scope_same_affected_party",
+     "required_facts":{"screen":{"event_types":["share_screen"],"speech_roles":["request"]},"bank":{"event_types":["other"],"speech_roles":["request"],"extractor_rule_ids":["FACT-BANK-INFO-1"]}},
+     "required_relations":[{"type":"after","from_fact":"bank","to_fact":"screen"}],"exclusions":[],"missing_fact_policy":"ask","conclusion":"high","safety_urgency":"preventive","evidence_requirements":"all_required_facts_and_relations","follow_up_question_template":null,"explanation_template_id":"TPL-CONTEXT-SCREEN-BANK","supported_conclusion":"screen_share_exposes_banking","test_case_ids":["ACCEPT-SCREEN-BANK"]},
+    {"rule_id":"R-CONTEXT-AVOID-VERIFY","version":"1.0","description":"Tự nhận danh tính hoặc quan hệ rồi yêu cầu tránh xác minh","scope":"same_scope_same_affected_party",
+     "required_facts":{"identity":{"event_types":["identity_claim","relationship_claim"],"speech_roles":["claim","reported"]},"avoid":{"event_types":["avoid_verification"],"speech_roles":["request"]}},
+     "required_relations":[{"type":"reason_given_for","from_fact":"identity","to_fact":"avoid"}],"exclusions":[],"missing_fact_policy":"ask","conclusion":"suspicious","safety_urgency":"preventive","evidence_requirements":"all_required_facts_and_relations","follow_up_question_template":"Bạn có thể liên hệ người đó qua số hoặc kênh đã biết từ trước để xác minh không?","explanation_template_id":"TPL-CONTEXT-AVOID-VERIFY","supported_conclusion":"claimed_identity_with_avoid_verification","test_case_ids":["ACCEPT-AVOID-VERIFY"]}
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-08",
+  "mode": "two_pass with local synthetic provider fixture (not model quality)",
+  "browser": "installed Chrome headless",
+  "checks": [
+    {
+      "id": "WEB-01 preview does not send",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB-01 real API rendering",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "TP-10 web identifies two_pass",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB Unicode codepoint highlight",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB masked payload only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB stale response ignored",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB-01 supplemental context retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB ordered messages and speakers",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB blank input rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB oversized input rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "WEB offline error retry available",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT real unpacked worker loaded",
+      "passed": true,
+      "detail": "Installed Chrome must support unpacked extension loading in test mode"
+    },
+    {
+      "id": "EXT-01 selection sends zero requests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-02 correct item and separate result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "TP-10 extension identifies two_pass",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "PRIV-01 restricted request bodies",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-03 no unchanged duplicates",
+      "passed": true,
+      "detail": "Any newly visible items may finish their first request; previously submitted text must not repeat."
+    },
+    {
+      "id": "E2E-01 shared API behavior evidence and decision",
+      "passed": true,
+      "detail": "Compare all result fields except measured durations, which differ per request."
+    },
+    {
+      "id": "EXT-04 old item response ignored",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-03 newly loaded visible item scanned",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "PRIV-01 after scroll still restricted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-05 pause stops requests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-05 stop clears session",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-06 SPA navigation stops scanning",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-06 removed region stops scanning",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-07 429 no infinite retries",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-07 offline no repeated request storm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-07 timeout label",
+      "passed": true,
+      "detail": "AbortError injected in real worker fetch; API timer independently tested in week1"
+    },
+    {
+      "id": "EXT-05 old session response ignored after region change",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "EXT-07 bounded queue and deferred items",
+      "passed": true,
+      "detail": "Hàng chờ 20/20 · Mục bị hoãn: 15"
+    }
+  ],
+  "test_origin": "127.0.0.1:18762; worker copy changes API port only to avoid existing user server",
+  "browser_version": "Chrome/156.0.8078.81",
+  "extension_load": {
+    "id": "aloblmhhhbdjcdmndbnfafahckkdcamn"
+  },
+  "error": "Error: Wait failed: burst drains\n    at waitFor (file:///C:/AI4Life/AI4LIFE/ScamShield_AI/ScamShield_AI/tests/browser_week2.mjs:20:181)\n    at async file:///C:/AI4Life/AI4LIFE/ScamShield_AI/ScamShield_AI/tests/browser_week2.mjs:194:3"
+}

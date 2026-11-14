@@ -1,0 +1,9 @@
+{
+  "unit_tests_passed_before_run": 87,
+  "model": "Gemini real, two_pass",
+  "same_configuration_entire_run": true,
+  "all_30_distinct_cases_executed": true,
+  "six_groups_five_cases_each": true,
+  "independent_evaluation": false,
+  "production_analysis_changed_during_run": false
+}

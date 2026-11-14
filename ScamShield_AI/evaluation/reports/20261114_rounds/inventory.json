@@ -1,0 +1,364 @@
+{
+  "known_sources": [
+    {
+      "path": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\data\\phobert\\splits\\train.jsonl",
+      "sha256": "496808383304c401d4b6a122cf5b92a9d78b559c90597813a7970cd22c4c7478"
+    },
+    {
+      "path": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\data\\phobert\\splits\\validation.jsonl",
+      "sha256": "27dddefe3737326ed24117a1d4f6896c0b8ff94aad791ad69050654c769bff7d"
+    },
+    {
+      "path": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\reports\\eight_scenarios_20261113\\inputs.json",
+      "sha256": "b2198d52a6a4c94773ea9cf56a46c9600fabd1cc88234d17a7d30ca1d28832bd"
+    }
+  ],
+  "seen_input_count": 24,
+  "no_holdout_opened": true,
+  "case_novelty": [
+    {
+      "case_id": "N01",
+      "declared_novelty": "seen_development",
+      "nearest_known": "prior-user-03",
+      "lexical_similarity": 0.35294117647058826,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N02",
+      "declared_novelty": "seen_development",
+      "nearest_known": "smoke-14",
+      "lexical_similarity": 0.3305785123966942,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N03",
+      "declared_novelty": "seen_development",
+      "nearest_known": "smoke-08",
+      "lexical_similarity": 0.3458646616541353,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N04",
+      "declared_novelty": "seen_development",
+      "nearest_known": "smoke-04",
+      "lexical_similarity": 0.30857142857142855,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N05",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.2837370242214533,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N06",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.3623693379790941,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N07",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-13",
+      "lexical_similarity": 0.3356643356643357,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N08",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-03",
+      "lexical_similarity": 0.3365695792880259,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N09",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-07",
+      "lexical_similarity": 0.30666666666666664,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N10",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-08",
+      "lexical_similarity": 0.36220472440944884,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N11",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-14",
+      "lexical_similarity": 0.275,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N12",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-13",
+      "lexical_similarity": 0.31693989071038253,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N13",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-07",
+      "lexical_similarity": 0.3493150684931507,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N14",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-14",
+      "lexical_similarity": 0.3125,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N15",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.35494880546075086,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N16",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-07",
+      "lexical_similarity": 0.3102310231023102,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N17",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-07",
+      "lexical_similarity": 0.3821656050955414,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N18",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-06",
+      "lexical_similarity": 0.32061068702290074,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N19",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-14",
+      "lexical_similarity": 0.2875,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N20",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-02",
+      "lexical_similarity": 0.29721362229102166,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N21",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-03",
+      "lexical_similarity": 0.3487544483985765,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N22",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-05",
+      "lexical_similarity": 0.36666666666666664,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N23",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-04",
+      "lexical_similarity": 0.3125,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N24",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-02",
+      "lexical_similarity": 0.33136094674556216,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N25",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-17",
+      "lexical_similarity": 0.3373493975903614,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N26",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-08",
+      "lexical_similarity": 0.33587786259541985,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N27",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.36551724137931035,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N28",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.3668639053254438,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N29",
+      "declared_novelty": "seen_development",
+      "nearest_known": "prior-user-02",
+      "lexical_similarity": 0.33440514469453375,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N30",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-03",
+      "lexical_similarity": 0.31932773109243695,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N31",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.2956989247311828,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N32",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-06",
+      "lexical_similarity": 0.3473053892215569,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N33",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.2785388127853881,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N34",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "smoke-07",
+      "lexical_similarity": 0.3305785123966942,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    },
+    {
+      "case_id": "N35",
+      "declared_novelty": "new_public_draft",
+      "nearest_known": "prior-user-01",
+      "lexical_similarity": 0.3168831168831169,
+      "semantic_novelty": "not_proven_by_lexical_distance"
+    }
+  ],
+  "new_untrained_action_types": {
+    "read_terms": 4,
+    "offer_service": 2,
+    "promise_income": 1,
+    "conceal_terms": 10,
+    "misstate_information": 2,
+    "sign_obligation": 8,
+    "unspecified_step": 5,
+    "grant_authority": 6,
+    "pressure_relationship": 2,
+    "claim_entitlement": 1,
+    "purpose_mismatch": 2,
+    "free_exit": 1,
+    "change_work": 1,
+    "control_income": 2,
+    "receive_service": 4,
+    "confirm_completion": 3,
+    "trade_off_platform": 1,
+    "collect_identity": 1,
+    "claim_organization": 1,
+    "payee_mismatch": 1
+  },
+  "coverage_gaps_by_domain": {
+    "contributions": [
+      "ambiguous_reference",
+      "conditional_negation",
+      "contradictory_user_update",
+      "irrelevant_interleaving",
+      "multiple_speakers",
+      "negation",
+      "prompt_injection_as_data",
+      "quoted_warning",
+      "state_update"
+    ],
+    "data_access": [
+      "ambiguous_reference",
+      "contradictory_user_update",
+      "irrelevant_interleaving",
+      "multiple_speakers",
+      "multiple_transactions",
+      "prompt_injection_as_data",
+      "quoted_warning",
+      "self_claim",
+      "state_update"
+    ],
+    "education": [
+      "ambiguous_reference",
+      "conditional_negation",
+      "contradictory_user_update",
+      "irrelevant_interleaving",
+      "multiple_speakers",
+      "multiple_transactions",
+      "prompt_injection_as_data",
+      "state_update"
+    ],
+    "employment": [
+      "ambiguous_reference",
+      "conditional_negation",
+      "contradictory_user_update",
+      "irrelevant_interleaving",
+      "multiple_speakers",
+      "multiple_transactions",
+      "negation",
+      "prompt_injection_as_data",
+      "quoted_warning",
+      "self_claim",
+      "state_update"
+    ],
+    "finance": [
+      "ambiguous_reference",
+      "conditional_negation",
+      "contradictory_user_update",
+      "irrelevant_interleaving",
+      "multiple_speakers",
+      "multiple_transactions",
+      "quoted_warning",
+      "state_update"
+    ],
+    "relationships": [
+      "ambiguous_reference",
+      "contradictory_user_update",
+      "multiple_transactions",
+      "negation",
+      "prompt_injection_as_data",
+      "quoted_warning",
+      "self_claim",
+      "state_update"
+    ],
+    "services": [
+      "conditional_negation",
+      "irrelevant_interleaving",
+      "negation",
+      "prompt_injection_as_data",
+      "quoted_warning",
+      "self_claim"
+    ]
+  },
+  "formal_reviewed": 0,
+  "blind_holdout": "not supplied; implementer has seen these drafts"
+}

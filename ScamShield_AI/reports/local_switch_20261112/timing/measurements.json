@@ -1,0 +1,1082 @@
+[
+  {
+    "round": 1,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 20.747800001117866,
+    "engine_ms": 9.174800001346739
+  },
+  {
+    "round": 1,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 7.291900001291651,
+    "engine_ms": 4.9409999992349185
+  },
+  {
+    "round": 1,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 6.286499999987427,
+    "engine_ms": 4.05260000115959
+  },
+  {
+    "round": 1,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 5.234799999016104,
+    "engine_ms": 3.3361000023433007
+  },
+  {
+    "round": 1,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.194599998503691,
+    "engine_ms": 3.3537999988766387
+  },
+  {
+    "round": 1,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.67469999784953,
+    "engine_ms": 3.0144999982439913
+  },
+  {
+    "round": 1,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.433599999174476,
+    "engine_ms": 3.01969999782159
+  },
+  {
+    "round": 1,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.9929000013216864,
+    "engine_ms": 2.5472000015724916
+  },
+  {
+    "round": 1,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.6818000007770024,
+    "engine_ms": 2.0963999995728955
+  },
+  {
+    "round": 1,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.452699999092147,
+    "engine_ms": 2.876599999581231
+  },
+  {
+    "round": 1,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 8.12710000172956,
+    "engine_ms": 6.40679999924032
+  },
+  {
+    "round": 1,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.492399999435293,
+    "engine_ms": 2.987700001540361
+  },
+  {
+    "round": 2,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.189899998891633,
+    "engine_ms": 2.570599997852696
+  },
+  {
+    "round": 2,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.867399999056943,
+    "engine_ms": 3.0948999992688186
+  },
+  {
+    "round": 2,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.287299998599337,
+    "engine_ms": 3.3572000029380433
+  },
+  {
+    "round": 2,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.958100002113497,
+    "engine_ms": 3.303499997855397
+  },
+  {
+    "round": 2,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.8569999999017455,
+    "engine_ms": 3.318099999887636
+  },
+  {
+    "round": 2,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.561500001727836,
+    "engine_ms": 2.9342999987420626
+  },
+  {
+    "round": 2,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.308100000343984,
+    "engine_ms": 2.7254999986325856
+  },
+  {
+    "round": 2,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.811200000200188,
+    "engine_ms": 2.3430999972333666
+  },
+  {
+    "round": 2,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 2.977899999677902,
+    "engine_ms": 1.4849999970465433
+  },
+  {
+    "round": 2,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.39149999874644,
+    "engine_ms": 2.87410000237287
+  },
+  {
+    "round": 2,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 8.569499997975072,
+    "engine_ms": 6.782800002838485
+  },
+  {
+    "round": 2,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.365799999708543,
+    "engine_ms": 3.7788000008731615
+  },
+  {
+    "round": 3,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.069800001161639,
+    "engine_ms": 2.5405000014870893
+  },
+  {
+    "round": 3,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.225599997880636,
+    "engine_ms": 2.5488000028417446
+  },
+  {
+    "round": 3,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.915099998470396,
+    "engine_ms": 3.1208000000333413
+  },
+  {
+    "round": 3,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.989600001863437,
+    "engine_ms": 3.180100000463426
+  },
+  {
+    "round": 3,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.3406000006361865,
+    "engine_ms": 3.5521999998309184
+  },
+  {
+    "round": 3,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 6.082399999286281,
+    "engine_ms": 3.873300000122981
+  },
+  {
+    "round": 3,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.976600001100451,
+    "engine_ms": 3.100900001300033
+  },
+  {
+    "round": 3,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.5119999993185047,
+    "engine_ms": 2.1403999999165535
+  },
+  {
+    "round": 3,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.0063999984122347,
+    "engine_ms": 1.4517000017804094
+  },
+  {
+    "round": 3,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.353100001026178,
+    "engine_ms": 2.892799999244744
+  },
+  {
+    "round": 3,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 7.967699999426259,
+    "engine_ms": 5.979799996566726
+  },
+  {
+    "round": 3,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.6724000023677945,
+    "engine_ms": 3.724599999259226
+  },
+  {
+    "round": 4,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 5.34709999919869,
+    "engine_ms": 3.2690000007278286
+  },
+  {
+    "round": 4,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.618699997081421,
+    "engine_ms": 2.8858000005129725
+  },
+  {
+    "round": 4,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.030200001783669,
+    "engine_ms": 3.4311000017623883
+  },
+  {
+    "round": 4,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 19.99240000077407,
+    "engine_ms": 18.24529999794322
+  },
+  {
+    "round": 4,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.25769999876502,
+    "engine_ms": 3.37750000107917
+  },
+  {
+    "round": 4,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 5.117100001371,
+    "engine_ms": 3.401900001335889
+  },
+  {
+    "round": 4,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.394999999931315,
+    "engine_ms": 2.760899998975219
+  },
+  {
+    "round": 4,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.722499997820705,
+    "engine_ms": 2.2843000006105285
+  },
+  {
+    "round": 4,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 2.9267999998410232,
+    "engine_ms": 1.460799998312723
+  },
+  {
+    "round": 4,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.2840999994950835,
+    "engine_ms": 2.741500000411179
+  },
+  {
+    "round": 4,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 8.093899999948917,
+    "engine_ms": 6.368499998643529
+  },
+  {
+    "round": 4,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.554699997446733,
+    "engine_ms": 3.397399999812478
+  },
+  {
+    "round": 5,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.801299997780006,
+    "engine_ms": 2.8369999999995343
+  },
+  {
+    "round": 5,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.664000000047963,
+    "engine_ms": 2.6749000026029535
+  },
+  {
+    "round": 5,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.535699998290511,
+    "engine_ms": 3.5870000028808136
+  },
+  {
+    "round": 5,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 5.048200000601355,
+    "engine_ms": 3.3618999987083953
+  },
+  {
+    "round": 5,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.792799998540431,
+    "engine_ms": 3.3061000031011645
+  },
+  {
+    "round": 5,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.537299999356037,
+    "engine_ms": 2.8877000004285946
+  },
+  {
+    "round": 5,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.319799998484086,
+    "engine_ms": 2.815200001350604
+  },
+  {
+    "round": 5,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.8665000029141083,
+    "engine_ms": 2.4292000016430393
+  },
+  {
+    "round": 5,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.0566999994334765,
+    "engine_ms": 1.4737000019522384
+  },
+  {
+    "round": 5,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.281100002117455,
+    "engine_ms": 2.749999999650754
+  },
+  {
+    "round": 5,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 7.6652999996440485,
+    "engine_ms": 5.711099998734426
+  },
+  {
+    "round": 5,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.887099999905331,
+    "engine_ms": 3.250499998102896
+  },
+  {
+    "round": 6,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 5.785199999081669,
+    "engine_ms": 3.053699998417869
+  },
+  {
+    "round": 6,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.202600001211977,
+    "engine_ms": 3.0237999999371823
+  },
+  {
+    "round": 6,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 9.488700001384132,
+    "engine_ms": 6.003499998769257
+  },
+  {
+    "round": 6,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 7.103200001438381,
+    "engine_ms": 4.734599999210332
+  },
+  {
+    "round": 6,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 6.095299999287818,
+    "engine_ms": 3.964399998949375
+  },
+  {
+    "round": 6,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 7.124499999918044,
+    "engine_ms": 4.501200000959216
+  },
+  {
+    "round": 6,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 5.864099999598693,
+    "engine_ms": 3.6450000006880146
+  },
+  {
+    "round": 6,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.411699999764096,
+    "engine_ms": 2.4630999978398904
+  },
+  {
+    "round": 6,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.9760999970894773,
+    "engine_ms": 1.8175999975937884
+  },
+  {
+    "round": 6,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 5.728200001613004,
+    "engine_ms": 3.268300002673641
+  },
+  {
+    "round": 6,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 8.890999997674953,
+    "engine_ms": 6.824700001743622
+  },
+  {
+    "round": 6,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.276399999274872,
+    "engine_ms": 3.4166000004915986
+  },
+  {
+    "round": 7,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.406600000947947,
+    "engine_ms": 2.7279000023554545
+  },
+  {
+    "round": 7,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.293300000630552,
+    "engine_ms": 3.336399997351691
+  },
+  {
+    "round": 7,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.9679999974614475,
+    "engine_ms": 3.216900000552414
+  },
+  {
+    "round": 7,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.873099998803809,
+    "engine_ms": 3.341999999975087
+  },
+  {
+    "round": 7,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.714599999919301,
+    "engine_ms": 4.144600003201049
+  },
+  {
+    "round": 7,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 5.0502000012784265,
+    "engine_ms": 3.3944999995583203
+  },
+  {
+    "round": 7,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.497300000366522,
+    "engine_ms": 2.9631999968842138
+  },
+  {
+    "round": 7,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.532299997663358,
+    "engine_ms": 2.6440999972692225
+  },
+  {
+    "round": 7,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 4.004599999461789,
+    "engine_ms": 1.833899998018751
+  },
+  {
+    "round": 7,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 5.522299998119706,
+    "engine_ms": 3.7523000028159004
+  },
+  {
+    "round": 7,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 8.900900000298861,
+    "engine_ms": 6.547400000272319
+  },
+  {
+    "round": 7,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.456299997604219,
+    "engine_ms": 3.3989999974437524
+  },
+  {
+    "round": 8,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 5.384799998864764,
+    "engine_ms": 3.0501000001095235
+  },
+  {
+    "round": 8,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.667699999321485,
+    "engine_ms": 3.702300000441028
+  },
+  {
+    "round": 8,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 7.631100001162849,
+    "engine_ms": 5.261700000119163
+  },
+  {
+    "round": 8,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 5.267599997750949,
+    "engine_ms": 3.513399999064859
+  },
+  {
+    "round": 8,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.160299999261042,
+    "engine_ms": 3.3521999976073857
+  },
+  {
+    "round": 8,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.826500000490341,
+    "engine_ms": 3.0975000008766074
+  },
+  {
+    "round": 8,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.501599996729055,
+    "engine_ms": 2.8831999989051837
+  },
+  {
+    "round": 8,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.704700000525918,
+    "engine_ms": 2.3160999990068376
+  },
+  {
+    "round": 8,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.186500001902459,
+    "engine_ms": 1.5131000000110362
+  },
+  {
+    "round": 8,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.1947999998228624,
+    "engine_ms": 2.701800000068033
+  },
+  {
+    "round": 8,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 7.020299999567214,
+    "engine_ms": 5.303199999616481
+  },
+  {
+    "round": 8,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.672300001402618,
+    "engine_ms": 3.1601000009686686
+  },
+  {
+    "round": 9,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.563499998766929,
+    "engine_ms": 2.7681999999913387
+  },
+  {
+    "round": 9,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.996300002152566,
+    "engine_ms": 3.633699998317752
+  },
+  {
+    "round": 9,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.874200000107521,
+    "engine_ms": 3.925199998775497
+  },
+  {
+    "round": 9,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.861600002186606,
+    "engine_ms": 3.1954999976733234
+  },
+  {
+    "round": 9,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.0608000019565225,
+    "engine_ms": 3.3254000009037554
+  },
+  {
+    "round": 9,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 6.316500002867542,
+    "engine_ms": 4.270099998393562
+  },
+  {
+    "round": 9,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 7.738600001175655,
+    "engine_ms": 4.8557000009168405
+  },
+  {
+    "round": 9,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.129199998715194,
+    "engine_ms": 2.5171999986923765
+  },
+  {
+    "round": 9,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.166300000884803,
+    "engine_ms": 1.5117000002646819
+  },
+  {
+    "round": 9,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.273599999578437,
+    "engine_ms": 2.763799999229377
+  },
+  {
+    "round": 9,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 7.109300000593066,
+    "engine_ms": 5.424500002845889
+  },
+  {
+    "round": 9,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.64300000021467,
+    "engine_ms": 3.1349000018963125
+  },
+  {
+    "round": 10,
+    "case_id": "P01",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.511600000114413,
+    "engine_ms": 2.685100000235252
+  },
+  {
+    "round": 10,
+    "case_id": "P02",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.437999999936437,
+    "engine_ms": 2.74840000201948
+  },
+  {
+    "round": 10,
+    "case_id": "P03",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.860500001086621,
+    "engine_ms": 3.2724000011512544
+  },
+  {
+    "round": 10,
+    "case_id": "P04",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.722599998785881,
+    "engine_ms": 3.172200002154568
+  },
+  {
+    "round": 10,
+    "case_id": "P05",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 4.896300000837073,
+    "engine_ms": 3.3433999997214414
+  },
+  {
+    "round": 10,
+    "case_id": "P06",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 4.559500001050765,
+    "engine_ms": 2.9801000018778723
+  },
+  {
+    "round": 10,
+    "case_id": "P07",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.687299999204697,
+    "engine_ms": 2.947699998912867
+  },
+  {
+    "round": 10,
+    "case_id": "P08",
+    "http_status": 200,
+    "risk_status": "need_context",
+    "safety_urgency": "undetermined",
+    "http_ms": 3.8088000001152977,
+    "engine_ms": 2.356999997573439
+  },
+  {
+    "round": 10,
+    "case_id": "P09",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "urgent",
+    "http_ms": 3.034800000023097,
+    "engine_ms": 1.5366000006906688
+  },
+  {
+    "round": 10,
+    "case_id": "P10",
+    "http_status": 200,
+    "risk_status": "suspicious",
+    "safety_urgency": "preventive",
+    "http_ms": 4.428899999766145,
+    "engine_ms": 2.815700001519872
+  },
+  {
+    "round": 10,
+    "case_id": "P11",
+    "http_status": 200,
+    "risk_status": "high",
+    "safety_urgency": "preventive",
+    "http_ms": 7.787800001096912,
+    "engine_ms": 5.807800000184216
+  },
+  {
+    "round": 10,
+    "case_id": "P12",
+    "http_status": 200,
+    "risk_status": "clear",
+    "safety_urgency": "undetermined",
+    "http_ms": 5.423200000223005,
+    "engine_ms": 3.5180999984731898
+  }
+]

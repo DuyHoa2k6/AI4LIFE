@@ -1,0 +1,70 @@
+PHẠM VI: Các tin đã quan sát trong phiên.
+LƯU Ý: Chưa xác định đầy đủ lịch sử. Thứ tự giữa các đoạn có thể chưa rõ.
+
+[Đoạn S1 — thứ tự DOM đã quan sát]
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 0
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 1
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 2
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 3
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 4
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 5
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 6
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 7
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 8
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 9
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 10
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 11
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 12
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 13
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 14
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 15
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 16
+
+[Không rõ thời gian] Người A [P1]:
+Tin được cuộn 17
+
+TỔNG KẾT
+{
+  "observed_only": true,
+  "complete_history": false,
+  "history_start_reached": "unknown",
+  "has_gaps": "unknown",
+  "unknown_senders": false,
+  "uncertain_order": false,
+  "media_not_extracted": false,
+  "memory_limit_reached": false
+}
+Chẩn đoán: 

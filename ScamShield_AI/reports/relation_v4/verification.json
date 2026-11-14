@@ -1,0 +1,9 @@
+{
+  "latest_run_frozen_hashes_unchanged": true,
+  "files_checked": 20,
+  "unit_tests_passed": 112,
+  "worker_security_passed": 10,
+  "independent_accuracy_measured": false,
+  "old_runs": "See each archived hash_verification.json; code revised between runs, never inside them.",
+  "known_regression_stably_resolved": false
+}

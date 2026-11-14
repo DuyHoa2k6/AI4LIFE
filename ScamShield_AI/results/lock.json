@@ -1,0 +1,30 @@
+{
+  "config": {
+    "version": "w3-baseline-1",
+    "model": "keyword-baseline",
+    "prompt": "none",
+    "rag": false,
+    "index": null,
+    "keywords": [
+      "otp",
+      "chuyển tiền",
+      "ứng tiền",
+      "chuyển khoản",
+      "mật khẩu",
+      "chia sẻ màn hình",
+      "cài ứng dụng",
+      "đặt cọc",
+      "mở khóa"
+    ],
+    "matched_status": "high",
+    "unmatched_status": "clear"
+  },
+  "config_sha256": "98dbc5903c75faae5dcf4657ec2a9c509ef6b22f397d46a0f5c1cfa3bcf14ab7",
+  "tool_sha256": "474453de7c52dcfd401717d1c3a2e957d2ec1d0610b997e0c7a9eda9c2e3f49f",
+  "dataset_sha256": "afa0127930b7fa0fb01de2719f812a3d20e1683e6f8cda24e204d9f896a4a0dd",
+  "dataset_name": "validation.jsonl",
+  "scope": "synthetic validation; not independent final evaluation",
+  "index_sha256": null,
+  "model": "keyword-baseline",
+  "prompt": "none"
+}

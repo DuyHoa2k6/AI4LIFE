@@ -1,0 +1,227 @@
+[
+  {
+    "id": "01",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Khoản thanh toán cho đơn thiết bị tháng này vẫn giữ nguyên như hợp đồng. Tài khoản cũ đang đối soát nên bên em đổi sang tài khoản nhận tiền mới. Anh chuyển vào tài khoản cá nhân của trưởng bộ phận giúp em để kịp xuất kho. Người phụ trách hợp đồng đang họp, anh đừng gọi số cũ vì sẽ chậm tiến độ. Chỉ cần trả lời email này sau khi chuyển xong."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Hợp đồng tôi đang giữ ghi tài khoản đứng tên công ty, không có phụ lục thay đổi. Email này nằm trong một chuỗi trao đổi mới, tôi chưa gọi xác minh."
+        }
+      ]
+    }
+  },
+  {
+    "id": "02",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Mình nói chuyện với nhau cũng lâu rồi, anh nghĩ em là người anh có thể tin. Tài khoản anh đang bị giới hạn nên anh nhờ một người gửi tiền vào tài khoản em. Khi nhận được, em chuyển tiếp sang tài khoản khác anh gửi, giữ lại một ít coi như anh cảm ơn. Nếu ngân hàng hỏi thì em cứ nói là tiền người nhà trả nợ, đừng nhắc chuyện nhận hộ. Chuyện này chỉ hai đứa mình biết thôi."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Tôi chưa gặp người này trực tiếp, cũng không biết người sẽ gửi tiền là ai."
+        }
+      ]
+    }
+  },
+  {
+    "id": "03",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Vị trí hỗ trợ khách hàng ở nước ngoài không cần kinh nghiệm. Bên anh lo phương tiện, em chỉ cần đi theo nhóm. Hợp đồng chính thức sẽ ký khi tới nơi nên hiện tại chưa gửi được địa chỉ công ty. Khi lên xe, giao hộ chiếu cho trưởng nhóm giữ để làm thủ tục. Thời gian đầu không được tự rời chỗ ở vì công ty đang bảo lãnh chi phí. Em đừng nói chi tiết với gia đình, tới nơi ổn định rồi báo cũng được."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Nếu công việc không giống trao đổi thì em có thể về không?"
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_1",
+          "text": "Muốn về phải thanh toán toàn bộ chi phí bên anh đã ứng, số tiền sẽ tính sau."
+        }
+      ]
+    }
+  },
+  {
+    "id": "04",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Trong ứng dụng hiển thị tôi có 18 triệu nhưng khi rút thì báo chờ duyệt."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Số dư của bạn đã có, chỉ đang bị khóa vì chưa hoàn tất xác minh. Bạn chuyển thêm 2 triệu tiền bảo chứng vào tài khoản bên tôi chỉ định, hệ thống sẽ trả cả vốn lẫn tiền bảo chứng. Không được trừ trực tiếp vào số dư vì đó là hai bộ phận khác nhau."
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_1",
+          "text": "Hôm qua tôi đã nộp phí xác minh rồi."
+        },
+        {
+          "id": "m4",
+          "speaker": "speaker_2",
+          "text": "Đó là bước đầu. Nếu bạn ngừng giữa chừng thì hồ sơ cũ không được xử lý và các khoản đã nộp sẽ mất hiệu lực."
+        }
+      ]
+    }
+  },
+  {
+    "id": "05",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Máy tính của anh có phiên đăng nhập bất thường. Anh cài ứng dụng hỗ trợ rồi đọc mã kết nối để tôi kiểm tra từ xa. Trong lúc tôi thao tác, anh mở ứng dụng ngân hàng xem tiền còn đủ không. Nếu màn hình có thông báo cấp quyền thì bấm đồng ý để tôi sửa lỗi. Anh không cần gọi tổng đài, vì cuộc gọi này đã được chuyển từ bộ phận an toàn tài khoản."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Tôi không tạo yêu cầu hỗ trợ nào trước đó. Người gọi không cho tôi mã hồ sơ để tra cứu."
+        }
+      ]
+    }
+  },
+  {
+    "id": "06",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Tôi có ảnh và danh sách bạn bè của bạn. Chuyển 3 triệu thì tôi xóa, còn không tôi gửi cho chỗ làm. Đừng chặn tôi hay kể với ai. Bạn có mười phút."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Ảnh này không phải ảnh thật của tôi."
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_1",
+          "text": "Thật hay ghép thì người nhận cũng sẽ thấy. Nếu muốn yên chuyện thì làm theo."
+        }
+      ]
+    }
+  },
+  {
+    "id": "07",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Đơn hàng của chị đủ điều kiện hoàn tiền vì nhà bán bị xử lý. Em gửi trang nhận tiền trong tin nhắn này, chị đăng nhập tài khoản rồi đọc mã vừa nhận để em ghép hồ sơ. Mã đó chỉ để nhận tiền, không phải thanh toán."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Tin nhắn trên điện thoại ghi đây là mã đăng nhập và không cung cấp cho người khác."
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_1",
+          "text": "Đó là mẫu tin tự động, chị cứ đọc cho em. Nếu đóng cuộc trò chuyện thì suất hoàn tiền sẽ chuyển cho người khác."
+        }
+      ]
+    }
+  },
+  {
+    "id": "08",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Mọi người trong nhóm đều đã nhận thưởng, bạn xem ảnh xác nhận phía trên nhé. Bạn làm thử nhiệm vụ đầu thì sẽ hiểu."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Tôi đã được trả 40 nghìn sau nhiệm vụ đầu. Sau đó tôi nộp 1 triệu và ứng dụng hiển thị số dư 1,3 triệu, nhưng không rút được."
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_1",
+          "text": "Bạn đang ở chu kỳ liên hoàn nên cần hoàn tất nhiệm vụ 3 triệu mới được rút toàn bộ. Mấy tài khoản kia cũng làm như vậy. Đừng hỏi ngoài nhóm vì người không tham gia sẽ không hiểu."
+        },
+        {
+          "id": "m4",
+          "speaker": "speaker_3",
+          "text": "Mình vừa nộp xong rồi, bạn cứ làm theo quản trị viên."
+        }
+      ]
+    }
+  },
+  {
+    "id": "09",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Chị đây, máy chị hỏng nên dùng tài khoản này. Em chuyển giúp chị tiền viện phí vào tài khoản người quen, chị trả sau."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Tài khoản gửi một đoạn ghi âm ngắn có giọng khá giống chị tôi. Tôi chưa gọi vào số cũ để hỏi."
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_2",
+          "text": "Em gọi video xác nhận một chút nhé?"
+        },
+        {
+          "id": "m4",
+          "speaker": "speaker_3",
+          "text": "Trong viện không tiện nghe. Chuyển ngay giúp chị, đừng gọi số cũ hay hỏi bố mẹ làm mọi người lo. Tài khoản nhận không đứng tên chị vì chị đang nhờ người khác đóng hộ."
+        }
+      ]
+    }
+  },
+  {
+    "id": "10",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "speaker_1",
+          "text": "Tôi đăng bài kể việc bị mất tiền đầu tư, sau đó có người nhắn riêng."
+        },
+        {
+          "id": "m2",
+          "speaker": "speaker_2",
+          "text": "Bên tôi đã thấy thông tin của bạn và có thể thu hồi khoản tiền đó. Chúng tôi có người xử lý nội bộ, nhưng không thể cung cấp danh tính. Bạn chuyển trước phí mở hồ sơ, sau đó gửi ảnh giấy tờ hai mặt và thông tin đăng nhập ứng dụng đầu tư. Không cần làm việc với bên nào khác vì có thể gây trùng hồ sơ. Nếu để qua hôm nay thì dữ liệu truy vết sẽ bị xóa."
+        },
+        {
+          "id": "m3",
+          "speaker": "speaker_1",
+          "text": "Tôi có thể kiểm tra công ty và ký hợp đồng trước không?"
+        },
+        {
+          "id": "m4",
+          "speaker": "speaker_3",
+          "text": "Bên tôi chỉ xử lý trực tuyến. Muốn xem kết quả thì phải thanh toán trước."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "http_status": 429,
+  "elapsed_ms": 1017.2025999927428,
+  "error_code": "credit_balance_exhausted",
+  "error_type": "insufficient_quota",
+  "mentions_quota": false,
+  "mentions_billing": true,
+  "mentions_rate": false
+}

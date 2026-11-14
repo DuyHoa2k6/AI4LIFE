@@ -1,0 +1,41 @@
+{
+  "scope": "Previously seen regression; not independent",
+  "cases": [
+    {
+      "id": "TP-Q1",
+      "group": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false,
+      "manual_focus": "Yêu cầu cấp quyền có rủi ro, chưa có điều kiện để tự nâng high."
+    },
+    {
+      "id": "TP-S4",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Phí giữ chỗ là điều kiện hoàn cọc."
+    },
+    {
+      "id": "TP-S5",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false,
+      "manual_focus": "Tự nhận người nhà, tiền khẩn cấp, ngăn xác minh; không xác nhận danh tính."
+    },
+    {
+      "id": "TP-N3",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false,
+      "manual_focus": "Lịch hẹn không bịa rủi ro."
+    }
+  ]
+}

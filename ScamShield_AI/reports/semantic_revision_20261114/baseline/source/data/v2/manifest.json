@@ -1,0 +1,17 @@
+{
+    "schema_version":  "scamshield-case-2.0",
+    "canonical_pilot":  "release_final/pilot.jsonl",
+    "runtime_inputs":  "release_final/inputs.json",
+    "acceptance_targets":  "release_final/acceptance_targets.json",
+    "review_status":  "weak_label",
+    "training_eligible":  0,
+    "archived_development":  [
+                                 "pilot_draft1",
+                                 "pilot",
+                                 "pilot_expanded",
+                                 "pilot_final",
+                                 "release",
+                                 "release_v2"
+                             ],
+    "independent_test":  "not provided; keep outside development environment"
+}

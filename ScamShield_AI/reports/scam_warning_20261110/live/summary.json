@@ -1,0 +1,65 @@
+{
+  "scope": "24 fresh public synthetic functional cases authored before predictions: 18 explicit risky requests/conditions, 6 benign controls. Not independent human-labelled accuracy or real-user prevalence; no runtime data or prompt tuning.",
+  "mode": "two_pass",
+  "planned": 24,
+  "batch_wall_ms": 243087.68869999767,
+  "provider_attempts": 50,
+  "provider_http_responses": 50,
+  "executed": 24,
+  "successful": 24,
+  "errors": 0,
+  "not_run": 0,
+  "completion_rate": 1.0,
+  "matrix": {
+    "scam": {
+      "high": 17,
+      "need_context": 1
+    },
+    "normal": {
+      "clear": 6
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 17,
+    "FN": 1,
+    "TN": 6
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 0.9444444444444444,
+  "status_matches_successful": 23,
+  "status_match_rate_successful": 0.9583333333333334,
+  "high_scam_missed": [
+    "NW-02"
+  ],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 24,
+    "p50_ms": 6889.866900004563,
+    "p95_ms": 9591.833099999349
+  },
+  "latency_successful": {
+    "n": 24,
+    "p50_ms": 6889.866900004563,
+    "p95_ms": 9591.833099999349
+  },
+  "first_request_ms": 7897.254900002736,
+  "warm_successful": {
+    "n": 23,
+    "p50_ms": 6889.866900004563,
+    "p95_ms": 9591.833099999349
+  },
+  "provider_adapter_successful": {
+    "n": 24,
+    "p50_ms": 6682.232300001488,
+    "p95_ms": 9336.728700000094
+  },
+  "exact_quotes": 51,
+  "quote_count": 51,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

@@ -1,0 +1,63 @@
+{
+  "checkpoint": "vinai/phobert-base",
+  "revision": "01daacda68afe13d83023d16ec647239e344a1e6",
+  "license": "MIT",
+  "vncorenlp_revision": "62bbc58fe5d113c898eae112656be97dcf50b3a0",
+  "max_tokens_including_special": 256,
+  "files": [
+    {
+      "path": "base\\config.json",
+      "bytes": 557,
+      "sha256": "71df79a67a65b1ee472938d0dff77297c0d77e20fef1af41e0013b1d384efb0d",
+      "url": "https://huggingface.co/vinai/phobert-base/resolve/01daacda68afe13d83023d16ec647239e344a1e6/config.json"
+    },
+    {
+      "path": "base\\vocab.txt",
+      "bytes": 895321,
+      "sha256": "dffd7543c401fb6567253ae7c3313004532c33d062525250049c616544bad777",
+      "url": "https://huggingface.co/vinai/phobert-base/resolve/01daacda68afe13d83023d16ec647239e344a1e6/vocab.txt"
+    },
+    {
+      "path": "base\\bpe.codes",
+      "bytes": 1135173,
+      "sha256": "9dfe53fb8abbddd3387da99641c36e00bee757a3679aad9cf0a7cdc4b30f6ef8",
+      "url": "https://huggingface.co/vinai/phobert-base/resolve/01daacda68afe13d83023d16ec647239e344a1e6/bpe.codes"
+    },
+    {
+      "path": "base\\pytorch_model.bin",
+      "bytes": 542923308,
+      "sha256": "a0b0f0912c710147fbaac015b0a4011216a0061a56c03b840b639e40d3bb49cc",
+      "url": "https://huggingface.co/vinai/phobert-base/resolve/01daacda68afe13d83023d16ec647239e344a1e6/pytorch_model.bin"
+    },
+    {
+      "path": "base\\README.md",
+      "bytes": 2183,
+      "sha256": "2cb34fea651ea41128c58e25ea3ba9d22f839f7ffd7a1f5d5c09d1b6956182ae",
+      "url": "https://huggingface.co/vinai/phobert-base/resolve/01daacda68afe13d83023d16ec647239e344a1e6/README.md"
+    },
+    {
+      "path": "base\\LICENSE",
+      "bytes": 1062,
+      "sha256": "7d8600c83754d8766cfb8a3e4c0133bae45069beb598b4895f761fc9dfd139b3",
+      "url": "https://raw.githubusercontent.com/VinAIResearch/PhoBERT/master/LICENSE"
+    },
+    {
+      "path": "vncorenlp\\VnCoreNLP-1.2.jar",
+      "bytes": 27412703,
+      "sha256": "9e2811cdbc2ddfc71d04be5dc36e185c88dcd1ad4d5d69e4ff2e1369dccf7793",
+      "url": "https://raw.githubusercontent.com/vncorenlp/VnCoreNLP/62bbc58fe5d113c898eae112656be97dcf50b3a0/VnCoreNLP-1.2.jar"
+    },
+    {
+      "path": "vncorenlp\\models\\wordsegmenter\\vi-vocab",
+      "bytes": 526544,
+      "sha256": "0a47c5b55bbce163029d37730a67b9479740388695c29c106c112b815613eaa5",
+      "url": "https://raw.githubusercontent.com/vncorenlp/VnCoreNLP/62bbc58fe5d113c898eae112656be97dcf50b3a0/models/wordsegmenter/vi-vocab"
+    },
+    {
+      "path": "vncorenlp\\models\\wordsegmenter\\wordsegmenter.rdr",
+      "bytes": 128508,
+      "sha256": "9e62f96bd93e37a24f364238e8d8ae986fa5dad6dbc9f4eae622ab3651b7fa06",
+      "url": "https://raw.githubusercontent.com/vncorenlp/VnCoreNLP/62bbc58fe5d113c898eae112656be97dcf50b3a0/models/wordsegmenter/wordsegmenter.rdr"
+    }
+  ]
+}

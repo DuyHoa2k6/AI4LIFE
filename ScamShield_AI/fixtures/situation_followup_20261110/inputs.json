@@ -1,0 +1,170 @@
+[
+  {
+    "id": "F01",
+    "name": "Tự nhập mã trên ứng dụng",
+    "input": {
+      "text": "Tôi tự mở ứng dụng chính thức và nhập mã xác thực trên điện thoại của mình. Tôi không gửi mã cho ai."
+    }
+  },
+  {
+    "id": "F02",
+    "name": "Giao loa sau khi tự kiểm tra tiền",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Khách mua",
+          "text": "Người vận chuyển đã đến, bạn bàn giao bộ loa giúp tôi."
+        },
+        {
+          "id": "m2",
+          "speaker": "Chủ hàng",
+          "text": "Tôi vừa tự xem ứng dụng ngân hàng: tiền mua bộ loa đã vào đúng tài khoản, đủ số tiền."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F03",
+    "name": "Bài cảnh báo thu giấy tờ",
+    "input": {
+      "text": "Lưu ý: có người giả danh ban học bổng nhắn “gửi căn cước hai mặt và ảnh chân dung qua chat để giữ suất”. Đừng gửi theo lời nhắn đó; tự hỏi nhà trường qua kênh chính thức."
+    }
+  },
+  {
+    "id": "F04",
+    "name": "Khoản vay có đối chiếu trong hội thoại",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Chủ nợ",
+          "text": "Bạn chuyển trả khoản vay tuần trước giúp tôi nhé."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người vay",
+          "text": "Đúng khoản tôi đã vay. Tôi vừa gọi số quen của bạn để đối chiếu số tiền và tài khoản, đều đúng thỏa thuận."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F05",
+    "name": "Đối tượng chưa rõ",
+    "input": {
+      "text": "Bạn gửi lại cái đó qua đây để bên mình xử lý tiếp nhé."
+    }
+  },
+  {
+    "id": "F06",
+    "name": "Chờ xét lệnh rút",
+    "input": {
+      "text": "Yêu cầu rút số dư đang được bộ phận kiểm tra xem xét. Khi có hướng dẫn tiếp theo, chúng tôi sẽ thông báo."
+    }
+  },
+  {
+    "id": "F07",
+    "name": "Thủ tục hoàn cọc chưa mô tả",
+    "input": {
+      "text": "Để nhận lại tiền đặt chỗ, bạn cần hoàn tất thủ tục Z. Mình chưa gửi mô tả thủ tục đó, mai mình báo."
+    }
+  },
+  {
+    "id": "F08",
+    "name": "Chuyển phần còn lại chưa rõ mục đích",
+    "input": {
+      "text": "Bạn chuyển nốt phần còn lại cho mình nhé."
+    }
+  },
+  {
+    "id": "F09",
+    "name": "Giao loa khi tiền chưa vào",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Khách mua",
+          "text": "Người vận chuyển đã đến, bạn bàn giao bộ loa giúp tôi."
+        },
+        {
+          "id": "m2",
+          "speaker": "Chủ hàng",
+          "text": "Tôi vừa tự xem ứng dụng ngân hàng: tiền mua bộ loa chưa vào tài khoản."
+        },
+        {
+          "id": "m3",
+          "speaker": "Khách mua",
+          "text": "Tôi có ảnh chuyển tiền rồi, bạn giao bộ loa trước đi, kiểm tra tiền sau."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F10",
+    "name": "Thay tài khoản và hoãn đối chiếu",
+    "input": {
+      "text": "Hóa đơn bảo trì giữ nguyên, nhưng tháng này bên mình dùng tài khoản cá nhân mới. Cứ thanh toán theo số tài khoản trong chat ngay hôm nay, tuần tới hãy gọi số trên hợp đồng để đối chiếu."
+    }
+  },
+  {
+    "id": "F11",
+    "name": "Giữ suất học bổng bằng giấy tờ qua chat",
+    "input": {
+      "text": "Mình là cộng tác viên chương trình học bổng. Muốn giữ suất, bạn gửi ảnh căn cước cả hai mặt cùng ảnh chân dung vào chat riêng này nhé."
+    }
+  },
+  {
+    "id": "F12",
+    "name": "Mã đăng nhập bị gọi là chuỗi tám ký tự",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Hỗ trợ",
+          "text": "Đọc giúp tôi chuỗi tám ký tự vừa hiện để mở khoản tiền đang chờ."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người nhận",
+          "text": "Thông báo trên máy ghi đó là mã đăng nhập của tài khoản tôi."
+        },
+        {
+          "id": "m3",
+          "speaker": "Hỗ trợ",
+          "text": "Chính chuỗi đó, đọc cho tôi để làm tiếp."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F13",
+    "name": "Chia sẻ màn hình rồi mở lịch sử ngân hàng",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Hỗ trợ",
+          "text": "Bật chia sẻ màn hình để mình kiểm tra hồ sơ hoàn phí."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người nhận",
+          "text": "Tiếp theo tôi mở mục nào?"
+        },
+        {
+          "id": "m3",
+          "speaker": "Hỗ trợ",
+          "text": "Giữ chia sẻ và mở ứng dụng ngân hàng vào lịch sử giao dịch cho mình xem."
+        }
+      ]
+    }
+  },
+  {
+    "id": "F14",
+    "name": "Tiền đồng bộ để giải phóng số dư",
+    "input": {
+      "text": "Số dư của bạn đã hiện nhưng chưa rút được. Muốn giải phóng toàn bộ khoản đó, bạn phải chuyển thêm 700 nghìn tiền đồng bộ trước; không chuyển thì hệ thống tiếp tục giữ tiền."
+    }
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "scope": "8 final public synthetic checks after validation-driven revision: 1 known NW-02 regression and 7 fresh inputs; implementer labels, not independent accuracy. No tuning during this run.",
+  "cases": [
+    {
+      "id": "RF-01",
+      "name": "NW-02 hồi quy",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RF-02",
+      "name": "Neo đối soát thay tên phí",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RF-03",
+      "name": "Tham chiếu qua hai tin cùng người nói",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RF-04",
+      "name": "Mua sách trả trước có đối chiếu",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RF-05",
+      "name": "Lời dụ trong bài cảnh báo",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RF-06",
+      "name": "Tiền thuê và quà miễn phí khác người nói",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RF-07",
+      "name": "Bước nọ và khoản kia chưa xác định",
+      "group": "uncertain",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true
+    },
+    {
+      "id": "RF-08",
+      "name": "Quyền nào chưa biết",
+      "group": "uncertain",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true
+    }
+  ]
+}

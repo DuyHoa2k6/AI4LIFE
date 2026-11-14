@@ -1,0 +1,71 @@
+[
+  {
+    "id": "URL-01",
+    "name": "Yêu cầu OTP và miền gần giống",
+    "input": {
+      "text": "Tôi là hỗ trợ YouTube. Gửi mã OTP đăng nhập của bạn tại đây để tôi ngăn khóa tài khoản.",
+      "links": [
+        {
+          "id": "u1",
+          "message_id": "m1",
+          "url": "https://youtubee.com/auth?token=SYNTHETIC",
+          "display_text": "tại đây",
+          "origin": "user_supplied"
+        }
+      ]
+    }
+  },
+  {
+    "id": "URL-02",
+    "name": "Bài cảnh báo nhắc tên gần giống",
+    "input": {
+      "text": "Cảnh báo: link https://youtubee.com là ví dụ tên gần giống. Đừng đăng nhập hoặc gửi mã qua đó. Đây là bài phòng tránh, không yêu cầu làm theo."
+    }
+  },
+  {
+    "id": "URL-03",
+    "name": "Tự đọc nội dung tại miền tham chiếu",
+    "input": {
+      "text": "Tôi tự mở https://www.youtube.com để xem video học. Không ai yêu cầu tôi đăng nhập hay cung cấp mã."
+    }
+  },
+  {
+    "id": "URL-04",
+    "name": "Đích ẩn khác nhãn và yêu cầu đăng nhập",
+    "input": {
+      "text": "Đăng nhập tài khoản để xác minh tại https://youtube.com.",
+      "links": [
+        {
+          "id": "u4",
+          "message_id": "m1",
+          "url": "https://youtube.com.account-check.net/login",
+          "display_text": "https://youtube.com",
+          "origin": "user_supplied"
+        }
+      ]
+    }
+  },
+  {
+    "id": "URL-05",
+    "name": "Tên miền tiếng Việt không tự thành độc hại",
+    "input": {
+      "text": "Tôi đang đọc bài hướng dẫn ngôn ngữ tại https://vídụ.vn, không làm thao tác đăng nhập hay thanh toán."
+    }
+  },
+  {
+    "id": "URL-06",
+    "name": "Bài cảnh báo có nhãn và đích không khớp",
+    "input": {
+      "text": "Bài cảnh báo đưa ví dụ: https://youtube.com. Đích thật của liên kết mẫu là một miền khác; đừng bấm đăng nhập.",
+      "links": [
+        {
+          "id": "u6",
+          "message_id": "m1",
+          "url": "https://help.example.net/check",
+          "display_text": "https://youtube.com",
+          "origin": "user_supplied"
+        }
+      ]
+    }
+  }
+]

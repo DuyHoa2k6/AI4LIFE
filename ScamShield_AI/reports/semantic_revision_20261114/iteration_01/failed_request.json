@@ -1,0 +1,14 @@
+{
+  "case_id": "TH01",
+  "http_status": 503,
+  "response": {
+    "code": "LOCAL_ANALYSIS_UNAVAILABLE",
+    "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+    "request_id": "292fe93f-5ffe-4d48-be61-f55390723bfd",
+    "diagnostic": {
+      "stage": "local_rules",
+      "kind": "analysis_error"
+    }
+  },
+  "trace_count": 0
+}

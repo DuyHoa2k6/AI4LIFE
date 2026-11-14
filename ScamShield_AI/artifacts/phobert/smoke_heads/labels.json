@@ -1,0 +1,109 @@
+{
+  "schema_version": "phobert-structured-1.0",
+  "spans": [
+    "entity",
+    "action",
+    "object",
+    "condition",
+    "purpose",
+    "time",
+    "negation",
+    "benefit",
+    "consequence"
+  ],
+  "attributes": {
+    "action_type": [
+      "none",
+      "transfer",
+      "receive",
+      "disclose_credentials",
+      "login",
+      "handover",
+      "grant_control",
+      "share_screen",
+      "install",
+      "borrow",
+      "retain_documents",
+      "restrict_exit",
+      "threaten_disclosure",
+      "avoid_verification",
+      "verify",
+      "misstate_origin",
+      "withdraw",
+      "other"
+    ],
+    "object_type": [
+      "unknown",
+      "money",
+      "document",
+      "auth_code",
+      "credentials",
+      "goods",
+      "device",
+      "financial_data",
+      "identity_document",
+      "movement",
+      "information"
+    ],
+    "speech_act": [
+      "request",
+      "claim",
+      "reported",
+      "quoted_warning",
+      "prohibition",
+      "hypothetical",
+      "unknown"
+    ],
+    "polarity": [
+      "positive",
+      "negative",
+      "uncertain"
+    ],
+    "temporal_state": [
+      "requested",
+      "completed",
+      "not_completed",
+      "pending",
+      "ongoing",
+      "future",
+      "unknown"
+    ],
+    "modality": [
+      "assertion",
+      "request",
+      "conditional",
+      "promise",
+      "threat",
+      "possibility",
+      "unknown"
+    ]
+  },
+  "roles": [
+    "speaker",
+    "requester",
+    "performer",
+    "recipient",
+    "affected_party",
+    "transfer_source",
+    "transfer_destination"
+  ],
+  "relations": [
+    "same_transaction",
+    "before",
+    "after",
+    "prerequisite_for",
+    "promised_after",
+    "threatens_unless",
+    "contradiction",
+    "state_update",
+    "obstructs_verification",
+    "transfer_via",
+    "controls_during"
+  ],
+  "risks": [
+    "clear",
+    "need_context",
+    "suspicious",
+    "high"
+  ]
+}

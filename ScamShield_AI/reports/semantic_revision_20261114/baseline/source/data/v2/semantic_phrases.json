@@ -1,0 +1,39 @@
+{
+  "version": "semantic-phrases-1.0",
+  "review_status": "controlled_project_rules_not_independent_review",
+  "description": "Patterns identify possible meanings; contextual links and speech roles decide risk. Dataset examples are not loaded at request time.",
+  "groups": {
+    "payment_request": {
+      "meaning": "Yêu cầu chi trả hoặc mua gói liên quan xác thực/quyền rút; không tự coi mọi giao dịch mua là nguy hiểm.",
+      "patterns": [
+        "\\b(?:nop|chuyen|dong|nap|ung(?! dung)|thanh toan|bo sung)\\b(?:\\s+\\w+){0,5}?\\s+(?:tien|phi|khoan|von)\\b",
+        "\\bmua\\s+(?:them\\s+)?(?:mot\\s+)?goi\\s+(?:xac thuc|xac minh|mo quyen rut|kich hoat rut)\\b"
+      ],
+      "examples": ["nộp phí", "bổ sung khoản đảm bảo", "mua thêm một gói xác thực"]
+    },
+    "return_benefit": {
+      "meaning": "Khoản tiền/vốn được nêu là quyền lợi nhận lại; chưa chứng minh khoản đó tồn tại.",
+      "patterns": ["\\b(?:nhan lai|lay lai|rut|giai phong|mo khoa|hoan lai|nha lai|tra lai)\\b[^.!?;]{0,85}?\\b(?:tien|von|hoa hong|so du|khoan)\\b"],
+      "examples": ["nhận lại tiền", "nhả lại vốn", "giải phóng số dư"]
+    },
+    "asset_handover": {
+      "meaning": "Yêu cầu giao hoặc cho bên khác mang tài sản đi; cần xác định thanh toán và vai trò trước khi cảnh báo.",
+      "patterns": [
+        "\\b(?:ban giao|giao|trao|dua)\\s+(?!(?:dich|tiep|luu|viec|nhiem vu|quyen|trach nhiem|bai tap)\\b)[^.!?;]{1,110}",
+        "\\bcho\\s+(?:nguoi|tai xe|ben van chuyen)\\b[^.!?;]{0,30}\\b(?:mang|lay|cho)\\b[^.!?;]{1,75}",
+        "\\bde\\s+(?:tai xe|nguoi den lay)\\b[^.!?;]{0,25}\\b(?:mang|lay)\\b[^.!?;]{1,75}"
+      ],
+      "examples": ["giao máy", "cho người tới mang chiếc đàn đi", "để tài xế lấy chiếc tủ"]
+    },
+    "payment_unconfirmed": {
+      "meaning": "Lời báo chưa nhận/chưa xác nhận tiền, không chứng minh bên kia chưa chuyển hoặc biên lai giả.",
+      "patterns": ["\\b(?:chua|khong)\\s+(?:nhan(?: duoc)?|thay|xac nhan|bao co|ghi nhan)\\b[^.!?;]{0,60}\\b(?:tien|khoan thanh toan|thanh toan)\\b"],
+      "examples": ["chưa thấy tiền vào", "chưa báo có tiền", "chưa ghi nhận thanh toán"]
+    },
+    "optional_purchase": {
+      "meaning": "Lời nêu mua tùy chọn hoặc phủ nhận quan hệ bắt buộc, không được tự nối với việc trả vốn.",
+      "patterns": ["khong anh huong|khong bat buoc|tuy chon|khong phai (?:la )?dieu kien|khong can mua"],
+      "examples": ["không ảnh hưởng việc hoàn tiền", "không phải điều kiện để nhận lại vốn"]
+    }
+  }
+}

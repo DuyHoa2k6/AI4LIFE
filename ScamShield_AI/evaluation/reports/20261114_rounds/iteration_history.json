@@ -1,0 +1,32 @@
+{
+  "budget": {
+    "max_iterations": 3,
+    "max_configurations": 2,
+    "max_inference_requests": 500,
+    "max_wall_seconds": 1200
+  },
+  "attempted_iterations": [
+    {
+      "id": 0,
+      "type": "baseline",
+      "n": 51
+    },
+    {
+      "id": 1,
+      "type": "candidate_policy_only",
+      "n": 51,
+      "training": false,
+      "promoted": false
+    }
+  ],
+  "model_calls": 204,
+  "loop_stop_reason": "No supported-success improvement; lower coverage; no reviewed new training data. Do not try to memorize public cases.",
+  "gates": {
+    "A_pipeline": "passed",
+    "B_finetuned_on_reviewed_new_data": "not_met",
+    "C_independent_generalization": "not_measured"
+  },
+  "checkpoint_changed": false,
+  "reference_risk_labels_changed": false,
+  "blind_holdout_available": false
+}

@@ -1,0 +1,17 @@
+{
+  "backend\\main.py": "7b56846f0030e658d908ea7b2693c37fd84d4771656aece1ad75b96b01232427",
+  "backend\\retrieval.py": "f231192dabce625411df51dd20f35660057899e3276bbe220c290ea2ec9a9217",
+  "backend\\url_network.py": "c791ce4195914af38f47a361e4621bd9918e6c45ffca3573940544aa33240e4a",
+  "backend\\urls.py": "8567b77f756d82d8513860214ea2a7307a86f6db36854b7add030108d4490878",
+  "backend\\local_reasoning\\support.py": "ef41fbbf4e75e25b776b008b8c4a79971fa495a04a7c42c6c65f9d404a2200ee",
+  "backend\\local_reasoning\\engine.py": "d962f4beda8dd54303f7ca1cbb7a81654f61cc83efd7864dd13fc0d8f9e1d139",
+  "backend\\local_reasoning\\adapter.py": "2786f997c2f4eeaf1cea2ab2145678cd4ffb51b1573322cf9803eb6e71a2bccc",
+  "backend\\local_reasoning\\schema.py": "e3368e6353f308f50bd02c84bedc581aa9c9c055a1e297ac2c6bf2b56697bf9f",
+  "extension\\result_view.js": "327a84676da9b434d375d38b1350a7b3af8303d34d6751a232c1e721d04c5bea",
+  "knowledge\\url\\domain_references.json": "e573856ade83f08edb03b7609cc507b582770aaa972d03bc94c74ce824679882",
+  "..\\data\\knowledge_sources.jsonl": "474ca2b7e0ca3c472ab109618b2d4d10f91bf86e6267ef5baa3c0d62bee0c8ed",
+  "..\\data\\v2\\rulebook.json": "ce94bff924394ace1f3c4c58a0cfb6f5b40e4eca5e81da7a397764689ec8c181",
+  "..\\data\\v2\\fact_rules.json": "77db454597dc3f9f7a142a20279839daab8f25ec31e722158e32f5a4af0f2684",
+  "..\\data\\v2\\fact_templates.json": "3b707c643da07e1cb763897e830f7bf82e48ad90ea22d771dc51032296486d06",
+  "..\\data\\v2\\fact_catalog.json": "af68894e20b4e4c0c711dede5732513c9625962cd74ffcb0c4eb2de0c9250939"
+}

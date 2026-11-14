@@ -1,0 +1,264 @@
+{
+  "scope": "30 public synthetic functional checks; six behavior families; authored judgments, not independent real-user accuracy",
+  "configuration": {
+    "model": "gemini-3.5-flash-lite",
+    "mode": "two_pass",
+    "timeout_s": "20",
+    "total_timeout_s": "45",
+    "retries": 1,
+    "output_format": "auto",
+    "inter_request_pause_s": 3.0,
+    "service_error_limit": 30
+  },
+  "n": 30,
+  "executed": 30,
+  "successful": 25,
+  "errors": 5,
+  "not_run": 0,
+  "correct": 20,
+  "rate_all_planned": 0.6666666666666666,
+  "groups": {
+    "transfer_funds": {
+      "label": "Chuyển tiền",
+      "n": 5,
+      "executed": 5,
+      "successful": 4,
+      "correct": 2,
+      "errors": 1,
+      "not_run": 0,
+      "outcomes": {
+        "high": 1,
+        "error": 1,
+        "need_context": 3
+      },
+      "latency_all_executed": {
+        "n": 5,
+        "p50_ms": 16817.543899989687,
+        "p95_ms": 31848.66769996006
+      }
+    },
+    "share_auth_code": {
+      "label": "Giao mã/mật khẩu",
+      "n": 5,
+      "executed": 5,
+      "successful": 5,
+      "correct": 5,
+      "errors": 0,
+      "not_run": 0,
+      "outcomes": {
+        "high": 2,
+        "clear": 2,
+        "need_context": 1
+      },
+      "latency_all_executed": {
+        "n": 5,
+        "p50_ms": 13347.677399986424,
+        "p95_ms": 31410.155699995812
+      }
+    },
+    "grant_access": {
+      "label": "Cấp quyền",
+      "n": 5,
+      "executed": 5,
+      "successful": 4,
+      "correct": 2,
+      "errors": 1,
+      "not_run": 0,
+      "outcomes": {
+        "need_context": 1,
+        "error": 1,
+        "clear": 2,
+        "suspicious": 1
+      },
+      "latency_all_executed": {
+        "n": 5,
+        "p50_ms": 10298.45750000095,
+        "p95_ms": 21888.460499991197
+      }
+    },
+    "install_app": {
+      "label": "Cài ứng dụng",
+      "n": 5,
+      "executed": 5,
+      "successful": 4,
+      "correct": 4,
+      "errors": 1,
+      "not_run": 0,
+      "outcomes": {
+        "high": 1,
+        "suspicious": 1,
+        "clear": 1,
+        "error": 1,
+        "need_context": 1
+      },
+      "latency_all_executed": {
+        "n": 5,
+        "p50_ms": 15621.104700025171,
+        "p95_ms": 16166.221599967685
+      }
+    },
+    "inducement": {
+      "label": "Lời dụ/điều kiện",
+      "n": 5,
+      "executed": 5,
+      "successful": 4,
+      "correct": 4,
+      "errors": 1,
+      "not_run": 0,
+      "outcomes": {
+        "error": 1,
+        "high": 1,
+        "clear": 2,
+        "need_context": 1
+      },
+      "latency_all_executed": {
+        "n": 5,
+        "p50_ms": 6845.72099999059,
+        "p95_ms": 17479.686499980744
+      }
+    },
+    "other": {
+      "label": "Hành vi khác",
+      "n": 5,
+      "executed": 5,
+      "successful": 4,
+      "correct": 3,
+      "errors": 1,
+      "not_run": 0,
+      "outcomes": {
+        "need_context": 2,
+        "error": 1,
+        "clear": 2
+      },
+      "latency_all_executed": {
+        "n": 5,
+        "p50_ms": 13810.735600010958,
+        "p95_ms": 23668.536900018808
+      }
+    }
+  },
+  "matrix": {
+    "scam": {
+      "high": 5,
+      "need_context": 2,
+      "error": 2
+    },
+    "suspicious": {
+      "error": 2,
+      "suspicious": 1
+    },
+    "normal": {
+      "need_context": 2,
+      "clear": 9,
+      "error": 1
+    },
+    "uncertain": {
+      "need_context": 5,
+      "suspicious": 1
+    }
+  },
+  "outcomes": {
+    "high": 5,
+    "need_context": 9,
+    "error": 5,
+    "suspicious": 2,
+    "clear": 9
+  },
+  "error_counts": {
+    "PROVIDER_UNAVAILABLE": 2,
+    "PROVIDER_TIMEOUT": 2,
+    "EVIDENCE_INVALID": 1
+  },
+  "error_stages": {
+    "observation": 1,
+    "review": 3,
+    "pipeline": 1
+  },
+  "provider_attempts": 63,
+  "provider_http_responses": {
+    "200": 55,
+    "503": 6
+  },
+  "latency_all_executed": {
+    "n": 30,
+    "p50_ms": 13749.018299975432,
+    "p95_ms": 31410.155699995812
+  },
+  "latency_successful": {
+    "n": 25,
+    "p50_ms": 13347.677399986424,
+    "p95_ms": 25113.795499957632
+  },
+  "first_request_ms": 16817.543899989687,
+  "warm_api_observed": {
+    "n": 29,
+    "p50_ms": 13749.018299975432,
+    "p95_ms": 31410.155699995812
+  },
+  "high": {
+    "TP": 5,
+    "FP": 0,
+    "FN_including_errors_or_not_run": 4,
+    "precision": 1.0,
+    "recall_all_planned": 0.5555555555555556
+  },
+  "exact_quotes": 43,
+  "quote_count": 43,
+  "action_coverage_cases": [],
+  "normal_warnings": [],
+  "normal_need_context": [
+    "SG-13",
+    "SG-14"
+  ],
+  "scam_not_high": [
+    "SG-31",
+    "SG-51",
+    "SG-61",
+    "SG-12"
+  ],
+  "scam_error_or_not_run": [
+    "SG-51",
+    "SG-12"
+  ],
+  "uncertain_missing_questions": [],
+  "source_status_counts": {
+    "no_approved_sources": 25
+  },
+  "sources_returned": 0,
+  "usage_totals": {
+    "prompt_tokens": 102040,
+    "completion_tokens": 45279,
+    "total_tokens": 147319
+  },
+  "batch_wall_ms": 537175.2577999723,
+  "lock_valid": true,
+  "not_measured": [
+    "real official-source retrieval quality",
+    "browser/extension end-to-end latency",
+    "live concurrency/load",
+    "full semantic accuracy of eight answers",
+    "independent accuracy or SLA"
+  ],
+  "stage_times": {
+    "first_provider": {
+      "n": 25,
+      "p50_ms": 3548.225399979856,
+      "p95_ms": 16939.544500026386
+    },
+    "retrieval_parallel": {
+      "n": 25,
+      "p50_ms": 3.542100021149963,
+      "p95_ms": 7.798400009050965
+    },
+    "second_provider": {
+      "n": 25,
+      "p50_ms": 4725.899500015657,
+      "p95_ms": 12939.131300023291
+    },
+    "verification_render": {
+      "n": 25,
+      "p50_ms": 0.6375000230036676,
+      "p95_ms": 2.6723999762907624
+    }
+  }
+}

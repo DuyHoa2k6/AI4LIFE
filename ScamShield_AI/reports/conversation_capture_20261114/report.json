@@ -1,0 +1,209 @@
+{
+  "scope": "Real Chrome unpacked extension on local synthetic chat fixture only. No risk model or backend.",
+  "checks": [
+    {
+      "name": "popup injects collection only; no risk content loaded",
+      "passed": true
+    },
+    {
+      "name": "before explicit start no messages",
+      "passed": true
+    },
+    {
+      "name": "A/C exact alternating authors and group of three",
+      "passed": true
+    },
+    {
+      "name": "no outside or composer text",
+      "passed": true
+    },
+    {
+      "name": "B inheritance only explicit author group",
+      "passed": true
+    },
+    {
+      "name": "D/E identical names not same account; repeated text retained",
+      "passed": true
+    },
+    {
+      "name": "fallback matching requires sender time text AND adjacent stable anchor",
+      "passed": true
+    },
+    {
+      "name": "F reload dedup; old messages removed from DOM retained",
+      "passed": true
+    },
+    {
+      "name": "F old history sorted by overlapping DOM not first_seen",
+      "passed": true
+    },
+    {
+      "name": "G reused DOM node keeps two messages",
+      "passed": true
+    },
+    {
+      "name": "H quote separate from replying author text",
+      "passed": true
+    },
+    {
+      "name": "I multiline emoji image and URL metadata only",
+      "passed": true
+    },
+    {
+      "name": "forward content separate",
+      "passed": true
+    },
+    {
+      "name": "J edit preview updated, not duplicate",
+      "passed": true
+    },
+    {
+      "name": "J recall scrubs previous body in default JSON",
+      "passed": true
+    },
+    {
+      "name": "K changed conversation stopped before mixed data",
+      "passed": true
+    },
+    {
+      "name": "L unknown author/time explicit and not merged",
+      "passed": true
+    },
+    {
+      "name": "pause disconnects and does not read new messages",
+      "passed": true
+    },
+    {
+      "name": "resume explicitly observes visible messages again",
+      "passed": true
+    },
+    {
+      "name": "M fast finalize flushes tail",
+      "passed": true
+    },
+    {
+      "name": "loading bounded; not finalized silently",
+      "passed": true
+    },
+    {
+      "name": "N memory byte limit pauses with explicit coverage",
+      "passed": true
+    },
+    {
+      "name": "O panel hidden and input excluded",
+      "passed": true
+    },
+    {
+      "name": "visibility excludes below-scrollport messages",
+      "passed": true
+    },
+    {
+      "name": "700ms stopped-scroll feedback",
+      "passed": true
+    },
+    {
+      "name": "scroll observed all 18, never auto-scrolled",
+      "passed": true
+    },
+    {
+      "name": "capture scope recognizes actual ancestor scrollbar",
+      "passed": true
+    },
+    {
+      "name": "snapshot stable after finalize",
+      "passed": true
+    },
+    {
+      "name": "actual browser TXT download matches JSON snapshot",
+      "passed": true
+    },
+    {
+      "name": "narrow viewport usable scrollable panel",
+      "passed": true
+    },
+    {
+      "name": "no observation after freeze",
+      "passed": true
+    },
+    {
+      "name": "zero backend/model fetch attempts in extension",
+      "passed": true
+    },
+    {
+      "name": "zero page fetch/XHR attempts",
+      "passed": true
+    },
+    {
+      "name": "CDP observed no POST or external HTTP request carrying conversation",
+      "passed": true
+    },
+    {
+      "name": "no persistent conversation storage permissions",
+      "passed": true
+    },
+    {
+      "name": "freeze disconnects capture observers intervals and listeners",
+      "passed": true
+    },
+    {
+      "name": "clear removes snapshot and download access",
+      "passed": true
+    },
+    {
+      "name": "unsupported region rejected without whole-page fallback",
+      "passed": true
+    }
+  ],
+  "timings": [
+    17.504100000000108,
+    14.557199999999966,
+    21.80079999999998,
+    19.257600000000366,
+    16.976900000000114,
+    25.068899999999758,
+    12.95530000000008,
+    24.118599999999788,
+    21.52269999999953,
+    14.110499999999774,
+    26.270400000000336,
+    22.091699999999946,
+    10.741799999999785,
+    21.184400000000096,
+    33.5041999999994,
+    23.650000000001455,
+    21.63889999999992
+  ],
+  "browser": "Chrome/157.0.8103.51",
+  "heap_before_injection": {
+    "usedSize": 446012,
+    "totalSize": 1048576,
+    "embedderHeapUsedSize": 1385848,
+    "backingStorageSize": 6
+  },
+  "memory": {
+    "batches": 8,
+    "total_processing_ms": 6.500000014901161,
+    "max_batch_ms": 1.3999999985098839,
+    "estimated_session_bytes": 10764
+  },
+  "network": {
+    "observed_requests": 2,
+    "post_requests": 0,
+    "external_http_requests": 0
+  },
+  "heap_after_tests": {
+    "usedSize": 2348148,
+    "totalSize": 6291456,
+    "embedderHeapUsedSize": 40075632,
+    "backingStorageSize": 387085
+  },
+  "cleanup": {
+    "capture_listeners": 0,
+    "intervals": 0,
+    "observers": 0
+  },
+  "actual_websites_verified": [],
+  "completed": true,
+  "p50_finalize_ms": 21.52269999999953,
+  "p95_finalize_ms": 33.5041999999994
+}

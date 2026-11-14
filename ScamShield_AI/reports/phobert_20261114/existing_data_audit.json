@@ -1,0 +1,14 @@
+{
+  "canonical": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\data\\v2\\release_final\\pilot.jsonl",
+  "sha256": "e5fc83e39bc2dc0a2ba809cfe859673df7f46a8cfbd0fea6453a79c58f07e8d3",
+  "samples": 70,
+  "review_status": {
+    "weak_label": 70
+  },
+  "span_review": {
+    "weak_label": 356
+  },
+  "training_eligible_from_manifest": 0,
+  "old_holdout": "not opened",
+  "archives": "not merged or counted as new independent data"
+}

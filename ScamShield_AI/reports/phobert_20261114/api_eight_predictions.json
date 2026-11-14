@@ -1,0 +1,1625 @@
+[
+  {
+    "id": "01",
+    "text": "Anh đổi tài khoản nhắn tin rồi nhé. Anh đang cần thanh toán gấp nên em chuyển giúp vào tài khoản của người này. Đừng gọi số cũ, máy anh đang hỏng. Chuyển xong anh giải thích sau.",
+    "http_status": 200,
+    "api_ms": 546.53959999996,
+    "response": {
+      "case_context": {
+        "case_id": "ba3339e7-070e-4ae5-b937-b2d063d54504",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "e51c15c8a6eb38ff672bae513dc3f81253f2c39a9ecd2cf18aa43c33626d5cdb",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "đổi tài khoản nhắn tin rồi nhé. Anh đang cần chuyển gọi số cũ, máy anh đang hỏng. Chuyển",
+          "evidence_refs": [
+            "e0",
+            "e1",
+            "e2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "đổi tài khoản nhắn tin rồi nhé. Anh đang cần chuyển gọi số cũ, máy anh đang hỏng. Chuyển",
+          "evidence_refs": [
+            "e0",
+            "e1",
+            "e2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "other",
+          "description": "đổi tài khoản nhắn tin rồi nhé. Anh đang cần",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "đổi tài khoản nhắn tin rồi nhé. Anh đang cần",
+              "start": 4,
+              "end": 48
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e1",
+          "action": "share_auth_code",
+          "description": "chuyển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "chuyển",
+              "start": 71,
+              "end": 77
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e2",
+          "action": "share_auth_code",
+          "description": "gọi số cũ, máy anh đang hỏng. Chuyển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "gọi số cũ, máy anh đang hỏng. Chuyển",
+              "start": 117,
+              "end": 153
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 3,
+        "situation_links": 3,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 537.7865999980713,
+          "preprocessing": 473.50249999726657,
+          "inference": 64.14570000197273,
+          "verification_reasoning": 0.1340000017080456,
+          "total": 537.7865999980713,
+          "retrieval": 0.6505999990622513,
+          "url": 0.0,
+          "support_total": 0.927500004763715
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6505999990622513
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "display_action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "đổi tài khoản nhắn tin rồi nhé. Anh đang cần",
+              "start": 4,
+              "end": 48
+            }
+          ],
+          "explanation": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "02",
+    "text": "Khoản rút của bạn đã được duyệt nhưng đang bị giữ ở bước bảo chứng. Bạn phải nộp thêm một khoản thì hệ thống mới trả toàn bộ. Nếu bỏ dở, số tiền đã nộp trước đó sẽ không được hoàn lại.",
+    "http_status": 200,
+    "api_ms": 535.7197999983327,
+    "response": {
+      "case_context": {
+        "case_id": "9bf89be8-2c49-4676-9fd3-b2c507ffbcd5",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "e655d2afbe9fa4ec72c00cc2b208d8d94e1c3a3f1e30e642b2f5c94c29c1b237",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "rút của bạn đã được duyệt trả hoàn",
+          "evidence_refs": [
+            "e0",
+            "e3",
+            "e5"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "bảo chứng nộp nộp",
+          "evidence_refs": [
+            "e1",
+            "e2",
+            "e4"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "rút của bạn đã được duyệt bảo chứng nộp trả nộp hoàn",
+          "evidence_refs": [
+            "e0",
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "other",
+          "description": "rút của bạn đã được duyệt",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "rút của bạn đã được duyệt",
+              "start": 6,
+              "end": 31
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e1",
+          "action": "other",
+          "description": "bảo chứng",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "bảo chứng",
+              "start": 57,
+              "end": 66
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e2",
+          "action": "transfer_funds",
+          "description": "nộp",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nộp",
+              "start": 77,
+              "end": 80
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e3",
+          "action": "other",
+          "description": "trả",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "trả",
+              "start": 113,
+              "end": 116
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e4",
+          "action": "transfer_funds",
+          "description": "nộp",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nộp",
+              "start": 148,
+              "end": 151
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e5",
+          "action": "other",
+          "description": "hoàn",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "hoàn",
+              "start": 175,
+              "end": 179
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 6,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 6,
+        "situation_links": 21,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 531.9932999991579,
+          "preprocessing": 432.86979999538744,
+          "inference": 98.94650000205729,
+          "verification_reasoning": 0.17389999993611127,
+          "total": 531.9932999991579,
+          "retrieval": 0.5269000030239113,
+          "url": 0.0,
+          "support_total": 0.6561999980476685
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5269000030239113
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "display_action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "bảo chứng",
+              "start": 57,
+              "end": 66
+            }
+          ],
+          "explanation": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "03",
+    "text": "Em đang xử lý hoàn phí vận chuyển cho chị. Chị đọc mã vừa nhận giúp em. Tin nhắn ghi mã đăng nhập là mẫu thông báo chung thôi, chị không đọc thì em không hoàn tiền được.",
+    "http_status": 200,
+    "api_ms": 542.9052000035881,
+    "response": {
+      "case_context": {
+        "case_id": "1c43d54f-8270-46bf-8703-451e2d75090c",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "5182c52ea64bf2657f5b17accdb6f3dc58769a474f3798d7e29917fd5ffeef45",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "clear",
+      "summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "hoàn nhận giúp em. Tin nhắn ghi mã đăng nhập là mẫu hoàn",
+          "evidence_refs": [
+            "e0",
+            "e2",
+            "e3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "vận chuyển",
+          "evidence_refs": [
+            "e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "hoàn vận chuyển nhận giúp em. Tin nhắn ghi mã đăng nhập là mẫu hoàn",
+          "evidence_refs": [
+            "e0",
+            "e1",
+            "e2",
+            "e3"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "other",
+          "description": "hoàn",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "hoàn",
+              "start": 14,
+              "end": 18
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e1",
+          "action": "share_auth_code",
+          "description": "vận chuyển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "vận chuyển",
+              "start": 23,
+              "end": 33
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e2",
+          "action": "other",
+          "description": "nhận giúp em. Tin nhắn ghi mã đăng nhập là mẫu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận giúp em. Tin nhắn ghi mã đăng nhập là mẫu",
+              "start": 58,
+              "end": 104
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e3",
+          "action": "other",
+          "description": "hoàn",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "hoàn",
+              "start": 154,
+              "end": 158
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Nếu cần, xác minh lại qua kênh quen dùng."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "clear",
+        "preliminary_findings": 4,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 4,
+        "situation_links": 6,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 539.5041000010679,
+          "preprocessing": 473.38520000630524,
+          "inference": 66.0072999962722,
+          "verification_reasoning": 0.10940000356640667,
+          "total": 539.5041000010679,
+          "retrieval": 0.5817999990540557,
+          "url": 0.0,
+          "support_total": 0.7186000002548099
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5817999990540557
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Trong phạm vi đã phân tích, chưa thấy yêu cầu có cơ chế gây hại được nhận diện.",
+      "display_action": "Nếu cần, xác minh lại qua kênh quen dùng.",
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "04",
+    "text": "Công việc của em là nhận tiền khách vào tài khoản cá nhân rồi chuyển tiếp theo danh sách công ty gửi. Em giữ lại phần hoa hồng. Nếu ngân hàng hỏi, cứ nói người quen trả nợ, không cần nhắc đến công việc.",
+    "http_status": 200,
+    "api_ms": 548.3766000033938,
+    "response": {
+      "case_context": {
+        "case_id": "5c9ef9e5-9f29-415c-b493-e96688f87b15",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "d3a3597cf79ee05e15a3be39426dfe865593b36ba0cdf946cb0453a8624fa8f8",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "nhận tiền khách vào tài khoản cá nhân rồi chuyển tiếp theo danh sách công ty gửi trả",
+          "evidence_refs": [
+            "e0",
+            "e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "nhận tiền khách vào tài khoản cá nhân rồi chuyển tiếp theo danh sách công ty gửi trả",
+          "evidence_refs": [
+            "e0",
+            "e1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "share_auth_code",
+          "description": "nhận tiền khách vào tài khoản cá nhân rồi chuyển tiếp theo danh sách công ty gửi",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhận tiền khách vào tài khoản cá nhân rồi chuyển tiếp theo danh sách công ty gửi",
+              "start": 20,
+              "end": 100
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e1",
+          "action": "other",
+          "description": "trả",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "trả",
+              "start": 165,
+              "end": 168
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 1,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 545.0935999979265,
+          "preprocessing": 484.59639999782667,
+          "inference": 60.390800004824996,
+          "verification_reasoning": 0.10439999459777027,
+          "total": 545.0935999979265,
+          "retrieval": 0.5421000023488887,
+          "url": 0.0,
+          "support_total": 0.6704999977955595
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5421000023488887
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "display_action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "trả",
+              "start": 165,
+              "end": 168
+            }
+          ],
+          "explanation": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "05",
+    "text": "Nếu em tin anh thì đứng tên vay giúp anh lần này. Anh sẽ trả góp hằng tháng, em không phải lo. Đừng kể với gia đình vì họ không hiểu chuyện của mình. Nếu em từ chối thì anh biết em chưa từng nghiêm túc.",
+    "http_status": 503,
+    "api_ms": 561.0847999996622,
+    "response": {
+      "code": "PHOBERT_ANALYSIS_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "a2965b41-eb77-4cbc-be3f-63dfec8eb34a",
+      "diagnostic": {
+        "stage": "phobert",
+        "kind": "unsupported"
+      }
+    }
+  },
+  {
+    "id": "06",
+    "text": "Tài khoản của anh có giao dịch bất thường. Anh bật ứng dụng điều khiển từ xa và cấp quyền cho tôi kiểm tra. Trong lúc kết nối, mở ngân hàng để tôi đối chiếu số dư. Anh không cần gọi tổng đài xác minh nữa.",
+    "http_status": 200,
+    "api_ms": 516.6733000005479,
+    "response": {
+      "case_context": {
+        "case_id": "df6cf141-14a3-45d4-920c-ee98ac2a4153",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "cb99e7ff0c77ebb5deabde57407f637471e031c4c9e3fb4cd43e246f85fb2270",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "mở ngân hàng để tôi đối chiếu số dư. Anh không cần gọi",
+          "evidence_refs": [
+            "e0"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "mở ngân hàng để tôi đối chiếu số dư. Anh không cần gọi",
+          "evidence_refs": [
+            "e0"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "other",
+          "description": "mở ngân hàng để tôi đối chiếu số dư. Anh không cần gọi",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "mở ngân hàng để tôi đối chiếu số dư. Anh không cần gọi",
+              "start": 127,
+              "end": 181
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "suspicious",
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 1,
+        "situation_links": 0,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 512.9402000020491,
+          "preprocessing": 446.2996000002022,
+          "inference": 66.53670000378042,
+          "verification_reasoning": 0.10199999815085903,
+          "total": 512.9402000020491,
+          "retrieval": 0.5583999954978935,
+          "url": 0.0,
+          "support_total": 0.6934999983059242
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5583999954978935
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh.",
+      "display_action": "Xác minh mục đích, phạm vi quyền và đầu mối độc lập trước khi thực hiện.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "mở ngân hàng để tôi đối chiếu số dư. Anh không cần gọi",
+              "start": 127,
+              "end": 181
+            }
+          ],
+          "explanation": "Có yêu cầu liên quan đến quyền thiết bị, giấy tờ hoặc nghĩa vụ tài chính cần xác minh."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "07",
+    "text": "Tôi có đoạn ghi hình của bạn và biết nơi bạn làm việc. Chuyển tiền thì tôi không gửi cho đồng nghiệp. Dù bạn nói hình bị ghép, người khác vẫn sẽ xem. Đừng báo cho ai.",
+    "http_status": 200,
+    "api_ms": 555.1759000009042,
+    "response": {
+      "case_context": {
+        "case_id": "4ad30ed3-8e36-42a4-9b02-8dfeb28a81b5",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "e32825dab8608688ef93e0be5761f944ea8cf1f719bce2bb2fa3af457afd9a1e",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Người gửi yêu cầu giao mã đăng nhập hoặc thông tin truy cập; bạn có thể mất quyền kiểm soát tài khoản.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "Chuyển gửi",
+          "evidence_refs": [
+            "e0",
+            "e1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Chuyển gửi",
+          "evidence_refs": [
+            "e0",
+            "e1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "share_auth_code",
+          "description": "Chuyển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển",
+              "start": 55,
+              "end": 61
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e1",
+          "action": "share_auth_code",
+          "description": "gửi",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "gửi",
+              "start": 81,
+              "end": 84
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Không giao mã hoặc mật khẩu; tự mở ứng dụng chính thức để kiểm tra."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 2,
+        "situation_links": 1,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 551.5362999940407,
+          "preprocessing": 486.80030000105035,
+          "inference": 64.6234999949229,
+          "verification_reasoning": 0.11040000390494242,
+          "total": 551.5362999940407,
+          "retrieval": 0.5076000015833415,
+          "url": 0.0,
+          "support_total": 0.6348000024445355
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.5076000015833415
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Người gửi yêu cầu giao mã đăng nhập hoặc thông tin truy cập; bạn có thể mất quyền kiểm soát tài khoản.",
+      "display_action": "Không giao mã hoặc mật khẩu; tự mở ứng dụng chính thức để kiểm tra.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "gửi",
+              "start": 81,
+              "end": 84
+            }
+          ],
+          "explanation": "Người gửi yêu cầu giao mã đăng nhập hoặc thông tin truy cập; bạn có thể mất quyền kiểm soát tài khoản."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  },
+  {
+    "id": "08",
+    "text": "Em cứ đi theo xe bên anh, đến nơi mới ký hợp đồng. Hộ chiếu giao trưởng nhóm giữ. Muốn nghỉ hoặc về thì phải trả hết chi phí công ty ứng, số tiền tới nơi mới tính. Đừng báo lịch trình cho gia đình.",
+    "http_status": 200,
+    "api_ms": 561.4124999992782,
+    "response": {
+      "case_context": {
+        "case_id": "1cb80100-bc59-4970-90da-5056241ac709",
+        "situation_id": "analysis",
+        "revision": 1,
+        "content_version": "5fb14caa83ee82277cc36ee19b9e44e36d9811db90c3930de7045bce4354b539",
+        "question_ids": [
+          "clarify:0"
+        ],
+        "clarification_status": "initial"
+      },
+      "schema_version": "2.0",
+      "mode": "local_rules",
+      "risk_status": "high",
+      "summary": "Việc giao giấy tờ liên quan đến điều kiện hạn chế trở về, có nguy cơ làm mất quyền tự quyết.",
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "giữ nghỉ về thì phải trả hết chi phí công ty ứng",
+          "evidence_refs": [
+            "e2",
+            "e3",
+            "e4"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "inferred",
+          "text": "ký giao tới",
+          "evidence_refs": [
+            "e0",
+            "e1",
+            "e5"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "ký giao giữ nghỉ về thì phải trả hết chi phí công ty ứng tới",
+          "evidence_refs": [
+            "e0",
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "e0",
+          "action": "other",
+          "description": "ký",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "ký",
+              "start": 38,
+              "end": 40
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e1",
+          "action": "other",
+          "description": "giao",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "giao",
+              "start": 60,
+              "end": 64
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e2",
+          "action": "other",
+          "description": "giữ",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "giữ",
+              "start": 77,
+              "end": 80
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e3",
+          "action": "other",
+          "description": "nghỉ",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nghỉ",
+              "start": 87,
+              "end": 91
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e4",
+          "action": "other",
+          "description": "về thì phải trả hết chi phí công ty ứng",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "về thì phải trả hết chi phí công ty ứng",
+              "start": 97,
+              "end": 136
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "e5",
+          "action": "other",
+          "description": "tới",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "tới",
+              "start": 146,
+              "end": 149
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Nếu an toàn, giữ quyền kiểm soát giấy tờ và liên lạc với người tin cậy."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "local_rules",
+        "routing": "local_backend",
+        "rules_version": "phobert-graph-rules-1.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": "high",
+        "preliminary_findings": 6,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "observation_repairs": 0,
+        "situation_facts": 6,
+        "situation_links": 22,
+        "information_gaps": 0,
+        "discarded_live_findings": 0,
+        "live_status": "not_used",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "local_total": 557.6653000025544,
+          "preprocessing": 481.6883000021335,
+          "inference": 75.77360000141198,
+          "verification_reasoning": 0.20079999376321211,
+          "total": 557.6653000025544,
+          "retrieval": 0.6818999972892925,
+          "url": 0.0,
+          "support_total": 0.8127999972202815
+        },
+        "decision_version": "phobert-structured-1.0-support",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "disabled",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.0
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 0.6818999972892925
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [
+        "Phân tích bằng PhoBERT cục bộ và quy tắc trên cấu trúc dự đoán; chưa xác minh danh tính ngoài đời.",
+        "PhoBERT đang ở chế độ nghiên cứu; điểm mô hình chưa được hiệu chuẩn.",
+        "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+      ],
+      "url_analysis": [],
+      "url_uses": [],
+      "display_summary": "Việc giao giấy tờ liên quan đến điều kiện hạn chế trở về, có nguy cơ làm mất quyền tự quyết.",
+      "display_action": "Nếu an toàn, giữ quyền kiểm soát giấy tờ và liên lạc với người tin cậy.",
+      "risk_indicators": [
+        {
+          "kind": "local_rule_basis",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "ký",
+              "start": 38,
+              "end": 40
+            },
+            {
+              "message_id": "m1",
+              "quote": "nghỉ",
+              "start": 87,
+              "end": 91
+            }
+          ],
+          "explanation": "Việc giao giấy tờ liên quan đến điều kiện hạn chế trở về, có nguy cơ làm mất quyền tự quyết."
+        }
+      ],
+      "safety_urgency": "undetermined",
+      "analysis_status": "complete"
+    }
+  }
+]

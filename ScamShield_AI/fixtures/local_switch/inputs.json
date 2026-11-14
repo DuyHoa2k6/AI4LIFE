@@ -1,0 +1,74 @@
+[
+  {
+    "id": "P01",
+    "input": {
+      "text": "Gửi mã OTP cho tôi."
+    }
+  },
+  {
+    "id": "P02",
+    "input": {
+      "text": "Cảnh báo: đừng gửi OTP."
+    }
+  },
+  {
+    "id": "P03",
+    "input": {
+      "text": "Đọc sáu số vừa hiện để nhận tiền."
+    }
+  },
+  {
+    "id": "P04",
+    "input": {
+      "text": "Chưa thấy tiền về, nhưng cứ giao máy trước."
+    }
+  },
+  {
+    "id": "P05",
+    "input": {
+      "text": "Tôi đã kiểm tra và nhận đủ tiền. Anh giao máy nhé."
+    }
+  },
+  {
+    "id": "P06",
+    "input": {
+      "text": "Chuyển thêm tiền để rút số dư."
+    }
+  },
+  {
+    "id": "P07",
+    "input": {
+      "text": "Gửi ảnh CCCD qua chat."
+    }
+  },
+  {
+    "id": "P08",
+    "input": {
+      "text": "Mây bay trên núi."
+    }
+  },
+  {
+    "id": "P09",
+    "input": {
+      "text": "Hiện tại tôi bị giữ lại và không được rời đi."
+    }
+  },
+  {
+    "id": "P10",
+    "input": {
+      "text": "Hãy đi cùng và giấu gia đình."
+    }
+  },
+  {
+    "id": "P11",
+    "input": {
+      "text": "ko ck tiền trước gửi mk tk cho tôi"
+    }
+  },
+  {
+    "id": "P12",
+    "input": {
+      "text": "Bài tuyên truyền cảnh báo: có người bị ép làm việc."
+    }
+  }
+]

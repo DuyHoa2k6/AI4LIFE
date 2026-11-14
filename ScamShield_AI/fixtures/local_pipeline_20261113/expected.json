@@ -1,0 +1,240 @@
+{
+  "review_status": "authored_development_targets_not_independent",
+  "cases": [
+    {
+      "id": "VAR-N01",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N02",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N03",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N04",
+      "risk": "suspicious",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N05",
+      "risk": "suspicious",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N06",
+      "risk": "suspicious",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N07",
+      "risk": "need_context",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N08",
+      "risk": "need_context",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N09",
+      "risk": "need_context",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N10",
+      "risk": "clear",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N11",
+      "risk": "clear",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-N12",
+      "risk": "clear",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-X01",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-X02",
+      "risk": "clear",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-X03",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "VAR-X04",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "A",
+      "risk": "suspicious",
+      "required_events": [
+        "handover_asset",
+        "receive_funds"
+      ],
+      "required_relations": [
+        "before"
+      ]
+    },
+    {
+      "id": "B",
+      "risk": "clear",
+      "required_events": [
+        "handover_asset",
+        "receive_funds"
+      ],
+      "required_relations": [
+        "before"
+      ]
+    },
+    {
+      "id": "C",
+      "risk": "clear",
+      "required_events": [
+        "receive_funds",
+        "handover_asset"
+      ],
+      "required_relations": [
+        "before"
+      ]
+    },
+    {
+      "id": "D",
+      "risk": "clear",
+      "required_events": [
+        "provide_code"
+      ],
+      "required_relations": []
+    },
+    {
+      "id": "E",
+      "risk": "need_context",
+      "required_events": [
+        "provide_code"
+      ],
+      "required_relations": []
+    },
+    {
+      "id": "F",
+      "risk": "suspicious",
+      "required_events": [
+        "relationship_claim",
+        "avoid_verification"
+      ],
+      "required_relations": [
+        "reason_given_for"
+      ]
+    },
+    {
+      "id": "G",
+      "risk": "suspicious",
+      "required_events": [
+        "invite_travel_or_meeting",
+        "request_secrecy",
+        "provide_documents"
+      ],
+      "required_relations": [
+        "travel_conditioned_on_secrecy"
+      ]
+    },
+    {
+      "id": "H",
+      "risk": "clear",
+      "required_events": [
+        "offer_employment"
+      ],
+      "required_relations": []
+    },
+    {
+      "id": "K",
+      "risk": "need_context",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "L",
+      "risk": "high",
+      "required_events": [
+        "provide_code"
+      ],
+      "required_relations": []
+    },
+    {
+      "id": "M",
+      "risk": "high",
+      "required_events": [],
+      "required_relations": []
+    },
+    {
+      "id": "N",
+      "risk": "suspicious",
+      "required_events": [
+        "receive_funds",
+        "handover_asset"
+      ],
+      "required_relations": [
+        "before"
+      ]
+    },
+    {
+      "id": "P",
+      "risk": "high",
+      "required_events": [
+        "transfer_funds",
+        "receive_funds"
+      ],
+      "required_relations": [
+        "prerequisite_for"
+      ]
+    },
+    {
+      "id": "Q",
+      "risk": "high",
+      "required_events": [
+        "transfer_funds",
+        "receive_funds"
+      ],
+      "required_relations": [
+        "prerequisite_for"
+      ]
+    },
+    {
+      "id": "NOVEL-ASSET",
+      "risk": "suspicious",
+      "required_events": [],
+      "required_relations": []
+    }
+  ]
+}

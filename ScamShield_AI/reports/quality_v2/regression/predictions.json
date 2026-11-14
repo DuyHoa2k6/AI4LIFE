@@ -1,0 +1,79 @@
+[
+  {
+    "id": "TP-Q1",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 1184.2986000119708,
+    "provider_http_status": 400,
+    "provider_http_statuses": [
+      400
+    ],
+    "provider_adapter_ms": 902.3077999590896,
+    "extraction_ms": 1179.7419000067748,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "1f25bb86-fe58-48ea-84b5-1de59800990a",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "provider_status": 400
+      }
+    }
+  },
+  {
+    "id": "TP-S4",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 1272.1348000341095,
+    "provider_http_status": 400,
+    "provider_http_statuses": [
+      400
+    ],
+    "provider_adapter_ms": 696.5930999722332,
+    "extraction_ms": 1268.802400038112,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "2b9c4cc2-9310-420a-bc63-ee829d01b6d2",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "provider_status": 400
+      }
+    }
+  },
+  {
+    "id": "TP-S5",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 1206.2178999767639,
+    "provider_http_status": 400,
+    "provider_http_statuses": [
+      400
+    ],
+    "provider_adapter_ms": 611.3029000116512,
+    "extraction_ms": 1203.7820999976248,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "5f83f76a-dea0-4c91-9888-ddf203fd474d",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "provider_status": 400
+      }
+    }
+  },
+  {
+    "id": "TP-N3",
+    "executed": false,
+    "reason": "Three consecutive API/provider failures; remaining calls not sent"
+  }
+]

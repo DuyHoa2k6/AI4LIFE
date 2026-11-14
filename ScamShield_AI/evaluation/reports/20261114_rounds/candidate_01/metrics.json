@@ -1,0 +1,6589 @@
+{
+  "all": {
+    "n": 51,
+    "confusion_matrix": {
+      "clear": {
+        "clear": 5,
+        "need_context": 0,
+        "suspicious": 4,
+        "high": 2
+      },
+      "need_context": {
+        "clear": 5,
+        "need_context": 0,
+        "suspicious": 1,
+        "high": 1
+      },
+      "suspicious": {
+        "clear": 3,
+        "need_context": 0,
+        "suspicious": 3,
+        "high": 0
+      },
+      "high": {
+        "clear": 0,
+        "need_context": 0,
+        "suspicious": 5,
+        "high": 7
+      }
+    },
+    "unclassified_by_reference": {
+      "suspicious": 4,
+      "high": 4,
+      "clear": 5,
+      "need_context": 2
+    },
+    "per_risk": {
+      "clear": {
+        "tp": 5,
+        "fp": 8,
+        "fn": 11,
+        "precision": 0.38461538461538464,
+        "recall": 0.3125,
+        "f1": 0.3448275862068966,
+        "reference_support": 16
+      },
+      "need_context": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "reference_support": 9
+      },
+      "suspicious": {
+        "tp": 3,
+        "fp": 10,
+        "fn": 7,
+        "precision": 0.23076923076923078,
+        "recall": 0.3,
+        "f1": 0.2608695652173913,
+        "reference_support": 10
+      },
+      "high": {
+        "tp": 7,
+        "fp": 3,
+        "fn": 9,
+        "precision": 0.7,
+        "recall": 0.4375,
+        "f1": 0.5384615384615384,
+        "reference_support": 16
+      }
+    },
+    "macro_f1": 0.28603967247145656,
+    "macro_labels": [
+      "clear",
+      "need_context",
+      "suspicious",
+      "high"
+    ],
+    "coverage": 0.7058823529411765,
+    "supported_success_count": 9,
+    "end_to_end_supported_success_rate": 0.17647058823529413,
+    "clear_as_high": 2,
+    "high_missed": 9,
+    "false_high_on_clear": {
+      "count": 2,
+      "denominator": 16,
+      "rate": 0.125
+    },
+    "high_miss": {
+      "count": 9,
+      "denominator": 16,
+      "rate": 0.5625
+    },
+    "right_level_wrong_basis": 6,
+    "status_counts": {
+      "partial": 8,
+      "complete": 28,
+      "unsupported": 15
+    },
+    "status_rates": {
+      "partial": 0.1568627450980392,
+      "complete": 0.5490196078431373,
+      "unsupported": 0.29411764705882354
+    },
+    "evidence": {
+      "before_invalid": 0,
+      "before_denominator": 106,
+      "before_rate": 0.0,
+      "after_invalid": 0,
+      "after_denominator": 106,
+      "after_rate": 0.0
+    },
+    "attributes": {
+      "action_type": {
+        "correct": 15,
+        "total": 101,
+        "accuracy": 0.1485148514851485
+      },
+      "object_type": {
+        "correct": 18,
+        "total": 101,
+        "accuracy": 0.1782178217821782
+      },
+      "speech_act": {
+        "correct": 24,
+        "total": 101,
+        "accuracy": 0.2376237623762376
+      },
+      "polarity": {
+        "correct": 30,
+        "total": 101,
+        "accuracy": 0.297029702970297
+      },
+      "temporal_state": {
+        "correct": 26,
+        "total": 101,
+        "accuracy": 0.25742574257425743
+      },
+      "modality": {
+        "correct": 23,
+        "total": 101,
+        "accuracy": 0.22772277227722773
+      }
+    },
+    "roles": {
+      "correct": 20,
+      "total": 146,
+      "accuracy": 0.136986301369863
+    },
+    "span_action": {
+      "tp": 19,
+      "fp": 87,
+      "fn": 82,
+      "precision": 0.1792452830188679,
+      "recall": 0.18811881188118812,
+      "f1": 0.18357487922705315
+    },
+    "relations": {
+      "same_transaction": {
+        "tp": 7,
+        "fp": 105,
+        "fn": 34,
+        "precision": 0.0625,
+        "recall": 0.17073170731707318,
+        "f1": 0.0915032679738562
+      },
+      "before": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "prerequisite_for": {
+        "tp": 2,
+        "fp": 10,
+        "fn": 3,
+        "precision": 0.16666666666666666,
+        "recall": 0.4,
+        "f1": 0.23529411764705882
+      },
+      "promised_after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "threatens_unless": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "contradiction": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "state_update": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "obstructs_verification": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "transfer_via": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "controls_during": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "cross_transaction_relations": 0,
+    "redundant_or_missing_question_cases": 9,
+    "transaction_link_error_rate": 0.0,
+    "question_mismatch_rate": 0.17647058823529413,
+    "draft_count": 51,
+    "ambiguous_count": 1,
+    "human_semantic_review_count": 0,
+    "checkpoint_vocabulary_covered_count": 17,
+    "outside_checkpoint_vocabulary_count": 34,
+    "within_checkpoint_vocabulary": {
+      "n": 17,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 5,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 5
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 2,
+        "suspicious": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.7142857142857143,
+          "recall": 0.625,
+          "f1": 0.6666666666666666,
+          "reference_support": 8
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "reference_support": 3
+        },
+        "high": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 5
+        }
+      },
+      "macro_f1": 0.5166666666666666,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.8235294117647058,
+      "supported_success_count": 9,
+      "end_to_end_supported_success_rate": 0.5294117647058824,
+      "clear_as_high": 0,
+      "high_missed": 0,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 0,
+        "denominator": 5,
+        "rate": 0.0
+      },
+      "right_level_wrong_basis": 2,
+      "status_counts": {
+        "complete": 14,
+        "unsupported": 3
+      },
+      "status_rates": {
+        "complete": 0.8235294117647058,
+        "unsupported": 0.17647058823529413
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 20,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 20,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 15,
+          "total": 25,
+          "accuracy": 0.6
+        },
+        "object_type": {
+          "correct": 16,
+          "total": 25,
+          "accuracy": 0.64
+        },
+        "speech_act": {
+          "correct": 15,
+          "total": 25,
+          "accuracy": 0.6
+        },
+        "polarity": {
+          "correct": 14,
+          "total": 25,
+          "accuracy": 0.56
+        },
+        "temporal_state": {
+          "correct": 17,
+          "total": 25,
+          "accuracy": 0.68
+        },
+        "modality": {
+          "correct": 16,
+          "total": 25,
+          "accuracy": 0.64
+        }
+      },
+      "roles": {
+        "correct": 16,
+        "total": 26,
+        "accuracy": 0.6153846153846154
+      },
+      "span_action": {
+        "tp": 17,
+        "fp": 3,
+        "fn": 8,
+        "precision": 0.85,
+        "recall": 0.68,
+        "f1": 0.7555555555555555
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.42857142857142855,
+          "f1": 0.6
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.058823529411764705,
+      "draft_count": 17,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0
+    }
+  },
+  "by_domain": {
+    "contributions": {
+      "n": 5,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 2,
+          "high": 0
+        }
+      },
+      "unclassified_by_reference": {},
+      "per_risk": {
+        "clear": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "high": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        }
+      },
+      "macro_f1": 0.0,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 1.0,
+      "supported_success_count": 0,
+      "end_to_end_supported_success_rate": 0.0,
+      "clear_as_high": 0,
+      "high_missed": 2,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "right_level_wrong_basis": 0,
+      "status_counts": {
+        "complete": 3,
+        "partial": 2
+      },
+      "status_rates": {
+        "complete": 0.6,
+        "partial": 0.4
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 9,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 9,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 0,
+          "total": 12,
+          "accuracy": 0.0
+        },
+        "object_type": {
+          "correct": 0,
+          "total": 12,
+          "accuracy": 0.0
+        },
+        "speech_act": {
+          "correct": 2,
+          "total": 12,
+          "accuracy": 0.16666666666666666
+        },
+        "polarity": {
+          "correct": 2,
+          "total": 12,
+          "accuracy": 0.16666666666666666
+        },
+        "temporal_state": {
+          "correct": 2,
+          "total": 12,
+          "accuracy": 0.16666666666666666
+        },
+        "modality": {
+          "correct": 2,
+          "total": 12,
+          "accuracy": 0.16666666666666666
+        }
+      },
+      "roles": {
+        "correct": 2,
+        "total": 15,
+        "accuracy": 0.13333333333333333
+      },
+      "span_action": {
+        "tp": 0,
+        "fp": 9,
+        "fn": 12,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 0,
+          "fp": 5,
+          "fn": 5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": null,
+      "question_mismatch_rate": 0.2,
+      "draft_count": 5,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 1,
+      "outside_checkpoint_vocabulary_count": 4,
+      "within_checkpoint_vocabulary": {
+        "n": 1,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 1,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_support": 1
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          }
+        },
+        "macro_f1": 0.0,
+        "macro_labels": [
+          "clear"
+        ],
+        "coverage": 1.0,
+        "supported_success_count": 0,
+        "end_to_end_supported_success_rate": 0.0,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {
+          "complete": 1
+        },
+        "status_rates": {
+          "complete": 1.0
+        },
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 1,
+          "before_rate": 0.0,
+          "after_invalid": 0,
+          "after_denominator": 1,
+          "after_rate": 0.0
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "object_type": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "speech_act": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "polarity": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "temporal_state": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "modality": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          }
+        },
+        "roles": {
+          "correct": 0,
+          "total": 3,
+          "accuracy": 0.0
+        },
+        "span_action": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": null,
+        "question_mismatch_rate": 0.0,
+        "draft_count": 1,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "data_access": {
+      "n": 11,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 2,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 1
+        },
+        "need_context": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 3
+        }
+      },
+      "unclassified_by_reference": {
+        "need_context": 2,
+        "suspicious": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "reference_support": 3
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        },
+        "suspicious": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "reference_support": 2
+        },
+        "high": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "reference_support": 4
+        }
+      },
+      "macro_f1": 0.5125,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.7272727272727273,
+      "supported_success_count": 5,
+      "end_to_end_supported_success_rate": 0.45454545454545453,
+      "clear_as_high": 1,
+      "high_missed": 1,
+      "false_high_on_clear": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "high_miss": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "right_level_wrong_basis": 1,
+      "status_counts": {
+        "complete": 8,
+        "unsupported": 3
+      },
+      "status_rates": {
+        "complete": 0.7272727272727273,
+        "unsupported": 0.2727272727272727
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 17,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 17,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 7,
+          "total": 17,
+          "accuracy": 0.4117647058823529
+        },
+        "object_type": {
+          "correct": 7,
+          "total": 17,
+          "accuracy": 0.4117647058823529
+        },
+        "speech_act": {
+          "correct": 7,
+          "total": 17,
+          "accuracy": 0.4117647058823529
+        },
+        "polarity": {
+          "correct": 9,
+          "total": 17,
+          "accuracy": 0.5294117647058824
+        },
+        "temporal_state": {
+          "correct": 9,
+          "total": 17,
+          "accuracy": 0.5294117647058824
+        },
+        "modality": {
+          "correct": 7,
+          "total": 17,
+          "accuracy": 0.4117647058823529
+        }
+      },
+      "roles": {
+        "correct": 8,
+        "total": 22,
+        "accuracy": 0.36363636363636365
+      },
+      "span_action": {
+        "tp": 7,
+        "fp": 10,
+        "fn": 10,
+        "precision": 0.4117647058823529,
+        "recall": 0.4117647058823529,
+        "f1": 0.4117647058823529
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 1,
+          "fp": 9,
+          "fn": 4,
+          "precision": 0.1,
+          "recall": 0.2,
+          "f1": 0.13333333333333333
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 2,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.18181818181818182,
+      "draft_count": 11,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 6,
+      "outside_checkpoint_vocabulary_count": 5,
+      "within_checkpoint_vocabulary": {
+        "n": 6,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 2,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 1,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 3
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 2
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 1
+          },
+          "high": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 3
+          }
+        },
+        "macro_f1": 1.0,
+        "macro_labels": [
+          "clear",
+          "suspicious",
+          "high"
+        ],
+        "coverage": 1.0,
+        "supported_success_count": 5,
+        "end_to_end_supported_success_rate": 0.8333333333333334,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 3,
+          "rate": 0.0
+        },
+        "right_level_wrong_basis": 1,
+        "status_counts": {
+          "complete": 6
+        },
+        "status_rates": {
+          "complete": 1.0
+        },
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 7,
+          "before_rate": 0.0,
+          "after_invalid": 0,
+          "after_denominator": 7,
+          "after_rate": 0.0
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "object_type": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "speech_act": {
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          "polarity": {
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          },
+          "temporal_state": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "modality": {
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571428571428571
+          }
+        },
+        "roles": {
+          "correct": 7,
+          "total": 7,
+          "accuracy": 1.0
+        },
+        "span_action": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": 0.0,
+        "question_mismatch_rate": 0.0,
+        "draft_count": 6,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "education": {
+      "n": 5,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 2,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        }
+      },
+      "unclassified_by_reference": {
+        "suspicious": 1,
+        "high": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "high": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        }
+      },
+      "macro_f1": 0.0,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.6,
+      "supported_success_count": 0,
+      "end_to_end_supported_success_rate": 0.0,
+      "clear_as_high": 0,
+      "high_missed": 1,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "right_level_wrong_basis": 0,
+      "status_counts": {
+        "partial": 2,
+        "complete": 1,
+        "unsupported": 2
+      },
+      "status_rates": {
+        "partial": 0.4,
+        "complete": 0.2,
+        "unsupported": 0.4
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 9,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 9,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 0,
+          "total": 12,
+          "accuracy": 0.0
+        },
+        "object_type": {
+          "correct": 1,
+          "total": 12,
+          "accuracy": 0.08333333333333333
+        },
+        "speech_act": {
+          "correct": 1,
+          "total": 12,
+          "accuracy": 0.08333333333333333
+        },
+        "polarity": {
+          "correct": 2,
+          "total": 12,
+          "accuracy": 0.16666666666666666
+        },
+        "temporal_state": {
+          "correct": 0,
+          "total": 12,
+          "accuracy": 0.0
+        },
+        "modality": {
+          "correct": 0,
+          "total": 12,
+          "accuracy": 0.0
+        }
+      },
+      "roles": {
+        "correct": 0,
+        "total": 15,
+        "accuracy": 0.0
+      },
+      "span_action": {
+        "tp": 1,
+        "fp": 8,
+        "fn": 11,
+        "precision": 0.1111111111111111,
+        "recall": 0.08333333333333333,
+        "f1": 0.09523809523809523
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 1,
+          "fp": 6,
+          "fn": 2,
+          "precision": 0.14285714285714285,
+          "recall": 0.3333333333333333,
+          "f1": 0.2
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.2,
+      "draft_count": 5,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 0,
+      "outside_checkpoint_vocabulary_count": 5,
+      "within_checkpoint_vocabulary": {
+        "n": 0,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          }
+        },
+        "macro_f1": null,
+        "macro_labels": [],
+        "coverage": null,
+        "supported_success_count": 0,
+        "end_to_end_supported_success_rate": null,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {},
+        "status_rates": {},
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 0,
+          "before_rate": null,
+          "after_invalid": 0,
+          "after_denominator": 0,
+          "after_rate": null
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "object_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "speech_act": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "polarity": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "temporal_state": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "modality": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          }
+        },
+        "roles": {
+          "correct": 0,
+          "total": 0,
+          "accuracy": null
+        },
+        "span_action": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": null,
+        "question_mismatch_rate": null,
+        "draft_count": 0,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "employment": {
+      "n": 7,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 1
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 2,
+          "high": 1
+        }
+      },
+      "unclassified_by_reference": {},
+      "per_risk": {
+        "clear": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "reference_support": 2
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "reference_support": 1
+        },
+        "high": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "reference_support": 3
+        }
+      },
+      "macro_f1": 0.3666666666666667,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 1.0,
+      "supported_success_count": 2,
+      "end_to_end_supported_success_rate": 0.2857142857142857,
+      "clear_as_high": 0,
+      "high_missed": 2,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 2,
+        "denominator": 3,
+        "rate": 0.6666666666666666
+      },
+      "right_level_wrong_basis": 1,
+      "status_counts": {
+        "complete": 5,
+        "partial": 2
+      },
+      "status_rates": {
+        "complete": 0.7142857142857143,
+        "partial": 0.2857142857142857
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 20,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 20,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 3,
+          "total": 13,
+          "accuracy": 0.23076923076923078
+        },
+        "object_type": {
+          "correct": 3,
+          "total": 13,
+          "accuracy": 0.23076923076923078
+        },
+        "speech_act": {
+          "correct": 3,
+          "total": 13,
+          "accuracy": 0.23076923076923078
+        },
+        "polarity": {
+          "correct": 4,
+          "total": 13,
+          "accuracy": 0.3076923076923077
+        },
+        "temporal_state": {
+          "correct": 3,
+          "total": 13,
+          "accuracy": 0.23076923076923078
+        },
+        "modality": {
+          "correct": 3,
+          "total": 13,
+          "accuracy": 0.23076923076923078
+        }
+      },
+      "roles": {
+        "correct": 3,
+        "total": 21,
+        "accuracy": 0.14285714285714285
+      },
+      "span_action": {
+        "tp": 3,
+        "fp": 17,
+        "fn": 10,
+        "precision": 0.15,
+        "recall": 0.23076923076923078,
+        "f1": 0.18181818181818182
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 1,
+          "fp": 28,
+          "fn": 4,
+          "precision": 0.034482758620689655,
+          "recall": 0.2,
+          "f1": 0.058823529411764705
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.14285714285714285,
+      "draft_count": 7,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 2,
+      "outside_checkpoint_vocabulary_count": 5,
+      "within_checkpoint_vocabulary": {
+        "n": 2,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 1,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 1
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 1
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 1
+          }
+        },
+        "macro_f1": 1.0,
+        "macro_labels": [
+          "clear",
+          "high"
+        ],
+        "coverage": 1.0,
+        "supported_success_count": 2,
+        "end_to_end_supported_success_rate": 1.0,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {
+          "complete": 2
+        },
+        "status_rates": {
+          "complete": 1.0
+        },
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 3,
+          "before_rate": 0.0,
+          "after_invalid": 0,
+          "after_denominator": 3,
+          "after_rate": 0.0
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "object_type": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "speech_act": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "polarity": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "temporal_state": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          },
+          "modality": {
+            "correct": 3,
+            "total": 3,
+            "accuracy": 1.0
+          }
+        },
+        "roles": {
+          "correct": 3,
+          "total": 3,
+          "accuracy": 1.0
+        },
+        "span_action": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": 0.0,
+        "question_mismatch_rate": 0.0,
+        "draft_count": 2,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "finance": {
+      "n": 13,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 2,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 2,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 2,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 3
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 3,
+        "suspicious": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 2,
+          "fp": 4,
+          "fn": 3,
+          "precision": 0.3333333333333333,
+          "recall": 0.4,
+          "f1": 0.36363636363636365,
+          "reference_support": 5
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        },
+        "suspicious": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 3
+        },
+        "high": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 3
+        }
+      },
+      "macro_f1": 0.34090909090909094,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.6923076923076923,
+      "supported_success_count": 2,
+      "end_to_end_supported_success_rate": 0.15384615384615385,
+      "clear_as_high": 0,
+      "high_missed": 0,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 5,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "right_level_wrong_basis": 3,
+      "status_counts": {
+        "unsupported": 4,
+        "complete": 8,
+        "partial": 1
+      },
+      "status_rates": {
+        "unsupported": 0.3076923076923077,
+        "complete": 0.6153846153846154,
+        "partial": 0.07692307692307693
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 28,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 28,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 5,
+          "total": 24,
+          "accuracy": 0.20833333333333334
+        },
+        "object_type": {
+          "correct": 6,
+          "total": 24,
+          "accuracy": 0.25
+        },
+        "speech_act": {
+          "correct": 7,
+          "total": 24,
+          "accuracy": 0.2916666666666667
+        },
+        "polarity": {
+          "correct": 6,
+          "total": 24,
+          "accuracy": 0.25
+        },
+        "temporal_state": {
+          "correct": 7,
+          "total": 24,
+          "accuracy": 0.2916666666666667
+        },
+        "modality": {
+          "correct": 8,
+          "total": 24,
+          "accuracy": 0.3333333333333333
+        }
+      },
+      "roles": {
+        "correct": 6,
+        "total": 31,
+        "accuracy": 0.1935483870967742
+      },
+      "span_action": {
+        "tp": 7,
+        "fp": 21,
+        "fn": 17,
+        "precision": 0.25,
+        "recall": 0.2916666666666667,
+        "f1": 0.2692307692307692
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 1,
+          "fp": 38,
+          "fn": 9,
+          "precision": 0.02564102564102564,
+          "recall": 0.1,
+          "f1": 0.04081632653061224
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 2,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.15384615384615385,
+      "draft_count": 13,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 8,
+      "outside_checkpoint_vocabulary_count": 5,
+      "within_checkpoint_vocabulary": {
+        "n": 8,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 2,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 1,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 1,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 1
+          }
+        },
+        "unclassified_by_reference": {
+          "clear": 2,
+          "suspicious": 1
+        },
+        "per_risk": {
+          "clear": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 2,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "reference_support": 4
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_support": 1
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 2,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_support": 2
+          },
+          "high": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 1
+          }
+        },
+        "macro_f1": 0.375,
+        "macro_labels": [
+          "clear",
+          "need_context",
+          "suspicious",
+          "high"
+        ],
+        "coverage": 0.625,
+        "supported_success_count": 2,
+        "end_to_end_supported_success_rate": 0.25,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 4,
+          "rate": 0.0
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "right_level_wrong_basis": 1,
+        "status_counts": {
+          "complete": 5,
+          "unsupported": 3
+        },
+        "status_rates": {
+          "complete": 0.625,
+          "unsupported": 0.375
+        },
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 9,
+          "before_rate": 0.0,
+          "after_invalid": 0,
+          "after_denominator": 9,
+          "after_rate": 0.0
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 5,
+            "total": 13,
+            "accuracy": 0.38461538461538464
+          },
+          "object_type": {
+            "correct": 6,
+            "total": 13,
+            "accuracy": 0.46153846153846156
+          },
+          "speech_act": {
+            "correct": 6,
+            "total": 13,
+            "accuracy": 0.46153846153846156
+          },
+          "polarity": {
+            "correct": 5,
+            "total": 13,
+            "accuracy": 0.38461538461538464
+          },
+          "temporal_state": {
+            "correct": 7,
+            "total": 13,
+            "accuracy": 0.5384615384615384
+          },
+          "modality": {
+            "correct": 7,
+            "total": 13,
+            "accuracy": 0.5384615384615384
+          }
+        },
+        "roles": {
+          "correct": 6,
+          "total": 13,
+          "accuracy": 0.46153846153846156
+        },
+        "span_action": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.7777777777777778,
+          "recall": 0.5384615384615384,
+          "f1": 0.6363636363636364
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333333333333333
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 1,
+        "transaction_link_error_rate": 0.0,
+        "question_mismatch_rate": 0.125,
+        "draft_count": 8,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "relationships": {
+      "n": 5,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 1,
+        "suspicious": 1,
+        "high": 2
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "high": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        }
+      },
+      "macro_f1": 0.0,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.2,
+      "supported_success_count": 0,
+      "end_to_end_supported_success_rate": 0.0,
+      "clear_as_high": 0,
+      "high_missed": 2,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "right_level_wrong_basis": 0,
+      "status_counts": {
+        "unsupported": 4,
+        "complete": 1
+      },
+      "status_rates": {
+        "unsupported": 0.8,
+        "complete": 0.2
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 14,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 14,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 0,
+          "total": 12,
+          "accuracy": 0.0
+        },
+        "object_type": {
+          "correct": 1,
+          "total": 12,
+          "accuracy": 0.08333333333333333
+        },
+        "speech_act": {
+          "correct": 3,
+          "total": 12,
+          "accuracy": 0.25
+        },
+        "polarity": {
+          "correct": 6,
+          "total": 12,
+          "accuracy": 0.5
+        },
+        "temporal_state": {
+          "correct": 4,
+          "total": 12,
+          "accuracy": 0.3333333333333333
+        },
+        "modality": {
+          "correct": 2,
+          "total": 12,
+          "accuracy": 0.16666666666666666
+        }
+      },
+      "roles": {
+        "correct": 1,
+        "total": 24,
+        "accuracy": 0.041666666666666664
+      },
+      "span_action": {
+        "tp": 1,
+        "fp": 13,
+        "fn": 11,
+        "precision": 0.07142857142857142,
+        "recall": 0.08333333333333333,
+        "f1": 0.07692307692307693
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 3,
+          "fp": 15,
+          "fn": 3,
+          "precision": 0.16666666666666666,
+          "recall": 0.5,
+          "f1": 0.25
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.2,
+      "draft_count": 5,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 0,
+      "outside_checkpoint_vocabulary_count": 5,
+      "within_checkpoint_vocabulary": {
+        "n": 0,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          }
+        },
+        "macro_f1": null,
+        "macro_labels": [],
+        "coverage": null,
+        "supported_success_count": 0,
+        "end_to_end_supported_success_rate": null,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {},
+        "status_rates": {},
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 0,
+          "before_rate": null,
+          "after_invalid": 0,
+          "after_denominator": 0,
+          "after_rate": null
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "object_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "speech_act": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "polarity": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "temporal_state": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "modality": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          }
+        },
+        "roles": {
+          "correct": 0,
+          "total": 0,
+          "accuracy": null
+        },
+        "span_action": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": null,
+        "question_mismatch_rate": null,
+        "draft_count": 0,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "services": {
+      "n": 5,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 1
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 1,
+        "high": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 1
+        },
+        "high": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        }
+      },
+      "macro_f1": 0.25,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.6,
+      "supported_success_count": 0,
+      "end_to_end_supported_success_rate": 0.0,
+      "clear_as_high": 1,
+      "high_missed": 1,
+      "false_high_on_clear": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "high_miss": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "right_level_wrong_basis": 1,
+      "status_counts": {
+        "unsupported": 2,
+        "complete": 2,
+        "partial": 1
+      },
+      "status_rates": {
+        "unsupported": 0.4,
+        "complete": 0.4,
+        "partial": 0.2
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 9,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 9,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 0,
+          "total": 11,
+          "accuracy": 0.0
+        },
+        "object_type": {
+          "correct": 0,
+          "total": 11,
+          "accuracy": 0.0
+        },
+        "speech_act": {
+          "correct": 1,
+          "total": 11,
+          "accuracy": 0.09090909090909091
+        },
+        "polarity": {
+          "correct": 1,
+          "total": 11,
+          "accuracy": 0.09090909090909091
+        },
+        "temporal_state": {
+          "correct": 1,
+          "total": 11,
+          "accuracy": 0.09090909090909091
+        },
+        "modality": {
+          "correct": 1,
+          "total": 11,
+          "accuracy": 0.09090909090909091
+        }
+      },
+      "roles": {
+        "correct": 0,
+        "total": 18,
+        "accuracy": 0.0
+      },
+      "span_action": {
+        "tp": 0,
+        "fp": 9,
+        "fn": 11,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": null,
+      "question_mismatch_rate": 0.2,
+      "draft_count": 5,
+      "ambiguous_count": 1,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 0,
+      "outside_checkpoint_vocabulary_count": 5,
+      "within_checkpoint_vocabulary": {
+        "n": 0,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          }
+        },
+        "macro_f1": null,
+        "macro_labels": [],
+        "coverage": null,
+        "supported_success_count": 0,
+        "end_to_end_supported_success_rate": null,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {},
+        "status_rates": {},
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 0,
+          "before_rate": null,
+          "after_invalid": 0,
+          "after_denominator": 0,
+          "after_rate": null
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "object_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "speech_act": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "polarity": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "temporal_state": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "modality": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          }
+        },
+        "roles": {
+          "correct": 0,
+          "total": 0,
+          "accuracy": null
+        },
+        "span_action": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": null,
+        "question_mismatch_rate": null,
+        "draft_count": 0,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    }
+  },
+  "by_split": {
+    "diagnostic": {
+      "n": 25,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 4,
+          "high": 1
+        },
+        "need_context": {
+          "clear": 3,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 1
+        },
+        "suspicious": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 2,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 4,
+          "high": 0
+        }
+      },
+      "unclassified_by_reference": {
+        "suspicious": 2,
+        "high": 4,
+        "clear": 2
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 7,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 7
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 5
+        },
+        "suspicious": {
+          "tp": 2,
+          "fp": 9,
+          "fn": 3,
+          "precision": 0.18181818181818182,
+          "recall": 0.4,
+          "f1": 0.25,
+          "reference_support": 5
+        },
+        "high": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 8
+        }
+      },
+      "macro_f1": 0.0625,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.68,
+      "supported_success_count": 0,
+      "end_to_end_supported_success_rate": 0.0,
+      "clear_as_high": 1,
+      "high_missed": 8,
+      "false_high_on_clear": {
+        "count": 1,
+        "denominator": 7,
+        "rate": 0.14285714285714285
+      },
+      "high_miss": {
+        "count": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "right_level_wrong_basis": 2,
+      "status_counts": {
+        "partial": 7,
+        "complete": 10,
+        "unsupported": 8
+      },
+      "status_rates": {
+        "partial": 0.28,
+        "complete": 0.4,
+        "unsupported": 0.32
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 58,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 58,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 0,
+          "total": 57,
+          "accuracy": 0.0
+        },
+        "object_type": {
+          "correct": 2,
+          "total": 57,
+          "accuracy": 0.03508771929824561
+        },
+        "speech_act": {
+          "correct": 7,
+          "total": 57,
+          "accuracy": 0.12280701754385964
+        },
+        "polarity": {
+          "correct": 12,
+          "total": 57,
+          "accuracy": 0.21052631578947367
+        },
+        "temporal_state": {
+          "correct": 7,
+          "total": 57,
+          "accuracy": 0.12280701754385964
+        },
+        "modality": {
+          "correct": 5,
+          "total": 57,
+          "accuracy": 0.08771929824561403
+        }
+      },
+      "roles": {
+        "correct": 3,
+        "total": 90,
+        "accuracy": 0.03333333333333333
+      },
+      "span_action": {
+        "tp": 2,
+        "fp": 56,
+        "fn": 55,
+        "precision": 0.034482758620689655,
+        "recall": 0.03508771929824561,
+        "f1": 0.034782608695652174
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 4,
+          "fp": 58,
+          "fn": 21,
+          "precision": 0.06451612903225806,
+          "recall": 0.16,
+          "f1": 0.09195402298850575
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 5,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 5,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.2,
+      "draft_count": 25,
+      "ambiguous_count": 1,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 1,
+      "outside_checkpoint_vocabulary_count": 24,
+      "within_checkpoint_vocabulary": {
+        "n": 1,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 1,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_support": 1
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.0,
+            "recall": null,
+            "f1": 0.0,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          }
+        },
+        "macro_f1": 0.0,
+        "macro_labels": [
+          "clear"
+        ],
+        "coverage": 1.0,
+        "supported_success_count": 0,
+        "end_to_end_supported_success_rate": 0.0,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {
+          "complete": 1
+        },
+        "status_rates": {
+          "complete": 1.0
+        },
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 1,
+          "before_rate": 0.0,
+          "after_invalid": 0,
+          "after_denominator": 1,
+          "after_rate": 0.0
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "object_type": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "speech_act": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "polarity": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "temporal_state": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          },
+          "modality": {
+            "correct": 0,
+            "total": 2,
+            "accuracy": 0.0
+          }
+        },
+        "roles": {
+          "correct": 0,
+          "total": 3,
+          "accuracy": 0.0
+        },
+        "span_action": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": null,
+        "question_mismatch_rate": 0.0,
+        "draft_count": 1,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "regression": {
+      "n": 16,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 5,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 5
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 2,
+        "suspicious": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "reference_support": 7
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "reference_support": 3
+        },
+        "high": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 5
+        }
+      },
+      "macro_f1": 0.5535714285714286,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.8125,
+      "supported_success_count": 9,
+      "end_to_end_supported_success_rate": 0.5625,
+      "clear_as_high": 0,
+      "high_missed": 0,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 7,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 0,
+        "denominator": 5,
+        "rate": 0.0
+      },
+      "right_level_wrong_basis": 2,
+      "status_counts": {
+        "complete": 13,
+        "unsupported": 3
+      },
+      "status_rates": {
+        "complete": 0.8125,
+        "unsupported": 0.1875
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 19,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 19,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 15,
+          "total": 23,
+          "accuracy": 0.6521739130434783
+        },
+        "object_type": {
+          "correct": 16,
+          "total": 23,
+          "accuracy": 0.6956521739130435
+        },
+        "speech_act": {
+          "correct": 15,
+          "total": 23,
+          "accuracy": 0.6521739130434783
+        },
+        "polarity": {
+          "correct": 14,
+          "total": 23,
+          "accuracy": 0.6086956521739131
+        },
+        "temporal_state": {
+          "correct": 17,
+          "total": 23,
+          "accuracy": 0.7391304347826086
+        },
+        "modality": {
+          "correct": 16,
+          "total": 23,
+          "accuracy": 0.6956521739130435
+        }
+      },
+      "roles": {
+        "correct": 16,
+        "total": 23,
+        "accuracy": 0.6956521739130435
+      },
+      "span_action": {
+        "tp": 17,
+        "fp": 2,
+        "fn": 6,
+        "precision": 0.8947368421052632,
+        "recall": 0.7391304347826086,
+        "f1": 0.8095238095238095
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.42857142857142855,
+          "f1": 0.6
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.0625,
+      "draft_count": 16,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 16,
+      "outside_checkpoint_vocabulary_count": 0,
+      "within_checkpoint_vocabulary": {
+        "n": 16,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 5,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 1,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 1,
+            "need_context": 0,
+            "suspicious": 1,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 5
+          }
+        },
+        "unclassified_by_reference": {
+          "clear": 2,
+          "suspicious": 1
+        },
+        "per_risk": {
+          "clear": {
+            "tp": 5,
+            "fp": 2,
+            "fn": 2,
+            "precision": 0.7142857142857143,
+            "recall": 0.7142857142857143,
+            "f1": 0.7142857142857143,
+            "reference_support": 7
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "reference_support": 1
+          },
+          "suspicious": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "reference_support": 3
+          },
+          "high": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "reference_support": 5
+          }
+        },
+        "macro_f1": 0.5535714285714286,
+        "macro_labels": [
+          "clear",
+          "need_context",
+          "suspicious",
+          "high"
+        ],
+        "coverage": 0.8125,
+        "supported_success_count": 9,
+        "end_to_end_supported_success_rate": 0.5625,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 7,
+          "rate": 0.0
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 5,
+          "rate": 0.0
+        },
+        "right_level_wrong_basis": 2,
+        "status_counts": {
+          "complete": 13,
+          "unsupported": 3
+        },
+        "status_rates": {
+          "complete": 0.8125,
+          "unsupported": 0.1875
+        },
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 19,
+          "before_rate": 0.0,
+          "after_invalid": 0,
+          "after_denominator": 19,
+          "after_rate": 0.0
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 15,
+            "total": 23,
+            "accuracy": 0.6521739130434783
+          },
+          "object_type": {
+            "correct": 16,
+            "total": 23,
+            "accuracy": 0.6956521739130435
+          },
+          "speech_act": {
+            "correct": 15,
+            "total": 23,
+            "accuracy": 0.6521739130434783
+          },
+          "polarity": {
+            "correct": 14,
+            "total": 23,
+            "accuracy": 0.6086956521739131
+          },
+          "temporal_state": {
+            "correct": 17,
+            "total": 23,
+            "accuracy": 0.7391304347826086
+          },
+          "modality": {
+            "correct": 16,
+            "total": 23,
+            "accuracy": 0.6956521739130435
+          }
+        },
+        "roles": {
+          "correct": 16,
+          "total": 23,
+          "accuracy": 0.6956521739130435
+        },
+        "span_action": {
+          "tp": 17,
+          "fp": 2,
+          "fn": 6,
+          "precision": 0.8947368421052632,
+          "recall": 0.7391304347826086,
+          "f1": 0.8095238095238095
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 4,
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1": 0.6
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 1,
+        "transaction_link_error_rate": 0.0,
+        "question_mismatch_rate": 0.0625,
+        "draft_count": 16,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    },
+    "validation": {
+      "n": 10,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 1
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 2
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 1,
+        "need_context": 2,
+        "suspicious": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 3
+        },
+        "suspicious": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 2
+        },
+        "high": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "reference_support": 3
+        }
+      },
+      "macro_f1": 0.16666666666666666,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.6,
+      "supported_success_count": 0,
+      "end_to_end_supported_success_rate": 0.0,
+      "clear_as_high": 1,
+      "high_missed": 1,
+      "false_high_on_clear": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "high_miss": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "right_level_wrong_basis": 2,
+      "status_counts": {
+        "unsupported": 4,
+        "complete": 5,
+        "partial": 1
+      },
+      "status_rates": {
+        "unsupported": 0.4,
+        "complete": 0.5,
+        "partial": 0.1
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 29,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 29,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 0,
+          "total": 21,
+          "accuracy": 0.0
+        },
+        "object_type": {
+          "correct": 0,
+          "total": 21,
+          "accuracy": 0.0
+        },
+        "speech_act": {
+          "correct": 2,
+          "total": 21,
+          "accuracy": 0.09523809523809523
+        },
+        "polarity": {
+          "correct": 4,
+          "total": 21,
+          "accuracy": 0.19047619047619047
+        },
+        "temporal_state": {
+          "correct": 2,
+          "total": 21,
+          "accuracy": 0.09523809523809523
+        },
+        "modality": {
+          "correct": 2,
+          "total": 21,
+          "accuracy": 0.09523809523809523
+        }
+      },
+      "roles": {
+        "correct": 1,
+        "total": 33,
+        "accuracy": 0.030303030303030304
+      },
+      "span_action": {
+        "tp": 0,
+        "fp": 29,
+        "fn": 21,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 0,
+          "fp": 47,
+          "fn": 9,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 2,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 3,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.3,
+      "draft_count": 10,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0,
+      "checkpoint_vocabulary_covered_count": 0,
+      "outside_checkpoint_vocabulary_count": 10,
+      "within_checkpoint_vocabulary": {
+        "n": 0,
+        "confusion_matrix": {
+          "clear": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "need_context": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "suspicious": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          },
+          "high": {
+            "clear": 0,
+            "need_context": 0,
+            "suspicious": 0,
+            "high": 0
+          }
+        },
+        "unclassified_by_reference": {},
+        "per_risk": {
+          "clear": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "need_context": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "suspicious": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          },
+          "high": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "reference_support": 0
+          }
+        },
+        "macro_f1": null,
+        "macro_labels": [],
+        "coverage": null,
+        "supported_success_count": 0,
+        "end_to_end_supported_success_rate": null,
+        "clear_as_high": 0,
+        "high_missed": 0,
+        "false_high_on_clear": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "high_miss": {
+          "count": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "right_level_wrong_basis": 0,
+        "status_counts": {},
+        "status_rates": {},
+        "evidence": {
+          "before_invalid": 0,
+          "before_denominator": 0,
+          "before_rate": null,
+          "after_invalid": 0,
+          "after_denominator": 0,
+          "after_rate": null
+        },
+        "attributes": {
+          "action_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "object_type": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "speech_act": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "polarity": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "temporal_state": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          },
+          "modality": {
+            "correct": 0,
+            "total": 0,
+            "accuracy": null
+          }
+        },
+        "roles": {
+          "correct": 0,
+          "total": 0,
+          "accuracy": null
+        },
+        "span_action": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "relations": {
+          "same_transaction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "before": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "prerequisite_for": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "promised_after": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "threatens_unless": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "contradiction": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "state_update": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "obstructs_verification": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "transfer_via": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          },
+          "controls_during": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null
+          }
+        },
+        "cross_transaction_relations": 0,
+        "redundant_or_missing_question_cases": 0,
+        "transaction_link_error_rate": null,
+        "question_mismatch_rate": null,
+        "draft_count": 0,
+        "ambiguous_count": 0,
+        "human_semantic_review_count": 0
+      }
+    }
+  },
+  "oracle_annotations": {
+    "n": 51,
+    "confusion_matrix": {
+      "clear": {
+        "clear": 15,
+        "need_context": 1,
+        "suspicious": 0,
+        "high": 0
+      },
+      "need_context": {
+        "clear": 3,
+        "need_context": 6,
+        "suspicious": 0,
+        "high": 0
+      },
+      "suspicious": {
+        "clear": 0,
+        "need_context": 0,
+        "suspicious": 10,
+        "high": 0
+      },
+      "high": {
+        "clear": 1,
+        "need_context": 0,
+        "suspicious": 0,
+        "high": 15
+      }
+    },
+    "unclassified_by_reference": {},
+    "per_risk": {
+      "clear": {
+        "tp": 15,
+        "fp": 4,
+        "fn": 1,
+        "precision": 0.7894736842105263,
+        "recall": 0.9375,
+        "f1": 0.8571428571428571,
+        "reference_support": 16
+      },
+      "need_context": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.8571428571428571,
+        "recall": 0.6666666666666666,
+        "f1": 0.75,
+        "reference_support": 9
+      },
+      "suspicious": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "reference_support": 10
+      },
+      "high": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9375,
+        "f1": 0.967741935483871,
+        "reference_support": 16
+      }
+    },
+    "macro_f1": 0.893721198156682,
+    "macro_labels": [
+      "clear",
+      "need_context",
+      "suspicious",
+      "high"
+    ],
+    "coverage": 1.0,
+    "supported_success_count": 43,
+    "end_to_end_supported_success_rate": 0.8431372549019608,
+    "clear_as_high": 0,
+    "high_missed": 1,
+    "false_high_on_clear": {
+      "count": 0,
+      "denominator": 16,
+      "rate": 0.0
+    },
+    "high_miss": {
+      "count": 1,
+      "denominator": 16,
+      "rate": 0.0625
+    },
+    "right_level_wrong_basis": 0,
+    "status_counts": {
+      "complete": 51
+    },
+    "status_rates": {
+      "complete": 1.0
+    },
+    "evidence": {
+      "before_invalid": 0,
+      "before_denominator": 0,
+      "before_rate": null,
+      "after_invalid": 0,
+      "after_denominator": 110,
+      "after_rate": 0.0
+    },
+    "attributes": {
+      "action_type": {
+        "correct": 101,
+        "total": 101,
+        "accuracy": 1.0
+      },
+      "object_type": {
+        "correct": 101,
+        "total": 101,
+        "accuracy": 1.0
+      },
+      "speech_act": {
+        "correct": 101,
+        "total": 101,
+        "accuracy": 1.0
+      },
+      "polarity": {
+        "correct": 101,
+        "total": 101,
+        "accuracy": 1.0
+      },
+      "temporal_state": {
+        "correct": 101,
+        "total": 101,
+        "accuracy": 1.0
+      },
+      "modality": {
+        "correct": 101,
+        "total": 101,
+        "accuracy": 1.0
+      }
+    },
+    "roles": {
+      "correct": 146,
+      "total": 146,
+      "accuracy": 1.0
+    },
+    "span_action": {
+      "tp": 101,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "relations": {
+      "same_transaction": {
+        "tp": 41,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "before": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "prerequisite_for": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "promised_after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "threatens_unless": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "contradiction": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "state_update": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "obstructs_verification": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "transfer_via": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "controls_during": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "cross_transaction_relations": 0,
+    "redundant_or_missing_question_cases": 7,
+    "transaction_link_error_rate": 0.0,
+    "question_mismatch_rate": 0.13725490196078433,
+    "draft_count": 51,
+    "ambiguous_count": 1,
+    "human_semantic_review_count": 0,
+    "checkpoint_vocabulary_covered_count": 17,
+    "outside_checkpoint_vocabulary_count": 34,
+    "within_checkpoint_vocabulary": {
+      "n": 17,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 7,
+          "need_context": 1,
+          "suspicious": 0,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 3,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 5
+        }
+      },
+      "unclassified_by_reference": {},
+      "per_risk": {
+        "clear": {
+          "tp": 7,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "reference_support": 8
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 3
+        },
+        "high": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 5
+        }
+      },
+      "macro_f1": 0.71875,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 1.0,
+      "supported_success_count": 15,
+      "end_to_end_supported_success_rate": 0.8823529411764706,
+      "clear_as_high": 0,
+      "high_missed": 0,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 0,
+        "denominator": 5,
+        "rate": 0.0
+      },
+      "right_level_wrong_basis": 0,
+      "status_counts": {
+        "complete": 17
+      },
+      "status_rates": {
+        "complete": 1.0
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 0,
+        "before_rate": null,
+        "after_invalid": 0,
+        "after_denominator": 33,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        },
+        "object_type": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        },
+        "speech_act": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        },
+        "polarity": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        },
+        "temporal_state": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        },
+        "modality": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        }
+      },
+      "roles": {
+        "correct": 26,
+        "total": 26,
+        "accuracy": 1.0
+      },
+      "span_action": {
+        "tp": 25,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "before": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 2,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.11764705882352941,
+      "draft_count": 17,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0
+    }
+  },
+  "oracle_model_spans": {
+    "n": 51,
+    "confusion_matrix": {
+      "clear": {
+        "clear": 6,
+        "need_context": 0,
+        "suspicious": 5,
+        "high": 0
+      },
+      "need_context": {
+        "clear": 3,
+        "need_context": 0,
+        "suspicious": 1,
+        "high": 1
+      },
+      "suspicious": {
+        "clear": 1,
+        "need_context": 1,
+        "suspicious": 4,
+        "high": 0
+      },
+      "high": {
+        "clear": 0,
+        "need_context": 0,
+        "suspicious": 8,
+        "high": 5
+      }
+    },
+    "unclassified_by_reference": {
+      "clear": 5,
+      "high": 3,
+      "need_context": 4,
+      "suspicious": 4
+    },
+    "per_risk": {
+      "clear": {
+        "tp": 6,
+        "fp": 4,
+        "fn": 10,
+        "precision": 0.6,
+        "recall": 0.375,
+        "f1": 0.46153846153846156,
+        "reference_support": 16
+      },
+      "need_context": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 9,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "reference_support": 9
+      },
+      "suspicious": {
+        "tp": 4,
+        "fp": 14,
+        "fn": 6,
+        "precision": 0.2222222222222222,
+        "recall": 0.4,
+        "f1": 0.2857142857142857,
+        "reference_support": 10
+      },
+      "high": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 11,
+        "precision": 0.8333333333333334,
+        "recall": 0.3125,
+        "f1": 0.45454545454545453,
+        "reference_support": 16
+      }
+    },
+    "macro_f1": 0.30044955044955046,
+    "macro_labels": [
+      "clear",
+      "need_context",
+      "suspicious",
+      "high"
+    ],
+    "coverage": 0.6862745098039216,
+    "supported_success_count": 9,
+    "end_to_end_supported_success_rate": 0.17647058823529413,
+    "clear_as_high": 0,
+    "high_missed": 11,
+    "false_high_on_clear": {
+      "count": 0,
+      "denominator": 16,
+      "rate": 0.0
+    },
+    "high_miss": {
+      "count": 11,
+      "denominator": 16,
+      "rate": 0.6875
+    },
+    "right_level_wrong_basis": 6,
+    "status_counts": {
+      "unsupported": 16,
+      "complete": 23,
+      "partial": 12
+    },
+    "status_rates": {
+      "unsupported": 0.3137254901960784,
+      "complete": 0.45098039215686275,
+      "partial": 0.23529411764705882
+    },
+    "evidence": {
+      "before_invalid": 0,
+      "before_denominator": 99,
+      "before_rate": 0.0,
+      "after_invalid": 0,
+      "after_denominator": 99,
+      "after_rate": 0.0
+    },
+    "attributes": {
+      "action_type": {
+        "correct": 21,
+        "total": 101,
+        "accuracy": 0.2079207920792079
+      },
+      "object_type": {
+        "correct": 28,
+        "total": 101,
+        "accuracy": 0.27722772277227725
+      },
+      "speech_act": {
+        "correct": 65,
+        "total": 101,
+        "accuracy": 0.6435643564356436
+      },
+      "polarity": {
+        "correct": 89,
+        "total": 101,
+        "accuracy": 0.8811881188118812
+      },
+      "temporal_state": {
+        "correct": 72,
+        "total": 101,
+        "accuracy": 0.7128712871287128
+      },
+      "modality": {
+        "correct": 66,
+        "total": 101,
+        "accuracy": 0.6534653465346535
+      }
+    },
+    "roles": {
+      "correct": 52,
+      "total": 146,
+      "accuracy": 0.3561643835616438
+    },
+    "span_action": {
+      "tp": 99,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9801980198019802,
+      "f1": 0.99
+    },
+    "relations": {
+      "same_transaction": {
+        "tp": 40,
+        "fp": 23,
+        "fn": 1,
+        "precision": 0.6349206349206349,
+        "recall": 0.975609756097561,
+        "f1": 0.7692307692307693
+      },
+      "before": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "prerequisite_for": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 3,
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1": 0.4444444444444444
+      },
+      "promised_after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "threatens_unless": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "contradiction": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "state_update": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "obstructs_verification": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "transfer_via": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "controls_during": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "cross_transaction_relations": 3,
+    "redundant_or_missing_question_cases": 10,
+    "transaction_link_error_rate": 0.04411764705882353,
+    "question_mismatch_rate": 0.19607843137254902,
+    "draft_count": 51,
+    "ambiguous_count": 1,
+    "human_semantic_review_count": 0,
+    "checkpoint_vocabulary_covered_count": 17,
+    "outside_checkpoint_vocabulary_count": 34,
+    "within_checkpoint_vocabulary": {
+      "n": 17,
+      "confusion_matrix": {
+        "clear": {
+          "clear": 5,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 2,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 5
+        }
+      },
+      "unclassified_by_reference": {
+        "clear": 2,
+        "suspicious": 1
+      },
+      "per_risk": {
+        "clear": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.8333333333333334,
+          "recall": 0.625,
+          "f1": 0.7142857142857143,
+          "reference_support": 8
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "reference_support": 1
+        },
+        "suspicious": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "reference_support": 3
+        },
+        "high": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "reference_support": 5
+        }
+      },
+      "macro_f1": 0.5952380952380952,
+      "macro_labels": [
+        "clear",
+        "need_context",
+        "suspicious",
+        "high"
+      ],
+      "coverage": 0.8235294117647058,
+      "supported_success_count": 9,
+      "end_to_end_supported_success_rate": 0.5294117647058824,
+      "clear_as_high": 0,
+      "high_missed": 0,
+      "false_high_on_clear": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "high_miss": {
+        "count": 0,
+        "denominator": 5,
+        "rate": 0.0
+      },
+      "right_level_wrong_basis": 3,
+      "status_counts": {
+        "unsupported": 3,
+        "complete": 14
+      },
+      "status_rates": {
+        "unsupported": 0.17647058823529413,
+        "complete": 0.8235294117647058
+      },
+      "evidence": {
+        "before_invalid": 0,
+        "before_denominator": 25,
+        "before_rate": 0.0,
+        "after_invalid": 0,
+        "after_denominator": 25,
+        "after_rate": 0.0
+      },
+      "attributes": {
+        "action_type": {
+          "correct": 18,
+          "total": 25,
+          "accuracy": 0.72
+        },
+        "object_type": {
+          "correct": 19,
+          "total": 25,
+          "accuracy": 0.76
+        },
+        "speech_act": {
+          "correct": 21,
+          "total": 25,
+          "accuracy": 0.84
+        },
+        "polarity": {
+          "correct": 19,
+          "total": 25,
+          "accuracy": 0.76
+        },
+        "temporal_state": {
+          "correct": 25,
+          "total": 25,
+          "accuracy": 1.0
+        },
+        "modality": {
+          "correct": 23,
+          "total": 25,
+          "accuracy": 0.92
+        }
+      },
+      "roles": {
+        "correct": 23,
+        "total": 26,
+        "accuracy": 0.8846153846153846
+      },
+      "span_action": {
+        "tp": 25,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "relations": {
+        "same_transaction": {
+          "tp": 7,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333333333333333
+        },
+        "before": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "prerequisite_for": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "promised_after": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "threatens_unless": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "contradiction": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "state_update": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "obstructs_verification": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer_via": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "controls_during": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "cross_transaction_relations": 0,
+      "redundant_or_missing_question_cases": 1,
+      "transaction_link_error_rate": 0.0,
+      "question_mismatch_rate": 0.058823529411764705,
+      "draft_count": 17,
+      "ambiguous_count": 0,
+      "human_semantic_review_count": 0
+    }
+  },
+  "timings": {
+    "n": 51,
+    "p50_ms": 841.309800001909,
+    "p95_nearest_rank_ms": 1699.474699998973,
+    "cold_model_load_ms": 1730.1464999982272,
+    "rss_bytes": 883736576,
+    "vram_bytes": 0,
+    "concurrency": 1,
+    "input_codepoints": [
+      120,
+      82,
+      92,
+      139,
+      111,
+      108,
+      102,
+      140,
+      134,
+      86,
+      121,
+      142,
+      126,
+      89,
+      115,
+      137,
+      117,
+      89,
+      121,
+      138,
+      112,
+      86,
+      124,
+      153,
+      119,
+      90,
+      112,
+      160,
+      127,
+      187,
+      194,
+      126,
+      258,
+      81,
+      206,
+      17,
+      23,
+      29,
+      29,
+      28,
+      36,
+      28,
+      30,
+      41,
+      39,
+      47,
+      37,
+      39,
+      41,
+      33,
+      41
+    ],
+    "total_wall_seconds": 103.97438310000143
+  },
+  "review_status": "diagnostic only; all automated semantic judgments need independent review",
+  "count_error_types": {
+    "ACTION_OBJECT": 87,
+    "NEGATION_SCOPE": 81,
+    "PARTICIPANT_ROLE": 126,
+    "CONDITION_RELATION": 162,
+    "RISK_DECISION": 36,
+    "REDUNDANT_QUESTION": 9,
+    "EXPLANATION_UNSUPPORTED": 18,
+    "UNSUPPORTED_INPUT": 15,
+    "LABEL_AMBIGUOUS": 1
+  },
+  "independent_holdout": {
+    "available": false,
+    "score": null
+  },
+  "training_performed": false,
+  "public_family_bootstrap_95": [
+    0.047619047619047616,
+    0.32142857142857145
+  ],
+  "scorer_sha256": "8e3271f605ee6a243ec30cbb46d6ce7c8d75b16babe749c1998077e6accdc7c2"
+}

@@ -1,0 +1,29 @@
+﻿id,name,group,expected,prediction,http_status,error,api_ms,provider_adapter_ms,exact_quotes,quote_count,questions_present,status_match,review_note
+MX-S01,Phí nhận thưởng,scam,high,need_context,200,,3821.4234999613836,3818.0186999961734,1,1,True,False,Nhận diện điều kiện trả phí; lời trích trong bài cảnh báo không phải yêu cầu.
+MX-N01,Bài cảnh báo nhận thưởng,normal,clear,need_context,200,,3332.7069000224583,3330.4980999673717,2,2,True,False,Nhận diện điều kiện trả phí; lời trích trong bài cảnh báo không phải yêu cầu.
+MX-S02,Lấy OTP,scam,high,high,200,,2887.956499995198,2882.149200013373,1,1,False,True,Phân biệt giao mã cho người khác với tự dùng mã.
+MX-N02,Tự nhập OTP,normal,clear,error,502,EVIDENCE_INVALID,3596.1254000430927,3594.2045000265352,,,False,False,Phân biệt giao mã cho người khác với tự dùng mã.
+MX-S03,Ứng tiền việc làm,scam,high,need_context,200,,3754.7635000082664,3748.4997999854386,1,1,True,False,Yêu cầu ứng tiền gắn lợi ích; phủ định không được coi là hành vi.
+MX-N03,Tuyển dụng không thu phí,normal,clear,error,502,EVIDENCE_INVALID,3428.142899996601,3426.065000006929,,,False,False,Yêu cầu ứng tiền gắn lợi ích; phủ định không được coi là hành vi.
+MX-U01,Thiếu bối cảnh đòi tiền,uncertain,need_context,need_context,200,,3215.731899952516,3212.2421000385657,1,1,True,True,"Hỏi quan hệ/khoản vay, không kết luận chỉ vì chuyển tiền."
+MX-S04,Khôi phục tiền đã mất,scam,high,high,200,,4176.793000020552,4174.446699966211,2,2,False,True,Không coi mọi yêu cầu chuyển tiền là lừa đảo.
+MX-N04,Nhắc trả nợ có bối cảnh,normal,clear,need_context,200,,3207.2035999735817,3205.32299997285,1,1,True,False,Không coi mọi yêu cầu chuyển tiền là lừa đảo.
+MX-S05,Cấp quyền để nhận trợ cấp,scam,high,error,502,EVIDENCE_INVALID,3043.2521000038832,3041.274400020484,,,False,False,Phân biệt yêu cầu cấp quyền và lời khuyên tránh cấp quyền.
+MX-N05,Hướng dẫn an toàn điều khiển,normal,clear,error,502,PROVIDER_INVALID_OUTPUT,2751.2065000482835,2748.79060004605,,,False,False,Phân biệt yêu cầu cấp quyền và lời khuyên tránh cấp quyền.
+MX-S06,Mật khẩu để xác minh,scam,high,error,502,EVIDENCE_INVALID,3297.5656000198796,3295.5377000034787,,,False,False,Trích đúng hành động và vai phủ định.
+MX-N06,Hỗ trợ không lấy mật khẩu,normal,clear,need_context,200,,3374.614999978803,3371.4614000055008,3,3,True,False,Trích đúng hành động và vai phủ định.
+MX-U02,Tệp không rõ nguồn,uncertain,need_context,need_context,200,,2792.3188999993727,2787.4776999815367,1,1,True,True,"Hỏi ai gửi và loại tệp, không bịa yêu cầu cài app."
+MX-S07,Đầu tư lợi nhuận cố định,scam,high,high,200,,2294.125599961262,2289.449199975934,2,2,False,True,Liên kết chuyển tiền với hứa hẹn; không nâng cảnh báo vì từ khóa đầu tư.
+MX-N07,Học kiến thức đầu tư,normal,clear,error,502,EVIDENCE_INVALID,3097.76299999794,3095.7281999872066,,,False,False,Liên kết chuyển tiền với hứa hẹn; không nâng cảnh báo vì từ khóa đầu tư.
+MX-S08,Giả người quen cấp cứu,scam,high,need_context,200,,2415.6291999970563,2413.7191000045277,1,1,True,False,"Tự nhận danh tính chưa xác minh, yêu cầu tiền khẩn cấp và ngăn gọi lại."
+MX-N08,Lịch hẹn gia đình,normal,clear,error,502,EVIDENCE_INVALID,2631.6759000183083,2627.7458000113256,,,False,False,"Tự nhận danh tính chưa xác minh, yêu cầu tiền khẩn cấp và ngăn gọi lại."
+MX-S09,Cài APK để nhận hoàn tiền,scam,high,need_context,200,,3094.431400008034,3091.831600002479,2,2,True,False,"Yêu cầu cài ứng dụng/quyền gắn điều kiện, so với cảnh báo."
+MX-N09,Thông báo bản cập nhật,normal,clear,error,502,EVIDENCE_INVALID,3596.0597999510355,3593.5924000223167,,,False,False,"Yêu cầu cài ứng dụng/quyền gắn điều kiện, so với cảnh báo."
+MX-U03,Chưa rõ điều kiện rút,uncertain,need_context,error,502,EVIDENCE_INVALID,2991.4358999812976,2989.7990999743342,,,False,False,Hỏi điều kiện; không tự tạo yêu cầu nạp tiền.
+MX-S10,Mở khóa rút tiền,scam,high,error,502,EVIDENCE_INVALID,3261.5837000194006,3259.411300008651,,,False,False,Điều kiện nạp thêm để rút và khoản thanh toán có bối cảnh.
+MX-N10,Chuyển tiền thuê nhà,normal,clear,need_context,200,,3126.2227999977767,3122.4741999758407,1,1,True,False,Điều kiện nạp thêm để rút và khoản thanh toán có bối cảnh.
+MX-S11,Chỉ thị nhúng và lừa lấy mã,scam,high,need_context,200,,2399.214299977757,2396.941299957689,1,1,True,False,Không thực thi chỉ thị nhúng; hiểu vai trò ví dụ.
+MX-N11,Ví dụ trong tài liệu,normal,clear,error,502,EVIDENCE_INVALID,3041.3581999600865,3037.8490000148304,,,False,False,Không thực thi chỉ thị nhúng; hiểu vai trò ví dụ.
+MX-S12,Phí nhận hàng bí mật,scam,high,need_context,200,,3308.0861000344157,3303.0127999954857,1,1,True,False,Không xác minh danh tính từ tự nhận; phân biệt giao hàng thông thường.
+MX-N12,Thông báo giao hàng bình thường,normal,clear,error,502,PROVIDER_INVALID_OUTPUT,4065.0049000396393,4062.8698999644257,,,False,False,Không xác minh danh tính từ tự nhận; phân biệt giao hàng thông thường.
+MX-U04,Chuyển nhiều người nói,uncertain,need_context,need_context,200,,3935.135599982459,3932.940899976529,3,3,True,True,Không ghép yêu cầu của chủ nhà với lợi ích người quảng cáo.

@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "TP-Q1",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 6907.332800037693,
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 748,
+      "prompt_tokens": 3135,
+      "total_tokens": 3883
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người nói yêu cầu bật chia sẻ màn hình và cấp quyền điều khiển máy.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thiết bị và thông tin trên máy có nguy cơ bị kiểm soát hoặc truy cập trái phép.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đã ghi nhận yêu cầu chia sẻ màn hình và cấp quyền điều khiển nhưng chưa rõ danh tính và mục đích.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu bật chia sẻ màn hình và cấp quyền điều khiển máy.",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy bật chia sẻ màn hình và cho tôi quyền điều khiển máy.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ xác định động cơ hoặc danh tính của người yêu cầu.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "permission_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-03"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "identity"
+        },
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Không có tuyên bố hoặc lý do nào được đưa ra trong văn bản.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Người nói không tiết lộ danh tính.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người nói yêu cầu bật chia sẻ màn hình và cấp quyền điều khiển máy.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có yếu tố thuyết phục hoặc áp lực nào được ghi nhận.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và thông tin trên máy có thể gặp rủi ro nếu cấp quyền điều khiển.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có thông tin giả mạo danh tính.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu trực tiếp bật chia sẻ màn hình và cấp quyền điều khiển thiết bị.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Văn bản ngắn chỉ chứa yêu cầu hành động, thiếu ngữ cảnh và mục đích.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu bật chia sẻ màn hình",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy bật chia sẻ màn hình",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói muốn xem nội dung trên màn hình thiết bị.",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "grant_access",
+              "description": "Yêu cầu cấp quyền điều khiển máy",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "cho tôi quyền điều khiển máy",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người nói muốn có quyền thao tác trực tiếp trên thiết bị của người nghe.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu hỗ trợ kỹ thuật hợp lệ từ người quen hoặc nhân viên hỗ trợ.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đồng nghiệp hoặc bộ phận IT cần hỗ trợ xử lý sự cố trên máy tính.",
+                "Người thân nhờ hướng dẫn sử dụng phần mềm qua việc xem và thao tác giúp."
+              ]
+            },
+            {
+              "id": "h2",
+              "description": "Yêu cầu từ bên thứ ba ẩn danh nhằm mục đích chiếm quyền kiểm soát thiết bị.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Kẻ gian giả mạo nhân viên hỗ trợ để chiếm đoạt quyền truy cập."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ danh tính và mối quan hệ giữa người nói và người nhận.",
+            "Không rõ mục đích thực sự của việc yêu cầu chia sẻ màn hình và điều khiển máy."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người nói yêu cầu bật chia sẻ màn hình và cấp quyền điều khiển máy.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị và thông tin trên máy có nguy cơ bị kiểm soát hoặc truy cập trái phép.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu chia sẻ màn hình và cấp quyền điều khiển nhưng chưa rõ danh tính và mục đích.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "grant_access",
+              "description": "Yêu cầu bật chia sẻ màn hình và cấp quyền điều khiển máy.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Hãy bật chia sẻ màn hình và cho tôi quyền điều khiển máy.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "unknown",
+                "text": "Chưa đủ căn cứ xác định động cơ hoặc danh tính của người yêu cầu.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "permission_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-03"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 6634.0611999621615,
+    "extraction_ms": 6901.686700002756,
+    "response": {
+      "schema_version": "1.3",
+      "mode": "two_pass",
+      "risk_status": "suspicious",
+      "summary": "Có yêu cầu cần xác minh trước khi thực hiện.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Hãy bật chia sẻ màn hình và cho tôi quyền điều khiển máy.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu cần xác minh trước khi thực hiện.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "grant_access",
+          "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Hãy bật chia sẻ màn hình và cho tôi quyền điều khiển máy.",
+              "start": 0,
+              "end": 57
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+        "Vì sao họ cần chia sẻ màn hình hoặc quyền điều khiển, và bạn đã xác minh đầu mối hỗ trợ chưa?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Xác minh đơn vị hỗ trợ qua kênh độc lập trước khi cài phần mềm hoặc cấp quyền điều khiển."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 2,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-03"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3658.312100043986,
+          "retrieval_parallel": 6.981600017752498,
+          "second_provider": 2975.970099971164,
+          "pipeline_total": 6642.004400026053,
+          "verification_render": 1.6462000203318894
+        },
+        "decision_version": "two-pass-2",
+        "information_needed": true
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 1,
+          "elapsed_ms": 4.201599978841841
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.978299977257848
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 267.6255000405945,
+    "validation_adjudication_serialization_ms": 5.6461000349372625
+  },
+  {
+    "id": "TP-S4",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 3398.136199975852,
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503
+    ],
+    "provider_adapter_ms": 2833.1902000354603,
+    "extraction_ms": 3394.7799000306986,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "0197819d-d312-4388-9eae-506d1066a635",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  },
+  {
+    "id": "TP-S5",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 6927.644699986558,
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1014,
+      "prompt_tokens": 3323,
+      "total_tokens": 4337
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi tự nhận là cháu và đang cần tiền đóng viện phí gấp.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Tự nhận là cháu nhưng đổi số điện thoại mới.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển 9 triệu đồng vào ví điện tử để đóng viện phí.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Tạo áp lực khẩn cấp và ngăn cản gọi điện cho người nhà hoặc số cũ.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "observed",
+          "text": "Khoản tiền 9 triệu đồng theo yêu cầu chuyển khoản.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "inferred",
+          "text": "Có dấu hiệu giả mạo người thân để yêu cầu chuyển tiền trong tình huống khẩn cấp giả tạo.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Thông báo đổi số, đòi chuyển tiền gấp viện phí và yêu cầu không gọi xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ nội dung tin nhắn để nhận diện yêu cầu chuyển tiền và áp lực tâm lý.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền vào ví để đóng viện phí",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển gấp 9 triệu vào ví này để em đóng viện phí.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu tài chính gắn với tình huống cấp bách.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Ngăn cản xác minh qua người nhà hoặc số cũ với lý do ca cấp cứu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đừng gọi người nhà hay số cũ vì sẽ làm chậm ca cấp cứu.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Tạo áp lực tâm lý để nạn nhân không gọi điện xác thực.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f1",
+            "support_id": "f2"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1",
+          "f2"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "source_of_request"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-08"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "identity"
+        },
+        {
+          "finding_id": "f2",
+          "kind": "relation"
+        }
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người nhắn nhận là cháu, mất số cũ và cần tiền đóng viện phí cho ca cấp cứu",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Cháu của người nhận tin nhắn",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển 9 triệu vào ví điện tử và không gọi cho người nhà hoặc số cũ",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Tạo áp lực khẩn cấp về ca cấp cứu và ngăn cản liên lạc với người khác",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 9 triệu đồng",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Có thể đang giả mạo người thân của nạn nhân để chiếm đoạt tài sản",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhắn tin thông báo mất số -> yêu cầu chuyển tiền gấp -> ngăn cản xác minh",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ văn bản tin nhắn để phân tích yêu cầu chuyển tiền và áp lực tâm lý",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển gấp 9 triệu đồng vào ví điện tử với lý do đóng viện phí và cấm gọi người nhà",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển gấp 9 triệu vào ví này để em đóng viện phí. Đừng gọi người nhà hay số cũ vì sẽ làm chậm ca cấp cứu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Hành vi thúc giục chuyển tiền kèm theo điều kiện không được kiểm chứng qua kênh khác",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Giả mạo người thân để lừa đảo chiếm đoạt tài sản thông qua tình huống cấp bách giả tạo",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Người thân thực sự gặp sự cố y tế khẩn cấp và dùng số điện thoại lạ",
+                "Tin nhắn nhầm người nhưng sử dụng từ ngữ cấp bách"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không thể xác minh danh tính thực sự của người gửi qua một tin nhắn văn bản",
+            "Không rõ tình trạng y tế thực tế của người được nhắc tới",
+            "Không xác định được chủ sở hữu thực sự của ví điện tử nhận tiền"
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi tự nhận là cháu và đang cần tiền đóng viện phí gấp.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Tự nhận là cháu nhưng đổi số điện thoại mới.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển 9 triệu đồng vào ví điện tử để đóng viện phí.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Tạo áp lực khẩn cấp và ngăn cản gọi điện cho người nhà hoặc số cũ.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Khoản tiền 9 triệu đồng theo yêu cầu chuyển khoản.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Có dấu hiệu giả mạo người thân để yêu cầu chuyển tiền trong tình huống khẩn cấp giả tạo.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Thông báo đổi số, đòi chuyển tiền gấp viện phí và yêu cầu không gọi xác minh.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ nội dung tin nhắn để nhận diện yêu cầu chuyển tiền và áp lực tâm lý.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào ví để đóng viện phí",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển gấp 9 triệu vào ví này để em đóng viện phí.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu tài chính gắn với tình huống cấp bách.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "inducement",
+              "description": "Ngăn cản xác minh qua người nhà hoặc số cũ với lý do ca cấp cứu",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Đừng gọi người nhà hay số cũ vì sẽ làm chậm ca cấp cứu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Tạo áp lực tâm lý để nạn nhân không gọi điện xác thực.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f1",
+                "support_id": "f2"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1",
+              "f2"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "source_of_request"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-08"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "identity"
+            },
+            {
+              "finding_id": "f2",
+              "kind": "relation"
+            }
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 6330.3278000094,
+    "extraction_ms": 6920.736600004602,
+    "response": {
+      "schema_version": "1.3",
+      "mode": "two_pass",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Đừng gọi người nhà hay số cũ vì sẽ làm chậm ca cấp cứu.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Chuyển gấp 9 triệu vào ví này để em đóng viện phí.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Đừng gọi người nhà hay số cũ vì sẽ làm chậm ca cấp cứu.”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển gấp 9 triệu vào ví này để em đóng viện phí.",
+              "start": 31,
+              "end": 81
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Đừng gọi người nhà hay số cũ vì sẽ làm chậm ca cấp cứu.",
+              "start": 82,
+              "end": 137
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+        "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-08"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3095.200299983844,
+          "retrieval_parallel": 7.9459999687969685,
+          "second_provider": 3235.364500025753,
+          "pipeline_total": 6338.965100003406,
+          "verification_render": 1.457699981983751
+        },
+        "decision_version": "two-pass-2",
+        "information_needed": true
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.82560001546517
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 3.7768000038340688
+        }
+      }
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 590.4087999952026,
+    "validation_adjudication_serialization_ms": 6.908099981956184
+  },
+  {
+    "id": "TP-N3",
+    "executed": true,
+    "http_status": 503,
+    "api_ms": 2697.3696000059135,
+    "provider_http_status": 503,
+    "provider_http_statuses": [
+      503
+    ],
+    "provider_adapter_ms": 2088.8160000322387,
+    "extraction_ms": 2693.8732999842614,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "4bda436a-8791-4277-bdb2-754f4297e350",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "provider_status": 503
+      }
+    }
+  }
+]

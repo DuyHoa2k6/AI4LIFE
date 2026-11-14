@@ -1,0 +1,161 @@
+{
+  "mock": {
+    "planned": 28,
+    "executed": 28,
+    "successful": 28,
+    "errors": 0,
+    "not_run": 0,
+    "matrix": {
+      "scam": {
+        "clear": 2,
+        "high": 6,
+        "suspicious": 4
+      },
+      "normal": {
+        "clear": 10,
+        "suspicious": 2
+      },
+      "uncertain": {
+        "suspicious": 2,
+        "need_context": 2
+      }
+    },
+    "completion_rate": 1.0,
+    "status_matches": 18,
+    "high_binary_successful_only": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 6,
+      "TN": 12
+    },
+    "high_precision_successful_only": 1.0,
+    "high_recall_successful_only": 0.5,
+    "high_scam_delivered_all_planned": 0.5,
+    "scam_clear": [
+      "MX-S01",
+      "MX-S07"
+    ],
+    "scam_not_high_successful": [
+      "MX-S01",
+      "MX-S04",
+      "MX-S05",
+      "MX-S07",
+      "MX-S08",
+      "MX-S12"
+    ],
+    "normal_warning": [
+      "MX-N06",
+      "MX-N10"
+    ],
+    "normal_need_context": [],
+    "uncertain_questions": {
+      "with_questions": 2,
+      "successful": 4
+    },
+    "latency_all_executed": {
+      "n": 28,
+      "p50_ms": 2.233100007288158,
+      "p95_ms": 3.810300026088953
+    },
+    "latency_successful": {
+      "n": 28,
+      "p50_ms": 2.233100007288158,
+      "p95_ms": 3.810300026088953
+    },
+    "provider_adapter_successful": {
+      "n": 0,
+      "p50_ms": null,
+      "p95_ms": null
+    },
+    "error_counts": {},
+    "exact_quotes": 38,
+    "quote_count": 38,
+    "speaker_reference_errors": 0,
+    "live_review_invalid_quotes": 0,
+    "live_review_quote_count": 0,
+    "live_review_speaker_reference_errors": 0,
+    "latency_note": "API ASGI plus actual provider HTTP; not browser/extension, transport and provider compute not separable",
+    "quality_note": "Public synthetic functional cases with author judgments; not independent or real-user accuracy"
+  },
+  "gemini": {
+    "planned": 28,
+    "executed": 28,
+    "successful": 16,
+    "errors": 12,
+    "not_run": 0,
+    "matrix": {
+      "scam": {
+        "need_context": 6,
+        "high": 3,
+        "error": 3
+      },
+      "normal": {
+        "need_context": 4,
+        "error": 8
+      },
+      "uncertain": {
+        "need_context": 3,
+        "error": 1
+      }
+    },
+    "completion_rate": 0.5714285714285714,
+    "status_matches": 6,
+    "high_binary_successful_only": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 6,
+      "TN": 4
+    },
+    "high_precision_successful_only": 1.0,
+    "high_recall_successful_only": 0.3333333333333333,
+    "high_scam_delivered_all_planned": 0.25,
+    "scam_clear": [],
+    "scam_not_high_successful": [
+      "MX-S01",
+      "MX-S03",
+      "MX-S08",
+      "MX-S09",
+      "MX-S11",
+      "MX-S12"
+    ],
+    "normal_warning": [],
+    "normal_need_context": [
+      "MX-N01",
+      "MX-N04",
+      "MX-N06",
+      "MX-N10"
+    ],
+    "uncertain_questions": {
+      "with_questions": 3,
+      "successful": 3
+    },
+    "latency_all_executed": {
+      "n": 28,
+      "p50_ms": 3207.2035999735817,
+      "p95_ms": 4065.0049000396393
+    },
+    "latency_successful": {
+      "n": 16,
+      "p50_ms": 3207.2035999735817,
+      "p95_ms": 4176.793000020552
+    },
+    "provider_adapter_successful": {
+      "n": 16,
+      "p50_ms": 3205.32299997285,
+      "p95_ms": 4174.446699966211
+    },
+    "error_counts": {
+      "EVIDENCE_INVALID": 10,
+      "PROVIDER_INVALID_OUTPUT": 2
+    },
+    "exact_quotes": 24,
+    "quote_count": 24,
+    "speaker_reference_errors": 0,
+    "live_review_invalid_quotes": 20,
+    "live_review_quote_count": 42,
+    "live_review_speaker_reference_errors": 0,
+    "latency_note": "API ASGI plus actual provider HTTP; not browser/extension, transport and provider compute not separable",
+    "quality_note": "Public synthetic functional cases with author judgments; not independent or real-user accuracy"
+  },
+  "same_product_hashes": true
+}

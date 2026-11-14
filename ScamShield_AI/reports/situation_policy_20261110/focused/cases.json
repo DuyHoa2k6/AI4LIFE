@@ -1,0 +1,107 @@
+[
+  {
+    "id": "U01",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Biên lai và yêu cầu giao laptop trước khi thấy tiền",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 18096.310699998867,
+    "manual_review": "pending"
+  },
+  {
+    "id": "U03",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hoàn cọc sau một bước chưa có hướng dẫn",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 15917.694699994172,
+    "manual_review": "pending"
+  },
+  {
+    "id": "U04",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Chia sẻ màn hình ngân hàng để duyệt hoàn cọc",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 10786.254399994505,
+    "manual_review": "pending"
+  },
+  {
+    "id": "U05",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đổi tài khoản nhận hóa đơn và trì hoãn xác minh",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 10859.773899996071,
+    "manual_review": "pending"
+  },
+  {
+    "id": "U06",
+    "group": "clear",
+    "acceptable": [
+      "clear"
+    ],
+    "questions_required": false,
+    "manual_focus": "Giao laptop khi người bán đã tự kiểm tra đủ tiền",
+    "prediction": "error",
+    "executed": true,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": 15452.876800001832,
+    "manual_review": "pending"
+  },
+  {
+    "id": "U09",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Tự nhận hỗ trợ phường, xin căn cước và chân dung",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  },
+  {
+    "id": "U10",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Hoa hồng mồi rồi nộp thêm tiền mở khóa",
+    "prediction": "not_run",
+    "executed": false,
+    "status_match": false,
+    "questions_present": false,
+    "api_ms": null,
+    "manual_review": "pending"
+  }
+]

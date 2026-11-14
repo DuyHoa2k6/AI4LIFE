@@ -1,0 +1,10 @@
+{
+  "source_document_sha256": "59ac8b3db389b56d8e9a03c5ff5b84cda3031fb2cae969bec431d170ce4dc7e6",
+  "input_sha256": "65715ca9cb1a8ec5d30f964cb1a91176e14cea8da23832e3b5c9228967d844bb",
+  "reference_sha256": "aedb9b494cfd702a3c983453d6807f5dc3b3b185939921db899b9c29511006e3",
+  "cases": 16,
+  "messages": 47,
+  "public_development_only": true,
+  "human_reviewed": 0,
+  "note": "Speaker labels retained literally. TH02 uses two different labels for a possible same scholarship representative; no account alias is assumed. TH16 remains one user report with embedded quotations, not invented original chat turns."
+}

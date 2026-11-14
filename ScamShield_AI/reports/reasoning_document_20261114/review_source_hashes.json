@@ -1,0 +1,8 @@
+{
+  "backend/local_observation/analyzer.py": "962edb24cb1adf15d5f95cb6a7a1dba8910bcc916a5f66be6e5001aa8589a42b",
+  "backend/local_observation/segmentation.py": "fbd595a578cb46ac30e7bf156ec96a055272c33f0a90f885abf8edd1f3ea6e52",
+  "backend/local_reasoning/clause_context.py": "e8421c8a229f5a2c28387a65b31a49b2f37faabc6521006bd61a66f0a3783de2",
+  "backend/local_reasoning/semantic_graph.py": "fcbe69a2a39b5e98f88bd110f55a304c6900e01523f737baf1e4c6c2849b7401",
+  "backend/local_reasoning/grounding.py": "0784da67508283499859646776b9c70fe9fa5df0ca051935235d2aba16bbaa50",
+  "backend/local_reasoning/legacy_engine.py": "b447f0610490b7633670b00996af8da7d84de97fd9d6a31d4f6fba4bc23f80ef"
+}

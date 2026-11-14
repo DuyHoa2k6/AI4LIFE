@@ -1,0 +1,165 @@
+{
+  "scope": "Draft development references; not independently reviewed or final risk labels.",
+  "cases": [
+    {
+      "id": "AB01",
+      "normalized": "chuyen khoan 500k cho toi",
+      "event_type": "transfer_funds",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB02",
+      "normalized": "khong chuyen khoan tien truoc",
+      "event_type": "transfer_funds",
+      "polarity": "negative"
+    },
+    {
+      "id": "AB03",
+      "normalized": "khong can chuyen khoan tien",
+      "event_type": "transfer_funds",
+      "polarity": "negative"
+    },
+    {
+      "id": "AB04",
+      "normalized": "gui mat khau tai khoan cho toi",
+      "event_type": "provide_credentials",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB05",
+      "normalized": "gui anh can cuoc cong dan qua chat",
+      "event_type": "provide_documents",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB06",
+      "normalized": "gui anh chung minh nhan dan",
+      "event_type": "provide_documents",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB07",
+      "normalized": "cai ung dung nay",
+      "event_type": "install_app",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB08",
+      "normalized": "bat chia se man hinh",
+      "event_type": "share_screen",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB09",
+      "normalized": "toi la cham soc khach hang",
+      "event_type": "identity_claim",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB10",
+      "normalized": "chua nhan duoc tien",
+      "event_type": "receive_funds",
+      "polarity": "negative"
+    },
+    {
+      "id": "AB11",
+      "normalized": "chong toi ve nha voi con",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB12",
+      "normalized": "thi truong chung khoan giam",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB13",
+      "normalized": "ban ve thiet ke logo",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB14",
+      "normalized": "tiktok clip tiktok",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB15",
+      "normalized": "chinh sach bao hanh san pham",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB16",
+      "normalized": "mo hinh hoc may can huan luyen",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB17",
+      "normalized": "bao hanh san pham may nay",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB18",
+      "normalized": "bao hiem y te",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB19",
+      "normalized": "bay gio phai lam gi",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB20",
+      "normalized": "so dien thoai va so tai khoan",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB21",
+      "normalized": "minh nhan du tien",
+      "event_type": "receive_funds",
+      "polarity": "positive"
+    },
+    {
+      "id": "AB22",
+      "normalized": "nhan tin rieng cho toi",
+      "event_type": null,
+      "polarity": null
+    },
+    {
+      "id": "AB23",
+      "unresolved_required": true
+    },
+    {
+      "id": "AB24",
+      "unresolved_required": true
+    },
+    {
+      "id": "AB25",
+      "unresolved_required": true
+    },
+    {
+      "id": "AB26",
+      "unresolved_required": true
+    },
+    {
+      "id": "AB27",
+      "unresolved_required": true
+    },
+    {
+      "id": "AB28",
+      "unresolved_required": true
+    },
+    {
+      "id": "AB29",
+      "unresolved_required": true
+    }
+  ]
+}

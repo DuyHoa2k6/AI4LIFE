@@ -1,0 +1,2021 @@
+[
+  {
+    "id": "N01",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 15954.783899986069,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 461,
+      "prompt_tokens": 4824,
+      "total_tokens": 5285
+    },
+    "usage_totals": {
+      "completion_tokens": 893,
+      "prompt_tokens": 5784,
+      "total_tokens": 6677
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Nội dung chỉ là thông báo lịch họp bình thường, không chứa dấu hiệu rủi ro hoặc yêu cầu nguy hiểm.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Thông báo về lịch nhóm họp lúc 15 giờ tại phòng B203 và yêu cầu mang theo sổ ghi chép.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không có thông tin về danh tính người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Mang theo sổ ghi chép đến buổi họp.",
+              "evidence_refs": []
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Không có yếu tố thuyết phục hoặc áp lực.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không có tài sản nào được đề cập là có nguy cơ.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không có dấu hiệu giả mạo danh tính.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Nhắc lịch họp và yêu cầu mang sổ ghi chép.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Dữ liệu văn bản ngắn gọn, chỉ là thông báo nhắc lịch sinh hoạt hoặc công việc thông thường.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [],
+          "hypotheses": [],
+          "uncertainties": [
+            "Không rõ bối cảnh và danh tính người gửi thông điệp nhắc lịch họp."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "inferred",
+              "text": "Nội dung chỉ là thông báo lịch họp bình thường, không chứa dấu hiệu rủi ro hoặc yêu cầu nguy hiểm.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 15703.231500010588,
+    "extraction_ms": 15951.47359999828,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 0,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 0,
+        "initial_hypotheses": 0,
+        "discarded_source_uses": 0,
+        "scenario_matches": [],
+        "stage_timings_ms": {
+          "first_provider": 7416.1954000010155,
+          "retrieval_parallel": 2.452499989885837,
+          "second_provider": 8287.183200009167,
+          "pipeline_total": 15705.856500004302,
+          "verification_render": 0.2965000021504238
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.4783999940846115
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.271599994855933
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 0,
+      "exact_quotes": 0,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 248.2420999876922,
+    "validation_adjudication_serialization_ms": 3.310299987788312
+  },
+  {
+    "id": "H02",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 24011.114299995825,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      503,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1546,
+      "prompt_tokens": 5289,
+      "total_tokens": 6835
+    },
+    "usage_totals": {
+      "completion_tokens": 2703,
+      "prompt_tokens": 6264,
+      "total_tokens": 8967
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Người gửi thông báo người nhận trúng phần quà 20 triệu đồng và yêu cầu nộp tiền phí trước.",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính thực sự của người gửi.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển 500 nghìn đồng vào tài khoản cá nhân.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra phần thưởng lớn để dụ dỗ và đặt điều kiện phải đóng phí trước mới giải ngân.",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "observed",
+          "text": "Số tiền 500 nghìn đồng bị yêu cầu chuyển đi.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ xác định mạo danh tổ chức cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển tiền trước vào tài khoản cá nhân rồi mới xem xét giải ngân phần thưởng sau.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ bằng chứng tin nhắn thể hiện hành vi yêu cầu chuyển tiền kèm điều kiện nhận thưởng.",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Thông báo trúng thưởng phần quà lớn để tạo sự chú ý",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn trúng phần quà 20 triệu.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Người gửi đưa ra thông tin trúng thưởng làm mồi nhử.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền vào tài khoản cá nhân",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước,",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Có hành vi yêu cầu người nhận chuyển tiền đi.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f3",
+          "action": "inducement",
+          "description": "Đặt điều kiện phải đóng phí trước mới giải ngân phần thưởng",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "có tiền phí thì tôi mới giải ngân phần thưởng.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đặt điều kiện tài chính bắt buộc trước khi nhận được lợi ích hứa hẹn.",
+            "evidence_refs": [
+              "f3"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f2",
+            "support_id": "f3"
+          },
+          {
+            "request_id": "f2",
+            "support_id": "f1"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": true,
+        "question_topics": [
+          "relationship",
+          "payment_purpose"
+        ],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-04"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f2",
+          "kind": "identity"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f2",
+          "support_id": "f3",
+          "status": "supported",
+          "relation_type": "payment_required_before_benefit",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước, có tiền phí thì tôi mới giải ngân phần thưởng.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu chuyển tiền được đặt ra như một điều kiện bắt buộc để được nhận phần thưởng giải ngân.",
+          "unresolved_reference": null,
+          "missing_information": null
+        },
+        {
+          "request_id": "f2",
+          "support_id": "f1",
+          "status": "supported",
+          "relation_type": "payment_required_before_benefit",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn trúng phần quà 20 triệu. Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Việc yêu cầu chuyển tiền gắn liền với phần quà trúng thưởng được thông báo.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ],
+      "url_uses": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Bạn trúng phần quà 20 triệu.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Không rõ danh tính cụ thể của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Chuyển 500 nghìn vào tài khoản cá nhân.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Có tiền phí thì mới giải ngân phần thưởng.",
+              "evidence_refs": [
+                "f3"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tiền trong tài khoản ngân hàng của người nhận tin.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Không rõ người gửi mạo danh tổ chức nào cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Thông báo trúng thưởng, yêu cầu chuyển khoản trước tiền phí rồi mới nhận thưởng.",
+              "evidence_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ văn bản yêu cầu chuyển tiền trước để nhận thưởng.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Đưa ra thông tin trúng thưởng giá trị lớn để thu hút sự chú ý.",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn trúng phần quà 20 triệu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi tạo dựng phần thưởng hấp dẫn.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào tài khoản cá nhân.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước,",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Có yêu cầu chuyển tiền đi.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "inducement",
+              "description": "Đưa ra điều kiện phải đóng phí trước mới nhận được phần thưởng.",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "có tiền phí thì tôi mới giải ngân phần thưởng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Tạo áp lực điều kiện tài chính để thúc đẩy chuyển khoản.",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Giả thuyết đây là kịch bản lừa đảo yêu cầu đóng phí trước nhận thưởng sau.",
+              "finding_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là trò đùa giữa những người quen biết.",
+                "Đây có thể là một giao dịch mua bán nhỏ có điều kiện đặt cọc thực tế."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ danh tính thực sự của người gửi tin nhắn.",
+            "Không rõ có phần thưởng thật hay không.",
+            "Không có ngữ cảnh bổ sung về mối quan hệ giữa các bên."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Người gửi thông báo người nhận trúng phần quà 20 triệu đồng và yêu cầu nộp tiền phí trước.",
+              "evidence_refs": [
+                "f1",
+                "f3"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực sự của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển 500 nghìn đồng vào tài khoản cá nhân.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra phần thưởng lớn để dụ dỗ và đặt điều kiện phải đóng phí trước mới giải ngân.",
+              "evidence_refs": [
+                "f1",
+                "f3"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Số tiền 500 nghìn đồng bị yêu cầu chuyển đi.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ xác định mạo danh tổ chức cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền trước vào tài khoản cá nhân rồi mới xem xét giải ngân phần thưởng sau.",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng tin nhắn thể hiện hành vi yêu cầu chuyển tiền kèm điều kiện nhận thưởng.",
+              "evidence_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Thông báo trúng thưởng phần quà lớn để tạo sự chú ý",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn trúng phần quà 20 triệu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Người gửi đưa ra thông tin trúng thưởng làm mồi nhử.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào tài khoản cá nhân",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước,",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Có hành vi yêu cầu người nhận chuyển tiền đi.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "inducement",
+              "description": "Đặt điều kiện phải đóng phí trước mới giải ngân phần thưởng",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "có tiền phí thì tôi mới giải ngân phần thưởng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đặt điều kiện tài chính bắt buộc trước khi nhận được lợi ích hứa hẹn.",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f2",
+                "support_id": "f3"
+              },
+              {
+                "request_id": "f2",
+                "support_id": "f1"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": true,
+            "question_topics": [
+              "relationship",
+              "payment_purpose"
+            ],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-04"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f2",
+              "kind": "identity"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f2",
+              "support_id": "f3",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước, có tiền phí thì tôi mới giải ngân phần thưởng.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu chuyển tiền được đặt ra như một điều kiện bắt buộc để được nhận phần thưởng giải ngân.",
+              "unresolved_reference": null,
+              "missing_information": null
+            },
+            {
+              "request_id": "f2",
+              "support_id": "f1",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn trúng phần quà 20 triệu. Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Việc yêu cầu chuyển tiền gắn liền với phần quà trúng thưởng được thông báo.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ],
+          "url_uses": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 23793.217499987804,
+    "extraction_ms": 24008.512400003383,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Bạn trúng phần quà 20 triệu.” “có tiền phí thì tôi mới giải ngân phần thưởng.”",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước,”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Bạn trúng phần quà 20 triệu.” “có tiền phí thì tôi mới giải ngân phần thưởng.”",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+          "evidence_refs": [
+            "f2",
+            "f3",
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn trúng phần quà 20 triệu.",
+              "start": 0,
+              "end": 28
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chuyển 500 nghìn vào tài khoản cá nhân của tôi trước,",
+              "start": 29,
+              "end": 82
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+            "evidence_refs": [
+              "f2",
+              "f1",
+              "f3"
+            ]
+          }
+        },
+        {
+          "id": "f3",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "có tiền phí thì tôi mới giải ngân phần thưởng.",
+              "start": 83,
+              "end": 129
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+        "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?"
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 3,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-04"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 12637.728100002278,
+          "retrieval_parallel": 2.2286999883363023,
+          "second_provider": 11156.033899998874,
+          "pipeline_total": 23796.341799999936,
+          "verification_render": 0.8286999945994467
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 2,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.3854999997420236
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 2.0304999925429
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 215.2949000155786,
+    "validation_adjudication_serialization_ms": 2.6018999924417585
+  },
+  {
+    "id": "N03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 16917.58339999069,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1039,
+      "prompt_tokens": 5278,
+      "total_tokens": 6317
+    },
+    "usage_totals": {
+      "completion_tokens": 2071,
+      "prompt_tokens": 6263,
+      "total_tokens": 8334
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Văn bản đưa ra cảnh báo về thủ đoạn giả mạo và khẳng định nhà trường không yêu cầu sinh viên cung cấp mật khẩu hoặc mã OTP.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Cảnh báo hướng đến sinh viên từ phía nhà trường.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Không có hành vi yêu cầu thực hiện giao dịch hay cung cấp thông tin; văn bản chỉ trích dẫn lời kẻ giả mạo để cảnh báo phòng tránh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Sử dụng nội dung cảnh báo và khẳng định nhà trường không yêu cầu để nâng cao cảnh giác.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Không có tài sản nào bị đe dọa trực tiếp trong văn bản cảnh báo này.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "observed",
+          "text": "Đề cập đến kẻ giả mạo lợi dụng danh nghĩa nhà trường.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Không có chuỗi sự kiện giao dịch nào được ghi nhận.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Bằng chứng đủ để xác định đây là một thông điệp cảnh báo an toàn.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Trích dẫn lời kẻ giả mạo yêu cầu nhập mật khẩu và gửi mã OTP nhằm minh họa hành vi lừa đảo.",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đây là lời trích dẫn nhằm cảnh báo, không phải yêu cầu thực tế.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Lời khẳng định phủ định yêu cầu cung cấp thông tin từ phía nhà trường.",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Nhà trường không yêu cầu bạn làm như vậy.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Khẳng định nhà trường không yêu cầu sinh viên thực hiện hành động trên.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-06"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Nhà trường đưa ra cảnh báo về việc kẻ giả mạo yêu cầu sinh viên nhập mật khẩu tài khoản và gửi mã OTP.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Nhà trường",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Cảnh báo trích dẫn yêu cầu nhập mật khẩu tài khoản trường và gửi mã OTP nhưng đồng thời khẳng định nhà trường không yêu cầu điều đó.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Sử dụng thông báo cảnh báo trực tiếp đến sinh viên.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Tài khoản trường và mã OTP",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "impersonation": {
+              "status": "observed",
+              "text": "Cảnh báo về các đối tượng giả mạo",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Đưa ra cảnh báo, trích dẫn lời kẻ giả mạo, sau đó phủ nhận yêu cầu đó từ phía nhà trường.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Văn bản là một thông báo cảnh báo an toàn mang tính phòng ngừa.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Cảnh báo sinh viên về việc kẻ giả mạo yêu cầu nhập mật khẩu và mã OTP",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đoạn văn đang trích dẫn lời của kẻ giả mạo trong một thông điệp cảnh báo.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Nhà trường khẳng định không yêu cầu sinh viên thực hiện hành động trên",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Nhà trường không yêu cầu bạn làm như vậy.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là lời phủ định và đính chính chính thức từ thông báo.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Đây là thông báo cảnh báo an toàn chính thức từ nhà trường nhằm phòng chống lừa đảo.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Đây có thể là tin nhắn giả mạo dạng cảnh báo giả để tạo lòng tin."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa thể xác thực tuyệt đối nguồn phát hành thông báo có thực sự xuất phát từ quản trị viên nhà trường hay không."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Văn bản đưa ra cảnh báo về thủ đoạn giả mạo và khẳng định nhà trường không yêu cầu sinh viên cung cấp mật khẩu hoặc mã OTP.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Cảnh báo hướng đến sinh viên từ phía nhà trường.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Không có hành vi yêu cầu thực hiện giao dịch hay cung cấp thông tin; văn bản chỉ trích dẫn lời kẻ giả mạo để cảnh báo phòng tránh.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Sử dụng nội dung cảnh báo và khẳng định nhà trường không yêu cầu để nâng cao cảnh giác.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Không có tài sản nào bị đe dọa trực tiếp trong văn bản cảnh báo này.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "observed",
+              "text": "Đề cập đến kẻ giả mạo lợi dụng danh nghĩa nhà trường.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Không có chuỗi sự kiện giao dịch nào được ghi nhận.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Bằng chứng đủ để xác định đây là một thông điệp cảnh báo an toàn.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "share_auth_code",
+              "description": "Trích dẫn lời kẻ giả mạo yêu cầu nhập mật khẩu và gửi mã OTP nhằm minh họa hành vi lừa đảo.",
+              "speaker": "unknown",
+              "speech_role": "quoted_warning",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đây là lời trích dẫn nhằm cảnh báo, không phải yêu cầu thực tế.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "other",
+              "description": "Lời khẳng định phủ định yêu cầu cung cấp thông tin từ phía nhà trường.",
+              "speaker": "unknown",
+              "speech_role": "denial",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Nhà trường không yêu cầu bạn làm như vậy.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Khẳng định nhà trường không yêu cầu sinh viên thực hiện hành động trên.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-06"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 16721.3405000075,
+    "extraction_ms": 16915.776699999697,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "clear",
+      "summary": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Chưa ghi nhận dấu hiệu đáng ngờ trong nội dung và bối cảnh bạn cung cấp; danh tính chưa được xác minh.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "share_auth_code",
+          "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+          "speaker": "unknown",
+          "speech_role": "quoted_warning",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Cảnh báo sinh viên: kẻ giả mạo thường viết “nhập mật khẩu tài khoản trường và gửi mã OTP cho chúng tôi”.",
+              "start": 0,
+              "end": 104
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "denial",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Nhà trường không yêu cầu bạn làm như vậy.",
+              "start": 143,
+              "end": 184
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 3,
+        "rule_conflicts": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-06"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 12068.454499996733,
+          "retrieval_parallel": 1.8727999995462596,
+          "second_provider": 4653.0873000010615,
+          "pipeline_total": 16723.695100008626,
+          "verification_render": 0.42949999624397606
+        },
+        "decision_version": "two-pass-4",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.175199999124743
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 1.715999998850748
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 194.43619999219663,
+    "validation_adjudication_serialization_ms": 1.8066999909933656
+  },
+  {
+    "id": "H04",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 13824.148700005026,
+    "current_stage": "observation_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      503,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1197,
+      "prompt_tokens": 1055,
+      "total_tokens": 2252
+    },
+    "usage_totals": {
+      "completion_tokens": 1197,
+      "prompt_tokens": 1055,
+      "total_tokens": 2252
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Khoản hỗ trợ 8 triệu từ tổ xét trợ cấp",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "observed",
+          "text": "Người bên tổ xét trợ cấp",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Cài đặt ứng dụng và bật quyền điều khiển máy",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Đưa ra điều kiện bắt buộc phải làm thì mới nhận được tiền hỗ trợ",
+          "evidence_refs": [
+            "f3"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Thiết bị di động và dữ liệu cá nhân/tài khoản ngân hàng trên máy",
+          "evidence_refs": [
+            "f3"
+          ]
+        },
+        "impersonation": {
+          "status": "inferred",
+          "text": "Giả mạo nhân viên cơ quan chức năng hoặc tổ chức xét duyệt trợ cấp",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Thông báo có trợ cấp -> Người dùng hỏi cách nhận -> Yêu cầu cài app và cấp quyền điều khiển",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ bằng chứng ghi nhận yêu cầu cài ứng dụng và cấp quyền điều khiển kèm lời hứa trợ cấp",
+          "evidence_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Người lạ thông báo có khoản hỗ trợ tài chính để thu hút sự chú ý",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "a",
+              "quote": "Tôi bên tổ xét trợ cấp. Hồ sơ của bạn có khoản hỗ trợ 8 triệu.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đưa ra thông tin về khoản tiền để tạo lòng tin và dụ dỗ",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "install_app",
+          "description": "Yêu cầu cài đặt ứng dụng do người lạ gửi",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "c",
+              "quote": "Bạn cài ứng dụng tôi gửi",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đòi hỏi người dùng thực hiện hành động cài phần mềm ngoài",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        },
+        {
+          "id": "f3",
+          "action": "grant_access",
+          "description": "Yêu cầu bật quyền điều khiển thiết bị cho người khác",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "c",
+              "quote": "rồi bật quyền điều khiển máy cho tôi. Đây là điều kiện bắt buộc, không làm thì không nhận được 8 triệu.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "observed",
+            "text": "Đòi hỏi quyền kiểm soát máy dưới áp lực mất tiền trợ cấp",
+            "evidence_refs": [
+              "f3"
+            ]
+          }
+        }
+      ],
+      "hypotheses": [
+        {
+          "id": "h1",
+          "description": "Kịch bản lừa đảo chiếm đoạt quyền điều khiển thiết bị và tài sản thông qua việc cài ứng dụng độc hại giả mạo trợ cấp",
+          "finding_refs": [
+            "f1",
+            "f2",
+            "f3"
+          ],
+          "alternative_explanations": [
+            "Quy trình hỗ trợ hành chính từ xa của một cơ quan thực tế (ít khả năng đòi quyền điều khiển toàn quyền)",
+            "Nhân viên hỗ trợ kỹ thuật hợp pháp đang hướng dẫn cấu hình thiết bị"
+          ]
+        }
+      ],
+      "uncertainties": [
+        "Chưa xác định được danh tính thực tế của người gửi thông tin",
+        "Chưa rõ bản chất và mã nguồn của ứng dụng được yêu cầu cài đặt",
+        "Chưa rõ đường dẫn tải ứng dụng thực tế do chưa có dữ liệu kỹ thuật liên kết"
+      ]
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Khoản hỗ trợ 8 triệu từ tổ xét trợ cấp",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "observed",
+              "text": "Người bên tổ xét trợ cấp",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Cài đặt ứng dụng và bật quyền điều khiển máy",
+              "evidence_refs": [
+                "f2",
+                "f3"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Đưa ra điều kiện bắt buộc phải làm thì mới nhận được tiền hỗ trợ",
+              "evidence_refs": [
+                "f3"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Thiết bị di động và dữ liệu cá nhân/tài khoản ngân hàng trên máy",
+              "evidence_refs": [
+                "f3"
+              ]
+            },
+            "impersonation": {
+              "status": "inferred",
+              "text": "Giả mạo nhân viên cơ quan chức năng hoặc tổ chức xét duyệt trợ cấp",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Thông báo có trợ cấp -> Người dùng hỏi cách nhận -> Yêu cầu cài app và cấp quyền điều khiển",
+              "evidence_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng ghi nhận yêu cầu cài ứng dụng và cấp quyền điều khiển kèm lời hứa trợ cấp",
+              "evidence_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Người lạ thông báo có khoản hỗ trợ tài chính để thu hút sự chú ý",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "a",
+                  "quote": "Tôi bên tổ xét trợ cấp. Hồ sơ của bạn có khoản hỗ trợ 8 triệu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đưa ra thông tin về khoản tiền để tạo lòng tin và dụ dỗ",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "install_app",
+              "description": "Yêu cầu cài đặt ứng dụng do người lạ gửi",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "c",
+                  "quote": "Bạn cài ứng dụng tôi gửi",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đòi hỏi người dùng thực hiện hành động cài phần mềm ngoài",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            },
+            {
+              "id": "f3",
+              "action": "grant_access",
+              "description": "Yêu cầu bật quyền điều khiển thiết bị cho người khác",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "c",
+                  "quote": "rồi bật quyền điều khiển máy cho tôi. Đây là điều kiện bắt buộc, không làm thì không nhận được 8 triệu.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Đòi hỏi quyền kiểm soát máy dưới áp lực mất tiền trợ cấp",
+                "evidence_refs": [
+                  "f3"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Kịch bản lừa đảo chiếm đoạt quyền điều khiển thiết bị và tài sản thông qua việc cài ứng dụng độc hại giả mạo trợ cấp",
+              "finding_refs": [
+                "f1",
+                "f2",
+                "f3"
+              ],
+              "alternative_explanations": [
+                "Quy trình hỗ trợ hành chính từ xa của một cơ quan thực tế (ít khả năng đòi quyền điều khiển toàn quyền)",
+                "Nhân viên hỗ trợ kỹ thuật hợp pháp đang hướng dẫn cấu hình thiết bị"
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa xác định được danh tính thực tế của người gửi thông tin",
+            "Chưa rõ bản chất và mã nguồn của ứng dụng được yêu cầu cài đặt",
+            "Chưa rõ đường dẫn tải ứng dụng thực tế do chưa có dữ liệu kỹ thuật liên kết"
+          ]
+        }
+      }
+    ],
+    "provider_adapter_ms": 13622.676600003615,
+    "extraction_ms": 13822.62659999833,
+    "response": {
+      "code": "EVIDENCE_INVALID",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "9a9cb4cc-b1ba-4b59-9fa3-f0a4179efbc1"
+    }
+  }
+]

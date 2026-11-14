@@ -1,0 +1,10 @@
+{
+  "backend\\main.py": "7b56846f0030e658d908ea7b2693c37fd84d4771656aece1ad75b96b01232427",
+  "backend\\retrieval.py": "f231192dabce625411df51dd20f35660057899e3276bbe220c290ea2ec9a9217",
+  "backend\\url_network.py": "c791ce4195914af38f47a361e4621bd9918e6c45ffca3573940544aa33240e4a",
+  "backend\\urls.py": "8567b77f756d82d8513860214ea2a7307a86f6db36854b7add030108d4490878",
+  "backend\\local_reasoning\\support.py": "4d64cc2ba2668474ddcfabbd951478ff79aae4e3f8df62da9124bd50c7c8b7e1",
+  "backend\\local_reasoning\\engine.py": "74d302839e25318dc79d952232745bbc5b70c141e30a4b334e22976565b3640b",
+  "backend\\local_reasoning\\adapter.py": "02e8afb1f3d26654093c9630aee46b5d79f7570c45a19bacf3e971523def1426",
+  "backend\\local_reasoning\\schema.py": "009edde67e102037e7a32cfc36a674d306bf1ec524671dfaf091fab2772b9d56"
+}

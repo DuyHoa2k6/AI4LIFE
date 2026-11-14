@@ -1,0 +1,193 @@
+[
+  {
+    "id": "A",
+    "input": {
+      "text": "Chưa thấy tiền về, nhưng cứ giao máy trước."
+    }
+  },
+  {
+    "id": "B",
+    "input": {
+      "text": "Tôi đã kiểm tra và nhận đủ tiền. Anh giao máy cho tài xế nhé."
+    }
+  },
+  {
+    "id": "C",
+    "input": {
+      "text": "Nếu chưa nhận tiền thì đừng giao máy."
+    }
+  },
+  {
+    "id": "D",
+    "input": {
+      "text": "Tôi cảnh báo mọi người đừng nghe câu ‘cứ giao máy trước’."
+    }
+  },
+  {
+    "id": "E",
+    "input": {
+      "text": "Hôm qua chưa nhận tiền. Hôm nay tôi đã kiểm tra và nhận đủ."
+    }
+  },
+  {
+    "id": "F",
+    "input": {
+      "text": "Đơn A chưa thanh toán. Đơn B đã nhận đủ, giao đơn B nhé."
+    }
+  },
+  {
+    "id": "G",
+    "input": {
+      "text": "Đọc sáu số vừa hiện để nhận tiền."
+    }
+  },
+  {
+    "id": "H",
+    "input": {
+      "messages": [
+        {
+          "id": "m1",
+          "speaker": "Người gửi",
+          "text": "Đọc sáu số vừa hiện để nhận tiền."
+        },
+        {
+          "id": "m2",
+          "speaker": "Người nhận",
+          "text": "Đó là mã đăng nhập."
+        }
+      ]
+    }
+  },
+  {
+    "id": "I",
+    "input": {
+      "text": "Anh là người quen của em."
+    }
+  },
+  {
+    "id": "J",
+    "input": {
+      "text": "😀 Chuyển 500.000 đồng. Mở https://example.invalid/a?x=1. Cảnh báo “họ nhắn ‘gửi OTP’”. Chuyển 500.000 đồng."
+    }
+  },
+  {
+    "id": "K",
+    "input": {
+      "text": "Tài xế đang chờ."
+    }
+  },
+  {
+    "id": "L",
+    "input": {
+      "text": "Mưa rơi trên mái hiên."
+    }
+  },
+  {
+    "id": "NEGATION",
+    "input": {
+      "text": "Đừng chuyển tiền."
+    }
+  },
+  {
+    "id": "COMPLETED",
+    "input": {
+      "text": "Tôi đã chuyển tiền."
+    }
+  },
+  {
+    "id": "NOT_YET",
+    "input": {
+      "text": "Tôi chưa chuyển tiền."
+    }
+  },
+  {
+    "id": "NO_NEED",
+    "input": {
+      "text": "Không cần chuyển tiền."
+    }
+  },
+  {
+    "id": "PENDING",
+    "input": {
+      "text": "Chưa được rút tiền."
+    }
+  },
+  {
+    "id": "MONEY",
+    "input": {
+      "text": "Ứng 500 nghìn để rút số dư."
+    }
+  },
+  {
+    "id": "PASSWORD",
+    "input": {
+      "text": "Gửi mật khẩu cho tôi."
+    }
+  },
+  {
+    "id": "DOCUMENTS",
+    "input": {
+      "text": "Gửi ảnh hai mặt căn cước qua chat."
+    }
+  },
+  {
+    "id": "INSTALL",
+    "input": {
+      "text": "Cài ứng dụng tôi gửi."
+    }
+  },
+  {
+    "id": "SCREEN",
+    "input": {
+      "text": "Bật chia sẻ màn hình."
+    }
+  },
+  {
+    "id": "CONTROL",
+    "input": {
+      "text": "Cấp quyền điều khiển."
+    }
+  },
+  {
+    "id": "CHANNEL",
+    "input": {
+      "text": "Chuyển sang Telegram nhé."
+    }
+  },
+  {
+    "id": "SECRET",
+    "input": {
+      "text": "Giữ bí mật chuyện này."
+    }
+  },
+  {
+    "id": "VERIFY",
+    "input": {
+      "text": "Đừng gọi số trong hợp đồng."
+    }
+  },
+  {
+    "id": "IDENTITY",
+    "input": {
+      "text": "Tôi là công an."
+    }
+  },
+  {
+    "id": "LOGIN",
+    "input": {
+      "text": "Tôi tự nhập mã trên ứng dụng chính thức."
+    }
+  },
+  {
+    "id": "REPORTED",
+    "input": {
+      "text": "Bạn nói chưa thấy tiền về."
+    }
+  },
+  {
+    "id": "DOUBLE_NEGATION",
+    "input": {
+      "text": "Không phải là không cần chuyển tiền."
+    }
+  }
+]

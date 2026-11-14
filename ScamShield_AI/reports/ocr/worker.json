@@ -1,0 +1,33 @@
+{
+  "scope": "isolated worker with mocked Chrome/canvas APIs, not actual screenshot permission test",
+  "checks": [
+    {
+      "name": "reject crop outside viewport before capture",
+      "passed": true
+    },
+    {
+      "name": "preview crop produces no HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "input mask applied before preview",
+      "passed": true
+    },
+    {
+      "name": "wrong session cannot upload image",
+      "passed": true
+    },
+    {
+      "name": "only cropped bytes go to fixed OCR origin",
+      "passed": true
+    },
+    {
+      "name": "changed active tab rejected",
+      "passed": true
+    },
+    {
+      "name": "stopped session cannot OCR",
+      "passed": true
+    }
+  ]
+}

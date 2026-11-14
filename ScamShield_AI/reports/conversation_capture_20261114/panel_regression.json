@@ -1,0 +1,178 @@
+{
+  "scope": "Real Chrome unpacked extension; real config/API smoke, controlled API responses for UI states and offline/late-response checks. Not a model-quality benchmark.",
+  "checks": [
+    {
+      "name": "explicit enable: zero requests before consent",
+      "passed": true
+    },
+    {
+      "name": "real backend high rendered",
+      "passed": true
+    },
+    {
+      "name": "four labels and clear aggregation",
+      "passed": true
+    },
+    {
+      "name": "details collapsed and no internal fields",
+      "passed": true
+    },
+    {
+      "name": "fabricated quote and its explanation excluded",
+      "passed": true
+    },
+    {
+      "name": "no image controls without images",
+      "passed": true
+    },
+    {
+      "name": "exact verified quote and short explanation",
+      "passed": true
+    },
+    {
+      "name": "drag remains visible -100,-100",
+      "passed": true
+    },
+    {
+      "name": "drag remains visible 1400,1000",
+      "passed": true
+    },
+    {
+      "name": "drag remains visible 20,850",
+      "passed": true
+    },
+    {
+      "name": "drag remains visible 1250,10",
+      "passed": true
+    },
+    {
+      "name": "pointer drag actually changes position",
+      "passed": true
+    },
+    {
+      "name": "drag triggers no analysis",
+      "passed": true
+    },
+    {
+      "name": "minimized keeps scanning",
+      "passed": true
+    },
+    {
+      "name": "new content is analyzed while minimized",
+      "passed": true
+    },
+    {
+      "name": "narrow viewport clamps and scrolls only results",
+      "passed": true
+    },
+    {
+      "name": "background work preserves open details",
+      "passed": true
+    },
+    {
+      "name": "selecting quote does not move panel",
+      "passed": true
+    },
+    {
+      "name": "keyboard moves header and keeps focus",
+      "passed": true
+    },
+    {
+      "name": "control click does not drag",
+      "passed": true
+    },
+    {
+      "name": "new result preserves existing open details",
+      "passed": true
+    },
+    {
+      "name": "background scan does not reset scroll",
+      "passed": true
+    },
+    {
+      "name": "wheel scrolls results without moving outer page",
+      "passed": true
+    },
+    {
+      "name": "image control appears only for actual visible image",
+      "passed": true
+    },
+    {
+      "name": "image OCR remains manual before image button click",
+      "passed": true
+    },
+    {
+      "name": "old session cannot submit clarification",
+      "passed": true
+    },
+    {
+      "name": "clarification preserves exact case binding without extra fields",
+      "passed": true
+    },
+    {
+      "name": "pause leaves historical results",
+      "passed": true
+    },
+    {
+      "name": "offline is not a risk conclusion",
+      "passed": true
+    },
+    {
+      "name": "retry retains selected region",
+      "passed": true
+    },
+    {
+      "name": "stale response removed after content change",
+      "passed": true
+    },
+    {
+      "name": "only selected content sent, no self scan",
+      "passed": true
+    },
+    {
+      "name": "close hides panel and mini 0",
+      "passed": true
+    },
+    {
+      "name": "no scanning after close 0",
+      "passed": true
+    },
+    {
+      "name": "close hides panel and mini 1",
+      "passed": true
+    },
+    {
+      "name": "no scanning after close 1",
+      "passed": true
+    },
+    {
+      "name": "one panel after repeated cycles",
+      "passed": true
+    },
+    {
+      "name": "close icon actually removes panel from layout",
+      "passed": true
+    },
+    {
+      "name": "no active scan observers or global UI listeners after close",
+      "passed": true
+    }
+  ],
+  "browser": "Chrome/157.0.8103.51",
+  "narrow": {
+    "style": "inset: 8px auto auto 8px;",
+    "viewport": "375,635",
+    "left": 8,
+    "right": 378,
+    "bottom": 642,
+    "width": 390,
+    "height": 650,
+    "scroll": 588,
+    "client": 438
+  },
+  "cleanup": {
+    "events": 0,
+    "observers": 0
+  },
+  "completed": true
+}

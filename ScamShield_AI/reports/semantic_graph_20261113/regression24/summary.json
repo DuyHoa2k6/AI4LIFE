@@ -1,0 +1,35 @@
+{
+  "cases": 24,
+  "matched": 24,
+  "failed": [],
+  "confusion_matrix": {
+    "high": {
+      "high": 4
+    },
+    "clear": {
+      "clear": 11
+    },
+    "need_context": {
+      "need_context": 6
+    },
+    "suspicious": {
+      "suspicious": 3
+    }
+  },
+  "exact_quote": {
+    "valid": 78,
+    "total": 78
+  },
+  "external_requests": 0,
+  "p50_ms": 13.436,
+  "p95_ms": 15.925,
+  "scope": "Development cases, one request per case, sequential ASGI TestClient; no browser/network latency or independent accuracy.",
+  "hashes": {
+    "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\data\\v2\\semantic_variants\\inputs.jsonl": "d96cf303094e5efb2976cee6bc9b4b44b9c7f46412f58c5cae34f04aceedc3b9",
+    "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\data\\v2\\semantic_variants\\expected.jsonl": "b80970b450c4a26423d6d5cf86ae10278b1663c82bf9ef8ee9129ee29b21e64f",
+    "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\data\\v2\\semantic_phrases.json": "a782ad0a80b616394a86c75e59013e7806b3be20051485ca27c7ccca02b87334",
+    "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\backend\\local_reasoning\\semantic_phrases.py": "377d8c4c31b3bca06f3191bc9c4bc25c759337c6af512799262215c8302c84c9",
+    "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\backend\\local_reasoning\\interaction.py": "784a1ac20864fe6bc46827833a710c07ff2a649a848f1b669947c1ddc3babe5e",
+    "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\backend\\local_reasoning\\situation.py": "ac7108db4821b143022cbb2be21983c1eb724f1f84f1bb7a3e34a6304d5a0232"
+  }
+}

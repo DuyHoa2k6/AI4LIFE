@@ -1,0 +1,8 @@
+{"prepared": "train", "count": 4}
+{"prepared": "validation", "count": 4}
+{"stage": "spans", "epochs": 120, "train_first": 1.2698062360286713, "train_last": 0.003310734929982573, "seconds": 0.7460797000021557}
+{"stage": "attributes", "epochs": 120, "train_first": 1.9523287117481232, "train_last": 0.00021045680205133976, "seconds": 0.8838316999972449}
+{"stage": "roles", "epochs": 120, "train_first": 1.1131648868322372, "train_last": 0.0007037208506517345, "seconds": 5.468812099999923}
+{"stage": "relations", "epochs": 120, "train_first": 0.6949442625045776, "train_last": 2.1674419770079112e-07, "seconds": 0.5902400000049965}
+{"stage": "baseline", "epochs": 120, "train_first": 1.5587541162967682, "train_last": 0.0015568211674690247, "seconds": 0.38838099999702536}
+{"saved": "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\artifacts\\phobert\\overfit_heads", "total_seconds": 12.471451999997953}

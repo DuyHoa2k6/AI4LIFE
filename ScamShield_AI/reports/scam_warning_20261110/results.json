@@ -1,0 +1,1807 @@
+[
+  {
+    "id": "NW-01",
+    "name": "Tiền công bị giữ",
+    "family": "transfer_funds",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7897.254900002736,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?",
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?"
+    ],
+    "input": {
+      "text": "Tiền công của chị đang nằm ở ngăn chờ. Chị chuyển 840 nghìn vào ví của em làm khoản đối ứng, đủ đối ứng thì em mới giải phóng tiền công."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tiền công của chị đang nằm ở ngăn chờ.",
+            "start": 0,
+            "end": 38
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Chị chuyển 840 nghìn vào ví của em làm khoản đối ứng",
+            "start": 39,
+            "end": 91
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      {
+        "id": "f3",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "đủ đối ứng thì em mới giải phóng tiền công.",
+            "start": 93,
+            "end": 136
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-02",
+    "name": "Đổi phí thành dấu xác nhận",
+    "family": "transfer_funds",
+    "group": "scam",
+    "expected": "high",
+    "actual": "need_context",
+    "correct": false,
+    "http_status": 200,
+    "api_ms": 9591.833099999349,
+    "provider_attempts": 3,
+    "consistency_repairs": 1,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?"
+    ],
+    "input": {
+      "text": "Không gọi là phí đâu anh, đây là dấu xác nhận bằng tiền. Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Anh gửi 1,2 triệu sang tài khoản em trước",
+            "start": 57,
+            "end": 98
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "thiếu dấu này thì khoản hoàn 12 triệu chưa thể về.",
+            "start": 100,
+            "end": 150
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-03",
+    "name": "Đòi thêm vốn qua hội thoại",
+    "family": "transfer_funds",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6542.723900005512,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "messages": [
+        {
+          "id": "a",
+          "speaker": "khach",
+          "text": "Tôi đã hoàn tất việc rồi, sao chưa rút được?"
+        },
+        {
+          "id": "b",
+          "speaker": "quan_ly",
+          "text": "Chị cần chuyển thêm 2 triệu để bù điểm tín nhiệm."
+        },
+        {
+          "id": "c",
+          "speaker": "quan_ly",
+          "text": "Có khoản bù đó thì bên em mới mở rút toàn bộ vốn và lãi cho chị."
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "quan_ly",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "b",
+            "quote": "Chị cần chuyển thêm 2 triệu để bù điểm tín nhiệm.",
+            "start": 0,
+            "end": 49
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "quan_ly",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "c",
+            "quote": "Có khoản bù đó thì bên em mới mở rút toàn bộ vốn và lãi cho chị.",
+            "start": 0,
+            "end": 64
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-04",
+    "name": "Trả tiền ăn có bối cảnh",
+    "family": "transfer_funds",
+    "group": "normal",
+    "expected": "clear",
+    "actual": "clear",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 5991.614999999001,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Chuyển lại mình 75 nghìn phần bún trưa nay nhé.",
+      "context": "Tôi và bạn vừa ăn cùng, bạn thanh toán hộ. Tôi đã đối chiếu đúng phần ăn và tài khoản của bạn."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Chuyển lại mình 75 nghìn phần bún trưa nay nhé.",
+            "start": 0,
+            "end": 47
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-05",
+    "name": "Mã sáu số tránh chữ OTP",
+    "family": "share_auth_code",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6851.004700001795,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Ngân hàng vừa gửi sáu chữ số đăng nhập về điện thoại chị. Đọc nguyên dãy đó cho tôi qua cuộc gọi để tôi hủy giao dịch đang treo; đừng tự nhập."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "share_auth_code",
+        "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Đọc nguyên dãy đó cho tôi qua cuộc gọi để tôi hủy giao dịch đang treo; đừng tự nhập.",
+            "start": 58,
+            "end": 142
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Ngân hàng vừa gửi sáu chữ số đăng nhập về điện thoại chị.",
+            "start": 0,
+            "end": 57
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f3",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "để tôi hủy giao dịch đang treo; đừng tự nhập.",
+            "start": 97,
+            "end": 142
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-06",
+    "name": "Mật khẩu để chống khóa",
+    "family": "share_auth_code",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7551.941400000942,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "input": {
+      "text": "Tài khoản mua sắm của anh sắp bị khóa. Nhắn cho tôi mật khẩu đăng nhập hiện tại, tôi mới giữ tài khoản hoạt động cho anh được."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tài khoản mua sắm của anh sắp bị khóa. Nhắn cho tôi mật khẩu đăng nhập hiện tại, tôi mới giữ tài khoản hoạt động cho anh được.",
+            "start": 0,
+            "end": 126
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "share_auth_code",
+        "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Nhắn cho tôi mật khẩu đăng nhập hiện tại",
+            "start": 39,
+            "end": 79
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f1"
+          ]
+        }
+      },
+      {
+        "id": "rule-conflict-0",
+        "action": "other",
+        "description": "Dấu hiệu từ quy tắc chưa được live giải quyết; cần xác minh thêm",
+        "speaker": "unknown",
+        "speech_role": "unknown",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Nhắn cho tôi mật khẩu đăng nhập hiện tại, tôi mới giữ tài khoản hoạt động cho anh được.",
+            "start": 39,
+            "end": 126
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-07",
+    "name": "Chuỗi khôi phục ví",
+    "family": "share_auth_code",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7041.396199994779,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Muốn nhận lại số dư ví, chép toàn bộ 12 từ khôi phục bí mật rồi gửi riêng cho tôi. Tôi phải có đủ 12 từ mới mở lại số dư cho bạn."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "share_auth_code",
+        "description": "Yêu cầu cung cấp mã đăng nhập hoặc xác thực",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "chép toàn bộ 12 từ khôi phục bí mật rồi gửi riêng cho tôi",
+            "start": 24,
+            "end": 81
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tôi phải có đủ 12 từ mới mở lại số dư cho bạn.",
+            "start": 83,
+            "end": 129
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-08",
+    "name": "Tự nhập mã trong ứng dụng",
+    "family": "share_auth_code",
+    "group": "normal",
+    "expected": "clear",
+    "actual": "clear",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6976.089099996898,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Tôi tự mở ứng dụng ngân hàng đã cài, tự nhập mã xác thực để trả hóa đơn. Tôi không đọc hoặc gửi mã cho người khác."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "denial",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tôi tự mở ứng dụng ngân hàng đã cài, tự nhập mã xác thực để trả hóa đơn. Tôi không đọc hoặc gửi mã cho người khác.",
+            "start": 0,
+            "end": 114
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-09",
+    "name": "Điều khiển máy để mở trợ cấp",
+    "family": "grant_access",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7069.350400000985,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Vì sao họ cần chia sẻ màn hình hoặc quyền điều khiển, và bạn đã xác minh đầu mối hỗ trợ chưa?"
+    ],
+    "input": {
+      "text": "Bật điều khiển từ xa và cho tôi thao tác trên điện thoại của cô. Chỉ khi tôi điều khiển được máy thì hồ sơ trợ cấp mới được duyệt giải ngân."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Chỉ khi tôi điều khiển được máy thì hồ sơ trợ cấp mới được duyệt giải ngân.",
+            "start": 65,
+            "end": 140
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Bật điều khiển từ xa và cho tôi thao tác trên điện thoại của cô.",
+            "start": 0,
+            "end": 64
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f1"
+          ]
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-10",
+    "name": "Thêm quản trị viên trang",
+    "family": "grant_access",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7289.2517000000225,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "input": {
+      "text": "Muốn nhận gói tài trợ cho trang, thêm tài khoản của tôi làm quản trị viên toàn quyền trước. Khi có toàn quyền tôi mới chuyển tiền tài trợ."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "thêm tài khoản của tôi làm quản trị viên toàn quyền trước",
+            "start": 33,
+            "end": 90
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Muốn nhận gói tài trợ cho trang",
+            "start": 0,
+            "end": 31
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "rule-conflict-0",
+        "action": "transfer_funds",
+        "description": "Dấu hiệu từ quy tắc chưa được live giải quyết; cần xác minh thêm",
+        "speaker": "unknown",
+        "speech_role": "unknown",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Khi có toàn quyền tôi mới chuyển tiền tài trợ.",
+            "start": 92,
+            "end": 138
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-11",
+    "name": "Chia sẻ ngân hàng để hoàn phí",
+    "family": "grant_access",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6821.166800000356,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "input": {
+      "messages": [
+        {
+          "id": "s1",
+          "speaker": "hotro",
+          "text": "Bật chia sẻ màn hình và mở phần số dư trong ứng dụng ngân hàng."
+        },
+        {
+          "id": "s2",
+          "speaker": "hotro",
+          "text": "Đây là bước bắt buộc để tôi xử lý khoản hoàn phí cho anh."
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "hotro",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "s1",
+            "quote": "Bật chia sẻ màn hình và mở phần số dư trong ứng dụng ngân hàng.",
+            "start": 0,
+            "end": 63
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "hotro",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "s2",
+            "quote": "Đây là bước bắt buộc để tôi xử lý khoản hoàn phí cho anh.",
+            "start": 0,
+            "end": 57
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-12",
+    "name": "Quyền thông báo lịch có bối cảnh",
+    "family": "grant_access",
+    "group": "normal",
+    "expected": "clear",
+    "actual": "clear",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6032.267299997329,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Cho phép ứng dụng lịch gửi thông báo để nhắc buổi học nhé.",
+      "context": "Tôi tự cài ứng dụng lịch của trường từ cửa hàng chính thức. Quyền đang hỏi chỉ là thông báo nhắc lịch, không xem màn hình hoặc điều khiển."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Cho phép ứng dụng lịch gửi thông báo để nhắc buổi học nhé.",
+            "start": 0,
+            "end": 58
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-13",
+    "name": "Tệp ngoài cửa hàng để nhận hỗ trợ",
+    "family": "install_app",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7320.932599999651,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?",
+      "Ai gửi tệp và họ yêu cầu bạn mở hoặc cài đặt gì?"
+    ],
+    "input": {
+      "text": "Cài tệp ho-tro.apk tôi gửi ngoài cửa hàng ứng dụng, bật quyền trợ năng cho nó. Cài xong và cấp quyền thì tôi mới mở khoản hỗ trợ cho cô."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "install_app",
+        "description": "Yêu cầu cài phần mềm",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Cài tệp ho-tro.apk tôi gửi ngoài cửa hàng ứng dụng",
+            "start": 0,
+            "end": 50
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Cài xong và cấp quyền thì tôi mới mở khoản hỗ trợ cho cô.",
+            "start": 79,
+            "end": 136
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f3",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "bật quyền trợ năng cho nó.",
+            "start": 52,
+            "end": 78
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f3",
+            "f2"
+          ]
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-14",
+    "name": "Phần mềm máy tính để lấy tiền",
+    "family": "install_app",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6730.180599995947,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Ai gửi tệp và họ yêu cầu bạn mở hoặc cài đặt gì?",
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "input": {
+      "text": "Tải bộ cài exe qua đường dẫn riêng của tôi rồi tắt phần mềm bảo vệ để cài. Đây là điều kiện bắt buộc để nhận lại tiền đơn hàng bị hủy."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "install_app",
+        "description": "Yêu cầu cài phần mềm",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tải bộ cài exe qua đường dẫn riêng của tôi rồi tắt phần mềm bảo vệ để cài.",
+            "start": 0,
+            "end": 74
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Đây là điều kiện bắt buộc để nhận lại tiền đơn hàng bị hủy.",
+            "start": 75,
+            "end": 134
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-15",
+    "name": "Đổi tên app thành công cụ đối soát",
+    "family": "install_app",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7430.936199998541,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Ai gửi tệp và họ yêu cầu bạn mở hoặc cài đặt gì?",
+      "Vì sao họ cần chia sẻ màn hình hoặc quyền điều khiển, và bạn đã xác minh đầu mối hỗ trợ chưa?"
+    ],
+    "input": {
+      "text": "Đây chỉ là công cụ đối soát, không phải ứng dụng ngân hàng. Cài gói tôi gửi và bật quyền điều khiển thiết bị; đủ hai bước này bên tôi mới giải ngân tiền hoàn."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "install_app",
+        "description": "Yêu cầu cài phần mềm",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Cài gói tôi gửi",
+            "start": 60,
+            "end": 75
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f3"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "bật quyền điều khiển thiết bị",
+            "start": 79,
+            "end": 108
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      {
+        "id": "f3",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "đủ hai bước này bên tôi mới giải ngân tiền hoàn.",
+            "start": 110,
+            "end": 158
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-16",
+    "name": "Bài cảnh báo tệp APK",
+    "family": "install_app",
+    "group": "normal",
+    "expected": "clear",
+    "actual": "clear",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6507.830700000341,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Bản tin an toàn: kẻ gian thường nói “cài tệp APK này để nhận trợ cấp”. Đó là lời dụ được trích để cảnh báo. Đừng cài tệp người lạ gửi hoặc cấp quyền điều khiển."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "quoted_warning",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "kẻ gian thường nói “cài tệp APK này để nhận trợ cấp”.",
+            "start": 17,
+            "end": 70
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "install_app",
+        "description": "Yêu cầu cài phần mềm",
+        "speaker": "unknown",
+        "speech_role": "denial",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Đừng cài tệp người lạ gửi hoặc cấp quyền điều khiển.",
+            "start": 108,
+            "end": 160
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-17",
+    "name": "Nhiệm vụ nhỏ dẫn sang ứng vốn",
+    "family": "inducement",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7854.346799998893,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "messages": [
+        {
+          "id": "j1",
+          "speaker": "tuyendung",
+          "text": "Lượt đầu bấm thích bài đăng được trả 20 nghìn, không cần vốn."
+        },
+        {
+          "id": "j2",
+          "speaker": "ungvien",
+          "text": "Tôi đã nhận 20 nghìn rồi."
+        },
+        {
+          "id": "j3",
+          "speaker": "tuyendung",
+          "text": "Muốn nhận thưởng 900 nghìn ở lượt kế, em phải chuyển trước 500 nghìn tiền giữ suất cho chị."
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "tuyendung",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "j1",
+            "quote": "Lượt đầu bấm thích bài đăng được trả 20 nghìn, không cần vốn.",
+            "start": 0,
+            "end": 61
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "tuyendung",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "j3",
+            "quote": "Muốn nhận thưởng 900 nghìn ở lượt kế, em phải chuyển trước 500 nghìn tiền giữ suất cho chị.",
+            "start": 0,
+            "end": 91
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      {
+        "id": "f3",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "tuyendung",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "j3",
+            "quote": "Muốn nhận thưởng 900 nghìn ở lượt kế, em phải chuyển trước 500 nghìn tiền giữ suất cho chị.",
+            "start": 0,
+            "end": 91
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-18",
+    "name": "Gây áp lực giả cơ quan",
+    "family": "inducement",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6504.209099999571,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "input": {
+      "text": "Tôi là cán bộ xử lý hồ sơ. Trong mười phút anh phải chuyển 8 triệu vào tài khoản tôi cung cấp để kiểm tra nguồn tiền; chuyển xong mới được gỡ phong tỏa."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Trong mười phút anh phải chuyển 8 triệu vào tài khoản tôi cung cấp để kiểm tra nguồn tiền",
+            "start": 27,
+            "end": 116
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Trong mười phút anh phải chuyển 8 triệu vào tài khoản tôi cung cấp để kiểm tra nguồn tiền; chuyển xong mới được gỡ phong tỏa.",
+            "start": 27,
+            "end": 152
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-19",
+    "name": "Nạp tiền giải phóng lợi nhuận",
+    "family": "inducement",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 7584.0760999999475,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Anh đã thắng 30 triệu nhưng hệ thống giữ khoản lãi. Nạp thêm 3 triệu bảo lãnh vào ví riêng của tôi ngay hôm nay, tôi mới cho rút cả gốc lẫn lãi."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Anh đã thắng 30 triệu nhưng hệ thống giữ khoản lãi.",
+            "start": 0,
+            "end": 51
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "transfer_funds",
+        "description": "Yêu cầu chuyển hoặc ứng tiền",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Nạp thêm 3 triệu bảo lãnh vào ví riêng của tôi ngay hôm nay",
+            "start": 52,
+            "end": 111
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f3"
+          ]
+        }
+      },
+      {
+        "id": "f3",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "tôi mới cho rút cả gốc lẫn lãi.",
+            "start": 113,
+            "end": 144
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 3,
+      "exact_quotes": 3,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-20",
+    "name": "Phần thưởng không yêu cầu tài sản",
+    "family": "inducement",
+    "group": "normal",
+    "expected": "clear",
+    "actual": "clear",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 5392.342400002235,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Thư viện tặng một cuốn sách cho người tham dự buổi đọc. Đến quầy nhận miễn phí, không đóng phí, không cung cấp mã hay thông tin ngân hàng."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Thư viện tặng một cuốn sách cho người tham dự buổi đọc. Đến quầy nhận miễn phí, không đóng phí, không cung cấp mã hay thông tin ngân hàng.",
+            "start": 0,
+            "end": 138
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-21",
+    "name": "Xác nhận nhận hàng để được hoàn",
+    "family": "other",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6423.225500002445,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Khoản tiền này dùng để trả khoản đã thỏa thuận, hay là điều kiện để nhận hoặc rút tiền?"
+    ],
+    "input": {
+      "text": "Bưu kiện chưa giao cũng cứ bấm đã nhận hàng trên sàn trước. Sau khi anh xác nhận hoàn tất đơn thì tôi mới hoàn lại tiền cho anh qua kênh riêng."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Bưu kiện chưa giao cũng cứ bấm đã nhận hàng trên sàn trước.",
+            "start": 0,
+            "end": 59
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Sau khi anh xác nhận hoàn tất đơn thì tôi mới hoàn lại tiền cho anh qua kênh riêng.",
+            "start": 60,
+            "end": 143
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-22",
+    "name": "Ký quyền ví để nhận thưởng",
+    "family": "other",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6889.866900004563,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Ký chấp thuận cho địa chỉ tôi gửi được chi tiêu toàn bộ token trong ví trước. Chữ ký cấp quyền đó là điều kiện để tôi chuyển phần thưởng vào ví của bạn."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Chữ ký cấp quyền đó là điều kiện để tôi chuyển phần thưởng vào ví của bạn.",
+            "start": 78,
+            "end": 152
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Ký chấp thuận cho địa chỉ tôi gửi được chi tiêu toàn bộ token trong ví trước.",
+            "start": 0,
+            "end": 77
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f1"
+          ]
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-23",
+    "name": "Gửi ảnh giấy tờ và video",
+    "family": "other",
+    "group": "scam",
+    "expected": "high",
+    "actual": "high",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 9811.484200006817,
+    "provider_attempts": 3,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "input": {
+      "text": "Gửi riêng cho tôi ảnh hai mặt căn cước và video quay mặt cầm căn cước. Có đủ bộ đó tôi mới duyệt suất vay ưu đãi, không gửi thì không nhận được khoản vay."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Gửi riêng cho tôi ảnh hai mặt căn cước và video quay mặt cầm căn cước.",
+            "start": 0,
+            "end": 70
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      {
+        "id": "f2",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Có đủ bộ đó tôi mới duyệt suất vay ưu đãi, không gửi thì không nhận được khoản vay.",
+            "start": 71,
+            "end": 154
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  },
+  {
+    "id": "NW-24",
+    "name": "Nhận hàng sau khi kiểm tra",
+    "family": "other",
+    "group": "normal",
+    "expected": "clear",
+    "actual": "clear",
+    "correct": true,
+    "http_status": 200,
+    "api_ms": 6645.073899999261,
+    "provider_attempts": 2,
+    "consistency_repairs": 0,
+    "error": null,
+    "questions": [],
+    "input": {
+      "text": "Tôi chỉ bấm đã nhận hàng sau khi nhận đúng gói và kiểm tra đủ sản phẩm. Không ai yêu cầu tôi xác nhận trước hoặc hoàn tiền ngoài sàn."
+    },
+    "evidence": [
+      {
+        "id": "f1",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "denial",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tôi chỉ bấm đã nhận hàng sau khi nhận đúng gói và kiểm tra đủ sản phẩm. Không ai yêu cầu tôi xác nhận trước hoặc hoàn tiền ngoài sàn.",
+            "start": 0,
+            "end": 133
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "manual_review": "reviewed_by_implementer_see_MANUAL_REVIEW.md; not independent labels; full eight-answer semantics not scored"
+  }
+]

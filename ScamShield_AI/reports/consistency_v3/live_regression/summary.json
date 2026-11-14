@@ -1,0 +1,61 @@
+{
+  "scope": "30 public synthetic functional checks, 5 per user-selected behavior family; not independent or real-user accuracy. Reference judgments authored by implementer; no tuning in test run.",
+  "mode": "two_pass",
+  "planned": 6,
+  "batch_wall_ms": 51828.31820001593,
+  "provider_attempts": 12,
+  "provider_http_responses": 0,
+  "executed": 6,
+  "successful": 0,
+  "errors": 6,
+  "not_run": 0,
+  "completion_rate": 0.0,
+  "matrix": {
+    "scam": {
+      "error": 3
+    },
+    "normal": {
+      "error": 2
+    },
+    "uncertain": {
+      "error": 1
+    }
+  },
+  "high_binary_successful_only": {},
+  "high_precision_successful_only": null,
+  "high_recall_successful_only": null,
+  "status_matches_successful": 0,
+  "status_match_rate_successful": null,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 6,
+    "p50_ms": 6327.738300024066,
+    "p95_ms": 6380.685599986464
+  },
+  "latency_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "first_request_ms": 5039.76179996971,
+  "warm_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "provider_adapter_successful": {
+    "n": 0,
+    "p50_ms": null,
+    "p95_ms": null
+  },
+  "exact_quotes": 0,
+  "quote_count": 0,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": "Configured consecutive service failure limit reached; remaining calls not sent"
+}

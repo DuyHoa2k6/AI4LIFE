@@ -1,0 +1,26 @@
+[
+  {
+    "id": "RC-03",
+    "executed": true,
+    "http_status": 504,
+    "provider_http_status": null,
+    "provider_error_code": null,
+    "provider_diagnostic": null,
+    "elapsed_ms": 20022.298700001556,
+    "response": {
+      "code": "PROVIDER_TIMEOUT",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "7750551c-b0de-4393-b4e8-97c51f457f0c"
+    }
+  },
+  {
+    "id": "RC-04",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  },
+  {
+    "id": "RC-09",
+    "executed": false,
+    "reason": "Previous provider request failed; remaining calls stopped"
+  }
+]

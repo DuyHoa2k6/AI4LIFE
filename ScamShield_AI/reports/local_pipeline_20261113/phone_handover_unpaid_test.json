@@ -1,0 +1,310 @@
+{
+  "input": {
+    "text": "Mình đã gửi ảnh biên lai rồi. Bạn chưa thấy tiền vào thì có thể ngân hàng cập nhật chậm. Tài xế đang đứng chờ, bạn giao điện thoại trước giúp mình nhé."
+  },
+  "http_status": 200,
+  "elapsed_ms": 35.6,
+  "response": {
+    "case_context": {
+      "case_id": "340ab757-ad03-4a53-b375-62aaaf4bf53a",
+      "situation_id": "analysis",
+      "revision": 1,
+      "content_version": "2b0c91434751efb3d4a7b88ed8047c239850ba0ddeb2e902957baca83a5d5dc6",
+      "question_ids": [
+        "clarify:0"
+      ],
+      "clarification_status": "initial"
+    },
+    "schema_version": "2.0",
+    "mode": "local_rules",
+    "risk_status": "suspicious",
+    "summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+    "answers": {
+      "claim": {
+        "status": "inferred",
+        "text": "Bạn chưa thấy tiền vào",
+        "evidence_refs": [
+          "old:a1"
+        ]
+      },
+      "claimed_identity": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "requested_action": {
+        "status": "observed",
+        "text": " Tài xế đang đứng chờ, bạn giao điện thoại trước giúp mình nhé.",
+        "evidence_refs": [
+          "ctx:e3"
+        ]
+      },
+      "persuasion": {
+        "status": "inferred",
+        "text": "Có chi tiết chờ hoặc thời hạn trong lời nhắn, có thể tạo sức ép; chưa chứng minh ý định xấu.",
+        "evidence_refs": [
+          "ctx:e3"
+        ]
+      },
+      "assets_at_risk": {
+        "status": "inferred",
+        "text": "Bạn chưa thấy tiền vào",
+        "evidence_refs": [
+          "old:a1"
+        ]
+      },
+      "impersonation": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "sequence": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "evidence_sufficiency": {
+        "status": "observed",
+        "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+        "evidence_refs": [
+          "old:a1"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "id": "old:a1",
+        "action": "other",
+        "description": "receive_funds",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "thấy",
+            "start": 39,
+            "end": 43
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bạn chưa thấy tiền vào",
+            "start": 30,
+            "end": 52
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền vào",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa",
+            "start": 34,
+            "end": 38
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "ctx:e2",
+        "action": "other",
+        "description": "Người viết tự nhận đã gửi biên lai; không chứng minh thanh toán",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Mình đã gửi ảnh biên lai rồi.",
+            "start": 0,
+            "end": 29
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "ctx:e3",
+        "action": "other",
+        "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Tài xế đang đứng chờ, bạn giao điện thoại trước giúp mình nhé.",
+            "start": 88,
+            "end": 151
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "suspected_scam_types": [],
+    "missing_information": [
+      "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+    ],
+    "follow_up_questions": [],
+    "recommended_actions": [
+      "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản."
+    ],
+    "answer_to_user": null,
+    "source_matches": [],
+    "analysis": {
+      "pipeline": "local_rules",
+      "routing": "local_backend",
+      "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+      "preliminary_status": "completed",
+      "preliminary_risk": "suspicious",
+      "preliminary_findings": 3,
+      "rule_conflicts": 0,
+      "rule_hints_reviewed": 0,
+      "rule_hints_reclassified": 0,
+      "rule_hints_uncertain": 0,
+      "observation_repairs": 0,
+      "situation_facts": 3,
+      "situation_links": 2,
+      "information_gaps": 0,
+      "discarded_live_findings": 0,
+      "live_status": "not_used",
+      "initial_findings": 0,
+      "initial_hypotheses": 0,
+      "discarded_source_uses": 0,
+      "scenario_matches": [],
+      "stage_timings_ms": {
+        "local_total": 16.107200004626065,
+        "asset_load": 1.2862000003224239,
+        "safety_precheck": 4.975999996531755,
+        "local_extraction_interpretation": 9.439499997824896,
+        "risk_assessment": 0.08189999789465219,
+        "participants": 0.015700003132224083,
+        "behaviors": 0.0335000004270114,
+        "event_linking": 0.0021000014385208488,
+        "situations": 0.024599998141638935,
+        "hypotheses": 0.011300006008241326,
+        "consequences": 0.011600001016631722,
+        "retrieval": 0.559599997359328,
+        "url": 0.0,
+        "support_total": 0.708499996108003
+      },
+      "decision_version": "local-situation-1.0-support",
+      "information_needed": false,
+      "consistency_repairs": 0,
+      "consistency_issues": [],
+      "grounded_relation_count": 0,
+      "relation_review_candidates": 0,
+      "unresolved_relation_candidates": 0,
+      "discarded_url_uses": 0,
+      "used_url_evidence": 0
+    },
+    "retrieval": {
+      "scenarios": {
+        "status": "disabled",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.0
+      },
+      "official_sources": {
+        "status": "no_approved_sources",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.559599997359328
+      }
+    },
+    "input_sources": [],
+    "input_warnings": [
+      "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời.",
+      "Kho chưa có nguồn chính thống được duyệt; không dùng nguồn candidate."
+    ],
+    "url_analysis": [],
+    "url_uses": [],
+    "display_summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+    "display_action": "Tự kiểm tra tiền thực nhận qua kênh ngân hàng quen dùng trước khi giao tài sản.",
+    "risk_indicators": [
+      {
+        "kind": "local_rule_basis",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Tài xế đang đứng chờ, bạn giao điện thoại trước giúp mình nhé.",
+            "start": 88,
+            "end": 151
+          },
+          {
+            "message_id": "m1",
+            "quote": "thấy",
+            "start": 39,
+            "end": 43
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bạn chưa thấy tiền vào",
+            "start": 30,
+            "end": 52
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền vào",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa",
+            "start": 34,
+            "end": 38
+          }
+        ],
+        "explanation": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả."
+      },
+      {
+        "kind": "interaction_context",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": " Tài xế đang đứng chờ, bạn giao điện thoại trước giúp mình nhé.",
+            "start": 88,
+            "end": 151
+          },
+          {
+            "message_id": "m1",
+            "quote": "thấy",
+            "start": 39,
+            "end": 43
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bạn chưa thấy tiền vào",
+            "start": 30,
+            "end": 52
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền vào",
+            "start": 44,
+            "end": 52
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa",
+            "start": 34,
+            "end": 38
+          }
+        ],
+        "explanation": "Người gửi đặt yêu cầu với người nhận: Giao tài sản trước khi người nhận xác nhận thanh toán. Có thể mất tài sản nếu giao trước khi xác nhận thanh toán."
+      }
+    ],
+    "safety_urgency": "preventive",
+    "analysis_status": "complete"
+  },
+  "scope": "Actual local API via ASGI TestClient; one known development case, not browser latency or independent accuracy."
+}

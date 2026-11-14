@@ -1,0 +1,215 @@
+{
+  "http_status": 200,
+  "seconds": 14.394896400001016,
+  "response": {
+    "schema_version": "1.7",
+    "mode": "two_pass",
+    "risk_status": "high",
+    "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+    "answers": {
+      "claim": {
+        "status": "observed",
+        "text": "Nội dung người nói nêu, chưa xác minh: “Tài khoản sinh viên của bạn đang chờ xác minh. Nếu chưa hoàn tất trước 18 giờ hôm nay, quyền truy cập cổng sinh viên sẽ tạm thời bị khóa.” “Bộ phận hỗ trợ sinh viên”",
+        "evidence_refs": [
+          "f1",
+          "f3"
+        ]
+      },
+      "claimed_identity": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ.",
+        "evidence_refs": []
+      },
+      "requested_action": {
+        "status": "observed",
+        "text": "Các thao tác được yêu cầu trong nội dung: “Bạn mở https://xacthuc-sinhvien.invalid/kiem-tra, nhập mật khẩu tài khoản trường, sau đó điền dãy sáu số vừa hiện trên điện thoại để hoàn tất xác minh.”",
+        "evidence_refs": [
+          "f2"
+        ]
+      },
+      "persuasion": {
+        "status": "observed",
+        "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Tài khoản sinh viên của bạn đang chờ xác minh. Nếu chưa hoàn tất trước 18 giờ hôm nay, quyền truy cập cổng sinh viên sẽ tạm thời bị khóa.”",
+        "evidence_refs": [
+          "f1"
+        ]
+      },
+      "assets_at_risk": {
+        "status": "inferred",
+        "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+        "evidence_refs": [
+          "f2"
+        ]
+      },
+      "impersonation": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ.",
+        "evidence_refs": []
+      },
+      "sequence": {
+        "status": "inferred",
+        "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+        "evidence_refs": [
+          "f2",
+          "f1"
+        ]
+      },
+      "evidence_sufficiency": {
+        "status": "inferred",
+        "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+        "evidence_refs": [
+          "f1",
+          "f2",
+          "f3"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "id": "f1",
+        "action": "inducement",
+        "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Tài khoản sinh viên của bạn đang chờ xác minh. Nếu chưa hoàn tất trước 18 giờ hôm nay, quyền truy cập cổng sinh viên sẽ tạm thời bị khóa.",
+            "start": 11,
+            "end": 148
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "f2",
+        "action": "grant_access",
+        "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+        "speaker": "unknown",
+        "speech_role": "request",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Bạn mở https://xacthuc-sinhvien.invalid/kiem-tra, nhập mật khẩu tài khoản trường, sau đó điền dãy sáu số vừa hiện trên điện thoại để hoàn tất xác minh.",
+            "start": 150,
+            "end": 301
+          }
+        ],
+        "inference": {
+          "status": "inferred",
+          "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f2",
+            "f1"
+          ]
+        }
+      },
+      {
+        "id": "f3",
+        "action": "other",
+        "description": "Hành động cần xác minh",
+        "speaker": "unknown",
+        "speech_role": "claim",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Bộ phận hỗ trợ sinh viên",
+            "start": 303,
+            "end": 327
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "suspected_scam_types": [],
+    "missing_information": [
+      "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+    ],
+    "follow_up_questions": [
+      "Bạn có biết người gửi và xác nhận đúng người qua kênh liên hệ đã biết từ trước không?",
+      "Yêu cầu này do ai đưa ra và có thể xác nhận qua đầu mối độc lập nào?"
+    ],
+    "recommended_actions": [
+      "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+      "Xác minh đơn vị hỗ trợ qua kênh độc lập trước khi cài phần mềm hoặc cấp quyền điều khiển."
+    ],
+    "answer_to_user": null,
+    "source_matches": [],
+    "analysis": {
+      "pipeline": "two_pass",
+      "routing": "two_live_calls",
+      "rules_version": "mock-behavior-2.0.0",
+      "preliminary_status": "completed",
+      "preliminary_risk": null,
+      "preliminary_findings": 3,
+      "rule_conflicts": 0,
+      "discarded_live_findings": 0,
+      "live_status": "completed",
+      "initial_findings": 3,
+      "initial_hypotheses": 1,
+      "discarded_source_uses": 0,
+      "scenario_matches": [],
+      "stage_timings_ms": {
+        "first_provider": 8331.360299998778,
+        "retrieval_parallel": 9.539600010612048,
+        "second_provider": 4963.765799999237,
+        "pipeline_total": 13305.656999989878,
+        "verification_render": 2.217499990365468
+      },
+      "decision_version": "two-pass-4",
+      "information_needed": true,
+      "consistency_repairs": 0,
+      "consistency_issues": [],
+      "grounded_relation_count": 1,
+      "relation_review_candidates": 0,
+      "unresolved_relation_candidates": 0,
+      "discarded_url_uses": 1,
+      "used_url_evidence": 0
+    },
+    "retrieval": {
+      "scenarios": {
+        "status": "matched",
+        "retrieved_count": 3,
+        "elapsed_ms": 7.171199991717003
+      },
+      "official_sources": {
+        "status": "no_approved_sources",
+        "retrieved_count": 0,
+        "elapsed_ms": 9.006200009025633
+      }
+    },
+    "input_sources": [],
+    "input_warnings": [],
+    "url_analysis": [
+      {
+        "link_id": "link-0",
+        "message_id": "m1",
+        "origin": "dom_href",
+        "status": "parsed",
+        "display_url": "https://xacthuc-sinhvien.invalid/",
+        "hostname": "xacthuc-sinhvien.invalid",
+        "unicode_hostname": "xacthuc-sinhvien.invalid",
+        "registered_domain": null,
+        "reference_domain": null,
+        "label_status": "grounded",
+        "signals": [
+          {
+            "code": "unknown_public_suffix",
+            "level": "info",
+            "detail": "Chưa xác định miền đăng ký trong PSL đã đóng gói."
+          }
+        ],
+        "reputation_status": "not_checked"
+      }
+    ],
+    "url_uses": []
+  }
+}

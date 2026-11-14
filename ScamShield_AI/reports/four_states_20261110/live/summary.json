@@ -1,0 +1,74 @@
+{
+  "scope": "16 new public synthetic functional probes, 4 primary targets per active risk state. References written before execution, not an independent holdout or real-user accuracy estimate. No tuning permitted during this run.",
+  "mode": "two_pass",
+  "planned": 16,
+  "batch_wall_ms": 273345.40710000147,
+  "provider_attempts": 42,
+  "provider_http_responses": 42,
+  "executed": 16,
+  "successful": 12,
+  "errors": 4,
+  "not_run": 0,
+  "completion_rate": 0.75,
+  "matrix": {
+    "scam": {
+      "high": 2,
+      "error": 2
+    },
+    "normal": {
+      "error": 2,
+      "clear": 1,
+      "need_context": 1
+    },
+    "uncertain": {
+      "need_context": 4
+    },
+    "review": {
+      "high": 1,
+      "need_context": 2,
+      "suspicious": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 2,
+    "TN": 2
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 1.0,
+  "status_matches_successful": 8,
+  "status_match_rate_successful": 0.6666666666666666,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [
+    "N04"
+  ],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 16,
+    "p50_ms": 15413.373900009901,
+    "p95_ms": 35958.40489999682
+  },
+  "latency_successful": {
+    "n": 12,
+    "p50_ms": 15413.373900009901,
+    "p95_ms": 35958.40489999682
+  },
+  "first_request_ms": 13976.282299990999,
+  "warm_successful": {
+    "n": 11,
+    "p50_ms": 15949.397899996256,
+    "p95_ms": 35958.40489999682
+  },
+  "provider_adapter_successful": {
+    "n": 12,
+    "p50_ms": 15200.112900012755,
+    "p95_ms": 35747.747800007346
+  },
+  "exact_quotes": 23,
+  "quote_count": 23,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

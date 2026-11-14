@@ -1,0 +1,51 @@
+{
+  "mode": "real provider attempt",
+  "model": "gemini-3.5-flash-lite",
+  "scope": "Public synthetic functional checks; not holdout; no independent model-quality claim",
+  "cases": [
+    {
+      "id": "RC-03",
+      "executed": true,
+      "acceptable": [
+        "clear"
+      ],
+      "prediction": null,
+      "status_match": null,
+      "questions_check": null,
+      "manual_review": "not assessable",
+      "manual_focus": "Sử dụng context có trích đúng, vẫn nói đây là bối cảnh do người dùng cung cấp."
+    },
+    {
+      "id": "RC-04",
+      "executed": false,
+      "acceptable": [
+        "clear"
+      ],
+      "prediction": null,
+      "status_match": null,
+      "questions_check": null,
+      "manual_review": "not assessable",
+      "manual_focus": "Vai quoted_warning/denial, không coi câu trích là yêu cầu thực hiện."
+    },
+    {
+      "id": "RC-09",
+      "executed": false,
+      "acceptable": [
+        "high"
+      ],
+      "prediction": null,
+      "status_match": null,
+      "questions_check": null,
+      "manual_review": "not assessable",
+      "manual_focus": "Nhận ra quyền giám sát và điều kiện thưởng dù không có mẫu mock trực tiếp."
+    }
+  ],
+  "n": 3,
+  "executed": 1,
+  "successful_analysis": 0,
+  "status_matches": 0,
+  "provider_access_stopped": true,
+  "semantic_quality": "manual review required; not measured if provider failed",
+  "prompt_sha256": "166fd5040c1f7ea1a676fd6bc2746ebb4be3443e7dcd56fd5b592fdf704d0c9d",
+  "inputs_sha256": "c203d3425a6aae1341b5568af76c22c7daf19f1585def02d10c62239105d9a31"
+}

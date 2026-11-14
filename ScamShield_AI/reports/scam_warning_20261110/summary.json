@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-10",
+  "scope": "24 fresh public synthetic functional cases authored before predictions: 18 explicit risky requests/conditions, 6 benign controls. Not independent human-labelled accuracy or real-user prevalence; no runtime data or prompt tuning.",
+  "n": 24,
+  "scam_cases": 18,
+  "normal_controls": 6,
+  "correct_status_all": 23,
+  "status_match_all": 0.9583333333333334,
+  "api_success": 24,
+  "errors": 0,
+  "not_run": 0,
+  "high_TP": 17,
+  "high_FP": 0,
+  "high_FN_including_error_or_skip": 1,
+  "high_recall_all_scam": 0.9444444444444444,
+  "high_precision": 1.0,
+  "scam_any_warning": 17,
+  "scam_clear": [],
+  "scam_need_context": [
+    "NW-02"
+  ],
+  "scam_suspicious": [],
+  "scam_errors": [],
+  "normal_warned": [],
+  "normal_false_alert_rate_successful": 0.0,
+  "matrix": {
+    "scam": {
+      "high": 17,
+      "need_context": 1
+    },
+    "normal": {
+      "clear": 6
+    }
+  },
+  "latency_all": {
+    "n": 24,
+    "p50_ms": 6889.866900004563,
+    "p95_ms": 9591.833099999349
+  },
+  "latency_successful": {
+    "n": 24,
+    "p50_ms": 6889.866900004563,
+    "p95_ms": 9591.833099999349
+  },
+  "first_request_ms": 7897.254900002736,
+  "batch_wall_ms": 243087.68869999767,
+  "provider_attempts": 50,
+  "provider_http_statuses": {
+    "200": 49,
+    "503": 1
+  },
+  "consistency_repairs": 1,
+  "exact_quotes": 51,
+  "quotes": 51,
+  "speaker_reference_errors": 0,
+  "source_statuses": {
+    "no_approved_sources": 24
+  },
+  "stage_timings_successful": {
+    "first_provider": {
+      "n": 24,
+      "p50_ms": 3252.3670999944443,
+      "p95_ms": 3645.067699995707
+    },
+    "retrieval_parallel": {
+      "n": 24,
+      "p50_ms": 2.71430000429973,
+      "p95_ms": 5.573000002186745
+    },
+    "second_provider": {
+      "n": 24,
+      "p50_ms": 3404.3473999990965,
+      "p95_ms": 6613.410100006149
+    },
+    "verification_render": {
+      "n": 24,
+      "p50_ms": 0.6675999975414015,
+      "p95_ms": 1.629400001547765
+    }
+  },
+  "families": {
+    "transfer_funds": {
+      "n": 4,
+      "correct": 3,
+      "scam": 3,
+      "scam_high": 2,
+      "errors": 0
+    },
+    "share_auth_code": {
+      "n": 4,
+      "correct": 4,
+      "scam": 3,
+      "scam_high": 3,
+      "errors": 0
+    },
+    "grant_access": {
+      "n": 4,
+      "correct": 4,
+      "scam": 3,
+      "scam_high": 3,
+      "errors": 0
+    },
+    "install_app": {
+      "n": 4,
+      "correct": 4,
+      "scam": 3,
+      "scam_high": 3,
+      "errors": 0
+    },
+    "inducement": {
+      "n": 4,
+      "correct": 4,
+      "scam": 3,
+      "scam_high": 3,
+      "errors": 0
+    },
+    "other": {
+      "n": 4,
+      "correct": 4,
+      "scam": 3,
+      "scam_high": 3,
+      "errors": 0
+    }
+  },
+  "frozen_hashes_unchanged": true,
+  "independent_human_labels": false,
+  "production_code_changed": false
+}

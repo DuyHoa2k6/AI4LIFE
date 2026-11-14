@@ -1,0 +1,23 @@
+version: acceptance-research-1.0
+purpose: public_draft_diagnostic_not_product_standard
+primary_metric: end_to_end_supported_success_rate
+direction: maximize
+minimum_absolute_improvement: 0.05
+minimum_evaluable_cases: 20
+protected_domains: [education, relationships, finance, employment, services, data_access, contributions]
+maximum_clear_as_high_increase: 0
+maximum_high_miss_increase: 0
+maximum_supported_coverage_drop: 0.0
+maximum_p95_seconds: 5.0
+maximum_rss_gib: 4.0
+max_iterations_including_baseline: 3
+max_configurations: 2
+max_wall_seconds: 1200
+max_inference_requests: 500
+bootstrap_family_repetitions: 200
+seed: 31
+undefined_metrics: unknown_blocks_promotion
+disputed_labels: review_queue_only_never_train
+training_requires: human_reviewed_and_traceable
+production_requires: reviewed_validation_and_independent_locked_evaluation
+minimum_replay_ratio: 0.5

@@ -1,0 +1,273 @@
+{
+  "input": {
+    "text": "Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”. Người đọc không làm theo yêu cầu đó và nên xác minh qua ứng dụng chính thức."
+  },
+  "http_status": 200,
+  "elapsed_ms": 83.53,
+  "response": {
+    "case_context": {
+      "case_id": "88f4380e-d17a-4023-b959-51c1231a60c3",
+      "situation_id": "analysis",
+      "revision": 1,
+      "content_version": "83e0b07b12c80a5b22150652055c0bc729a1c35a24c1fb7a5323f38f5bf1bc96",
+      "question_ids": [
+        "clarify:0"
+      ],
+      "clarification_status": "initial"
+    },
+    "schema_version": "2.0",
+    "mode": "local_rules",
+    "risk_status": "clear",
+    "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+    "answers": {
+      "claim": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "claimed_identity": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "requested_action": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "persuasion": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "assets_at_risk": {
+        "status": "inferred",
+        "text": "Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”. Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”.",
+        "evidence_refs": [
+          "old:a2",
+          "old:a1"
+        ]
+      },
+      "impersonation": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "sequence": {
+        "status": "unknown",
+        "text": "Chưa đủ căn cứ trong phần đã phân tích.",
+        "evidence_refs": []
+      },
+      "evidence_sufficiency": {
+        "status": "observed",
+        "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+        "evidence_refs": [
+          "old:a2",
+          "old:a1"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "id": "old:a2",
+        "action": "other",
+        "description": "provide_code",
+        "speaker": "unknown",
+        "speech_role": "quoted_warning",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Đọc",
+            "start": 39,
+            "end": 42
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”.",
+            "start": 0,
+            "end": 75
+          },
+          {
+            "message_id": "m1",
+            "quote": "mã đăng nhập để nhận tiền hoàn",
+            "start": 43,
+            "end": 73
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "old:a1",
+        "action": "other",
+        "description": "receive_funds",
+        "speaker": "unknown",
+        "speech_role": "quoted_warning",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "nhận",
+            "start": 59,
+            "end": 63
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”.",
+            "start": 0,
+            "end": 75
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền hoàn",
+            "start": 64,
+            "end": 73
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      },
+      {
+        "id": "graph:e3",
+        "action": "other",
+        "description": "receive_on_behalf",
+        "speaker": "unknown",
+        "speech_role": "quoted_warning",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”.",
+            "start": 0,
+            "end": 75
+          }
+        ],
+        "inference": {
+          "status": "unknown",
+          "text": "Quan sát theo quy tắc, chưa xác minh sự việc ngoài đời.",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "suspected_scam_types": [],
+    "missing_information": [],
+    "follow_up_questions": [],
+    "recommended_actions": [
+      "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi."
+    ],
+    "answer_to_user": null,
+    "source_matches": [],
+    "analysis": {
+      "pipeline": "local_rules",
+      "routing": "local_backend",
+      "rules_version": "local-rulebook-1.0+local-context-rules-1.0",
+      "preliminary_status": "completed",
+      "preliminary_risk": "clear",
+      "preliminary_findings": 3,
+      "rule_conflicts": 0,
+      "rule_hints_reviewed": 0,
+      "rule_hints_reclassified": 0,
+      "rule_hints_uncertain": 0,
+      "observation_repairs": 0,
+      "situation_facts": 3,
+      "situation_links": 2,
+      "information_gaps": 0,
+      "discarded_live_findings": 0,
+      "live_status": "not_used",
+      "initial_findings": 0,
+      "initial_hypotheses": 0,
+      "discarded_source_uses": 0,
+      "scenario_matches": [],
+      "stage_timings_ms": {
+        "local_total": 51.18389999552164,
+        "asset_load": 2.4369000020669773,
+        "safety_precheck": 9.772299992619082,
+        "local_extraction_interpretation": 38.492899999255314,
+        "risk_assessment": 0.1416000013705343,
+        "participants": 0.02819999644998461,
+        "behaviors": 0.046599991037510335,
+        "event_linking": 0.0037999998312443495,
+        "situations": 0.0619000056758523,
+        "hypotheses": 0.006800008122809231,
+        "consequences": 0.002800006768666208,
+        "retrieval": 0.0,
+        "url": 0.0,
+        "support_total": 0.21549999655690044
+      },
+      "decision_version": "local-situation-1.0-support",
+      "information_needed": false,
+      "consistency_repairs": 0,
+      "consistency_issues": [],
+      "grounded_relation_count": 0,
+      "relation_review_candidates": 0,
+      "unresolved_relation_candidates": 0,
+      "discarded_url_uses": 0,
+      "used_url_evidence": 0
+    },
+    "retrieval": {
+      "scenarios": {
+        "status": "disabled",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.0
+      },
+      "official_sources": {
+        "status": "no_match",
+        "retrieved_count": 0,
+        "elapsed_ms": 0.0
+      }
+    },
+    "input_sources": [],
+    "input_warnings": [
+      "Phân tích cục bộ theo quy tắc có phạm vi giới hạn; không xác minh danh tính ngoài đời."
+    ],
+    "url_analysis": [],
+    "url_uses": [],
+    "display_summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+    "display_action": "Tiếp tục đối chiếu thông tin qua kênh quen dùng nếu có thay đổi.",
+    "risk_indicators": [
+      {
+        "kind": "local_rule_basis",
+        "evidence": [
+          {
+            "message_id": "m1",
+            "quote": "Đọc",
+            "start": 39,
+            "end": 42
+          },
+          {
+            "message_id": "m1",
+            "quote": "Bài cảnh báo này trích lời đối tượng: “Đọc mã đăng nhập để nhận tiền hoàn”.",
+            "start": 0,
+            "end": 75
+          },
+          {
+            "message_id": "m1",
+            "quote": "mã đăng nhập để nhận tiền hoàn",
+            "start": 43,
+            "end": 73
+          },
+          {
+            "message_id": "m1",
+            "quote": "nhận",
+            "start": 59,
+            "end": 63
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền hoàn",
+            "start": 64,
+            "end": 73
+          }
+        ],
+        "explanation": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích."
+      }
+    ],
+    "safety_urgency": "undetermined",
+    "analysis_status": "complete"
+  },
+  "scope": "Actual local API via ASGI TestClient; one known development case, not browser latency or independent accuracy."
+}

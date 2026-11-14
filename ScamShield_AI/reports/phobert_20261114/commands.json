@@ -1,0 +1,61 @@
+[
+  {
+    "command": [
+      "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\.venv-phobert\\Scripts\\python.exe",
+      "-m",
+      "ml.phobert.train"
+    ],
+    "exit_code": 0,
+    "log": "run_1.log"
+  },
+  {
+    "command": [
+      "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\.venv-phobert\\Scripts\\python.exe",
+      "-m",
+      "ml.phobert.train",
+      "--overfit-smoke"
+    ],
+    "exit_code": 0,
+    "log": "run_2.log"
+  },
+  {
+    "command": [
+      "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\.venv-phobert\\Scripts\\python.exe",
+      "-m",
+      "ml.phobert.train",
+      "--config",
+      "ml/phobert/cpu_finetune_step.json"
+    ],
+    "exit_code": 0,
+    "log": "run_3.log"
+  },
+  {
+    "command": [
+      "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\.venv-phobert\\Scripts\\python.exe",
+      "-m",
+      "ml.phobert.evaluate"
+    ],
+    "exit_code": 0,
+    "log": "run_4.log"
+  },
+  {
+    "command": [
+      "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\.venv-phobert\\Scripts\\python.exe",
+      "-m",
+      "ml.phobert.api_smoke"
+    ],
+    "exit_code": 0,
+    "log": "run_5.log"
+  },
+  {
+    "command": [
+      "C:\\AI4Life\\AI4LIFE\\ScamShield_AI\\ScamShield_AI\\.venv-phobert\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests",
+      "-q"
+    ],
+    "exit_code": 0,
+    "log": "run_6.log"
+  }
+]

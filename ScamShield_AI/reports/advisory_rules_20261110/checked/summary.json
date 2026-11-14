@@ -1,0 +1,69 @@
+{
+  "scope": "Known public regression probes after advisory-rule change, not independent evaluation. No tuning during this run.",
+  "mode": "two_pass",
+  "planned": 8,
+  "batch_wall_ms": 145802.56559999543,
+  "provider_attempts": 21,
+  "provider_http_responses": 21,
+  "executed": 8,
+  "successful": 7,
+  "errors": 1,
+  "not_run": 0,
+  "completion_rate": 0.875,
+  "matrix": {
+    "scam": {
+      "high": 1,
+      "error": 1
+    },
+    "review": {
+      "suspicious": 2,
+      "need_context": 1
+    },
+    "normal": {
+      "clear": 2
+    },
+    "uncertain": {
+      "need_context": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 1,
+    "TN": 2
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 1.0,
+  "status_matches_successful": 6,
+  "status_match_rate_successful": 0.8571428571428571,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 8,
+    "p50_ms": 13583.579700003611,
+    "p95_ms": 33212.47179999773
+  },
+  "latency_successful": {
+    "n": 7,
+    "p50_ms": 14221.458200001507,
+    "p95_ms": 33212.47179999773
+  },
+  "first_request_ms": 11199.499599999399,
+  "warm_successful": {
+    "n": 6,
+    "p50_ms": 14221.458200001507,
+    "p95_ms": 33212.47179999773
+  },
+  "provider_adapter_successful": {
+    "n": 7,
+    "p50_ms": 14032.863900007214,
+    "p95_ms": 33022.95330000925
+  },
+  "exact_quotes": 11,
+  "quote_count": 11,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_hashes_identical_between_runs": true,
+  "frozen_hashes_still_match": true,
+  "no_holdout_read": true,
+  "api_executions": 20,
+  "provider_attempts": 51,
+  "final_successful": 15,
+  "final_quotes": 28,
+  "final_exact_quotes": 28,
+  "final_p50_ms": 15954.783899986069,
+  "final_p95_ms": 35958.40489999682
+}

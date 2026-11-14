@@ -1,0 +1,29 @@
+{
+  "mode": "two_pass",
+  "model": "gemini-3.5-flash-lite",
+  "provider_host": "generativelanguage.googleapis.com",
+  "hashes": {
+    "backend\\schemas.py": "d96314f2adf364c3110051d56b29e0d13ee1634b9dc9ed47d56fd1d28e567282",
+    "backend\\providers.py": "24dce87b4215fec5cd2317e5eac2afab8de8c3028d368e33e07ea6555aa15ed0",
+    "backend\\settings.py": "d5a716a306a9ff9820cbbeab4374510d2210f56bd37a9825297244d0c9cc2714",
+    "backend\\main.py": "31376ba0ddb8a1a18d0d775cd8336727d45dfe335fafbd455d7a68c221a1d494",
+    "backend\\two_pass.py": "523ded2b846fe720a72e40ff568a96a02fcb65a4c98ca4ee548e2a8e3e80d468",
+    "backend\\rule_hints.py": "c305b3ca6ccba08589777560154cf8645a504c9c04e84d30e06ef0f2eb0d6255",
+    "backend\\review_prompt.txt": "8dc034afa25684668cc166e80853a8212028242bd2189ea8b0c26f0d5811c874",
+    "backend\\observation_prompt.txt": "735bd9b7216c22496a88c9180bc3e3d27af2a0167185c41e4b597760cbd3920c",
+    "backend\\hybrid.py": "6382995dff71d916dad0678da9d7966ddfbe3c88dc8fb136bcdcb98e901746b8",
+    "backend\\engine.py": "29356de608708ffa41adf36661fac50938db36fa29eb7e36f83e8bcb25b1e009",
+    "backend\\mock_rules.py": "0b8a99df4463b13bc198f072ddce67917ed0e57cd7d7de3d733c10df54e5908e",
+    "backend\\relation_grounding.py": "bd2f30a54cc04b396666a9ff997a496703700ad04ea7273b050d7c6b52c7ea71",
+    "backend\\review_consistency.py": "e24ae3bf6995dc13f8f19645be29c8b68926eab9840b51aa301593c3f20589d8",
+    "backend\\urls.py": "e370d79aeee81ef3480b6b6cd558e23473e1204ba94319aa4ba1118de04f6065",
+    "backend\\url_network.py": "c791ce4195914af38f47a361e4621bd9918e6c45ffca3573940544aa33240e4a",
+    "backend\\retrieval.py": "f231192dabce625411df51dd20f35660057899e3276bbe220c290ea2ec9a9217",
+    "run_user_ten_cases.py": "0dfdf0578622b7b458c033eda1eedf4d9674be6569c7d9388ad2cf0d833e51e5",
+    "knowledge\\scenarios.jsonl": "f4c6358e28be0113671da58737de1fcca5f4c0668e02adf9feb1378fe0b8ee8a",
+    "../data\\knowledge_sources.jsonl": "474ca2b7e0ca3c472ab109618b2d4d10f91bf86e6267ef5baa3c0d62bee0c8ed",
+    "reports\\user_ten_cases_20261110\\inputs.json": "a12ac486ce80b7b8fbe02568ed8d576569b126eb28a0cd530d9318e0a741457c"
+  },
+  "scope": "User supplied ten cases; no expected labels; real configured provider, ASGI API. No images supplied or OCR run.",
+  "limits": "10 primary API requests, at most one separate recheck per technical error; no model/config switch; stop on auth/quota diagnostic."
+}

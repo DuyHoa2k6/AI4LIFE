@@ -1,0 +1,10 @@
+{
+  "version": "w3-baseline-1",
+  "model": "keyword-baseline",
+  "prompt": "none",
+  "rag": false,
+  "index": null,
+  "keywords": ["otp", "chuyển tiền", "ứng tiền", "chuyển khoản", "mật khẩu", "chia sẻ màn hình", "cài ứng dụng", "đặt cọc", "mở khóa"],
+  "matched_status": "high",
+  "unmatched_status": "clear"
+}

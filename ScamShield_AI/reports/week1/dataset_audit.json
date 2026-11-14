@@ -1,0 +1,36 @@
+﻿{
+  "datasets": {
+    "dev": {
+      "n": 12,
+      "families": 5,
+      "sha256": "efe3281472ae33be41b37c712f59b1456a37c76d829f74ca9ec62ec6b047dcfa",
+      "labels": {
+        "high": 4,
+        "clear": 5,
+        "need_context": 2,
+        "suspicious": 1
+      }
+    },
+    "validation": {
+      "n": 12,
+      "families": 4,
+      "sha256": "afa0127930b7fa0fb01de2719f812a3d20e1683e6f8cda24e204d9f896a4a0dd",
+      "labels": {
+        "high": 4,
+        "clear": 4,
+        "need_context": 3,
+        "suspicious": 1
+      }
+    },
+    "holdout": {
+      "n": 12,
+      "families": 4,
+      "sha256": "f0fc4ed1d0efb9f918966e6b7c3288d94287ee7e91176ba29d714968cb0c3700"
+    }
+  },
+  "total": 36,
+  "family_count": 13,
+  "errors": [],
+  "passed": true,
+  "note": "synthetic seed; semantic duplicates and two-reviewer labeling not assessed"
+}

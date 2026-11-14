@@ -1,0 +1,24 @@
+{"id": "P01", "family": "payment_condition", "variant_group": "payment_condition", "input": {"text": "Số dư đã được niêm phong. Bạn mua thêm một gói xác thực thì bên mình mới nhả lại vốn."}}
+{"id": "P02", "family": "payment_condition", "variant_group": "payment_condition", "input": {"text": "Bạn mua gói mở quyền rút trước để nhận lại số dư."}}
+{"id": "P03", "family": "payment_condition", "variant_group": "payment_condition", "input": {"text": "Bạn nộp thêm khoản đảm bảo trước thì mới được trả lại vốn."}}
+{"id": "P04", "family": "optional", "variant_group": "optional", "input": {"text": "Bạn có thể mua thêm một gói xác thực, không ảnh hưởng việc nhận lại vốn."}}
+{"id": "P05", "family": "warning", "variant_group": "warning", "input": {"text": "Cảnh báo: đừng mua gói xác thực để được nhả lại vốn."}}
+{"id": "P06", "family": "denial", "variant_group": "denial", "input": {"text": "Bạn đừng mua thêm gói xác thực để nhận lại tiền."}}
+{"id": "P07", "family": "insufficient", "variant_group": "insufficient", "input": {"text": "Bạn mua gói xác thực nhé."}}
+{"id": "P08", "family": "ordinary_purchase", "variant_group": "ordinary_purchase", "input": {"text": "Bạn thanh toán tiền chiếc ghế trước để nhận hàng nhé."}}
+{"id": "H01", "family": "unpaid_handover", "variant_group": "unpaid_handover", "input": {"text": "Ngân hàng vẫn chưa báo có tiền. Anh cho người tới mang chiếc đàn đi luôn trước nhé."}}
+{"id": "H02", "family": "unpaid_handover", "variant_group": "unpaid_handover", "input": {"text": "Chưa ghi nhận thanh toán. Bạn cho tài xế mang chiếc tủ đi trước nhé."}}
+{"id": "H03", "family": "unpaid_handover", "variant_group": "unpaid_handover", "input": {"text": "Tôi chưa thấy tiền vào. Bạn để tài xế lấy chiếc tủ trước nhé."}}
+{"id": "H04", "family": "paid_handover", "variant_group": "paid_handover", "input": {"text": "Tôi đã tự kiểm tra và nhận đủ tiền. Bạn cho người tới mang chiếc đàn đi nhé."}}
+{"id": "H05", "family": "warning", "variant_group": "warning", "input": {"text": "Cảnh báo: chưa báo có tiền thì đừng cho người tới mang chiếc đàn đi trước."}}
+{"id": "H06", "family": "denial", "variant_group": "denial", "input": {"text": "Bạn đừng cho người tới mang chiếc đàn đi trước khi nhận tiền."}}
+{"id": "H07", "family": "insufficient", "variant_group": "insufficient", "input": {"text": "Bạn cho tài xế mang chiếc tủ đi nhé."}}
+{"id": "H08", "family": "separate_transactions", "variant_group": "separate_transactions", "input": {"text": "Đơn A chưa báo có tiền. Đơn B bạn cho người tới mang chiếc đàn đi trước nhé."}}
+{"id": "C01", "family": "ordinary_purchase", "variant_group": "ordinary_purchase", "input": {"text": "Bạn thanh toán tiền chiếc bàn trước để nhận hàng."}}
+{"id": "C02", "family": "self_report", "variant_group": "self_report", "input": {"text": "Tôi mua gói xác thực trước để nhận lại vốn."}}
+{"id": "C03", "family": "optional", "variant_group": "optional", "input": {"text": "Bạn mua gói xác thực tùy chọn, không phải điều kiện để nhận lại tiền."}}
+{"id": "C04", "family": "quotation", "variant_group": "quotation", "input": {"text": "Nếu có ai nói “mua gói xác thực thì mới nhả lại vốn”, đừng làm theo."}}
+{"id": "C05", "family": "unicode", "variant_group": "unicode", "input": {"text": "📩 Bạn mua thêm một gói xác thực thì mới nhận lại vốn."}}
+{"id": "C06", "family": "conditional_denial", "variant_group": "conditional_denial", "input": {"text": "Bạn không cần mua gói xác thực để nhận lại tiền."}}
+{"id": "C07", "family": "no_payment_purpose", "variant_group": "no_payment_purpose", "input": {"text": "Bạn bổ sung khoản đảm bảo nhé."}}
+{"id": "C08", "family": "separate_beneficiary", "variant_group": "separate_beneficiary", "input": {"text": "Bạn nộp tiền trước để công ty nhận lại vốn."}}

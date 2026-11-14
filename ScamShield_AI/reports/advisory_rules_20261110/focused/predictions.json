@@ -1,0 +1,1114 @@
+[
+  {
+    "id": "H03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 22316.930700006196,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      503,
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 1175,
+      "prompt_tokens": 6342,
+      "total_tokens": 7517
+    },
+    "usage_totals": {
+      "completion_tokens": 2162,
+      "prompt_tokens": 7440,
+      "total_tokens": 9602
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Có thông báo số dư 18 triệu đồng đang chờ về ví và yêu cầu khoản tiền đồng bộ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa rõ danh tính thực tế của người gửi yêu cầu.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển 900 nghìn đồng sang ví cá nhân.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Hứa hẹn hệ thống sẽ mở đường nhận 18 triệu sau khi có khoản đồng bộ.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "observed",
+          "text": "Khoản tiền 900 nghìn đồng cần chuyển theo yêu cầu.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa có đủ thông tin xác định giả mạo tổ chức cụ thể.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "observed",
+          "text": "Yêu cầu chuyển tiền trước để được nhận số dư lớn hơn.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Đủ bằng chứng về yêu cầu chuyển tiền và điều kiện đi kèm từ văn bản.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện về số dư chờ nhận và yêu cầu đồng bộ",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Đưa ra điều kiện phải chuyển khoản trước mới được nhận số dư lớn hơn.",
+            "evidence_refs": [
+              "f1"
+            ]
+          }
+        },
+        {
+          "id": "f2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển tiền vào ví cá nhân",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Yêu cầu người dùng chuyển một khoản tiền cụ thể.",
+            "evidence_refs": [
+              "f2"
+            ]
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [
+          {
+            "request_id": "f2",
+            "support_id": "f1"
+          }
+        ],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [],
+        "needs_context": false,
+        "question_topics": [],
+        "context_evidence": []
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-01"
+      ],
+      "uncertainty_reasons": [],
+      "uncertain_relations": [],
+      "relation_assessments": [
+        {
+          "request_id": "f2",
+          "support_id": "f1",
+          "status": "supported",
+          "relation_type": "payment_required_before_benefit",
+          "relation_evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "assessment_note": "Yêu cầu chuyển tiền được gắn liền với điều kiện nhận lại khoản tiền lớn hơn.",
+          "unresolved_reference": null,
+          "missing_information": null
+        }
+      ],
+      "url_uses": [],
+      "rule_hint_reviews": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Số dư 18 triệu đang chờ về ví của bạn và hệ thống mở đường nhận tiền sau khi có khoản đồng bộ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính người nói.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Đưa 900 nghìn tiền đồng bộ sang ví cá nhân.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Không thu phí gì cả, hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "inferred",
+              "text": "Khoản tiền 900 nghìn đồng được yêu cầu chuyển đi.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa rõ có giả mạo tổ chức hay cá nhân nào không.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Người nói yêu cầu chuyển 900 nghìn đồng trước để hệ thống mở đường nhận 18 triệu.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đã ghi nhận yêu cầu chuyển tiền kèm điều kiện nhận số dư lớn hơn.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Đưa ra thông tin về số dư đang chờ và điều kiện hệ thống.",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Hứa hẹn số tiền lớn để thúc đẩy nạn nhân làm theo yêu cầu.",
+                "evidence_refs": []
+              }
+            },
+            {
+              "id": "f2",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển một khoản tiền sang ví cá nhân.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "observed",
+                "text": "Yêu cầu tài chính có rủi ro mất tiền.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Kịch bản lừa đảo yêu cầu chuyển tiền trước với hứa hẹn nhận lại số tiền lớn hơn.",
+              "finding_refs": [
+                "f1",
+                "f2"
+              ],
+              "alternative_explanations": [
+                "Giao dịch đồng bộ ví hợp lệ trong một ứng dụng tài chính.",
+                "Hiểu lầm về quy trình kỹ thuật."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Chưa rõ bản chất của khoản tiền đồng bộ và ví cá nhân được nhắc tới.",
+            "Chưa rõ hệ thống nào đang được đề cập."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "observed",
+              "text": "Có thông báo số dư 18 triệu đồng đang chờ về ví và yêu cầu khoản tiền đồng bộ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính thực tế của người gửi yêu cầu.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển 900 nghìn đồng sang ví cá nhân.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "persuasion": {
+              "status": "observed",
+              "text": "Hứa hẹn hệ thống sẽ mở đường nhận 18 triệu sau khi có khoản đồng bộ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "observed",
+              "text": "Khoản tiền 900 nghìn đồng cần chuyển theo yêu cầu.",
+              "evidence_refs": [
+                "f2"
+              ]
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ thông tin xác định giả mạo tổ chức cụ thể.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Yêu cầu chuyển tiền trước để được nhận số dư lớn hơn.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Đủ bằng chứng về yêu cầu chuyển tiền và điều kiện đi kèm từ văn bản.",
+              "evidence_refs": [
+                "f1",
+                "f2"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "inducement",
+              "description": "Lời hứa hoặc điều kiện về số dư chờ nhận và yêu cầu đồng bộ",
+              "speaker": "unknown",
+              "speech_role": "claim",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Đưa ra điều kiện phải chuyển khoản trước mới được nhận số dư lớn hơn.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            },
+            {
+              "id": "f2",
+              "action": "transfer_funds",
+              "description": "Yêu cầu chuyển tiền vào ví cá nhân",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Yêu cầu người dùng chuyển một khoản tiền cụ thể.",
+                "evidence_refs": [
+                  "f2"
+                ]
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [
+              {
+                "request_id": "f2",
+                "support_id": "f1"
+              }
+            ],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [],
+            "needs_context": false,
+            "question_topics": [],
+            "context_evidence": []
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-01"
+          ],
+          "uncertainty_reasons": [],
+          "uncertain_relations": [],
+          "relation_assessments": [
+            {
+              "request_id": "f2",
+              "support_id": "f1",
+              "status": "supported",
+              "relation_type": "payment_required_before_benefit",
+              "relation_evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "assessment_note": "Yêu cầu chuyển tiền được gắn liền với điều kiện nhận lại khoản tiền lớn hơn.",
+              "unresolved_reference": null,
+              "missing_information": null
+            }
+          ],
+          "url_uses": [],
+          "rule_hint_reviews": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 22092.35199999239,
+    "extraction_ms": 22312.613699992653,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "high",
+      "summary": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+      "answers": {
+        "claim": {
+          "status": "observed",
+          "text": "Nội dung người nói nêu, chưa xác minh: “Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi”",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "persuasion": {
+          "status": "observed",
+          "text": "Lời hứa hoặc điều kiện cần đối chiếu: “Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f2"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "inferred",
+          "text": "Có quan hệ hành vi do live suy luận từ các đoạn đã đối chiếu.",
+          "evidence_refs": [
+            "f2",
+            "f1"
+          ]
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Có yêu cầu có thể gây hại dựa trên bằng chứng đã đối chiếu; cần xác minh độc lập.",
+          "evidence_refs": [
+            "f1",
+            "f2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "inducement",
+          "description": "Lời hứa hoặc điều kiện cần đối chiếu",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Số dư 18 triệu đang chờ về ví của bạn. Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi; hệ thống chỉ mở đường nhận 18 triệu sau khi có khoản đồng bộ này.",
+              "start": 21,
+              "end": 185
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "f2",
+          "action": "transfer_funds",
+          "description": "Yêu cầu chuyển hoặc ứng tiền",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn cần đưa 900 nghìn tiền đồng bộ sang ví cá nhân của tôi",
+              "start": 60,
+              "end": 118
+            }
+          ],
+          "inference": {
+            "status": "inferred",
+            "text": "Live nhận định yêu cầu liên quan tới điều kiện hoặc lời hứa trong các đoạn đã đối chiếu; cần xác minh độc lập.",
+            "evidence_refs": [
+              "f2",
+              "f1"
+            ]
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [],
+      "follow_up_questions": [],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ.",
+        "Đối chiếu yêu cầu thanh toán và người nhận qua đầu mối đã biết; không nộp thêm chỉ để mở khóa khoản rút."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 2,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 2,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-01"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 12013.016800003243,
+          "retrieval_parallel": 6.8358999997144565,
+          "second_provider": 10080.64960000047,
+          "pipeline_total": 22101.682099993923,
+          "verification_render": 1.7604999884497374
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": false,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 1,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 4.078400001162663
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 6.42199999128934
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 2,
+      "exact_quotes": 2,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 220.26170000026468,
+    "validation_adjudication_serialization_ms": 4.317000013543293
+  },
+  {
+    "id": "C03",
+    "executed": true,
+    "http_status": 200,
+    "api_ms": 8128.329900006065,
+    "current_stage": "review_prompt.txt",
+    "provider_attempts": [
+      {
+        "stage": "observation_prompt.txt"
+      },
+      {
+        "stage": "review_prompt.txt"
+      }
+    ],
+    "provider_http_status": 200,
+    "provider_http_statuses": [
+      200,
+      200
+    ],
+    "usage": {
+      "completion_tokens": 787,
+      "prompt_tokens": 6204,
+      "total_tokens": 6991
+    },
+    "usage_totals": {
+      "completion_tokens": 1552,
+      "prompt_tokens": 7290,
+      "total_tokens": 8842
+    },
+    "live_review": {
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Người nói yêu cầu gửi một đối tượng chưa xác định ('cái đó').",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "unknown",
+          "text": "Thiếu ngữ cảnh tin nhắn trước đó để xác định 'cái đó' và việc cần 'hoàn tất'.",
+          "evidence_refs": []
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Yêu cầu gửi đối tượng chưa rõ ('cái đó') để hoàn tất việc chưa rõ",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+              "start": null,
+              "end": null
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa rõ bản chất đối tượng và hành động hoàn tất.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "review": {
+        "risk_links": [],
+        "benign_finding_ids": [],
+        "uncertain_finding_ids": [
+          "f1"
+        ],
+        "needs_context": true,
+        "question_topics": [
+          "requested_object",
+          "payment_purpose"
+        ],
+        "context_evidence": [
+          {
+            "quote": "Tôi chỉ nhận được đúng câu này; không có tin nhắn trước để biết “cái đó” là gì hoặc hoàn tất việc nào.",
+            "start": 0,
+            "end": 102
+          }
+        ]
+      },
+      "source_uses": [],
+      "scenario_refs": [
+        "SC-09"
+      ],
+      "uncertainty_reasons": [
+        {
+          "finding_id": "f1",
+          "kind": "purpose"
+        }
+      ],
+      "uncertain_relations": [],
+      "relation_assessments": [],
+      "url_uses": [],
+      "rule_hint_reviews": []
+    },
+    "model_stages": [
+      {
+        "prompt": "observation_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "inferred",
+              "text": "Người gửi tuyên bố sẽ hoàn tất một việc nào đó nếu nhận được đối tượng được nhắc đến.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa rõ danh tính của người gửi.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Yêu cầu gửi 'cái đó' qua đây.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "inferred",
+              "text": "Hứa hẹn sẽ hoàn tất công việc để thúc đẩy người nhận gửi đồ.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa xác định được tài sản rủi ro vì chưa rõ bản chất của 'cái đó'.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa có đủ thông tin để xác định giả mạo.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "observed",
+              "text": "Người gửi yêu cầu gửi vật phẩm/thông tin trước rồi mới hoàn tất sau.",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "evidence_sufficiency": {
+              "status": "observed",
+              "text": "Dữ liệu quá ngắn và thiếu ngữ cảnh xung quanh.",
+              "evidence_refs": [
+                "f1"
+              ]
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Người gửi yêu cầu chuyển một đối tượng chưa xác định qua kênh chat và hứa hoàn tất việc.",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "inferred",
+                "text": "Có thể là yêu cầu cung cấp một loại thông tin, mã hoặc tài sản tùy thuộc vào ngữ cảnh trước đó.",
+                "evidence_refs": [
+                  "f1"
+                ]
+              }
+            }
+          ],
+          "hypotheses": [
+            {
+              "id": "h1",
+              "description": "Yêu cầu gửi thông tin nhạy cảm hoặc tài sản trong một giao dịch đang diễn ra.",
+              "finding_refs": [
+                "f1"
+              ],
+              "alternative_explanations": [
+                "Trao đổi thông tin thông thường trong công việc hàng ngày.",
+                "Nhắc nhở gửi tài liệu hành chính đã thỏa thuận từ trước."
+              ]
+            }
+          ],
+          "uncertainties": [
+            "Không rõ 'cái đó' là gì.",
+            "Không rõ việc cần 'hoàn tất' là gì.",
+            "Thiếu ngữ cảnh tin nhắn trước đó."
+          ]
+        }
+      },
+      {
+        "prompt": "review_prompt.txt",
+        "output": {
+          "answers": {
+            "claim": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "claimed_identity": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "requested_action": {
+              "status": "observed",
+              "text": "Người nói yêu cầu gửi một đối tượng chưa xác định ('cái đó').",
+              "evidence_refs": [
+                "f1"
+              ]
+            },
+            "persuasion": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "assets_at_risk": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "impersonation": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "sequence": {
+              "status": "unknown",
+              "text": "Chưa đủ căn cứ.",
+              "evidence_refs": []
+            },
+            "evidence_sufficiency": {
+              "status": "unknown",
+              "text": "Thiếu ngữ cảnh tin nhắn trước đó để xác định 'cái đó' và việc cần 'hoàn tất'.",
+              "evidence_refs": []
+            }
+          },
+          "findings": [
+            {
+              "id": "f1",
+              "action": "other",
+              "description": "Yêu cầu gửi đối tượng chưa rõ ('cái đó') để hoàn tất việc chưa rõ",
+              "speaker": "unknown",
+              "speech_role": "request",
+              "evidence": [
+                {
+                  "message_id": "m1",
+                  "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+                  "start": null,
+                  "end": null
+                }
+              ],
+              "inference": {
+                "status": "unknown",
+                "text": "Chưa rõ bản chất đối tượng và hành động hoàn tất.",
+                "evidence_refs": []
+              }
+            }
+          ],
+          "review": {
+            "risk_links": [],
+            "benign_finding_ids": [],
+            "uncertain_finding_ids": [
+              "f1"
+            ],
+            "needs_context": true,
+            "question_topics": [
+              "requested_object",
+              "payment_purpose"
+            ],
+            "context_evidence": [
+              {
+                "quote": "Tôi chỉ nhận được đúng câu này; không có tin nhắn trước để biết “cái đó” là gì hoặc hoàn tất việc nào.",
+                "start": 0,
+                "end": 102
+              }
+            ]
+          },
+          "source_uses": [],
+          "scenario_refs": [
+            "SC-09"
+          ],
+          "uncertainty_reasons": [
+            {
+              "finding_id": "f1",
+              "kind": "purpose"
+            }
+          ],
+          "uncertain_relations": [],
+          "relation_assessments": [],
+          "url_uses": [],
+          "rule_hint_reviews": []
+        }
+      }
+    ],
+    "provider_adapter_ms": 7945.219100016402,
+    "extraction_ms": 8124.984699999914,
+    "response": {
+      "schema_version": "1.5",
+      "mode": "two_pass",
+      "risk_status": "need_context",
+      "summary": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+      "answers": {
+        "claim": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "Các thao tác được yêu cầu trong nội dung: “Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.”",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Nếu thực hiện, tiền, dữ liệu hoặc quyền truy cập có thể bị ảnh hưởng.",
+          "evidence_refs": [
+            "f1"
+          ]
+        },
+        "impersonation": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "inferred",
+          "text": "Cần thêm bối cảnh hoặc giải quyết bất đồng trước khi kết luận.",
+          "evidence_refs": [
+            "f1"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "f1",
+          "action": "other",
+          "description": "Hành động cần xác minh",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Bạn gửi cái đó qua đây rồi tôi hoàn tất cho.",
+              "start": 0,
+              "end": 44
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Chưa đủ căn cứ.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "suspected_scam_types": [],
+      "missing_information": [
+        "Chưa đủ dữ kiện về người gửi, mục đích hoặc điều kiện của yêu cầu."
+      ],
+      "follow_up_questions": [
+        "Trong lời nhắn, “cái đó” hoặc thông tin được yêu cầu gửi là gì? Chỉ mô tả loại thông tin, không gửi mã hoặc mật khẩu thật."
+      ],
+      "recommended_actions": [
+        "Xác minh qua đầu mối độc lập do bạn tự tìm; không cung cấp mã hoặc chuyển tiền khi chưa rõ."
+      ],
+      "answer_to_user": null,
+      "source_matches": [],
+      "analysis": {
+        "pipeline": "two_pass",
+        "routing": "two_live_calls",
+        "rules_version": "mock-behavior-2.0.0",
+        "preliminary_status": "completed",
+        "preliminary_risk": null,
+        "preliminary_findings": 1,
+        "rule_conflicts": 0,
+        "rule_hints_reviewed": 0,
+        "rule_hints_reclassified": 0,
+        "rule_hints_uncertain": 0,
+        "discarded_live_findings": 0,
+        "live_status": "completed",
+        "initial_findings": 1,
+        "initial_hypotheses": 1,
+        "discarded_source_uses": 0,
+        "scenario_matches": [
+          "SC-09"
+        ],
+        "stage_timings_ms": {
+          "first_provider": 3705.951099997037,
+          "retrieval_parallel": 3.8158999959705397,
+          "second_provider": 4239.693300012732,
+          "pipeline_total": 7949.864499998512,
+          "verification_render": 1.1264000058872625
+        },
+        "decision_version": "two-pass-5",
+        "information_needed": true,
+        "consistency_repairs": 0,
+        "consistency_issues": [],
+        "grounded_relation_count": 0,
+        "relation_review_candidates": 0,
+        "unresolved_relation_candidates": 0,
+        "discarded_url_uses": 0,
+        "used_url_evidence": 0
+      },
+      "retrieval": {
+        "scenarios": {
+          "status": "matched",
+          "retrieved_count": 3,
+          "elapsed_ms": 1.8011000065598637
+        },
+        "official_sources": {
+          "status": "no_approved_sources",
+          "retrieved_count": 0,
+          "elapsed_ms": 3.5319000016897917
+        }
+      },
+      "input_sources": [],
+      "input_warnings": [],
+      "url_analysis": [],
+      "url_uses": []
+    },
+    "evidence_check": {
+      "quote_count": 1,
+      "exact_quotes": 1,
+      "speaker_reference_errors": 0,
+      "semantic_role_review": "pending manual review"
+    },
+    "rules_and_preparation_ms": 179.7655999835115,
+    "validation_adjudication_serialization_ms": 3.345200006151572
+  }
+]

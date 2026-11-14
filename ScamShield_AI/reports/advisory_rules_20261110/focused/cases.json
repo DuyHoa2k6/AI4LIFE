@@ -1,0 +1,34 @@
+[
+  {
+    "id": "H03",
+    "group": "scam",
+    "target_status": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Biến thể tiền đồng bộ",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 22316.930700006196,
+    "manual_review": "pending"
+  },
+  {
+    "id": "C03",
+    "group": "uncertain",
+    "target_status": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Đối tượng thao tác chưa xác định",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 8128.329900006065,
+    "manual_review": "pending"
+  }
+]

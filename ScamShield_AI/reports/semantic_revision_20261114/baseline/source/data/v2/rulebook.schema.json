@@ -1,0 +1,314 @@
+{
+  "$defs": {
+    "Fact": {
+      "additionalProperties": false,
+      "properties": {
+        "event_types": {
+          "items": {
+            "enum": [
+              "transfer_funds",
+              "receive_funds",
+              "withdraw_funds",
+              "handover_asset",
+              "provide_code",
+              "provide_credentials",
+              "provide_documents",
+              "open_link",
+              "login",
+              "install_app",
+              "share_screen",
+              "grant_control",
+              "change_channel",
+              "keep_secret",
+              "avoid_verification",
+              "identity_claim",
+              "relationship_claim",
+              "code_identity",
+              "build_trust",
+              "invite_travel_or_meeting",
+              "offer_employment",
+              "change_destination_or_terms",
+              "impose_debt",
+              "request_secrecy",
+              "restrict_communication",
+              "retain_identity_documents",
+              "restrict_movement",
+              "threaten_harm",
+              "threaten_disclosure",
+              "demand_release_payment",
+              "compel_work",
+              "compel_illegal_activity",
+              "bodily_integrity_threat",
+              "return_documents_available",
+              "free_to_leave",
+              "consent_and_exit_available",
+              "other"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Event Types",
+          "type": "array"
+        },
+        "polarities": {
+          "default": [
+            "positive"
+          ],
+          "items": {
+            "enum": [
+              "positive",
+              "negative",
+              "uncertain"
+            ],
+            "type": "string"
+          },
+          "title": "Polarities",
+          "type": "array"
+        },
+        "speech_roles": {
+          "default": [
+            "request",
+            "claim",
+            "reported"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Speech Roles",
+          "type": "array"
+        },
+        "temporal_states": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Temporal States",
+          "type": "array"
+        },
+        "attribution_kinds": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Attribution Kinds",
+          "type": "array"
+        },
+        "requires_authentication_meaning": {
+          "default": false,
+          "title": "Requires Authentication Meaning",
+          "type": "boolean"
+        },
+        "extractor_rule_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Extractor Rule Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "event_types"
+      ],
+      "title": "Fact",
+      "type": "object"
+    },
+    "RelationCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "prerequisite_for",
+            "before",
+            "after",
+            "reason_given_for",
+            "contradiction",
+            "state_update",
+            "reported_by",
+            "warning_about",
+            "same_transaction",
+            "travel_conditioned_on_secrecy",
+            "movement_restricted_by_debt",
+            "document_retention_limits_exit",
+            "threat_used_to_compel_action",
+            "release_conditioned_on_payment",
+            "work_differs_from_agreement",
+            "same_object",
+            "obstructs_verification",
+            "transfer_via",
+            "promised_after",
+            "threatens_unless",
+            "controls_during",
+            "supersedes"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "from_fact": {
+          "title": "From Fact",
+          "type": "string"
+        },
+        "to_fact": {
+          "title": "To Fact",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "from_fact",
+        "to_fact"
+      ],
+      "title": "RelationCondition",
+      "type": "object"
+    },
+    "Rule": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "same_event",
+            "same_scope_same_affected_party"
+          ],
+          "title": "Scope",
+          "type": "string"
+        },
+        "required_facts": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Fact"
+          },
+          "title": "Required Facts",
+          "type": "object"
+        },
+        "required_relations": {
+          "items": {
+            "$ref": "#/$defs/RelationCondition"
+          },
+          "title": "Required Relations",
+          "type": "array"
+        },
+        "exclusions": {
+          "default": [],
+          "items": {
+            "enum": [
+              "later_payment_confirmed",
+              "documents_returnable",
+              "consent_without_coercion"
+            ],
+            "type": "string"
+          },
+          "title": "Exclusions",
+          "type": "array"
+        },
+        "missing_fact_policy": {
+          "enum": [
+            "ask",
+            "ignore"
+          ],
+          "title": "Missing Fact Policy",
+          "type": "string"
+        },
+        "conclusion": {
+          "enum": [
+            "clear",
+            "need_context",
+            "suspicious",
+            "high"
+          ],
+          "title": "Conclusion",
+          "type": "string"
+        },
+        "safety_urgency": {
+          "default": "preventive",
+          "enum": [
+            "undetermined",
+            "preventive",
+            "urgent"
+          ],
+          "title": "Safety Urgency",
+          "type": "string"
+        },
+        "evidence_requirements": {
+          "const": "all_required_facts_and_relations",
+          "title": "Evidence Requirements",
+          "type": "string"
+        },
+        "follow_up_question_template": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Follow Up Question Template"
+        },
+        "explanation_template_id": {
+          "title": "Explanation Template Id",
+          "type": "string"
+        },
+        "supported_conclusion": {
+          "title": "Supported Conclusion",
+          "type": "string"
+        },
+        "test_case_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Test Case Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rule_id",
+        "version",
+        "description",
+        "scope",
+        "required_facts",
+        "required_relations",
+        "missing_fact_policy",
+        "conclusion",
+        "evidence_requirements",
+        "follow_up_question_template",
+        "explanation_template_id",
+        "supported_conclusion",
+        "test_case_ids"
+      ],
+      "title": "Rule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/Rule"
+      },
+      "maxItems": 40,
+      "title": "Rules",
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "rules"
+  ],
+  "title": "Rulebook",
+  "type": "object"
+}

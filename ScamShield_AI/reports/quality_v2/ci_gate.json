@@ -1,0 +1,35 @@
+{
+  "target": 0.98,
+  "n": 4,
+  "correct_status_and_exact_evidence": 1,
+  "errors_or_not_run": 1,
+  "overall_rate": 0.25,
+  "overall_95ci_lower": 0.045587260809700575,
+  "high": {
+    "TP": 0,
+    "FP": 0,
+    "FN_including_errors": 2,
+    "precision": null,
+    "recall": 0.0
+  },
+  "group_counts": {
+    "suspicious": 1,
+    "scam": 2,
+    "normal": 1
+  },
+  "group_correct": {
+    "suspicious": 0,
+    "scam": 0,
+    "normal": 1
+  },
+  "checks": {
+    "minimum_samples": false,
+    "all_four_groups": false,
+    "independent_review_attested": false,
+    "overall_95ci_above_target": false,
+    "high_precision_95ci_above_target": false,
+    "high_recall_95ci_above_target": false
+  },
+  "passed": false,
+  "limits": "Review manifest is an operator attestation, not proof of independence. Quote matching does not grade semantic completeness or all eight answers. No generalization guarantee."
+}

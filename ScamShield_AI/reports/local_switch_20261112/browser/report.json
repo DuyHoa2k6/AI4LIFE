@@ -1,0 +1,46 @@
+{
+  "scope": "Actual local_rules through main website and real unpacked extension; model endpoint deliberately unusable, no synthetic model provider.",
+  "checks": [
+    {
+      "name": "main website notice is local, no model",
+      "passed": true
+    },
+    {
+      "name": "main website local high",
+      "passed": true
+    },
+    {
+      "name": "main website local clear",
+      "passed": true
+    },
+    {
+      "name": "main website local need_context",
+      "passed": true
+    },
+    {
+      "name": "main website local suspicious",
+      "passed": true
+    },
+    {
+      "name": "main website displays grounded urgency",
+      "passed": true
+    },
+    {
+      "name": "main website hides internal answers and rulebook",
+      "passed": true
+    },
+    {
+      "name": "extension selection sends zero analysis requests",
+      "passed": true
+    },
+    {
+      "name": "extension receives local backend risk",
+      "passed": true
+    },
+    {
+      "name": "extension displays grounded urgent explanation",
+      "passed": true
+    }
+  ],
+  "browser": "Chrome/157.0.8103.50"
+}

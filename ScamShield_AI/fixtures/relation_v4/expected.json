@@ -1,0 +1,77 @@
+{
+  "scope": "8 public targeted synthetic checks: 1 known regression, 7 newly authored variants/controls; not independently labelled accuracy. No tuning during run.",
+  "cases": [
+    {
+      "id": "RG-01",
+      "name": "NW-02 hồi quy dấu xác nhận",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RG-02",
+      "name": "Tên gọi thay thế cho tiền ứng trước",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RG-03",
+      "name": "Đặt mua hàng hợp pháp có hóa đơn",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RG-04",
+      "name": "Bản tin trích lời dụ",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RG-05",
+      "name": "Hai người nói về hai sự việc",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RG-06",
+      "name": "Chưa rõ đại từ chỉ thao tác nào",
+      "group": "uncertain",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true
+    },
+    {
+      "id": "RG-07",
+      "name": "Đại từ nối điều kiện qua hội thoại",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "RG-08",
+      "name": "Một câu nhờ chuyển tiền thiếu bối cảnh",
+      "group": "uncertain",
+      "acceptable": [
+        "need_context"
+      ],
+      "questions_required": true
+    }
+  ]
+}

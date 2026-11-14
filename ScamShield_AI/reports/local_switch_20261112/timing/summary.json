@@ -1,0 +1,358 @@
+{
+  "scope": "12 known development cases, repeated real localhost HTTP; not independent model accuracy.",
+  "cases": 12,
+  "requests": 120,
+  "rounds": 10,
+  "http": {
+    "n": 120,
+    "p50_ms": 4.873099998803809,
+    "p95_ms": 8.12710000172956,
+    "min_ms": 2.9267999998410232,
+    "max_ms": 20.747800001117866
+  },
+  "engine": {
+    "n": 120,
+    "p50_ms": 3.172200002154568,
+    "p95_ms": 6.368499998643529,
+    "min_ms": 1.4517000017804094,
+    "max_ms": 18.24529999794322
+  },
+  "first_http_request_ms": 20.747800001117866,
+  "failures": [],
+  "provider_calls": 0,
+  "external_async_requests": 0,
+  "per_case": [
+    {
+      "id": "P01",
+      "text": "Gửi mã OTP cho tôi.",
+      "risk_status": "high",
+      "safety_urgency": "preventive",
+      "first_round_http_ms": 20.747800001117866,
+      "http": {
+        "n": 10,
+        "p50_ms": 4.563499998766929,
+        "p95_ms": 20.747800001117866,
+        "min_ms": 4.069800001161639,
+        "max_ms": 20.747800001117866
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 2.7681999999913387,
+        "p95_ms": 9.174800001346739,
+        "min_ms": 2.5405000014870893,
+        "max_ms": 9.174800001346739
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-CREDENTIAL"
+      ],
+      "summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P02",
+      "text": "Cảnh báo: đừng gửi OTP.",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined",
+      "first_round_http_ms": 7.291900001291651,
+      "http": {
+        "n": 10,
+        "p50_ms": 4.867399999056943,
+        "p95_ms": 7.291900001291651,
+        "min_ms": 4.225599997880636,
+        "max_ms": 7.291900001291651
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 3.0237999999371823,
+        "p95_ms": 4.9409999992349185,
+        "min_ms": 2.5488000028417446,
+        "max_ms": 4.9409999992349185
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [],
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P03",
+      "text": "Đọc sáu số vừa hiện để nhận tiền.",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined",
+      "first_round_http_ms": 6.286499999987427,
+      "http": {
+        "n": 10,
+        "p50_ms": 5.287299998599337,
+        "p95_ms": 9.488700001384132,
+        "min_ms": 4.860500001086621,
+        "max_ms": 9.488700001384132
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 3.4311000017623883,
+        "p95_ms": 6.003499998769257,
+        "min_ms": 3.1208000000333413,
+        "max_ms": 6.003499998769257
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [],
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "follow_up_questions": [
+        "Dãy số đó được thông báo dùng để làm gì? Chỉ mô tả loại mã, không gửi mã thật."
+      ],
+      "path": "full_local"
+    },
+    {
+      "id": "P04",
+      "text": "Chưa thấy tiền về, nhưng cứ giao máy trước.",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive",
+      "first_round_http_ms": 5.234799999016104,
+      "http": {
+        "n": 10,
+        "p50_ms": 4.989600001863437,
+        "p95_ms": 19.99240000077407,
+        "min_ms": 4.722599998785881,
+        "max_ms": 19.99240000077407
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 3.3361000023433007,
+        "p95_ms": 18.24529999794322,
+        "min_ms": 3.172200002154568,
+        "max_ms": 18.24529999794322
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-HANDOVER"
+      ],
+      "summary": "Nội dung yêu cầu giao tài sản khi người nhận tiền cho biết chưa xác nhận thanh toán. Chưa đủ căn cứ nói biên lai giả.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P05",
+      "text": "Tôi đã kiểm tra và nhận đủ tiền. Anh giao máy nhé.",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined",
+      "first_round_http_ms": 5.194599998503691,
+      "http": {
+        "n": 10,
+        "p50_ms": 5.160299999261042,
+        "p95_ms": 6.095299999287818,
+        "min_ms": 4.792799998540431,
+        "max_ms": 6.095299999287818
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 3.3521999976073857,
+        "p95_ms": 4.144600003201049,
+        "min_ms": 3.3061000031011645,
+        "max_ms": 4.144600003201049
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [],
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P06",
+      "text": "Chuyển thêm tiền để rút số dư.",
+      "risk_status": "high",
+      "safety_urgency": "preventive",
+      "first_round_http_ms": 4.67469999784953,
+      "http": {
+        "n": 10,
+        "p50_ms": 4.826500000490341,
+        "p95_ms": 7.124499999918044,
+        "min_ms": 4.537299999356037,
+        "max_ms": 7.124499999918044
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 3.0975000008766074,
+        "p95_ms": 4.501200000959216,
+        "min_ms": 2.8877000004285946,
+        "max_ms": 4.501200000959216
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-PAY-TO-WITHDRAW"
+      ],
+      "summary": "Nội dung liên kết việc chuyển thêm tiền với điều kiện nhận hoặc rút tiền.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P07",
+      "text": "Gửi ảnh CCCD qua chat.",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive",
+      "first_round_http_ms": 4.433599999174476,
+      "http": {
+        "n": 10,
+        "p50_ms": 4.497300000366522,
+        "p95_ms": 7.738600001175655,
+        "min_ms": 4.308100000343984,
+        "max_ms": 7.738600001175655
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 2.947699998912867,
+        "p95_ms": 4.8557000009168405,
+        "min_ms": 2.7254999986325856,
+        "max_ms": 4.8557000009168405
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-DATA"
+      ],
+      "summary": "Có yêu cầu cung cấp giấy tờ cá nhân; cần xác minh đơn vị tiếp nhận và kênh gửi.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P08",
+      "text": "Mây bay trên núi.",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined",
+      "first_round_http_ms": 3.9929000013216864,
+      "http": {
+        "n": 10,
+        "p50_ms": 3.811200000200188,
+        "p95_ms": 4.532299997663358,
+        "min_ms": 3.5119999993185047,
+        "max_ms": 4.532299997663358
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 2.356999997573439,
+        "p95_ms": 2.6440999972692225,
+        "min_ms": 2.1403999999165535,
+        "max_ms": 2.6440999972692225
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [],
+      "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+      "follow_up_questions": [
+        "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+      ],
+      "path": "full_local"
+    },
+    {
+      "id": "P09",
+      "text": "Hiện tại tôi bị giữ lại và không được rời đi.",
+      "risk_status": "high",
+      "safety_urgency": "urgent",
+      "first_round_http_ms": 3.6818000007770024,
+      "http": {
+        "n": 10,
+        "p50_ms": 3.0566999994334765,
+        "p95_ms": 4.004599999461789,
+        "min_ms": 2.9267999998410232,
+        "max_ms": 4.004599999461789
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 1.5117000002646819,
+        "p95_ms": 2.0963999995728955,
+        "min_ms": 1.4517000017804094,
+        "max_ms": 2.0963999995728955
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-URGENT-CURRENT"
+      ],
+      "summary": "Người dùng cho biết đang bị hạn chế tự do hoặc bị cưỡng ép. Cần ưu tiên an toàn trước khi thu thập thêm thông tin.",
+      "follow_up_questions": [
+        "Bạn có thể đọc và trả lời ở đây một cách an toàn không? Bạn có thể bỏ qua câu hỏi này."
+      ],
+      "path": "urgent_precheck"
+    },
+    {
+      "id": "P10",
+      "text": "Hãy đi cùng và giấu gia đình.",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive",
+      "first_round_http_ms": 4.452699999092147,
+      "http": {
+        "n": 10,
+        "p50_ms": 4.353100001026178,
+        "p95_ms": 5.728200001613004,
+        "min_ms": 4.1947999998228624,
+        "max_ms": 5.728200001613004
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 2.815700001519872,
+        "p95_ms": 3.7523000028159004,
+        "min_ms": 2.701800000068033,
+        "max_ms": 3.7523000028159004
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-TRAVEL-SECRET"
+      ],
+      "summary": "Lời mời di chuyển đi cùng yêu cầu giấu người thân; cần xác minh điều kiện và đầu mối.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P11",
+      "text": "ko ck tiền trước gửi mk tk cho tôi",
+      "risk_status": "high",
+      "safety_urgency": "preventive",
+      "first_round_http_ms": 8.12710000172956,
+      "http": {
+        "n": 10,
+        "p50_ms": 7.967699999426259,
+        "p95_ms": 8.900900000298861,
+        "min_ms": 7.020299999567214,
+        "max_ms": 8.900900000298861
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 5.979799996566726,
+        "p95_ms": 6.824700001743622,
+        "min_ms": 5.303199999616481,
+        "max_ms": 6.824700001743622
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [
+        "R-CREDENTIAL"
+      ],
+      "summary": "Nội dung yêu cầu giao thông tin xác thực cho người khác; có nguy cơ mất quyền truy cập tài khoản.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    },
+    {
+      "id": "P12",
+      "text": "Bài tuyên truyền cảnh báo: có người bị ép làm việc.",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined",
+      "first_round_http_ms": 4.492399999435293,
+      "http": {
+        "n": 10,
+        "p50_ms": 5.276399999274872,
+        "p95_ms": 5.6724000023677945,
+        "min_ms": 4.492399999435293,
+        "max_ms": 5.6724000023677945
+      },
+      "engine": {
+        "n": 10,
+        "p50_ms": 3.397399999812478,
+        "p95_ms": 3.7788000008731615,
+        "min_ms": 2.987700001540361,
+        "max_ms": 3.7788000008731615
+      },
+      "consistent_outcomes": true,
+      "applied_rules": [],
+      "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+      "follow_up_questions": [],
+      "path": "full_local"
+    }
+  ]
+}

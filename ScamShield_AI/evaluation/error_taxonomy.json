@@ -1,0 +1,30 @@
+{
+  "version": "error-taxonomy-1.0",
+  "observed_counts": {
+    "ACTION_OBJECT": 87,
+    "NEGATION_SCOPE": 81,
+    "PARTICIPANT_ROLE": 126,
+    "CONDITION_RELATION": 162,
+    "RISK_DECISION": 33,
+    "REDUNDANT_QUESTION": 11,
+    "EXPLANATION_UNSUPPORTED": 18,
+    "UNSUPPORTED_INPUT": 3,
+    "COREFERENCE": 2,
+    "LABEL_AMBIGUOUS": 1
+  },
+  "required_types": [
+    "ACTION_OBJECT",
+    "PARTICIPANT_ROLE",
+    "NEGATION_SCOPE",
+    "CONDITION_RELATION",
+    "TRANSACTION_SCOPE",
+    "COREFERENCE",
+    "EVIDENCE_INVALID",
+    "RISK_DECISION",
+    "EXPLANATION_UNSUPPORTED",
+    "REDUNDANT_QUESTION",
+    "UNSUPPORTED_INPUT",
+    "LABEL_AMBIGUOUS"
+  ],
+  "note": "Zero observed is not proof of complete coverage. Draft label differences remain subject to review."
+}

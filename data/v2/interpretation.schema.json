@@ -1,0 +1,669 @@
+{
+  "$defs": {
+    "Behavior": {
+      "additionalProperties": false,
+      "properties": {
+        "behavior_id": {
+          "title": "Behavior Id",
+          "type": "string"
+        },
+        "behavior_type": {
+          "title": "Behavior Type",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actor Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Affected Party Id"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "information_status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "behavior_id",
+        "behavior_type",
+        "actor_id",
+        "affected_party_id",
+        "event_refs",
+        "description",
+        "information_status",
+        "evidence_refs",
+        "rule_id",
+        "scope_id"
+      ],
+      "title": "Behavior",
+      "type": "object"
+    },
+    "ClauseRole": {
+      "additionalProperties": false,
+      "properties": {
+        "clause_id": {
+          "title": "Clause Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "requester_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requester Id"
+        },
+        "performer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Performer Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Party Id"
+        },
+        "affected_role": {
+          "default": "unknown",
+          "title": "Affected Role",
+          "type": "string"
+        },
+        "affected_status": {
+          "default": "unknown",
+          "enum": [
+            "textual_role",
+            "unknown"
+          ],
+          "title": "Affected Status",
+          "type": "string"
+        },
+        "unresolved_roles": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Unresolved Roles",
+          "type": "array"
+        },
+        "event_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "role_labels": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {},
+          "title": "Role Labels",
+          "type": "object"
+        }
+      },
+      "required": [
+        "clause_id",
+        "scope_id",
+        "evidence_refs"
+      ],
+      "title": "ClauseRole",
+      "type": "object"
+    },
+    "Consequence": {
+      "additionalProperties": false,
+      "properties": {
+        "consequence_id": {
+          "title": "Consequence Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "money",
+            "assets",
+            "personal_data",
+            "account_access",
+            "device_access",
+            "freedom",
+            "physical_safety"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "action_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Action Refs",
+          "type": "array"
+        },
+        "condition_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "information_status": {
+          "const": "inferred",
+          "default": "inferred",
+          "title": "Information Status",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "consequence_id",
+        "scope_id",
+        "category",
+        "description",
+        "action_refs",
+        "condition_refs",
+        "evidence_refs",
+        "rule_id"
+      ],
+      "title": "Consequence",
+      "type": "object"
+    },
+    "Hypothesis": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_id": {
+          "title": "Hypothesis Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "supporting_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Refs",
+          "type": "array"
+        },
+        "conflicting_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Conflicting Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "supported",
+            "possible",
+            "undetermined",
+            "not_supported"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "scope_id",
+        "description",
+        "supporting_refs",
+        "status",
+        "rule_id"
+      ],
+      "title": "Hypothesis",
+      "type": "object"
+    },
+    "RiskMechanism": {
+      "additionalProperties": false,
+      "properties": {
+        "mechanism_id": {
+          "title": "Mechanism Id",
+          "type": "string"
+        },
+        "situation_id": {
+          "title": "Situation Id",
+          "type": "string"
+        },
+        "risk_status": {
+          "enum": [
+            "high",
+            "suspicious"
+          ],
+          "title": "Risk Status",
+          "type": "string"
+        },
+        "action_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Action Refs",
+          "type": "array"
+        },
+        "relation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "affected_party_id": {
+          "title": "Affected Party Id",
+          "type": "string"
+        },
+        "asset_or_right": {
+          "title": "Asset Or Right",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "recommended_action": {
+          "title": "Recommended Action",
+          "type": "string"
+        },
+        "limitations": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "mechanism_id",
+        "situation_id",
+        "risk_status",
+        "action_refs",
+        "relation_refs",
+        "evidence_refs",
+        "affected_party_id",
+        "asset_or_right",
+        "summary",
+        "recommended_action"
+      ],
+      "title": "RiskMechanism",
+      "type": "object"
+    },
+    "SalientAction": {
+      "additionalProperties": false,
+      "properties": {
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "supporting_relation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Relation Refs",
+          "type": "array"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Affected Party Id"
+        },
+        "consequence": {
+          "title": "Consequence",
+          "type": "string"
+        },
+        "selection_reason": {
+          "title": "Selection Reason",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "is_primary": {
+          "default": false,
+          "title": "Is Primary",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "scope_id",
+        "event_refs",
+        "supporting_relation_refs",
+        "affected_party_id",
+        "consequence",
+        "selection_reason",
+        "rule_id"
+      ],
+      "title": "SalientAction",
+      "type": "object"
+    },
+    "Situation": {
+      "additionalProperties": false,
+      "properties": {
+        "situation_id": {
+          "title": "Situation Id",
+          "type": "string"
+        },
+        "version": {
+          "default": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Message Ids",
+          "type": "array"
+        },
+        "event_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Refs",
+          "type": "array"
+        },
+        "relation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Refs",
+          "type": "array"
+        },
+        "active_request_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Active Request Refs",
+          "type": "array"
+        },
+        "conflicting_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Conflicting Refs",
+          "type": "array"
+        },
+        "unknown_information": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Unknown Information",
+          "type": "array"
+        },
+        "object_types": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Object Types",
+          "type": "array"
+        },
+        "condition_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "reported_state_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Reported State Refs",
+          "type": "array"
+        },
+        "verification_report_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Verification Report Refs",
+          "type": "array"
+        },
+        "mechanism_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Mechanism Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "situation_id",
+        "participant_ids",
+        "message_ids",
+        "event_refs",
+        "relation_refs",
+        "active_request_refs"
+      ],
+      "title": "Situation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "reasoning_version": {
+      "default": "local-situation-1.0",
+      "title": "Reasoning Version",
+      "type": "string"
+    },
+    "behaviors": {
+      "items": {
+        "$ref": "#/$defs/Behavior"
+      },
+      "title": "Behaviors",
+      "type": "array"
+    },
+    "situations": {
+      "items": {
+        "$ref": "#/$defs/Situation"
+      },
+      "title": "Situations",
+      "type": "array"
+    },
+    "hypotheses": {
+      "items": {
+        "$ref": "#/$defs/Hypothesis"
+      },
+      "title": "Hypotheses",
+      "type": "array"
+    },
+    "consequences": {
+      "items": {
+        "$ref": "#/$defs/Consequence"
+      },
+      "title": "Consequences",
+      "type": "array"
+    },
+    "stage_timings_ms": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "default": {},
+      "title": "Stage Timings Ms",
+      "type": "object"
+    },
+    "limitations": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "clause_roles": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/ClauseRole"
+      },
+      "title": "Clause Roles",
+      "type": "array"
+    },
+    "salient_actions": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/SalientAction"
+      },
+      "title": "Salient Actions",
+      "type": "array"
+    },
+    "mechanisms": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RiskMechanism"
+      },
+      "title": "Mechanisms",
+      "type": "array"
+    }
+  },
+  "required": [
+    "behaviors",
+    "situations",
+    "hypotheses",
+    "consequences"
+  ],
+  "title": "Interpretation",
+  "type": "object"
+}

@@ -1,0 +1,597 @@
+{
+  "id": "A",
+  "input": {
+    "text": "Chưa thấy tiền về, nhưng cứ giao máy trước."
+  },
+  "http_status": 200,
+  "api_ms": 6.826800003182143,
+  "response": {
+    "schema_version": "observation-1.0",
+    "mode": "python_rules",
+    "rules_version": "vi-observer-rules-1.0",
+    "rules_sha256": "77bfa08db46ed83d60ffbd4641efcacbde8e0b61b1c85926d1cdffcc090e3630",
+    "input_sha256": "51f9af1b8be66ce6b2df6b8546c5770efdc3d27f99504a33f193ee69d48adf92",
+    "units": [
+      {
+        "message_id": "m1",
+        "speaker": "unknown",
+        "sentence_id": "m1:0",
+        "start": 0,
+        "end": 17,
+        "quote": "Chưa thấy tiền về",
+        "quoted": false
+      },
+      {
+        "message_id": "m1",
+        "speaker": "unknown",
+        "sentence_id": "m1:0",
+        "start": 17,
+        "end": 18,
+        "quote": ",",
+        "quoted": false
+      },
+      {
+        "message_id": "m1",
+        "speaker": "unknown",
+        "sentence_id": "m1:0",
+        "start": 19,
+        "end": 43,
+        "quote": "nhưng cứ giao máy trước.",
+        "quoted": false
+      }
+    ],
+    "participants": [
+      {
+        "id": "p1",
+        "label": "unknown",
+        "role": "speaker",
+        "provenance": "metadata",
+        "identity_verified": false,
+        "evidence_refs": []
+      },
+      {
+        "id": "p2",
+        "label": "người được yêu cầu, chưa rõ danh tính",
+        "role": "addressee",
+        "provenance": "text",
+        "identity_verified": false,
+        "evidence_refs": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "s1",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "verb",
+        "start": 5,
+        "end": 9,
+        "quote": "thấy"
+      },
+      {
+        "id": "s2",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "action",
+        "start": 0,
+        "end": 17,
+        "quote": "Chưa thấy tiền về"
+      },
+      {
+        "id": "s3",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "target",
+        "start": 10,
+        "end": 17,
+        "quote": "tiền về"
+      },
+      {
+        "id": "s4",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "negation",
+        "start": 0,
+        "end": 4,
+        "quote": "Chưa"
+      },
+      {
+        "id": "s5",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "verb",
+        "start": 28,
+        "end": 32,
+        "quote": "giao"
+      },
+      {
+        "id": "s6",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "action",
+        "start": 19,
+        "end": 43,
+        "quote": "nhưng cứ giao máy trước."
+      },
+      {
+        "id": "s7",
+        "source": "message",
+        "provenance": "text",
+        "message_id": "m1",
+        "speaker": "unknown",
+        "kind": "target",
+        "start": 33,
+        "end": 42,
+        "quote": "máy trước"
+      }
+    ],
+    "events": [
+      {
+        "action_id": "a1",
+        "action_type": "receive_funds",
+        "verb_span": "s1",
+        "action_span": "s2",
+        "target_span": "s3",
+        "negation_span": "s4",
+        "time_span": null,
+        "actor": null,
+        "recipient": null,
+        "beneficiary": null,
+        "target": "tiền về",
+        "location": null,
+        "polarity": "negative",
+        "speech_role": "claim",
+        "temporal_state": "pending",
+        "time_expression": null,
+        "transaction_id": null,
+        "evidence_refs": [
+          "s1",
+          "s2",
+          "s3",
+          "s4"
+        ],
+        "rule_id": "ACT-RECEIVE",
+        "limitations": [
+          "Chưa xác định chắc chủ thể của hành động."
+        ]
+      },
+      {
+        "action_id": "a2",
+        "action_type": "handover_asset",
+        "verb_span": "s5",
+        "action_span": "s6",
+        "target_span": "s7",
+        "negation_span": null,
+        "time_span": null,
+        "actor": "p2",
+        "recipient": null,
+        "beneficiary": null,
+        "target": "máy trước",
+        "location": null,
+        "polarity": "positive",
+        "speech_role": "request",
+        "temporal_state": "requested",
+        "time_expression": null,
+        "transaction_id": null,
+        "evidence_refs": [
+          "s5",
+          "s6",
+          "s7"
+        ],
+        "rule_id": "ACT-HANDOVER",
+        "limitations": []
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "r1",
+        "type": "before",
+        "from_id": "a2",
+        "to_id": "a1",
+        "evidence_refs": [
+          "s6",
+          "s2"
+        ],
+        "rule_id": "REL-HANDOVER-BEFORE-CONFIRMATION",
+        "status": "observed",
+        "limitations": [
+          "Thứ tự được yêu cầu; không chứng minh biên lai giả."
+        ]
+      }
+    ],
+    "answers_18": {
+      "situation": {
+        "status": "inferred",
+        "value": {
+          "statements": [
+            "Phát hiện các hành động ứng viên trong nội dung; chưa xác định thủ đoạn hoặc tính hợp pháp."
+          ],
+          "event_ids": [
+            "a1",
+            "a2"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2",
+          "s6"
+        ],
+        "missing_information": []
+      },
+      "participants": {
+        "status": "observed",
+        "value": {
+          "statements": [
+            "Người nói theo metadata; không chứng nhận danh tính thật."
+          ],
+          "event_ids": [],
+          "participant_ids": [
+            "p1",
+            "p2"
+          ],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "sender_identity": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "relationship": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "communication_channel": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "claims": {
+        "status": "claimed",
+        "value": {
+          "statements": [
+            "Chưa thấy tiền về"
+          ],
+          "event_ids": [
+            "a1"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2"
+        ],
+        "missing_information": []
+      },
+      "requested_actions": {
+        "status": "observed",
+        "value": {
+          "statements": [
+            "nhưng cứ giao máy trước."
+          ],
+          "event_ids": [
+            "a2"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s6"
+        ],
+        "missing_information": []
+      },
+      "action_targets": {
+        "status": "inferred",
+        "value": {
+          "statements": [
+            "Chưa thấy tiền về",
+            "nhưng cứ giao máy trước."
+          ],
+          "event_ids": [
+            "a1",
+            "a2"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2",
+          "s6"
+        ],
+        "missing_information": []
+      },
+      "stated_purpose": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "assets_and_access": {
+        "status": "inferred",
+        "value": {
+          "statements": [
+            "Chưa thấy tiền về",
+            "nhưng cứ giao máy trước."
+          ],
+          "event_ids": [
+            "a1",
+            "a2"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2",
+          "s6"
+        ],
+        "missing_information": []
+      },
+      "benefit_and_mismatch": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": [
+          "Chưa xác định chắc bên hưởng lợi hoặc sai lệch mục đích; cần rà ngữ nghĩa."
+        ]
+      },
+      "persuasion": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "conditions_and_sequence": {
+        "status": "observed",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": [
+            "r1"
+          ]
+        },
+        "evidence_refs": [
+          "s6",
+          "s2"
+        ],
+        "missing_information": []
+      },
+      "contradictions_and_alternatives": {
+        "status": "observed",
+        "value": {
+          "statements": [
+            "Chưa thấy tiền về"
+          ],
+          "event_ids": [
+            "a1"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2"
+        ],
+        "missing_information": []
+      },
+      "technical_checks": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": [
+          "Lượt này chưa chạy kiểm tra kỹ thuật; URL/links đầu vào không phải kết quả xác minh."
+        ]
+      },
+      "evidence_quality": {
+        "status": "observed",
+        "value": {
+          "statements": [
+            "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật."
+          ],
+          "event_ids": [
+            "a1",
+            "a2"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2",
+          "s6"
+        ],
+        "missing_information": []
+      },
+      "missing_information": {
+        "status": "unknown",
+        "value": {
+          "statements": [],
+          "event_ids": [],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [],
+        "missing_information": []
+      },
+      "assessment": {
+        "status": "inferred",
+        "value": {
+          "statements": [
+            "Có 2 hành động ứng viên và 1 quan hệ theo quy tắc. Chưa kết luận mức rủi ro.",
+            "Đối chiếu yêu cầu và kênh thực hiện qua đầu mối độc lập trước khi làm theo."
+          ],
+          "event_ids": [
+            "a1",
+            "a2"
+          ],
+          "participant_ids": [],
+          "relation_ids": []
+        },
+        "evidence_refs": [
+          "s2",
+          "s6"
+        ],
+        "missing_information": []
+      }
+    },
+    "follow_up_questions": [],
+    "limitations": [
+      "Bộ quy tắc hữu hạn; không chứng minh đủ độ phủ ngôn ngữ hoặc tính xác thực ngoài đời.",
+      "Không kiểm tra mạng URL, không truy xuất RAG, không gọi mô hình, không gán mức cảnh báo cuối.",
+      "Không lưu phiên: khi bổ sung phải gửi lại hội thoại gốc cùng tin mới; không ghép ngầm giữa các request."
+    ],
+    "adapter": {
+      "answers": {
+        "claim": {
+          "status": "inferred",
+          "text": "Chưa thấy tiền về",
+          "evidence_refs": [
+            "a1"
+          ]
+        },
+        "claimed_identity": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong quan sát cục bộ.",
+          "evidence_refs": []
+        },
+        "requested_action": {
+          "status": "observed",
+          "text": "nhưng cứ giao máy trước.",
+          "evidence_refs": [
+            "a2"
+          ]
+        },
+        "persuasion": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong quan sát cục bộ.",
+          "evidence_refs": []
+        },
+        "assets_at_risk": {
+          "status": "inferred",
+          "text": "Chưa thấy tiền về nhưng cứ giao máy trước.",
+          "evidence_refs": [
+            "a1",
+            "a2"
+          ]
+        },
+        "impersonation": {
+          "status": "observed",
+          "text": "Chưa thấy tiền về",
+          "evidence_refs": [
+            "a1"
+          ]
+        },
+        "sequence": {
+          "status": "unknown",
+          "text": "Chưa đủ căn cứ trong quan sát cục bộ.",
+          "evidence_refs": []
+        },
+        "evidence_sufficiency": {
+          "status": "observed",
+          "text": "Quote được cắt từ bản gốc và kiểm tra ID/Unicode offset; không chứng minh nội dung khai báo là thật.",
+          "evidence_refs": [
+            "a1",
+            "a2"
+          ]
+        }
+      },
+      "findings": [
+        {
+          "id": "a1",
+          "action": "other",
+          "description": "receive_funds",
+          "speaker": "unknown",
+          "speech_role": "claim",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "Chưa thấy tiền về",
+              "start": 0,
+              "end": 17
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc; chưa kết luận rủi ro.",
+            "evidence_refs": []
+          }
+        },
+        {
+          "id": "a2",
+          "action": "other",
+          "description": "handover_asset",
+          "speaker": "unknown",
+          "speech_role": "request",
+          "evidence": [
+            {
+              "message_id": "m1",
+              "quote": "nhưng cứ giao máy trước.",
+              "start": 19,
+              "end": 43
+            }
+          ],
+          "inference": {
+            "status": "unknown",
+            "text": "Quan sát theo quy tắc; chưa kết luận rủi ro.",
+            "evidence_refs": []
+          }
+        }
+      ],
+      "hypotheses": [],
+      "uncertainties": []
+    },
+    "elapsed_ms": 3.4739999973680824
+  }
+}

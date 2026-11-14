@@ -1,0 +1,63 @@
+{
+  "scope": "real Chrome web and unpacked extension, real local OCR, mock analysis; isolated copy grants all_urls for screenshot fixture only, not production toolbar activeTab grant verification",
+  "checks": [
+    {
+      "name": "selecting image sends zero requests",
+      "passed": true
+    },
+    {
+      "name": "real Vietnamese OCR displayed, analysis not sent",
+      "passed": true
+    },
+    {
+      "name": "preview includes OCR source and unchanged OCR message",
+      "passed": true
+    },
+    {
+      "name": "OCR provenance and warning rendered after API",
+      "passed": true
+    },
+    {
+      "name": "blank image does not analyze or claim safe",
+      "passed": true
+    },
+    {
+      "name": "automatic region scan never uploads or analyzes image content",
+      "passed": true
+    },
+    {
+      "name": "extension capture preview sends zero OCR/analyze requests",
+      "passed": true
+    },
+    {
+      "name": "extension cropped screenshot OCR is real",
+      "passed": true
+    },
+    {
+      "name": "outside text and input value absent from screenshot OCR",
+      "passed": true
+    },
+    {
+      "name": "extension OCR alone does not analyze",
+      "passed": true
+    },
+    {
+      "name": "extension sends DOM and OCR provenance only after confirmation",
+      "passed": true
+    }
+  ],
+  "browser": "Chrome/157.0.8103.50",
+  "tabs": [
+    {
+      "id": 1878454217
+    },
+    {
+      "id": 1878454218,
+      "url": "http://127.0.0.1:18766/"
+    },
+    {
+      "id": 1878454219,
+      "url": "chrome-extension://edklnmemiamfmkkmmaffbgdjelfmgmpj/popup.html"
+    }
+  ]
+}

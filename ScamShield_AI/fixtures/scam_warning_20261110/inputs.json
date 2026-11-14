@@ -1,0 +1,239 @@
+[
+  {
+    "id": "NW-01",
+    "name": "Tiền công bị giữ",
+    "behavior_group": "transfer_funds",
+    "input": {
+      "text": "Tiền công của chị đang nằm ở ngăn chờ. Chị chuyển 840 nghìn vào ví của em làm khoản đối ứng, đủ đối ứng thì em mới giải phóng tiền công."
+    }
+  },
+  {
+    "id": "NW-02",
+    "name": "Đổi phí thành dấu xác nhận",
+    "behavior_group": "transfer_funds",
+    "input": {
+      "text": "Không gọi là phí đâu anh, đây là dấu xác nhận bằng tiền. Anh gửi 1,2 triệu sang tài khoản em trước; thiếu dấu này thì khoản hoàn 12 triệu chưa thể về."
+    }
+  },
+  {
+    "id": "NW-03",
+    "name": "Đòi thêm vốn qua hội thoại",
+    "behavior_group": "transfer_funds",
+    "input": {
+      "messages": [
+        {
+          "id": "a",
+          "speaker": "khach",
+          "text": "Tôi đã hoàn tất việc rồi, sao chưa rút được?"
+        },
+        {
+          "id": "b",
+          "speaker": "quan_ly",
+          "text": "Chị cần chuyển thêm 2 triệu để bù điểm tín nhiệm."
+        },
+        {
+          "id": "c",
+          "speaker": "quan_ly",
+          "text": "Có khoản bù đó thì bên em mới mở rút toàn bộ vốn và lãi cho chị."
+        }
+      ]
+    }
+  },
+  {
+    "id": "NW-04",
+    "name": "Trả tiền ăn có bối cảnh",
+    "behavior_group": "transfer_funds",
+    "input": {
+      "text": "Chuyển lại mình 75 nghìn phần bún trưa nay nhé.",
+      "context": "Tôi và bạn vừa ăn cùng, bạn thanh toán hộ. Tôi đã đối chiếu đúng phần ăn và tài khoản của bạn."
+    }
+  },
+  {
+    "id": "NW-05",
+    "name": "Mã sáu số tránh chữ OTP",
+    "behavior_group": "share_auth_code",
+    "input": {
+      "text": "Ngân hàng vừa gửi sáu chữ số đăng nhập về điện thoại chị. Đọc nguyên dãy đó cho tôi qua cuộc gọi để tôi hủy giao dịch đang treo; đừng tự nhập."
+    }
+  },
+  {
+    "id": "NW-06",
+    "name": "Mật khẩu để chống khóa",
+    "behavior_group": "share_auth_code",
+    "input": {
+      "text": "Tài khoản mua sắm của anh sắp bị khóa. Nhắn cho tôi mật khẩu đăng nhập hiện tại, tôi mới giữ tài khoản hoạt động cho anh được."
+    }
+  },
+  {
+    "id": "NW-07",
+    "name": "Chuỗi khôi phục ví",
+    "behavior_group": "share_auth_code",
+    "input": {
+      "text": "Muốn nhận lại số dư ví, chép toàn bộ 12 từ khôi phục bí mật rồi gửi riêng cho tôi. Tôi phải có đủ 12 từ mới mở lại số dư cho bạn."
+    }
+  },
+  {
+    "id": "NW-08",
+    "name": "Tự nhập mã trong ứng dụng",
+    "behavior_group": "share_auth_code",
+    "input": {
+      "text": "Tôi tự mở ứng dụng ngân hàng đã cài, tự nhập mã xác thực để trả hóa đơn. Tôi không đọc hoặc gửi mã cho người khác."
+    }
+  },
+  {
+    "id": "NW-09",
+    "name": "Điều khiển máy để mở trợ cấp",
+    "behavior_group": "grant_access",
+    "input": {
+      "text": "Bật điều khiển từ xa và cho tôi thao tác trên điện thoại của cô. Chỉ khi tôi điều khiển được máy thì hồ sơ trợ cấp mới được duyệt giải ngân."
+    }
+  },
+  {
+    "id": "NW-10",
+    "name": "Thêm quản trị viên trang",
+    "behavior_group": "grant_access",
+    "input": {
+      "text": "Muốn nhận gói tài trợ cho trang, thêm tài khoản của tôi làm quản trị viên toàn quyền trước. Khi có toàn quyền tôi mới chuyển tiền tài trợ."
+    }
+  },
+  {
+    "id": "NW-11",
+    "name": "Chia sẻ ngân hàng để hoàn phí",
+    "behavior_group": "grant_access",
+    "input": {
+      "messages": [
+        {
+          "id": "s1",
+          "speaker": "hotro",
+          "text": "Bật chia sẻ màn hình và mở phần số dư trong ứng dụng ngân hàng."
+        },
+        {
+          "id": "s2",
+          "speaker": "hotro",
+          "text": "Đây là bước bắt buộc để tôi xử lý khoản hoàn phí cho anh."
+        }
+      ]
+    }
+  },
+  {
+    "id": "NW-12",
+    "name": "Quyền thông báo lịch có bối cảnh",
+    "behavior_group": "grant_access",
+    "input": {
+      "text": "Cho phép ứng dụng lịch gửi thông báo để nhắc buổi học nhé.",
+      "context": "Tôi tự cài ứng dụng lịch của trường từ cửa hàng chính thức. Quyền đang hỏi chỉ là thông báo nhắc lịch, không xem màn hình hoặc điều khiển."
+    }
+  },
+  {
+    "id": "NW-13",
+    "name": "Tệp ngoài cửa hàng để nhận hỗ trợ",
+    "behavior_group": "install_app",
+    "input": {
+      "text": "Cài tệp ho-tro.apk tôi gửi ngoài cửa hàng ứng dụng, bật quyền trợ năng cho nó. Cài xong và cấp quyền thì tôi mới mở khoản hỗ trợ cho cô."
+    }
+  },
+  {
+    "id": "NW-14",
+    "name": "Phần mềm máy tính để lấy tiền",
+    "behavior_group": "install_app",
+    "input": {
+      "text": "Tải bộ cài exe qua đường dẫn riêng của tôi rồi tắt phần mềm bảo vệ để cài. Đây là điều kiện bắt buộc để nhận lại tiền đơn hàng bị hủy."
+    }
+  },
+  {
+    "id": "NW-15",
+    "name": "Đổi tên app thành công cụ đối soát",
+    "behavior_group": "install_app",
+    "input": {
+      "text": "Đây chỉ là công cụ đối soát, không phải ứng dụng ngân hàng. Cài gói tôi gửi và bật quyền điều khiển thiết bị; đủ hai bước này bên tôi mới giải ngân tiền hoàn."
+    }
+  },
+  {
+    "id": "NW-16",
+    "name": "Bài cảnh báo tệp APK",
+    "behavior_group": "install_app",
+    "input": {
+      "text": "Bản tin an toàn: kẻ gian thường nói “cài tệp APK này để nhận trợ cấp”. Đó là lời dụ được trích để cảnh báo. Đừng cài tệp người lạ gửi hoặc cấp quyền điều khiển."
+    }
+  },
+  {
+    "id": "NW-17",
+    "name": "Nhiệm vụ nhỏ dẫn sang ứng vốn",
+    "behavior_group": "inducement",
+    "input": {
+      "messages": [
+        {
+          "id": "j1",
+          "speaker": "tuyendung",
+          "text": "Lượt đầu bấm thích bài đăng được trả 20 nghìn, không cần vốn."
+        },
+        {
+          "id": "j2",
+          "speaker": "ungvien",
+          "text": "Tôi đã nhận 20 nghìn rồi."
+        },
+        {
+          "id": "j3",
+          "speaker": "tuyendung",
+          "text": "Muốn nhận thưởng 900 nghìn ở lượt kế, em phải chuyển trước 500 nghìn tiền giữ suất cho chị."
+        }
+      ]
+    }
+  },
+  {
+    "id": "NW-18",
+    "name": "Gây áp lực giả cơ quan",
+    "behavior_group": "inducement",
+    "input": {
+      "text": "Tôi là cán bộ xử lý hồ sơ. Trong mười phút anh phải chuyển 8 triệu vào tài khoản tôi cung cấp để kiểm tra nguồn tiền; chuyển xong mới được gỡ phong tỏa."
+    }
+  },
+  {
+    "id": "NW-19",
+    "name": "Nạp tiền giải phóng lợi nhuận",
+    "behavior_group": "inducement",
+    "input": {
+      "text": "Anh đã thắng 30 triệu nhưng hệ thống giữ khoản lãi. Nạp thêm 3 triệu bảo lãnh vào ví riêng của tôi ngay hôm nay, tôi mới cho rút cả gốc lẫn lãi."
+    }
+  },
+  {
+    "id": "NW-20",
+    "name": "Phần thưởng không yêu cầu tài sản",
+    "behavior_group": "inducement",
+    "input": {
+      "text": "Thư viện tặng một cuốn sách cho người tham dự buổi đọc. Đến quầy nhận miễn phí, không đóng phí, không cung cấp mã hay thông tin ngân hàng."
+    }
+  },
+  {
+    "id": "NW-21",
+    "name": "Xác nhận nhận hàng để được hoàn",
+    "behavior_group": "other",
+    "input": {
+      "text": "Bưu kiện chưa giao cũng cứ bấm đã nhận hàng trên sàn trước. Sau khi anh xác nhận hoàn tất đơn thì tôi mới hoàn lại tiền cho anh qua kênh riêng."
+    }
+  },
+  {
+    "id": "NW-22",
+    "name": "Ký quyền ví để nhận thưởng",
+    "behavior_group": "other",
+    "input": {
+      "text": "Ký chấp thuận cho địa chỉ tôi gửi được chi tiêu toàn bộ token trong ví trước. Chữ ký cấp quyền đó là điều kiện để tôi chuyển phần thưởng vào ví của bạn."
+    }
+  },
+  {
+    "id": "NW-23",
+    "name": "Gửi ảnh giấy tờ và video",
+    "behavior_group": "other",
+    "input": {
+      "text": "Gửi riêng cho tôi ảnh hai mặt căn cước và video quay mặt cầm căn cước. Có đủ bộ đó tôi mới duyệt suất vay ưu đãi, không gửi thì không nhận được khoản vay."
+    }
+  },
+  {
+    "id": "NW-24",
+    "name": "Nhận hàng sau khi kiểm tra",
+    "behavior_group": "other",
+    "input": {
+      "text": "Tôi chỉ bấm đã nhận hàng sau khi nhận đúng gói và kiểm tra đủ sản phẩm. Không ai yêu cầu tôi xác nhận trước hoặc hoàn tiền ngoài sàn."
+    }
+  }
+]

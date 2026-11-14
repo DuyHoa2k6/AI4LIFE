@@ -1,0 +1,14 @@
+{
+  "cases": 8,
+  "matched": 8,
+  "failed": [],
+  "external_transport_calls": 0,
+  "p50_ms": 27.396,
+  "p95_ms": 67.399,
+  "measurement": "ASGI TestClient, sequential single request/case, no controlled cold start or browser measurement; development examples only.",
+  "hashes": {
+    "backend\\local_reasoning\\clause_context.py": "9992efd896decd60b330bb220aba9fc68e861ed9344e0efa7fcfb5688a330e3e",
+    "backend\\local_reasoning\\interpretation_schema.py": "9864af8193c136f4454b983cf582d09a176a4287216380474f229ec75d4e13d2",
+    "fixtures\\clause_roles_expected.json": "2b4432abc54f6f292d7d51a3d61efac0c3f43b657e909301cf6bddfef7041c36"
+  }
+}

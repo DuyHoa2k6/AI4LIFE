@@ -1,0 +1,33 @@
+{
+  "reviewed_case_ids": [
+    "NW-01",
+    "NW-02",
+    "NW-03",
+    "NW-04",
+    "NW-05",
+    "NW-06",
+    "NW-07",
+    "NW-08",
+    "NW-09",
+    "NW-10",
+    "NW-11",
+    "NW-12",
+    "NW-13",
+    "NW-14",
+    "NW-15",
+    "NW-16",
+    "NW-17",
+    "NW-18",
+    "NW-19",
+    "NW-20",
+    "NW-21",
+    "NW-22",
+    "NW-23",
+    "NW-24"
+  ],
+  "reviewer_role": "implementer",
+  "independent_review": false,
+  "coverage": "primary speaker, speech role, action and request/support relationship; code-point quotes independently checked by harness",
+  "full_eight_answer_semantics_scored": false,
+  "notes_file": "MANUAL_REVIEW.md"
+}

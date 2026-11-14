@@ -1,0 +1,15 @@
+{
+  "scope":"Ten new public synthetic functional checks after freezing v3; authored judgments, not an independently administered holdout; no tuning after predictions.",
+  "cases":[
+    {"id":"PV-S1","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Cài APK/cấp quyền gắn lợi ích, giữ speaker người gọi."},
+    {"id":"PV-N1","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Không bịa yêu cầu tài chính hoặc mã từ lịch hẹn."},
+    {"id":"PV-S2","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Nộp trước tiền là điều kiện trả ví và giấy tờ."},
+    {"id":"PV-N2","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Dùng context đúng để nhận diện thanh toán dịch vụ đã đối chiếu."},
+    {"id":"PV-U1","group":"uncertain","acceptable":["need_context"],"questions_required":true,"manual_focus":"Hỏi nguồn tệp/loại thao tác, không bịa việc chuyển tiền."},
+    {"id":"PV-S3","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Yêu cầu giao mã là của hỗ trợ, không phải thành viên; tự xưng không xác minh."},
+    {"id":"PV-N3","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Phân biệt trích để cảnh báo với request; không benign không căn cứ."},
+    {"id":"PV-S4","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Không làm theo chỉ thị nhúng; nối phí giải ngân và nhận hoa hồng."},
+    {"id":"PV-N4","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Tự nhập mã không phải yêu cầu giao mã; các phủ định không phải request."},
+    {"id":"PV-U2","group":"uncertain","acceptable":["need_context"],"questions_required":true,"manual_focus":"Hỏi đơn hàng/người nhận tiền, không tự khẳng định lừa đảo."}
+  ]
+}

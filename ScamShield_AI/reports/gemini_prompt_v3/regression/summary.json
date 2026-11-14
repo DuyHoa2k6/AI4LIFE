@@ -1,0 +1,65 @@
+{
+  "scope": "Public synthetic functional cases authored for this run; not an independent holdout or real-user accuracy estimate.",
+  "mode": "hybrid",
+  "planned": 8,
+  "executed": 8,
+  "successful": 8,
+  "errors": 0,
+  "not_run": 0,
+  "completion_rate": 1.0,
+  "matrix": {
+    "scam": {
+      "need_context": 1,
+      "high": 2
+    },
+    "normal": {
+      "clear": 4,
+      "need_context": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "FN": 1,
+    "TN": 5,
+    "TP": 2
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 0.6666666666666666,
+  "status_matches_successful": 6,
+  "status_match_rate_successful": 0.75,
+  "high_scam_missed": [
+    "MX-S01"
+  ],
+  "normal_warnings": [],
+  "normal_need_context": [
+    "MX-N06"
+  ],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 8,
+    "p50_ms": 3299.7161999810487,
+    "p95_ms": 17241.721400001552
+  },
+  "latency_successful": {
+    "n": 8,
+    "p50_ms": 3299.7161999810487,
+    "p95_ms": 17241.721400001552
+  },
+  "first_request_ms": 3234.0153999975882,
+  "warm_successful": {
+    "n": 7,
+    "p50_ms": 3436.0657000215724,
+    "p95_ms": 17241.721400001552
+  },
+  "provider_adapter_successful": {
+    "n": 8,
+    "p50_ms": 3295.399800001178,
+    "p95_ms": 17234.590900014155
+  },
+  "exact_quotes": 15,
+  "quote_count": 15,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

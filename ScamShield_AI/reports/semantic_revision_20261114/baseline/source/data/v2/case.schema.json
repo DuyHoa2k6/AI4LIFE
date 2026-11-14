@@ -1,0 +1,1663 @@
+{
+  "$defs": {
+    "AnalysisField": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/$defs/Value"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "extraction_method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extraction Method"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Rule Ids",
+          "type": "array"
+        }
+      },
+      "title": "AnalysisField",
+      "type": "object"
+    },
+    "Annotations": {
+      "additionalProperties": false,
+      "properties": {
+        "participants": {
+          "items": {
+            "$ref": "#/$defs/Participant"
+          },
+          "title": "Participants",
+          "type": "array"
+        },
+        "spans": {
+          "items": {
+            "$ref": "#/$defs/Span"
+          },
+          "title": "Spans",
+          "type": "array"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/Event"
+          },
+          "title": "Events",
+          "type": "array"
+        },
+        "personal_relationships": {
+          "items": {
+            "$ref": "#/$defs/PersonalRelationship"
+          },
+          "title": "Personal Relationships",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/Relation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "answers_18": {
+          "$ref": "#/$defs/Answers18"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "graph_trace": {
+          "additionalProperties": true,
+          "title": "Graph Trace",
+          "type": "object"
+        },
+        "mentions": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/PersonMention"
+          },
+          "title": "Mentions",
+          "type": "array"
+        },
+        "grounding_trace": {
+          "additionalProperties": true,
+          "title": "Grounding Trace",
+          "type": "object"
+        }
+      },
+      "required": [
+        "participants",
+        "spans",
+        "events",
+        "relations",
+        "answers_18"
+      ],
+      "title": "Annotations",
+      "type": "object"
+    },
+    "Answers18": {
+      "additionalProperties": false,
+      "properties": {
+        "situation": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "participants": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "sender_identity": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "relationship": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "communication_channel": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "claims": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "requested_actions": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "action_targets": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "stated_purpose": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "assets_and_access": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "benefit_and_mismatch": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "persuasion": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "conditions_and_sequence": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "contradictions_and_alternatives": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "technical_checks": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "evidence_quality": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "missing_information": {
+          "$ref": "#/$defs/AnalysisField"
+        },
+        "assessment": {
+          "$ref": "#/$defs/AnalysisField"
+        }
+      },
+      "required": [
+        "situation",
+        "participants",
+        "sender_identity",
+        "relationship",
+        "communication_channel",
+        "claims",
+        "requested_actions",
+        "action_targets",
+        "stated_purpose",
+        "assets_and_access",
+        "benefit_and_mismatch",
+        "persuasion",
+        "conditions_and_sequence",
+        "contradictions_and_alternatives",
+        "technical_checks",
+        "evidence_quality",
+        "missing_information",
+        "assessment"
+      ],
+      "title": "Answers18",
+      "type": "object"
+    },
+    "Assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "risk_status": {
+          "anyOf": [
+            {
+              "enum": [
+                "clear",
+                "need_context",
+                "suspicious",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Risk Status"
+        },
+        "safety_urgency": {
+          "enum": [
+            "undetermined",
+            "preventive",
+            "urgent"
+          ],
+          "title": "Safety Urgency",
+          "type": "string"
+        },
+        "supported_conclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported Conclusions",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "urgency_evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Urgency Evidence Refs",
+          "type": "array"
+        },
+        "applicable_rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Applicable Rule Ids",
+          "type": "array"
+        },
+        "missing_information": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Information",
+          "type": "array"
+        },
+        "follow_up_questions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "title": "Follow Up Questions",
+          "type": "array"
+        },
+        "recommended_actions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Recommended Actions",
+          "type": "array"
+        },
+        "explanation_template_id": {
+          "title": "Explanation Template Id",
+          "type": "string"
+        },
+        "prohibited_conclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Prohibited Conclusions",
+          "type": "array"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "risk_status",
+        "safety_urgency",
+        "supported_conclusions",
+        "evidence_refs",
+        "applicable_rule_ids",
+        "missing_information",
+        "follow_up_questions",
+        "recommended_actions",
+        "explanation_template_id",
+        "prohibited_conclusions",
+        "summary"
+      ],
+      "title": "Assessment",
+      "type": "object"
+    },
+    "Attribution": {
+      "additionalProperties": false,
+      "properties": {
+        "speaker_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Speaker Id"
+        },
+        "kind": {
+          "enum": [
+            "sender_claim",
+            "self_report",
+            "reported",
+            "quoted_warning",
+            "hypothetical",
+            "user_report",
+            "unknown"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "verification_status": {
+          "default": "unverified",
+          "enum": [
+            "unverified",
+            "user_reports_verification"
+          ],
+          "title": "Verification Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "speaker_id",
+        "kind"
+      ],
+      "title": "Attribution",
+      "type": "object"
+    },
+    "CaseInput": {
+      "additionalProperties": false,
+      "properties": {
+        "messages": {
+          "items": {
+            "$ref": "#/$defs/InputMessage"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "title": "Messages",
+          "type": "array"
+        },
+        "context_facts": {
+          "items": {
+            "$ref": "#/$defs/ContextFact"
+          },
+          "maxItems": 10,
+          "title": "Context Facts",
+          "type": "array"
+        },
+        "user_question": {
+          "anyOf": [
+            {
+              "maxLength": 1000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "User Question"
+        }
+      },
+      "required": [
+        "messages"
+      ],
+      "title": "CaseInput",
+      "type": "object"
+    },
+    "ContextFact": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "source": {
+          "const": "user_report",
+          "default": "user_report",
+          "title": "Source",
+          "type": "string"
+        },
+        "verification_status": {
+          "default": "unverified",
+          "enum": [
+            "unverified",
+            "user_reports_verification"
+          ],
+          "title": "Verification Status",
+          "type": "string"
+        },
+        "applies_to_message_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100,
+          "title": "Applies To Message Ids",
+          "type": "array"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Id"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "ContextFact",
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_id": {
+          "title": "Event Id",
+          "type": "string"
+        },
+        "event_type": {
+          "enum": [
+            "transfer_funds",
+            "receive_funds",
+            "withdraw_funds",
+            "handover_asset",
+            "provide_code",
+            "provide_credentials",
+            "provide_documents",
+            "open_link",
+            "login",
+            "install_app",
+            "share_screen",
+            "grant_control",
+            "change_channel",
+            "keep_secret",
+            "avoid_verification",
+            "identity_claim",
+            "relationship_claim",
+            "code_identity",
+            "build_trust",
+            "invite_travel_or_meeting",
+            "offer_employment",
+            "change_destination_or_terms",
+            "impose_debt",
+            "request_secrecy",
+            "restrict_communication",
+            "retain_identity_documents",
+            "restrict_movement",
+            "threaten_harm",
+            "threaten_disclosure",
+            "demand_release_payment",
+            "compel_work",
+            "compel_illegal_activity",
+            "bodily_integrity_threat",
+            "return_documents_available",
+            "free_to_leave",
+            "consent_and_exit_available",
+            "other"
+          ],
+          "title": "Event Type",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "actor_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Actor Id"
+        },
+        "recipient_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recipient Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Party Id"
+        },
+        "object": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object"
+        },
+        "polarity": {
+          "enum": [
+            "positive",
+            "negative",
+            "uncertain"
+          ],
+          "title": "Polarity",
+          "type": "string"
+        },
+        "modality": {
+          "enum": [
+            "request",
+            "assertion",
+            "report",
+            "conditional",
+            "threat",
+            "possibility",
+            "unknown"
+          ],
+          "title": "Modality",
+          "type": "string"
+        },
+        "temporal_state": {
+          "enum": [
+            "requested",
+            "completed",
+            "pending",
+            "ongoing",
+            "imminent",
+            "planned",
+            "hypothetical",
+            "past",
+            "unknown"
+          ],
+          "title": "Temporal State",
+          "type": "string"
+        },
+        "speech_role": {
+          "enum": [
+            "request",
+            "claim",
+            "reported",
+            "quoted_warning",
+            "denial",
+            "hypothetical",
+            "unknown"
+          ],
+          "title": "Speech Role",
+          "type": "string"
+        },
+        "attribution": {
+          "$ref": "#/$defs/Attribution"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Id"
+        },
+        "event_time": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Event Time"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "extractor_rule_id": {
+          "title": "Extractor Rule Id",
+          "type": "string"
+        },
+        "unknown_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unknown Fields",
+          "type": "array"
+        },
+        "stated_purpose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Purpose"
+        },
+        "semantic": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SemanticEvent"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "event_id",
+        "event_type",
+        "description",
+        "actor_id",
+        "polarity",
+        "modality",
+        "temporal_state",
+        "speech_role",
+        "attribution",
+        "status",
+        "scope_id",
+        "evidence_refs",
+        "extractor_rule_id"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "InputMessage": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "speaker_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Id"
+        },
+        "text": {
+          "maxLength": 10000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "timestamp": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timestamp"
+        },
+        "content_type": {
+          "default": "text",
+          "enum": [
+            "text",
+            "post",
+            "comment",
+            "email",
+            "ocr"
+          ],
+          "title": "Content Type",
+          "type": "string"
+        },
+        "parent_message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Message Id"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Id"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "InputMessage",
+      "type": "object"
+    },
+    "Metadata": {
+      "additionalProperties": false,
+      "properties": {
+        "case_id": {
+          "title": "Case Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "scamshield-case-2.0",
+          "default": "scamshield-case-2.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "language": {
+          "default": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "channel": {
+          "default": "unknown",
+          "enum": [
+            "chat",
+            "comment",
+            "post",
+            "email",
+            "ocr",
+            "mixed",
+            "unknown"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "family_id": {
+          "title": "Family Id",
+          "type": "string"
+        },
+        "scenario_id": {
+          "title": "Scenario Id",
+          "type": "string"
+        },
+        "variant_group_id": {
+          "title": "Variant Group Id",
+          "type": "string"
+        },
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Id"
+        },
+        "source_group_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Group Id"
+        },
+        "origin_type": {
+          "enum": [
+            "synthetic",
+            "consented_real",
+            "source_based_simulation"
+          ],
+          "title": "Origin Type",
+          "type": "string"
+        },
+        "review_status": {
+          "enum": [
+            "weak_label",
+            "draft",
+            "pending_review",
+            "reviewed"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        },
+        "annotation_version": {
+          "title": "Annotation Version",
+          "type": "string"
+        },
+        "split": {
+          "enum": [
+            "pilot",
+            "train",
+            "dev",
+            "test",
+            "independent"
+          ],
+          "title": "Split",
+          "type": "string"
+        },
+        "license_or_permission": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Or Permission"
+        },
+        "reviewers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reviewers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "case_id",
+        "family_id",
+        "scenario_id",
+        "variant_group_id",
+        "origin_type",
+        "review_status",
+        "annotation_version",
+        "split"
+      ],
+      "title": "Metadata",
+      "type": "object"
+    },
+    "Participant": {
+      "additionalProperties": false,
+      "properties": {
+        "participant_id": {
+          "title": "Participant Id",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "interaction_role": {
+          "enum": [
+            "speaker",
+            "buyer",
+            "seller",
+            "requester",
+            "recipient",
+            "affected_party",
+            "mentioned",
+            "unknown"
+          ],
+          "title": "Interaction Role",
+          "type": "string"
+        },
+        "identity_status": {
+          "default": "unknown",
+          "enum": [
+            "claimed",
+            "user_reported",
+            "unknown"
+          ],
+          "title": "Identity Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "claimed_identity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Claimed Identity"
+        },
+        "relationship_to_user": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relationship To User"
+        },
+        "information_status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "participant_id",
+        "label",
+        "interaction_role"
+      ],
+      "title": "Participant",
+      "type": "object"
+    },
+    "PersonMention": {
+      "additionalProperties": false,
+      "properties": {
+        "mention_id": {
+          "title": "Mention Id",
+          "type": "string"
+        },
+        "message_id": {
+          "title": "Message Id",
+          "type": "string"
+        },
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "participant_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Participant Id"
+        },
+        "candidate_ids": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Candidate Ids",
+          "type": "array"
+        },
+        "resolution": {
+          "enum": [
+            "explicit_name",
+            "unique_antecedent",
+            "unresolved"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "mention_id",
+        "message_id",
+        "scope_id",
+        "role",
+        "resolution",
+        "evidence_refs"
+      ],
+      "title": "PersonMention",
+      "type": "object"
+    },
+    "PersonalRelationship": {
+      "additionalProperties": false,
+      "properties": {
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "relationship_type": {
+          "enum": [
+            "family",
+            "friend",
+            "colleague",
+            "online_only",
+            "unknown"
+          ],
+          "title": "Relationship Type",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scope Id"
+        },
+        "valid_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid At"
+        }
+      },
+      "required": [
+        "participant_ids",
+        "relationship_type",
+        "status",
+        "evidence_refs"
+      ],
+      "title": "PersonalRelationship",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "relation_id": {
+          "title": "Relation Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prerequisite_for",
+            "before",
+            "after",
+            "reason_given_for",
+            "contradiction",
+            "state_update",
+            "reported_by",
+            "warning_about",
+            "same_transaction",
+            "travel_conditioned_on_secrecy",
+            "movement_restricted_by_debt",
+            "document_retention_limits_exit",
+            "threat_used_to_compel_action",
+            "release_conditioned_on_payment",
+            "work_differs_from_agreement",
+            "same_object",
+            "obstructs_verification",
+            "transfer_via",
+            "promised_after",
+            "threatens_unless",
+            "controls_during",
+            "supersedes"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "from_id": {
+          "title": "From Id",
+          "type": "string"
+        },
+        "to_id": {
+          "title": "To Id",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "claimed",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "scope_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Scope Id"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "relation_id",
+        "type",
+        "from_id",
+        "to_id",
+        "evidence_refs",
+        "status",
+        "scope_id",
+        "rationale",
+        "rule_id"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "SemanticEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message Id"
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Id"
+        },
+        "situation_id": {
+          "title": "Situation Id",
+          "type": "string"
+        },
+        "speaker_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Id"
+        },
+        "requester_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requester Id"
+        },
+        "performer_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Performer Id"
+        },
+        "affected_party_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Party Id"
+        },
+        "normalized_action": {
+          "title": "Normalized Action",
+          "type": "string"
+        },
+        "object_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object Type"
+        },
+        "transfer_source": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transfer Source"
+        },
+        "transfer_destination": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transfer Destination"
+        },
+        "negation_scope_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Negation Scope Refs",
+          "type": "array"
+        },
+        "stated_condition": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Condition"
+        },
+        "stated_time": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stated Time"
+        },
+        "information_status": {
+          "default": "unknown",
+          "enum": [
+            "observed",
+            "claimed",
+            "user_reported",
+            "inferred",
+            "unknown"
+          ],
+          "title": "Information Status",
+          "type": "string"
+        },
+        "is_reported_request": {
+          "default": false,
+          "title": "Is Reported Request",
+          "type": "boolean"
+        },
+        "extraction_method": {
+          "default": "local_structural_patterns_v1",
+          "title": "Extraction Method",
+          "type": "string"
+        },
+        "speech_act": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speech Act"
+        },
+        "condition": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Condition"
+        },
+        "consequence_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Consequence Refs",
+          "type": "array"
+        },
+        "mention_refs": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Mention Refs",
+          "type": "array"
+        },
+        "transaction_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transaction Reference"
+        },
+        "transaction_binding": {
+          "default": "unresolved",
+          "enum": [
+            "explicit_code",
+            "direct_reference",
+            "unresolved"
+          ],
+          "title": "Transaction Binding",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_id",
+        "situation_id",
+        "normalized_action"
+      ],
+      "title": "SemanticEvent",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "span_id": {
+          "title": "Span Id",
+          "type": "string"
+        },
+        "message_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message Id"
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context Id"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "label": {
+          "enum": [
+            "verb",
+            "action",
+            "object",
+            "negation",
+            "state",
+            "time",
+            "condition",
+            "purpose",
+            "participant",
+            "organization",
+            "url",
+            "account",
+            "application",
+            "quotation",
+            "reported_speech",
+            "persuasion",
+            "statement"
+          ],
+          "title": "Label",
+          "type": "string"
+        },
+        "review_status": {
+          "default": "weak_label",
+          "enum": [
+            "weak_label",
+            "draft",
+            "pending_review",
+            "reviewed"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "span_id",
+        "message_id",
+        "start",
+        "end",
+        "quote",
+        "label"
+      ],
+      "title": "Span",
+      "type": "object"
+    },
+    "Value": {
+      "additionalProperties": false,
+      "properties": {
+        "statements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Statements",
+          "type": "array"
+        },
+        "event_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Event Ids",
+          "type": "array"
+        },
+        "participant_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Participant Ids",
+          "type": "array"
+        },
+        "relation_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Relation Ids",
+          "type": "array"
+        }
+      },
+      "title": "Value",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "metadata": {
+      "$ref": "#/$defs/Metadata"
+    },
+    "input": {
+      "$ref": "#/$defs/CaseInput"
+    },
+    "annotations": {
+      "$ref": "#/$defs/Annotations"
+    },
+    "expected_assessment": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Assessment"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "metadata",
+    "input",
+    "annotations",
+    "expected_assessment"
+  ],
+  "title": "DatasetCase",
+  "type": "object"
+}

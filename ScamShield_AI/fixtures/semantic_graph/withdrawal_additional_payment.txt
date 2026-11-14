@@ -1,0 +1,1 @@
+Muốn rút số tiền đang hiển thị trong ứng dụng, bạn phải chuyển thêm 2 triệu vào tài khoản tôi gửi. Không được trừ phí vào số dư. Nếu không nộp hôm nay thì toàn bộ khoản đã đóng trước đó sẽ mất.

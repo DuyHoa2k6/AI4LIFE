@@ -1,0 +1,134 @@
+{
+  "rows": [
+    {
+      "id": "01",
+      "before": "need_context",
+      "after": "high",
+      "clauses": 8,
+      "candidate_relations": 8,
+      "kept_graph_relations": 5,
+      "rejected": 3,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "02",
+      "before": "need_context",
+      "after": "high",
+      "clauses": 6,
+      "candidate_relations": 6,
+      "kept_graph_relations": 5,
+      "rejected": 1,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "03",
+      "before": "suspicious",
+      "after": "high",
+      "clauses": 9,
+      "candidate_relations": 2,
+      "kept_graph_relations": 2,
+      "rejected": 0,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "04",
+      "before": "need_context",
+      "after": "high",
+      "clauses": 7,
+      "candidate_relations": 2,
+      "kept_graph_relations": 1,
+      "rejected": 1,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "05",
+      "before": "suspicious",
+      "after": "high",
+      "clauses": 7,
+      "candidate_relations": 4,
+      "kept_graph_relations": 4,
+      "rejected": 0,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "06",
+      "before": "need_context",
+      "after": "high",
+      "clauses": 7,
+      "candidate_relations": 2,
+      "kept_graph_relations": 2,
+      "rejected": 0,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "07",
+      "before": "high",
+      "after": "high",
+      "clauses": 7,
+      "candidate_relations": 0,
+      "kept_graph_relations": 0,
+      "rejected": 0,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "08",
+      "before": "need_context",
+      "after": "high",
+      "clauses": 8,
+      "candidate_relations": 3,
+      "kept_graph_relations": 1,
+      "rejected": 2,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "09",
+      "before": "need_context",
+      "after": "high",
+      "clauses": 8,
+      "candidate_relations": 4,
+      "kept_graph_relations": 4,
+      "rejected": 0,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    },
+    {
+      "id": "10",
+      "before": "suspicious",
+      "after": "high",
+      "clauses": 10,
+      "candidate_relations": 3,
+      "kept_graph_relations": 2,
+      "rejected": 1,
+      "validation_removed": [],
+      "missing_required_actions": [],
+      "missing_required_relations": []
+    }
+  ],
+  "sparse_required_action_coverage": {
+    "found": 30,
+    "total": 30
+  },
+  "sparse_required_relation_coverage": {
+    "found": 16,
+    "total": 16
+  },
+  "structural_errors": [],
+  "scope": "Development sparse annotations, not exhaustive extraction precision, coreference accuracy, or independent quality."
+}

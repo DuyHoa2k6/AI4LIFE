@@ -1,0 +1,114 @@
+{
+  "prompt_version": "v3",
+  "same_backend_hashes_across_v3_runs": true,
+  "regression": {
+    "n": 8,
+    "successful_api": 8,
+    "status_matches": 6,
+    "cases": [
+      {
+        "id": "MX-S01",
+        "before": "need_context",
+        "after": "need_context",
+        "before_http": 200,
+        "after_http": 200
+      },
+      {
+        "id": "MX-N01",
+        "before": "need_context",
+        "after": "clear",
+        "before_http": 200,
+        "after_http": 200
+      },
+      {
+        "id": "MX-N04",
+        "before": "need_context",
+        "after": "clear",
+        "before_http": 200,
+        "after_http": 200
+      },
+      {
+        "id": "MX-S06",
+        "before": "EVIDENCE_INVALID",
+        "after": "high",
+        "before_http": 502,
+        "after_http": 200
+      },
+      {
+        "id": "MX-N06",
+        "before": "need_context",
+        "after": "need_context",
+        "before_http": 200,
+        "after_http": 200
+      },
+      {
+        "id": "MX-S09",
+        "before": "need_context",
+        "after": "high",
+        "before_http": 200,
+        "after_http": 200
+      },
+      {
+        "id": "MX-N10",
+        "before": "need_context",
+        "after": "clear",
+        "before_http": 200,
+        "after_http": 200
+      },
+      {
+        "id": "MX-N11",
+        "before": "EVIDENCE_INVALID",
+        "after": "clear",
+        "before_http": 502,
+        "after_http": 200
+      }
+    ]
+  },
+  "new_public_functional": {
+    "n": 10,
+    "successful_api": 10,
+    "status_matches": 10,
+    "matrix": {
+      "scam": {
+        "high": 4
+      },
+      "normal": {
+        "clear": 4
+      },
+      "uncertain": {
+        "need_context": 2
+      }
+    }
+  },
+  "all_executed": 18,
+  "successful_api": 18,
+  "errors": 0,
+  "latency_all": {
+    "n": 18,
+    "p50_ms": 3299.7161999810487,
+    "p95_ms": 17241.721400001552
+  },
+  "regression_latency": {
+    "n": 8,
+    "p50_ms": 3299.7161999810487,
+    "p95_ms": 17241.721400001552
+  },
+  "new_latency": {
+    "n": 10,
+    "p50_ms": 3173.2858999748714,
+    "p95_ms": 5592.957600019872
+  },
+  "exact_final_quotes": 29,
+  "final_quote_count": 29,
+  "speaker_reference_errors": 0,
+  "raw_null_offset_quotes": 28,
+  "raw_quote_count": 28,
+  "unit_tests_passed": 53,
+  "worker_security_checks_passed": 10,
+  "remaining_regression_cases": [
+    "MX-S01",
+    "MX-N06"
+  ],
+  "independent_real_world_quality": "not measured",
+  "browser_extension_latency": "not measured"
+}

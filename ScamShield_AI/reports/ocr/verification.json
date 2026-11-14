@@ -1,0 +1,24 @@
+{
+  "synthetic_image_hashes_match_recorded_run": {
+    "O1": true,
+    "O2": true,
+    "O3": true,
+    "O4": true
+  },
+  "local_model_hashes_match_setup": {
+    "vie": true,
+    "eng": true
+  },
+  "backend_tests_passed": 120,
+  "worker_security_checks": 10,
+  "ocr_worker_checks": 7,
+  "chrome_checks": 10,
+  "ocr_text_images": 3,
+  "gemini_analysis_success": 3,
+  "blank_image_analyzed": false,
+  "production_permission_manifest_expanded": false,
+  "browser_test_copy_permission_expanded": true,
+  "independent_accuracy_measured": false,
+  "temporary_image_files_remaining": 0,
+  "note": "Post-run verification, not a pre-run frozen-code manifest. Typed response models were added after live inference and validated with unit tests plus a real OCR endpoint smoke check."
+}

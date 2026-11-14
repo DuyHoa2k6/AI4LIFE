@@ -1,0 +1,28 @@
+{
+  "tested_at_utc": "2026-11-11T04:13:03.223345+00:00",
+  "scope": "One synthetic example through ASGI TestClient and real provider HTTP; not browser latency or quality evaluation.",
+  "model_configured": "gpt-4.1-mini",
+  "provider_endpoint": "https://api.openai.com/v1/chat/completions",
+  "input": {
+    "text": "Gửi mã OTP cho tôi để tôi đăng nhập tài khoản của bạn và xử lý hoàn tiền."
+  },
+  "http_status": 503,
+  "api_ms": 1820.4648999962956,
+  "provider_responses": [
+    {
+      "http_status": 429
+    }
+  ],
+  "response": {
+    "code": "PROVIDER_UNAVAILABLE",
+    "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+    "request_id": "3e46ae84-8300-4952-9ac7-a92fc0ffc343",
+    "diagnostic": {
+      "stage": "observation",
+      "kind": "http",
+      "attempts": 1,
+      "output_format": "json_schema",
+      "provider_status": 429
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "version":"local-context-templates-1.0",
+  "templates":{
+    "TPL-CONTEXT-SCREEN-BANK":{"summary":"Người gửi yêu cầu chia sẻ màn hình rồi mở thông tin ngân hàng; người khác có thể nhìn thấy dữ liệu tài chính và thao tác trên tài khoản.","recommended_actions":["Dừng chia sẻ màn hình trước khi mở ứng dụng ngân hàng; xác minh yêu cầu qua đầu mối chính thức độc lập."],"required_slots":["verified_quotes"],"fallback_template_id":"TPL-UNKNOWN"},
+    "TPL-CONTEXT-AVOID-VERIFY":{"summary":"Người gửi tự nhận danh tính hoặc quan hệ và yêu cầu tránh gọi xác minh. Danh tính đó chưa được kiểm chứng.","recommended_actions":["Tự gọi người hoặc đơn vị qua số đã biết từ trước, không dùng số mới do người gửi chỉ định."],"required_slots":["verified_quotes"],"fallback_template_id":"TPL-UNKNOWN"}
+  }
+}

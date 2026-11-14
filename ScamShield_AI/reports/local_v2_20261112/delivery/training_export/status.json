@@ -1,0 +1,13 @@
+{
+  "status": "not_ready_no_reviewed_cases",
+  "source_sha256": "e5fc83e39bc2dc0a2ba809cfe859673df7f46a8cfbd0fea6453a79c58f07e8d3",
+  "plan": {
+    "assignments": {},
+    "excluded": 70,
+    "groups": 0,
+    "usable_for_training": true,
+    "note": "Planning only; independent set must be held outside tuning. Draft inclusion is a dry run, not training authorization."
+  },
+  "model_trained": false,
+  "note": "Independent evaluation data must remain outside this process; never auto-promote weak labels."
+}

@@ -1,0 +1,19 @@
+{
+  "planned": 10,
+  "api_executions": 15,
+  "cases_executed": 10,
+  "first_successful": 5,
+  "final_successful": 7,
+  "final_errors": 3,
+  "not_run": 0,
+  "distribution": {
+    "need_context": 4,
+    "clear": 1,
+    "high": 2
+  },
+  "p50_ms": 20680.30639999779,
+  "p95_ms": 58220.306999995955,
+  "batch_wall_ms": 308796.02680000244,
+  "hashes_verified": true,
+  "accuracy": "Not scored: no expected labels; results are actual system outputs, not manual replacements."
+}

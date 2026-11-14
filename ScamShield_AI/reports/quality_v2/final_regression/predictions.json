@@ -1,0 +1,41 @@
+[
+  {
+    "id": "TP-Q1",
+    "executed": true,
+    "http_status": 502,
+    "api_ms": 889.38850001432,
+    "provider_http_status": 400,
+    "provider_http_statuses": [
+      400
+    ],
+    "provider_adapter_ms": 634.5604999805801,
+    "extraction_ms": 885.1292000035755,
+    "response": {
+      "code": "PROVIDER_UNAVAILABLE",
+      "message": "Chưa kiểm tra được. Vui lòng kiểm tra dữ liệu hoặc thử lại.",
+      "request_id": "f8a69395-52ca-463a-a726-a609ad873d36",
+      "diagnostic": {
+        "stage": "observation",
+        "kind": "http",
+        "attempts": 1,
+        "output_format": "json_schema",
+        "provider_status": 400
+      }
+    }
+  },
+  {
+    "id": "TP-S4",
+    "executed": false,
+    "reason": "Provider auth/model/quota failure; no retry or model switch"
+  },
+  {
+    "id": "TP-S5",
+    "executed": false,
+    "reason": "Provider auth/model/quota failure; no retry or model switch"
+  },
+  {
+    "id": "TP-N3",
+    "executed": false,
+    "reason": "Provider auth/model/quota failure; no retry or model switch"
+  }
+]

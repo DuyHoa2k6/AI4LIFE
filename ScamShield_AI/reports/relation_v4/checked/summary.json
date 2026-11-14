@@ -1,0 +1,67 @@
+{
+  "scope": "8 final public synthetic checks after validation-driven revision: 1 known NW-02 regression and 7 fresh inputs; implementer labels, not independent accuracy. No tuning during this run.",
+  "mode": "two_pass",
+  "planned": 8,
+  "batch_wall_ms": 157067.6745000019,
+  "provider_attempts": 20,
+  "provider_http_responses": 20,
+  "executed": 8,
+  "successful": 6,
+  "errors": 2,
+  "not_run": 0,
+  "completion_rate": 0.75,
+  "matrix": {
+    "scam": {
+      "error": 1,
+      "high": 2
+    },
+    "normal": {
+      "clear": 2,
+      "error": 1
+    },
+    "uncertain": {
+      "need_context": 1,
+      "suspicious": 1
+    }
+  },
+  "high_binary_successful_only": {
+    "TP": 2,
+    "TN": 2
+  },
+  "high_precision_successful_only": 1.0,
+  "high_recall_successful_only": 1.0,
+  "status_matches_successful": 5,
+  "status_match_rate_successful": 0.8333333333333334,
+  "high_scam_missed": [],
+  "normal_warnings": [],
+  "normal_need_context": [],
+  "uncertain_without_questions": [],
+  "latency_all_executed": {
+    "n": 8,
+    "p50_ms": 7532.46339999896,
+    "p95_ms": 44820.424899997306
+  },
+  "latency_successful": {
+    "n": 6,
+    "p50_ms": 7511.153799998283,
+    "p95_ms": 44820.424899997306
+  },
+  "first_request_ms": 11037.401599998702,
+  "warm_successful": {
+    "n": 6,
+    "p50_ms": 7511.153799998283,
+    "p95_ms": 44820.424899997306
+  },
+  "provider_adapter_successful": {
+    "n": 6,
+    "p50_ms": 6970.709099994565,
+    "p95_ms": 44259.41839999723
+  },
+  "exact_quotes": 12,
+  "quote_count": 12,
+  "speaker_reference_errors": 0,
+  "api_warm_p95_target_ms": 2000,
+  "semantics_independent_accuracy": "not measured",
+  "browser_extension_network_queue_load": "not measured in this run",
+  "circuit_breaker": null
+}

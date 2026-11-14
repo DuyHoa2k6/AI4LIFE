@@ -1,0 +1,12 @@
+__pycache__/
+.env
+.venv/
+.venv-phobert/
+artifacts/phobert/base/
+artifacts/phobert/vncorenlp/
+.testdeps/
+.browser-profile*/
+backend/local_settings.py
+ocr/node_modules/
+ocr/models/*.gz
+.ocr-tmp/

@@ -1,0 +1,19 @@
+{
+  "cases": 59,
+  "authored_targets": 56,
+  "mismatches": [
+    {
+      "case_id": "debt-P",
+      "expected": {
+        "case_id": "debt-P",
+        "risk_status": "high",
+        "safety_urgency": "urgent"
+      },
+      "actual": [
+        "high",
+        "preventive"
+      ],
+      "analysis_status": "complete"
+    }
+  ]
+}

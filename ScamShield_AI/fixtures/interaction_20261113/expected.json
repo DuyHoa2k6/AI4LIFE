@@ -1,0 +1,10 @@
+{
+  "review_status":"authored_development_targets_not_independent_or_human_adjudicated",
+  "cases":[
+    {"id":"N01","risk":"high"},{"id":"N02","risk":"high"},{"id":"N03","risk":"high"},
+    {"id":"N04","risk":"suspicious"},{"id":"N05","risk":"suspicious"},{"id":"N06","risk":"suspicious"},
+    {"id":"N07","risk":"need_context"},{"id":"N08","risk":"need_context"},{"id":"N09","risk":"need_context"},
+    {"id":"N10","risk":"clear"},{"id":"N11","risk":"clear"},{"id":"N12","risk":"clear"},
+    {"id":"X01","risk":"high"},{"id":"X02","risk":"clear"},{"id":"X03","risk":"high"},{"id":"X04","risk":"high"}
+  ]
+}

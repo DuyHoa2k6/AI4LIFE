@@ -1,0 +1,47 @@
+[
+  {
+    "id": "F05",
+    "group": "need_context",
+    "acceptable": [
+      "need_context"
+    ],
+    "questions_required": true,
+    "manual_focus": "Hỏi “cái đó” là loại thông tin hoặc đối tượng gì, không tự đoán là OTP.",
+    "prediction": "need_context",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 25243.57210000744,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F09",
+    "group": "suspicious",
+    "acceptable": [
+      "suspicious"
+    ],
+    "questions_required": false,
+    "manual_focus": "Đối chứng F02: ảnh chuyển tiền không thay việc người nhận tự kiểm tra.",
+    "prediction": "suspicious",
+    "executed": true,
+    "status_match": true,
+    "questions_present": true,
+    "api_ms": 41035.7001000084,
+    "manual_review": "pending"
+  },
+  {
+    "id": "F12",
+    "group": "high",
+    "acceptable": [
+      "high"
+    ],
+    "questions_required": false,
+    "manual_focus": "Nối ý nghĩa mã từ câu người nhận; không cần chữ OTP trong lời yêu cầu.",
+    "prediction": "high",
+    "executed": true,
+    "status_match": true,
+    "questions_present": false,
+    "api_ms": 33060.76469999971,
+    "manual_review": "pending"
+  }
+]

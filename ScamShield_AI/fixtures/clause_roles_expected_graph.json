@@ -1,0 +1,10 @@
+{
+  "commission": "high",
+  "alternate_account": "high",
+  "refund_login_code": "high",
+  "phone_handover_unpaid": "suspicious",
+  "invoice_account_change": "suspicious",
+  "overseas_work_documents": "high",
+  "login_code_warning": "clear",
+  "phone_payment_updated": "clear"
+}

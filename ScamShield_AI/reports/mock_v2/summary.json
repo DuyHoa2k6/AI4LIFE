@@ -1,0 +1,97 @@
+{
+  "rules_version": "mock-behavior-2.0.0",
+  "rule_count": 11,
+  "scope": "synthetic dev used in development; not independent evaluation",
+  "n": 12,
+  "matched": 12,
+  "cases": [
+    {
+      "id": "SS-001",
+      "expected": "high",
+      "previous_mock": "high",
+      "current_mock": "high",
+      "status_match": true
+    },
+    {
+      "id": "SS-002",
+      "expected": "clear",
+      "previous_mock": "clear",
+      "current_mock": "clear",
+      "status_match": true
+    },
+    {
+      "id": "SS-003",
+      "expected": "need_context",
+      "previous_mock": "need_context",
+      "current_mock": "need_context",
+      "status_match": true
+    },
+    {
+      "id": "SS-004",
+      "expected": "high",
+      "previous_mock": "high",
+      "current_mock": "high",
+      "status_match": true
+    },
+    {
+      "id": "SS-005",
+      "expected": "clear",
+      "previous_mock": "clear",
+      "current_mock": "clear",
+      "status_match": true
+    },
+    {
+      "id": "SS-006",
+      "expected": "need_context",
+      "previous_mock": "need_context",
+      "current_mock": "need_context",
+      "status_match": true
+    },
+    {
+      "id": "SS-007",
+      "expected": "high",
+      "previous_mock": "suspicious",
+      "current_mock": "high",
+      "status_match": true
+    },
+    {
+      "id": "SS-008",
+      "expected": "clear",
+      "previous_mock": "clear",
+      "current_mock": "clear",
+      "status_match": true
+    },
+    {
+      "id": "SS-009",
+      "expected": "high",
+      "previous_mock": "high",
+      "current_mock": "high",
+      "status_match": true
+    },
+    {
+      "id": "SS-010",
+      "expected": "clear",
+      "previous_mock": "clear",
+      "current_mock": "clear",
+      "status_match": true
+    },
+    {
+      "id": "SS-011",
+      "expected": "suspicious",
+      "previous_mock": "suspicious",
+      "current_mock": "suspicious",
+      "status_match": true
+    },
+    {
+      "id": "SS-012",
+      "expected": "clear",
+      "previous_mock": "clear",
+      "current_mock": "clear",
+      "status_match": true
+    }
+  ],
+  "python": "3.12.5",
+  "live": "not measured",
+  "rag": "not implemented",
+  "validation_holdout": "not used for rule tuning or prediction"
+}

@@ -1,0 +1,330 @@
+{
+  "scope": "Authored draft development targets, separate from automatic detailed weak labels. Not independent accuracy.",
+  "cases": [
+    {
+      "case_id": "trust-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "trust-U",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "trust-P",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "travel-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "travel-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "travel-P",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "employment-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "employment-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "employment-P",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "debt-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "debt-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "debt-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "secrecy-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "secrecy-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "secrecy-P",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "communication-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "communication-U",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "communication-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "documents-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "documents-U",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "documents-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "movement-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "movement-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "movement-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "harm-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "harm-U",
+      "risk_status": "high",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "harm-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "disclosure-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "disclosure-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "disclosure-P",
+      "risk_status": "high",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "release-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "release-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "release-P",
+      "risk_status": "high",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "forced_work-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "forced_work-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "forced_work-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "illegal-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "illegal-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "illegal-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "bodily-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "bodily-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "bodily-P",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "change-N",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "change-U",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "change-P",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "finance-handover",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "finance-paid",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "finance-code",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "finance-otp",
+      "risk_status": "high",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "finance-warning",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "finance-withdraw",
+      "risk_status": "high",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "finance-docs",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "finance-app",
+      "risk_status": "suspicious",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "finance-outside",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "finance-login-linked",
+      "risk_status": "high",
+      "safety_urgency": "preventive"
+    },
+    {
+      "case_id": "safety-past",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "threat-compels",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "bodily-sexual",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "bodily-explicit",
+      "risk_status": "high",
+      "safety_urgency": "urgent"
+    },
+    {
+      "case_id": "no-organ-inference",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "payment-update",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "payment-conflict",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "two-transactions",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "url-unverified",
+      "risk_status": "need_context",
+      "safety_urgency": "undetermined"
+    },
+    {
+      "case_id": "family-user-report",
+      "risk_status": "clear",
+      "safety_urgency": "undetermined"
+    }
+  ]
+}

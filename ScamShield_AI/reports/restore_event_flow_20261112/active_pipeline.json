@@ -1,0 +1,8 @@
+{
+  "reasoner": "legacy",
+  "engine": "legacy-event-rules",
+  "fact_trace": null,
+  "decision_version": "local-rules-2.1-support",
+  "url_risk": "suspicious",
+  "used_url_evidence": 1
+}

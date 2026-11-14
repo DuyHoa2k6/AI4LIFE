@@ -1,0 +1,298 @@
+[
+  {
+    "run": "live",
+    "n": 8,
+    "api_success": 7,
+    "matches": 6,
+    "errors": 1,
+    "model": "gemini-3.5-flash-lite",
+    "matrix": {
+      "scam": {
+        "need_context": 1,
+        "high": 2
+      },
+      "normal": {
+        "clear": 2,
+        "error": 1
+      },
+      "uncertain": {
+        "need_context": 2
+      }
+    },
+    "latency_all": {
+      "n": 8,
+      "p50_ms": 7085.021899998537,
+      "p95_ms": 10681.292500004929
+    },
+    "latency_successful": {
+      "n": 7,
+      "p50_ms": 7860.206400000607,
+      "p95_ms": 10681.292500004929
+    },
+    "provider_attempts": 17,
+    "cases": [
+      {
+        "id": "RG-01",
+        "expected": [
+          "high"
+        ],
+        "actual": "need_context",
+        "matches": false,
+        "error": null,
+        "api_ms": 10442.976300000737,
+        "repairs": 1
+      },
+      {
+        "id": "RG-02",
+        "expected": [
+          "high"
+        ],
+        "actual": "high",
+        "matches": true,
+        "error": null,
+        "api_ms": 7085.021899998537,
+        "repairs": 0
+      },
+      {
+        "id": "RG-03",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "matches": true,
+        "error": null,
+        "api_ms": 5741.10340000334,
+        "repairs": 0
+      },
+      {
+        "id": "RG-04",
+        "expected": [
+          "clear"
+        ],
+        "actual": "error",
+        "matches": false,
+        "error": "EVIDENCE_INVALID",
+        "api_ms": 3513.2091999985278,
+        "repairs": null
+      },
+      {
+        "id": "RG-05",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "matches": true,
+        "error": null,
+        "api_ms": 10681.292500004929,
+        "repairs": 1
+      },
+      {
+        "id": "RG-06",
+        "expected": [
+          "need_context"
+        ],
+        "actual": "need_context",
+        "matches": true,
+        "error": null,
+        "api_ms": 7860.206400000607,
+        "repairs": 0
+      },
+      {
+        "id": "RG-07",
+        "expected": [
+          "high"
+        ],
+        "actual": "high",
+        "matches": true,
+        "error": null,
+        "api_ms": 8270.00159999443,
+        "repairs": 0
+      },
+      {
+        "id": "RG-08",
+        "expected": [
+          "need_context"
+        ],
+        "actual": "need_context",
+        "matches": true,
+        "error": null,
+        "api_ms": 5279.6687000009115,
+        "repairs": 0
+      }
+    ]
+  },
+  {
+    "run": "checked",
+    "n": 8,
+    "api_success": 6,
+    "matches": 5,
+    "errors": 2,
+    "model": "gemini-3.5-flash-lite",
+    "matrix": {
+      "scam": {
+        "error": 1,
+        "high": 2
+      },
+      "normal": {
+        "clear": 2,
+        "error": 1
+      },
+      "uncertain": {
+        "need_context": 1,
+        "suspicious": 1
+      }
+    },
+    "latency_all": {
+      "n": 8,
+      "p50_ms": 7532.46339999896,
+      "p95_ms": 44820.424899997306
+    },
+    "latency_successful": {
+      "n": 6,
+      "p50_ms": 7511.153799998283,
+      "p95_ms": 44820.424899997306
+    },
+    "provider_attempts": 20,
+    "cases": [
+      {
+        "id": "RF-01",
+        "expected": [
+          "high"
+        ],
+        "actual": "error",
+        "matches": false,
+        "error": "PROVIDER_INCONSISTENT_OUTPUT",
+        "api_ms": 11037.401599998702,
+        "repairs": null
+      },
+      {
+        "id": "RF-02",
+        "expected": [
+          "high"
+        ],
+        "actual": "high",
+        "matches": true,
+        "error": null,
+        "api_ms": 7511.153799998283,
+        "repairs": 0
+      },
+      {
+        "id": "RF-03",
+        "expected": [
+          "high"
+        ],
+        "actual": "high",
+        "matches": true,
+        "error": null,
+        "api_ms": 7532.46339999896,
+        "repairs": 0
+      },
+      {
+        "id": "RF-04",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "matches": true,
+        "error": null,
+        "api_ms": 6818.559200000891,
+        "repairs": 0
+      },
+      {
+        "id": "RF-05",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "matches": true,
+        "error": null,
+        "api_ms": 6878.671200000099,
+        "repairs": 0
+      },
+      {
+        "id": "RF-06",
+        "expected": [
+          "clear"
+        ],
+        "actual": "error",
+        "matches": false,
+        "error": "PROVIDER_UNAVAILABLE",
+        "api_ms": 22614.940799998294,
+        "repairs": null
+      },
+      {
+        "id": "RF-07",
+        "expected": [
+          "need_context"
+        ],
+        "actual": "need_context",
+        "matches": true,
+        "error": null,
+        "api_ms": 44820.424899997306,
+        "repairs": 0
+      },
+      {
+        "id": "RF-08",
+        "expected": [
+          "need_context"
+        ],
+        "actual": "suspicious",
+        "matches": false,
+        "error": null,
+        "api_ms": 25738.216600002488,
+        "repairs": 0
+      }
+    ]
+  },
+  {
+    "run": "focused",
+    "n": 2,
+    "api_success": 1,
+    "matches": 1,
+    "errors": 1,
+    "model": "gemini-3.5-flash-lite",
+    "matrix": {
+      "scam": {
+        "error": 1
+      },
+      "normal": {
+        "clear": 1
+      }
+    },
+    "latency_all": {
+      "n": 2,
+      "p50_ms": 8260.11990000552,
+      "p95_ms": 20921.747100001085
+    },
+    "latency_successful": {
+      "n": 1,
+      "p50_ms": 20921.747100001085,
+      "p95_ms": 20921.747100001085
+    },
+    "provider_attempts": 4,
+    "cases": [
+      {
+        "id": "RF-01",
+        "expected": [
+          "high"
+        ],
+        "actual": "error",
+        "matches": false,
+        "error": "PROVIDER_UNAVAILABLE",
+        "api_ms": 8260.11990000552,
+        "repairs": null
+      },
+      {
+        "id": "RF-05",
+        "expected": [
+          "clear"
+        ],
+        "actual": "clear",
+        "matches": true,
+        "error": null,
+        "api_ms": 20921.747100001085,
+        "repairs": 0
+      }
+    ]
+  }
+]

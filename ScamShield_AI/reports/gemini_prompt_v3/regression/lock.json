@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-11-08T14:57:00.655553+00:00",
+  "hashes": {
+    "fixtures\\mixed_checks\\inputs.json": "9ef42eeabafda6742ff5d8a05991ebea0970000fb036b7a554ed73e1c7ec0962",
+    "fixtures\\mixed_checks\\expected.json": "eb24a5ac4b8f6c64b90bfb1f938f6874f7bf168676bb930c87b59bf96c69631a",
+    "backend\\hybrid_prompt.txt": "ea79ab74e4710a977399bc036c5f9950230ede2c72c4492c035b9ac25c0085e6",
+    "backend\\extraction_prompt.txt": "a34b49995dd3faf9adafc522829f7150f9b62cf54ad3345e14d26f479f9f82c4",
+    "backend\\providers.py": "b194ca9431fc3dc7d5ff693444f263a96ae513cd3a1238579e76a9a5d4feb370",
+    "backend\\engine.py": "29356de608708ffa41adf36661fac50938db36fa29eb7e36f83e8bcb25b1e009",
+    "backend\\hybrid.py": "cf9a3095cef51cddcd89abdee523d067b6a7a75ea2951360d04d7f5d8d91c736",
+    "backend\\mock_rules.py": "0b8a99df4463b13bc198f072ddce67917ed0e57cd7d7de3d733c10df54e5908e",
+    "backend\\schemas.py": "7aff3a3b024ccf09b2a48ff87c4dc815dd94eb5630347d616c21d049d008ed50",
+    "mixed_check.py": "e6574204756da3e693e972062f00dbebe930081a59ceef2a985ca275e10d94e5"
+  },
+  "mode": "hybrid",
+  "model": "gemini-3.5-flash-lite",
+  "provider_url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "timeout_s": "20",
+  "concurrency": 1,
+  "inter_request_pause_s": 3.0,
+  "retries": 0,
+  "rag": false,
+  "python": "3.12.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "measurement": "ASGI API via TestClient; no browser or extension; provider HTTP is real in hybrid",
+  "cold_warm": "first request separated; process/provider not proven cold",
+  "limits": "at most 28 live calls; stop on auth/model/quota failure or three consecutive errors"
+}

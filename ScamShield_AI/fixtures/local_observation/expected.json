@@ -1,0 +1,610 @@
+{
+  "scope": "Manual draft development annotations for local rules; needs independent human review. No validation/holdout used. Not a final risk-label evaluation.",
+  "review_status": "draft_reference",
+  "provenance": "synthetic_and_user_supplied",
+  "cases": [
+    {
+      "id": "A",
+      "events": [
+        {
+          "action_type": "receive_funds",
+          "verb": "thấy",
+          "polarity": "negative",
+          "speech_role": "claim",
+          "temporal_state": "pending",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "handover_asset",
+          "verb": "giao",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-HANDOVER-BEFORE-CONFIRMATION"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "B",
+      "events": [
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "completed",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "handover_asset",
+          "verb": "giao",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-REPORTED-PAYMENT-FIRST"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "C",
+      "events": [
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "negative",
+          "speech_role": "claim",
+          "temporal_state": "hypothetical",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "handover_asset",
+          "verb": "giao",
+          "polarity": "negative",
+          "speech_role": "request",
+          "temporal_state": "hypothetical",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-NEGATIVE-CONDITION"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "D",
+      "events": [
+        {
+          "action_type": "handover_asset",
+          "verb": "giao",
+          "polarity": "positive",
+          "speech_role": "quoted_warning",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-QUOTED-WARNING"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "E",
+      "events": [
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "negative",
+          "speech_role": "claim",
+          "temporal_state": "pending",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "completed",
+          "occurrence": 1,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-TIMED-UPDATE"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "F",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "thanh toán",
+          "polarity": "negative",
+          "speech_role": "claim",
+          "temporal_state": "pending",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "completed",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "handover_asset",
+          "verb": "giao",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-REPORTED-PAYMENT-FIRST"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "G",
+      "events": [
+        {
+          "action_type": "provide_code",
+          "verb": "Đọc",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-EXPLICIT-PURPOSE",
+        "REL-STATED-REASON"
+      ],
+      "questions_required": true
+    },
+    {
+      "id": "H",
+      "events": [
+        {
+          "action_type": "provide_code",
+          "verb": "Đọc",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "receive_funds",
+          "verb": "nhận",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "code_identity",
+          "verb": "Đó là mã đăng nhập",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m2"
+        }
+      ],
+      "relation_rules": [
+        "REL-EXPLICIT-PURPOSE",
+        "REL-STATED-REASON",
+        "REL-EXPLICIT-CODE-REPLY"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "I",
+      "events": [
+        {
+          "action_type": "relationship_claim",
+          "verb": "là người quen",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "J",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "Chuyển",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "open_link",
+          "verb": "Mở",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "provide_code",
+          "verb": "gửi",
+          "polarity": "positive",
+          "speech_role": "quoted_warning",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "transfer_funds",
+          "verb": "Chuyển",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 1,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-QUOTED-WARNING"
+      ],
+      "questions_required": true
+    },
+    {
+      "id": "K",
+      "events": [],
+      "relation_rules": [],
+      "questions_required": true
+    },
+    {
+      "id": "L",
+      "events": [],
+      "relation_rules": [],
+      "questions_required": true
+    },
+    {
+      "id": "NEGATION",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "chuyển",
+          "polarity": "negative",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": true
+    },
+    {
+      "id": "COMPLETED",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "chuyển",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "completed",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "NOT_YET",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "chuyển",
+          "polarity": "negative",
+          "speech_role": "claim",
+          "temporal_state": "pending",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "NO_NEED",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "chuyển",
+          "polarity": "negative",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "PENDING",
+      "events": [
+        {
+          "action_type": "withdraw_funds",
+          "verb": "rút",
+          "polarity": "negative",
+          "speech_role": "claim",
+          "temporal_state": "pending",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": true
+    },
+    {
+      "id": "MONEY",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "Ứng",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        },
+        {
+          "action_type": "withdraw_funds",
+          "verb": "rút",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-EXPLICIT-PURPOSE",
+        "REL-STATED-REASON"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "PASSWORD",
+      "events": [
+        {
+          "action_type": "provide_credentials",
+          "verb": "Gửi",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "DOCUMENTS",
+      "events": [
+        {
+          "action_type": "provide_documents",
+          "verb": "Gửi",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "INSTALL",
+      "events": [
+        {
+          "action_type": "install_app",
+          "verb": "Cài",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "SCREEN",
+      "events": [
+        {
+          "action_type": "share_screen",
+          "verb": "Bật chia sẻ màn hình",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "CONTROL",
+      "events": [
+        {
+          "action_type": "grant_control",
+          "verb": "Cấp quyền",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "CHANNEL",
+      "events": [
+        {
+          "action_type": "change_channel",
+          "verb": "Chuyển sang",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "SECRET",
+      "events": [
+        {
+          "action_type": "keep_secret",
+          "verb": "Giữ bí mật",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "VERIFY",
+      "events": [
+        {
+          "action_type": "avoid_verification",
+          "verb": "Đừng gọi",
+          "polarity": "positive",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "IDENTITY",
+      "events": [
+        {
+          "action_type": "identity_claim",
+          "verb": "Tôi là",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "LOGIN",
+      "events": [
+        {
+          "action_type": "login",
+          "verb": "tự nhập",
+          "polarity": "positive",
+          "speech_role": "claim",
+          "temporal_state": "unknown",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    },
+    {
+      "id": "REPORTED",
+      "events": [
+        {
+          "action_type": "receive_funds",
+          "verb": "thấy",
+          "polarity": "negative",
+          "speech_role": "reported",
+          "temporal_state": "pending",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [
+        "REL-REPORTED-SPEECH"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "DOUBLE_NEGATION",
+      "events": [
+        {
+          "action_type": "transfer_funds",
+          "verb": "chuyển",
+          "polarity": "uncertain",
+          "speech_role": "request",
+          "temporal_state": "requested",
+          "occurrence": 0,
+          "message_id": "m1"
+        }
+      ],
+      "relation_rules": [],
+      "questions_required": false
+    }
+  ]
+}

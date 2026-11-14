@@ -1,0 +1,301 @@
+{
+  "scope": "same four training samples; resubstitution, not independent accuracy",
+  "n": 4,
+  "metrics": {
+    "risk": {
+      "confusion_matrix": {
+        "clear": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "need_context": {
+          "clear": 1,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 0
+        },
+        "suspicious": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 1,
+          "high": 0
+        },
+        "high": {
+          "clear": 0,
+          "need_context": 0,
+          "suspicious": 0,
+          "high": 1
+        }
+      },
+      "unscored_by_reference": {},
+      "per_label": {
+        "clear": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "need_context": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "suspicious": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "high": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "macro_f1": 0.6666666666666666,
+      "clear_as_high": 0,
+      "high_missed": 0
+    },
+    "spans": {
+      "entity": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "action": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "object": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "condition": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "purpose": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "time": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "negation": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "benefit": {
+        "not_measured": "no complete annotations for this label"
+      },
+      "consequence": {
+        "not_measured": "no complete annotations for this label"
+      }
+    },
+    "attributes": {
+      "action_type": {
+        "correct": 5,
+        "gold_events": 5,
+        "matched_events": 5,
+        "end_to_end_accuracy": 1.0
+      },
+      "object_type": {
+        "correct": 5,
+        "gold_events": 5,
+        "matched_events": 5,
+        "end_to_end_accuracy": 1.0
+      },
+      "speech_act": {
+        "correct": 5,
+        "gold_events": 5,
+        "matched_events": 5,
+        "end_to_end_accuracy": 1.0
+      },
+      "polarity": {
+        "correct": 5,
+        "gold_events": 5,
+        "matched_events": 5,
+        "end_to_end_accuracy": 1.0
+      },
+      "temporal_state": {
+        "correct": 5,
+        "gold_events": 5,
+        "matched_events": 5,
+        "end_to_end_accuracy": 1.0
+      },
+      "modality": {
+        "correct": 5,
+        "gold_events": 5,
+        "matched_events": 5,
+        "end_to_end_accuracy": 1.0
+      }
+    },
+    "relations": {
+      "same_transaction": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "before": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "prerequisite_for": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "promised_after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "threatens_unless": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "contradiction": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "state_update": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "obstructs_verification": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "transfer_via": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "controls_during": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "relation_direction_errors": 0,
+    "no_relation": {
+      "correct": 0,
+      "total": 0
+    },
+    "roles": {
+      "speaker": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "requester": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "performer": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "recipient": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "affected_party": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "transfer_source": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "transfer_destination": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "speaker_note": "speaker binding is supplied metadata, not a learned accuracy claim",
+    "analysis_status": {
+      "complete": 4
+    }
+  }
+}

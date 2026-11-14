@@ -1,0 +1,104 @@
+{
+  "n": 12,
+  "scope": "synthetic validation; not independent final evaluation",
+  "mode": "keyword baseline offline",
+  "confusion_matrix_rows_expected": {
+    "clear": {
+      "clear": 3,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 1,
+      "verified_match": 0,
+      "error": 0
+    },
+    "need_context": {
+      "clear": 3,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 0,
+      "verified_match": 0,
+      "error": 0
+    },
+    "suspicious": {
+      "clear": 1,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 0,
+      "verified_match": 0,
+      "error": 0
+    },
+    "high": {
+      "clear": 3,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 1,
+      "verified_match": 0,
+      "error": 0
+    },
+    "verified_match": {
+      "clear": 0,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 0,
+      "verified_match": 0,
+      "error": 0
+    },
+    "error": {
+      "clear": 0,
+      "need_context": 0,
+      "suspicious": 0,
+      "high": 0,
+      "verified_match": 0,
+      "error": 0
+    }
+  },
+  "high": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 3,
+    "tn": 7,
+    "precision": 0.5,
+    "recall": 0.25
+  },
+  "missed_high": [
+    "SS-013",
+    "SS-019",
+    "SS-023"
+  ],
+  "false_high": [
+    "SS-022"
+  ],
+  "evidence": {
+    "verbatim_correct": 2,
+    "emitted": 2,
+    "verbatim_rate": 1.0,
+    "expected_quotes_covered": 1,
+    "expected_quotes": 6,
+    "quote_coverage": 0.16666666666666666,
+    "semantic_action_speaker_context": "not measured; manual review required"
+  },
+  "families": {
+    "recovery": {
+      "n": 3,
+      "errors": 2
+    },
+    "invoice": {
+      "n": 3,
+      "errors": 2
+    },
+    "family": {
+      "n": 2,
+      "errors": 1
+    },
+    "device": {
+      "n": 4,
+      "errors": 3
+    }
+  },
+  "live": "not measured",
+  "rag": "not implemented",
+  "questions": "baseline emits none; usefulness not measured",
+  "source_support_and_verified_match": "not applicable; no index",
+  "predictions_sha256": "2cfffd7ed4c62cad3366cc7c026cc47c5daca0717ef9e3d653275c8b42b55d2b",
+  "lock_sha256": "79790fb30a32d8079cdea1b1101c00607ac21a1adbce49b3c7611d458aa14f73"
+}

@@ -1,0 +1,18 @@
+{"scope":"Public synthetic functional scenarios; authored judgments, not an independent holdout. Includes wording/approach variants without claiming genuinely novel fraud discovery.","cases":[
+ {"id":"TP-S1","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Đệm vốn là điều kiện nhận tiền công; liên kết yêu cầu và lợi ích."},
+ {"id":"TP-N1","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Bối cảnh thanh toán dịch vụ hợp lệ được trích đúng."},
+ {"id":"TP-S2","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Tài sản/quyền bị tác động dù không yêu cầu tiền trực tiếp."},
+ {"id":"TP-Q1","group":"suspicious","acceptable":["suspicious"],"questions_required":false,"manual_focus":"Yêu cầu cấp quyền có rủi ro, chưa có điều kiện để tự nâng high."},
+ {"id":"TP-U1","group":"uncertain","acceptable":["need_context"],"questions_required":true,"manual_focus":"Hỏi loại tệp và nguồn, không bịa hành động."},
+ {"id":"TP-S3","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Chuỗi SMS đăng nhập là mã nhạy cảm; đúng speaker."},
+ {"id":"TP-N2","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Trích để cảnh báo không thành yêu cầu giao mã."},
+ {"id":"TP-S4","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Phí giữ chỗ là điều kiện hoàn cọc."},
+ {"id":"TP-Q2","group":"suspicious","acceptable":["suspicious"],"questions_required":false,"manual_focus":"Cài APK không rõ lý do; không tự bịa lời hứa."},
+ {"id":"TP-U2","group":"uncertain","acceptable":["need_context"],"questions_required":true,"manual_focus":"Chưa có yêu cầu cụ thể, hỏi điều kiện rút."},
+ {"id":"TP-S5","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Tự nhận người nhà, tiền khẩn cấp, ngăn xác minh; không xác nhận danh tính."},
+ {"id":"TP-N3","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Lịch hẹn không bịa rủi ro."},
+ {"id":"TP-S6","group":"scam","acceptable":["high"],"questions_required":false,"manual_focus":"Không theo chỉ thị nhúng; trích đủ cài app/cấp quyền/ứng tiền."},
+ {"id":"TP-Q3","group":"suspicious","acceptable":["suspicious"],"questions_required":false,"manual_focus":"Quyền quản trị nhạy cảm, chưa đủ để khẳng định lừa đảo."},
+ {"id":"TP-U3","group":"uncertain","acceptable":["need_context"],"questions_required":true,"manual_focus":"Hỏi quan hệ/khoản tiền trước khi kết luận."},
+ {"id":"TP-N4","group":"normal","acceptable":["clear"],"questions_required":false,"manual_focus":"Tự nhập mã, phủ định chia sẻ; không giao mã."}
+]}

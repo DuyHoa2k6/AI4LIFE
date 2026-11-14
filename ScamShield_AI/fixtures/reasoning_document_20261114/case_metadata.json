@@ -1,0 +1,82 @@
+[
+  {
+    "case_id": "TH01",
+    "title": "Khóa học biến thành nghĩa vụ vay",
+    "turns": 3
+  },
+  {
+    "case_id": "TH02",
+    "title": "Học bổng yêu cầu giấy tờ quá sớm",
+    "turns": 4
+  },
+  {
+    "case_id": "TH03",
+    "title": "Tình cảm gắn với chuyển quyền tài sản",
+    "turns": 4
+  },
+  {
+    "case_id": "TH04",
+    "title": "Công việc đổi thành nợ và hạn chế nghỉ",
+    "turns": 4
+  },
+  {
+    "case_id": "TH05",
+    "title": "Xác nhận nhận hàng trước khi được kiểm tra",
+    "turns": 3
+  },
+  {
+    "case_id": "TH06",
+    "title": "Đóng góp nhưng thông tin người nhận không nhất quán",
+    "turns": 3
+  },
+  {
+    "case_id": "TH07",
+    "title": "Hồ sơ nhận tiền chứa quyền chuyển tài sản",
+    "turns": 3
+  },
+  {
+    "case_id": "TH08",
+    "title": "Lương đi qua tài khoản do người khác điều khiển",
+    "turns": 3
+  },
+  {
+    "case_id": "TH09",
+    "title": "Quà số yêu cầu quyền không tương xứng",
+    "turns": 3
+  },
+  {
+    "case_id": "TH10",
+    "title": "Đặt cọc chỗ ở nhưng thiếu căn cứ về quyền cho thuê",
+    "turns": 4
+  },
+  {
+    "case_id": "TH11",
+    "title": "Hoàn khoản “chuyển dư” trước khi tiền tới",
+    "turns": 3
+  },
+  {
+    "case_id": "TH12",
+    "title": "Thu nhập được dùng để thuyết phục bảo lãnh",
+    "turns": 3
+  },
+  {
+    "case_id": "TH13",
+    "title": "Đối chứng hợp lệ về hợp đồng đào tạo",
+    "turns": 3
+  },
+  {
+    "case_id": "TH14",
+    "title": "Chưa biết nội dung văn bản cần ký",
+    "turns": 1
+  },
+  {
+    "case_id": "TH15",
+    "title": "Hai người nhận thuộc hai giao dịch khác nhau",
+    "turns": 2
+  },
+  {
+    "case_id": "TH16",
+    "title": "Tham chiếu chưa đủ để nối điều kiện",
+    "turns": 1
+  }
+]

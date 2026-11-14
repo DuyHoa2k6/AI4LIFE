@@ -1,0 +1,42 @@
+{
+  "mode": "mock",
+  "scope": "four public rendered synthetic images; not independent accuracy; OCR real in both modes",
+  "cases": [
+    {
+      "id": "O1",
+      "expected": "high",
+      "actual": "need_context",
+      "match": false,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 567.1285999997053,
+      "analysis_ms": 2.812499995343387
+    },
+    {
+      "id": "O2",
+      "expected": "clear",
+      "actual": "high",
+      "match": false,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 527.9387999980827,
+      "analysis_ms": 2.144500002032146
+    },
+    {
+      "id": "O3",
+      "expected": "clear",
+      "actual": "clear",
+      "match": true,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 579.416399996262,
+      "analysis_ms": 1.3880999977118336
+    },
+    {
+      "id": "O4",
+      "expected": "no_text",
+      "actual": "no_text",
+      "match": true,
+      "ocr_exact_after_whitespace_normalization": true,
+      "ocr_api_ms": 461.3991000005626,
+      "analysis_ms": null
+    }
+  ]
+}

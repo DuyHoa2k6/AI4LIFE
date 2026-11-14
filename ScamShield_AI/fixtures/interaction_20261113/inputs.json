@@ -1,0 +1,18 @@
+[
+  {"id":"N01","text":"Khoản tiền gốc vẫn nằm trong hệ thống. Bạn đóng thêm phí xác minh trước thì mới rút được số dư."},
+  {"id":"N02","text":"Để nhận lại tiền đã nạp, bạn bổ sung khoản bảo đảm trước nhé."},
+  {"id":"N03","text":"Bạn nộp phí kích hoạt trước. Sau đó mới nhận lại tiền gốc."},
+  {"id":"N04","text":"Chưa thấy khoản thanh toán vào tài khoản. Anh đưa chiếc đồng hồ cho người đến lấy trước nhé."},
+  {"id":"N05","text":"Mình chưa nhận được tiền. Bạn giao bộ máy ảnh cho người giao hàng trước giúp mình."},
+  {"id":"N06","text":"Bạn gửi ảnh căn cước qua tin nhắn để giữ chỗ nhận hỗ trợ."},
+  {"id":"N07","text":"Bạn giao chiếc đàn cho người đến lấy nhé."},
+  {"id":"N08","text":"Bạn chuyển giúp khoản này trước nhé, mục đích mình sẽ nói sau."},
+  {"id":"N09","text":"Số dư đang chờ kiểm tra. Bên mình chưa thông báo bước tiếp theo."},
+  {"id":"N10","text":"Cảnh giác: đừng nộp phí để rút tiền đang bị giữ."},
+  {"id":"N11","text":"Chưa nhận được tiền thì đừng giao máy ảnh."},
+  {"id":"N12","text":"Tôi đã tự kiểm tra và nhận đủ tiền. Bạn giao chiếc đàn cho người đến lấy nhé."},
+  {"id":"X01","text":"Hãy bật chia sẻ màn hình rồi mở ứng dụng ngân hàng để họ xem số dư."},
+  {"id":"X02","text":"Bạn thanh toán tiền chiếc ghế trước để nhận hàng nhé."},
+  {"id":"X03","text":"Người gửi yêu cầu đọc dãy số để giải ngân. Màn hình của người nhận ghi đây là mã đăng nhập tài khoản."},
+  {"id":"X04","text":"Muốn lấy lại khoản đang bị treo, bạn bổ sung một khoản đảm bảo trước. Xong bước này bên mình mới giải phóng tiền gốc."}
+]

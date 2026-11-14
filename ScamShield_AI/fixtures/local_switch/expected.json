@@ -1,0 +1,65 @@
+{
+  "scope": "Known authored development targets, no independent accuracy claim.",
+  "cases": [
+    {
+      "id": "P01",
+      "risk": "high",
+      "urgency": "preventive"
+    },
+    {
+      "id": "P02",
+      "risk": "clear",
+      "urgency": "undetermined"
+    },
+    {
+      "id": "P03",
+      "risk": "need_context",
+      "urgency": "undetermined"
+    },
+    {
+      "id": "P04",
+      "risk": "suspicious",
+      "urgency": "preventive"
+    },
+    {
+      "id": "P05",
+      "risk": "clear",
+      "urgency": "undetermined"
+    },
+    {
+      "id": "P06",
+      "risk": "high",
+      "urgency": "preventive"
+    },
+    {
+      "id": "P07",
+      "risk": "suspicious",
+      "urgency": "preventive"
+    },
+    {
+      "id": "P08",
+      "risk": "need_context",
+      "urgency": "undetermined"
+    },
+    {
+      "id": "P09",
+      "risk": "high",
+      "urgency": "urgent"
+    },
+    {
+      "id": "P10",
+      "risk": "suspicious",
+      "urgency": "preventive"
+    },
+    {
+      "id": "P11",
+      "risk": "high",
+      "urgency": "preventive"
+    },
+    {
+      "id": "P12",
+      "risk": "clear",
+      "urgency": "undetermined"
+    }
+  ]
+}

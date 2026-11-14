@@ -1,0 +1,59 @@
+{
+  "scope": "6 public synthetic functional checks, authored labels; not independent URL reputation or overall accuracy. No destinations opened.",
+  "cases": [
+    {
+      "id": "URL-01",
+      "name": "Yêu cầu OTP và miền gần giống",
+      "group": "scam",
+      "acceptable": [
+        "high"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "URL-02",
+      "name": "Bài cảnh báo nhắc tên gần giống",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "URL-03",
+      "name": "Tự đọc nội dung tại miền tham chiếu",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "URL-04",
+      "name": "Đích ẩn khác nhãn và yêu cầu đăng nhập",
+      "group": "suspicious",
+      "acceptable": [
+        "suspicious"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "URL-05",
+      "name": "Tên miền tiếng Việt không tự thành độc hại",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    },
+    {
+      "id": "URL-06",
+      "name": "Bài cảnh báo có nhãn và đích không khớp",
+      "group": "normal",
+      "acceptable": [
+        "clear"
+      ],
+      "questions_required": false
+    }
+  ]
+}

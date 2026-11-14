@@ -1,0 +1,5127 @@
+[
+  {
+    "id": "TH01",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Bạn có biết người mời ngoài đời hoặc có thể xác minh công việc, địa điểm qua đầu mối độc lập không?",
+      "Họ có yêu cầu giữ bí mật, giao giấy tờ hoặc hạn chế liên lạc không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "safe:e1",
+        "event_type": "offer_employment",
+        "object": "việc làm",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Tư vấn viên",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "EX-JOB",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Điều kiện hỗ trợ việc làm sẽ gửi sau khi giải ngân."
+          },
+          {
+            "message_id": "m3",
+            "quote": "việc làm"
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e2",
+        "event_type": "avoid_verification",
+        "object": "dung hoi",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người học",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-AVOID",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Đừng hỏi bên cho vay về lời tư vấn của em vì họ chỉ xử lý tiền."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:safe:e1",
+          "behavior_type": "employment_offer",
+          "actor_id": "speaker:Tư vấn viên",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "safe:e1"
+          ],
+          "description": "offer_employment",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "safe:s1",
+            "safe:s2"
+          ],
+          "rule_id": "EX-JOB",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e2",
+          "behavior_type": "avoid_independent_verification",
+          "actor_id": "speaker:Người học",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "graph:e2"
+          ],
+          "description": "avoid_verification",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s19"
+          ],
+          "rule_id": "SG-AVOID",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Tư vấn viên",
+            "speaker:Người học"
+          ],
+          "message_ids": [
+            "m3"
+          ],
+          "event_refs": [
+            "graph:e2",
+            "safe:e1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "graph:e2"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "verification"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "safe:e1"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [],
+      "stage_timings_ms": {
+        "participants": 0.01080000220099464,
+        "behaviors": 0.04479999915929511,
+        "event_linking": 0.0032000025385059416,
+        "situations": 0.0501000031363219,
+        "hypotheses": 0.0031999952625483274,
+        "consequences": 0.0023999964469112456
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m3:85",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "safe:s1",
+            "safe:s2"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "safe:e1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m3:137",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "graph:s19"
+          ],
+          "requester_id": "speaker:Tư vấn viên",
+          "performer_id": "speaker:Người học",
+          "affected_party_id": "speaker:Người học",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "graph:e2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH02",
+    "status": "complete",
+    "risk": "suspicious",
+    "summary": "Có yêu cầu cung cấp giấy tờ cá nhân; cần xác minh đơn vị tiếp nhận và kênh gửi.",
+    "rules": [
+      "R-DATA"
+    ],
+    "questions": [],
+    "missing": [
+      "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "provide_documents",
+        "object": "ảnh giấy tờ hai mặt và ảnh cầm giấy tờ qua cuộc chat này để anh giữ suất",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+        "affected_party_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-DOCUMENTS",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "Gửi"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Gửi ảnh giấy tờ hai mặt và ảnh cầm giấy tờ qua cuộc chat này để anh giữ suất."
+          },
+          {
+            "message_id": "m1",
+            "quote": "ảnh giấy tờ hai mặt và ảnh cầm giấy tờ qua cuộc chat này để anh giữ suất"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "transfer_funds",
+        "object": "tiền",
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người phụ trách",
+        "affected_party_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": "đóng"
+          },
+          {
+            "message_id": "m3",
+            "quote": "chưa phải đóng tiền."
+          },
+          {
+            "message_id": "m3",
+            "quote": "tiền"
+          },
+          {
+            "message_id": "m3",
+            "quote": "chưa"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e3",
+        "event_type": "handover_asset",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Người tự nhận phụ trách học bổng",
+        "affected_party_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "Em đã được đưa vào danh sách xét hỗ trợ."
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e4",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+        "affected_party_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Hiện chỉ cần ảnh, chưa phải đóng tiền."
+          },
+          {
+            "message_id": "m3",
+            "quote": " Hiện chỉ cần ảnh, chưa phải đóng tiền."
+          }
+        ]
+      },
+      {
+        "event_id": "clause:e5",
+        "event_type": "avoid_verification",
+        "object": "toi chua gui anh va chua xac minh",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:02972756872e:analysis:address:speaker:Người học",
+        "affected_party_id": "role:02972756872e:analysis:address:speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CLAUSE-VERIFICATION_DELAY",
+        "quotes": [
+          {
+            "message_id": "m4",
+            "quote": "Tôi chưa gửi ảnh và chưa xác minh được người đang nhắn thuộc đơn vị nào."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_documents",
+          "actor_id": "speaker:Người tự nhận phụ trách học bổng",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "provide_documents",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-DOCUMENTS",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người phụ trách",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "old:s7"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e3",
+          "behavior_type": "request_asset_handover",
+          "actor_id": "speaker:Người tự nhận phụ trách học bổng",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s19"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e4",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người phụ trách",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+          "event_refs": [
+            "ctx:e4"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "observed",
+          "evidence_refs": [
+            "ctx:s20",
+            "graph:s23"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:clause:e5",
+          "behavior_type": "avoid_independent_verification",
+          "actor_id": "role:02972756872e:analysis:address:speaker:Người học",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người học",
+          "event_refs": [
+            "clause:e5"
+          ],
+          "description": "verification_delay",
+          "information_status": "observed",
+          "evidence_refs": [
+            "clause:s22"
+          ],
+          "rule_id": "CLAUSE-VERIFICATION_DELAY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+            "speaker:Người phụ trách",
+            "role:02972756872e:analysis:address:speaker:Người phụ trách",
+            "speaker:Người tự nhận phụ trách học bổng",
+            "role:02972756872e:analysis:address:speaker:Người học"
+          ],
+          "message_ids": [
+            "m1",
+            "m3",
+            "m4"
+          ],
+          "event_refs": [
+            "old:a1",
+            "clause:e5",
+            "ctx:e4",
+            "ctx:e3",
+            "old:a2"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a1",
+            "ctx:e4",
+            "clause:e5"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "identity_documents",
+            "money",
+            "asset"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a2"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "personal_data",
+          "description": "Giấy tờ cá nhân có thể bị sử dụng ngoài mục đích được nêu.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-PROVIDE_DOCUMENTS"
+        },
+        {
+          "consequence_id": "consequence:ctx:e4",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "ctx:e4"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "ctx:s20",
+            "graph:s23"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.013000004400964826,
+        "behaviors": 0.057999997807201,
+        "event_linking": 0.0045000051613897085,
+        "situations": 0.10620000102790073,
+        "hypotheses": 0.006199996278155595,
+        "consequences": 0.05769999552285299
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "ctx:s19"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m1:40",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "requester_id": "speaker:Người tự nhận phụ trách học bổng",
+          "performer_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người tự nhận phụ trách học bổng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:43",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "old:s7",
+            "ctx:s20",
+            "graph:s23"
+          ],
+          "requester_id": "speaker:Người phụ trách",
+          "performer_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a2",
+            "ctx:e4"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m4:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "clause:s22"
+          ],
+          "requester_id": "speaker:Người học",
+          "performer_id": "role:02972756872e:analysis:address:speaker:Người học",
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người học",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "clause:e5"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "ctx:e4"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "role:02972756872e:analysis:address:speaker:Người phụ trách",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH03",
+    "status": "unsupported",
+    "risk": "need_context",
+    "summary": "Bộ phân tích hiện chưa nhận diện được hành động trong nội dung đã cung cấp; chưa có kết luận an toàn.",
+    "rules": [],
+    "questions": [],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [],
+      "situations": [],
+      "hypotheses": [],
+      "consequences": [],
+      "stage_timings_ms": {
+        "participants": 0.006900001608300954,
+        "behaviors": 0.0012000018614344299,
+        "event_linking": 0.0018999999156221747,
+        "situations": 0.0036999990697950125,
+        "hypotheses": 0.0010000003385357559,
+        "consequences": 0.0017999991541728377
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [],
+      "salient_actions": [],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_match",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH04",
+    "status": "complete",
+    "risk": "clear",
+    "summary": "Chưa ghi nhận yêu cầu nguy hiểm còn hiệu lực trong phần nội dung đã phân tích.",
+    "rules": [],
+    "questions": [],
+    "missing": [],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": "lương đã làm",
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Quản lý",
+        "affected_party_id": "speaker:Người lao động",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m4",
+            "quote": "thanh toán"
+          },
+          {
+            "message_id": "m4",
+            "quote": "thì chưa được thanh toán lương đã làm."
+          },
+          {
+            "message_id": "m4",
+            "quote": "lương đã làm"
+          },
+          {
+            "message_id": "m4",
+            "quote": "chưa được"
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Quản lý",
+          "affected_party_id": "speaker:Người lao động",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "old:s4"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Quản lý",
+            "speaker:Người lao động"
+          ],
+          "message_ids": [
+            "m4"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a1"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [],
+      "stage_timings_ms": {
+        "participants": 0.009899995347950608,
+        "behaviors": 0.03669999568955973,
+        "event_linking": 0.0030000010156072676,
+        "situations": 0.04999999509891495,
+        "hypotheses": 0.002700006007216871,
+        "consequences": 0.0022000021999701858
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m4:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "old:s4"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_match",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH05",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản thanh toán vào tài khoản và yêu cầu giao hàng có thuộc cùng một đơn không? Bạn có thể cho biết mã đơn tương ứng?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "handover_asset",
+        "object": "nhé",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người mua",
+        "affected_party_id": "speaker:Người mua",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-HANDOVER",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "giao"
+          },
+          {
+            "message_id": "m1",
+            "quote": "để anh lấy tiền đặt xe giao nhé."
+          },
+          {
+            "message_id": "m1",
+            "quote": "nhé"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e2",
+        "event_type": "handover_asset",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Người bán",
+        "affected_party_id": "speaker:Người mua",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Em bấm xác nhận đã nhận hàng trên sàn để anh lấy tiền đặt xe giao nhé."
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e3",
+        "event_type": "handover_asset",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người mua",
+        "affected_party_id": "speaker:Người mua",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Anh chỉ giao sau khi tiền được giải phóng, còn nếu em không bấm thì đơn vẫn treo."
+          }
+        ]
+      },
+      {
+        "event_id": "ground:e4",
+        "event_type": "other",
+        "object": null,
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người mua",
+        "affected_party_id": "speaker:Người bán",
+        "scope_id": "analysis",
+        "extractor_rule_id": "GROUND-OBJECT-SPEECH",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "Tôi chưa nhận hàng."
+          }
+        ]
+      },
+      {
+        "event_id": "ground:e5",
+        "event_type": "other",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người bán",
+        "affected_party_id": "speaker:Người mua",
+        "scope_id": "analysis",
+        "extractor_rule_id": "GROUND-OBJECT-SPEECH",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Mình nhắn riêng với nhau là đủ bảo đảm rồi."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_asset_handover",
+          "actor_id": "speaker:Người bán",
+          "affected_party_id": "speaker:Người mua",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "handover_asset",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-HANDOVER",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e2",
+          "behavior_type": "request_asset_handover",
+          "actor_id": "speaker:Người bán",
+          "affected_party_id": "speaker:Người mua",
+          "event_refs": [
+            "ctx:e2"
+          ],
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s15"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e3",
+          "behavior_type": "request_asset_handover",
+          "actor_id": "speaker:Người bán",
+          "affected_party_id": "speaker:Người mua",
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "information_status": "observed",
+          "evidence_refs": [
+            "ctx:s16"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ground:e4",
+          "behavior_type": "receive_unknown",
+          "actor_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người bán",
+          "event_refs": [
+            "ground:e4"
+          ],
+          "description": "receive_unknown",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "ground:s18"
+          ],
+          "rule_id": "GROUND-OBJECT-SPEECH",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ground:e5",
+          "behavior_type": "receive_unknown",
+          "actor_id": "speaker:Người bán",
+          "affected_party_id": "speaker:Người mua",
+          "event_refs": [
+            "ground:e5"
+          ],
+          "description": "receive_unknown",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "ground:s19"
+          ],
+          "rule_id": "GROUND-OBJECT-SPEECH",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người mua",
+            "speaker:Người bán"
+          ],
+          "message_ids": [
+            "m1",
+            "m3",
+            "m2"
+          ],
+          "event_refs": [
+            "ctx:e2",
+            "ground:e5",
+            "old:a1",
+            "ground:e4",
+            "ctx:e3"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a1",
+            "ctx:e3"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "asset",
+            "unknown"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "ground:e4",
+            "ground:e5"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "assets",
+          "description": "Có thể giao mất tài sản khi chưa xác nhận thanh toán.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-HANDOVER_ASSET"
+        },
+        {
+          "consequence_id": "consequence:ctx:e3",
+          "scope_id": "analysis",
+          "category": "assets",
+          "description": "Có thể giao mất tài sản khi chưa xác nhận thanh toán.",
+          "action_refs": [
+            "ctx:e3"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "ctx:s16"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-HANDOVER_ASSET"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.014899997040629387,
+        "behaviors": 0.07790000381646678,
+        "event_linking": 0.005599998985417187,
+        "situations": 0.0962999984039925,
+        "hypotheses": 0.00549999822396785,
+        "consequences": 0.16060000052675605
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:22",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "ctx:s15"
+          ],
+          "requester_id": "speaker:Người bán",
+          "performer_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người mua",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1",
+            "ctx:e2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "ground:s18"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "ground:e4"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m3:18",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "ctx:s16"
+          ],
+          "requester_id": "speaker:Người bán",
+          "performer_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người mua",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:100",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "ground:s19"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "ground:e5"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a1"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "speaker:Người mua",
+          "consequence": "Có thể giao mất tài sản khi chưa xác nhận thanh toán.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH06",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": "vào tài khoản cá nhân của cộng tác viên vì tài khoản nhóm chưa dùng được",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Tiền chuyển vào tài khoản cá nhân của cộng tác viên vì tài khoản nhóm chưa dùng được."
+          },
+          {
+            "message_id": "m1",
+            "quote": "vào tài khoản cá nhân của cộng tác viên vì tài khoản nhóm chưa dùng được"
+          },
+          {
+            "message_id": "m1",
+            "quote": " Tiền chuyển vào tài khoản cá nhân của cộng tác viên vì tài khoản nhóm chưa dùng được."
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e2",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Tài khoản đăng bài",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Tiền chuyển vào tài khoản cá nhân của cộng tác viên vì tài khoản nhóm chưa dùng được."
+          }
+        ]
+      },
+      {
+        "event_id": "clause:e3",
+        "event_type": "avoid_verification",
+        "object": "toi co the xem xac nhan",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Tài khoản đăng bài",
+        "affected_party_id": "speaker:Tài khoản đăng bài",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CLAUSE-VERIFICATION_DELAY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": " Tôi có thể xem xác nhận người này được nhóm ủy quyền và cách công khai khoản chi không?"
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e5",
+        "event_type": "other",
+        "object": "tai khoan ca nhan",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Tài khoản đăng bài",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-THIRD",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Tiền chuyển vào tài khoản cá nhân của cộng tác viên vì tài khoản nhóm chưa dùng được."
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "graph:r1",
+        "type": "same_object",
+        "from_id": "old:a1",
+        "to_id": "graph:e5",
+        "evidence_refs": [
+          "graph:s20",
+          "graph:s21"
+        ],
+        "status": "inferred",
+        "scope_id": "analysis",
+        "rationale": "Quan hệ có điều kiện ngôn ngữ và đối tượng/nguồn cùng phạm vi; không dựa vào khoảng cách đơn thuần.",
+        "rule_id": "SG-LINK-PAYEE"
+      }
+    ],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Tài khoản đăng bài",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s20"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e2",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Tài khoản đăng bài",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "ctx:e2"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s17"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:clause:e3",
+          "behavior_type": "avoid_independent_verification",
+          "actor_id": "speaker:Tài khoản đăng bài",
+          "affected_party_id": "speaker:Tài khoản đăng bài",
+          "event_refs": [
+            "clause:e3"
+          ],
+          "description": "verification_delay",
+          "information_status": "observed",
+          "evidence_refs": [
+            "clause:s19"
+          ],
+          "rule_id": "CLAUSE-VERIFICATION_DELAY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e5",
+          "behavior_type": "third_party_payee",
+          "actor_id": "speaker:Tài khoản đăng bài",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "graph:e5"
+          ],
+          "description": "third_party_payee",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "graph:s21"
+          ],
+          "rule_id": "SG-THIRD",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người dùng",
+            "speaker:Tài khoản đăng bài"
+          ],
+          "message_ids": [
+            "m1",
+            "m2"
+          ],
+          "event_refs": [
+            "clause:e3",
+            "ctx:e2",
+            "graph:e5",
+            "old:a1"
+          ],
+          "relation_refs": [
+            "graph:r1"
+          ],
+          "active_request_refs": [
+            "old:a1",
+            "clause:e3"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money",
+            "account"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "graph:e5"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [
+            "graph:r1"
+          ],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s20",
+            "graph:s21"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.014699995517730713,
+        "behaviors": 0.07239999831654131,
+        "event_linking": 0.005299996701069176,
+        "situations": 0.07000000186963007,
+        "hypotheses": 0.006900001608300954,
+        "consequences": 0.024900000425986946
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:44",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s20",
+            "ctx:s17",
+            "graph:s21"
+          ],
+          "requester_id": "speaker:Tài khoản đăng bài",
+          "performer_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Người dùng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1",
+            "ctx:e2",
+            "graph:e5"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m2:52",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "clause:s19"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": "speaker:Tài khoản đăng bài",
+          "affected_party_id": "speaker:Tài khoản đăng bài",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "clause:e3"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a1"
+          ],
+          "supporting_relation_refs": [
+            "graph:r1"
+          ],
+          "affected_party_id": "speaker:Người dùng",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH07",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "receive_funds",
+        "object": "tiền cọc",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người môi giới",
+        "affected_party_id": "speaker:Chủ tài sản",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-RECEIVE",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "nhận"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Đây chỉ là giấy nhận tiền cọc,"
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền cọc"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "transfer_funds",
+        "object": "tiền",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người môi giới",
+        "affected_party_id": "speaker:Chủ tài sản",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m1",
+            "quote": "để tôi chuyển tiền."
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Đây chỉ là giấy nhận tiền cọc, chị ký giúp để tôi chuyển tiền."
+          }
+        ]
+      },
+      {
+        "event_id": "old:a3",
+        "event_type": "transfer_funds",
+        "object": "chuyển nhượng và nhận toàn bộ tiền bán",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Chủ tài sản",
+        "affected_party_id": "speaker:Người môi giới",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "đồng"
+          },
+          {
+            "message_id": "m2",
+            "quote": "thì thấy phần cho phép anh thay tôi ký hợp đồng chuyển nhượng và nhận toàn bộ tiền bán."
+          },
+          {
+            "message_id": "m2",
+            "quote": "chuyển nhượng và nhận toàn bộ tiền bán"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a4",
+        "event_type": "transfer_funds",
+        "object": "nhượng và nhận toàn bộ tiền bán",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Chủ tài sản",
+        "affected_party_id": "speaker:Người môi giới",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m2",
+            "quote": "thì thấy phần cho phép anh thay tôi ký hợp đồng chuyển nhượng và nhận toàn bộ tiền bán."
+          },
+          {
+            "message_id": "m2",
+            "quote": "nhượng và nhận toàn bộ tiền bán"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a5",
+        "event_type": "transfer_funds",
+        "object": "cọc nữa",
+        "polarity": "negative",
+        "speech_role": "denial",
+        "actor_id": "speaker:Chủ tài sản",
+        "affected_party_id": "speaker:Chủ tài sản",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m3",
+            "quote": "thì tôi không chuyển cọc nữa."
+          },
+          {
+            "message_id": "m3",
+            "quote": "cọc nữa"
+          },
+          {
+            "message_id": "m3",
+            "quote": "không"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e7",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "reported",
+        "actor_id": "speaker:Chủ tài sản",
+        "affected_party_id": "speaker:Người môi giới",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "Tôi đọc thì thấy phần cho phép anh thay tôi ký hợp đồng chuyển nhượng và nhận toàn bộ tiền bán."
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e8",
+        "event_type": "transfer_funds",
+        "object": "chuyen tien",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Chủ tài sản",
+        "affected_party_id": "speaker:Chủ tài sản",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-PAY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "Đây chỉ là giấy nhận tiền cọc, chị ký giúp để tôi chuyển tiền."
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e9",
+        "event_type": "transfer_funds",
+        "object": "dong chuyen nhuong va nhan toan bo tien",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người môi giới",
+        "affected_party_id": "speaker:Người môi giới",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-PAY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "Tôi đọc thì thấy phần cho phép anh thay tôi ký hợp đồng chuyển nhượng và nhận toàn bộ tiền bán."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "payment_or_benefit_claim",
+          "actor_id": "speaker:Người môi giới",
+          "affected_party_id": "speaker:Chủ tài sản",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "receive_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-RECEIVE",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người môi giới",
+          "affected_party_id": "speaker:Chủ tài sản",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "ctx:s33"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a3",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Chủ tài sản",
+          "affected_party_id": "speaker:Người môi giới",
+          "event_refs": [
+            "old:a3"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s7",
+            "old:s8",
+            "old:s9"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a4",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Chủ tài sản",
+          "affected_party_id": "speaker:Người môi giới",
+          "event_refs": [
+            "old:a4"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s10",
+            "old:s11",
+            "old:s12"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a5",
+          "behavior_type": "denial",
+          "actor_id": "speaker:Chủ tài sản",
+          "affected_party_id": "speaker:Chủ tài sản",
+          "event_refs": [
+            "old:a5"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s13",
+            "old:s14",
+            "old:s15",
+            "old:s16"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e7",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Chủ tài sản",
+          "affected_party_id": "speaker:Người môi giới",
+          "event_refs": [
+            "ctx:e7"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "ctx:s34"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e8",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Chủ tài sản",
+          "affected_party_id": "speaker:Chủ tài sản",
+          "event_refs": [
+            "graph:e8"
+          ],
+          "description": "payment",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s35"
+          ],
+          "rule_id": "SG-PAY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e9",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người môi giới",
+          "affected_party_id": "speaker:Người môi giới",
+          "event_refs": [
+            "graph:e9"
+          ],
+          "description": "payment",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s36"
+          ],
+          "rule_id": "SG-PAY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người môi giới",
+            "speaker:Chủ tài sản"
+          ],
+          "message_ids": [
+            "m1",
+            "m2",
+            "m3"
+          ],
+          "event_refs": [
+            "old:a5",
+            "old:a1",
+            "old:a4",
+            "graph:e8",
+            "graph:e9",
+            "old:a3",
+            "ctx:e7",
+            "old:a2"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "graph:e8",
+            "graph:e9"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a1",
+            "old:a2",
+            "old:a3",
+            "old:a4",
+            "ctx:e7"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:graph:e8",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "graph:e8"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "graph:s35"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        },
+        {
+          "consequence_id": "consequence:graph:e9",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "graph:e9"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "graph:s36"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.014199998986441642,
+        "behaviors": 0.08579999848734587,
+        "event_linking": 0.006000002031214535,
+        "situations": 0.07049999840091914,
+        "hypotheses": 0.005800000508315861,
+        "consequences": 0.028700000257231295
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "ctx:s33",
+            "graph:s35"
+          ],
+          "requester_id": "speaker:Người môi giới",
+          "performer_id": "speaker:Chủ tài sản",
+          "affected_party_id": "speaker:Chủ tài sản",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1",
+            "old:a2",
+            "graph:e8"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s7",
+            "old:s8",
+            "old:s9",
+            "old:s10",
+            "old:s11",
+            "old:s12",
+            "ctx:s34",
+            "graph:s36"
+          ],
+          "requester_id": "speaker:Chủ tài sản",
+          "performer_id": "speaker:Người môi giới",
+          "affected_party_id": "speaker:Người môi giới",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a3",
+            "old:a4",
+            "ctx:e7",
+            "graph:e9"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:73",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s13",
+            "old:s14",
+            "old:s15",
+            "old:s16"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a5"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "graph:e8"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "speaker:Chủ tài sản",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH08",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": "công việc",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Ứng viên",
+        "affected_party_id": "speaker:Ứng viên",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "thanh toán"
+          },
+          {
+            "message_id": "m1",
+            "quote": "để nhận lương và xử lý thanh toán công việc."
+          },
+          {
+            "message_id": "m1",
+            "quote": "công việc"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "transfer_funds",
+        "object": "khi có chứng từ được không",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người tuyển dụng",
+        "affected_party_id": "speaker:Người tuyển dụng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m2",
+            "quote": "Tôi tự giữ tài khoản và tự chuyển khi có chứng từ được không?"
+          },
+          {
+            "message_id": "m2",
+            "quote": "khi có chứng từ được không"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e3",
+        "event_type": "handover_asset",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Ứng viên",
+        "affected_party_id": "speaker:Ứng viên",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Em phải giao thông tin đăng nhập, để số điện thoại khôi phục là số của quản lý."
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e4",
+        "event_type": "other",
+        "object": "neu ngan hang hoi nguoi su dung thi cu noi",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Ứng viên",
+        "affected_party_id": "speaker:Ứng viên",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-CAMOUFLAGE",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": " Nếu ngân hàng hỏi người sử dụng thì cứ nói chỉ có em dùng."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người tuyển dụng",
+          "affected_party_id": "speaker:Ứng viên",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Ứng viên",
+          "affected_party_id": "speaker:Người tuyển dụng",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e3",
+          "behavior_type": "request_asset_handover",
+          "actor_id": "speaker:Người tuyển dụng",
+          "affected_party_id": "speaker:Ứng viên",
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "description": "Yêu cầu giao tài sản trong ngữ cảnh",
+          "information_status": "observed",
+          "evidence_refs": [
+            "ctx:s20"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e4",
+          "behavior_type": "misstate_origin",
+          "actor_id": "speaker:Ứng viên",
+          "affected_party_id": "speaker:Ứng viên",
+          "event_refs": [
+            "graph:e4"
+          ],
+          "description": "misstate_origin",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s23"
+          ],
+          "rule_id": "SG-CAMOUFLAGE",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Ứng viên",
+            "speaker:Người tuyển dụng"
+          ],
+          "message_ids": [
+            "m1",
+            "m2",
+            "m3"
+          ],
+          "event_refs": [
+            "graph:e4",
+            "old:a2",
+            "ctx:e3",
+            "old:a1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a1",
+            "old:a2",
+            "ctx:e3",
+            "graph:e4"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money",
+            "asset",
+            "money_origin"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        },
+        {
+          "consequence_id": "consequence:old:a2",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a2"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        },
+        {
+          "consequence_id": "consequence:ctx:e3",
+          "scope_id": "analysis",
+          "category": "assets",
+          "description": "Có thể giao mất tài sản khi chưa xác nhận thanh toán.",
+          "action_refs": [
+            "ctx:e3"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "ctx:s20"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-HANDOVER_ASSET"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.014199998986441642,
+        "behaviors": 0.08759999764151871,
+        "event_linking": 0.00650000583846122,
+        "situations": 0.07279999408638105,
+        "hypotheses": 0.00530000397702679,
+        "consequences": 0.04050000279676169
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "requester_id": "speaker:Người tuyển dụng",
+          "performer_id": "speaker:Ứng viên",
+          "affected_party_id": "speaker:Ứng viên",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "requester_id": "speaker:Ứng viên",
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m3:6",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "ctx:s20"
+          ],
+          "requester_id": "speaker:Người tuyển dụng",
+          "performer_id": "speaker:Ứng viên",
+          "affected_party_id": "speaker:Ứng viên",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:126",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "graph:s23"
+          ],
+          "requester_id": "speaker:Người tuyển dụng",
+          "performer_id": "speaker:Ứng viên",
+          "affected_party_id": "speaker:Ứng viên",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "graph:e4"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a1"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "speaker:Ứng viên",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH09",
+    "status": "complete",
+    "risk": "suspicious",
+    "summary": "Có yêu cầu cài ứng dụng hoặc chia sẻ quyền truy cập cần xác minh.",
+    "rules": [
+      "R-ACCESS"
+    ],
+    "questions": [],
+    "missing": [
+      "Danh tính hoặc toàn bộ sự việc chưa được hệ thống xác minh độc lập."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "grant_control",
+        "object": "cho địa chỉ khác sử dụng toàn bộ số token của tôi",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+        "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-CONTROL",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "cấp quyền"
+          },
+          {
+            "message_id": "m2",
+            "quote": "thị yêu cầu cấp quyền cho địa chỉ khác sử dụng toàn bộ số token của tôi,"
+          },
+          {
+            "message_id": "m2",
+            "quote": "cho địa chỉ khác sử dụng toàn bộ số token của tôi"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "grant_control",
+        "object": "không giới hạn thì quà mới tới",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:be2ac38bae1b:analysis:address:speaker:Người hỗ trợ",
+        "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người hỗ trợ",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-CONTROL",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": "cấp quyền"
+          },
+          {
+            "message_id": "m3",
+            "quote": "Cứ cấp quyền không giới hạn thì quà mới tới."
+          },
+          {
+            "message_id": "m3",
+            "quote": "không giới hạn thì quà mới tới"
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_device_control",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "grant_control",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-CONTROL",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "request_device_control",
+          "actor_id": "speaker:Người hỗ trợ",
+          "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người hỗ trợ",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "grant_control",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "rule_id": "ACT-CONTROL",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+            "role:be2ac38bae1b:analysis:address:speaker:Người hỗ trợ"
+          ],
+          "message_ids": [
+            "m2",
+            "m3"
+          ],
+          "event_refs": [
+            "old:a2",
+            "old:a1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a1",
+            "old:a2"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "device_access"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "device_access",
+          "description": "Người khác có thể thao tác trên thiết bị.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-GRANT_CONTROL"
+        },
+        {
+          "consequence_id": "consequence:old:a2",
+          "scope_id": "analysis",
+          "category": "device_access",
+          "description": "Người khác có thể thao tác trên thiết bị.",
+          "action_refs": [
+            "old:a2"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-GRANT_CONTROL"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.009499999578110874,
+        "behaviors": 0.02729999687289819,
+        "event_linking": 0.0032999960239976645,
+        "situations": 0.041200000850949436,
+        "hypotheses": 0.0023999964469112456,
+        "consequences": 0.02099999983329326
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+          "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:26",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "requester_id": "speaker:Người hỗ trợ",
+          "performer_id": "role:be2ac38bae1b:analysis:address:speaker:Người hỗ trợ",
+          "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người hỗ trợ",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a1"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "role:be2ac38bae1b:analysis:address:speaker:Người dùng",
+          "consequence": "Người khác có thể thao tác trên thiết bị.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH10",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người đăng phòng",
+        "affected_party_id": "speaker:Người thuê",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m3",
+            "quote": "chưa chuyển"
+          },
+          {
+            "message_id": "m3",
+            "quote": "chưa"
+          }
+        ]
+      },
+      {
+        "event_id": "clause:e2",
+        "event_type": "avoid_verification",
+        "object": "toi chua goi",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người đăng phòng",
+        "affected_party_id": "speaker:Người đăng phòng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CLAUSE-VERIFICATION_DELAY",
+        "quotes": [
+          {
+            "message_id": "m4",
+            "quote": "Tôi chưa gọi được chủ nhà và chưa có giấy tờ xác nhận quyền cho thuê hộ."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người đăng phòng",
+          "affected_party_id": "speaker:Người thuê",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:clause:e2",
+          "behavior_type": "avoid_independent_verification",
+          "actor_id": "speaker:Người đăng phòng",
+          "affected_party_id": "speaker:Người đăng phòng",
+          "event_refs": [
+            "clause:e2"
+          ],
+          "description": "verification_delay",
+          "information_status": "observed",
+          "evidence_refs": [
+            "clause:s24"
+          ],
+          "rule_id": "CLAUSE-VERIFICATION_DELAY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người đăng phòng",
+            "speaker:Người thuê"
+          ],
+          "message_ids": [
+            "m3",
+            "m4"
+          ],
+          "event_refs": [
+            "clause:e2",
+            "old:a1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "clause:e2"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a1"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [],
+      "stage_timings_ms": {
+        "participants": 0.008700000762473792,
+        "behaviors": 0.02890000178012997,
+        "event_linking": 0.0033999967854470015,
+        "situations": 0.041200000850949436,
+        "hypotheses": 0.0025999979698099196,
+        "consequences": 0.0022999956854619086
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m3:95",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m4:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "clause:s24"
+          ],
+          "requester_id": "speaker:Người thuê",
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "clause:e2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH11",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": "thừa tiền",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người bán",
+        "affected_party_id": "speaker:Người bán",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Tôi lỡ chuyển thừa tiền,"
+          },
+          {
+            "message_id": "m1",
+            "quote": "thừa tiền"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Tôi lỡ chuyển thừa tiền, ảnh biên lai ghi cao hơn giá món hàng 4 triệu."
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "handover_asset",
+        "object": "dịch vào",
+        "polarity": "negative",
+        "speech_role": "denial",
+        "actor_id": "speaker:Người bán",
+        "affected_party_id": "speaker:Người bán",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-HANDOVER",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": "giao"
+          },
+          {
+            "message_id": "m3",
+            "quote": "Đừng đợi giao dịch vào,"
+          },
+          {
+            "message_id": "m3",
+            "quote": "dịch vào"
+          },
+          {
+            "message_id": "m3",
+            "quote": "Đừng"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e3",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Người mua",
+        "affected_party_id": "speaker:Người bán",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "Tôi lỡ chuyển thừa tiền, ảnh biên lai ghi cao hơn giá món hàng 4 triệu."
+          }
+        ]
+      },
+      {
+        "event_id": "bank:e4",
+        "event_type": "other",
+        "object": "bank_information",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người mua",
+        "affected_party_id": "speaker:Người mua",
+        "scope_id": "analysis",
+        "extractor_rule_id": "FACT-BANK-INFO-1",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "Tôi đã tự mở ứng dụng ngân hàng và chưa nhận khoản nào từ anh."
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e7",
+        "event_type": "other",
+        "object": "mo ung dung ngan hang",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người mua",
+        "affected_party_id": "speaker:Người mua",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-BANK",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "Tôi đã tự mở ứng dụng ngân hàng và chưa nhận khoản nào từ anh."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người bán",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s28"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "denial",
+          "actor_id": "speaker:Người bán",
+          "affected_party_id": "speaker:Người bán",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "handover_asset",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "old:s7"
+          ],
+          "rule_id": "ACT-HANDOVER",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e3",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người bán",
+          "event_refs": [
+            "ctx:e3"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s25"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:bank:e4",
+          "behavior_type": "bank_information_open_requested",
+          "actor_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người mua",
+          "event_refs": [
+            "bank:e4"
+          ],
+          "description": "bank_information_open_requested",
+          "information_status": "observed",
+          "evidence_refs": [
+            "bank:s27"
+          ],
+          "rule_id": "FACT-BANK-INFO-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e7",
+          "behavior_type": "open_financial_data",
+          "actor_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người mua",
+          "event_refs": [
+            "graph:e7"
+          ],
+          "description": "open_financial_data",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s30"
+          ],
+          "rule_id": "SG-BANK",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người bán",
+            "speaker:Người mua"
+          ],
+          "message_ids": [
+            "m1",
+            "m3",
+            "m2"
+          ],
+          "event_refs": [
+            "graph:e7",
+            "old:a1",
+            "bank:e4",
+            "ctx:e3",
+            "old:a2"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a1",
+            "bank:e4",
+            "graph:e7"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money",
+            "asset",
+            "bank_data"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s28"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.010299998393747956,
+        "behaviors": 0.054600001021754,
+        "event_linking": 0.0041000021155923605,
+        "situations": 0.04900000203633681,
+        "hypotheses": 0.0040000013541430235,
+        "consequences": 0.015599995094817132
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s28",
+            "ctx:s25"
+          ],
+          "requester_id": "speaker:Người mua",
+          "performer_id": "speaker:Người bán",
+          "affected_party_id": "speaker:Người bán",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1",
+            "ctx:e3"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "bank:s27",
+            "graph:s30"
+          ],
+          "requester_id": "speaker:Người bán",
+          "performer_id": "speaker:Người mua",
+          "affected_party_id": "speaker:Người mua",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "bank:e4",
+            "graph:e7"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:77",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "old:s7"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a1"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "speaker:Người bán",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH12",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Người gửi yêu cầu thao tác hoặc điều kiện cụ thể nào? Hãy cung cấp phần liên quan đã che bí mật."
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Người bạn",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "thanh toán"
+          },
+          {
+            "message_id": "m2",
+            "quote": "thì bên cho vay có thể yêu cầu tôi thanh toán."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Người bạn",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người dùng",
+            "speaker:Người bạn"
+          ],
+          "message_ids": [
+            "m2"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a1"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [],
+      "stage_timings_ms": {
+        "participants": 0.007599999662488699,
+        "behaviors": 0.019899998733308166,
+        "event_linking": 0.0031000017770566046,
+        "situations": 0.03890000516548753,
+        "hypotheses": 0.0022000021999701858,
+        "consequences": 0.0026999987312592566
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_match",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH13",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "safe:e1",
+        "event_type": "offer_employment",
+        "object": "việc làm",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người học",
+        "affected_party_id": "speaker:Tư vấn viên",
+        "scope_id": "analysis",
+        "extractor_rule_id": "EX-JOB",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "Tôi chỉ muốn học kỹ năng, không muốn vay và không cần cam kết việc làm."
+          },
+          {
+            "message_id": "m1",
+            "quote": "việc làm"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "uncertain",
+        "speech_role": "request",
+        "actor_id": "speaker:Người học",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "đồng"
+          },
+          {
+            "message_id": "m2",
+            "quote": "nội dung và điều kiện hoàn tiền trong hợp đồng;"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "transfer_funds",
+        "object": "tiền",
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Tư vấn viên",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "đóng"
+          },
+          {
+            "message_id": "m2",
+            "quote": "thì chưa đóng tiền."
+          },
+          {
+            "message_id": "m2",
+            "quote": "tiền"
+          },
+          {
+            "message_id": "m2",
+            "quote": "chưa"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a3",
+        "event_type": "transfer_funds",
+        "object": "và đang so sánh với những khóa khác",
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người học",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m3",
+            "quote": "thanh toán"
+          },
+          {
+            "message_id": "m3",
+            "quote": "Tôi chưa thanh toán và đang so sánh với những khóa khác."
+          },
+          {
+            "message_id": "m3",
+            "quote": "và đang so sánh với những khóa khác"
+          },
+          {
+            "message_id": "m3",
+            "quote": "chưa"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e5",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Tư vấn viên",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": " Bạn đọc trước, hỏi thêm người tư vấn độc lập nếu cần, chưa đồng ý thì chưa đóng tiền."
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e6",
+        "event_type": "transfer_funds",
+        "object": "dong y thi chua dong tien",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người học",
+        "affected_party_id": "speaker:Người học",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-PAY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": " Bạn đọc trước, hỏi thêm người tư vấn độc lập nếu cần, chưa đồng ý thì chưa đóng tiền."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:safe:e1",
+          "behavior_type": "employment_offer",
+          "actor_id": "speaker:Người học",
+          "affected_party_id": "speaker:Tư vấn viên",
+          "event_refs": [
+            "safe:e1"
+          ],
+          "description": "offer_employment",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "safe:s1",
+            "safe:s2"
+          ],
+          "rule_id": "EX-JOB",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người học",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Tư vấn viên",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s3",
+            "old:s4",
+            "old:s5",
+            "old:s6"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a3",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người học",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "old:a3"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s7",
+            "old:s8",
+            "old:s9",
+            "old:s10"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e5",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Tư vấn viên",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "ctx:e5"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s24"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e6",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người học",
+          "affected_party_id": "speaker:Người học",
+          "event_refs": [
+            "graph:e6"
+          ],
+          "description": "payment",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s25"
+          ],
+          "rule_id": "SG-PAY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người học",
+            "speaker:Tư vấn viên"
+          ],
+          "message_ids": [
+            "m1",
+            "m2",
+            "m3"
+          ],
+          "event_refs": [
+            "old:a1",
+            "graph:e6",
+            "safe:e1",
+            "ctx:e5",
+            "old:a3",
+            "old:a2"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "graph:e6"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "safe:e1",
+            "old:a2",
+            "old:a3"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:graph:e6",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "graph:e6"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "graph:s25"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.009300005331169814,
+        "behaviors": 0.054600001021754,
+        "event_linking": 0.0040000013541430235,
+        "situations": 0.048800000513438135,
+        "hypotheses": 0.0036000055843032897,
+        "consequences": 0.01599999814061448
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "safe:s1",
+            "safe:s2"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "safe:e1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m2:34",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m2:128",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s3",
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "ctx:s24",
+            "graph:s25"
+          ],
+          "requester_id": "speaker:Tư vấn viên",
+          "performer_id": "speaker:Người học",
+          "affected_party_id": "speaker:Người học",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a2",
+            "ctx:e5",
+            "graph:e6"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m3:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s7",
+            "old:s8",
+            "old:s9",
+            "old:s10"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a3"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "graph:e6"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "speaker:Người học",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH14",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật.",
+      "Khẳng định thanh toán khác nguồn chưa thống nhất."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "receive_funds",
+        "object": "tiền",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-RECEIVE",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "nhận"
+          },
+          {
+            "message_id": "m1",
+            "quote": "để hoàn tất việc nhận tiền."
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "receive_funds",
+        "object": "tiền cho việc gì",
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-RECEIVE",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "nhận"
+          },
+          {
+            "message_id": "m1",
+            "quote": "cũng chưa biết mình nhận tiền cho việc gì."
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền cho việc gì"
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a3",
+        "event_type": "transfer_funds",
+        "object": "tiền",
+        "polarity": "negative",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa có yêu cầu chuyển tiền"
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền"
+          },
+          {
+            "message_id": "m1",
+            "quote": "chưa"
+          }
+        ]
+      },
+      {
+        "event_id": "old:a4",
+        "event_type": "provide_code",
+        "object": "mã",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-CODE",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "gửi"
+          },
+          {
+            "message_id": "m1",
+            "quote": "hay gửi mã."
+          },
+          {
+            "message_id": "m1",
+            "quote": "mã"
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e5",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Chỉ có câu “ký giúp rồi tôi xử lý tiếp”, chưa có yêu cầu chuyển tiền "
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e6",
+        "event_type": "transfer_funds",
+        "object": "chuyen tien",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "SG-PAY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Chỉ có câu “ký giúp rồi tôi xử lý tiếp”, chưa có yêu cầu chuyển tiền "
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "payment_or_benefit_claim",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "receive_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "rule_id": "ACT-RECEIVE",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "payment_or_benefit_claim",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "receive_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "old:s7"
+          ],
+          "rule_id": "ACT-RECEIVE",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a3",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "old:a3"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s8",
+            "old:s9",
+            "old:s10",
+            "old:s11"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:old:a4",
+          "behavior_type": "request_code",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "old:a4"
+          ],
+          "description": "provide_code",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s12",
+            "old:s13",
+            "old:s14"
+          ],
+          "rule_id": "ACT-CODE",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e5",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "ctx:e5"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s25"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:graph:e6",
+          "behavior_type": "request_payment",
+          "actor_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "graph:e6"
+          ],
+          "description": "payment",
+          "information_status": "observed",
+          "evidence_refs": [
+            "graph:s27"
+          ],
+          "rule_id": "SG-PAY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người dùng",
+            "role:afb83a0c69fb:analysis:address:speaker:Người dùng"
+          ],
+          "message_ids": [
+            "m1"
+          ],
+          "event_refs": [
+            "old:a1",
+            "old:a4",
+            "graph:e6",
+            "ctx:e5",
+            "old:a3",
+            "old:a2"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a4",
+            "graph:e6"
+          ],
+          "conflicting_refs": [
+            "old:a1",
+            "old:a2"
+          ],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money",
+            "code"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a1",
+            "old:a2",
+            "old:a3"
+          ],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a4",
+          "scope_id": "analysis",
+          "category": "account_access",
+          "description": "Nếu là mã xác thực, việc giao mã có thể làm lộ quyền đăng nhập.",
+          "action_refs": [
+            "old:a4"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s12",
+            "old:s13",
+            "old:s14"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-PROVIDE_CODE"
+        },
+        {
+          "consequence_id": "consequence:graph:e6",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "graph:e6"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "graph:s27"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.008800001523923129,
+        "behaviors": 0.04920000355923548,
+        "event_linking": 0.0043000036384910345,
+        "situations": 0.055199998314492404,
+        "hypotheses": 0.0037999998312443495,
+        "consequences": 0.022899999748915434
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m1:53",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5",
+            "old:s6",
+            "old:s7"
+          ],
+          "requester_id": null,
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m1:122",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s8",
+            "old:s9",
+            "old:s10",
+            "old:s11",
+            "ctx:s25",
+            "graph:s27"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a3",
+            "ctx:e5",
+            "graph:e6"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m1:192",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s12",
+            "old:s13",
+            "old:s14"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a4"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a4"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "role:afb83a0c69fb:analysis:address:speaker:Người dùng",
+          "consequence": "Nếu là mã xác thực, việc giao mã có thể làm lộ quyền đăng nhập.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH15",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": "và xác nhận riêng tài khoản của mỗi bên",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis/transaction:don b",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "đồng"
+          },
+          {
+            "message_id": "m1",
+            "quote": "Tôi đã gọi đúng đầu mối trên từng hợp đồng và xác nhận riêng tài khoản của mỗi bên."
+          },
+          {
+            "message_id": "m1",
+            "quote": "và xác nhận riêng tài khoản của mỗi bên"
+          },
+          {
+            "message_id": "m1",
+            "quote": " Tôi đã gọi đúng đầu mối trên từng hợp đồng và xác nhận riêng tài khoản của mỗi bên."
+          }
+        ]
+      },
+      {
+        "event_id": "old:a2",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Đồng nghiệp",
+        "affected_party_id": "speaker:Đồng nghiệp",
+        "scope_id": "analysis/transaction:don b",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "thanh toán"
+          },
+          {
+            "message_id": "m1",
+            "quote": "trước khi thanh toán."
+          }
+        ]
+      },
+      {
+        "event_id": "old:a3",
+        "event_type": "transfer_funds",
+        "object": "tiền A cho Minh An",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m2",
+            "quote": "Vậy chuyển tiền A cho Minh An,"
+          },
+          {
+            "message_id": "m2",
+            "quote": "tiền A cho Minh An"
+          },
+          {
+            "message_id": "m2",
+            "quote": "Vậy chuyển tiền A cho Minh An, tiền B cho Hòa Bình theo đúng từng hóa đơn."
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e4",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Đồng nghiệp",
+        "scope_id": "analysis/transaction:don b",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Tôi đã gọi đúng đầu mối trên từng hợp đồng và xác nhận riêng tài khoản của mỗi bên."
+          }
+        ]
+      },
+      {
+        "event_id": "ctx:e5",
+        "event_type": "transfer_funds",
+        "object": null,
+        "polarity": "positive",
+        "speech_role": "unknown",
+        "actor_id": "speaker:Đồng nghiệp",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "CONTEXT-CLAUSE-1",
+        "quotes": [
+          {
+            "message_id": "m2",
+            "quote": "Vậy chuyển tiền A cho Minh An, tiền B cho Hòa Bình theo đúng từng hóa đơn."
+          }
+        ]
+      },
+      {
+        "event_id": "clause:e6",
+        "event_type": "avoid_verification",
+        "object": "toi da goi",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "speaker:Đồng nghiệp",
+        "affected_party_id": "speaker:Đồng nghiệp",
+        "scope_id": "analysis/transaction:don b",
+        "extractor_rule_id": "CLAUSE-VERIFICATION_DELAY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Tôi đã gọi đúng đầu mối trên từng hợp đồng và xác nhận riêng tài khoản của mỗi bên."
+          }
+        ]
+      },
+      {
+        "event_id": "graph:e8",
+        "event_type": "other",
+        "object": "toi da goi dung dau moi tren tung hop dong va xac nhan",
+        "polarity": "positive",
+        "speech_role": "claim",
+        "actor_id": "speaker:Người dùng",
+        "affected_party_id": "speaker:Người dùng",
+        "scope_id": "analysis/transaction:don b",
+        "extractor_rule_id": "SG-VERIFIED",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": " Tôi đã gọi đúng đầu mối trên từng hợp đồng và xác nhận riêng tài khoản của mỗi bên."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s28"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis/transaction:don b"
+        },
+        {
+          "behavior_id": "behavior:old:a2",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Đồng nghiệp",
+          "event_refs": [
+            "old:a2"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis/transaction:don b"
+        },
+        {
+          "behavior_id": "behavior:old:a3",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Đồng nghiệp",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "old:a3"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s6",
+            "old:s7",
+            "old:s8",
+            "graph:s30"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:ctx:e4",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Đồng nghiệp",
+          "event_refs": [
+            "ctx:e4"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s23"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis/transaction:don b"
+        },
+        {
+          "behavior_id": "behavior:ctx:e5",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Đồng nghiệp",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "ctx:e5"
+          ],
+          "description": "Yêu cầu nộp/chuyển tiền trong cụm điều kiện",
+          "information_status": "unknown",
+          "evidence_refs": [
+            "ctx:s24"
+          ],
+          "rule_id": "CONTEXT-CLAUSE-1",
+          "scope_id": "analysis"
+        },
+        {
+          "behavior_id": "behavior:clause:e6",
+          "behavior_type": "avoid_independent_verification",
+          "actor_id": "speaker:Đồng nghiệp",
+          "affected_party_id": "speaker:Đồng nghiệp",
+          "event_refs": [
+            "clause:e6"
+          ],
+          "description": "verification_delay",
+          "information_status": "observed",
+          "evidence_refs": [
+            "clause:s27"
+          ],
+          "rule_id": "CLAUSE-VERIFICATION_DELAY",
+          "scope_id": "analysis/transaction:don b"
+        },
+        {
+          "behavior_id": "behavior:graph:e8",
+          "behavior_type": "independent_confirmation",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Người dùng",
+          "event_refs": [
+            "graph:e8"
+          ],
+          "description": "independent_confirmation",
+          "information_status": "claimed",
+          "evidence_refs": [
+            "graph:s29"
+          ],
+          "rule_id": "SG-VERIFIED",
+          "scope_id": "analysis/transaction:don b"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis/transaction:don b",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người dùng",
+            "speaker:Đồng nghiệp"
+          ],
+          "message_ids": [
+            "m1"
+          ],
+          "event_refs": [
+            "old:a1",
+            "clause:e6",
+            "ctx:e4",
+            "graph:e8",
+            "old:a2"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a2",
+            "clause:e6"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money",
+            "verification"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [
+            "old:a1",
+            "graph:e8"
+          ],
+          "verification_report_refs": [
+            "graph:e8"
+          ],
+          "mechanism_refs": []
+        },
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "speaker:Người dùng",
+            "speaker:Đồng nghiệp"
+          ],
+          "message_ids": [
+            "m2"
+          ],
+          "event_refs": [
+            "old:a3",
+            "ctx:e5"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a3"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a2",
+          "scope_id": "analysis/transaction:don b",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a2"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s4",
+            "old:s5"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        },
+        {
+          "consequence_id": "consequence:old:a3",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a3"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s6",
+            "old:s7",
+            "old:s8",
+            "graph:s30"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.009700001101009548,
+        "behaviors": 0.060200000007171184,
+        "event_linking": 0.0045000051613897085,
+        "situations": 0.0686999992467463,
+        "hypotheses": 0.004900000931229442,
+        "consequences": 0.021699997887481004
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:69",
+          "scope_id": "analysis/transaction:don b",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "graph:s28",
+            "ctx:s23",
+            "clause:s27",
+            "graph:s29"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": "speaker:Đồng nghiệp",
+          "affected_party_id": "speaker:Đồng nghiệp",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1",
+            "ctx:e4",
+            "clause:e6",
+            "graph:e8"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        },
+        {
+          "clause_id": "m1:153",
+          "scope_id": "analysis/transaction:don b",
+          "evidence_refs": [
+            "old:s4",
+            "old:s5"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": null,
+          "affected_party_id": null,
+          "affected_role": "unknown",
+          "affected_status": "unknown",
+          "unresolved_roles": [
+            "real_identity",
+            "affected_party"
+          ],
+          "event_refs": [
+            "old:a2"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "chưa xác định được bên bị tác động"
+          }
+        },
+        {
+          "clause_id": "m2:0",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s6",
+            "old:s7",
+            "old:s8",
+            "graph:s30",
+            "ctx:s24"
+          ],
+          "requester_id": "speaker:Đồng nghiệp",
+          "performer_id": "speaker:Người dùng",
+          "affected_party_id": "speaker:Người dùng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a3",
+            "ctx:e5"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a3"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "speaker:Người dùng",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  },
+  {
+    "id": "TH16",
+    "status": "complete",
+    "risk": "need_context",
+    "summary": "Chưa đủ dữ kiện trong phạm vi bộ phân tích để kết luận.",
+    "rules": [],
+    "questions": [
+      "Khoản này dùng để thanh toán việc gì?",
+      "Ai là người thụ hưởng khoản thanh toán và thông tin đó có khớp thỏa thuận không?"
+    ],
+    "missing": [
+      "Thiếu hành động, quan hệ hoặc xác minh cần thiết trong phạm vi bộ luật."
+    ],
+    "events": [
+      {
+        "event_id": "old:a1",
+        "event_type": "transfer_funds",
+        "object": "tiền",
+        "polarity": "positive",
+        "speech_role": "request",
+        "actor_id": "role:823232bfefa9:analysis:address:speaker:Người dùng",
+        "affected_party_id": "role:823232bfefa9:analysis:address:speaker:Người dùng",
+        "scope_id": "analysis",
+        "extractor_rule_id": "ACT-MONEY",
+        "quotes": [
+          {
+            "message_id": "m1",
+            "quote": "chuyển"
+          },
+          {
+            "message_id": "m1",
+            "quote": "“gửi” là gửi giấy hay chuyển tiền,"
+          },
+          {
+            "message_id": "m1",
+            "quote": "tiền"
+          },
+          {
+            "message_id": "m1",
+            "quote": " Tôi không biết “khoản đó” là tiền hay hồ sơ, “gửi” là gửi giấy hay chuyển tiền, và hai tin có nói về cùng một việc không."
+          },
+          {
+            "message_id": "m1",
+            "quote": " Tôi không biết “khoản đó” là tiền hay hồ sơ, “gửi” là gửi giấy hay chuyển tiền, và hai tin có nói về cùng một việc không."
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "graph_rejected": [],
+    "discarded_events": [],
+    "mechanisms": [],
+    "interpretation": {
+      "reasoning_version": "local-situation-1.0",
+      "behaviors": [
+        {
+          "behavior_id": "behavior:old:a1",
+          "behavior_type": "request_payment",
+          "actor_id": "speaker:Người dùng",
+          "affected_party_id": "role:823232bfefa9:analysis:address:speaker:Người dùng",
+          "event_refs": [
+            "old:a1"
+          ],
+          "description": "transfer_funds",
+          "information_status": "observed",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "ctx:s12",
+            "graph:s14"
+          ],
+          "rule_id": "ACT-MONEY",
+          "scope_id": "analysis"
+        }
+      ],
+      "situations": [
+        {
+          "situation_id": "analysis",
+          "version": 1,
+          "participant_ids": [
+            "role:823232bfefa9:analysis:address:speaker:Người dùng"
+          ],
+          "message_ids": [
+            "m1"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "relation_refs": [],
+          "active_request_refs": [
+            "old:a1"
+          ],
+          "conflicting_refs": [],
+          "unknown_information": [
+            "Danh tính ngoài đời chưa được xác minh."
+          ],
+          "object_types": [
+            "money"
+          ],
+          "condition_refs": [],
+          "reported_state_refs": [],
+          "verification_report_refs": [],
+          "mechanism_refs": []
+        }
+      ],
+      "hypotheses": [],
+      "consequences": [
+        {
+          "consequence_id": "consequence:old:a1",
+          "scope_id": "analysis",
+          "category": "money",
+          "description": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "action_refs": [
+            "old:a1"
+          ],
+          "condition_refs": [],
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "ctx:s12",
+            "graph:s14"
+          ],
+          "information_status": "inferred",
+          "rule_id": "CONSEQUENCE-TRANSFER_FUNDS"
+        }
+      ],
+      "stage_timings_ms": {
+        "participants": 0.00790000194683671,
+        "behaviors": 0.025300003471784294,
+        "event_linking": 0.0031999952625483274,
+        "situations": 0.04980000085197389,
+        "hypotheses": 0.0031000017770566046,
+        "consequences": 0.017400001524947584
+      },
+      "limitations": [
+        "Các bộ trích/diễn giải dùng quy tắc cục bộ, chưa phải mô hình đã huấn luyện; chủ thể hoặc liên hệ ngoài độ phủ giữ chưa rõ."
+      ],
+      "clause_roles": [
+        {
+          "clause_id": "m1:122",
+          "scope_id": "analysis",
+          "evidence_refs": [
+            "old:s1",
+            "old:s2",
+            "old:s3",
+            "ctx:s12",
+            "graph:s14"
+          ],
+          "requester_id": "speaker:Người dùng",
+          "performer_id": "role:823232bfefa9:analysis:address:speaker:Người dùng",
+          "affected_party_id": "role:823232bfefa9:analysis:address:speaker:Người dùng",
+          "affected_role": "bên bị tác động theo sự kiện đã gắn vai",
+          "affected_status": "textual_role",
+          "unresolved_roles": [
+            "real_identity"
+          ],
+          "event_refs": [
+            "old:a1"
+          ],
+          "role_labels": {
+            "requester": "nguồn yêu cầu trong văn bản; chưa xác minh danh tính",
+            "affected_party": "người được yêu cầu chuyển tiền, giao tài sản hoặc giấy tờ"
+          }
+        }
+      ],
+      "salient_actions": [
+        {
+          "scope_id": "analysis",
+          "event_refs": [
+            "old:a1"
+          ],
+          "supporting_relation_refs": [],
+          "affected_party_id": "role:823232bfefa9:analysis:address:speaker:Người dùng",
+          "consequence": "Có thể mất thêm tiền nếu làm theo yêu cầu chưa xác minh.",
+          "selection_reason": "Ưu tiên yêu cầu tác động đến tài khoản, giấy tờ hoặc tài sản; đây không phải kết luận mức rủi ro.",
+          "rule_id": "SELECT-DIRECT-IMPACT",
+          "is_primary": true
+        }
+      ],
+      "mechanisms": []
+    },
+    "knowledge_status": "no_approved_sources",
+    "sources": 0,
+    "url_count": 0
+  }
+]

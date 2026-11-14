@@ -1,0 +1,79 @@
+[
+  {
+    "id": "MR-MONEY",
+    "version": "mock-behavior-2.0.0",
+    "action": "transfer_funds",
+    "description": "Yêu cầu chuyển hoặc ứng tiền",
+    "pattern": "\\b(?:ứng\\s+(?:tiền|\\d[\\d.,]*)|chuyển\\s+(?:thêm|phí|tiền|khoản|ngay|gấp)|nộp\\s+(?:thêm|trước|phí|tiền)|đóng\\s+(?:phí|tiền)|đặt\\s+cọc|thanh toán|nạp\\s+(?:thêm|tiền))\\b"
+  },
+  {
+    "id": "MR-CODE",
+    "version": "mock-behavior-2.0.0",
+    "action": "share_auth_code",
+    "description": "Yêu cầu giao mã xác thực",
+    "pattern": "\\b(?:đọc|gửi|cung cấp|chia sẻ)\\b[^.!?;\\n]{0,65}\\b(?:otp|mã đăng nhập|mã xác thực|mã xác nhận)\\b"
+  },
+  {
+    "id": "MR-CODE-LINK",
+    "version": "mock-behavior-2.0.0",
+    "action": "share_auth_code",
+    "description": "Yêu cầu nhập mã qua kênh được chỉ định",
+    "pattern": "\\bnhập\\b[^.!?;\\n]{0,35}\\b(?:otp|mã đăng nhập|mã xác thực)\\b[^.!?;\\n]{0,55}\\b(?:link|liên kết|trang này)\\b"
+  },
+  {
+    "id": "MR-PASSWORD",
+    "version": "mock-behavior-2.0.0",
+    "action": "other",
+    "description": "Yêu cầu cung cấp mật khẩu",
+    "pattern": "\\b(?:gửi|đọc|cung cấp|cho\\s+(?:tôi|mình|anh|chị))\\b[^.!?;\\n]{0,45}\\bmật khẩu\\b"
+  },
+  {
+    "id": "MR-ACCESS",
+    "version": "mock-behavior-2.0.0",
+    "action": "grant_access",
+    "description": "Yêu cầu chia sẻ màn hình hoặc quyền điều khiển",
+    "pattern": "\\b(?:bật\\s+)?(?:chia sẻ màn hình|điều khiển từ xa|cấp quyền truy cập|cấp quyền trợ năng)\\b"
+  },
+  {
+    "id": "MR-INSTALL",
+    "version": "mock-behavior-2.0.0",
+    "action": "install_app",
+    "description": "Yêu cầu cài phần mềm",
+    "pattern": "\\bcài(?: đặt)?\\b[^.!?;\\n]{0,55}\\b(?:tệp|ứng dụng|phần mềm|apk)\\b"
+  },
+  {
+    "id": "MR-REWARD",
+    "version": "mock-behavior-2.0.0",
+    "action": "inducement",
+    "description": "Lời hứa hoàn tiền hoặc trả thưởng",
+    "pattern": "\\b(?:hoàn\\s+(?:gốc|tiền)|hoa hồng|nhận\\s+(?:quà|ưu đãi)|hứa\\s+hoàn)\\b"
+  },
+  {
+    "id": "MR-UNLOCK",
+    "version": "mock-behavior-2.0.0",
+    "action": "inducement",
+    "description": "Điều kiện nộp thêm để rút hoặc mở khóa",
+    "pattern": "\\b(?:mở khóa|mới\\s+(?:rút|lấy|nhận)(?:\\s+được)?|để\\s+rút|muốn\\s+rút)\\b"
+  },
+  {
+    "id": "MR-RECOVER",
+    "version": "mock-behavior-2.0.0",
+    "action": "inducement",
+    "description": "Lời hứa nhận lại tiền hoặc nhận quà",
+    "pattern": "\\b(?:nhận lại|lấy lại)\\b[^.!?;\\n]{0,45}\\b(?:tiền|khoản|cọc)|\\b(?:nhận|lấy)(?:\\s+được)?\\s+quà\\b"
+  },
+  {
+    "id": "MR-SECRECY",
+    "version": "mock-behavior-2.0.0",
+    "action": "inducement",
+    "description": "Yêu cầu hạn chế xác minh độc lập",
+    "pattern": "\\b(?:đừng|không được|không nên)\\s+(?:gọi|hỏi|kể|báo|nói)\\b"
+  },
+  {
+    "id": "MR-URGENCY",
+    "version": "mock-behavior-2.0.0",
+    "action": "inducement",
+    "description": "Áp lực thời gian",
+    "pattern": "\\b(?:trong|chỉ còn|giữ lệnh)\\s+\\d+\\s*(?:phút|giờ)|\\b(?:ngay lập tức|nếu không[^.!?;\\n]{0,35}mất)\\b"
+  }
+]
