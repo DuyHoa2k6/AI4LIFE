@@ -31,7 +31,14 @@ class BodyLimit:
                 return
             chunk = event.get('body', b'')
             size += len(chunk)
-            if size > (MAX_BYTES if scope.get('path')=='/api/ocr' else 65536):
+            path = scope.get('path') or ''
+            if path == '/api/ocr':
+                limit = MAX_BYTES
+            elif path.startswith('/api/deepfake'):
+                limit = 100 * 1024 * 1024
+            else:
+                limit = 65536
+            if size > limit:
                 response = JSONResponse(status_code=413, content={'code': 'BODY_TOO_LARGE',
                     'message': 'Nội dung gửi vượt giới hạn.', 'request_id': str(uuid.uuid4())})
                 return await response(scope, receive, send)
@@ -61,7 +68,11 @@ ROOT = Path(__file__).resolve().parent.parent
 app.mount('/assets', StaticFiles(directory=ROOT / 'web'), name='web-assets')
 app.add_middleware(BodyLimit)
 app.add_middleware(CORSMiddleware, allow_origins=get_setting('SCAMSHIELD_ALLOWED_ORIGINS', 'http://localhost:5173').split(','),
+                   allow_origin_regex=r'chrome-extension://.+',
                    allow_methods=['POST', 'GET'], allow_headers=['Content-Type'])
+
+from .deepfake_proxy import mount_deepfake
+mount_deepfake(app)
 
 
 def error(code, status, diagnostic=None):

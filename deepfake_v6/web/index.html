@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI4LIFE – Kiểm tra Deepfake</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>AI4LIFE <span>Deepfake Check · v6</span></h1>
+  <nav>
+    <button class="tab active" data-tab="file">Ảnh / Video</button>
+    <button class="tab" data-tab="live">Video call trực tiếp</button>
+  </nav>
+</header>
+
+<main>
+<section id="tab-file" class="panel">
+  <div id="drop" class="drop">
+    <p><b>Kéo thả</b> ảnh hoặc video vào đây<br>hoặc</p>
+    <label class="btn">Chọn tệp<input id="pick" type="file" accept="image/*,video/*" hidden></label>
+    <p class="hint">JPG, PNG, WEBP, MP4, MOV, WEBM… tối đa 100 MB. Xử lý ngay trên máy, không gửi lên Internet.</p>
+  </div>
+  <div class="grid">
+    <div class="card" id="previewCard" hidden>
+      <h3>Tệp đã chọn</h3>
+      <div id="preview"></div>
+      <p id="fname" class="muted"></p>
+    </div>
+    <div class="card" id="resultCard" hidden>
+      <div id="spinner" class="spinner-wrap" hidden><div class="spinner"></div><p>Đang phân tích… (video có thể mất 10–30 giây)</p></div>
+      <div id="result" hidden>
+        <div id="badge" class="badge"></div>
+        <div class="meter"><div id="bar"></div><span id="pct"></span></div>
+        <p class="muted" id="pctlabel">Mức nghi giả mạo (vạch trắng = ngưỡng)</p>
+        <p id="reason"></p>
+        <h4>Các phép kiểm đã chạy</h4><ul id="reasons" class="reasons"></ul>
+        <p id="advice" class="advice" hidden></p>
+        <div id="signals"></div>
+        <div id="chartWrap" hidden><h4>Điểm từng khung hình</h4><svg id="chart" viewBox="0 0 600 160" preserveAspectRatio="none"></svg></div>
+        <div id="thumbsWrap" hidden><h4 id="thumbsTitle">Khuôn mặt</h4><div id="thumbs" class="thumbs"></div></div>
+        <p class="muted" id="time"></p>
+        <p class="disclaimer" id="disc"></p>
+      </div>
+      <p id="error" class="error" hidden></p>
+    </div>
+  </div>
+</section>
+
+<section id="tab-live" class="panel" hidden>
+  <div class="warn">⚠️ Thử nghiệm: hình ảnh cuộc gọi qua chia sẻ màn hình bị nén nhiều nên kết quả <b>kém tin cậy hơn</b>; chưa được kiểm tra trên cuộc gọi Zalo/Meet/Messenger thật. Không dùng kết quả để buộc tội ai — hãy xác minh bằng cách gọi lại số quen hoặc hỏi câu riêng tư.</div>
+  <div class="controls">
+    <button class="btn" id="btnScreen">🖥️ Chọn cửa sổ cuộc gọi</button>
+    <button class="btn ghost" id="btnCam">📷 Thử bằng webcam</button>
+    <button class="btn ghost" id="btnFile">🎞️ Thử bằng tệp video</button>
+    <input id="liveFile" type="file" accept="video/*" hidden>
+    <button class="btn danger" id="btnStop" disabled>⏹ Dừng</button>
+    <button class="btn" id="btnChal" disabled>🧪 Kiểm tra chủ động</button>
+    <span class="muted" id="liveStat"></span>
+  </div>
+  <div id="alert" class="alert" hidden>🚨 CẢNH BÁO: khuôn mặt trong cuộc gọi có dấu hiệu bị ghép/giả mạo liên tục trong vài giây. Hãy dừng chuyển tiền, gọi lại số quen để xác minh!</div>
+  <div class="grid">
+    <div class="card">
+      <div class="stage"><video id="liveVideo" autoplay muted playsinline></video><canvas id="overlay"></canvas></div>
+    </div>
+    <div class="card">
+      <div id="liveBadge" class="badge none">Chưa bắt đầu</div>
+      <div class="meter"><div id="liveBar"></div><span id="livePct"></span></div>
+      <p class="muted">Điểm làm mượt trên 8 khung gần nhất + tín hiệu sống động</p>
+      <div id="chalBox" class="chal" hidden><h4>Kiểm tra chủ động</h4><p id="chalStep" class="chalstep"></p><ul id="chalList" class="reasons"></ul><p id="chalVerdict"></p></div>
+      <div id="liveSignals"></div>
+      <h4>Diễn biến điểm</h4>
+      <svg id="liveChart" viewBox="0 0 600 160" preserveAspectRatio="none"></svg>
+      <p class="muted" id="liveInfo"></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>AI4LIFE · Mô-đun nghiên cứu, kết quả là ước lượng của AI, không phải kết luận chắc chắn.</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

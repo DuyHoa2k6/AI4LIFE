@@ -1,11 +1,47 @@
 {
   "manifest_version": 3,
   "name": "ScamShield AI — Quét vùng",
-  "version": "0.9.0",
-  "description": "Quét vùng; chế độ thử thu thập hội thoại và xuất file cục bộ, không gửi backend.",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["http://127.0.0.1/*"],
+  "version": "0.9.3",
+  "description": "Quét vùng, kiểm tra deepfake ảnh/video và cuộc gọi Messenger/Zalo web.",
+  "permissions": ["activeTab", "scripting", "tabCapture", "offscreen", "tabs"],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "https://www.messenger.com/*",
+    "https://messenger.com/*",
+    "https://www.facebook.com/*",
+    "https://facebook.com/*",
+    "https://*.facebook.com/*",
+    "https://chat.zalo.me/*",
+    "https://*.zalo.me/*"
+  ],
   "background": {"service_worker": "worker.js"},
-  "action": {"default_popup": "popup.html", "default_title": "ScamShield AI"},
-  "minimum_chrome_version": "106"
+  "action": {"default_title": "ScamShield AI"},
+  "commands": {
+    "toggle-deepfake-scan": {
+      "suggested_key": {"default": "Alt+Shift+D"},
+      "description": "Bật hoặc tắt quét deepfake cuộc gọi"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.messenger.com/groupcall/*",
+        "https://www.messenger.com/videocall/*",
+        "https://messenger.com/groupcall/*",
+        "https://messenger.com/videocall/*",
+        "https://www.facebook.com/groupcall/*",
+        "https://www.facebook.com/videocall/*",
+        "https://facebook.com/groupcall/*",
+        "https://facebook.com/videocall/*",
+        "https://*.facebook.com/groupcall/*",
+        "https://*.facebook.com/videocall/*",
+        "https://chat.zalo.me/*",
+        "https://*.zalo.me/*"
+      ],
+      "js": ["deepfake_live.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "minimum_chrome_version": "116"
 }

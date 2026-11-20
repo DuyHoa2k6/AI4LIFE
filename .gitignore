@@ -1,0 +1,17 @@
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+.cache_merge/
+*.bak_*
+*.bak_merge
+*.bak_ext
+*.bak_ext2
+*.bak_ext3
+*.bak_ext4
+**/*.bak_*
+deepfake_v6/weights/
+deepfake_v6/.venv/
+deepfake_v6/.cache/
+.env
+**/.env

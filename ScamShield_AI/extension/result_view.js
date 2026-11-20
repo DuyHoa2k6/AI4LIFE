@@ -102,4 +102,7 @@
     if(!seen.size&&!indicators.length)explanation.append(UI.el('p',result.risk_status==='clear'?'Chưa có đoạn trích hợp lệ để giải thích thêm. Bạn có thể bổ sung lời nhắn và bối cảnh để kiểm tra tiếp.':'Chưa có đoạn trích hợp lệ để giải thích thêm. Hãy bổ sung nguyên văn lời nhắn, người gửi và thao tác được yêu cầu; chưa thể suy ra nội dung an toàn.'));
     if(result.input_sources?.length)explanation.append(UI.el('p','Một phần nội dung được đọc từ ảnh. Hãy đối chiếu đoạn trích với ảnh gốc vì chữ nhận dạng có thể sai.'));
     if(result.url_analysis?.length){const links=UI.el('section');links.append(UI.el('h3','Liên kết trong nội dung'));for(const u of result.url_analysis){links.append(UI.el('p',u.display_url));const n=u.network;if(n?.hops?.length){const chain=UI.el('ol');for(const h of n.hops)chain.append(UI.el('li',`${h.http_status} · ${h.display_url}`));links.append(chain);}if(n?.final_url)links.append(UI.el('p',`Đích phản hồi cuối: ${n.final_url} · HTTP ${n.final_http_status}`));links.append(UI.el('p',n&&n.status==='checked'?'Truy cập được không đồng nghĩa an toàn. Chưa kiểm tra nội dung hoặc danh tiếng trang.':'Chưa mở trang hoặc chưa xác định được đích cuối. Không có kết quả kiểm tra không đồng nghĩa an toàn.'));}explanation.append(links);}
-    body.app
+    body.append(explanation);
+  }
+  globalThis.ScamShieldResultView=render;
+})();

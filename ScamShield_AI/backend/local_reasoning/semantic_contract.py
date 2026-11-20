@@ -347,4 +347,5 @@ def assess(input,a,previous,status):
         elif questions:previous.follow_up_questions=[q['question'] for q in questions][:2];previous.missing_information=[q['field'] for q in questions]
         # No active event alone is never sufficient for clear.
         elif previous.risk_status=='clear' and (gaps or any(e.speech_role=='unknown' for e in a.events)):
-            previous.risk_status='need_context';previous.summary='Hệ thống chưa kiểm tra đầy đủ phần nội dung còn bất định; chưa có kết luận an toàn.';pre
+            previous.risk_status='need_context';previous.summary='Hệ thống chưa kiểm tra đầy đủ phần nội dung còn bất định; chưa có kết luận an toàn.'
+    return previous,status

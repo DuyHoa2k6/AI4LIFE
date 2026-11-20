@@ -1,0 +1,55 @@
+# Deepfake Detector v5/v6 (light) — pinned dependencies (Python 3.12, CPU-only).
+#
+# This zip ships CODE ONLY. Model weights (~1.97 GB) are NOT included:
+# they are downloaded once on first run by download_weights.py (or
+# automatically by check.py/api.py/evaluate.py when a weight is missing).
+# See README.md for the exact weight URLs and sizes.
+#
+# Install on Windows / Linux:
+#   python -m venv venv
+#   venv\Scripts\activate        (Windows)
+#   source venv/bin/activate     (Linux)
+#   pip install -r requirements.txt
+#   python download_weights.py
+#
+# The --extra-index-url line below is REQUIRED: it makes pip fetch the
+# CPU builds of torch/torchvision/torchaudio. Without it pip installs
+# the CUDA wheels (~2.5 GB, and they fail on machines without an NVIDIA
+# GPU). The "+cpu" version pins match the CPU index exactly.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.11.0+cpu
+torchvision==0.26.0+cpu
+torchaudio==2.11.1+cpu
+deepguard==2.0.1
+timm==1.0.31
+facenet-pytorch==2.6.0
+# NOTE: opencv-contrib-python (not -headless) is pinned on purpose:
+# syncnet-python declares opencv-contrib-python as a dependency, and
+# this is the same cv2 5.1.0.95 build plus the contrib modules — the
+# code only uses base cv2 functions, but pinning the contrib build
+# keeps pip's resolver happy on a fresh install.
+opencv-contrib-python==5.1.0.95
+numpy==2.5.5
+scipy==1.18.1
+Pillow==13.0.0
+fastapi==0.165.0
+uvicorn==0.54.0
+python-multipart==0.0.34
+scikit-learn==1.9.1
+transformers==4.57.1
+safetensors==0.8.0
+albumentations==2.0.8
+ultralytics==8.4.215
+# SyncNet (audio-visual lip-sync flag, v4): installed WITHOUT its
+# declared opencv-contrib-python requirement being the problem — the
+# pin above already provides it. scenedetect must stay < 0.7
+# (syncnet-python 0.2.3 breaks on scenedetect 0.7).
+syncnet-python==0.2.3
+scenedetect==0.6.7.1
+ffmpeg-python==0.2.0
+python-speech-features==0.6
+pandas==3.1.1
+# Live mode (v6, live.py --source screen): screen capture. Only needed
+# for the screen source; webcam/file modes do not use it.
+mss==10.2.0
